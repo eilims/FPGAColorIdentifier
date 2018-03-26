@@ -9,9 +9,13 @@ end Power_Factor_2_tb;
 architecture testbench of Power_Factor_2_tb is
 
     component Power_Factor_2
-        Generic ( Input_Length : Integer);
-        Port ( Value : in unsigned ((Input_Length - 1) downto 0);
-               Power : out unsigned ((Input_Length - 1) downto 0));
+        Generic ( 
+            Input_Length : Integer
+            );
+        Port ( 
+                Value : in unsigned ((Input_Length - 1) downto 0);
+                Power : out unsigned ((Input_Length - 1) downto 0)
+                );
     end component;
     
     signal Input_Length : Integer := 4;

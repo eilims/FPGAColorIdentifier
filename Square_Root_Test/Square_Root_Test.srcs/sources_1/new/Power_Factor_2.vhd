@@ -29,9 +29,13 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Power_Factor_2 is
-    Generic ( Input_Length : Integer);
-    Port ( Value : in unsigned ((Input_Length - 1) downto 0);
-           Power : out unsigned ((Input_Length - 1) downto 0));
+    Generic (
+        Input_Length : Integer
+        );
+    Port (
+        Value : in unsigned ((Input_Length - 1) downto 0);
+        Power : out unsigned ((Input_Length - 1) downto 0) := (others => '0')
+        );
 end Power_Factor_2;
 
 architecture Behavioral of Power_Factor_2 is
@@ -51,8 +55,6 @@ begin
         elsif (factor = Value or factor < value) then
             Power <= to_unsigned(count - 1, (Input_Length));
         end if;
-        
     end process factor_calc;
-
 
 end Behavioral;
