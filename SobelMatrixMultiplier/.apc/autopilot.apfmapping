@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="SobelMatrixMultiplier.cpp" path="C:\Users\db217620\Repositories\FPGAColorIdentifier\SobelMatrixMultiplier\SobelMatrixMultiplier.cpp"/>
+    <originFiles name="SobelMatrixMultiplier.h" path="C:\Users\db217620\Repositories\FPGAColorIdentifier\SobelMatrixMultiplier\SobelMatrixMultiplier.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
