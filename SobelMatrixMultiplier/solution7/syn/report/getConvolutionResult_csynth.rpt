@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vivado HLS Report for 'getConvolutionResult'
+================================================================
+* Date:           Wed Apr 11 15:23:23 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        SobelMatrixMultiplier
+* Solution:       solution7
+* Product family: zynq
+* Target device:  xc7z020iclg400-1l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.68|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   24|   24|   24|   24|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |                                 |                      |  Latency  |  Interval | Pipeline |
+        |             Instance            |        Module        | min | max | min | max |   Type   |
+        +---------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |grp_combineOperatorResul_fu_183  |combineOperatorResul  |   13|   13|    1|    1| function |
+        +---------------------------------+----------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |            |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_Conv  |    8|    8|         5|          2|          1|     3|    yes   |
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|     12|       0|    281|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      6|     485|   3827|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    192|
+|Register         |        -|      -|     443|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     18|     928|   4300|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      8|   ~0   |      8|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------+----------------------+---------+-------+-----+------+
+    |             Instance            |        Module        | BRAM_18K| DSP48E|  FF |  LUT |
+    +---------------------------------+----------------------+---------+-------+-----+------+
+    |grp_combineOperatorResul_fu_183  |combineOperatorResul  |        0|      6|  485|  3737|
+    |getConvolutionResbkb_U4          |getConvolutionResbkb  |        0|      0|    0|    15|
+    |getConvolutionResbkb_U5          |getConvolutionResbkb  |        0|      0|    0|    15|
+    |getConvolutionResbkb_U6          |getConvolutionResbkb  |        0|      0|    0|    15|
+    |getConvolutionResbkb_U7          |getConvolutionResbkb  |        0|      0|    0|    15|
+    |getConvolutionResbkb_U8          |getConvolutionResbkb  |        0|      0|    0|    15|
+    |getConvolutionResbkb_U9          |getConvolutionResbkb  |        0|      0|    0|    15|
+    +---------------------------------+----------------------+---------+-------+-----+------+
+    |Total                            |                      |        0|      6|  485|  3827|
+    +---------------------------------+----------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |grp_fu_207_p2                   |     *    |      3|  0|  20|          32|          32|
+    |tmp_4_2_fu_293_p2               |     *    |      3|  0|  20|          32|          32|
+    |tmp_4_fu_272_p2                 |     *    |      3|  0|  20|          32|          32|
+    |tmp_6_1_fu_277_p2               |     *    |      3|  0|  20|          32|          32|
+    |horizontalResult_2_2_fu_317_p2  |     +    |      0|  0|  32|          32|          32|
+    |i_1_fu_218_p2                   |     +    |      0|  0|  10|           2|           1|
+    |tmp1_fu_308_p2                  |     +    |      0|  0|  39|          32|          32|
+    |tmp_10_fu_298_p2                |     +    |      0|  0|  32|          32|          32|
+    |tmp_11_fu_312_p2                |     +    |      0|  0|  32|          32|          32|
+    |verticalResult_2_2_fu_302_p2    |     +    |      0|  0|  32|          32|          32|
+    |exitcond1_fu_212_p2             |   icmp   |      0|  0|   8|           2|           2|
+    |ap_enable_pp0                   |    xor   |      0|  0|   8|           1|           2|
+    |ap_enable_reg_pp0_iter1         |    xor   |      0|  0|   8|           2|           1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |Total                           |          |     12|  0| 281|         295|         294|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                   |  93|         19|    1|         19|
+    |ap_enable_reg_pp0_iter1     |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2     |   9|          2|    1|          2|
+    |ap_phi_mux_i_phi_fu_151_p4  |   9|          2|    2|          4|
+    |array_0_address0            |  15|          3|    2|          6|
+    |array_1_address0            |  15|          3|    2|          6|
+    |array_2_address0            |  15|          3|    2|          6|
+    |horizontalResult_reg_159    |   9|          2|   32|         64|
+    |i_reg_147                   |   9|          2|    2|          4|
+    |verticalResult_reg_171      |   9|          2|   32|         64|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 192|         40|   77|        177|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                           |  18|   0|   18|          0|
+    |ap_enable_reg_pp0_iter0             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2             |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_exitcond1_reg_372  |   1|   0|    1|          0|
+    |exitcond1_reg_372                   |   1|   0|    1|          0|
+    |horizontalResult_reg_159            |  32|   0|   32|          0|
+    |i_1_reg_376                         |   2|   0|    2|          0|
+    |i_reg_147                           |   2|   0|    2|          0|
+    |reg_203                             |  32|   0|   32|          0|
+    |tmp_3_reg_381                       |  32|   0|   32|          0|
+    |tmp_4_2_reg_421                     |  32|   0|   32|          0|
+    |tmp_4_reg_401                       |  32|   0|   32|          0|
+    |tmp_5_reg_386                       |  32|   0|   32|          0|
+    |tmp_6_1_reg_411                     |  32|   0|   32|          0|
+    |tmp_6_2_reg_426                     |  32|   0|   32|          0|
+    |tmp_6_reg_406                       |  32|   0|   32|          0|
+    |tmp_7_reg_391                       |  32|   0|   32|          0|
+    |tmp_8_reg_396                       |  32|   0|   32|          0|
+    |tmp_s_reg_416                       |  32|   0|   32|          0|
+    |verticalResult_reg_171              |  32|   0|   32|          0|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               | 443|   0|  443|          0|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_done           | out |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_return         | out |   32| ap_ctrl_hs | getConvolutionResult | return value |
+|array_0_address0  | out |    2|  ap_memory |        array_0       |     array    |
+|array_0_ce0       | out |    1|  ap_memory |        array_0       |     array    |
+|array_0_q0        |  in |   32|  ap_memory |        array_0       |     array    |
+|array_0_address1  | out |    2|  ap_memory |        array_0       |     array    |
+|array_0_ce1       | out |    1|  ap_memory |        array_0       |     array    |
+|array_0_q1        |  in |   32|  ap_memory |        array_0       |     array    |
+|array_1_address0  | out |    2|  ap_memory |        array_1       |     array    |
+|array_1_ce0       | out |    1|  ap_memory |        array_1       |     array    |
+|array_1_q0        |  in |   32|  ap_memory |        array_1       |     array    |
+|array_1_address1  | out |    2|  ap_memory |        array_1       |     array    |
+|array_1_ce1       | out |    1|  ap_memory |        array_1       |     array    |
+|array_1_q1        |  in |   32|  ap_memory |        array_1       |     array    |
+|array_2_address0  | out |    2|  ap_memory |        array_2       |     array    |
+|array_2_ce0       | out |    1|  ap_memory |        array_2       |     array    |
+|array_2_q0        |  in |   32|  ap_memory |        array_2       |     array    |
+|array_2_address1  | out |    2|  ap_memory |        array_2       |     array    |
+|array_2_ce1       | out |    1|  ap_memory |        array_2       |     array    |
+|array_2_q1        |  in |   32|  ap_memory |        array_2       |     array    |
++------------------+-----+-----+------------+----------------------+--------------+
+

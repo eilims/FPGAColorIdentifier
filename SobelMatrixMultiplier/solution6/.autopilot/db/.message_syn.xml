@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;SobelMatrixMultiplier/SobelMatrixMultiplier.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;PIPELINE&apos; cannot be applied: Label &apos;Row&apos; does not exist in function &apos;getVerticalResult&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;PIPELINE&apos; cannot be applied: Label &apos;Col&apos; does not exist in function &apos;getVerticalResult&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;PIPELINE&apos; cannot be applied: Label &apos;Row&apos; does not exist in function &apos;getHorizontalResult&apos;." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;PIPELINE&apos; cannot be applied: Label &apos;Col&apos; does not exist in function &apos;getHorizontalResult&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 99.746 ; gain = 45.605" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 99.762 ; gain = 45.621" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 101.270 ; gain = 47.129" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 101.484 ; gain = 47.344" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Row_Horiz&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:34) in function &apos;getHorizontalResult&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-505]" severity="WARNING" keynum="814" content="Ignored pipeline directive for loop &apos;Col_Horiz&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:35) because its parent loop or function is pipelined." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Row_Vert&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:22) in function &apos;getVerticalResult&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-505]" severity="WARNING" keynum="814" content="Ignored pipeline directive for loop &apos;Col_Vert&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:23) because its parent loop or function is pipelined." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Col_Horiz&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:35) in function &apos;getHorizontalResult&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Col_Vert&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:23) in function &apos;getVerticalResult&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="697" content="Partitioning array &apos;_vertical_sobel_operator&apos; in dimension 2 automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="697" content="Partitioning array &apos;_horizontal_sobel_operator&apos; in dimension 2 automatically." tag=""/>
+	<Message prefix="[XFORM 203-711]" severity="ERROR" keynum="767" content="Array &apos;array&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:51) failed dataflow checking: it cannot be read by more than 1 process." tag=""/>
+	<Message prefix="[XFORM 203-713]" severity="WARNING" keynum="1015" content="Argument &apos;array&apos; has read operations in process function &apos;getVerticalResult&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20)." tag=""/>
+	<Message prefix="[XFORM 203-713]" severity="WARNING" keynum="1015" content="Argument &apos;array&apos; has read operations in process function &apos;getHorizontalResult&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:32)." tag=""/>
+	<Message prefix="[HLS 200-70]" severity="ERROR" keynum="HLS_70_1855" content="Pre-synthesis failed." tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="command &apos;ap_source&apos; returned error code
+    while executing
+&quot;source D:/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution6/csynth.tcl&quot;
+    invoked from within
+&quot;hls::main D:/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution6/csynth.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>

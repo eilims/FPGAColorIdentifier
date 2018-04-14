@@ -1,41 +1,29 @@
 #ifndef __SOBELMATRIXMULTIPLIER_H__
 #define __SOBELMATRIXMULTIPLIER_H__
 
-#include <cmath>
-#include <unistd.h>
+#include <ap_int.h>
+#include <stdint.h>
+#include "fxp_sqrt.h"
 
 #define HW_COSIM
+#define ARRAY_SIZE 3
+#define IN_NUMBER_LENGTH 32
+#define IN_CHARACTERISTIC_BIT_LENGTH 24
+#define OUT_NUMBER_LENGTH 32
+#define OUT_CHARACTERISTIC_BIT_LENGTH 24
 
-class SobelMatrixMultipler {
-
-private:
-	const uint8_t _vertical_sobel_operator[][] =
-	{
-			{ 1,  0, -1},
-			{ 2,  0, -2},
-			{ 1,  0, -1}
-	};
-
-	const uint8_t _horizontal_sobel_operator[][]=
-	{
-			{ 1,  2,  1},
-			{ 0,  0,  0},
-			{-1, -2, -1}
-	};
+typedef ap_ufixed<IN_NUMBER_LENGTH, IN_CHARACTERISTIC_BIT_LENGTH> in_data_t;
+typedef ap_ufixed<OUT_NUMBER_LENGTH, OUT_CHARACTERISTIC_BIT_LENGTH> out_data_t;
 
 	//Returns the resulting directional pixel edge coefficient
-	int getVerticalResult(int** array);
-	int getHorizontalResult(int** array);
+	int getVerticalResult(int array[ARRAY_SIZE][ARRAY_SIZE]);
+	int getHorizontalResult(int array[ARRAY_SIZE][ARRAY_SIZE]);
 
 	//Combines the horizontal and vertical results by squaring both and taking the square root of the sum
-	uint16_t combineOperatorResults(int verticalResult, int horizontalResult);
+	int combineOperatorResults(int verticalResult, int horizontalResult);
 
-
-public:
 	//Only usable function by users
-	uint16_t getConvolutionResult(int** array);
+	int getConvolutionResult(int array[ARRAY_SIZE][ARRAY_SIZE]);
 
-	//Getters
-	void getHorizontalSobelOperator(uint8_t** array);
-	void getVerticalSobelOperator(uint8_t** array);
-};
+
+#endif

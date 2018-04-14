@@ -1,0 +1,6 @@
+getConvolutionResbkb
+getConvolutionResbkb
+getConvolutionResbkb
+fxp_sqrt
+combineOperatorResul
+getConvolutionResult

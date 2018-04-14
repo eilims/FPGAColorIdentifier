@@ -1,0 +1,301 @@
+
+
+================================================================
+== Vivado HLS Report for 'getConvolutionResult'
+================================================================
+* Date:           Wed Apr  4 21:03:50 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        SobelMatrixMultiplier
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020iclg400-1l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.51|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   86|   86|   86|   86|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row     |   42|   42|        14|          -|          -|     3|    no    |
+        | + Col    |   12|   12|         4|          -|          -|     3|    no    |
+        |- Row     |   42|   42|        14|          -|          -|     3|    no    |
+        | + Col    |   12|   12|         4|          -|          -|     3|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1_i)
+	7  / (exitcond1_i)
+3 --> 
+	4  / (!exitcond_i)
+	2  / (exitcond_i)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	3  / true
+7 --> 
+	8  / (!exitcond1_i3)
+8 --> 
+	9  / (!exitcond_i8)
+	7  / (exitcond_i8)
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	8  / true
+
+* FSM state operations: 
+
+ <State 1> : 1.77ns
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%verticalResult_assig = alloca i32"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([9 x i32]* %array_r) nounwind, !map !26"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !32"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @getConvolutionResult_1) nounwind"
+ST_1 : Operation 16 [1/1] (1.76ns)   --->   "store i32 0, i32* %verticalResult_assig"
+ST_1 : Operation 17 [1/1] (1.76ns)   --->   "br label %1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+ <State 2> : 1.77ns
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%row_i = phi i2 [ 0, %0 ], [ %row, %5 ]"
+ST_2 : Operation 19 [1/1] (0.95ns)   --->   "%exitcond1_i = icmp eq i2 %row_i, -1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"
+ST_2 : Operation 21 [1/1] (1.56ns)   --->   "%row = add i2 %row_i, 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %getVerticalResult.exit.preheader, label %2" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_1_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_i_cast = zext i2 %row_i to i5" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %row_i, i2 0)" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i4 %tmp to i5" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 28 [1/1] (1.73ns)   --->   "%tmp_1 = sub i5 %p_shl_cast, %tmp_i_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (1.76ns)   --->   "br label %3" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%horizontalResult_ass = alloca i32"
+ST_2 : Operation 31 [1/1] (1.76ns)   --->   "store i32 0, i32* %horizontalResult_ass"
+ST_2 : Operation 32 [1/1] (1.76ns)   --->   "br label %getVerticalResult.exit" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+ <State 3> : 5.03ns
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%col_i = phi i2 [ 0, %2 ], [ %col, %4 ]"
+ST_3 : Operation 34 [1/1] (0.95ns)   --->   "%exitcond_i = icmp eq i2 %col_i, -1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"
+ST_3 : Operation 36 [1/1] (1.56ns)   --->   "%col = add i2 %col_i, 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %5, label %4" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_2_i_cast = zext i2 %col_i to i5" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_3 : Operation 39 [1/1] (1.78ns)   --->   "%tmp_4 = add i5 %tmp_1, %tmp_2_i_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_4_cast = sext i5 %tmp_4 to i64" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%array_addr = getelementptr [9 x i32]* %array_r, i64 0, i64 %tmp_4_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%p_vertical_sobel_oper = getelementptr [9 x i3]* @p_vertical_sobel_oper, i64 0, i64 %tmp_4_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_3 : Operation 43 [2/2] (2.32ns)   --->   "%array_load = load i32* %array_addr, align 4" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 44 [2/2] (3.25ns)   --->   "%p_vertical_sobel_oper_1 = load i3* %p_vertical_sobel_oper, align 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 9> <ROM>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str, i32 %tmp_1_i) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:11->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "br label %1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+ <State 4> : 3.25ns
+ST_4 : Operation 47 [1/2] (2.32ns)   --->   "%array_load = load i32* %array_addr, align 4" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 48 [1/2] (3.25ns)   --->   "%p_vertical_sobel_oper_1 = load i3* %p_vertical_sobel_oper, align 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 9> <ROM>
+
+ <State 5> : 8.51ns
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%p_vertical_sobel_oper_2 = sext i3 %p_vertical_sobel_oper_1 to i32" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_5 : Operation 50 [1/1] (8.51ns)   --->   "%tmp_3_i = mul nsw i32 %p_vertical_sobel_oper_2, %array_load" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 4.32ns
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%verticalResult_assig_1 = load i32* %verticalResult_assig" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_6 : Operation 53 [1/1] (2.55ns)   --->   "%summation = add nsw i32 %verticalResult_assig_1, %tmp_3_i" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 54 [1/1] (1.76ns)   --->   "store i32 %summation, i32* %verticalResult_assig" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "br label %3" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+ <State 7> : 2.55ns
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%row_i1 = phi i2 [ %row_1, %9 ], [ 0, %getVerticalResult.exit.preheader ]"
+ST_7 : Operation 57 [1/1] (0.95ns)   --->   "%exitcond1_i3 = icmp eq i2 %row_i1, -1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"
+ST_7 : Operation 59 [1/1] (1.56ns)   --->   "%row_1 = add i2 %row_i1, 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i3, label %getHorizontalResult.exit, label %6" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_2_i4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_i5_cast = zext i2 %row_i1 to i5" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_2 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %row_i1, i2 0)" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i4 %tmp_2 to i5" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 66 [1/1] (1.73ns)   --->   "%tmp_3 = sub i5 %p_shl1_cast, %tmp_i5_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 67 [1/1] (1.76ns)   --->   "br label %7" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%horizontalResult_ass_2 = load i32* %horizontalResult_ass" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:31->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%verticalResult_assig_2 = load i32* %verticalResult_assig" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:31->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_7 : Operation 70 [1/1] (2.55ns)   --->   "%tmp_i1 = add nsw i32 %horizontalResult_ass_2, %verticalResult_assig_2" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:31->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "ret i32 %tmp_i1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+ <State 8> : 5.03ns
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%col_i7 = phi i2 [ 0, %6 ], [ %col_1, %8 ]"
+ST_8 : Operation 73 [1/1] (0.95ns)   --->   "%exitcond_i8 = icmp eq i2 %col_i7, -1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"
+ST_8 : Operation 75 [1/1] (1.56ns)   --->   "%col_1 = add i2 %col_i7, 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "br i1 %exitcond_i8, label %9, label %8" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_7_i_cast = zext i2 %col_i7 to i5" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_8 : Operation 78 [1/1] (1.78ns)   --->   "%tmp_5 = add i5 %tmp_3, %tmp_7_i_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_5_cast = sext i5 %tmp_5 to i64" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%array_addr_1 = getelementptr [9 x i32]* %array_r, i64 0, i64 %tmp_5_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%p_horizontal_sobel_op = getelementptr [9 x i3]* @p_horizontal_sobel_op, i64 0, i64 %tmp_5_cast" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_8 : Operation 82 [2/2] (2.32ns)   --->   "%array_load_1 = load i32* %array_addr_1, align 4" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_8 : Operation 83 [2/2] (3.25ns)   --->   "%p_horizontal_sobel_op_1 = load i3* %p_horizontal_sobel_op, align 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 9> <ROM>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str, i32 %tmp_2_i4) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:23->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "br label %getVerticalResult.exit" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:19->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+ <State 9> : 3.25ns
+ST_9 : Operation 86 [1/2] (2.32ns)   --->   "%array_load_1 = load i32* %array_addr_1, align 4" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_9 : Operation 87 [1/2] (3.25ns)   --->   "%p_horizontal_sobel_op_1 = load i3* %p_horizontal_sobel_op, align 1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 48 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 9> <ROM>
+
+ <State 10> : 8.51ns
+ST_10 : Operation 88 [1/1] (0.00ns)   --->   "%p_horizontal_sobel_op_2 = sext i3 %p_horizontal_sobel_op_1 to i32" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_10 : Operation 89 [1/1] (8.51ns)   --->   "%tmp_8_i = mul nsw i32 %p_horizontal_sobel_op_2, %array_load_1" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 4.32ns
+ST_11 : Operation 90 [1/1] (0.00ns)   --->   "%horizontalResult_ass_1 = load i32* %horizontalResult_ass" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_11 : Operation 91 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_11 : Operation 92 [1/1] (2.55ns)   --->   "%summation_1 = add nsw i32 %horizontalResult_ass_1, %tmp_8_i" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 93 [1/1] (1.76ns)   --->   "store i32 %summation_1, i32* %horizontalResult_ass" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+ST_11 : Operation 94 [1/1] (0.00ns)   --->   "br label %7" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	'alloca' operation ('verticalResult') [4]  (0 ns)
+	'store' operation of constant 0 on local variable 'verticalResult' [8]  (1.77 ns)
+
+ <State 2>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('col') with incoming values : ('col', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [25]  (1.77 ns)
+
+ <State 3>: 5.03ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:8->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [25]  (0 ns)
+	'add' operation ('tmp_4', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [34]  (1.78 ns)
+	'getelementptr' operation ('p_vertical_sobel_oper', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [37]  (0 ns)
+	'load' operation ('p_vertical_sobel_oper_1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on array 'p_vertical_sobel_oper' [39]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('p_vertical_sobel_oper_1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on array 'p_vertical_sobel_oper' [39]  (3.25 ns)
+
+ <State 5>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_3_i', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [41]  (8.51 ns)
+
+ <State 6>: 4.32ns
+The critical path consists of the following:
+	'load' operation ('verticalResult_assig_1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on local variable 'verticalResult' [31]  (0 ns)
+	'add' operation ('summation', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [42]  (2.55 ns)
+	'store' operation (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) of variable 'summation', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:9->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37 on local variable 'verticalResult' [43]  (1.77 ns)
+
+ <State 7>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('horizontalResult_ass_2', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:31->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on local variable 'horizontalResult' [91]  (0 ns)
+	'add' operation ('tmp_i1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:31->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [93]  (2.55 ns)
+
+ <State 8>: 5.03ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:20->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [67]  (0 ns)
+	'add' operation ('tmp_5', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [76]  (1.78 ns)
+	'getelementptr' operation ('p_horizontal_sobel_op', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [79]  (0 ns)
+	'load' operation ('p_horizontal_sobel_op_1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on array 'p_horizontal_sobel_op' [81]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('p_horizontal_sobel_op_1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on array 'p_horizontal_sobel_op' [81]  (3.25 ns)
+
+ <State 10>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp_8_i', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [83]  (8.51 ns)
+
+ <State 11>: 4.32ns
+The critical path consists of the following:
+	'load' operation ('horizontalResult_ass_1', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) on local variable 'horizontalResult' [73]  (0 ns)
+	'add' operation ('summation', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) [84]  (2.55 ns)
+	'store' operation (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37) of variable 'summation', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:21->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:37 on local variable 'horizontalResult' [85]  (1.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

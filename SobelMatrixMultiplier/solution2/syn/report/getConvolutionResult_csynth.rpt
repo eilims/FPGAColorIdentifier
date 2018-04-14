@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vivado HLS Report for 'getConvolutionResult'
+================================================================
+* Date:           Thu Apr  5 18:39:51 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        SobelMatrixMultiplier
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020iclg400-1l
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.51|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   28|   28|   28|   28|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |           |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_Col  |   12|   12|         5|          1|          1|     9|    yes   |
+        |- Row_Col  |   12|   12|         5|          1|          1|     9|    yes   |
+        +-----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      6|       0|    329|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        0|      -|       6|      2|
+|Multiplexer      |        -|      -|       -|    174|
+|Register         |        0|      -|     335|     64|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      6|     341|    569|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      2|   ~0   |      1|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |          Memory         |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |p_vertical_sobel_oper_U  |getConvolutionResbkb  |        0|  3|   1|     9|    3|     1|           27|
+    |p_horizontal_sobel_op_U  |getConvolutionRescud  |        0|  3|   1|     9|    3|     1|           27|
+    +-------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total                    |                      |        0|  6|   2|    18|    6|     2|           54|
+    +-------------------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |tmp_3_i_fu_272_p2               |     *    |      3|  0|  20|           3|          32|
+    |tmp_8_i_fu_367_p2               |     *    |      3|  0|  20|           3|          32|
+    |ap_return                       |     +    |      0|  0|  39|          32|          32|
+    |col_1_fu_323_p2                 |     +    |      0|  0|  10|           2|           1|
+    |col_fu_228_p2                   |     +    |      0|  0|  10|           2|           1|
+    |indvar_flatten_next1_fu_289_p2  |     +    |      0|  0|  13|           4|           1|
+    |indvar_flatten_next_fu_194_p2   |     +    |      0|  0|  13|           4|           1|
+    |row_1_fu_295_p2                 |     +    |      0|  0|  10|           2|           1|
+    |row_fu_200_p2                   |     +    |      0|  0|  10|           2|           1|
+    |summation_1_fu_373_p2           |     +    |      0|  0|  39|          32|          32|
+    |summation_fu_278_p2             |     +    |      0|  0|  39|          32|          32|
+    |tmp_2_fu_257_p2                 |     +    |      0|  0|   8|           5|           5|
+    |tmp_5_fu_352_p2                 |     +    |      0|  0|   8|           5|           5|
+    |tmp_1_fu_248_p2                 |     -    |      0|  0|   8|           5|           5|
+    |tmp_4_fu_343_p2                 |     -    |      0|  0|   8|           5|           5|
+    |exitcond_flatten1_fu_283_p2     |   icmp   |      0|  0|   9|           4|           4|
+    |exitcond_flatten_fu_188_p2      |   icmp   |      0|  0|   9|           4|           4|
+    |exitcond_i3_fu_206_p2           |   icmp   |      0|  0|   8|           2|           2|
+    |exitcond_i_fu_301_p2            |   icmp   |      0|  0|   8|           2|           2|
+    |col_i6_mid2_fu_307_p3           |  select  |      0|  0|   2|           1|           1|
+    |col_i_mid2_fu_212_p3            |  select  |      0|  0|   2|           1|           1|
+    |tmp_i4_mid2_v_fu_315_p3         |  select  |      0|  0|   2|           1|           2|
+    |tmp_i_mid2_v_fu_220_p3          |  select  |      0|  0|   2|           1|           2|
+    |ap_enable_pp0                   |    xor   |      0|  0|   8|           1|           2|
+    |ap_enable_pp1                   |    xor   |      0|  0|   8|           1|           2|
+    |ap_enable_reg_pp0_iter1         |    xor   |      0|  0|   8|           2|           1|
+    |ap_enable_reg_pp1_iter1         |    xor   |      0|  0|   8|           2|           1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |Total                           |          |      6|  0| 329|         160|         210|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                        |  33|          6|    1|          6|
+    |ap_enable_reg_pp0_iter1          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter4          |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter1          |   9|          2|    1|          2|
+    |ap_enable_reg_pp1_iter4          |   9|          2|    1|          2|
+    |ap_phi_mux_row_i1_phi_fu_154_p4  |   9|          2|    2|          4|
+    |ap_phi_mux_row_i_phi_fu_109_p4   |   9|          2|    2|          4|
+    |array_r_address0                 |  15|          3|    4|         12|
+    |col_i6_reg_173                   |   9|          2|    2|          4|
+    |col_i_reg_128                    |   9|          2|    2|          4|
+    |indvar_flatten1_reg_139          |   9|          2|    4|          8|
+    |indvar_flatten_reg_94            |   9|          2|    4|          8|
+    |row_i1_reg_150                   |   9|          2|    2|          4|
+    |row_i_reg_105                    |   9|          2|    2|          4|
+    |summation_1_i5_reg_161           |   9|          2|   32|         64|
+    |summation_1_i_reg_116            |   9|          2|   32|         64|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            | 174|         37|   93|        194|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |   5|   0|    5|          0|
+    |ap_enable_reg_pp0_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4          |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter2          |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter3          |   1|   0|    1|          0|
+    |ap_enable_reg_pp1_iter4          |   1|   0|    1|          0|
+    |col_i6_mid2_reg_444              |   2|   0|    2|          0|
+    |col_i6_reg_173                   |   2|   0|    2|          0|
+    |col_i_mid2_reg_393               |   2|   0|    2|          0|
+    |col_i_reg_128                    |   2|   0|    2|          0|
+    |exitcond_flatten1_reg_435        |   1|   0|    1|          0|
+    |exitcond_flatten_reg_384         |   1|   0|    1|          0|
+    |indvar_flatten1_reg_139          |   4|   0|    4|          0|
+    |indvar_flatten_reg_94            |   4|   0|    4|          0|
+    |p_horizontal_sobel_op_1_reg_471  |   3|   0|    3|          0|
+    |p_vertical_sobel_oper_1_reg_420  |   3|   0|    3|          0|
+    |reg_184                          |  32|   0|   32|          0|
+    |row_i1_reg_150                   |   2|   0|    2|          0|
+    |row_i_reg_105                    |   2|   0|    2|          0|
+    |summation_1_i5_reg_161           |  32|   0|   32|          0|
+    |summation_1_i_reg_116            |  32|   0|   32|          0|
+    |tmp_3_i_reg_425                  |  32|   0|   32|          0|
+    |tmp_8_i_reg_476                  |  32|   0|   32|          0|
+    |tmp_i4_mid2_v_reg_449            |   2|   0|    2|          0|
+    |tmp_i_mid2_v_reg_398             |   2|   0|    2|          0|
+    |exitcond_flatten1_reg_435        |  64|  32|    1|          0|
+    |exitcond_flatten_reg_384         |  64|  32|    1|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 335|  64|  209|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_done           | out |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | getConvolutionResult | return value |
+|ap_return         | out |   32| ap_ctrl_hs | getConvolutionResult | return value |
+|array_r_address0  | out |    4|  ap_memory |        array_r       |     array    |
+|array_r_ce0       | out |    1|  ap_memory |        array_r       |     array    |
+|array_r_q0        |  in |   32|  ap_memory |        array_r       |     array    |
++------------------+-----+-----+------------+----------------------+--------------+
+

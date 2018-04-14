@@ -1,0 +1,47 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="getConvolutionResult2" label="Row_Conv" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="getConvolutionResult2" label="Col_Conv" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="getConvolutionResult2" label="Row_Conv" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="getConvolutionResult" label="" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="getConvolutionResult" label="Row_Conv" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="getConvolutionResult" label="Row_Conv" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="getConvolutionResult" label="Col_Conv" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="getConvolutionResult" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="array" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="combineOperatorResults" label="" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="power" label="Power_Loop" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

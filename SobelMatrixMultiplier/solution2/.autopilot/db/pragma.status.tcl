@@ -1,0 +1,2 @@
+lappend pragmaStatus0 {pragma "PIPELINE" source "D:/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" location "getVerticalResult/Col" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "PIPELINE" source "D:/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" location "getHorizontalResult/Col" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

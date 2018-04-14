@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1522901032609">
+  <ports id="1" name="array_r" type="PortType" originalName="array" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="9">
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="11" name="ap_return" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="105" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="106" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="107" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="110" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="113" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="114" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="115" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="118" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="128" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="130" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="131" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="132" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="133" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="135" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="137" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="138" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="140" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="142" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="156" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="157" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="158" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="159" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="160" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="163" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="164" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="167" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="169" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="171" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="172" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.12" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="184" source_obj="//@blocks.9/@node_objs.2" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="185" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="186" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.9/@node_objs.1"/>
+  <edges id="188" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.9/@node_objs.2"/>
+  <edges id="190" source_obj="//@blocks.9/@node_objs.1" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="191" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="192" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.9/@node_objs.3"/>
+  <edges id="193" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="195" source_obj="//@blocks.8/@node_objs.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="208" source_obj="//@blocks.10/@node_objs.2" sink_obj="//@blocks.10/@node_objs.4"/>
+  <edges id="209" source_obj="//@blocks.10/@node_objs.0" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="210" source_obj="//@blocks.10/@node_objs.4" sink_obj="//@blocks.10/@node_objs.5"/>
+  <edges id="211" source_obj="//@blocks.10/@node_objs.5" sink_obj="//@blocks.10/@node_objs.6"/>
+  <edges id="212" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.10/@node_objs.6"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.10/@node_objs.7"/>
+  <edges id="214" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.11/@node_objs.0"/>
+  <edges id="215" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.12/@node_objs.0"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.12/@node_objs.1"/>
+  <edges id="217" source_obj="//@blocks.12/@node_objs.0" sink_obj="//@blocks.12/@node_objs.2"/>
+  <edges id="218" source_obj="//@blocks.12/@node_objs.1" sink_obj="//@blocks.12/@node_objs.2"/>
+  <edges id="219" source_obj="//@blocks.12/@node_objs.2" sink_obj="//@blocks.12/@node_objs.3"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.6"/>
+  <edges id="272" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="273" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="274" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="275" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="276" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3"/>
+  <edges id="277" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1"/>
+  <edges id="278" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="279" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.12"/>
+  <edges id="280" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="281" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.9"/>
+  <edges id="282" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.11"/>
+  <edges id="283" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.10"/>
+  <edges id="284" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.9"/>
+  <edges id="285" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.7"/>
+  <edges source_obj="//@blocks.12/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.9/@node_objs.0" sink_obj="//@blocks.10/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.1" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.1" sink_obj="//@blocks.10/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.10/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.10/@node_objs.3" sink_obj="//@blocks.10/@node_objs.4"/>
+  <blocks id="10" name="block_10" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_16</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="verticalResult_assig" originalName="verticalResult" bitwidth="32" opcode="alloca" m_display="0">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="node_8" opcode="store" m_display="0">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="node_9" lineNumber="7" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="br" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="7" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <controlInputObjs>block_16</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="16" name="block_16" type="BlockType">
+    <controlInputObjs>block_10</controlInputObjs>
+    <controlInputObjs>block_48</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>getVerticalResult.exit.preheader</controlOutputObjs>
+    <controlOutputObjs>block_24</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="row_i" originalName="row" bitwidth="2" opcode="phi" nodeLabel="1" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <controlInputObjs>block_10</controlInputObjs>
+      <controlInputObjs>block_48</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="exitcond1_i" lineNumber="7" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="exitcond1_i_fu_151_p2" contextFuncName="getVerticalResult" bitwidth="1" opcode="icmp" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="7" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="row" lineNumber="7" originalName="row" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="row_fu_157_p2" contextFuncName="getVerticalResult" bitwidth="2" opcode="add" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="7" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="node_15" lineNumber="7" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="br" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="7" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_24</controlInputObjs>
+      <controlInputObjs>getVerticalResult.exit.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="24" name="block_24" type="BlockType">
+    <controlInputObjs>block_16</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_30</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_1" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="tmp_1_fu_179_p2" contextFuncName="getVerticalResult" bitwidth="5" opcode="sub" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="node_23" lineNumber="8" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="br" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="8" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <controlInputObjs>block_30</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="30" name="block_30" type="BlockType">
+    <controlInputObjs>block_24</controlInputObjs>
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_48</controlOutputObjs>
+    <controlOutputObjs>block_45</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="col_i" originalName="col" bitwidth="2" opcode="phi" nodeLabel="2" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_24</controlInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="exitcond_i" lineNumber="8" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="exitcond_i_fu_190_p2" contextFuncName="getVerticalResult" bitwidth="1" opcode="icmp" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="8" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="col" lineNumber="8" originalName="col" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="col_fu_196_p2" contextFuncName="getVerticalResult" bitwidth="2" opcode="add" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="8" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="node_29" lineNumber="8" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="br" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="8" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_45</controlInputObjs>
+      <controlInputObjs>block_48</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="45" name="block_45" type="BlockType">
+    <controlInputObjs>block_30</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_30</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="verticalResult_assig_1" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" bitwidth="32" opcode="load" nodeLabel="5" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_4" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="tmp_4_fu_206_p2" contextFuncName="getVerticalResult" bitwidth="5" opcode="add" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="array_load" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" bitwidth="32" opcode="load" nodeLabel="2" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>array_r</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="p_vertical_sobel_oper_1" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" bitwidth="3" opcode="load" nodeLabel="2" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="tmp_3_i" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="tmp_3_i_fu_220_p2" contextFuncName="getVerticalResult" bitwidth="32" opcode="mul" nodeLabel="4" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="summation" lineNumber="9" originalName="summation" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="summation_fu_226_p2" contextFuncName="getVerticalResult" bitwidth="32" opcode="add" nodeLabel="5" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="node_43" lineNumber="9" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="store" nodeLabel="5" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="9" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="node_44" lineNumber="8" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="br" nodeLabel="5" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="8" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <controlInputObjs>block_30</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>9</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="48" name="block_48" type="BlockType">
+    <controlInputObjs>block_30</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_16</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="node_47" lineNumber="7" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getVerticalResult" opcode="br" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="7" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getVerticalResult"/>
+      <controlInputObjs>block_16</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="52" name="getVerticalResult.exit.preheader" type="BlockType">
+    <controlInputObjs>block_16</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>getVerticalResult.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="horizontalResult_ass" originalName="horizontalResult" bitwidth="32" opcode="alloca" nodeLabel="1" m_display="0">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="node_50" opcode="store" nodeLabel="1" m_display="0">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="node_51" lineNumber="19" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="br" nodeLabel="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="19" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <controlInputObjs>getVerticalResult.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="58" name="getVerticalResult.exit" type="BlockType">
+    <controlInputObjs>getVerticalResult.exit.preheader</controlInputObjs>
+    <controlInputObjs>block_90</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>getHorizontalResult.exit</controlOutputObjs>
+    <controlOutputObjs>block_66</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="row_i1" originalName="row" bitwidth="2" opcode="phi" nodeLabel="2" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <controlInputObjs>block_90</controlInputObjs>
+      <controlInputObjs>getVerticalResult.exit.preheader</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="exitcond1_i3" lineNumber="19" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="exitcond1_i3_fu_236_p2" contextFuncName="getHorizontalResult" bitwidth="1" opcode="icmp" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="19" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="row_1" lineNumber="19" originalName="row" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="row_1_fu_242_p2" contextFuncName="getHorizontalResult" bitwidth="2" opcode="add" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="19" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="node_57" lineNumber="19" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="br" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="19" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_66</controlInputObjs>
+      <controlInputObjs>getHorizontalResult.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="66" name="block_66" type="BlockType">
+    <controlInputObjs>getVerticalResult.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_72</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp_3" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="tmp_3_fu_264_p2" contextFuncName="getHorizontalResult" bitwidth="5" opcode="sub" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="node_65" lineNumber="20" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="br" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="20" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <controlInputObjs>block_72</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="72" name="block_72" type="BlockType">
+    <controlInputObjs>block_66</controlInputObjs>
+    <controlInputObjs>block_87</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_90</controlOutputObjs>
+    <controlOutputObjs>block_87</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="col_i7" originalName="col" bitwidth="2" opcode="phi" nodeLabel="3" m_display="0">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_66</controlInputObjs>
+      <controlInputObjs>block_87</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="exitcond_i8" lineNumber="20" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="exitcond_i8_fu_276_p2" contextFuncName="getHorizontalResult" bitwidth="1" opcode="icmp" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="20" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="col_1" lineNumber="20" originalName="col" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="col_1_fu_282_p2" contextFuncName="getHorizontalResult" bitwidth="2" opcode="add" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="20" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="node_71" lineNumber="20" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="br" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="20" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_87</controlInputObjs>
+      <controlInputObjs>block_90</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="87" name="block_87" type="BlockType">
+    <controlInputObjs>block_72</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_72</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="horizontalResult_ass_1" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" bitwidth="32" opcode="load" nodeLabel="6" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="tmp_5" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="tmp_5_fu_292_p2" contextFuncName="getHorizontalResult" bitwidth="5" opcode="add" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="array_load_1" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" bitwidth="32" opcode="load" nodeLabel="3" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>array_r</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="p_horizontal_sobel_op_1" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" bitwidth="3" opcode="load" nodeLabel="3" nodeLatency="1" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="tmp_8_i" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="tmp_8_i_fu_306_p2" contextFuncName="getHorizontalResult" bitwidth="32" opcode="mul" nodeLabel="5" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="summation_1" lineNumber="21" originalName="summation" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="summation_1_fu_312_p2" contextFuncName="getHorizontalResult" bitwidth="32" opcode="add" nodeLabel="6" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="node_85" lineNumber="21" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="store" nodeLabel="6" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="21" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="node_86" lineNumber="20" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="br" nodeLabel="6" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="20" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <controlInputObjs>block_72</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="90" name="block_90" type="BlockType">
+    <controlInputObjs>block_72</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>getVerticalResult.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="node_89" lineNumber="19" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getHorizontalResult" opcode="br" nodeLabel="3" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="19" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getHorizontalResult"/>
+      <controlInputObjs>getVerticalResult.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="95" name="getHorizontalResult.exit" type="BlockType">
+    <controlInputObjs>getVerticalResult.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="horizontalResult_ass_2" lineNumber="31" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="combineOperatorResults" bitwidth="32" opcode="load" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="31" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="combineOperatorResults"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="verticalResult_assig_2" lineNumber="31" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="combineOperatorResults" bitwidth="32" opcode="load" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="31" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="combineOperatorResults"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="tmp_i1" lineNumber="31" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." rtlName="ap_return" contextFuncName="combineOperatorResults" bitwidth="32" opcode="add" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="31" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="combineOperatorResults"/>
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="node_94" lineNumber="37" fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" fileDirectory=".." contextFuncName="getConvolutionResult" opcode="ret" nodeLabel="2" m_display="0">
+      <inlineStackInfo fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp" linenumber="37" fileDirectory="D:\Repositories\FPGAColorIdentifier" functionName="getConvolutionResult"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>ap_return</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="SobelMatrixMultiplier/SobelMatrixMultiplier.cpp">
+      <validLinenumbers>31</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="row_1_reg_380">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="verticalResult_assig_reg_322">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="p_horizontal_sobel_op_reg_403">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="row_reg_332">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_1_reg_337">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="array_addr_1_reg_398">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="col_i7_reg_125">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="col_reg_352">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="p_vertical_sobel_oper_1_reg_367">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="p_vertical_sobel_oper_reg_362">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_reg_385">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="array_addr_reg_357">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="p_horizontal_sobel_op_1_reg_408">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="row_i1_reg_114">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="col_i_reg_103">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_142">
+    <nodeIds>38</nodeIds>
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_i_reg_372">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="col_1_reg_393">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_8_i_reg_413">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="horizontalResult_ass_reg_342">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="row_i_reg_92">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <expressionNodes realName="horizontalResult_ass_fu_44">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_179">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_i_cast_fu_202">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_vertical_sobel_oper_2_fu_217">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="summation_fu_226">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_i5_cast_fu_248">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_fu_157">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_i_phi_fu_96">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_252">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_fu_196">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_1_fu_242">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_fu_292">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="verticalResult_assig_fu_40">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_vertical_sobel_oper_gep_fu_55">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_i_fu_220">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_i_phi_fu_107">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_1_fu_282">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond1_i_fu_151">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_8_i_fu_306">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_167">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_206">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond1_i3_fu_236">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond_i_fu_190">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_264">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_horizontal_sobel_op_2_fu_303">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="exitcond_i8_fu_276">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_i_cast_fu_163">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="array_addr_1_gep_fu_72">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="col_i7_phi_fu_129">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_horizontal_sobel_op_gep_fu_79">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="summation_1_fu_312">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="row_i1_phi_fu_118">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_i_cast_fu_288">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl1_cast_fu_260">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="array_addr_gep_fu_48">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_5_cast_fu_297">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_i1_fu_270">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_cast_fu_175">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_cast_fu_211">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="StgValue_54_store_fu_231">
+    <nodeIds>43</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_31_store_fu_185">
+    <nodeIds>50</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_93_store_fu_317">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_139">
+    <nodeIds>91</nodeIds>
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioNodes realName="StgValue_16_store_fu_146">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_load_fu_136">
+    <nodeIds>31</nodeIds>
+    <nodeIds>92</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="array_r">
+    <nodeIds>38</nodeIds>
+    <nodeIds>80</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_horizontal_sobel_op">
+    <nodeIds>81</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="p_vertical_sobel_oper">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <ioPorts name="array_r(p0)">
+    <contents name="load">
+      <nodeIds>38</nodeIds>
+      <nodeIds>80</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return">
+    <contents name="ret">
+      <nodeIds>94</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="2" latency="2"/>
+      <operations id="39" stage="2" latency="2"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="38" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="2" latency="2"/>
+      <operations id="81" stage="2" latency="2"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="80" stage="1" latency="2"/>
+      <operations id="81" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="28"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="30"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="31"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="33"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="34"/>
+    </transitions>
+    <transitions inState="6" outState="3">
+      <condition id="36"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="38"/>
+    </transitions>
+    <transitions inState="2" outState="7">
+      <condition id="40"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="42"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="43"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="45"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="46"/>
+    </transitions>
+    <transitions inState="11" outState="8">
+      <condition id="48"/>
+    </transitions>
+    <transitions inState="8" outState="7">
+      <condition id="50"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="getConvolutionResult" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="86" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <subRegions>12</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>10</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Row" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="42" mMaxLatency="-1" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>16</basicBlocks>
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Col" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="12" mMaxLatency="-1" mType="1">
+      <basicBlocks>30</basicBlocks>
+      <basicBlocks>45</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>48</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>52</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Row" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="42" mMaxLatency="-1" mType="1">
+      <subRegions>9</subRegions>
+      <subRegions>10</subRegions>
+      <subRegions>11</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>58</basicBlocks>
+      <basicBlocks>66</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="10" mTag="Col" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="12" mMaxLatency="-1" mType="1">
+      <basicBlocks>72</basicBlocks>
+      <basicBlocks>87</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="11" mTag="Region 5" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>90</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="12" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMaxLatency="-1">
+      <basicBlocks>95</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

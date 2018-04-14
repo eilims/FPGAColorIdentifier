@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="color_identifier" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1521849574"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1521849574"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1521849574"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1521849574"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1523471569"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1523471569"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1523471569"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1523471569"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\color_identifier_processing_system7_0_0\color_identifier_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -24,7 +24,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\color_identifier_axis_interconnect_0_3\color_identifier_axis_interconnect_0_3.xci" Type="IP">
-        <Instance HierarchyPath="axis_interconnect_0"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -48,7 +47,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\color_identifier_ps7_0_axi_periph_3\color_identifier_ps7_0_axi_periph_3.xci" Type="IP">
-        <Instance HierarchyPath="ps7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

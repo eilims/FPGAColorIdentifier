@@ -15,12 +15,12 @@ preplace netloc axis_accelerator_adapter_0_M_AXIS_0 1 3 1 N
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 440 430
 preplace netloc axis_interconnect_0_M00_AXIS 1 4 1 N
-preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 1 3 450 240 730J 40 1080
+preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 1 3 450 240 740J 40 1100
 preplace netloc processing_system7_0_FIXED_IO 1 1 5 NJ 510 NJ 510 NJ 510 NJ 510 NJ
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 3 470 260 750 70 1060
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 260 460 250 740 60 1070 500 1390
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 3 470 260 760 70 1080
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 260 460 250 750 60 1090 500 1400
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N
-levelinfo -pg 1 0 230 600 910 1240 1560 1750 -top 0 -bot 640
+levelinfo -pg 1 0 230 610 930 1250 1570 1760 -top 0 -bot 640
 ",
 }
 {
