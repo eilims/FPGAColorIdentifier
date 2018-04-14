@@ -1,0 +1,4 @@
+getConvolutionResbkb
+getConvolutionResbkb
+getConvolutionResbkb
+getConvolutionResult

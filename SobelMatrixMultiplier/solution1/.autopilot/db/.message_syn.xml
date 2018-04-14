@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;SobelMatrixMultiplier/SobelMatrixMultiplier.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 100.180 ; gain = 45.176" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 100.219 ; gain = 45.215" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 112.621 ; gain = 57.617" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;power&apos; into &apos;combineOperatorResults&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;combineOperatorResults&apos; into &apos;getConvolutionResult&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:89) automatically." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 119.188 ; gain = 64.184" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Row_Conv&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:80) in function &apos;getConvolutionResult&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Col_Conv&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:81) in function &apos;getConvolutionResult&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="697" content="Partitioning array &apos;_vertical_sobel_operator&apos; in dimension 2 automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="697" content="Partitioning array &apos;_horizontal_sobel_operator&apos; in dimension 2 automatically." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="691" content="Automatically partitioning small array &apos;_vertical_sobel_operator.0&apos; completely based on array size." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="691" content="Automatically partitioning small array &apos;_vertical_sobel_operator.2&apos; completely based on array size." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="691" content="Automatically partitioning small array &apos;_horizontal_sobel_operator.0&apos; completely based on array size." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="691" content="Automatically partitioning small array &apos;_horizontal_sobel_operator.1&apos; completely based on array size." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="691" content="Automatically partitioning small array &apos;_horizontal_sobel_operator.2&apos; completely based on array size." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;array&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:74) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;_vertical_sobel_operator.0&apos; in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;_vertical_sobel_operator.2&apos; in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;_horizontal_sobel_operator.0&apos; in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;_horizontal_sobel_operator.1&apos; in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;_horizontal_sobel_operator.2&apos; in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;power&apos; into &apos;combineOperatorResults&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fxp_sqrt&lt;32, 24, 32, 24&gt;&apos; into &apos;combineOperatorResults&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) automatically." tag=""/>
+	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (SobelMatrixMultiplier/fxp_sqrt.h:162:11) to (SobelMatrixMultiplier/fxp_sqrt.h:161:36) in function &apos;combineOperatorResults&apos;... converting 4 basic blocks." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;combineOperatorResults&apos; into &apos;getConvolutionResult&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:89) automatically." tag=""/>
+	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;getConvolutionResult&apos; (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:74)...3 expression(s) balanced." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 147.426 ; gain = 92.422" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 151.012 ; gain = 96.008" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;getConvolutionResult&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;getConvolutionResult&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Row_Conv&apos;." tag=""/>
+	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;load&apos; operation (&apos;array_0_load_2&apos;) on array &apos;array_0&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;array_0&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 2, Depth = 5." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 10.651 seconds; current allocated memory: 99.421 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.104 seconds; current allocated memory: 99.846 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;getConvolutionResult&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getConvolutionResult/array_0&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getConvolutionResult/array_1&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getConvolutionResult/array_2&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;getConvolutionResult&apos; to &apos;ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;getConvolutionResult_mux_32_32_1_1&apos; to &apos;getConvolutionResbkb&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;getConvolutionResbkb&apos;: 6 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;getConvolutionResult&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.164 seconds; current allocated memory: 100.562 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 151.316 ; gain = 96.313" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for getConvolutionResult." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for getConvolutionResult." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for getConvolutionResult." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 12.146 seconds; peak allocated memory: 100.562 MB." tag=""/>
+</Messages>

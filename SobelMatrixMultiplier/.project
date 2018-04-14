@@ -29,52 +29,52 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/.apc/.src</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/.apc/.tb</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/solution1/.tcls</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/SobelMatrixMultiplier.cpp</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</location>
 		</link>
 		<link>
 			<name>source/SobelMatrixMultiplier.h</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/SobelMatrixMultiplier.h</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier.h</location>
 		</link>
 		<link>
 			<name>source/fxp_sqrt.h</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/fxp_sqrt.h</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/fxp_sqrt.h</location>
 		</link>
 		<link>
 			<name>testbench/SobelMatrixMultiplier_test.cpp</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/SobelMatrixMultiplier_test.cpp</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier_test.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/solution1/solution1.directive</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/solution1/directives.tcl</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/db217620/SobelMatrixMultiplier/solution1/script.tcl</location>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
