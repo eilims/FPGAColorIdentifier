@@ -18,14 +18,15 @@
       "unroll getConvolutionResult {} {}",
       "pipeline power\/Power_Loop {{II 1}} {}",
       "array_partition getConvolutionResult {{partition positionBooleanCmd} {variable positionBooleanTextRequiredarray} {complete positionBoolean0type} {dim 1}} {}",
-      "loop_flatten getConvolutionResult\/Col_Conv {{flatten positionBooleanCmd}} {}"
+      "loop_flatten getConvolutionResult\/Col_Conv {{flatten positionBooleanCmd}} {}",
+      "pipeline combineOperatorResults {{II 1}} {}"
     ]},
   "ClockInfo": {
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "34",
+    "Latency": "24",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -41,10 +42,14 @@
   "Files": {
     "CSource": ["..\/SobelMatrixMultiplier.cpp"],
     "Vhdl": [
+      "impl\/vhdl\/combineOperatorResul.vhd",
+      "impl\/vhdl\/fxp_sqrt.vhd",
       "impl\/vhdl\/getConvolutionResbkb.vhd",
       "impl\/vhdl\/getConvolutionResult.vhd"
     ],
     "Verilog": [
+      "impl\/verilog\/combineOperatorResul.v",
+      "impl\/verilog\/fxp_sqrt.v",
       "impl\/verilog\/getConvolutionResbkb.v",
       "impl\/verilog\/getConvolutionResult.v"
     ],
@@ -356,48 +361,93 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "getConvolutionResult"},
-    "Metrics": {"getConvolutionResult": {
+    "Hierarchy": {
+      "ModuleName": "getConvolutionResult",
+      "Instances": [{
+          "ModuleName": "combineOperatorResul",
+          "InstanceName": "grp_combineOperatorResul_fu_183",
+          "Instances": [{
+              "ModuleName": "fxp_sqrt",
+              "InstanceName": "grp_fxp_sqrt_fu_34"
+            }]
+        }]
+    },
+    "Metrics": {
+      "fxp_sqrt": {
         "Latency": {
-          "LatencyBest": "34",
-          "LatencyAvg": "34",
-          "LatencyWorst": "34",
-          "PipelineII": "35",
+          "LatencyBest": "11",
+          "LatencyAvg": "11",
+          "LatencyWorst": "11",
+          "PipelineII": "1",
+          "PipelineDepth": "12",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.68"
+        },
+        "Area": {
+          "FF": "357",
+          "LUT": "3658",
+          "BRAM_18K": "0",
+          "DSP48E": "0"
+        }
+      },
+      "combineOperatorResul": {
+        "Latency": {
+          "LatencyBest": "13",
+          "LatencyAvg": "13",
+          "LatencyWorst": "13",
+          "PipelineII": "1",
+          "PipelineDepth": "14",
+          "PipelineType": "function"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.68"
+        },
+        "Area": {
+          "DSP48E": "6",
+          "FF": "485",
+          "LUT": "3737",
+          "BRAM_18K": "0"
+        }
+      },
+      "getConvolutionResult": {
+        "Latency": {
+          "LatencyBest": "24",
+          "LatencyAvg": "24",
+          "LatencyWorst": "24",
+          "PipelineII": "25",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.51"
+          "Estimate": "8.68"
         },
-        "Loops": [
-          {
+        "Loops": [{
             "Name": "Row_Conv",
             "TripCount": "3",
             "Latency": "8",
             "PipelineII": "2",
             "PipelineDepth": "5"
-          },
-          {
-            "Name": "Loop 2",
-            "TripCount": "22",
-            "Latency": "22",
-            "PipelineII": "",
-            "PipelineDepth": "1"
-          }
-        ],
+          }],
         "Area": {
           "DSP48E": "18",
-          "FF": "564",
-          "LUT": "1153",
+          "FF": "928",
+          "LUT": "4300",
           "BRAM_18K": "0"
         }
-      }}
+      }
+    }
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-04-14 13:27:48 -0700",
+    "Time": "2018-04-14 13:30:07 -0700",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4.1"
   }

@@ -9,3 +9,4 @@ set_directive_unroll "getConvolutionResult"
 set_directive_pipeline -II 1 "power/Power_Loop"
 set_directive_array_partition -type complete -dim 1 "getConvolutionResult" array
 set_directive_loop_flatten "getConvolutionResult/Col_Conv"
+set_directive_pipeline -II 1 "combineOperatorResults"

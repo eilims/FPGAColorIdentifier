@@ -79,7 +79,7 @@ set NewPortList {[
  	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3", "4", "5", "6", "7", "8"],
 		"CDFG" : "getConvolutionResult",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"FunctionPipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -91,25 +91,51 @@ set RtlHierarchyInfo {[
 			{"Name" : "array_0", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "array_1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "array_2", "Type" : "Memory", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U6", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_combineOperatorResul_fu_183", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "combineOperatorResul",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "1",
+		"ClockEnable" : "0",
+		"VariableLatency" : "0",
+		"Port" : [
+			{"Name" : "verticalResult", "Type" : "None", "Direction" : "I"},
+			{"Name" : "horizontalResult", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_combineOperatorResul_fu_183.grp_fxp_sqrt_fu_34", "Parent" : "1",
+		"CDFG" : "fxp_sqrt",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"Combinational" : "0",
+		"Datapath" : "1",
+		"ClockEnable" : "1",
+		"VariableLatency" : "0",
+		"Port" : [
+			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U4", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U5", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U6", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U7", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U8", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getConvolutionResbkb_U9", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	getConvolutionResult {
 		array_0 {Type I LastRead 3 FirstWrite -1}
 		array_1 {Type I LastRead 3 FirstWrite -1}
-		array_2 {Type I LastRead 3 FirstWrite -1}}}
+		array_2 {Type I LastRead 3 FirstWrite -1}}
+	combineOperatorResul {
+		verticalResult {Type I LastRead 0 FirstWrite -1}
+		horizontalResult {Type I LastRead 0 FirstWrite -1}}
+	fxp_sqrt {
+		in_val_V_read {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "34", "Max" : "34"}
-	, {"Name" : "Interval", "Min" : "35", "Max" : "35"}
+	{"Name" : "Latency", "Min" : "24", "Max" : "24"}
+	, {"Name" : "Interval", "Min" : "25", "Max" : "25"}
 ]}
 
 set PipelineEnableSignalInfo {[

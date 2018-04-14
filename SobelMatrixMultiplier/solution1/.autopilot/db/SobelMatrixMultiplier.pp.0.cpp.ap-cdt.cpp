@@ -25860,6 +25860,9 @@ int power(int number, int exponent){
 #pragma empty_line
 #pragma empty_line
 int combineOperatorResults(int verticalResult, int horizontalResult) {
+#pragma HLS PIPELINE II=1
+#pragma line 55 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+
  in_data_t verticalPower = power(verticalResult, 2);
  in_data_t horizontalPower = power(horizontalResult, 2);
  in_data_t input = verticalPower + horizontalPower;

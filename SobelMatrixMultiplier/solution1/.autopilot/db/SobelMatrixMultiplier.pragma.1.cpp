@@ -25860,6 +25860,9 @@ _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
 
 int combineOperatorResults(int verticalResult, int horizontalResult) {
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+#55 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+
  in_data_t verticalPower = power(verticalResult, 2);
  in_data_t horizontalPower = power(horizontalResult, 2);
  in_data_t input = verticalPower + horizontalPower;

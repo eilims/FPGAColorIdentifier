@@ -26,6 +26,11 @@
         <directive functionName="getConvolutionResult" label="Col_Conv" functionLabel="">
             <pragma name="LOOP_FLATTEN"/>
         </directive>
+        <directive functionName="combineOperatorResults" label="" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 
