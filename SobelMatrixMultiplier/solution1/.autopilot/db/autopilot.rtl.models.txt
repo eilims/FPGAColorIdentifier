@@ -1,3 +1,0 @@
-getConvolutionResbkb
-getConvolutionRescud
-getConvolutionResult
