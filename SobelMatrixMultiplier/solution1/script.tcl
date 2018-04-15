@@ -7,7 +7,10 @@ open_project SobelMatrixMultiplier
 set_top getConvolutionResult
 add_files SobelMatrixMultiplier/SobelMatrixMultiplier.cpp
 add_files SobelMatrixMultiplier/SobelMatrixMultiplier.h
+add_files SobelMatrixMultiplier/dataTypes.h
 add_files SobelMatrixMultiplier/fxp_sqrt.h
+add_files SobelMatrixMultiplier/powerFunction.cpp
+add_files SobelMatrixMultiplier/powerFuntion.h
 add_files -tb SobelMatrixMultiplier/SobelMatrixMultiplier_test.cpp
 open_solution "solution1"
 set_part {xc7z020clg400-1} -tool vivado

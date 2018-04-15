@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'getConvolutionResult'" level="0">
-<item name = "Date">Sat Apr 14 13:30:06 2018
+<item name = "Date">Sun Apr 15 01:36:42 2018
 </item>
 <item name = "Version">2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)</item>
 <item name = "Project">SobelMatrixMultiplier</item>
@@ -178,7 +178,7 @@
 <item name = "Max Delay">8.68</item>
 <item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
 <keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
-<column name="'tmp', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:89">call, 8.68, 8.68, -, -, -, -, -, -, -, -, -, combineOperatorResul, -</column>
+<column name="'tmp', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:79">call, 8.68, 8.68, -, -, -, -, -, -, -, -, -, combineOperatorResul, -</column>
 </table>
 </item>
 </section>

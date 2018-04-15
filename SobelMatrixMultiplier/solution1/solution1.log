@@ -7,19 +7,20 @@ Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [HLS 200-10] Analyzing design file 'SobelMatrixMultiplier/powerFunction.cpp' ...
 INFO: [HLS 200-10] Analyzing design file 'SobelMatrixMultiplier/SobelMatrixMultiplier.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 99.852 ; gain = 44.398
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 99.891 ; gain = 44.438
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 100.016 ; gain = 44.410
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 100.059 ; gain = 44.453
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 112.648 ; gain = 57.195
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 112.707 ; gain = 57.102
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 118.852 ; gain = 63.398
+INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 119.387 ; gain = 63.781
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fxp_sqrt<32, 24, 32, 24>' (SobelMatrixMultiplier/fxp_sqrt.h:145).
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:80) in function 'getConvolutionResult' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:70) in function 'getConvolutionResult' for pipelining.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (SobelMatrixMultiplier/fxp_sqrt.h:161) in function 'fxp_sqrt<32, 24, 32, 24>' completely.
-INFO: [XFORM 203-501] Unrolling loop 'Col_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:81) in function 'getConvolutionResult' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Col_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:71) in function 'getConvolutionResult' completely.
 INFO: [XFORM 203-102] Partitioning array '_vertical_sobel_operator' in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array '_horizontal_sobel_operator' in dimension 2 automatically.
 INFO: [XFORM 203-102] Automatically partitioning small array '_vertical_sobel_operator.0' completely based on array size.
@@ -27,19 +28,19 @@ INFO: [XFORM 203-102] Automatically partitioning small array '_vertical_sobel_op
 INFO: [XFORM 203-102] Automatically partitioning small array '_horizontal_sobel_operator.0' completely based on array size.
 INFO: [XFORM 203-102] Automatically partitioning small array '_horizontal_sobel_operator.1' completely based on array size.
 INFO: [XFORM 203-102] Automatically partitioning small array '_horizontal_sobel_operator.2' completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'array' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:74) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'array' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:64) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_vertical_sobel_operator.0' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_vertical_sobel_operator.2' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_horizontal_sobel_operator.0' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_horizontal_sobel_operator.1' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_horizontal_sobel_operator.2' in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) automatically.
+INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46) automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SobelMatrixMultiplier/fxp_sqrt.h:145:61) to (SobelMatrixMultiplier/fxp_sqrt.h:177:1) in function 'fxp_sqrt<32, 24, 32, 24>'... converting 61 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'getConvolutionResult' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:74)...3 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 147.801 ; gain = 92.348
+INFO: [XFORM 203-11] Balancing expressions in function 'getConvolutionResult' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:64)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 148.004 ; gain = 92.398
 WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt<32, 24, 32, 24>' to 'fxp_sqrt' (SobelMatrixMultiplier/fxp_sqrt.h:162:1)
-WARNING: [XFORM 203-631] Renaming function 'combineOperatorResults' to 'combineOperatorResul' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47:9)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 161.152 ; gain = 105.699
+WARNING: [XFORM 203-631] Renaming function 'combineOperatorResults' to 'combineOperatorResul' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7:9)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 161.633 ; gain = 106.027
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'getConvolutionResult' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -49,13 +50,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'fxp_sqrt'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 11.012 seconds; current allocated memory: 120.063 MB.
+INFO: [HLS 200-111]  Elapsed time: 13.246 seconds; current allocated memory: 120.116 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 120.971 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 121.024 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'combineOperatorResul'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -63,13 +64,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'combineOperatorResul'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 14.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 121.247 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 121.300 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 121.367 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.082 seconds; current allocated memory: 121.435 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'getConvolutionResult'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -78,23 +79,23 @@ INFO: [SCHED 204-61] Pipelining loop 'Row_Conv'.
 WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_0_load_2') on array 'array_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_0'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.183 seconds; current allocated memory: 121.764 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 121.833 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 122.048 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 122.117 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fxp_sqrt'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fxp_sqrt'.
-INFO: [HLS 200-111]  Elapsed time: 0.325 seconds; current allocated memory: 123.781 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.308 seconds; current allocated memory: 123.865 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'combineOperatorResul'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'combineOperatorResul'.
-INFO: [HLS 200-111]  Elapsed time: 0.716 seconds; current allocated memory: 124.663 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.698 seconds; current allocated memory: 124.700 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'getConvolutionResult'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -105,9 +106,9 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'getConvolutionResult' 
 INFO: [SYN 201-210] Renamed object name 'getConvolutionResult_mux_32_32_1_1' to 'getConvolutionResbkb' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'getConvolutionResbkb': 6 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'getConvolutionResult'.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 125.338 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 179.813 ; gain = 124.359
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 125.344 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 180.402 ; gain = 124.797
 INFO: [SYSC 207-301] Generating SystemC RTL for getConvolutionResult.
 INFO: [VHDL 208-304] Generating VHDL RTL for getConvolutionResult.
 INFO: [VLOG 209-307] Generating Verilog RTL for getConvolutionResult.
-INFO: [HLS 200-112] Total elapsed time: 14.581 seconds; peak allocated memory: 125.338 MB.
+INFO: [HLS 200-112] Total elapsed time: 16.35 seconds; peak allocated memory: 125.344 MB.

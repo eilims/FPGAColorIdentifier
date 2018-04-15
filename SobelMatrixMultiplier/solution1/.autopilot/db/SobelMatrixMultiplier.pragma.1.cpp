@@ -149,6 +149,201 @@ extern "C" {
 
 
 
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
+#33 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
+#28 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 3 4
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
+#10 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3 4
+#10 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3 4
+#277 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3 4
+#13 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3 4
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
+#674 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3 4
+#674 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3 4
+
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3 4
+#675 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3 4
+#13 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3 4
+
+
+#pragma pack(push,_CRT_PACKING)
+
+
+extern "C" {
+
+
+
+
+
+  typedef __builtin_va_list __gnuc_va_list;
+
+
+
+
+
+
+  typedef __gnuc_va_list va_list;
+#99 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3 4
+}
+
+
+#pragma pack(pop)
+#277 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3 4
+
+
+#pragma pack(push,_CRT_PACKING)
+#370 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+__extension__ typedef unsigned long long size_t;
+#380 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+__extension__ typedef long long ssize_t;
+#392 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+__extension__ typedef long long intptr_t;
+#405 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+__extension__ typedef unsigned long long uintptr_t;
+#418 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+__extension__ typedef long long ptrdiff_t;
+#436 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+typedef unsigned short wint_t;
+typedef unsigned short wctype_t;
+#456 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+typedef int errno_t;
+
+
+
+
+typedef long __time32_t;
+
+
+
+
+__extension__ typedef long long __time64_t;
+
+
+
+
+
+
+
+typedef __time64_t time_t;
+#607 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3 4
+struct threadlocaleinfostruct;
+struct threadmbcinfostruct;
+typedef struct threadlocaleinfostruct *pthreadlocinfo;
+typedef struct threadmbcinfostruct *pthreadmbcinfo;
+struct __lc_time_data;
+
+typedef struct localeinfo_struct {
+  pthreadlocinfo locinfo;
+  pthreadmbcinfo mbcinfo;
+} _locale_tstruct,*_locale_t;
+
+
+
+typedef struct tagLC_ID {
+  unsigned short wLanguage;
+  unsigned short wCountry;
+  unsigned short wCodePage;
+} LC_ID,*LPLC_ID;
+
+
+
+
+typedef struct threadlocaleinfostruct {
+  int refcount;
+  unsigned int lc_codepage;
+  unsigned int lc_collate_cp;
+  unsigned long lc_handle[6];
+  LC_ID lc_id[6];
+  struct {
+    char *locale;
+    wchar_t *wlocale;
+    int *refcount;
+    int *wrefcount;
+  } lc_category[6];
+  int lc_clike;
+  int mb_cur_max;
+  int *lconv_intl_refcount;
+  int *lconv_num_refcount;
+  int *lconv_mon_refcount;
+  struct lconv *lconv;
+  int *ctype1_refcount;
+  unsigned short *ctype1;
+  const unsigned short *pctype;
+  const unsigned char *pclmap;
+  const unsigned char *pcumap;
+  struct __lc_time_data *lc_time_curr;
+} threadlocinfo;
+
+
+
+extern "C" {
+
+
+
+const char *__mingw_get_crt_info (void);
+
+
+}
+
+
+#pragma pack(pop)
+#28 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 2 3 4
+
+
+
+
+#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
+#31 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
+typedef __typeof__(((int*)0)-((int*)0)) ptrdiff_t;
+
+
+
+typedef __typeof__(sizeof(int)) size_t;
+#32 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 2 3 4
+
+
+
+typedef signed char int8_t;
+typedef unsigned char uint8_t;
+typedef short int16_t;
+typedef unsigned short uint16_t;
+typedef int int32_t;
+typedef unsigned uint32_t;
+__extension__ typedef long long int64_t;
+__extension__ typedef unsigned long long uint64_t;
+
+
+typedef signed char int_least8_t;
+typedef unsigned char uint_least8_t;
+typedef short int_least16_t;
+typedef unsigned short uint_least16_t;
+typedef int int_least32_t;
+typedef unsigned uint_least32_t;
+__extension__ typedef long long int_least64_t;
+__extension__ typedef unsigned long long uint_least64_t;
+
+
+
+
+
+typedef signed char int_fast8_t;
+typedef unsigned char uint_fast8_t;
+typedef short int_fast16_t;
+typedef unsigned short uint_fast16_t;
+typedef int int_fast32_t;
+typedef unsigned int uint_fast32_t;
+__extension__ typedef long long int_fast64_t;
+__extension__ typedef unsigned long long uint_fast64_t;
+
+
+__extension__ typedef long long intmax_t;
+__extension__ typedef unsigned long long uintmax_t;
+#33 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
+#5 "SobelMatrixMultiplier/SobelMatrixMultiplier.h" 2
 #1 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\ap_int.h" 1
 #60 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\ap_int.h"
 #1 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/hls_half.h" 1
@@ -700,143 +895,6 @@ extern "C" {
 
 
 #1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
-#10 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
-#10 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-#277 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3
-#13 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
-#674 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
-#674 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
-#675 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-#13 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3
-
-
-#pragma pack(push,_CRT_PACKING)
-
-
-extern "C" {
-
-
-
-
-
-  typedef __builtin_va_list __gnuc_va_list;
-
-
-
-
-
-
-  typedef __gnuc_va_list va_list;
-#99 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
-}
-
-
-#pragma pack(pop)
-#277 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-
-
-#pragma pack(push,_CRT_PACKING)
-#370 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-__extension__ typedef unsigned long long size_t;
-#380 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-__extension__ typedef long long ssize_t;
-#392 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-__extension__ typedef long long intptr_t;
-#405 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-__extension__ typedef unsigned long long uintptr_t;
-#418 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-__extension__ typedef long long ptrdiff_t;
-#436 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-typedef unsigned short wint_t;
-typedef unsigned short wctype_t;
-#456 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-typedef int errno_t;
-
-
-
-
-typedef long __time32_t;
-
-
-
-
-__extension__ typedef long long __time64_t;
-
-
-
-
-
-
-
-typedef __time64_t time_t;
-#607 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-struct threadlocaleinfostruct;
-struct threadmbcinfostruct;
-typedef struct threadlocaleinfostruct *pthreadlocinfo;
-typedef struct threadmbcinfostruct *pthreadmbcinfo;
-struct __lc_time_data;
-
-typedef struct localeinfo_struct {
-  pthreadlocinfo locinfo;
-  pthreadmbcinfo mbcinfo;
-} _locale_tstruct,*_locale_t;
-
-
-
-typedef struct tagLC_ID {
-  unsigned short wLanguage;
-  unsigned short wCountry;
-  unsigned short wCodePage;
-} LC_ID,*LPLC_ID;
-
-
-
-
-typedef struct threadlocaleinfostruct {
-  int refcount;
-  unsigned int lc_codepage;
-  unsigned int lc_collate_cp;
-  unsigned long lc_handle[6];
-  LC_ID lc_id[6];
-  struct {
-    char *locale;
-    wchar_t *wlocale;
-    int *refcount;
-    int *wrefcount;
-  } lc_category[6];
-  int lc_clike;
-  int mb_cur_max;
-  int *lconv_intl_refcount;
-  int *lconv_num_refcount;
-  int *lconv_mon_refcount;
-  struct lconv *lconv;
-  int *ctype1_refcount;
-  unsigned short *ctype1;
-  const unsigned short *pctype;
-  const unsigned char *pclmap;
-  const unsigned char *pcumap;
-  struct __lc_time_data *lc_time_curr;
-} threadlocinfo;
-
-
-
-extern "C" {
-
-
-
-const char *__mingw_get_crt_info (void);
-
-
-}
-
-
-#pragma pack(pop)
 #12 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\math.h" 2 3
 
 
@@ -1980,12 +2038,6 @@ namespace std {
 
 
 #1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-#31 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
-typedef __typeof__(((int*)0)-((int*)0)) ptrdiff_t;
-
-
-
-typedef __typeof__(sizeof(int)) size_t;
 #44 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cstddef" 2 3
 
 
@@ -23059,58 +23111,6 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
   }
 
 };
-#5 "SobelMatrixMultiplier/SobelMatrixMultiplier.h" 2
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
-#33 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
-#28 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 3 4
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
-#28 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 2 3 4
-
-
-
-
-#1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-#32 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 2 3 4
-
-
-
-typedef signed char int8_t;
-typedef unsigned char uint8_t;
-typedef short int16_t;
-typedef unsigned short uint16_t;
-typedef int int32_t;
-typedef unsigned uint32_t;
-__extension__ typedef long long int64_t;
-__extension__ typedef unsigned long long uint64_t;
-
-
-typedef signed char int_least8_t;
-typedef unsigned char uint_least8_t;
-typedef short int_least16_t;
-typedef unsigned short uint_least16_t;
-typedef int int_least32_t;
-typedef unsigned uint_least32_t;
-__extension__ typedef long long int_least64_t;
-__extension__ typedef unsigned long long uint_least64_t;
-
-
-
-
-
-typedef signed char int_fast8_t;
-typedef unsigned char uint_fast8_t;
-typedef short int_fast16_t;
-typedef unsigned short uint_fast16_t;
-typedef int int_fast32_t;
-typedef unsigned int uint_fast32_t;
-__extension__ typedef long long int_fast64_t;
-__extension__ typedef unsigned long long uint_fast64_t;
-
-
-__extension__ typedef long long intmax_t;
-__extension__ typedef unsigned long long uintmax_t;
-#33 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
 #6 "SobelMatrixMultiplier/SobelMatrixMultiplier.h" 2
 #1 "SobelMatrixMultiplier/fxp_sqrt.h" 1
 #95 "SobelMatrixMultiplier/fxp_sqrt.h"
@@ -25782,16 +25782,20 @@ void fxp_sqrt(ap_ufixed<W2,IW2>& result, ap_ufixed<W1,IW1>& in_val)
    result.range(W2-1,0) = ap_uint<W2>(q >> 1);
 }
 #7 "SobelMatrixMultiplier/SobelMatrixMultiplier.h" 2
-
-
-
-
-
-
-
-
+#1 "SobelMatrixMultiplier/dataTypes.h" 1
+#11 "SobelMatrixMultiplier/dataTypes.h"
 typedef ap_ufixed<32, 24> in_data_t;
 typedef ap_ufixed<32, 24> out_data_t;
+#8 "SobelMatrixMultiplier/SobelMatrixMultiplier.h" 2
+#1 "SobelMatrixMultiplier/powerFuntion.h" 1
+
+
+
+int power(int number, int exponent);
+#9 "SobelMatrixMultiplier/SobelMatrixMultiplier.h" 2
+
+
+
 
 
  int getVerticalResult(int array[3][3]);
@@ -25844,24 +25848,11 @@ int getHorizontalResult(int array[3][3]) {_ssdm_SpecArrayDimSize(array,3);
  return summation;
 }
 
-int power(int number, int exponent){
- int i;
- int result = 0;
- Power_Loop: for(i = 0; i < exponent - 1; i++){
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-#46 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
-
-  result += number * number;
- }
- return result;
-}
-
-
 
 
 int combineOperatorResults(int verticalResult, int horizontalResult) {
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-#55 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#45 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 
  in_data_t verticalPower = power(verticalResult, 2);
  in_data_t horizontalPower = power(horizontalResult, 2);
@@ -25870,13 +25861,13 @@ _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
  fxp_sqrt(result, input);
  return result.to_int();
 }
-#74 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#64 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 int getConvolutionResult(int array[3][3]){_ssdm_SpecArrayDimSize(array,3);
 _ssdm_SpecArrayPartition( array, 1, "COMPLETE", 0, "");
-#74 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#64 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 
 _ssdm_Unroll(0,0,0, "");
-#74 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#64 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 
  int verticalResult = 0;
  int horizontalResult = 0;
@@ -25885,14 +25876,14 @@ _ssdm_Unroll(0,0,0, "");
 
  Row_Conv: for(int i = 0; i < 3; i++){
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-#80 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#70 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 
 _ssdm_SpecLoopFlatten(0, "");
-#80 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#70 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 
   Col_Conv: for(int o = 0; o < 3; o++){
 _ssdm_SpecLoopFlatten(0, "");
-#81 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
+#71 "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"
 
 
    int data = array[i][o];

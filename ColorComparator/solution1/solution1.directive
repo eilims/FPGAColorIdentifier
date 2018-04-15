@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="getPixelClassification" label="PIXEL_COLOR_LOOP" functionLabel="">
+      <pragma name="PIPELINE">
+        <option name="II" value="1"/>
+      </pragma>
+    </directive>
+    <directive functionName="getPixelClassification" label="" functionLabel="">
+      <pragma name="DATAFLOW"/>
+    </directive>
+    <directive functionName="getPixelClassification" label="PIXEL_COLOR_LOOP" functionLabel="">
+      <pragma name="LOOP_FLATTEN"/>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

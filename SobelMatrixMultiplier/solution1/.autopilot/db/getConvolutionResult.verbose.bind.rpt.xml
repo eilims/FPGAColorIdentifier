@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'getConvolutionResult'" level="0">
-<item name = "Date">Sat Apr 14 13:30:04 2018
+<item name = "Date">Sun Apr 15 01:36:41 2018
 </item>
 <item name = "Version">2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)</item>
 <item name = "Project">SobelMatrixMultiplier</item>

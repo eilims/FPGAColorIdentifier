@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: `csim.exe' is up to date.
+{
+{1, 0, -1},
+{2, 0, -2},
+{1, 0, -1},
+}
+{
+{1, 2, 1},
+{0, 0, 0},
+{-1, -2, -1},
+}
+Sw_result: 21 HW_result: 21
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

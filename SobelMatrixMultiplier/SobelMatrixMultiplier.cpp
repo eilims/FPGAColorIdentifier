@@ -40,18 +40,8 @@ int getHorizontalResult(int array[ARRAY_SIZE][ARRAY_SIZE]) {
 	return summation;
 }
 
-int power(int number, int exponent){
-	int i;
-	int result = 0;
-	Power_Loop: for(i = 0; i < exponent - 1; i++){
-		result += number * number;
-	}
-	return result;
-}
-
 //Calculates the true edge coefficient by combining the Sobel Operator vertical and horizontal coefficients
 //Uses Pythagorean Theorem to find the desired result
-//Uses a square root. Ask Mirzaei for assistance here
 int combineOperatorResults(int verticalResult, int horizontalResult) {
 	in_data_t verticalPower = power(verticalResult, 2);
 	in_data_t horizontalPower = power(horizontalResult, 2);
@@ -88,3 +78,5 @@ int getConvolutionResult(int array[ARRAY_SIZE][ARRAY_SIZE]){
 	}
 	return combineOperatorResults(verticalResult, horizontalResult);
 }
+
+

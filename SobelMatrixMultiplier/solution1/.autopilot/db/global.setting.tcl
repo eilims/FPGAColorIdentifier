@@ -41,8 +41,8 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg400:-1"
-set SourceFiles {sc {} c ../SobelMatrixMultiplier.cpp}
-set SourceFlags {sc {} c {{}}}
+set SourceFiles {sc {} c {../powerFunction.cpp ../SobelMatrixMultiplier.cpp}}
+set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/solution1.directive}
 set TBFiles {verilog ../SobelMatrixMultiplier_test.cpp bc ../SobelMatrixMultiplier_test.cpp vhdl ../SobelMatrixMultiplier_test.cpp sc ../SobelMatrixMultiplier_test.cpp cas ../SobelMatrixMultiplier_test.cpp c {}}
 set SpecLanguage "C"

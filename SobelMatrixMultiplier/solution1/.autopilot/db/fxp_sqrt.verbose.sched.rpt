@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'fxp_sqrt'
 ================================================================
-* Date:           Sat Apr 14 13:30:04 2018
+* Date:           Sun Apr 15 01:36:40 2018
 
 * Version:        2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)
 * Project:        SobelMatrixMultiplier
@@ -398,18 +398,20 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'add' operation ('p_0353_1_1', SobelMatrixMultiplier/fxp_sqrt.h:167) [12]  (2.28 ns)
 	'shl' operation ('tmp_8', SobelMatrixMultiplier/fxp_sqrt.h:163) [15]  (0 ns)
-	'sub' operation ('s_V_1_2', SobelMatrixMultiplier/fxp_sqrt.h:163) [19]  (4.11 ns)
+	'add' operation ('tmp1', SobelMatrixMultiplier/fxp_sqrt.h:167) [20]  (0 ns)
+	'add' operation ('s_V_2_2', SobelMatrixMultiplier/fxp_sqrt.h:167) [21]  (4.11 ns)
 	'select' operation ('p_0353_1_2', SobelMatrixMultiplier/fxp_sqrt.h:162) [23]  (1.37 ns)
 
  <State 3>: 8.68ns
 The critical path consists of the following:
 	'select' operation ('p_s', SobelMatrixMultiplier/fxp_sqrt.h:162) [11]  (0 ns)
 	'select' operation ('p_0305_1_in_in_2', SobelMatrixMultiplier/fxp_sqrt.h:162) [22]  (1.37 ns)
-	'or' operation ('tmp_13_3', SobelMatrixMultiplier/fxp_sqrt.h:167) [31]  (0 ns)
-	'add' operation ('s_V_2_3', SobelMatrixMultiplier/fxp_sqrt.h:167) [32]  (2.28 ns)
+	'or' operation ('q_V_1_2', SobelMatrixMultiplier/fxp_sqrt.h:165) [24]  (0 ns)
+	'or' operation ('tmp_10_3', SobelMatrixMultiplier/fxp_sqrt.h:163) [28]  (0 ns)
+	'sub' operation ('s_V_1_3', SobelMatrixMultiplier/fxp_sqrt.h:163) [29]  (2.28 ns)
 	'select' operation ('p_0353_1_3', SobelMatrixMultiplier/fxp_sqrt.h:162) [33]  (1.37 ns)
 	'shl' operation ('tmp_18', SobelMatrixMultiplier/fxp_sqrt.h:163) [38]  (0 ns)
-	'add' operation ('s_V_2_4', SobelMatrixMultiplier/fxp_sqrt.h:167) [44]  (2.28 ns)
+	'sub' operation ('s_V_1_4', SobelMatrixMultiplier/fxp_sqrt.h:163) [41]  (2.28 ns)
 	'select' operation ('p_0353_1_4', SobelMatrixMultiplier/fxp_sqrt.h:162) [45]  (1.37 ns)
 
  <State 4>: 7.31ns
@@ -429,7 +431,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_7', SobelMatrixMultiplier/fxp_sqrt.h:163) [77]  (2.28 ns)
 	'select' operation ('p_0353_1_7', SobelMatrixMultiplier/fxp_sqrt.h:162) [81]  (1.37 ns)
 	'shl' operation ('tmp_34', SobelMatrixMultiplier/fxp_sqrt.h:163) [86]  (0 ns)
-	'add' operation ('s_V_2_8', SobelMatrixMultiplier/fxp_sqrt.h:167) [92]  (2.28 ns)
+	'sub' operation ('s_V_1_8', SobelMatrixMultiplier/fxp_sqrt.h:163) [89]  (2.28 ns)
 	'select' operation ('p_0353_1_8', SobelMatrixMultiplier/fxp_sqrt.h:162) [93]  (1.37 ns)
 
  <State 6>: 7.31ns
@@ -449,7 +451,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_1', SobelMatrixMultiplier/fxp_sqrt.h:163) [125]  (2.28 ns)
 	'select' operation ('p_0353_1_10', SobelMatrixMultiplier/fxp_sqrt.h:162) [129]  (1.37 ns)
 	'shl' operation ('tmp_47', SobelMatrixMultiplier/fxp_sqrt.h:163) [134]  (0 ns)
-	'sub' operation ('s_V_1_10', SobelMatrixMultiplier/fxp_sqrt.h:163) [137]  (2.28 ns)
+	'add' operation ('s_V_2_10', SobelMatrixMultiplier/fxp_sqrt.h:167) [140]  (2.28 ns)
 	'select' operation ('p_0353_1_11', SobelMatrixMultiplier/fxp_sqrt.h:162) [141]  (1.37 ns)
 
  <State 8>: 7.31ns
@@ -469,7 +471,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_13', SobelMatrixMultiplier/fxp_sqrt.h:163) [173]  (2.28 ns)
 	'select' operation ('p_0353_1_14', SobelMatrixMultiplier/fxp_sqrt.h:162) [177]  (1.37 ns)
 	'shl' operation ('tmp_58', SobelMatrixMultiplier/fxp_sqrt.h:163) [182]  (0 ns)
-	'add' operation ('s_V_2_14', SobelMatrixMultiplier/fxp_sqrt.h:167) [188]  (2.28 ns)
+	'sub' operation ('s_V_1_14', SobelMatrixMultiplier/fxp_sqrt.h:163) [185]  (2.28 ns)
 	'select' operation ('p_0353_1_15', SobelMatrixMultiplier/fxp_sqrt.h:162) [189]  (1.37 ns)
 
  <State 10>: 7.31ns
@@ -479,7 +481,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_15', SobelMatrixMultiplier/fxp_sqrt.h:163) [197]  (2.28 ns)
 	'select' operation ('p_0353_1_16', SobelMatrixMultiplier/fxp_sqrt.h:162) [201]  (1.37 ns)
 	'shl' operation ('tmp_62', SobelMatrixMultiplier/fxp_sqrt.h:163) [206]  (0 ns)
-	'sub' operation ('s_V_1_16', SobelMatrixMultiplier/fxp_sqrt.h:163) [209]  (2.28 ns)
+	'add' operation ('s_V_2_16', SobelMatrixMultiplier/fxp_sqrt.h:167) [212]  (2.28 ns)
 	'select' operation ('p_0353_1_17', SobelMatrixMultiplier/fxp_sqrt.h:162) [213]  (1.37 ns)
 
  <State 11>: 7.31ns
@@ -489,7 +491,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_17', SobelMatrixMultiplier/fxp_sqrt.h:163) [221]  (2.28 ns)
 	'select' operation ('p_0353_1_18', SobelMatrixMultiplier/fxp_sqrt.h:162) [225]  (1.37 ns)
 	'shl' operation ('tmp_66', SobelMatrixMultiplier/fxp_sqrt.h:163) [230]  (0 ns)
-	'add' operation ('s_V_2_18', SobelMatrixMultiplier/fxp_sqrt.h:167) [236]  (2.28 ns)
+	'sub' operation ('s_V_1_18', SobelMatrixMultiplier/fxp_sqrt.h:163) [233]  (2.28 ns)
 	'select' operation ('p_0353_1_19', SobelMatrixMultiplier/fxp_sqrt.h:162) [237]  (1.37 ns)
 
  <State 12>: 6.1ns

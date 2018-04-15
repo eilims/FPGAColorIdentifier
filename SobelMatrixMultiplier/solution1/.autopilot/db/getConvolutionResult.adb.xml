@@ -974,7 +974,7 @@
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str7) nounwind
+:1  call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str6) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -990,7 +990,7 @@
 
 <Node id="29" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str7) nounwind
+:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str6) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="tmp_1"/></StgValue>
@@ -1006,7 +1006,7 @@
 
 <Node id="30" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-:3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str5) nounwind
+:3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str4) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1102,7 +1102,7 @@
 
 <Node id="57" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:30  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str7, i32 %tmp_1) nounwind
+:30  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str6, i32 %tmp_1) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="empty_10"/></StgValue>
@@ -1715,11 +1715,11 @@
 </dataflow>
 <dataflow id="272" from="_ssdm_op_SpecLoopName" to="StgValue_74" fromId="271" toId="74">
 </dataflow>
-<dataflow id="274" from="p_str7" to="StgValue_74" fromId="273" toId="74">
+<dataflow id="274" from="p_str6" to="StgValue_74" fromId="273" toId="74">
 </dataflow>
 <dataflow id="276" from="_ssdm_op_SpecRegionBegin" to="tmp_1" fromId="275" toId="75">
 </dataflow>
-<dataflow id="277" from="p_str7" to="tmp_1" fromId="273" toId="75">
+<dataflow id="277" from="p_str6" to="tmp_1" fromId="273" toId="75">
 </dataflow>
 <dataflow id="279" from="_ssdm_op_SpecPipeline" to="StgValue_76" fromId="278" toId="76">
 </dataflow>
@@ -1731,7 +1731,7 @@
 </dataflow>
 <dataflow id="283" from="StgValue_141" to="StgValue_76" fromId="141" toId="76">
 </dataflow>
-<dataflow id="285" from="p_str5" to="StgValue_76" fromId="284" toId="76">
+<dataflow id="285" from="p_str4" to="StgValue_76" fromId="284" toId="76">
 </dataflow>
 <dataflow id="286" from="tmp_4_2" to="tmp_10" fromId="71" toId="77">
 </dataflow>
@@ -1755,7 +1755,7 @@
 </dataflow>
 <dataflow id="297" from="_ssdm_op_SpecRegionEnd" to="empty_10" fromId="296" toId="82">
 </dataflow>
-<dataflow id="298" from="p_str7" to="empty_10" fromId="273" toId="82">
+<dataflow id="298" from="p_str6" to="empty_10" fromId="273" toId="82">
 </dataflow>
 <dataflow id="299" from="tmp_1" to="empty_10" fromId="75" toId="82">
 </dataflow>

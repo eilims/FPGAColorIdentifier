@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1 opened at Sat Apr 14 13:29:53 -0700 2018
+INFO: [HLS 200-0] Workspace C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1 opened at Sun Apr 15 01:36:27 -0700 2018
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Command     config_clock returned 0; 0 sec.
@@ -8,13 +8,13 @@ Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zyn
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.001 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
 Command           ap_source returned 0; 0 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
 Command           ap_source returned 0; 0 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
-Command           ap_source returned 0; 0.001 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0.001 sec.
@@ -23,12 +23,12 @@ Command         ap_source returned 0; 0 sec.
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
 Command         ap_source returned 0; 0 sec.
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
-Command         ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0 sec.
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.003 sec.
+Command       ap_source returned 0; 0.004 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
 Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
@@ -39,12 +39,12 @@ Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interf
 Command           ap_source returned 0; 0 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.001 sec.
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command         ap_source returned 0; 0.001 sec.
 Command       ap_source returned 0; 0.003 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/dsp48e1.hlp 
-Command       ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
 Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
@@ -62,17 +62,17 @@ Command           ap_source returned 0; 0.001 sec.
 Command         ap_source returned 0; 0.001 sec.
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command         ap_source returned 0; 0.001 sec.
-Command       ap_source returned 0; 0.004 sec.
-Command     import_lib returned 0; 0.015 sec.
+Command       ap_source returned 0; 0.003 sec.
+Command     import_lib returned 0; 0.014 sec.
 Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
 Command           ap_source returned 0; 0.001 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.001 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.001 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
 Command             ap_source returned 0; 0.003 sec.
@@ -80,7 +80,7 @@ Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/inte
 Command             ap_source returned 0; 0.005 sec.
 Command           ap_source returned 0; 0.008 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.009 sec.
+Command           ap_source returned 0; 0.008 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command           ap_source returned 0; 0.006 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
@@ -88,25 +88,25 @@ Command           ap_source returned 0; 0.002 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.071 sec.
+Command           ap_source returned 0; 0.072 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0.001 sec.
-Command         ap_source returned 0; 0.1 sec.
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.101 sec.
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.102 sec.
-Command     ap_source returned 0; 0.102 sec.
+Command       ap_source returned 0; 0.103 sec.
+Command     ap_source returned 0; 0.103 sec.
 Execute     open_platform DefaultPlatform 
 Command     open_platform returned 0; 0 sec.
 Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
-Command         ap_source returned 0; 0.001 sec.
-Command       ap_source returned 0; 0.003 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.004 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
-Command           ap_source returned 0; 0.003 sec.
+Command           ap_source returned 0; 0.046 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
 Command             ap_source returned 0; 0 sec.
@@ -115,11 +115,11 @@ Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
 Command           ap_source returned 0; 0.001 sec.
-Command         ap_source returned 0; 0.006 sec.
-Command       ap_source returned 0; 0.006 sec.
+Command         ap_source returned 0; 0.049 sec.
+Command       ap_source returned 0; 0.049 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_hp.hlp 
-Command       ap_source returned 0; 0.001 sec.
-Command     import_lib returned 0; 0.018 sec.
+Command       ap_source returned 0; 0.002 sec.
+Command     import_lib returned 0; 0.062 sec.
 Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command       ap_source returned 0; 0.002 sec.
@@ -129,29 +129,29 @@ Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         license_isbetapart xc7z020 
-Command         license_isbetapart returned 1; 0.024 sec.
+Command         license_isbetapart returned 1; 0.032 sec.
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Command         config_chip_info returned 0; 0 sec.
 Execute         config_chip_info -quiet -speed slow 
 Command         config_chip_info returned 0; 0 sec.
-Command       add_library returned 0; 0.032 sec.
+Command       add_library returned 0; 0.038 sec.
 Execute       add_library xilinx/zynq/zynq_fpv6 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
-Command       add_library returned 0; 0.002 sec.
+Command       add_library returned 0; 0.004 sec.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
-Command     set_part returned 0; 0.06 sec.
+Command     set_part returned 0; 0.104 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
 Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
 Command     config_chip_info returned 0; 0 sec.
 Execute     config_chip_info -quiet -speed slow 
 Command     config_chip_info returned 0; 0 sec.
-Command   open_solution returned 0; 0.216 sec.
+Command   open_solution returned 0; 0.302 sec.
 Execute   set_part xc7z020clg400-1 -tool vivado 
 Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
 Execute       get_default_platform 
@@ -164,24 +164,24 @@ Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     
 Command       config_chip_info returned 0; 0 sec.
 Execute       config_chip_info -quiet -speed slow 
 Command       config_chip_info returned 0; 0 sec.
-Command     add_library returned 0; 0.004 sec.
+Command     add_library returned 0; 0.006 sec.
 Execute     add_library xilinx/zynq/zynq_fpv6 
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
-Command     add_library returned 0; 0.003 sec.
+Command     add_library returned 0; 0.001 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
-Command   set_part returned 0; 0.032 sec.
+Command   set_part returned 0; 0.033 sec.
 Execute   create_clock -period 10 -name default 
-Command   create_clock returned 0; 0.002 sec.
+Command   create_clock returned 0; 0.003 sec.
 Execute   source ./SobelMatrixMultiplier/solution1/directives.tcl 
 Execute     set_directive_loop_flatten getConvolutionResult/Row_Conv 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
-Command     set_directive_loop_flatten returned 0; 0.002 sec.
+Command     set_directive_loop_flatten returned 0; 0.004 sec.
 Execute     set_directive_pipeline -II 1 getConvolutionResult/Row_Conv 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
-Command     set_directive_pipeline returned 0; 0.006 sec.
+Command     set_directive_pipeline returned 0; 0.004 sec.
 Execute     set_directive_unroll getConvolutionResult 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
@@ -192,14 +192,14 @@ INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
 INFO: [HLS 200-0] Setting directive 'UNROLL' 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
-Command     set_directive_pipeline returned 0; 0.004 sec.
+Command     set_directive_pipeline returned 0; 0.005 sec.
 Execute     set_directive_array_partition -type complete -dim 1 getConvolutionResult array 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
 INFO: [HLS 200-0] Setting directive 'UNROLL' 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
 INFO: [HLS 200-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredarray complete=positionBoolean0type dim=1 
-Command     set_directive_array_partition returned 0; 0.004 sec.
+Command     set_directive_array_partition returned 0; 0.003 sec.
 Execute     set_directive_loop_flatten getConvolutionResult/Col_Conv 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
@@ -207,7 +207,7 @@ INFO: [HLS 200-0] Setting directive 'UNROLL'
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
 INFO: [HLS 200-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredarray complete=positionBoolean0type dim=1 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
-Command     set_directive_loop_flatten returned 0; 0.004 sec.
+Command     set_directive_loop_flatten returned 0; 0.003 sec.
 Execute     set_directive_pipeline -II 1 combineOperatorResults 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
@@ -216,10 +216,59 @@ INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1
 INFO: [HLS 200-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredarray complete=positionBoolean0type dim=1 
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
-Command     set_directive_pipeline returned 0; 0.007 sec.
-Command   ap_source returned 0; 0.033 sec.
+Command     set_directive_pipeline returned 0; 0.006 sec.
+Command   ap_source returned 0; 0.031 sec.
 Execute   csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -VP9_rom_infer_simplify=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+INFO: [HLS 200-10] Analyzing design file 'SobelMatrixMultiplier/powerFunction.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling SobelMatrixMultiplier/powerFunction.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted SobelMatrixMultiplier/powerFunction.cpp 
+Command       is_encrypted returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "SobelMatrixMultiplier/powerFunction.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E SobelMatrixMultiplier/powerFunction.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp
+Command       clang returned 0; 0.407 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp"  -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/useless.bc
+Command       clang returned 0; 0.404 sec.
+INFO: [HLS 200-0] GCC PP time: 0 seconds per iteration
+INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
+INFO: [HLS 200-0] Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredarray complete=positionBoolean0type dim=1 
+INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp.ap-line.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp.ap-line.cpp.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+Execute       cdt  "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp.ap-line.cpp"  -m "getConvolutionResult" -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp.ap-cdt.cpp" --pp --directive C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/solution1.directive --source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/powerFunction.cpp --error C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Double_Pump_Mac16 DSP_Double_Pump_Mac8 DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db --ca --es --gf --pd --p2d C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db --sd --scff C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/.systemc_flag --ad 
+Command       cdt returned 0; 0.577 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pp.0.cpp.ap-cdt.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.0.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.0.cpp.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.2.cpp
+Command       clang returned 0; 0.416 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.g.bc
+Command       clang returned 0; 0.395 sec.
 INFO: [HLS 200-10] Analyzing design file 'SobelMatrixMultiplier/SobelMatrixMultiplier.cpp' ...
 INFO: [HLS 200-0] Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -234,11 +283,11 @@ Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "SobelMatrixMultiplier/SobelMatrixMultiplier.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E SobelMatrixMultiplier/SobelMatrixMultiplier.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp
-Command       clang returned 0; 0.454 sec.
+Command       clang returned 0; 0.45 sec.
 INFO: [HLS 200-0] Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp"  -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/useless.bc"  
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/useless.bc
-Command       clang returned 0; 0.736 sec.
+Command       clang returned 0; 0.731 sec.
 INFO: [HLS 200-0] GCC PP time: 1 seconds per iteration
 INFO: [HLS 200-0] Setting directive 'LOOP_FLATTEN' flatten=positionBooleanCmd 
 INFO: [HLS 200-0] Setting directive 'PIPELINE' II=1 
@@ -253,7 +302,7 @@ INFO: [HLS 200-0] CDT Preprocessing...
 INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp.ap-line.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp.ap-line.cpp.CXX 1
 INFO: [HLS 200-0] Converting Markers to Pragmas...
 Execute       cdt  "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp.ap-line.cpp"  -m "getConvolutionResult" -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp.ap-cdt.cpp" --pp --directive C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/solution1.directive --source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier.cpp --error C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Double_Pump_Mac16 DSP_Double_Pump_Mac8 DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db --ca --es --gf --pd --p2d C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db --sd --scff C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/.systemc_flag --ad 
-Command       cdt returned 0; 3.889 sec.
+Command       cdt returned 0; 3.888 sec.
 INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pp.0.cpp.ap-cdt.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.0.cpp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.0.cpp.ap-line.CXX 0
 INFO: [HLS 200-0] Converting Pragmas to Markers...
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/pragma.status.tcl 
@@ -262,67 +311,67 @@ INFO: [HLS 200-0] Pragma Handling...
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.2.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.2.cpp
-Command       clang returned 0; 0.436 sec.
+Command       clang returned 0; 0.428 sec.
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Processing labels
 Execute       clang  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.g.bc" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.g.bc
-Command       clang returned 0; 0.78 sec.
+Command       clang returned 0; 0.763 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/ve_warning.tcl 
 Command       ap_source returned 0; 0.001 sec.
 INFO: [HLS 200-10] Validating synthesis directives ...
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/pragma.status.tcl 
-Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 99.852 ; gain = 44.398
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 100.016 ; gain = 44.410
 INFO: [HLS 200-0] Linking Release ...
-Execute       llvm-ld C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.bc -hls-opt -except-internalize getConvolutionResult -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o 
-Command       llvm-ld returned 0; 0.362 sec.
+Execute       llvm-ld C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.bc C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.bc -hls-opt -except-internalize getConvolutionResult -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 0.35 sec.
 Execute       disassemble C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o 
 Execute         is_encrypted C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.bc 
 Command         is_encrypted returned 0; 0.001 sec.
 Command       disassemble returned 0; 0.304 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
 INFO: [HLS 200-0] Linking Debug ...
-Execute       llvm-ld C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.g.bc -hls-opt -except-internalize getConvolutionResult -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g 
-Command       llvm-ld returned 0; 0.353 sec.
+Execute       llvm-ld C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/powerFunction.g.bc C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/SobelMatrixMultiplier.g.bc -hls-opt -except-internalize getConvolutionResult -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 0.344 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 99.891 ; gain = 44.438
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 100.059 ; gain = 44.453
 Execute       ::config_rtl 
-Command       config_rtl returned 0; 0.001 sec.
+Command       config_rtl returned 0; 0 sec.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
 Execute         cleanup_all_models 
 Command         cleanup_all_models returned 0; 0 sec.
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.pp.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.pp.0.bc -f 
-Command         transform returned 0; 0.031 sec.
+Command         transform returned 0; 0.029 sec.
 Execute         llvm-ld C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2017.4/win64/lib -lfloatconversion -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld returned 0; 0.269 sec.
+Command         llvm-ld returned 0; 0.249 sec.
 INFO: [HLS 200-0] Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top getConvolutionResult -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.0.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform returned 0; 0.068 sec.
+Command         transform returned 0; 0.065 sec.
 Execute         disassemble C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.1 C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.1 
 Execute           is_encrypted C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.1.bc 
 Command           is_encrypted returned 0; 0.001 sec.
-Command         disassemble returned 0; 0.299 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 112.648 ; gain = 57.195
+Command         disassemble returned 0; 0.306 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 112.707 ; gain = 57.102
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [HLS 200-0] Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.1.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) automatically.
-Command         transform returned 0; 0.049 sec.
+INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46) automatically.
+Command         transform returned 0; 0.048 sec.
 INFO: [HLS 200-0] Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-Command         transform returned 0; 0.027 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 118.852 ; gain = 63.398
+Command         transform returned 0; 0.025 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 119.387 ; gain = 63.781
 INFO: [HLS 200-0] Compiler optimizing ...
 INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.g.1.bc to C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.1.bc
 INFO: [HLS 200-0] Presyn 1...
 Execute         transform -hls -tmp C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.1.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.1.tmp.bc -f 
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fxp_sqrt<32, 24, 32, 24>' (SobelMatrixMultiplier/fxp_sqrt.h:145).
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:80) in function 'getConvolutionResult' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:70) in function 'getConvolutionResult' for pipelining.
 INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (SobelMatrixMultiplier/fxp_sqrt.h:161) in function 'fxp_sqrt<32, 24, 32, 24>' completely.
-INFO: [XFORM 203-501] Unrolling loop 'Col_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:81) in function 'getConvolutionResult' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Col_Conv' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:71) in function 'getConvolutionResult' completely.
 INFO: [XFORM 203-102] Partitioning array '_vertical_sobel_operator' in dimension 2 automatically.
 INFO: [XFORM 203-102] Partitioning array '_horizontal_sobel_operator' in dimension 2 automatically.
 INFO: [XFORM 203-102] Automatically partitioning small array '_vertical_sobel_operator.0' completely based on array size.
@@ -330,37 +379,37 @@ INFO: [XFORM 203-102] Automatically partitioning small array '_vertical_sobel_op
 INFO: [XFORM 203-102] Automatically partitioning small array '_horizontal_sobel_operator.0' completely based on array size.
 INFO: [XFORM 203-102] Automatically partitioning small array '_horizontal_sobel_operator.1' completely based on array size.
 INFO: [XFORM 203-102] Automatically partitioning small array '_horizontal_sobel_operator.2' completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'array' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:74) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'array' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:64) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_vertical_sobel_operator.0' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_vertical_sobel_operator.2' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_horizontal_sobel_operator.0' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_horizontal_sobel_operator.1' in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array '_horizontal_sobel_operator.2' in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) automatically.
-Command         transform returned 0; 0.206 sec.
+INFO: [XFORM 203-602] Inlining function 'power' into 'combineOperatorResults' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46) automatically.
+Command         transform returned 0; 0.184 sec.
 INFO: [HLS 200-0] Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SobelMatrixMultiplier/fxp_sqrt.h:145:61) to (SobelMatrixMultiplier/fxp_sqrt.h:177:1) in function 'fxp_sqrt<32, 24, 32, 24>'... converting 61 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'getConvolutionResult' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:74)...3 expression(s) balanced.
-Command         transform returned 0; 0.112 sec.
+INFO: [XFORM 203-11] Balancing expressions in function 'getConvolutionResult' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:64)...3 expression(s) balanced.
+Command         transform returned 0; 0.113 sec.
 Execute         disassemble C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.2 C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.2 
 Execute           is_encrypted C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.2.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.302 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 147.801 ; gain = 92.348
+Command         disassemble returned 0; 0.305 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 148.004 ; gain = 92.398
 INFO: [HLS 200-0] Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.2.bc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt<32, 24, 32, 24>' to 'fxp_sqrt' (SobelMatrixMultiplier/fxp_sqrt.h:162:1)
-WARNING: [XFORM 203-631] Renaming function 'combineOperatorResults' to 'combineOperatorResul' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47:9)
+WARNING: [XFORM 203-631] Renaming function 'combineOperatorResults' to 'combineOperatorResul' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7:9)
 Command         transform returned 0; 0.346 sec.
 Execute         disassemble C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.3 C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.3 
 Execute           is_encrypted C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.o.3.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.281 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 161.152 ; gain = 105.699
+Command         disassemble returned 0; 0.282 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 161.633 ; gain = 106.027
 INFO: [HLS 200-0] Finish building internal data model.
-Command       opt_and_import_c returned 0; 2.058 sec.
-Command     elaborate returned 0; 10.133 sec.
+Command       opt_and_import_c returned 0; 2.004 sec.
+Command     elaborate returned 0; 12.299 sec.
 Execute     autosyn 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-0] Synthesizing C/C++ design ...
@@ -398,23 +447,23 @@ INFO: [HLS 200-0] Preprocessing Module: fxp_sqrt ...
 Execute       set_default_model fxp_sqrt 
 Command       set_default_model returned 0; 0 sec.
 Execute       cdfg_preprocess -model fxp_sqrt 
-Command       cdfg_preprocess returned 0; 0.001 sec.
+Command       cdfg_preprocess returned 0; 0 sec.
 Execute       rtl_gen_preprocess fxp_sqrt 
-Command       rtl_gen_preprocess returned 0; 0 sec.
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
 INFO: [HLS 200-0] Preprocessing Module: combineOperatorResul ...
 Execute       set_default_model combineOperatorResul 
 Command       set_default_model returned 0; 0 sec.
 Execute       cdfg_preprocess -model combineOperatorResul 
 Command       cdfg_preprocess returned 0; 0 sec.
 Execute       rtl_gen_preprocess combineOperatorResul 
-Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Command       rtl_gen_preprocess returned 0; 0 sec.
 INFO: [HLS 200-0] Preprocessing Module: getConvolutionResult ...
 Execute       set_default_model getConvolutionResult 
 Command       set_default_model returned 0; 0 sec.
 Execute       cdfg_preprocess -model getConvolutionResult 
 Command       cdfg_preprocess returned 0; 0 sec.
 Execute       rtl_gen_preprocess getConvolutionResult 
-Command       rtl_gen_preprocess returned 0; 0 sec.
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
 INFO: [HLS 200-0] Model list for synthesis: fxp_sqrt combineOperatorResul getConvolutionResult
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fxp_sqrt'
@@ -426,12 +475,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'fxp_sqrt'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule returned 0; 0.141 sec.
-INFO: [HLS 200-111]  Elapsed time: 11.012 seconds; current allocated memory: 120.063 MB.
+Command       schedule returned 0; 0.134 sec.
+INFO: [HLS 200-111]  Elapsed time: 13.246 seconds; current allocated memory: 120.116 MB.
 Execute       report -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.verbose.sched.rpt -verbose -f 
-Command       report returned 0; 0.04 sec.
+Command       report returned 0; 0.038 sec.
 Execute       db_write -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.sched.adb -f 
-Command       db_write returned 0; 0.059 sec.
+Command       db_write returned 0; 0.057 sec.
 INFO: [HLS 200-0] Finish scheduling fxp_sqrt.
 Execute       set_default_model fxp_sqrt 
 Command       set_default_model returned 0; 0 sec.
@@ -469,12 +518,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind returned 0; 0.056 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.173 seconds; current allocated memory: 120.971 MB.
+Command       bind returned 0; 0.051 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 121.024 MB.
 Execute       report -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.verbose.bind.rpt -verbose -f 
 Command       report returned 0; 0.108 sec.
 Execute       db_write -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.bind.adb -f 
-Command       db_write returned 0; 0.064 sec.
+Command       db_write returned 0; 0.058 sec.
 INFO: [HLS 200-0] Finish binding fxp_sqrt.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'combineOperatorResul'
@@ -486,12 +535,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'combineOperatorResul'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 14.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule returned 0; 0.033 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 121.247 MB.
+Command       schedule returned 0; 0.026 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 121.300 MB.
 Execute       report -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.verbose.sched.rpt -verbose -f 
-Command       report returned 0; 0.011 sec.
+Command       report returned 0; 0.009 sec.
 Execute       db_write -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.sched.adb -f 
-Command       db_write returned 0; 0.016 sec.
+Command       db_write returned 0; 0.011 sec.
 INFO: [HLS 200-0] Finish scheduling combineOperatorResul.
 Execute       set_default_model combineOperatorResul 
 Command       set_default_model returned 0; 0 sec.
@@ -529,12 +578,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind returned 0; 0.05 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 121.367 MB.
+Command       bind returned 0; 0.045 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.082 seconds; current allocated memory: 121.435 MB.
 Execute       report -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.verbose.bind.rpt -verbose -f 
-Command       report returned 0; 0.084 sec.
+Command       report returned 0; 0.085 sec.
 Execute       db_write -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.bind.adb -f 
-Command       db_write returned 0; 0.017 sec.
+Command       db_write returned 0; 0.013 sec.
 INFO: [HLS 200-0] Finish binding combineOperatorResul.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'getConvolutionResult'
@@ -547,12 +596,12 @@ INFO: [SCHED 204-61] Pipelining loop 'Row_Conv'.
 WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_0_load_2') on array 'array_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_0'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule returned 0; 0.057 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.183 seconds; current allocated memory: 121.764 MB.
+Command       schedule returned 0; 0.054 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.174 seconds; current allocated memory: 121.833 MB.
 Execute       report -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.verbose.sched.rpt -verbose -f 
-Command       report returned 0; 0.024 sec.
+Command       report returned 0; 0.022 sec.
 Execute       db_write -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.sched.adb -f 
-Command       db_write returned 0; 0.025 sec.
+Command       db_write returned 0; 0.021 sec.
 INFO: [HLS 200-0] Finish scheduling getConvolutionResult.
 Execute       set_default_model getConvolutionResult 
 Command       set_default_model returned 0; 0 sec.
@@ -590,12 +639,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind returned 0; 0.058 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 122.048 MB.
+Command       bind returned 0; 0.053 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 122.117 MB.
 Execute       report -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.verbose.bind.rpt -verbose -f 
-Command       report returned 0; 0.107 sec.
+Command       report returned 0; 0.106 sec.
 Execute       db_write -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.bind.adb -f 
-Command       db_write returned 0; 0.03 sec.
+Command       db_write returned 0; 0.025 sec.
 INFO: [HLS 200-0] Finish binding getConvolutionResult.
 Execute       get_model_list getConvolutionResult -filter all-wo-channel 
 Command       get_model_list returned 0; 0 sec.
@@ -612,51 +661,51 @@ INFO: [HLS 200-10] -- Generating RTL for module 'fxp_sqrt'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model fxp_sqrt -vendor xilinx -mg_file C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fxp_sqrt'.
-Command       create_rtl_model returned 0; 0.154 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.325 seconds; current allocated memory: 123.781 MB.
+Command       create_rtl_model returned 0; 0.149 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.308 seconds; current allocated memory: 123.865 MB.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       gen_rtl fxp_sqrt -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/systemc/fxp_sqrt -synmodules fxp_sqrt combineOperatorResul getConvolutionResult 
-Command       gen_rtl returned 0; 0.013 sec.
+Command       gen_rtl returned 0; 0.008 sec.
 Execute       gen_rtl fxp_sqrt -style xilinx -f -lang vhdl -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/vhdl/fxp_sqrt 
-Command       gen_rtl returned 0; 0.006 sec.
+Command       gen_rtl returned 0; 0.005 sec.
 Execute       gen_rtl fxp_sqrt -style xilinx -f -lang vlog -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/verilog/fxp_sqrt 
-Command       gen_rtl returned 0; 0.007 sec.
+Command       gen_rtl returned 0; 0.006 sec.
 Execute       gen_tb_info fxp_sqrt -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt -p C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db 
-Command       gen_tb_info returned 0; 0.048 sec.
+Command       gen_tb_info returned 0; 0.044 sec.
 Execute       report -model fxp_sqrt -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/report/fxp_sqrt_csynth.rpt -f 
 Command       report returned 0; 0.048 sec.
 Execute       report -model fxp_sqrt -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/report/fxp_sqrt_csynth.xml -f -x 
-Command       report returned 0; 0.045 sec.
+Command       report returned 0; 0.044 sec.
 Execute       report -model fxp_sqrt -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.verbose.rpt -verbose -f 
-Command       report returned 0; 0.151 sec.
+Command       report returned 0; 0.149 sec.
 Execute       db_write -model fxp_sqrt -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.adb -f 
-Command       db_write returned 0; 0.14 sec.
+Command       db_write returned 0; 0.145 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'combineOperatorResul'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       create_rtl_model combineOperatorResul -vendor xilinx -mg_file C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'combineOperatorResul'.
-Command       create_rtl_model returned 0; 0.011 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.716 seconds; current allocated memory: 124.663 MB.
+Command       create_rtl_model returned 0; 0.007 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.698 seconds; current allocated memory: 124.700 MB.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       gen_rtl combineOperatorResul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/systemc/combineOperatorResul -synmodules fxp_sqrt combineOperatorResul getConvolutionResult 
-Command       gen_rtl returned 0; 0.008 sec.
+Command       gen_rtl returned 0; 0.005 sec.
 Execute       gen_rtl combineOperatorResul -style xilinx -f -lang vhdl -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/vhdl/combineOperatorResul 
-Command       gen_rtl returned 0; 0.004 sec.
+Command       gen_rtl returned 0; 0.001 sec.
 Execute       gen_rtl combineOperatorResul -style xilinx -f -lang vlog -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/verilog/combineOperatorResul 
-Command       gen_rtl returned 0; 0.006 sec.
+Command       gen_rtl returned 0; 0.001 sec.
 Execute       gen_tb_info combineOperatorResul -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul -p C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db 
-Command       gen_tb_info returned 0; 0.008 sec.
+Command       gen_tb_info returned 0; 0.002 sec.
 Execute       report -model combineOperatorResul -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/report/combineOperatorResul_csynth.rpt -f 
-Command       report returned 0; 0.006 sec.
+Command       report returned 0; 0.004 sec.
 Execute       report -model combineOperatorResul -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/report/combineOperatorResul_csynth.xml -f -x 
-Command       report returned 0; 0.005 sec.
+Command       report returned 0; 0.002 sec.
 Execute       report -model combineOperatorResul -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.verbose.rpt -verbose -f 
-Command       report returned 0; 0.086 sec.
+Command       report returned 0; 0.082 sec.
 Execute       db_write -model combineOperatorResul -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.adb -f 
-Command       db_write returned 0; 0.046 sec.
+Command       db_write returned 0; 0.04 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'getConvolutionResult'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -668,12 +717,12 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'getConvolutionResult' 
 INFO: [SYN 201-210] Renamed object name 'getConvolutionResult_mux_32_32_1_1' to 'getConvolutionResbkb' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'getConvolutionResbkb': 6 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'getConvolutionResult'.
-Command       create_rtl_model returned 0; 0.053 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 125.338 MB.
+Command       create_rtl_model returned 0; 0.042 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 125.344 MB.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       gen_rtl getConvolutionResult -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/systemc/getConvolutionResult -synmodules fxp_sqrt combineOperatorResul getConvolutionResult 
-Command       gen_rtl returned 0; 0.013 sec.
+Command       gen_rtl returned 0; 0.006 sec.
 Execute       gen_rtl getConvolutionResult -istop -style xilinx -f -lang vhdl -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/vhdl/getConvolutionResult 
 Command       gen_rtl returned 0; 0.016 sec.
 Execute       gen_rtl getConvolutionResult -istop -style xilinx -f -lang vlog -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/verilog/getConvolutionResult 
@@ -681,19 +730,19 @@ Command       gen_rtl returned 0; 0.011 sec.
 Execute       export_constraint_db -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.constraint.tcl -f -tool general 
 Command       export_constraint_db returned 0; 0.001 sec.
 Execute       report -model getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.design.xml -verbose -f -dv 
-Command       report returned 0; 0.099 sec.
+Command       report returned 0; 0.098 sec.
 Execute       report -model getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.sdaccel.xml -verbose -f -sdaccel 
-Command       report returned 0; 0.022 sec.
+Command       report returned 0; 0.02 sec.
 Execute       gen_tb_info getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult -p C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db 
-Command       gen_tb_info returned 0; 0.021 sec.
+Command       gen_tb_info returned 0; 0.011 sec.
 Execute       report -model getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/report/getConvolutionResult_csynth.rpt -f 
-Command       report returned 0; 0.011 sec.
+Command       report returned 0; 0.01 sec.
 Execute       report -model getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/syn/report/getConvolutionResult_csynth.xml -f -x 
-Command       report returned 0; 0.011 sec.
+Command       report returned 0; 0.007 sec.
 Execute       report -model getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.verbose.rpt -verbose -f 
-Command       report returned 0; 0.115 sec.
+Command       report returned 0; 0.113 sec.
 Execute       db_write -model getConvolutionResult -o C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.adb -f 
-Command       db_write returned 0; 0.063 sec.
+Command       db_write returned 0; 0.06 sec.
 Execute       sc_get_clocks getConvolutionResult 
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       sc_get_portdomain getConvolutionResult 
@@ -713,7 +762,7 @@ INFO: [HLS 200-0] Found component getConvolutionResbkb.
 INFO: [HLS 200-0] Append model getConvolutionResbkb
 INFO: [HLS 200-0] Found component getConvolutionResbkb.
 INFO: [HLS 200-0] Append model getConvolutionResbkb
-Command       ap_source returned 0; 0.003 sec.
+Command       ap_source returned 0; 0.002 sec.
 INFO: [HLS 200-0] Append model fxp_sqrt
 INFO: [HLS 200-0] Append model combineOperatorResul
 INFO: [HLS 200-0] Append model getConvolutionResult
@@ -733,6 +782,68 @@ INFO: [HLS 200-0] CAS Generation done.
 INFO: [HLS 200-0] CBC Generation done.
 Execute       export_ssdm C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/a.export.ll 
 Command       export_ssdm returned 0; 0.004 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.002 sec.
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.006 sec.
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.064 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.001 sec.
+Command           ap_source returned 0; 0.094 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.095 sec.
+Command       ap_source returned 0; 0.095 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.compgen.tcl 
+Command       ap_source returned 0; 0.014 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
@@ -767,102 +878,40 @@ Command             ap_source returned 0; 0.008 sec.
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command             ap_source returned 0; 0.006 sec.
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
-Command             ap_source returned 0; 0.003 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.063 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
-Command             ap_source returned 0; 0.001 sec.
-Command           ap_source returned 0; 0.092 sec.
-Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
-Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.094 sec.
-Command       ap_source returned 0; 0.094 sec.
-Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command         ap_source returned 0; 0.001 sec.
-Command       ap_source returned 0; 0.002 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.compgen.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.compgen.tcl 
-Command       ap_source returned 0; 0 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.compgen.tcl 
-Command       ap_source returned 0; 0.02 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
-Execute         source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
-Command       ap_source returned 0; 0 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq.gen 
-Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
-Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
-Command             ap_source returned 0; 0.001 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
-Command             ap_source returned 0; 0.001 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
-Command               ap_source returned 0; 0.002 sec.
-Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
-Command               ap_source returned 0; 0.005 sec.
-Command             ap_source returned 0; 0.008 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command             ap_source returned 0; 0.008 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command             ap_source returned 0; 0.006 sec.
-Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
 Command             ap_source returned 0; 0.002 sec.
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.066 sec.
+Command             ap_source returned 0; 0.065 sec.
 Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
 Command             ap_source returned 0; 0.001 sec.
-Command           ap_source returned 0; 0.094 sec.
+Command           ap_source returned 0; 0.093 sec.
 Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.096 sec.
-Command       ap_source returned 0; 0.096 sec.
+Command         ap_source returned 0; 0.095 sec.
+Command       ap_source returned 0; 0.095 sec.
 Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
-Command       ap_source returned 0; 0 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.rtl_wrap.cfg.tcl 
-Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.compgen.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.compgen.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.compgen.tcl 
-Command       ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.compgen.tcl 
@@ -875,10 +924,10 @@ Command         ap_source returned 0; 0.001 sec.
 Execute         source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
 Command         ap_source returned 0; 0 sec.
 Execute         source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
-Command         ap_source returned 0; 0.001 sec.
-Command       ap_source returned 0; 0.049 sec.
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.033 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/fxp_sqrt.compgen.tcl 
 Command       ap_source returned 0; 0.002 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/combineOperatorResul.compgen.tcl 
@@ -888,33 +937,33 @@ Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
 Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0.001 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
-Command       ap_source returned 0; 0 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.tbgen.tcl 
-Command       ap_source returned 0; 0 sec.
-Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/getConvolutionResult.constraint.tcl 
 Command       ap_source returned 0; 0.001 sec.
 Execute       sc_get_clocks getConvolutionResult 
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       source C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 179.813 ; gain = 124.359
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 180.402 ; gain = 124.797
 INFO: [SYSC 207-301] Generating SystemC RTL for getConvolutionResult.
 INFO: [VHDL 208-304] Generating VHDL RTL for getConvolutionResult.
 INFO: [VLOG 209-307] Generating Verilog RTL for getConvolutionResult.
-Command     autosyn returned 0; 3.727 sec.
-Command   csynth_design returned 0; 13.862 sec.
-Command ap_source returned 0; 14.172 sec.
+Command     autosyn returned 0; 3.24 sec.
+Command   csynth_design returned 0; 15.54 sec.
+Command ap_source returned 0; 15.943 sec.
 Execute cleanup_all 
-Command cleanup_all returned 0; 0.007 sec.
+Command cleanup_all returned 0; 0.008 sec.

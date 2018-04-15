@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'combineOperatorResul'
 ================================================================
-* Date:           Sat Apr 14 13:30:04 2018
+* Date:           Sun Apr 15 01:36:41 2018
 
 * Version:        2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)
 * Project:        SobelMatrixMultiplier
@@ -107,53 +107,53 @@ IsGatedGlobalClock: 0
  <State 1> : 8.51ns
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%horizontalResult_rea = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %horizontalResult)"
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%verticalResult_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %verticalResult)"
-ST_1 : Operation 17 [1/1] (8.51ns)   --->   "%result = mul i32 %verticalResult_read, %verticalResult_read" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 18 [1/1] (8.51ns)   --->   "%result_1 = mul i32 %horizontalResult_rea, %horizontalResult_rea" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:57]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (8.51ns)   --->   "%result = mul i32 %verticalResult_read, %verticalResult_read" [SobelMatrixMultiplier/powerFunction.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (8.51ns)   --->   "%result_1 = mul i32 %horizontalResult_rea, %horizontalResult_rea" [SobelMatrixMultiplier/powerFunction.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
  <State 2> : 5.78ns
-ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node input_V)   --->   "%p_Val2_2 = shl i32 %result, 8" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56]
-ST_2 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node input_V)   --->   "%p_Val2_3 = shl i32 %result_1, 8" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:57]
-ST_2 : Operation 21 [1/1] (2.55ns) (out node of the LUT)   --->   "%input_V = add i32 %p_Val2_3, %p_Val2_2" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:58]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 22 [13/13] (3.22ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node input_V)   --->   "%p_Val2_2 = shl i32 %result, 8" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46]
+ST_2 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node input_V)   --->   "%p_Val2_3 = shl i32 %result_1, 8" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47]
+ST_2 : Operation 21 [1/1] (2.55ns) (out node of the LUT)   --->   "%input_V = add i32 %p_Val2_3, %p_Val2_2" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:48]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [13/13] (3.22ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 3> : 8.68ns
-ST_3 : Operation 23 [12/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 23 [12/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 4> : 8.68ns
-ST_4 : Operation 24 [11/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 24 [11/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 5> : 8.68ns
-ST_5 : Operation 25 [10/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 25 [10/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 6> : 8.68ns
-ST_6 : Operation 26 [9/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 26 [9/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 7> : 8.68ns
-ST_7 : Operation 27 [8/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 27 [8/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 8> : 8.68ns
-ST_8 : Operation 28 [7/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 28 [7/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 9> : 8.68ns
-ST_9 : Operation 29 [6/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 29 [6/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 10> : 8.68ns
-ST_10 : Operation 30 [5/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 30 [5/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 11> : 8.68ns
-ST_11 : Operation 31 [4/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 31 [4/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 12> : 8.68ns
-ST_12 : Operation 32 [3/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 32 [3/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 13> : 8.68ns
-ST_13 : Operation 33 [2/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 33 [2/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 14> : 6.10ns
-ST_14 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str5) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56]
-ST_14 : Operation 35 [1/13] (6.10ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_14 : Operation 36 [1/1] (0.00ns)   --->   "%tmp = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V, i32 8, i32 19)" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:61]
-ST_14 : Operation 37 [1/1] (0.00ns)   --->   "ret i12 %tmp" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:61]
+ST_14 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str4) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46]
+ST_14 : Operation 35 [1/13] (6.10ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %input_V) nounwind" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 36 [1/1] (0.00ns)   --->   "%tmp = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V, i32 8, i32 19)" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:51]
+ST_14 : Operation 37 [1/1] (0.00ns)   --->   "ret i12 %tmp" [SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:51]
 
 
 ============================================================
@@ -164,61 +164,61 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
  <State 1>: 8.51ns
 The critical path consists of the following:
 	wire read on port 'horizontalResult' [3]  (0 ns)
-	'mul' operation ('result', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:57) [8]  (8.51 ns)
+	'mul' operation ('result', SobelMatrixMultiplier/powerFunction.cpp:7->SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47) [8]  (8.51 ns)
 
  <State 2>: 5.78ns
 The critical path consists of the following:
-	'shl' operation ('__Val2__', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:56) [7]  (0 ns)
-	'add' operation ('input.V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:58) [10]  (2.55 ns)
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (3.23 ns)
+	'shl' operation ('__Val2__', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:46) [7]  (0 ns)
+	'add' operation ('input.V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:48) [10]  (2.55 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (3.23 ns)
 
  <State 3>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 4>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 5>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 6>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 7>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 8>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 9>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 10>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 11>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 12>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 13>: 8.68ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (8.68 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (8.68 ns)
 
  <State 14>: 6.1ns
 The critical path consists of the following:
-	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:60) to 'fxp_sqrt' [11]  (6.1 ns)
+	'call' operation ('result_V', SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:50) to 'fxp_sqrt' [11]  (6.1 ns)
 
 
 ============================================================

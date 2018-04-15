@@ -40,7 +40,10 @@
     "Taxonomy": "\/VIVADO_HLS_IP"
   },
   "Files": {
-    "CSource": ["..\/SobelMatrixMultiplier.cpp"],
+    "CSource": [
+      "..\/powerFunction.cpp",
+      "..\/SobelMatrixMultiplier.cpp"
+    ],
     "Vhdl": [
       "impl\/vhdl\/combineOperatorResul.vhd",
       "impl\/vhdl\/fxp_sqrt.vhd",
@@ -447,7 +450,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-04-14 13:30:07 -0700",
+    "Time": "2018-04-15 01:36:43 -0700",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4.1"
   }

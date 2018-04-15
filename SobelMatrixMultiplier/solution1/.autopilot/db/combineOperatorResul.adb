@@ -134,9 +134,9 @@
               <type>0</type>
               <id>6</id>
               <name>result</name>
-              <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
+              <fileName>SobelMatrixMultiplier/powerFunction.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>47</lineNumber>
+              <lineNumber>7</lineNumber>
               <contextFuncName>power</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -151,14 +151,14 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>56</second>
+                      <second>46</second>
                     </item>
                     <item>
                       <first>
-                        <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
+                        <first>SobelMatrixMultiplier/powerFunction.cpp</first>
                         <second>power</second>
                       </first>
-                      <second>47</second>
+                      <second>7</second>
                     </item>
                   </second>
                 </item>
@@ -186,7 +186,7 @@
               <name>p_Val2_2</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>56</lineNumber>
+              <lineNumber>46</lineNumber>
               <contextFuncName>combineOperatorResults</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -201,7 +201,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>56</second>
+                      <second>46</second>
                     </item>
                   </second>
                 </item>
@@ -227,9 +227,9 @@
               <type>0</type>
               <id>8</id>
               <name>result_1</name>
-              <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
+              <fileName>SobelMatrixMultiplier/powerFunction.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>47</lineNumber>
+              <lineNumber>7</lineNumber>
               <contextFuncName>power</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -244,14 +244,14 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>57</second>
+                      <second>47</second>
                     </item>
                     <item>
                       <first>
-                        <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
+                        <first>SobelMatrixMultiplier/powerFunction.cpp</first>
                         <second>power</second>
                       </first>
-                      <second>47</second>
+                      <second>7</second>
                     </item>
                   </second>
                 </item>
@@ -279,7 +279,7 @@
               <name>p_Val2_3</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>57</lineNumber>
+              <lineNumber>47</lineNumber>
               <contextFuncName>combineOperatorResults</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -294,7 +294,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>57</second>
+                      <second>47</second>
                     </item>
                   </second>
                 </item>
@@ -322,7 +322,7 @@
               <name>input_V</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>58</lineNumber>
+              <lineNumber>48</lineNumber>
               <contextFuncName>combineOperatorResults</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -337,7 +337,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>58</second>
+                      <second>48</second>
                     </item>
                   </second>
                 </item>
@@ -365,7 +365,7 @@
               <name>result_V</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>60</lineNumber>
+              <lineNumber>50</lineNumber>
               <contextFuncName>combineOperatorResults</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -380,7 +380,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>60</second>
+                      <second>50</second>
                     </item>
                   </second>
                 </item>
@@ -408,7 +408,7 @@
               <name>tmp</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>51</lineNumber>
               <contextFuncName>combineOperatorResults</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -423,7 +423,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>61</second>
+                      <second>51</second>
                     </item>
                   </second>
                 </item>
@@ -453,7 +453,7 @@
               <name/>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>61</lineNumber>
+              <lineNumber>51</lineNumber>
               <contextFuncName>combineOperatorResults</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -468,7 +468,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>combineOperatorResults</second>
                       </first>
-                      <second>61</second>
+                      <second>51</second>
                     </item>
                   </second>
                 </item>

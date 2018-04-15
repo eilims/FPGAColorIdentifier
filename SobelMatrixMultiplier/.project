@@ -52,9 +52,24 @@
 			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/SobelMatrixMultiplier.h</location>
 		</link>
 		<link>
+			<name>source/dataTypes.h</name>
+			<type>1</type>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/dataTypes.h</location>
+		</link>
+		<link>
 			<name>source/fxp_sqrt.h</name>
 			<type>1</type>
 			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/fxp_sqrt.h</location>
+		</link>
+		<link>
+			<name>source/powerFunction.cpp</name>
+			<type>1</type>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/powerFunction.cpp</location>
+		</link>
+		<link>
+			<name>source/powerFuntion.h</name>
+			<type>1</type>
+			<location>C:/Users/db217620/Repositories/FPGAColorIdentifier/SobelMatrixMultiplier/powerFuntion.h</location>
 		</link>
 		<link>
 			<name>testbench/SobelMatrixMultiplier_test.cpp</name>

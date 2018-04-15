@@ -12,9 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_0_load_2') on array 'array_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_0'." projectName="SobelMatrixMultiplier" solutionName="solution1" date="2018-04-14T13:30:04.805-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'combineOperatorResults' to 'combineOperatorResul' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:47:9)" projectName="SobelMatrixMultiplier" solutionName="solution1" date="2018-04-14T13:30:03.936-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (SobelMatrixMultiplier/fxp_sqrt.h:162:1)" projectName="SobelMatrixMultiplier" solutionName="solution1" date="2018-04-14T13:30:03.400-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('array_0_load_2') on array 'array_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'array_0'." projectName="SobelMatrixMultiplier" solutionName="solution1" date="2018-04-15T01:36:41.257-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'combineOperatorResults' to 'combineOperatorResul' (SobelMatrixMultiplier/SobelMatrixMultiplier.cpp:7:9)" projectName="SobelMatrixMultiplier" solutionName="solution1" date="2018-04-15T01:36:40.467-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (SobelMatrixMultiplier/fxp_sqrt.h:162:1)" projectName="SobelMatrixMultiplier" solutionName="solution1" date="2018-04-15T01:36:39.924-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

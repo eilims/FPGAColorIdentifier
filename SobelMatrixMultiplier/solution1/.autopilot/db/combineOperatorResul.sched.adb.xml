@@ -421,7 +421,7 @@ _ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-_ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str5) nounwind
+_ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:2  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str4) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

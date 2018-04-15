@@ -376,7 +376,7 @@
               <name/>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -391,7 +391,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -449,7 +449,7 @@
               <name>horizontalResult</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -464,7 +464,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -494,7 +494,7 @@
               <name>verticalResult</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>85</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -509,7 +509,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>85</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -539,7 +539,7 @@
               <name>exitcond1</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -554,7 +554,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -582,7 +582,7 @@
               <name>i_1</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -597,7 +597,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -625,7 +625,7 @@
               <name/>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -640,7 +640,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -753,7 +753,7 @@
               <name>tmp_2</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -768,7 +768,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -799,7 +799,7 @@
               <name>tmp_3</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -814,7 +814,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -845,7 +845,7 @@
               <name>tmp_4</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>85</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -860,7 +860,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>85</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -888,7 +888,7 @@
               <name>tmp_5</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -903,7 +903,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -934,7 +934,7 @@
               <name>tmp_6</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -949,7 +949,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -1061,7 +1061,7 @@
               <name>tmp_7</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1076,7 +1076,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -1107,7 +1107,7 @@
               <name>tmp_8</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1122,7 +1122,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -1153,7 +1153,7 @@
               <name>tmp_6_1</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1168,7 +1168,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -1280,7 +1280,7 @@
               <name>tmp_9</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1295,7 +1295,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -1326,7 +1326,7 @@
               <name>tmp_s</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1341,7 +1341,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -1372,7 +1372,7 @@
               <name>tmp_4_2</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>85</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1387,7 +1387,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>85</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -1415,7 +1415,7 @@
               <name>tmp_10</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>85</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1430,7 +1430,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>85</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -1458,7 +1458,7 @@
               <name>verticalResult_2_2</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>85</lineNumber>
+              <lineNumber>75</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1473,7 +1473,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>85</second>
+                      <second>75</second>
                     </item>
                   </second>
                 </item>
@@ -1501,7 +1501,7 @@
               <name>tmp_6_2</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1516,7 +1516,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -1544,7 +1544,7 @@
               <name>tmp1</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1559,7 +1559,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -1587,7 +1587,7 @@
               <name>tmp_11</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1602,7 +1602,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -1630,7 +1630,7 @@
               <name>horizontalResult_2_2</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>86</lineNumber>
+              <lineNumber>76</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1645,7 +1645,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>86</second>
+                      <second>76</second>
                     </item>
                   </second>
                 </item>
@@ -1673,7 +1673,7 @@
               <name/>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>80</lineNumber>
+              <lineNumber>70</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1688,7 +1688,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>80</second>
+                      <second>70</second>
                     </item>
                   </second>
                 </item>
@@ -1715,7 +1715,7 @@
               <name>tmp</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>79</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1730,7 +1730,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>89</second>
+                      <second>79</second>
                     </item>
                   </second>
                 </item>
@@ -1759,7 +1759,7 @@
               <name>p_trunc_ext</name>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>79</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1774,7 +1774,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>89</second>
+                      <second>79</second>
                     </item>
                   </second>
                 </item>
@@ -1801,7 +1801,7 @@
               <name/>
               <fileName>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>89</lineNumber>
+              <lineNumber>79</lineNumber>
               <contextFuncName>getConvolutionResult</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1816,7 +1816,7 @@
                         <first>SobelMatrixMultiplier/SobelMatrixMultiplier.cpp</first>
                         <second>getConvolutionResult</second>
                       </first>
-                      <second>89</second>
+                      <second>79</second>
                     </item>
                   </second>
                 </item>
