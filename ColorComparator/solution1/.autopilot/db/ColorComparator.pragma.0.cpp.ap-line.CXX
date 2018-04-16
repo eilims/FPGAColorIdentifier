@@ -1025,8 +1025,11 @@
 #pragma line 8 "ColorComparator/ColorComparator.h" 2 ::: 25731
 #pragma line 1 "ColorComparator/powerFuntion.h" 1 ::: 25732
 #pragma line 9 "ColorComparator/ColorComparator.h" 2 ::: 25737
-#pragma line 2 "ColorComparator/ColorComparator.cpp" 2 ::: 25745
-#pragma line 7 "ColorComparator/ColorComparator.cpp" ::: 25753
-#pragma line 25 "ColorComparator/ColorComparator.cpp" ::: 25774
-#pragma line 29 "ColorComparator/ColorComparator.cpp" ::: 25781
-#pragma line 29 "ColorComparator/ColorComparator.cpp" ::: 25784
+#pragma line 2 "ColorComparator/ColorComparator.cpp" 2 ::: 25747
+#pragma line 33 "ColorComparator/ColorComparator.cpp" ::: 25781
+#pragma line 33 "ColorComparator/ColorComparator.cpp" ::: 25784
+#pragma line 34 "ColorComparator/ColorComparator.cpp" ::: 25788
+#pragma line 46 "ColorComparator/ColorComparator.cpp" ::: 25803
+#pragma line 49 "ColorComparator/ColorComparator.cpp" ::: 25809
+#pragma line 53 "ColorComparator/ColorComparator.cpp" ::: 25816
+#pragma line 53 "ColorComparator/ColorComparator.cpp" ::: 25819

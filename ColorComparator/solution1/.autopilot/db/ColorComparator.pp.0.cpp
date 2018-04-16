@@ -25735,15 +25735,20 @@ int power(int number, int exponent);
 
 
 
+
 int getColorDistance(int pixel, int color);
 int getPixelClassification(int pixel);
+void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]);
 # 2 "ColorComparator/ColorComparator.cpp" 2
 
 
-const int _color_array[] = {0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF, 0x00FFFF00, 0x0000FFFF};
+const int _color_array[] = { 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF,
+  0x00FFFF00, 0x0000FFFF };
+const int _color_array_distance[] = { 0x00FF0000, 0x0000FF00, 0x000000FF,
+  0x00FF00FF, 0x00FFFF00, 0x0000FFFF };
 
 
-int getColorDistance(int pixel, int color){
+int getColorDistance(int pixel, int color) {
 
  int pixelRed = (pixel & 0x00FF0000) >> 16;
  int pixelGreen = (pixel & 0x0000FF00) >> 8;
@@ -25761,16 +25766,35 @@ int getColorDistance(int pixel, int color){
  return result.to_int();
 }
 
-int getPixelClassification(int pixel){
+
+int getPixelClassification(int pixel) {
  int i;
  int minimumDistanceIndex = 0;
  int minimumDistance = 2147483647;
- PIXEL_COLOR_LOOP: for(i = 0; i < 6; i++){
+ PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
   int distance = getColorDistance(pixel, _color_array[i]);
-  if(distance < minimumDistance){
+  if (distance < minimumDistance) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }
  }
  return minimumDistanceIndex;
+}
+
+
+
+
+void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]) {
+ int centerColor = getPixelClassification(pixelArray[1][1]);
+ int tempArray[8];
+ REASSIGNMENT_LOOP: for(int i = 0; i < 8; i++){
+  tempArray[i] = pixelArray[i/3][i%3];
+ }
+ if (selectedColorArray[centerColor] == 1) {
+  ROW_LOOP: for (int i = 0; i < 8; i++) {
+    int pixel = getColorDistance(tempArray[i], _color_array[centerColor]);
+    pixelArray[i/3][i%3] = pixel;
+  }
+ }
+
 }

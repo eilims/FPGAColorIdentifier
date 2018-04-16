@@ -1020,4 +1020,4 @@
 #pragma line 8 "ColorComparator/ColorComparator.h" 2 ::: 25725
 #pragma line 1 "ColorComparator/powerFuntion.h" 1 ::: 25726
 #pragma line 9 "ColorComparator/ColorComparator.h" 2 ::: 25731
-#pragma line 2 "ColorComparator/ColorComparator.cpp" 2 ::: 25739
+#pragma line 2 "ColorComparator/ColorComparator.cpp" 2 ::: 25741

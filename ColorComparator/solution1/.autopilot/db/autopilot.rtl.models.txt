@@ -1,6 +1,4 @@
-Loop_PIXEL_COLOR_bkb
-fifo_w32_d2_A
+parseColorsToCentbkb
+parseColorsToCentcud
 fxp_sqrt
-Loop_PIXEL_COLOR_LOO
-p_ColorComparator_Co
-getPixelClassification
+parseColorsToCenterPixel

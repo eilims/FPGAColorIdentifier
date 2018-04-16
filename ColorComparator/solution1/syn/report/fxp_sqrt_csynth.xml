@@ -34,8 +34,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>333</FF>
-<LUT>3613</LUT>
+<FF>355</FF>
+<LUT>3622</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP48E>0</DSP48E>
 </Resources>
@@ -82,6 +82,17 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<name>ap_ce</name>
+<Object>fxp_sqrt</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
 <name>in_val_V_read</name>
 <Object>in_val_V_read</Object>
 <Type>scalar</Type>
@@ -89,7 +100,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>29</Bits>
+<Bits>30</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

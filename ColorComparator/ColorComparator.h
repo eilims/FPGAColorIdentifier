@@ -9,9 +9,11 @@
 
 #define HW_COSIM
 
-#define COLR_ARRAY_SIZE 6
+#define COLOR_ARRAY_SIZE 6
+#define ARRAY_SIZE 3
 
 int getColorDistance(int pixel, int color);
 int getPixelClassification(int pixel);
+void parseColorsToCenterPixel(int pixelArray[ARRAY_SIZE][ARRAY_SIZE], int selectedColorArray[COLOR_ARRAY_SIZE]);
 
 #endif

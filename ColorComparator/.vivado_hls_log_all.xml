@@ -12,10 +12,10 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name '__ColorComparator/Co' to 'p_ColorComparator_Co'." projectName="ColorComparator" solutionName="solution1" date="2018-04-15T02:24:04.039-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'Loop_PIXEL_COLOR_LOOP_proc' to 'Loop_PIXEL_COLOR_LOO' (ColorComparator/ColorComparator.cpp:3:38)" projectName="ColorComparator" solutionName="solution1" date="2018-04-15T02:24:03.675-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function '__ColorComparator/ColorComparator.cpp_line36_proc' to '__ColorComparator/Co' " projectName="ColorComparator" solutionName="solution1" date="2018-04-15T02:24:03.454-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:158:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-15T02:24:03.449-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-15T18:07:47.261-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-621] Ignored instantiation directive on function 'getPixelClassification' at argument 'ret.V.i' as the variable does not exist or is optimized away." projectName="ColorComparator" solutionName="solution1" date="2018-04-15T18:07:46.172-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-621] Ignored instantiation directive on function 'getPixelClassification' at argument 'distance.0' as the variable does not exist or is optimized away." projectName="ColorComparator" solutionName="solution1" date="2018-04-15T18:07:45.795-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-15T18:07:44.073-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

@@ -1,16 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-  <sourceFile>
-    <directive functionName="getPixelClassification" label="PIXEL_COLOR_LOOP" functionLabel="">
-      <pragma name="PIPELINE">
-        <option name="II" value="1"/>
-      </pragma>
-    </directive>
-    <directive functionName="getPixelClassification" label="" functionLabel="">
-      <pragma name="DATAFLOW"/>
-    </directive>
-    <directive functionName="getPixelClassification" label="PIXEL_COLOR_LOOP" functionLabel="">
-      <pragma name="LOOP_FLATTEN"/>
-    </directive>
-  </sourceFile>
+    <sourceFile name="">
+        <directive functionName="getPixelClassification" label="PIXEL_COLOR_LOOP" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="getPixelClassification" label="PIXEL_COLOR_LOOP" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="parseColorsToCenterPixel" label="ROW_LOOP" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="getPixelClassification" label="" functionLabel="">
+            <pragma name="FUNCTION_INSTANTIATE">
+                <option name="variable" value="distance" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="parseColorsToCenterPixel" label="COL_LOOP" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="parseColorsToCenterPixel" label="ROW_LOOP" functionLabel="">
+            <pragma name="LOOP_FLATTEN"/>
+        </directive>
+        <directive functionName="parseColorsToCenterPixel" label="REASSIGNMENT_LOOP" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="parseColorsToCenterPixel" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="pixelArray" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
 </AutoPilot:ProjectResources>
+

@@ -1,10 +1,13 @@
 #include "ColorComparator.h"
 
 //Red, green, blue, Magenta, yellow. cyan
-const int _color_array[] = {0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF, 0x00FFFF00, 0x0000FFFF};
+const int _color_array[] = { 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF,
+		0x00FFFF00, 0x0000FFFF };
+const int _color_array_distance[] = { 0x00FF0000, 0x0000FF00, 0x000000FF,
+		0x00FF00FF, 0x00FFFF00, 0x0000FFFF };
 
 //Returns the distance between the two pixel colors that are passed in as parameters
-int getColorDistance(int pixel, int color){
+int getColorDistance(int pixel, int color) {
 	//Shifting over all values form the passed in pixels
 	int pixelRed = (pixel & 0x00FF0000) >> 16;
 	int pixelGreen = (pixel & 0x0000FF00) >> 8;
@@ -22,16 +25,35 @@ int getColorDistance(int pixel, int color){
 	return result.to_int();
 }
 
-int getPixelClassification(int pixel){
+//Classifies pixels as one of six colors in _color_array
+int getPixelClassification(int pixel) {
 	int i;
 	int minimumDistanceIndex = 0;
 	int minimumDistance = INT_MAX;
-	PIXEL_COLOR_LOOP: for(i = 0; i < COLR_ARRAY_SIZE; i++){
+	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
 		int distance = getColorDistance(pixel, _color_array[i]);
-		if(distance < minimumDistance){
+		if (distance < minimumDistance) {
 			minimumDistance = distance;
 			minimumDistanceIndex = i;
 		}
 	}
 	return minimumDistanceIndex;
+}
+
+//Changes pixel array to hold distance of pixel from center pixel color
+//Note this is different from the java version
+//For optimization purposes only the center pixel is classified
+void parseColorsToCenterPixel(int pixelArray[ARRAY_SIZE][ARRAY_SIZE], int selectedColorArray[COLOR_ARRAY_SIZE]) {
+	int centerColor = getPixelClassification(pixelArray[1][1]);
+	int tempArray[8];
+	REASSIGNMENT_LOOP: for(int i = 0; i < 8; i++){
+		tempArray[i] = pixelArray[i/3][i%3];
+	}
+	if (selectedColorArray[centerColor] == 1) {
+		ROW_LOOP: for (int i = 0; i < 8; i++) {
+				int pixel = getColorDistance(tempArray[i], _color_array[centerColor]);
+				pixelArray[i/3][i%3] = pixel;
+		}
+	}
+
 }

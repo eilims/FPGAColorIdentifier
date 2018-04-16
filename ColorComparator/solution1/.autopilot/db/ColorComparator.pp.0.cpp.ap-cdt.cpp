@@ -25751,18 +25751,20 @@ int power(int number, int exponent);
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
+#pragma empty_line
 int getColorDistance(int pixel, int color);
 int getPixelClassification(int pixel);
+void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]);
 #pragma line 2 "ColorComparator/ColorComparator.cpp" 2
 #pragma empty_line
 #pragma empty_line
-const int _color_array[] = {0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF, 0x00FFFF00, 0x0000FFFF};
+const int _color_array[] = { 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF,
+  0x00FFFF00, 0x0000FFFF };
+const int _color_array_distance[] = { 0x00FF0000, 0x0000FF00, 0x000000FF,
+  0x00FF00FF, 0x00FFFF00, 0x0000FFFF };
 #pragma empty_line
 #pragma empty_line
-int getColorDistance(int pixel, int color){
-#pragma HLS DEPENDENCE inter true
-#pragma line 7 "ColorComparator/ColorComparator.cpp"
-
+int getColorDistance(int pixel, int color) {
 #pragma empty_line
  int pixelRed = (pixel & 0x00FF0000) >> 16;
  int pixelGreen = (pixel & 0x0000FF00) >> 8;
@@ -25780,33 +25782,65 @@ int getColorDistance(int pixel, int color){
  return result.to_int();
 }
 #pragma empty_line
-int getPixelClassification(int pixel){
-#pragma HLS DATAFLOW
-#pragma line 25 "ColorComparator/ColorComparator.cpp"
-
+#pragma empty_line
+int getPixelClassification(int pixel) {
  int i;
  int minimumDistanceIndex = 0;
  int minimumDistance = 2147483647;
- PIXEL_COLOR_LOOP: for(i = 0; i < 6; i++){
+ PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
 #pragma HLS LOOP_FLATTEN
-#pragma line 29 "ColorComparator/ColorComparator.cpp"
+#pragma line 33 "ColorComparator/ColorComparator.cpp"
 
 #pragma HLS PIPELINE II=1
-#pragma line 29 "ColorComparator/ColorComparator.cpp"
+#pragma line 33 "ColorComparator/ColorComparator.cpp"
 
   int distance = getColorDistance(pixel, _color_array[i]);
-  if(distance < minimumDistance){
+#pragma HLS FUNCTION_INSTANTIATE variable=distance
+#pragma line 34 "ColorComparator/ColorComparator.cpp"
+
+  if (distance < minimumDistance) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }
  }
  return minimumDistanceIndex;
 }
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]) {_ssdm_SpecArrayDimSize(selectedColorArray,6);_ssdm_SpecArrayDimSize(pixelArray,3);
+#pragma HLS ARRAY_RESHAPE variable=pixelArray complete dim=1
+#pragma line 46 "ColorComparator/ColorComparator.cpp"
+
+ int centerColor = getPixelClassification(pixelArray[1][1]);
+ int tempArray[8];
+ REASSIGNMENT_LOOP: for(int i = 0; i < 8; i++){
+#pragma HLS UNROLL
+#pragma line 49 "ColorComparator/ColorComparator.cpp"
+
+  tempArray[i] = pixelArray[i/3][i%3];
+ }
+ if (selectedColorArray[centerColor] == 1) {
+  ROW_LOOP: for (int i = 0; i < 8; i++) {
+#pragma HLS LOOP_FLATTEN
+#pragma line 53 "ColorComparator/ColorComparator.cpp"
+
+#pragma HLS PIPELINE II=1
+#pragma line 53 "ColorComparator/ColorComparator.cpp"
+
+    int pixel = getColorDistance(tempArray[i], _color_array[centerColor]);
+    pixelArray[i/3][i%3] = pixel;
+  }
+ }
+#pragma empty_line
+}
 
 class ssdm_global_array_ColorComparatorpp0cppaplinecpp {
 	public:
 		 inline __attribute__((always_inline)) ssdm_global_array_ColorComparatorpp0cppaplinecpp() {
 			_ssdm_SpecConstant(_color_array);
+			_ssdm_SpecConstant(_color_array_distance);
 		}
 };
 static ssdm_global_array_ColorComparatorpp0cppaplinecpp ssdm_global_array_ins;
