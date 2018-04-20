@@ -1,6 +1,6 @@
 obj/ColorComparator_tb.o: ../../../ColorComparator_tb.cpp \
- ../../../ColorComparator.h ../../../dataTypes.h \
- C:/Xilinx/Vivado/2017.4/include/ap_int.h \
+ ../../../ColorComparator.h C:/Xilinx/Vivado/2017.4/include/hls_stream.h \
+ ../../../dataTypes.h C:/Xilinx/Vivado/2017.4/include/ap_int.h \
  C:/Xilinx/Vivado/2017.4/include/hls_half.h \
  C:/Xilinx/Vivado/2017.4/include/hls_fpo.h \
  C:/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h \

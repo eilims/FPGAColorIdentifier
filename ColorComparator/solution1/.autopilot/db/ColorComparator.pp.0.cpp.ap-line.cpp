@@ -299,6 +299,177 @@ const char *__mingw_get_crt_info (void);
 #pragma line 6 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 2 3 4
 #pragma line 38 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 2 3 4
 #pragma line 6 "ColorComparator/ColorComparator.h" 2
+#pragma line 1 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\hls_stream.h" 1
+#pragma line 66 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\hls_stream.h"
+#pragma line 1 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h" 1
+#pragma line 58 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h"
+enum SsdmDataTypes {
+    _ssdm_sc_int = 0,
+    _ssdm_c_int = _ssdm_sc_int,
+    _ssdm_sc_uint = 1,
+    _ssdm_c_uint = _ssdm_sc_uint,
+    _ssdm_sc_bigint = 2,
+    _ssdm_sc_biguint = 3,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmPortTypes {
+    _ssdm_sc_in = 0,
+    _ssdm_sc_out = 1,
+    _ssdm_sc_inout = 2,
+    _ssdm_sc_in_clk,
+#pragma empty_line
+    _ssdm_fifo_in,
+    _ssdm_sc_fifo_in = _ssdm_fifo_in,
+    _ssdm_tlm_fifo_in = _ssdm_fifo_in,
+    _ssdm_fifo_out,
+    _ssdm_sc_fifo_out = _ssdm_fifo_out,
+    _ssdm_tlm_fifo_out = _ssdm_fifo_out,
+    _ssdm_fifo_inout,
+    _ssdm_sc_fifo_inout = _ssdm_fifo_inout,
+    _ssdm_tlm_fifo_inout = _ssdm_fifo_inout,
+    _ssdm_sc_bus,
+    _ssdm_hls_bus_port = _ssdm_sc_bus,
+    _ssdm_AXI4M_bus_port = _ssdm_sc_bus,
+    _ssdm_port_end,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmProcessTypes {
+    _ssdm_method = 0,
+    _ssdm_sc_method = _ssdm_method,
+    _ssdm_thread = 1,
+    _ssdm_sc_thread = _ssdm_thread,
+    _ssdm_cthread = 2,
+    _ssdm_sc_cthread = _ssdm_cthread,
+    _ssdm_process_end,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmSensitiveTypes {
+    _ssdm_sensitive = 0,
+    _ssdm_sensitive_pos,
+    _ssdm_sensitive_neg,
+    _ssdm_sensitive_reset0,
+    _ssdm_sensitive_reset1,
+    _ssdm_sensitive_end,
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+enum SsdmChannelTypes {
+    _ssdm_sc_sig,
+    _ssdm_fifo,
+    _ssdm_sc_fifo = _ssdm_fifo,
+    _ssdm_mem_fifo,
+    _ssdm_sc_mem_fifo = _ssdm_mem_fifo,
+};
+#pragma empty_line
+#pragma empty_line
+enum SsdmRegionTypes {
+    _ssdm_region_reset,
+    _ssdm_region_protocol,
+    _ssdm_region_pipeline,
+    _ssdm_region_parallel,
+};
+#pragma line 67 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\hls_stream.h" 2
+#pragma empty_line
+#pragma empty_line
+namespace hls {
+#pragma line 78 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\hls_stream.h"
+template<typename __STREAM_T__>
+class stream
+{
+  public:
+#pragma empty_line
+    inline __attribute__((always_inline)) stream() {
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) stream(const char* name) {
+    }
+#pragma empty_line
+#pragma empty_line
+  private:
+    inline __attribute__((always_inline)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) stream& operator= (const stream< __STREAM_T__ >& chn) {
+        V = chn.V;
+        return *this;
+    }
+#pragma empty_line
+  public:
+#pragma empty_line
+    inline __attribute__((always_inline)) void operator >> (__STREAM_T__& rdata) {
+        read(rdata);
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) void operator << (const __STREAM_T__& wdata) {
+        write(wdata);
+    }
+#pragma empty_line
+#pragma empty_line
+  public:
+#pragma empty_line
+    inline __attribute__((always_inline)) bool empty() const {
+        bool tmp = _ssdm_StreamCanRead(&V);
+        return !tmp;
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) bool full() const {
+        bool tmp = _ssdm_StreamCanWrite(&V);
+        return !tmp;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) void read(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+        _ssdm_StreamRead(&V, &tmp);
+        dout = tmp;
+    }
+#pragma empty_line
+    inline __attribute__((always_inline)) __STREAM_T__ read() {
+        __STREAM_T__ tmp;
+        _ssdm_StreamRead(&V, &tmp);
+        return tmp;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) bool read_nb(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+        bool empty_n = _ssdm_StreamNbRead(&V, &tmp);
+        dout = tmp;
+        return empty_n;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) void write(const __STREAM_T__& din) {
+        __STREAM_T__ tmp = din;
+        _ssdm_StreamWrite(&V, &tmp);
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) bool write_nb(const __STREAM_T__& din) {
+        __STREAM_T__ tmp = din;
+        bool full_n = _ssdm_StreamNbWrite(&V, &tmp);
+        return full_n;
+    }
+#pragma empty_line
+#pragma empty_line
+    inline __attribute__((always_inline)) unsigned size() {
+        unsigned size = _ssdm_StreamSize(&V);
+        return size;
+    }
+#pragma empty_line
+  public:
+    __STREAM_T__ V;
+};
+#pragma empty_line
+}
+#pragma line 7 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "ColorComparator/dataTypes.h" 1
 #pragma empty_line
 #pragma empty_line
@@ -23053,7 +23224,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 #pragma empty_line
 typedef ap_ufixed<32, 24> in_data_t;
 typedef ap_ufixed<32, 24> out_data_t;
-#pragma line 7 "ColorComparator/ColorComparator.h" 2
+#pragma line 8 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "ColorComparator/fxp_sqrt.h" 1
 #pragma line 95 "ColorComparator/fxp_sqrt.h"
 #pragma line 1 "C:/Xilinx/Vivado/2017.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cassert" 1 3
@@ -25723,13 +25894,13 @@ void fxp_sqrt(ap_ufixed<W2,IW2>& result, ap_ufixed<W1,IW1>& in_val)
 #pragma empty_line
    result.range(W2-1,0) = ap_uint<W2>(q >> 1);
 }
-#pragma line 8 "ColorComparator/ColorComparator.h" 2
+#pragma line 9 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "ColorComparator/powerFuntion.h" 1
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 int power(int number, int exponent);
-#pragma line 9 "ColorComparator/ColorComparator.h" 2
+#pragma line 10 "ColorComparator/ColorComparator.h" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -25738,6 +25909,7 @@ int power(int number, int exponent);
 #pragma empty_line
 int getColorDistance(int pixel, int color);
 int getPixelClassification(int pixel);
+void getPixelClassification_Stream(int in_pixel, int* out_pixel);
 void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]);
 #pragma line 2 "ColorComparator/ColorComparator.cpp" 2
 #pragma empty_line
@@ -25767,18 +25939,37 @@ int getColorDistance(int pixel, int color) {
 }
 #pragma empty_line
 #pragma empty_line
-int getPixelClassification(int pixel) {
+int getPixelClassification(int in_pixel) {
  int i;
  int minimumDistanceIndex = 0;
  int minimumDistance = 2147483647;
  PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
-  int distance = getColorDistance(pixel, _color_array[i]);
+  int distance = getColorDistance(in_pixel, _color_array[i]);
   if (distance < minimumDistance) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }
  }
  return minimumDistanceIndex;
+}
+#pragma empty_line
+void getPixelClassification_Stream(int in_pixel, int* out_pixel) {
+ int i;
+ int minimumDistanceIndex = 0;
+ int minimumDistance = 2147483647;
+ PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
+  int distance = getColorDistance(in_pixel, _color_array[i]);
+  if (distance < minimumDistance) {
+   minimumDistance = distance;
+   minimumDistanceIndex = i;
+  }
+ }
+ if(minimumDistanceIndex == 0){
+  *out_pixel = 0x00000000;
+ } else {
+  *out_pixel = in_pixel;
+ }
+#pragma empty_line
 }
 #pragma empty_line
 #pragma empty_line

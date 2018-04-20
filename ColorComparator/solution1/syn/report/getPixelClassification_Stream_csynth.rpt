@@ -1,0 +1,267 @@
+
+
+================================================================
+== Vivado HLS Report for 'getPixelClassification_Stream'
+================================================================
+* Date:           Fri Apr 20 00:05:15 2018
+
+* Version:        2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)
+* Project:        ColorComparator
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.68|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+-------------+
+    |  Latency  |  Interval |   Pipeline  |
+    | min | max | min | max |     Type    |
+    +-----+-----+-----+-----+-------------+
+    |   20|   21|    2|    2| loop rewind |
+    +-----+-----+-----+-----+-------------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+------------------+-----+-----+-----+-----+----------+
+        |                             |                  |  Latency  |  Interval | Pipeline |
+        |           Instance          |      Module      | min | max | min | max |   Type   |
+        +-----------------------------+------------------+-----+-----+-----+-----+----------+
+        |grp_getColorDistance_fu_175  |getColorDistance  |   13|   13|    1|    1| function |
+        |grp_getColorDistance_fu_182  |getColorDistance  |   13|   13|    1|    1| function |
+        |grp_getColorDistance_fu_189  |getColorDistance  |   13|   13|    1|    1| function |
+        +-----------------------------+------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- PIXEL_COLOR_LOOP  |   20|   20|        20|          1|          1|     2|    yes   |
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    477|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        0|      0|    1311|  11980|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    195|
+|Register         |        0|      -|     672|    128|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|    1983|  12780|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       1|     24|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------+----------------------------------------------+---------+-------+-----+------+
+    |                    Instance                    |                    Module                    | BRAM_18K| DSP48E|  FF |  LUT |
+    +------------------------------------------------+----------------------------------------------+---------+-------+-----+------+
+    |grp_getColorDistance_fu_175                     |getColorDistance                              |        0|      0|  425|  3980|
+    |grp_getColorDistance_fu_182                     |getColorDistance                              |        0|      0|  425|  3980|
+    |grp_getColorDistance_fu_189                     |getColorDistance                              |        0|      0|  425|  3980|
+    |getPixelClassification_Stream_AXILiteS_s_axi_U  |getPixelClassification_Stream_AXILiteS_s_axi  |        0|      0|   36|    40|
+    +------------------------------------------------+----------------------------------------------+---------+-------+-----+------+
+    |Total                                           |                                              |        0|      0| 1311| 11980|
+    +------------------------------------------------+----------------------------------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |i_2_fu_200_p2                     |     +    |      0|  0|  12|           2|           3|
+    |newSel_fu_299_p2                  |     +    |      0|  0|  12|           3|           3|
+    |ap_block_state20_io               |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state21_io               |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_218                  |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_448                  |    and   |      0|  0|   8|           1|           1|
+    |in_pixel_0_load_A                 |    and   |      0|  0|   8|           1|           1|
+    |in_pixel_0_load_B                 |    and   |      0|  0|   8|           1|           1|
+    |out_pixel_1_load_A                |    and   |      0|  0|   8|           1|           1|
+    |out_pixel_1_load_B                |    and   |      0|  0|   8|           1|           1|
+    |cond_fu_216_p2                    |   icmp   |      0|  0|   8|           2|           1|
+    |exitcond_fu_210_p2                |   icmp   |      0|  0|   9|           3|           3|
+    |in_pixel_0_state_cmp_full         |   icmp   |      0|  0|   8|           2|           1|
+    |out_pixel_1_state_cmp_full        |   icmp   |      0|  0|   8|           2|           1|
+    |tmp_2_1_fu_265_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_2_2_fu_286_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_2_fu_248_p2                   |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_fu_335_p2                     |   icmp   |      0|  0|  18|          32|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   8|           1|           1|
+    |or_cond_fu_308_p2                 |    or    |      0|  0|   8|           1|           1|
+    |distance_0_minimumDi_1_fu_271_p3  |  select  |      0|  0|  32|           1|          32|
+    |distance_0_minimumDi_2_fu_328_p3  |  select  |      0|  0|  32|           1|          32|
+    |distance_0_minimumDi_fu_254_p3    |  select  |      0|  0|  32|           1|          32|
+    |in_pixel_assign_fu_340_p3         |  select  |      0|  0|  32|           1|           1|
+    |newSel1_fu_313_p3                 |  select  |      0|  0|  32|           1|          32|
+    |newSel3_fu_320_p3                 |  select  |      0|  0|  32|           1|          32|
+    |newSel_v_cast_cast_fu_291_p3      |  select  |      0|  0|   2|           1|           2|
+    |p_color_array_load_0_s_fu_222_p3  |  select  |      0|  0|  18|           1|          18|
+    |p_color_array_load_1_s_fu_230_p3  |  select  |      0|  0|  16|           1|          16|
+    |p_color_array_load_2_s_fu_238_p3  |  select  |      0|  0|  16|           1|           8|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 477|         165|         328|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                        |  15|          3|    1|          3|
+    |ap_enable_reg_pp0_iter1                          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter19                         |   9|          2|    1|          2|
+    |ap_phi_mux_in_pixel6_rewind_phi_fu_124_p6        |   9|          2|   32|         64|
+    |ap_phi_mux_minimumDistance4_phi_fu_151_p6        |  15|          3|   32|         96|
+    |ap_phi_mux_minimumDistanceIndex_1_phi_fu_165_p6  |  15|          3|   32|         96|
+    |ap_phi_mux_minimumDistanceIndex_3_phi_fu_109_p6  |  15|          3|    2|          6|
+    |in_pixel6_phi_reg_134                            |  15|          3|   32|         96|
+    |in_pixel_0_data_out                              |   9|          2|   32|         64|
+    |in_pixel_0_state                                 |  15|          3|    2|          6|
+    |in_pixel_TDATA_blk_n                             |   9|          2|    1|          2|
+    |minimumDistance4_reg_147                         |   9|          2|   32|         64|
+    |minimumDistanceIndex_1_reg_161                   |   9|          2|   32|         64|
+    |minimumDistanceIndex_3_reg_105                   |   9|          2|    2|          4|
+    |out_pixel_1_data_out                             |   9|          2|   32|         64|
+    |out_pixel_1_state                                |  15|          3|    2|          6|
+    |out_pixel_TDATA_blk_n                            |   9|          2|    1|          2|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            | 195|         41|  269|        641|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+----+----+-----+-----------+
+    |                     Name                    | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                    |   2|   0|    2|          0|
+    |ap_enable_reg_pp0_iter1                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter16                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter17                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter18                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter19                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9                      |   1|   0|    1|          0|
+    |ap_reg_grp_getColorDistance_fu_175_ap_start  |   1|   0|    1|          0|
+    |ap_reg_grp_getColorDistance_fu_182_ap_start  |   1|   0|    1|          0|
+    |ap_reg_grp_getColorDistance_fu_189_ap_start  |   1|   0|    1|          0|
+    |cond_reg_365                                 |   1|   0|    1|          0|
+    |distance_0_minimumDi_1_reg_405               |  32|   0|   32|          0|
+    |do_init_reg_89                               |   1|   0|    1|          0|
+    |exitcond_reg_361                             |   1|   0|    1|          0|
+    |in_pixel6_phi_reg_134                        |  32|   0|   32|          0|
+    |in_pixel6_rewind_reg_120                     |  32|   0|   32|          0|
+    |in_pixel_0_payload_A                         |  32|   0|   32|          0|
+    |in_pixel_0_payload_B                         |  32|   0|   32|          0|
+    |in_pixel_0_sel_rd                            |   1|   0|    1|          0|
+    |in_pixel_0_sel_wr                            |   1|   0|    1|          0|
+    |in_pixel_0_state                             |   2|   0|    2|          0|
+    |minimumDistance4_reg_147                     |  32|   0|   32|          0|
+    |minimumDistanceIndex_1_reg_161               |  32|   0|   32|          0|
+    |minimumDistanceIndex_3_reg_105               |   2|   0|    2|          0|
+    |minimumDistanceIndex_reg_351                 |   2|   0|    3|          1|
+    |minimumDistance_2_1_reg_390                  |  12|   0|   12|          0|
+    |minimumDistance_2_2_reg_411                  |  12|   0|   12|          0|
+    |minimumDistance_2_reg_385                    |  12|   0|   12|          0|
+    |newSel3_reg_416                              |  32|   0|   32|          0|
+    |out_pixel_1_payload_A                        |  32|   0|   32|          0|
+    |out_pixel_1_payload_B                        |  32|   0|   32|          0|
+    |out_pixel_1_sel_rd                           |   1|   0|    1|          0|
+    |out_pixel_1_sel_wr                           |   1|   0|    1|          0|
+    |out_pixel_1_state                            |   2|   0|    2|          0|
+    |p_color_array_load_0_s_reg_370               |   8|   0|   17|          9|
+    |p_color_array_load_1_s_reg_375               |   1|   0|   17|         16|
+    |p_color_array_load_2_s_reg_380               |   8|   0|   17|          9|
+    |tmp_2_1_reg_400                              |   1|   0|    1|          0|
+    |tmp_2_reg_395                                |   1|   0|    1|          0|
+    |tmp_3_reg_356                                |   2|   0|    2|          0|
+    |exitcond_reg_361                             |  64|  32|    1|          0|
+    |in_pixel6_phi_reg_134                        |  64|  32|   32|          0|
+    |minimumDistanceIndex_3_reg_105               |  64|  32|    2|          0|
+    |minimumDistanceIndex_reg_351                 |  64|  32|    3|          1|
+    +---------------------------------------------+----+----+-----+-----------+
+    |Total                                        | 672| 128|  489|         36|
+    +---------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |         Source Object         |    C Type    |
++------------------------+-----+-----+------------+-------------------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_AWADDR   |  in |    4|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_ARADDR   |  in |    4|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |            AXILiteS           |  return void |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |            AXILiteS           |  return void |
+|ap_clk                  |  in |    1| ap_ctrl_hs | getPixelClassification_Stream | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs | getPixelClassification_Stream | return value |
+|interrupt               | out |    1| ap_ctrl_hs | getPixelClassification_Stream | return value |
+|out_pixel_TREADY        |  in |    1|    axis    |           out_pixel           |    pointer   |
+|out_pixel_TDATA         | out |   32|    axis    |           out_pixel           |    pointer   |
+|out_pixel_TVALID        | out |    1|    axis    |           out_pixel           |    pointer   |
+|in_pixel_TDATA          |  in |   32|    axis    |            in_pixel           |    scalar    |
+|in_pixel_TVALID         |  in |    1|    axis    |            in_pixel           |    scalar    |
+|in_pixel_TREADY         | out |    1|    axis    |            in_pixel           |    scalar    |
++------------------------+-----+-----+------------+-------------------------------+--------------+
+

@@ -1,0 +1,248 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'getPixelClassification_Stream'" level="0">
+<item name = "Date">Fri Apr 20 00:05:15 2018
+</item>
+<item name = "Version">2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)</item>
+<item name = "Project">ColorComparator</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.68</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">20, 21, 2, 2, loop rewind</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_getColorDistance_fu_175">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_182">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_189">getColorDistance, 13, 13, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- PIXEL_COLOR_LOOP">20, 20, 20, 1, 1, 2, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 477</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 0, 1311, 11980</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 195</column>
+<column name="Register">0, -, 672, 128</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 24</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_getColorDistance_fu_175">getColorDistance, 0, 0, 425, 3980</column>
+<column name="grp_getColorDistance_fu_182">getColorDistance, 0, 0, 425, 3980</column>
+<column name="grp_getColorDistance_fu_189">getColorDistance, 0, 0, 425, 3980</column>
+<column name="getPixelClassification_Stream_AXILiteS_s_axi_U">getPixelClassification_Stream_AXILiteS_s_axi, 0, 0, 36, 40</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_2_fu_200_p2">+, 0, 0, 12, 2, 3</column>
+<column name="newSel_fu_299_p2">+, 0, 0, 12, 3, 3</column>
+<column name="ap_block_state20_io">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state21_io">and, 0, 0, 8, 1, 1</column>
+<column name="ap_block_state3_pp0_stage0_iter1">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_218">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_448">and, 0, 0, 8, 1, 1</column>
+<column name="in_pixel_0_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="in_pixel_0_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="out_pixel_1_load_A">and, 0, 0, 8, 1, 1</column>
+<column name="out_pixel_1_load_B">and, 0, 0, 8, 1, 1</column>
+<column name="cond_fu_216_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="exitcond_fu_210_p2">icmp, 0, 0, 9, 3, 3</column>
+<column name="in_pixel_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="out_pixel_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="tmp_2_1_fu_265_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_2_2_fu_286_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_2_fu_248_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_fu_335_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 8, 1, 1</column>
+<column name="ap_block_pp0_stage0_11001">or, 0, 0, 8, 1, 1</column>
+<column name="or_cond_fu_308_p2">or, 0, 0, 8, 1, 1</column>
+<column name="distance_0_minimumDi_1_fu_271_p3">select, 0, 0, 32, 1, 32</column>
+<column name="distance_0_minimumDi_2_fu_328_p3">select, 0, 0, 32, 1, 32</column>
+<column name="distance_0_minimumDi_fu_254_p3">select, 0, 0, 32, 1, 32</column>
+<column name="in_pixel_assign_fu_340_p3">select, 0, 0, 32, 1, 1</column>
+<column name="newSel1_fu_313_p3">select, 0, 0, 32, 1, 32</column>
+<column name="newSel3_fu_320_p3">select, 0, 0, 32, 1, 32</column>
+<column name="newSel_v_cast_cast_fu_291_p3">select, 0, 0, 2, 1, 2</column>
+<column name="p_color_array_load_0_s_fu_222_p3">select, 0, 0, 18, 1, 18</column>
+<column name="p_color_array_load_1_s_fu_230_p3">select, 0, 0, 16, 1, 16</column>
+<column name="p_color_array_load_2_s_fu_238_p3">select, 0, 0, 16, 1, 8</column>
+<column name="ap_enable_pp0">xor, 0, 0, 8, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">15, 3, 1, 3</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter19">9, 2, 1, 2</column>
+<column name="ap_phi_mux_in_pixel6_rewind_phi_fu_124_p6">9, 2, 32, 64</column>
+<column name="ap_phi_mux_minimumDistance4_phi_fu_151_p6">15, 3, 32, 96</column>
+<column name="ap_phi_mux_minimumDistanceIndex_1_phi_fu_165_p6">15, 3, 32, 96</column>
+<column name="ap_phi_mux_minimumDistanceIndex_3_phi_fu_109_p6">15, 3, 2, 6</column>
+<column name="in_pixel6_phi_reg_134">15, 3, 32, 96</column>
+<column name="in_pixel_0_data_out">9, 2, 32, 64</column>
+<column name="in_pixel_0_state">15, 3, 2, 6</column>
+<column name="in_pixel_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="minimumDistance4_reg_147">9, 2, 32, 64</column>
+<column name="minimumDistanceIndex_1_reg_161">9, 2, 32, 64</column>
+<column name="minimumDistanceIndex_3_reg_105">9, 2, 2, 4</column>
+<column name="out_pixel_1_data_out">9, 2, 32, 64</column>
+<column name="out_pixel_1_state">15, 3, 2, 6</column>
+<column name="out_pixel_TDATA_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter11">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter12">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter13">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter14">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter15">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter16">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter17">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter18">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter19">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
+<column name="ap_reg_grp_getColorDistance_fu_175_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_getColorDistance_fu_182_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_getColorDistance_fu_189_ap_start">1, 0, 1, 0</column>
+<column name="cond_reg_365">1, 0, 1, 0</column>
+<column name="distance_0_minimumDi_1_reg_405">32, 0, 32, 0</column>
+<column name="do_init_reg_89">1, 0, 1, 0</column>
+<column name="exitcond_reg_361">1, 0, 1, 0</column>
+<column name="in_pixel6_phi_reg_134">32, 0, 32, 0</column>
+<column name="in_pixel6_rewind_reg_120">32, 0, 32, 0</column>
+<column name="in_pixel_0_payload_A">32, 0, 32, 0</column>
+<column name="in_pixel_0_payload_B">32, 0, 32, 0</column>
+<column name="in_pixel_0_sel_rd">1, 0, 1, 0</column>
+<column name="in_pixel_0_sel_wr">1, 0, 1, 0</column>
+<column name="in_pixel_0_state">2, 0, 2, 0</column>
+<column name="minimumDistance4_reg_147">32, 0, 32, 0</column>
+<column name="minimumDistanceIndex_1_reg_161">32, 0, 32, 0</column>
+<column name="minimumDistanceIndex_3_reg_105">2, 0, 2, 0</column>
+<column name="minimumDistanceIndex_reg_351">2, 0, 3, 1</column>
+<column name="minimumDistance_2_1_reg_390">12, 0, 12, 0</column>
+<column name="minimumDistance_2_2_reg_411">12, 0, 12, 0</column>
+<column name="minimumDistance_2_reg_385">12, 0, 12, 0</column>
+<column name="newSel3_reg_416">32, 0, 32, 0</column>
+<column name="out_pixel_1_payload_A">32, 0, 32, 0</column>
+<column name="out_pixel_1_payload_B">32, 0, 32, 0</column>
+<column name="out_pixel_1_sel_rd">1, 0, 1, 0</column>
+<column name="out_pixel_1_sel_wr">1, 0, 1, 0</column>
+<column name="out_pixel_1_state">2, 0, 2, 0</column>
+<column name="p_color_array_load_0_s_reg_370">8, 0, 17, 9</column>
+<column name="p_color_array_load_1_s_reg_375">1, 0, 17, 16</column>
+<column name="p_color_array_load_2_s_reg_380">8, 0, 17, 9</column>
+<column name="tmp_2_1_reg_400">1, 0, 1, 0</column>
+<column name="tmp_2_reg_395">1, 0, 1, 0</column>
+<column name="tmp_3_reg_356">2, 0, 2, 0</column>
+<column name="exitcond_reg_361">64, 32, 1, 0</column>
+<column name="in_pixel6_phi_reg_134">64, 32, 32, 0</column>
+<column name="minimumDistanceIndex_3_reg_105">64, 32, 2, 0</column>
+<column name="minimumDistanceIndex_reg_351">64, 32, 3, 1</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_AXILiteS_AWVALID">in, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_AWREADY">out, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_AWADDR">in, 4, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_WVALID">in, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_WREADY">out, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_WDATA">in, 32, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_WSTRB">in, 4, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_ARVALID">in, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_ARREADY">out, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_ARADDR">in, 4, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_RVALID">out, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_RREADY">in, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_RDATA">out, 32, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_RRESP">out, 2, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_BVALID">out, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_BREADY">in, 1, s_axi, AXILiteS, return void</column>
+<column name="s_axi_AXILiteS_BRESP">out, 2, s_axi, AXILiteS, return void</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, getPixelClassification_Stream, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, getPixelClassification_Stream, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, getPixelClassification_Stream, return value</column>
+<column name="out_pixel_TREADY">in, 1, axis, out_pixel, pointer</column>
+<column name="out_pixel_TDATA">out, 32, axis, out_pixel, pointer</column>
+<column name="out_pixel_TVALID">out, 1, axis, out_pixel, pointer</column>
+<column name="in_pixel_TDATA">in, 32, axis, in_pixel, scalar</column>
+<column name="in_pixel_TVALID">in, 1, axis, in_pixel, scalar</column>
+<column name="in_pixel_TREADY">out, 1, axis, in_pixel, scalar</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">8.68</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'minimumDistance_2', ColorComparator/ColorComparator.cpp:48">call, 8.68, 8.68, -, -, -, -, -, -, -, -, -, getColorDistance, -</column>
+</table>
+</item>
+</section>
+</profile>

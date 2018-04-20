@@ -1,0 +1,48 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_getPixelClassification_Stream_top glbl -prj getPixelClassification_Stream.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims --initfile C:/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s getPixelClassification_Stream -debug wave 
+Multi-threading is on. Using 10 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/AESL_axi_slave_AXILiteS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AESL_axi_slave_AXILiteS
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/AESL_axi_s_in_pixel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AESL_axi_s_in_pixel
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/AESL_axi_s_out_pixel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AESL_axi_s_out_pixel
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/fxp_sqrt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity fxp_sqrt
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/getColorDistance.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity getColorDistance
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/getPixelClassification_Stream.autotb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity apatb_getPixelClassification_Stream_top
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/getPixelClassification_Stream.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity getPixelClassification_Stream
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/sim/vhdl/getPixelClassification_Stream_AXILiteS_s_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity getPixelClassification_Stream_AXILiteS_s_axi
+Starting static elaboration
+WARNING: [VRFC 10-1303] range is empty (null range) [/wrk/xhdhdnobkup2/mounicav/xsimsource/xsim_HEAD/data/vhdl/src/ieee_2008/numeric_std-body.vhdl:3476]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling module work.glbl
+Compiling architecture behave of entity xil_defaultlib.getPixelClassification_Stream_AXILiteS_s_axi [getpixelclassification_stream_ax...]
+Compiling architecture behav of entity xil_defaultlib.fxp_sqrt [fxp_sqrt_default]
+Compiling architecture behav of entity xil_defaultlib.getColorDistance [getcolordistance_default]
+Compiling architecture behav of entity xil_defaultlib.getPixelClassification_Stream [getpixelclassification_stream_de...]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_s_in_pixel [aesl_axi_s_in_pixel_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_s_out_pixel [aesl_axi_s_out_pixel_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_slave_AXILiteS [aesl_axi_slave_axilites_default]
+Compiling architecture behav of entity xil_defaultlib.apatb_getpixelclassification_str...
+Built simulation snapshot getPixelClassification_Stream

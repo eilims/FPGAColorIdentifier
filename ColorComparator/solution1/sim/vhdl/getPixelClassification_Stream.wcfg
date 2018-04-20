@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="getPixelClassification_Stream.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_getPixelClassification_Stream_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group1" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group3" type="group">
+            <obj_property name="label">out_pixel(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/out_pixel_TVALID" type="logic">
+               <obj_property name="ElementShortName">out_pixel_TVALID</obj_property>
+               <obj_property name="ObjectShortName">out_pixel_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/out_pixel_TDATA" type="array">
+               <obj_property name="ElementShortName">out_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">out_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/out_pixel_TREADY" type="logic">
+               <obj_property name="ElementShortName">out_pixel_TREADY</obj_property>
+               <obj_property name="ObjectShortName">out_pixel_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group7" type="group">
+            <obj_property name="label">return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/interrupt" type="logic">
+               <obj_property name="ElementShortName">interrupt</obj_property>
+               <obj_property name="ObjectShortName">interrupt</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_BRESP" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_BREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_BVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_RRESP" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_RDATA" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_RREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_RVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_ARREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_ARVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_ARADDR" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_WSTRB" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_WDATA" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_WREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_WVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_AWREADY" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_AWVALID" type="logic">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/s_axi_AXILiteS_AWADDR" type="array">
+               <obj_property name="ElementShortName">s_axi_AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group26" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group27" type="group">
+            <obj_property name="label">in_pixel(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/in_pixel_TREADY" type="logic">
+               <obj_property name="ElementShortName">in_pixel_TREADY</obj_property>
+               <obj_property name="ObjectShortName">in_pixel_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/in_pixel_TVALID" type="logic">
+               <obj_property name="ElementShortName">in_pixel_TVALID</obj_property>
+               <obj_property name="ObjectShortName">in_pixel_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/in_pixel_TDATA" type="array">
+               <obj_property name="ElementShortName">in_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">in_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group31" type="group">
+         <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/ap_idle" type="logic">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group36" type="group">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/ap_rst_n" type="logic">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group38" type="group">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AESL_inst_getPixelClassification_Stream/ap_clk" type="logic">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group40" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group41" type="group">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group42" type="group">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AUTOTB_TRANSACTION_NUM" type="other">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/ready_cnt" type="array">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/done_cnt" type="array">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group43" type="group">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/LENGTH_in_pixel" type="other">
+               <obj_property name="ElementShortName">LENGTH_in_pixel</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_in_pixel</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/LENGTH_out_pixel" type="other">
+               <obj_property name="ElementShortName">LENGTH_out_pixel</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_out_pixel</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group49" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group50" type="group">
+            <obj_property name="label">out_pixel(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/out_pixel_TVALID" type="logic">
+               <obj_property name="ElementShortName">out_pixel_TVALID</obj_property>
+               <obj_property name="ObjectShortName">out_pixel_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/out_pixel_TDATA" type="array">
+               <obj_property name="ElementShortName">out_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">out_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/out_pixel_TREADY" type="logic">
+               <obj_property name="ElementShortName">out_pixel_TREADY</obj_property>
+               <obj_property name="ObjectShortName">out_pixel_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group54" type="group">
+            <obj_property name="label">return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_INTERRUPT" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_INTERRUPT</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_INTERRUPT</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_BRESP" type="array">
+               <obj_property name="ElementShortName">AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_BREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_BVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_RRESP" type="array">
+               <obj_property name="ElementShortName">AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_RDATA" type="array">
+               <obj_property name="ElementShortName">AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_RREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_RVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_ARREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_ARVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_ARADDR" type="array">
+               <obj_property name="ElementShortName">AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_ARADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_WSTRB" type="array">
+               <obj_property name="ElementShortName">AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_WDATA" type="array">
+               <obj_property name="ElementShortName">AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_WREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_WVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_AWREADY" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_AWVALID" type="logic">
+               <obj_property name="ElementShortName">AXILiteS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/AXILiteS_AWADDR" type="array">
+               <obj_property name="ElementShortName">AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="ObjectShortName">AXILiteS_AWADDR[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group73" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group74" type="group">
+            <obj_property name="label">in_pixel(axis)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/in_pixel_TREADY" type="logic">
+               <obj_property name="ElementShortName">in_pixel_TREADY</obj_property>
+               <obj_property name="ObjectShortName">in_pixel_TREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/in_pixel_TVALID" type="logic">
+               <obj_property name="ElementShortName">in_pixel_TVALID</obj_property>
+               <obj_property name="ObjectShortName">in_pixel_TVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_getPixelClassification_Stream_top/in_pixel_TDATA" type="array">
+               <obj_property name="ElementShortName">in_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">in_pixel_TDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

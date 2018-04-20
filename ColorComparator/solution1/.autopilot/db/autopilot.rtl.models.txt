@@ -1,4 +1,4 @@
-parseColorsToCentbkb
-parseColorsToCentcud
+getPixelClassification_Stream_AXILiteS_s_axi
 fxp_sqrt
-parseColorsToCenterPixel
+getColorDistance
+getPixelClassification_Stream

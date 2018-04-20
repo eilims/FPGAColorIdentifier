@@ -26,18 +26,37 @@ int getColorDistance(int pixel, int color) {
 }
 
 //Classifies pixels as one of six colors in _color_array
-int getPixelClassification(int pixel) {
+int getPixelClassification(int in_pixel) {
 	int i;
 	int minimumDistanceIndex = 0;
 	int minimumDistance = INT_MAX;
 	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
-		int distance = getColorDistance(pixel, _color_array[i]);
+		int distance = getColorDistance(in_pixel, _color_array[i]);
 		if (distance < minimumDistance) {
 			minimumDistance = distance;
 			minimumDistanceIndex = i;
 		}
 	}
 	return minimumDistanceIndex;
+}
+
+void getPixelClassification_Stream(int in_pixel, int* out_pixel) {
+	int i;
+	int minimumDistanceIndex = 0;
+	int minimumDistance = INT_MAX;
+	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
+		int distance = getColorDistance(in_pixel, _color_array[i]);
+		if (distance < minimumDistance) {
+			minimumDistance = distance;
+			minimumDistanceIndex = i;
+		}
+	}
+	if(minimumDistanceIndex == 0){
+		*out_pixel = 0x00000000;
+	} else {
+		*out_pixel = in_pixel;
+	}
+
 }
 
 //Changes pixel array to hold distance of pixel from center pixel color

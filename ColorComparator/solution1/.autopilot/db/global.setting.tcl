@@ -1,11 +1,11 @@
 
-set TopModule "parseColorsToCenterPixel"
+set TopModule "getPixelClassification_Stream"
 set ClockPeriod "10.000000"
 set ClockList {ap_clk}
 set multiClockList {}
 set PortClockMap {}
 set CombLogicFlag 0
-set PipelineFlag 0
+set PipelineFlag 1
 set DataflowTaskPipelineFlag  1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
@@ -15,7 +15,7 @@ set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
 set HasDSPModule 0
-set ResetLevelFlag 1
+set ResetLevelFlag 0
 set ResetStyle "control"
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -41,7 +41,7 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg400:-1"
-set SourceFiles {sc {} c {../ColorComparator.cpp ../powerFunction.cpp}}
+set SourceFiles {sc {} c {../powerFunction.cpp ../ColorComparator.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile {C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/solution1.directive}
 set TBFiles {verilog ../ColorComparator_tb.cpp bc ../ColorComparator_tb.cpp vhdl ../ColorComparator_tb.cpp sc ../ColorComparator_tb.cpp cas ../ColorComparator_tb.cpp c {}}

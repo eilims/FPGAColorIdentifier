@@ -1,0 +1,11 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "AESL_axi_slave_AXILiteS.vhd"
+vhdl xil_defaultlib "AESL_axi_s_in_pixel.vhd"
+vhdl xil_defaultlib "AESL_axi_s_out_pixel.vhd"
+vhdl xil_defaultlib "fxp_sqrt.vhd"
+vhdl xil_defaultlib "getColorDistance.vhd"
+vhdl xil_defaultlib "getPixelClassification_Stream.autotb.vhd"
+vhdl xil_defaultlib "getPixelClassification_Stream.vhd"
+vhdl xil_defaultlib "getPixelClassification_Stream_AXILiteS_s_axi.vhd"
+

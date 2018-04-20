@@ -1,0 +1,283 @@
+
+
+================================================================
+== Vivado HLS Report for 'getColorDistance'
+================================================================
+* Date:           Fri Apr 20 00:05:13 2018
+
+* Version:        2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)
+* Project:        ColorComparator
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.68|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   13|   13|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 14
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 14, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+
+* FSM state operations: 
+
+ <State 1> : 8.67ns
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%color_read = call i17 @_ssdm_op_Read.ap_auto.i17(i17 %color)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%pixel_read = call i32 @_ssdm_op_Read.axis.i32(i32 %pixel)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node number_assign)   --->   "%pixelRed = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %pixel_read, i32 16, i32 23)" [ColorComparator/ColorComparator.cpp:12]
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node number_assign)   --->   "%pixelRed_cast = zext i8 %pixelRed to i9" [ColorComparator/ColorComparator.cpp:12]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%pixelGreen = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %pixel_read, i32 8, i32 15)" [ColorComparator/ColorComparator.cpp:13]
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%pixelGreen_cast = zext i8 %pixelGreen to i9" [ColorComparator/ColorComparator.cpp:13]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%pixelBlue = trunc i32 %pixel_read to i8" [ColorComparator/ColorComparator.cpp:14]
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%pixelBlue_cast = zext i8 %pixelBlue to i9" [ColorComparator/ColorComparator.cpp:14]
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node number_assign)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i17.i32(i17 %color_read, i32 16)" [ColorComparator/ColorComparator.cpp:15]
+ST_1 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node number_assign)   --->   "%colorRed_cast = select i1 %tmp_5, i9 255, i9 0" [ColorComparator/ColorComparator.cpp:15]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%colorGreen = call i8 @_ssdm_op_PartSelect.i8.i17.i32.i32(i17 %color_read, i32 8, i32 15)" [ColorComparator/ColorComparator.cpp:16]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%colorGreen_cast = zext i8 %colorGreen to i9" [ColorComparator/ColorComparator.cpp:16]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%colorBlue = trunc i17 %color_read to i8" [ColorComparator/ColorComparator.cpp:17]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%colorBlue_cast = zext i8 %colorBlue to i9" [ColorComparator/ColorComparator.cpp:17]
+ST_1 : Operation 29 [1/1] (1.93ns) (out node of the LUT)   --->   "%number_assign = sub i9 %pixelRed_cast, %colorRed_cast" [ColorComparator/ColorComparator.cpp:19]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%number_assign_cast_c = sext i9 %number_assign to i18" [ColorComparator/powerFunction.cpp:3->ColorComparator/ColorComparator.cpp:19]
+ST_1 : Operation 31 [1/1] (4.35ns)   --->   "%result = mul i18 %number_assign_cast_c, %number_assign_cast_c" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:19]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (1.91ns)   --->   "%number_assign_1 = sub i9 %pixelGreen_cast, %colorGreen_cast" [ColorComparator/ColorComparator.cpp:20]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%number_assign_1_cast = sext i9 %number_assign_1 to i18" [ColorComparator/powerFunction.cpp:3->ColorComparator/ColorComparator.cpp:20]
+ST_1 : Operation 34 [1/1] (4.35ns)   --->   "%result_1 = mul i18 %number_assign_1_cast, %number_assign_1_cast" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:20]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (1.91ns)   --->   "%number_assign_2 = sub i9 %pixelBlue_cast, %colorBlue_cast" [ColorComparator/ColorComparator.cpp:21]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_7 = sext i9 %number_assign_2 to i17" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:21]
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_8 = sext i9 %number_assign_2 to i17" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:21]
+ST_1 : Operation 38 [1/1] (4.35ns)   --->   "%tmp_9 = mul i17 %tmp_8, %tmp_7" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:21]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%p_shl = call i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17 %tmp_9, i10 0)" [ColorComparator/ColorComparator.cpp:21]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%p_shl_cast = sext i27 %p_shl to i28" [ColorComparator/ColorComparator.cpp:21]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_shl9 = call i25 @_ssdm_op_BitConcatenate.i25.i17.i8(i17 %tmp_9, i8 0)" [ColorComparator/ColorComparator.cpp:21]
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_shl9_cast = sext i25 %p_shl9 to i28" [ColorComparator/ColorComparator.cpp:21]
+ST_1 : Operation 43 [1/1] (2.40ns)   --->   "%p_Val2_s = sub i28 %p_shl_cast, %p_shl9_cast" [ColorComparator/ColorComparator.cpp:21]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 2> : 8.12ns
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result, i9 0)" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:19]
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%p_Val2_cast = sext i27 %tmp to i30" [ColorComparator/ColorComparator.cpp:20]
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_2 = call i28 @_ssdm_op_BitConcatenate.i28.i18.i10(i18 %result_1, i10 0)" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:20]
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%p_Val2_1_cast = sext i28 %tmp_2 to i29" [ColorComparator/ColorComparator.cpp:21]
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_Val2_2_cast_cast = sext i28 %p_Val2_s to i29" [ColorComparator/ColorComparator.cpp:22]
+ST_2 : Operation 49 [1/1] (2.43ns)   --->   "%tmp5 = add i29 %p_Val2_2_cast_cast, %p_Val2_1_cast" [ColorComparator/ColorComparator.cpp:22]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp5_cast = sext i29 %tmp5 to i30" [ColorComparator/ColorComparator.cpp:22]
+ST_2 : Operation 51 [1/1] (2.46ns)   --->   "%powerSummation_V = add i30 %p_Val2_cast, %tmp5_cast" [ColorComparator/ColorComparator.cpp:22]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [13/13] (3.22ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 3> : 8.68ns
+ST_3 : Operation 53 [12/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 4> : 8.68ns
+ST_4 : Operation 54 [11/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 5> : 8.68ns
+ST_5 : Operation 55 [10/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 6> : 8.68ns
+ST_6 : Operation 56 [9/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 7> : 8.68ns
+ST_7 : Operation 57 [8/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 8> : 8.68ns
+ST_8 : Operation 58 [7/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 9> : 8.68ns
+ST_9 : Operation 59 [6/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 10> : 8.68ns
+ST_10 : Operation 60 [5/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 11> : 8.68ns
+ST_11 : Operation 61 [4/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 12> : 8.68ns
+ST_12 : Operation 62 [3/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 13> : 8.68ns
+ST_13 : Operation 63 [2/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 14> : 6.10ns
+ST_14 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %pixel, [5 x i8]* @p_str4, i32 0, i32 0, [5 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12, [1 x i8]* @p_str12, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12) nounwind"
+ST_14 : Operation 65 [1/13] (6.10ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V) nounwind" [ColorComparator/ColorComparator.cpp:24]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_1 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V, i32 8, i32 19)" [ColorComparator/ColorComparator.cpp:25]
+ST_14 : Operation 67 [1/1] (0.00ns)   --->   "ret i12 %tmp_1" [ColorComparator/ColorComparator.cpp:25]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.67ns
+The critical path consists of the following:
+	wire read on port 'color' [3]  (0 ns)
+	'sub' operation ('number', ColorComparator/ColorComparator.cpp:21) [28]  (1.92 ns)
+	'mul' operation ('tmp_9', ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:21) [31]  (4.35 ns)
+	'sub' operation ('__Val2__', ColorComparator/ColorComparator.cpp:21) [36]  (2.4 ns)
+
+ <State 2>: 8.12ns
+The critical path consists of the following:
+	'add' operation ('tmp5', ColorComparator/ColorComparator.cpp:22) [38]  (2.43 ns)
+	'add' operation ('powerSummation.V', ColorComparator/ColorComparator.cpp:22) [40]  (2.46 ns)
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (3.23 ns)
+
+ <State 3>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 4>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 5>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 6>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 7>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 8>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 9>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 10>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 11>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 12>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 13>: 8.68ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (8.68 ns)
+
+ <State 14>: 6.1ns
+The critical path consists of the following:
+	'call' operation ('result_V', ColorComparator/ColorComparator.cpp:24) to 'fxp_sqrt' [41]  (6.1 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
