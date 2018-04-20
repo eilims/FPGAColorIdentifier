@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'getPixelClassification_Stream'" level="0">
-<item name = "Date">Fri Apr 20 00:05:15 2018
+<item name = "Date">Fri Apr 20 16:09:18 2018
 </item>
-<item name = "Version">2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">ColorComparator</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -29,9 +29,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_getColorDistance_fu_175">getColorDistance, 13, 13, 1, 1, function</column>
-<column name="grp_getColorDistance_fu_182">getColorDistance, 13, 13, 1, 1, function</column>
-<column name="grp_getColorDistance_fu_189">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_179">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_186">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_193">getColorDistance, 13, 13, 1, 1, function</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -63,9 +63,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_getColorDistance_fu_175">getColorDistance, 0, 0, 425, 3980</column>
-<column name="grp_getColorDistance_fu_182">getColorDistance, 0, 0, 425, 3980</column>
-<column name="grp_getColorDistance_fu_189">getColorDistance, 0, 0, 425, 3980</column>
+<column name="grp_getColorDistance_fu_179">getColorDistance, 0, 0, 425, 3980</column>
+<column name="grp_getColorDistance_fu_186">getColorDistance, 0, 0, 425, 3980</column>
+<column name="grp_getColorDistance_fu_193">getColorDistance, 0, 0, 425, 3980</column>
 <column name="getPixelClassification_Stream_AXILiteS_s_axi_U">getPixelClassification_Stream_AXILiteS_s_axi, 0, 0, 36, 40</column>
 </table>
 </item>
@@ -83,38 +83,38 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_2_fu_200_p2">+, 0, 0, 12, 2, 3</column>
-<column name="newSel_fu_299_p2">+, 0, 0, 12, 3, 3</column>
+<column name="i_2_fu_204_p2">+, 0, 0, 12, 2, 3</column>
+<column name="newSel_fu_303_p2">+, 0, 0, 12, 3, 3</column>
 <column name="ap_block_state20_io">and, 0, 0, 8, 1, 1</column>
 <column name="ap_block_state21_io">and, 0, 0, 8, 1, 1</column>
 <column name="ap_block_state3_pp0_stage0_iter1">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_218">and, 0, 0, 8, 1, 1</column>
-<column name="ap_condition_448">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_219">and, 0, 0, 8, 1, 1</column>
+<column name="ap_condition_449">and, 0, 0, 8, 1, 1</column>
 <column name="in_pixel_0_load_A">and, 0, 0, 8, 1, 1</column>
 <column name="in_pixel_0_load_B">and, 0, 0, 8, 1, 1</column>
 <column name="out_pixel_1_load_A">and, 0, 0, 8, 1, 1</column>
 <column name="out_pixel_1_load_B">and, 0, 0, 8, 1, 1</column>
-<column name="cond_fu_216_p2">icmp, 0, 0, 8, 2, 1</column>
-<column name="exitcond_fu_210_p2">icmp, 0, 0, 9, 3, 3</column>
+<column name="cond_fu_220_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="exitcond_fu_214_p2">icmp, 0, 0, 9, 3, 3</column>
 <column name="in_pixel_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
 <column name="out_pixel_1_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
-<column name="tmp_2_1_fu_265_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="tmp_2_2_fu_286_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="tmp_2_fu_248_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="tmp_fu_335_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="tmp_2_1_fu_269_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_2_2_fu_290_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_2_fu_252_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="tmp_fu_339_p2">icmp, 0, 0, 18, 32, 1</column>
 <column name="ap_block_pp0_stage0_01001">or, 0, 0, 8, 1, 1</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 8, 1, 1</column>
-<column name="or_cond_fu_308_p2">or, 0, 0, 8, 1, 1</column>
-<column name="distance_0_minimumDi_1_fu_271_p3">select, 0, 0, 32, 1, 32</column>
-<column name="distance_0_minimumDi_2_fu_328_p3">select, 0, 0, 32, 1, 32</column>
-<column name="distance_0_minimumDi_fu_254_p3">select, 0, 0, 32, 1, 32</column>
-<column name="in_pixel_assign_fu_340_p3">select, 0, 0, 32, 1, 1</column>
-<column name="newSel1_fu_313_p3">select, 0, 0, 32, 1, 32</column>
-<column name="newSel3_fu_320_p3">select, 0, 0, 32, 1, 32</column>
-<column name="newSel_v_cast_cast_fu_291_p3">select, 0, 0, 2, 1, 2</column>
-<column name="p_color_array_load_0_s_fu_222_p3">select, 0, 0, 18, 1, 18</column>
-<column name="p_color_array_load_1_s_fu_230_p3">select, 0, 0, 16, 1, 16</column>
-<column name="p_color_array_load_2_s_fu_238_p3">select, 0, 0, 16, 1, 8</column>
+<column name="or_cond_fu_312_p2">or, 0, 0, 8, 1, 1</column>
+<column name="distance_0_minimumDi_1_fu_275_p3">select, 0, 0, 32, 1, 32</column>
+<column name="distance_0_minimumDi_2_fu_332_p3">select, 0, 0, 32, 1, 32</column>
+<column name="distance_0_minimumDi_fu_258_p3">select, 0, 0, 32, 1, 32</column>
+<column name="in_pixel_assign_fu_344_p3">select, 0, 0, 32, 1, 1</column>
+<column name="newSel1_fu_317_p3">select, 0, 0, 32, 1, 32</column>
+<column name="newSel3_fu_324_p3">select, 0, 0, 32, 1, 32</column>
+<column name="newSel_v_cast_cast_fu_295_p3">select, 0, 0, 2, 1, 2</column>
+<column name="p_color_array_load_0_s_fu_226_p3">select, 0, 0, 18, 1, 18</column>
+<column name="p_color_array_load_1_s_fu_234_p3">select, 0, 0, 16, 1, 16</column>
+<column name="p_color_array_load_2_s_fu_242_p3">select, 0, 0, 16, 1, 8</column>
 <column name="ap_enable_pp0">xor, 0, 0, 8, 1, 2</column>
 </table>
 </item>
@@ -123,17 +123,17 @@
 <column name="ap_NS_fsm">15, 3, 1, 3</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter19">9, 2, 1, 2</column>
-<column name="ap_phi_mux_in_pixel6_rewind_phi_fu_124_p6">9, 2, 32, 64</column>
-<column name="ap_phi_mux_minimumDistance4_phi_fu_151_p6">15, 3, 32, 96</column>
-<column name="ap_phi_mux_minimumDistanceIndex_1_phi_fu_165_p6">15, 3, 32, 96</column>
-<column name="ap_phi_mux_minimumDistanceIndex_3_phi_fu_109_p6">15, 3, 2, 6</column>
-<column name="in_pixel6_phi_reg_134">15, 3, 32, 96</column>
+<column name="ap_phi_mux_in_pixel6_rewind_phi_fu_128_p6">9, 2, 32, 64</column>
+<column name="ap_phi_mux_minimumDistance4_phi_fu_155_p6">15, 3, 32, 96</column>
+<column name="ap_phi_mux_minimumDistanceIndex_1_phi_fu_169_p6">15, 3, 32, 96</column>
+<column name="ap_phi_mux_minimumDistanceIndex_3_phi_fu_113_p6">15, 3, 2, 6</column>
+<column name="in_pixel6_phi_reg_138">15, 3, 32, 96</column>
 <column name="in_pixel_0_data_out">9, 2, 32, 64</column>
 <column name="in_pixel_0_state">15, 3, 2, 6</column>
 <column name="in_pixel_TDATA_blk_n">9, 2, 1, 2</column>
-<column name="minimumDistance4_reg_147">9, 2, 32, 64</column>
-<column name="minimumDistanceIndex_1_reg_161">9, 2, 32, 64</column>
-<column name="minimumDistanceIndex_3_reg_105">9, 2, 2, 4</column>
+<column name="minimumDistance4_reg_151">9, 2, 32, 64</column>
+<column name="minimumDistanceIndex_1_reg_165">9, 2, 32, 64</column>
+<column name="minimumDistanceIndex_3_reg_109">9, 2, 2, 4</column>
 <column name="out_pixel_1_data_out">9, 2, 32, 64</column>
 <column name="out_pixel_1_state">15, 3, 2, 6</column>
 <column name="out_pixel_TDATA_blk_n">9, 2, 1, 2</column>
@@ -161,43 +161,43 @@
 <column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
-<column name="ap_reg_grp_getColorDistance_fu_175_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_grp_getColorDistance_fu_182_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_grp_getColorDistance_fu_189_ap_start">1, 0, 1, 0</column>
-<column name="cond_reg_365">1, 0, 1, 0</column>
-<column name="distance_0_minimumDi_1_reg_405">32, 0, 32, 0</column>
-<column name="do_init_reg_89">1, 0, 1, 0</column>
-<column name="exitcond_reg_361">1, 0, 1, 0</column>
-<column name="in_pixel6_phi_reg_134">32, 0, 32, 0</column>
-<column name="in_pixel6_rewind_reg_120">32, 0, 32, 0</column>
+<column name="ap_reg_grp_getColorDistance_fu_179_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_getColorDistance_fu_186_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_getColorDistance_fu_193_ap_start">1, 0, 1, 0</column>
+<column name="cond_reg_369">1, 0, 1, 0</column>
+<column name="distance_0_minimumDi_1_reg_409">32, 0, 32, 0</column>
+<column name="do_init_reg_93">1, 0, 1, 0</column>
+<column name="exitcond_reg_365">1, 0, 1, 0</column>
+<column name="in_pixel6_phi_reg_138">32, 0, 32, 0</column>
+<column name="in_pixel6_rewind_reg_124">32, 0, 32, 0</column>
 <column name="in_pixel_0_payload_A">32, 0, 32, 0</column>
 <column name="in_pixel_0_payload_B">32, 0, 32, 0</column>
 <column name="in_pixel_0_sel_rd">1, 0, 1, 0</column>
 <column name="in_pixel_0_sel_wr">1, 0, 1, 0</column>
 <column name="in_pixel_0_state">2, 0, 2, 0</column>
-<column name="minimumDistance4_reg_147">32, 0, 32, 0</column>
-<column name="minimumDistanceIndex_1_reg_161">32, 0, 32, 0</column>
-<column name="minimumDistanceIndex_3_reg_105">2, 0, 2, 0</column>
-<column name="minimumDistanceIndex_reg_351">2, 0, 3, 1</column>
-<column name="minimumDistance_2_1_reg_390">12, 0, 12, 0</column>
-<column name="minimumDistance_2_2_reg_411">12, 0, 12, 0</column>
-<column name="minimumDistance_2_reg_385">12, 0, 12, 0</column>
-<column name="newSel3_reg_416">32, 0, 32, 0</column>
+<column name="minimumDistance4_reg_151">32, 0, 32, 0</column>
+<column name="minimumDistanceIndex_1_reg_165">32, 0, 32, 0</column>
+<column name="minimumDistanceIndex_3_reg_109">2, 0, 2, 0</column>
+<column name="minimumDistanceIndex_reg_355">2, 0, 3, 1</column>
+<column name="minimumDistance_2_1_reg_394">12, 0, 12, 0</column>
+<column name="minimumDistance_2_2_reg_415">12, 0, 12, 0</column>
+<column name="minimumDistance_2_reg_389">12, 0, 12, 0</column>
+<column name="newSel3_reg_420">32, 0, 32, 0</column>
 <column name="out_pixel_1_payload_A">32, 0, 32, 0</column>
 <column name="out_pixel_1_payload_B">32, 0, 32, 0</column>
 <column name="out_pixel_1_sel_rd">1, 0, 1, 0</column>
 <column name="out_pixel_1_sel_wr">1, 0, 1, 0</column>
 <column name="out_pixel_1_state">2, 0, 2, 0</column>
-<column name="p_color_array_load_0_s_reg_370">8, 0, 17, 9</column>
-<column name="p_color_array_load_1_s_reg_375">1, 0, 17, 16</column>
-<column name="p_color_array_load_2_s_reg_380">8, 0, 17, 9</column>
-<column name="tmp_2_1_reg_400">1, 0, 1, 0</column>
-<column name="tmp_2_reg_395">1, 0, 1, 0</column>
-<column name="tmp_3_reg_356">2, 0, 2, 0</column>
-<column name="exitcond_reg_361">64, 32, 1, 0</column>
-<column name="in_pixel6_phi_reg_134">64, 32, 32, 0</column>
-<column name="minimumDistanceIndex_3_reg_105">64, 32, 2, 0</column>
-<column name="minimumDistanceIndex_reg_351">64, 32, 3, 1</column>
+<column name="p_color_array_load_0_s_reg_374">8, 0, 17, 9</column>
+<column name="p_color_array_load_1_s_reg_379">1, 0, 17, 16</column>
+<column name="p_color_array_load_2_s_reg_384">8, 0, 17, 9</column>
+<column name="tmp_2_1_reg_404">1, 0, 1, 0</column>
+<column name="tmp_2_reg_399">1, 0, 1, 0</column>
+<column name="tmp_3_reg_360">2, 0, 2, 0</column>
+<column name="exitcond_reg_365">64, 32, 1, 0</column>
+<column name="in_pixel6_phi_reg_138">64, 32, 32, 0</column>
+<column name="minimumDistanceIndex_3_reg_109">64, 32, 2, 0</column>
+<column name="minimumDistanceIndex_reg_355">64, 32, 3, 1</column>
 </table>
 </item>
 </section>
@@ -233,6 +233,7 @@
 <column name="in_pixel_TDATA">in, 32, axis, in_pixel, scalar</column>
 <column name="in_pixel_TVALID">in, 1, axis, in_pixel, scalar</column>
 <column name="in_pixel_TREADY">out, 1, axis, in_pixel, scalar</column>
+<column name="StreamClk">in, 32, ap_none, StreamClk, scalar</column>
 </table>
 </item>
 </section>

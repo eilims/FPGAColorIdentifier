@@ -40,7 +40,7 @@ int getPixelClassification(int in_pixel) {
 	return minimumDistanceIndex;
 }
 
-void getPixelClassification_Stream(int in_pixel, int* out_pixel) {
+void getPixelClassification_Stream(int in_pixel, int* out_pixel, int StreamClk) {
 	int i;
 	int minimumDistanceIndex = 0;
 	int minimumDistance = INT_MAX;

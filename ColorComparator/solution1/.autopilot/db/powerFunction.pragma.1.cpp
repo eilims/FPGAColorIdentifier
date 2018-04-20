@@ -11,8 +11,8 @@
 
 
 
-#1 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
-#156 "C:/Xilinx/Vivado/2017.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+#1 "D:/Xilinx/Vivado/2017.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+#156 "D:/Xilinx/Vivado/2017.4/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -150,7 +150,8 @@ extern "C" {
 
 
 int power(int number, int exponent);
-#2 "ColorComparator/powerFunction.cpp" 2
+#1 "ColorComparator/powerFunction.cpp" 2
+
 
 int power(int number, int exponent){
  int i;

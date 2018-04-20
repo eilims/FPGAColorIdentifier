@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'getPixelClassification_Stream'" level="0">
-<item name = "Date">Fri Apr 20 00:05:13 2018
+<item name = "Date">Fri Apr 20 16:09:16 2018
 </item>
-<item name = "Version">2017.4.1 (Build 2117188 on Tue Jan 30 15:53:01 MST 2018)</item>
+<item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">ColorComparator</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
@@ -31,9 +31,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_getColorDistance_fu_175">getColorDistance, 13, 13, 1, 1, function</column>
-<column name="grp_getColorDistance_fu_182">getColorDistance, 13, 13, 1, 1, function</column>
-<column name="grp_getColorDistance_fu_189">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_179">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_186">getColorDistance, 13, 13, 1, 1, function</column>
+<column name="grp_getColorDistance_fu_193">getColorDistance, 13, 13, 1, 1, function</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

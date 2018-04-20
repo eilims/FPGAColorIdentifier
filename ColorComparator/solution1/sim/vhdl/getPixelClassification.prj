@@ -1,0 +1,7 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "fxp_sqrt.vhd"
+vhdl xil_defaultlib "getPixelClassification.autotb.vhd"
+vhdl xil_defaultlib "getPixelClassification.vhd"
+vhdl xil_defaultlib "getPixelClassificbkb.vhd"
+

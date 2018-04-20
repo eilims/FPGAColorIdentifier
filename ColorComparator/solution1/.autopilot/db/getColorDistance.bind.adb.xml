@@ -871,7 +871,7 @@ _ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:
 
 <Node id="5" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-_ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:2  call void (...)* @_ssdm_op_SpecInterface(i32 %pixel, [5 x i8]* @p_str4, i32 0, i32 0, [5 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12, [1 x i8]* @p_str12, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12) nounwind
+_ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:2  call void (...)* @_ssdm_op_SpecInterface(i32 %pixel, [5 x i8]* @p_str5, i32 0, i32 0, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1126,23 +1126,23 @@ _ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:
 </dataflow>
 <dataflow id="210" from="pixel" to="StgValue_64" fromId="95" toId="64">
 </dataflow>
-<dataflow id="212" from="p_str4" to="StgValue_64" fromId="211" toId="64">
+<dataflow id="212" from="p_str5" to="StgValue_64" fromId="211" toId="64">
 </dataflow>
 <dataflow id="214" from="StgValue_213" to="StgValue_64" fromId="213" toId="64">
 </dataflow>
 <dataflow id="215" from="StgValue_213" to="StgValue_64" fromId="213" toId="64">
 </dataflow>
-<dataflow id="217" from="p_str5" to="StgValue_64" fromId="216" toId="64">
+<dataflow id="217" from="p_str6" to="StgValue_64" fromId="216" toId="64">
 </dataflow>
 <dataflow id="218" from="StgValue_213" to="StgValue_64" fromId="213" toId="64">
 </dataflow>
 <dataflow id="219" from="StgValue_213" to="StgValue_64" fromId="213" toId="64">
 </dataflow>
-<dataflow id="221" from="p_str12" to="StgValue_64" fromId="220" toId="64">
+<dataflow id="221" from="p_str1" to="StgValue_64" fromId="220" toId="64">
 </dataflow>
-<dataflow id="222" from="p_str12" to="StgValue_64" fromId="220" toId="64">
+<dataflow id="222" from="p_str1" to="StgValue_64" fromId="220" toId="64">
 </dataflow>
-<dataflow id="223" from="p_str12" to="StgValue_64" fromId="220" toId="64">
+<dataflow id="223" from="p_str1" to="StgValue_64" fromId="220" toId="64">
 </dataflow>
 <dataflow id="224" from="StgValue_213" to="StgValue_64" fromId="213" toId="64">
 </dataflow>
@@ -1152,9 +1152,9 @@ _ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:
 </dataflow>
 <dataflow id="227" from="StgValue_213" to="StgValue_64" fromId="213" toId="64">
 </dataflow>
-<dataflow id="228" from="p_str12" to="StgValue_64" fromId="220" toId="64">
+<dataflow id="228" from="p_str1" to="StgValue_64" fromId="220" toId="64">
 </dataflow>
-<dataflow id="229" from="p_str12" to="StgValue_64" fromId="220" toId="64">
+<dataflow id="229" from="p_str1" to="StgValue_64" fromId="220" toId="64">
 </dataflow>
 <dataflow id="230" from="fxp_sqrt" to="result_V" fromId="183" toId="65">
 </dataflow>

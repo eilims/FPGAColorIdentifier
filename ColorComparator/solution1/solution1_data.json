@@ -35,8 +35,8 @@
   },
   "Files": {
     "CSource": [
-      "..\/powerFunction.cpp",
-      "..\/ColorComparator.cpp"
+      "..\/ColorComparator.cpp",
+      "..\/powerFunction.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/fxp_sqrt.vhd",
@@ -68,6 +68,15 @@
     "IP": []
   },
   "Interfaces": {
+    "StreamClk": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }}
+    },
     "ap_clk": {
       "type": "clock",
       "ctype": {"CLK": {"Type": "bool"}},
@@ -434,6 +443,10 @@
     "in_pixel_TREADY": {
       "dir": "out",
       "width": "1"
+    },
+    "StreamClk": {
+      "dir": "in",
+      "width": "32"
     }
   },
   "CPorts": {
@@ -450,6 +463,12 @@
     "in_pixel": {
       "interfaceRef": "in_pixel",
       "dir": "in"
+    },
+    "StreamClk": {
+      "interfaceRef": "StreamClk",
+      "dir": "in",
+      "dataWidth": "32",
+      "handshakeRef": "ap_none"
     }
   },
   "ModuleInfo": {
@@ -458,7 +477,7 @@
       "Instances": [
         {
           "ModuleName": "getColorDistance",
-          "InstanceName": "grp_getColorDistance_fu_175",
+          "InstanceName": "grp_getColorDistance_fu_179",
           "Instances": [{
               "ModuleName": "fxp_sqrt",
               "InstanceName": "grp_fxp_sqrt_fu_66"
@@ -466,7 +485,7 @@
         },
         {
           "ModuleName": "getColorDistance",
-          "InstanceName": "grp_getColorDistance_fu_182",
+          "InstanceName": "grp_getColorDistance_fu_186",
           "Instances": [{
               "ModuleName": "fxp_sqrt",
               "InstanceName": "grp_fxp_sqrt_fu_66"
@@ -474,7 +493,7 @@
         },
         {
           "ModuleName": "getColorDistance",
-          "InstanceName": "grp_getColorDistance_fu_189",
+          "InstanceName": "grp_getColorDistance_fu_193",
           "Instances": [{
               "ModuleName": "fxp_sqrt",
               "InstanceName": "grp_fxp_sqrt_fu_66"
@@ -557,8 +576,8 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-04-20 00:07:34 -0700",
+    "Time": "2018-04-20 16:09:54 -0700",
     "ToolName": "vivado_hls",
-    "ToolVersion": "2017.4.1"
+    "ToolVersion": "2017.4"
   }
 }

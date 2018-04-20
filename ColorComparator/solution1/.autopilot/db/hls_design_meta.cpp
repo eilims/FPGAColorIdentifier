@@ -8,6 +8,7 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("in_pixel_TREADY", 1, hls_out, 0, "axis", "in_acc", 1),
 	Port_Property("out_pixel_TDATA", 32, hls_out, 1, "axis", "out_data", 1),
 	Port_Property("out_pixel_TVALID", 1, hls_out, 1, "axis", "out_vld", 1),
+	Port_Property("StreamClk", 32, hls_in, 2, "ap_none", "in_data", 1),
 	Port_Property("s_axi_AXILiteS_AWVALID", 1, hls_in, -1, "", "", 1),
 	Port_Property("s_axi_AXILiteS_AWREADY", 1, hls_out, -1, "", "", 1),
 	Port_Property("s_axi_AXILiteS_AWADDR", 4, hls_in, -1, "", "", 1),

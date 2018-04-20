@@ -1,15 +1,16 @@
-; ModuleID = 'C:/Users/db217620/Repositories/FPGAColorIdentifier/ColorComparator/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = 'D:/Repositories/FPGAColorIdentifier/ColorComparator/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-w64-mingw32"
 
 @llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a]
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
 @getPixelClassificati = internal unnamed_addr constant [30 x i8] c"getPixelClassification_Stream\00"
-@p_str5 = private unnamed_addr constant [5 x i8] c"both\00", align 1
-@p_str4 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
-@p_str3 = private unnamed_addr constant [10 x i8] c"s_axilite\00", align 1
-@p_str12 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
-@p_str1 = private unnamed_addr constant [17 x i8] c"PIXEL_COLOR_LOOP\00", align 1
+@p_str6 = private unnamed_addr constant [5 x i8] c"both\00", align 1
+@p_str5 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
+@p_str4 = private unnamed_addr constant [10 x i8] c"s_axilite\00", align 1
+@p_str2 = private unnamed_addr constant [8 x i8] c"ap_none\00", align 1
+@p_str1 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
+@p_str = private unnamed_addr constant [17 x i8] c"PIXEL_COLOR_LOOP\00", align 1
 
 declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
 
@@ -25,10 +26,11 @@ declare i17 @llvm.part.select.i17(i17, i32, i32) nounwind readnone
 
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
-define void @getPixelClassification_Stream(i32 %in_pixel, i32* %out_pixel) nounwind uwtable {
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12, [1 x i8]* @p_str12, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32 %in_pixel, [5 x i8]* @p_str4, i32 1, i32 1, [5 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12, [1 x i8]* @p_str12, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32* %out_pixel, [5 x i8]* @p_str4, i32 1, i32 1, [5 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12, [1 x i8]* @p_str12, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12) nounwind
+define void @getPixelClassification_Stream(i32 %in_pixel, i32* %out_pixel, i32 %StreamClk) nounwind uwtable {
+  call void (...)* @_ssdm_op_SpecInterface(i32 %StreamClk, [8 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 %in_pixel, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32* %out_pixel, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
   br label %rewind_header
 
 ; <label>:1                                       ; preds = %rewind_header, %rewind_init
@@ -36,16 +38,16 @@ define void @getPixelClassification_Stream(i32 %in_pixel, i32* %out_pixel) nounw
   %minimumDistanceIndex = zext i2 %minimumDistanceIndex_3 to i3
   %minimumDistanceIndex_2 = zext i2 %minimumDistanceIndex_3 to i32
   %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2) nounwind
-  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str1) nounwind
-  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str1) nounwind
-  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str12) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str) nounwind
+  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
   %cond = icmp eq i2 %minimumDistanceIndex_3, 0
   %p_color_array_load_0_s = select i1 %cond, i17 -65536, i17 -65281
   %minimumDistance_2 = call fastcc i12 @getColorDistance(i32 %in_pixel6_phi, i17 %p_color_array_load_0_s) nounwind
   %minimumDistance_2_ex = zext i12 %minimumDistance_2 to i32
   %tmp_2 = icmp slt i32 %minimumDistance_2_ex, %minimumDistance4
   %distance_0_minimumDi = select i1 %tmp_2, i32 %minimumDistance_2_ex, i32 %minimumDistance4
-  %empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str1, i32 %tmp_1) nounwind
+  %empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str, i32 %tmp_1) nounwind
   %p_color_array_load_1_s = select i1 %cond, i17 65280, i17 -256
   %minimumDistance_2_1 = call fastcc i12 @getColorDistance(i32 %in_pixel6_phi, i17 %p_color_array_load_1_s) nounwind
   %minimumDistance_2_1_s = zext i12 %minimumDistance_2_1 to i32
@@ -77,6 +79,7 @@ define void @getPixelClassification_Stream(i32 %in_pixel, i32* %out_pixel) nounw
 rewind_init:                                      ; preds = %rewind_header
   call void (...)* @_ssdm_op_SpecBitsMap(i32 %in_pixel) nounwind, !map !127
   call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_pixel) nounwind, !map !133
+  call void (...)* @_ssdm_op_SpecBitsMap(i32 %StreamClk) nounwind, !map !137
   call void (...)* @_ssdm_op_SpecTopModule([30 x i8]* @getPixelClassificati) nounwind
   %in_pixel_read = call i32 @_ssdm_op_Read.axis.i32(i32 %in_pixel) nounwind
   br label %1
@@ -94,7 +97,7 @@ define internal fastcc i12 @getColorDistance(i32 %pixel, i17 %color) {
 _ZNK13ap_fixed_baseILi32ELi24ELb0EL9ap_q_mode5EL9ap_o_mode3ELi0EE6to_intEv.exit:
   %color_read = call i17 @_ssdm_op_Read.ap_auto.i17(i17 %color)
   %pixel_read = call i32 @_ssdm_op_Read.axis.i32(i32 %pixel)
-  call void (...)* @_ssdm_op_SpecInterface(i32 %pixel, [5 x i8]* @p_str4, i32 0, i32 0, [5 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12, [1 x i8]* @p_str12, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str12, [1 x i8]* @p_str12) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 %pixel, [5 x i8]* @p_str5, i32 0, i32 0, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
   %pixelRed = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %pixel_read, i32 16, i32 23)
   %pixelRed_cast = zext i8 %pixelRed to i9
   %pixelGreen = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %pixel_read, i32 8, i32 15)
@@ -938,7 +941,7 @@ declare void @_ssdm_SpecLoopRewind(...) nounwind
 
 declare void @_GLOBAL__I_a() nounwind
 
-!opencl.kernels = !{!0, !7, !9, !15, !19, !23, !23, !29, !32, !32, !23, !34, !37, !23, !23, !23, !40, !40, !23, !23, !42, !45, !32, !32, !23, !47, !23, !23, !23, !49, !49, !40, !40, !51, !51, !53, !55, !57, !55, !59, !23, !59, !23, !32, !32, !23, !60, !62, !62, !64, !49, !49, !65, !23, !67, !67, !71, !23, !23, !23, !49, !49, !73, !73, !45, !47, !23, !23, !40, !40, !49, !49, !37, !40, !40, !75, !77, !77, !23, !23, !53, !23, !78, !79, !81, !81, !83, !85, !88, !23, !23, !23, !81, !81, !49, !49, !71, !90, !90, !53, !55, !23, !23, !23, !92, !94, !94, !100, !100, !102, !23, !23, !104, !104, !23, !23, !23, !105, !105, !105, !107, !109, !109, !23, !110, !110, !23, !23, !107, !109, !109, !23, !23, !23, !112, !112, !114, !116, !116, !118, !118, !109, !23, !23}
+!opencl.kernels = !{!0, !7, !13, !19, !23, !23, !29, !32, !32, !23, !34, !37, !23, !23, !23, !40, !40, !23, !23, !42, !45, !32, !32, !23, !47, !23, !23, !23, !49, !49, !40, !40, !51, !51, !53, !55, !57, !55, !59, !23, !59, !23, !32, !32, !23, !60, !62, !62, !64, !49, !49, !65, !23, !67, !67, !71, !23, !23, !23, !49, !49, !73, !73, !45, !47, !23, !23, !40, !40, !49, !49, !37, !40, !40, !75, !77, !77, !23, !23, !53, !23, !78, !79, !81, !81, !83, !85, !88, !23, !23, !23, !81, !81, !49, !49, !71, !90, !90, !53, !55, !23, !23, !23, !92, !94, !94, !98, !98, !100, !23, !23, !102, !102, !23, !23, !23, !103, !103, !103, !105, !107, !107, !23, !108, !108, !23, !23, !105, !107, !107, !23, !23, !23, !110, !110, !112, !114, !114, !116, !116, !107, !23, !23, !118}
 !hls.encrypted.func = !{}
 !llvm.map.gv = !{!120}
 
@@ -947,20 +950,20 @@ declare void @_GLOBAL__I_a() nounwind
 !2 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none"}
 !3 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
 !4 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !""}
-!5 = metadata !{metadata !"kernel_arg_name", metadata !"number", metadata !"exponent"}
+!5 = metadata !{metadata !"kernel_arg_name", metadata !"pixel", metadata !"color"}
 !6 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}
-!7 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !8, metadata !6}
-!8 = metadata !{metadata !"kernel_arg_name", metadata !"pixel", metadata !"color"}
-!9 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !14, metadata !6}
-!10 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
-!11 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
-!12 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
-!13 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
-!14 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel"}
-!15 = metadata !{void (i32, i32*)* @getPixelClassification_Stream, metadata !16, metadata !2, metadata !17, metadata !4, metadata !18, metadata !6}
-!16 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 1}
-!17 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int*"}
-!18 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel", metadata !"out_pixel"}
+!7 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !12, metadata !6}
+!8 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
+!9 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
+!10 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
+!11 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
+!12 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel"}
+!13 = metadata !{void (i32, i32*, i32)* @getPixelClassification_Stream, metadata !14, metadata !15, metadata !16, metadata !17, metadata !18, metadata !6}
+!14 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 1, i32 0}
+!15 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
+!16 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int*", metadata !"int"}
+!17 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
+!18 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel", metadata !"out_pixel", metadata !"StreamClk"}
 !19 = metadata !{null, metadata !20, metadata !2, metadata !21, metadata !4, metadata !22, metadata !6}
 !20 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1}
 !21 = metadata !{metadata !"kernel_arg_type", metadata !"int [3]*", metadata !"int*"}
@@ -971,10 +974,10 @@ declare void @_GLOBAL__I_a() nounwind
 !26 = metadata !{metadata !"kernel_arg_type"}
 !27 = metadata !{metadata !"kernel_arg_type_qual"}
 !28 = metadata !{metadata !"kernel_arg_name"}
-!29 = metadata !{null, metadata !10, metadata !11, metadata !30, metadata !13, metadata !31, metadata !6}
+!29 = metadata !{null, metadata !8, metadata !9, metadata !30, metadata !11, metadata !31, metadata !6}
 !30 = metadata !{metadata !"kernel_arg_type", metadata !"_Bool"}
 !31 = metadata !{metadata !"kernel_arg_name", metadata !"Cnative"}
-!32 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !33, metadata !6}
+!32 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !33, metadata !6}
 !33 = metadata !{metadata !"kernel_arg_name", metadata !"op"}
 !34 = metadata !{null, metadata !1, metadata !2, metadata !35, metadata !4, metadata !36, metadata !6}
 !35 = metadata !{metadata !"kernel_arg_type", metadata !"ap_ufixed<32, 24> &", metadata !"ap_ufixed<32, 24> &"}
@@ -982,32 +985,32 @@ declare void @_GLOBAL__I_a() nounwind
 !37 = metadata !{null, metadata !1, metadata !2, metadata !38, metadata !4, metadata !39, metadata !6}
 !38 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &", metadata !"int"}
 !39 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"op2"}
-!40 = metadata !{null, metadata !10, metadata !11, metadata !41, metadata !13, metadata !33, metadata !6}
+!40 = metadata !{null, metadata !8, metadata !9, metadata !41, metadata !11, metadata !33, metadata !6}
 !41 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &"}
-!42 = metadata !{null, metadata !10, metadata !11, metadata !43, metadata !13, metadata !44, metadata !6}
+!42 = metadata !{null, metadata !8, metadata !9, metadata !43, metadata !11, metadata !44, metadata !6}
 !43 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, false> &"}
 !44 = metadata !{metadata !"kernel_arg_name", metadata !"val"}
 !45 = metadata !{null, metadata !1, metadata !2, metadata !38, metadata !4, metadata !46, metadata !6}
 !46 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
 !47 = metadata !{null, metadata !1, metadata !2, metadata !48, metadata !4, metadata !39, metadata !6}
 !48 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &", metadata !"const ap_int_base<32, true> &"}
-!49 = metadata !{null, metadata !10, metadata !11, metadata !50, metadata !13, metadata !33, metadata !6}
+!49 = metadata !{null, metadata !8, metadata !9, metadata !50, metadata !11, metadata !33, metadata !6}
 !50 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &"}
-!51 = metadata !{null, metadata !10, metadata !11, metadata !52, metadata !13, metadata !33, metadata !6}
+!51 = metadata !{null, metadata !8, metadata !9, metadata !52, metadata !11, metadata !33, metadata !6}
 !52 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
 !53 = metadata !{null, metadata !1, metadata !2, metadata !54, metadata !4, metadata !39, metadata !6}
 !54 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &", metadata !"int"}
-!55 = metadata !{null, metadata !10, metadata !11, metadata !50, metadata !13, metadata !56, metadata !6}
+!55 = metadata !{null, metadata !8, metadata !9, metadata !50, metadata !11, metadata !56, metadata !6}
 !56 = metadata !{metadata !"kernel_arg_name", metadata !"op2"}
 !57 = metadata !{null, metadata !1, metadata !2, metadata !58, metadata !4, metadata !39, metadata !6}
 !58 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<21, false> &", metadata !"int"}
-!59 = metadata !{null, metadata !10, metadata !11, metadata !43, metadata !13, metadata !56, metadata !6}
+!59 = metadata !{null, metadata !8, metadata !9, metadata !43, metadata !11, metadata !56, metadata !6}
 !60 = metadata !{null, metadata !1, metadata !2, metadata !61, metadata !4, metadata !39, metadata !6}
 !61 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &", metadata !"const ap_int_base<32, true> &"}
-!62 = metadata !{null, metadata !10, metadata !11, metadata !63, metadata !13, metadata !33, metadata !6}
+!62 = metadata !{null, metadata !8, metadata !9, metadata !63, metadata !11, metadata !33, metadata !6}
 !63 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &"}
-!64 = metadata !{null, metadata !10, metadata !11, metadata !52, metadata !13, metadata !56, metadata !6}
-!65 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !66, metadata !6}
+!64 = metadata !{null, metadata !8, metadata !9, metadata !52, metadata !11, metadata !56, metadata !6}
+!65 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !66, metadata !6}
 !66 = metadata !{metadata !"kernel_arg_name", metadata !"index"}
 !67 = metadata !{null, metadata !68, metadata !2, metadata !69, metadata !4, metadata !70, metadata !6}
 !68 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0}
@@ -1015,15 +1018,15 @@ declare void @_GLOBAL__I_a() nounwind
 !70 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"index"}
 !71 = metadata !{null, metadata !1, metadata !2, metadata !72, metadata !4, metadata !39, metadata !6}
 !72 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &", metadata !"const ap_int_base<32, true> &"}
-!73 = metadata !{null, metadata !10, metadata !11, metadata !74, metadata !13, metadata !33, metadata !6}
+!73 = metadata !{null, metadata !8, metadata !9, metadata !74, metadata !11, metadata !33, metadata !6}
 !74 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &"}
-!75 = metadata !{null, metadata !10, metadata !11, metadata !76, metadata !13, metadata !56, metadata !6}
+!75 = metadata !{null, metadata !8, metadata !9, metadata !76, metadata !11, metadata !56, metadata !6}
 !76 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<21> &"}
-!77 = metadata !{null, metadata !10, metadata !11, metadata !76, metadata !13, metadata !33, metadata !6}
+!77 = metadata !{null, metadata !8, metadata !9, metadata !76, metadata !11, metadata !33, metadata !6}
 !78 = metadata !{null, metadata !1, metadata !2, metadata !54, metadata !4, metadata !46, metadata !6}
 !79 = metadata !{null, metadata !1, metadata !2, metadata !80, metadata !4, metadata !39, metadata !6}
 !80 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &", metadata !"const ap_int_base<32, true> &"}
-!81 = metadata !{null, metadata !10, metadata !11, metadata !82, metadata !13, metadata !33, metadata !6}
+!81 = metadata !{null, metadata !8, metadata !9, metadata !82, metadata !11, metadata !33, metadata !6}
 !82 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &"}
 !83 = metadata !{null, metadata !1, metadata !2, metadata !84, metadata !4, metadata !39, metadata !6}
 !84 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"int"}
@@ -1032,36 +1035,36 @@ declare void @_GLOBAL__I_a() nounwind
 !87 = metadata !{metadata !"kernel_arg_name", metadata !"i_op", metadata !"op"}
 !88 = metadata !{null, metadata !1, metadata !2, metadata !89, metadata !4, metadata !39, metadata !6}
 !89 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"const ap_int_base<23, true> &"}
-!90 = metadata !{null, metadata !10, metadata !11, metadata !91, metadata !13, metadata !33, metadata !6}
+!90 = metadata !{null, metadata !8, metadata !9, metadata !91, metadata !11, metadata !33, metadata !6}
 !91 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<56, true> &"}
 !92 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !93, metadata !6}
 !93 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
-!94 = metadata !{null, metadata !95, metadata !96, metadata !97, metadata !98, metadata !99, metadata !6}
+!94 = metadata !{null, metadata !95, metadata !15, metadata !96, metadata !17, metadata !97, metadata !6}
 !95 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
-!96 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
-!97 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
-!98 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
-!99 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
-!100 = metadata !{null, metadata !10, metadata !11, metadata !101, metadata !13, metadata !44, metadata !6}
-!101 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
-!102 = metadata !{null, metadata !10, metadata !11, metadata !103, metadata !13, metadata !56, metadata !6}
-!103 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<23> &"}
-!104 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !44, metadata !6}
-!105 = metadata !{null, metadata !10, metadata !11, metadata !106, metadata !13, metadata !33, metadata !6}
-!106 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<34, 26, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!107 = metadata !{null, metadata !10, metadata !11, metadata !108, metadata !13, metadata !56, metadata !6}
-!108 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!109 = metadata !{null, metadata !10, metadata !11, metadata !108, metadata !13, metadata !33, metadata !6}
-!110 = metadata !{null, metadata !10, metadata !11, metadata !111, metadata !13, metadata !33, metadata !6}
-!111 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<33, 25, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!112 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !113, metadata !6}
-!113 = metadata !{metadata !"kernel_arg_name", metadata !"v"}
-!114 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !115, metadata !6}
-!115 = metadata !{metadata !"kernel_arg_name", metadata !"b"}
-!116 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !117, metadata !6}
-!117 = metadata !{metadata !"kernel_arg_name", metadata !"i_op"}
-!118 = metadata !{null, metadata !10, metadata !11, metadata !119, metadata !13, metadata !33, metadata !6}
-!119 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!96 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
+!97 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
+!98 = metadata !{null, metadata !8, metadata !9, metadata !99, metadata !11, metadata !44, metadata !6}
+!99 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
+!100 = metadata !{null, metadata !8, metadata !9, metadata !101, metadata !11, metadata !56, metadata !6}
+!101 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<23> &"}
+!102 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !44, metadata !6}
+!103 = metadata !{null, metadata !8, metadata !9, metadata !104, metadata !11, metadata !33, metadata !6}
+!104 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<34, 26, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!105 = metadata !{null, metadata !8, metadata !9, metadata !106, metadata !11, metadata !56, metadata !6}
+!106 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!107 = metadata !{null, metadata !8, metadata !9, metadata !106, metadata !11, metadata !33, metadata !6}
+!108 = metadata !{null, metadata !8, metadata !9, metadata !109, metadata !11, metadata !33, metadata !6}
+!109 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<33, 25, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!110 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !111, metadata !6}
+!111 = metadata !{metadata !"kernel_arg_name", metadata !"v"}
+!112 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !113, metadata !6}
+!113 = metadata !{metadata !"kernel_arg_name", metadata !"b"}
+!114 = metadata !{null, metadata !8, metadata !9, metadata !10, metadata !11, metadata !115, metadata !6}
+!115 = metadata !{metadata !"kernel_arg_name", metadata !"i_op"}
+!116 = metadata !{null, metadata !8, metadata !9, metadata !117, metadata !11, metadata !33, metadata !6}
+!117 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!118 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !119, metadata !6}
+!119 = metadata !{metadata !"kernel_arg_name", metadata !"number", metadata !"exponent"}
 !120 = metadata !{metadata !121, [1 x i32]* @llvm_global_ctors_0}
 !121 = metadata !{metadata !122}
 !122 = metadata !{i32 0, i32 31, metadata !123}
@@ -1079,3 +1082,7 @@ declare void @_GLOBAL__I_a() nounwind
 !134 = metadata !{i32 0, i32 31, metadata !135}
 !135 = metadata !{metadata !136}
 !136 = metadata !{metadata !"out_pixel", metadata !125, metadata !"int", i32 0, i32 31}
+!137 = metadata !{metadata !138}
+!138 = metadata !{i32 0, i32 31, metadata !139}
+!139 = metadata !{metadata !140}
+!140 = metadata !{metadata !"StreamClk", metadata !131, metadata !"int", i32 0, i32 31}
