@@ -26155,7 +26155,7 @@ _ssdm_op_SpecInterface(out_pixel, "axis", 1, 1, "both", 0, 0, "", "", "", 0, 0, 
 # 64 "ColorComparator/ColorComparator.cpp"
 
  int i;
- int minimumDistanceIndex = 0;
+ int minimumDistanceIndex = -1;
  int minimumDistance = 2147483647;
  PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, ""); _ssdm_SpecLoopRewind(0, "");
@@ -26166,7 +26166,7 @@ _ssdm_Unroll(1, 0, 3, "");
 
   int distance = getColorDistance_Stream(in_pixel,
     _color_array_stream[i]);
-  if (distance < minimumDistance) {
+  if (distance < minimumDistance && distance < 150) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }

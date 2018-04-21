@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'getPixelClassification_Stream'" level="0">
-<item name = "Date">Sat Apr 21 14:23:09 2018
+<item name = "Date">Sat Apr 21 15:24:30 2018
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">ColorComparator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.68, 1.25</column>
+<column name="ap_clk">10.00, 9.55, 1.25</column>
 </table>
 </item>
 </section>
@@ -31,9 +31,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_fxp_sqrt_fu_262">fxp_sqrt, 11, 11, 1, 1, function</column>
-<column name="grp_fxp_sqrt_fu_267">fxp_sqrt, 11, 11, 1, 1, function</column>
-<column name="grp_fxp_sqrt_fu_272">fxp_sqrt, 11, 11, 1, 1, function</column>
+<column name="grp_fxp_sqrt_fu_264">fxp_sqrt, 11, 11, 1, 1, function</column>
+<column name="grp_fxp_sqrt_fu_269">fxp_sqrt, 11, 11, 1, 1, function</column>
+<column name="grp_fxp_sqrt_fu_274">fxp_sqrt, 11, 11, 1, 1, function</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

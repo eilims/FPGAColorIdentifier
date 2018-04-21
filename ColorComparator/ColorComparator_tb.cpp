@@ -48,4 +48,29 @@ int main(int argc, char** argv){
 			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
 	}
 
+	getPixelClassification_Stream(0x008000, &result);
+	if(result != _color_array_stream[2]){
+			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0x70DDFF, &result);
+	if(result != _color_array_stream[5]){
+			cout << "Color Classification Cyan Expected: " << _color_array_stream[5] << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0x98FF64, &result);
+	if(result != _color_array_stream[3]){
+			cout << "Color Classification Magenta Expected: " << _color_array_stream[3] << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0xFF5DB4, &result);
+	if(result != _color_array_stream[4]){
+			cout << "Color Classification Yellow Expected: " << _color_array_stream[4] << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0xFFACC6, &result);
+	if(result != 0xFFACC6){
+			cout << "Color Classification Yellow Expected: " << 0xFFACC6 << " Result: " << result << "\n";
+	}
+
 }

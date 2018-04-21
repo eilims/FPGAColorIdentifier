@@ -25979,12 +25979,12 @@ int getPixelClassification(int in_pixel) {
 void getPixelClassification_Stream(ap_uint<24> in_pixel,
   ap_uint<24>* out_pixel) {
  int i;
- int minimumDistanceIndex = 0;
+ int minimumDistanceIndex = -1;
  int minimumDistance = 2147483647;
  PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
   int distance = getColorDistance_Stream(in_pixel,
     _color_array_stream[i]);
-  if (distance < minimumDistance) {
+  if (distance < minimumDistance && distance < 150) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }

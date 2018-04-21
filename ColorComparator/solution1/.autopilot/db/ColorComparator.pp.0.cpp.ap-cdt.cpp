@@ -26013,7 +26013,7 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel,
 #pragma line 64 "ColorComparator/ColorComparator.cpp"
 
  int i;
- int minimumDistanceIndex = 0;
+ int minimumDistanceIndex = -1;
  int minimumDistance = 2147483647;
  PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
 #pragma HLS PIPELINE rewind
@@ -26024,7 +26024,7 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel,
 
   int distance = getColorDistance_Stream(in_pixel,
     _color_array_stream[i]);
-  if (distance < minimumDistance) {
+  if (distance < minimumDistance && distance < 150) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }

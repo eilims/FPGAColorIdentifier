@@ -162,15 +162,15 @@
       "Instances": [
         {
           "ModuleName": "fxp_sqrt",
-          "InstanceName": "grp_fxp_sqrt_fu_262"
+          "InstanceName": "grp_fxp_sqrt_fu_264"
         },
         {
           "ModuleName": "fxp_sqrt",
-          "InstanceName": "grp_fxp_sqrt_fu_267"
+          "InstanceName": "grp_fxp_sqrt_fu_269"
         },
         {
           "ModuleName": "fxp_sqrt",
-          "InstanceName": "grp_fxp_sqrt_fu_272"
+          "InstanceName": "grp_fxp_sqrt_fu_274"
         }
       ]
     },
@@ -208,7 +208,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.68"
+          "Estimate": "9.55"
         },
         "Loops": [{
             "Name": "PIXEL_COLOR_LOOP",
@@ -220,15 +220,15 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "0",
-          "FF": "2078",
-          "LUT": "12715"
+          "FF": "2079",
+          "LUT": "12778"
         }
       }
     }
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-04-21 14:23:12 -0700",
+    "Time": "2018-04-21 15:24:34 -0700",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }
