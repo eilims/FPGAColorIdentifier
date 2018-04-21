@@ -298,8 +298,7 @@ const char *__mingw_get_crt_info (void);
 #pragma pack(pop)
 #pragma line 6 "D:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 2 3 4
 #pragma line 38 "D:/Xilinx/Vivado/2017.4/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 2 3 4
-#pragma line 5 "ColorComparator/ColorComparator.h" 2
-#pragma empty_line
+#pragma line 6 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "D:/Xilinx/Vivado/2017.4/common/technology/autopilot\\hls_stream.h" 1
 #pragma line 66 "D:/Xilinx/Vivado/2017.4/common/technology/autopilot\\hls_stream.h"
 #pragma line 1 "D:/Xilinx/Vivado/2017.4/common/technology/autopilot/etc/autopilot_enum.h" 1
@@ -470,8 +469,7 @@ class stream
 };
 #pragma empty_line
 }
-#pragma line 6 "ColorComparator/ColorComparator.h" 2
-#pragma empty_line
+#pragma line 7 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "ColorComparator/dataTypes.h" 1
 #pragma empty_line
 #pragma empty_line
@@ -23226,8 +23224,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 #pragma empty_line
 typedef ap_ufixed<32, 24> in_data_t;
 typedef ap_ufixed<32, 24> out_data_t;
-#pragma line 7 "ColorComparator/ColorComparator.h" 2
-#pragma empty_line
+#pragma line 8 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "ColorComparator/fxp_sqrt.h" 1
 #pragma line 95 "ColorComparator/fxp_sqrt.h"
 #pragma line 1 "D:/Xilinx/Vivado/2017.4/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\cassert" 1 3
@@ -25899,15 +25896,13 @@ void fxp_sqrt(ap_ufixed<W2,IW2>& result, ap_ufixed<W1,IW1>& in_val)
 #pragma empty_line
    result.range(W2-1,0) = ap_uint<W2>(q >> 1);
 }
-#pragma line 8 "ColorComparator/ColorComparator.h" 2
-#pragma empty_line
+#pragma line 9 "ColorComparator/ColorComparator.h" 2
 #pragma line 1 "ColorComparator/powerFuntion.h" 1
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 int power(int number, int exponent);
-#pragma line 9 "ColorComparator/ColorComparator.h" 2
-#pragma empty_line
+#pragma line 10 "ColorComparator/ColorComparator.h" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -25915,14 +25910,17 @@ int power(int number, int exponent);
 #pragma empty_line
 #pragma empty_line
 int getColorDistance(int pixel, int color);
+int getColorDistance_Stream(ap_uint<24> pixel, ap_uint<24> color);
 int getPixelClassification(int pixel);
-void getPixelClassification_Stream(int in_pixel, int* out_pixel);
+void getPixelClassification_Stream(ap_uint<24> in_pixel, ap_uint<24>* out_pixel);
 void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]);
 #pragma line 2 "ColorComparator/ColorComparator.cpp" 2
 #pragma empty_line
 #pragma empty_line
 const int _color_array[] = { 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF,
   0x00FFFF00, 0x0000FFFF };
+const ap_uint<24> _color_array_stream[] = { 0xFF0000, 0x0000FF, 0x00FF00,
+  0xFFFF00, 0xFF00FF, 0x00FFFF };
 const int _color_array_distance[] = { 0x00FF0000, 0x0000FF00, 0x000000FF,
   0x00FF00FF, 0x00FFFF00, 0x0000FFFF };
 #pragma empty_line
@@ -25935,6 +25933,24 @@ int getColorDistance(int pixel, int color) {
  int colorRed = (color & 0x00FF0000) >> 16;
  int colorGreen = (color & 0x0000FF00) >> 8;
  int colorBlue = (color & 0x000000FF);
+#pragma empty_line
+ in_data_t pixelRedPower = 2 * power(pixelRed - colorRed, 2);
+ in_data_t pixelGreenPower = 4 * power(pixelGreen - colorGreen, 2);
+ in_data_t pixelBluePower = 3 * power(pixelBlue - colorBlue, 2);
+ in_data_t powerSummation = pixelRedPower + pixelGreenPower + pixelBluePower;
+ out_data_t result;
+ fxp_sqrt(result, powerSummation);
+ return result.to_int();
+}
+#pragma empty_line
+int getColorDistance_Stream(ap_uint<24> pixel, ap_uint<24> color) {
+#pragma empty_line
+ ap_uint<8> pixelRed = (pixel & 0xFF0000) >> 16;
+ ap_uint<8> pixelGreen = (pixel & 0x0000FF);
+ ap_uint<8> pixelBlue = (pixel & 0x00FF00) >> 8;
+ ap_uint<8> colorRed = (color & 0xFF0000) >> 16;
+ ap_uint<8> colorGreen = (color & 0x0000FF);
+ ap_uint<8> colorBlue = (color & 0x00FF00) >> 8;
 #pragma empty_line
  in_data_t pixelRedPower = 2 * power(pixelRed - colorRed, 2);
  in_data_t pixelGreenPower = 4 * power(pixelGreen - colorGreen, 2);
@@ -25960,20 +25976,39 @@ int getPixelClassification(int in_pixel) {
  return minimumDistanceIndex;
 }
 #pragma empty_line
-void getPixelClassification_Stream(int in_pixel, int* out_pixel, int StreamClk) {
+void getPixelClassification_Stream(ap_uint<24> in_pixel,
+  ap_uint<24>* out_pixel) {
  int i;
  int minimumDistanceIndex = 0;
  int minimumDistance = 2147483647;
  PIXEL_COLOR_LOOP: for (i = 0; i < 6; i++) {
-  int distance = getColorDistance(in_pixel, _color_array[i]);
+  int distance = getColorDistance_Stream(in_pixel,
+    _color_array_stream[i]);
   if (distance < minimumDistance) {
    minimumDistance = distance;
    minimumDistanceIndex = i;
   }
  }
- if(minimumDistanceIndex == 0){
-  *out_pixel = 0x00000000;
- } else {
+ switch (minimumDistanceIndex) {
+ case 0:
+  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  break;
+ case 1:
+  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  break;
+ case 2:
+  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  break;
+ case 3:
+  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  break;
+ case 4:
+  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  break;
+ case 5:
+  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  break;
+ default:
   *out_pixel = in_pixel;
  }
 #pragma empty_line
@@ -25982,16 +26017,18 @@ void getPixelClassification_Stream(int in_pixel, int* out_pixel, int StreamClk) 
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-void parseColorsToCenterPixel(int pixelArray[3][3], int selectedColorArray[6]) {
+void parseColorsToCenterPixel(int pixelArray[3][3],
+  int selectedColorArray[6]) {
  int centerColor = getPixelClassification(pixelArray[1][1]);
  int tempArray[8];
- REASSIGNMENT_LOOP: for(int i = 0; i < 8; i++){
-  tempArray[i] = pixelArray[i/3][i%3];
+ REASSIGNMENT_LOOP: for (int i = 0; i < 8; i++) {
+  tempArray[i] = pixelArray[i / 3][i % 3];
  }
  if (selectedColorArray[centerColor] == 1) {
   ROW_LOOP: for (int i = 0; i < 8; i++) {
-    int pixel = getColorDistance(tempArray[i], _color_array[centerColor]);
-    pixelArray[i/3][i%3] = pixel;
+   int pixel = getColorDistance(tempArray[i],
+     _color_array[centerColor]);
+   pixelArray[i / 3][i % 3] = pixel;
   }
  }
 #pragma empty_line

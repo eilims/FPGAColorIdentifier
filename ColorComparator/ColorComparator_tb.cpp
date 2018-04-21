@@ -5,9 +5,11 @@ int main(int argc, char** argv){
 	int red = 255;
 	int green = 255;
 	int blue = 255;
-	int result = 0;
+	ap_uint<24> result = 0;
 	//Red, green, blue, Magenta, yellow. cyan
 	const int _color_array_test[] = {0x00FF0000, 0x0000FF00, 0x000000FF, 0x00FF00FF, 0x00FFFF00, 0x0000FFFF};
+	const ap_uint<24> _color_array_stream[] = { 0xFF0000, 0x0000FF, 0x00FF00, 0xFFFF00,
+			0xFF00FF, 0x00FFFF };
 	//Testing distance
 	//Will only print out any errors
 	if(getColorDistance(_color_array_test[0], _color_array_test[1]) != 624){
@@ -26,14 +28,24 @@ int main(int argc, char** argv){
 		cout << "0x00A8D3FF v Magenta Expected: 439 Result: " << getColorDistance(0x00A8D3FF, _color_array_test[3]) << "\n";
 	}
 
-	getPixelClassification_Stream(_color_array_test[0], &result);
-	if(result != 0){
-		cout << "Color Classification Red Expected: 0 Result: " << getPixelClassification(result) << "\n";
+	getPixelClassification_Stream(_color_array_stream[0], &result);
+	if(result != _color_array_stream[0]){
+		cout << "Color Classification Red Expected: " << _color_array_stream[0] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(_color_array_test[1], &result);
-	if(result != _color_array_test[1]){
-			cout << "Color Classification Green Expected: " << _color_array_test[1] << " Result: " << getPixelClassification(_color_array_test[0]) << "\n";
+	getPixelClassification_Stream(_color_array_stream[1], &result);
+	if(result != _color_array_stream[1]){
+			cout << "Color Classification Green Expected: " << _color_array_stream[1] << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(_color_array_stream[2], &result);
+	if(result != _color_array_stream[2]){
+			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0x008000, &result);
+	if(result != _color_array_stream[2]){
+			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
 	}
 
 }

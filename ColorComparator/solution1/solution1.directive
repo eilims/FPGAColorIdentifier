@@ -58,12 +58,6 @@
             </pragma>
         </directive>
         <directive functionName="getPixelClassification_Stream" label="" functionLabel="">
-            <pragma name="INTERFACE">
-                <option name="s_axilite" value="" positionalBoolean="mode"/>
-                <option name="port" value="return" positionalBoolean="4"/>
-            </pragma>
-        </directive>
-        <directive functionName="getPixelClassification_Stream" label="" functionLabel="">
             <pragma name="ARRAY_PARTITION">
                 <option name="variable" value="_color_array" positionalBoolean="4"/>
                 <option name="complete" value="" positionalBoolean="type"/>
@@ -72,8 +66,8 @@
         </directive>
         <directive functionName="getPixelClassification_Stream" label="" functionLabel="">
             <pragma name="INTERFACE">
-                <option name="ap_none" value="" positionalBoolean="mode"/>
-                <option name="port" value="StreamClk" positionalBoolean="4"/>
+                <option name="ap_ctrl_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
             </pragma>
         </directive>
     </sourceFile>

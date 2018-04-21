@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="powerFuntion.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\powerFuntion.h"/>
-    <originFiles name="powerFunction.cpp" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\powerFunction.cpp"/>
-    <originFiles name="fxp_sqrt.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\fxp_sqrt.h"/>
-    <originFiles name="dataTypes.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\dataTypes.h"/>
-    <originFiles name="ColorComparator.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\ColorComparator.h"/>
     <originFiles name="ColorComparator.cpp" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\ColorComparator.cpp"/>
+    <originFiles name="ColorComparator.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\ColorComparator.h"/>
+    <originFiles name="dataTypes.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\dataTypes.h"/>
+    <originFiles name="fxp_sqrt.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\fxp_sqrt.h"/>
+    <originFiles name="powerFunction.cpp" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\powerFunction.cpp"/>
+    <originFiles name="powerFuntion.h" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\powerFuntion.h"/>
   </source>
   <testbench>
     <originFiles name="ColorComparator_tb.cpp" path="D:\Repositories\FPGAColorIdentifier\ColorComparator\ColorComparator_tb.cpp"/>

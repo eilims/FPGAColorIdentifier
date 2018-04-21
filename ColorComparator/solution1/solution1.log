@@ -7,4 +7,76 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-10] Analyzing design file 'ColorComparator/powerFunction.cpp' ...
+INFO: [HLS 200-10] Analyzing design file 'ColorComparator/ColorComparator.cpp' ...
+INFO: [HLS 200-10] Validating synthesis directives ...
+WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 100.301 ; gain = 46.387
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 100.340 ; gain = 46.426
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 114.680 ; gain = 60.766
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'power' into 'getColorDistance_Stream' (ColorComparator/ColorComparator.cpp:39) automatically.
+INFO: [XFORM 203-602] Inlining function 'getColorDistance_Stream' into 'getPixelClassification_Stream' (ColorComparator/ColorComparator.cpp:69) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 122.168 ; gain = 68.254
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'fxp_sqrt<32, 24, 32, 24>' (ColorComparator/fxp_sqrt.h:145).
+INFO: [XFORM 203-501] Unrolling loop 'PIXEL_COLOR_LOOP' (ColorComparator/ColorComparator.cpp:68) in function 'getPixelClassification_Stream' partially with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (ColorComparator/fxp_sqrt.h:161) in function 'fxp_sqrt<32, 24, 32, 24>' completely.
+INFO: [XFORM 203-101] Partitioning array '_color_array'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'power' into 'getColorDistance_Stream' (ColorComparator/ColorComparator.cpp:39) automatically.
+INFO: [XFORM 203-602] Inlining function 'getColorDistance_Stream' into 'getPixelClassification_Stream' (ColorComparator/ColorComparator.cpp:69) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (ColorComparator/fxp_sqrt.h:177:1) in function 'fxp_sqrt<32, 24, 32, 24>'... converting 61 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 151.887 ; gain = 97.973
+WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt<32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)
+INFO: [XFORM 203-531] Rewinding loop 'PIXEL_COLOR_LOOP' (ColorComparator/ColorComparator.cpp:68) in function 'getPixelClassification_Stream'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 157.543 ; gain = 103.629
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'getPixelClassification_Stream' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fxp_sqrt'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fxp_sqrt'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 12.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.451 seconds; current allocated memory: 115.302 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.209 seconds; current allocated memory: 116.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'getPixelClassification_Stream'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PIXEL_COLOR_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 117.127 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.262 seconds; current allocated memory: 117.817 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fxp_sqrt'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fxp_sqrt'.
+INFO: [HLS 200-111]  Elapsed time: 0.61 seconds; current allocated memory: 119.810 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'getPixelClassification_Stream'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'getPixelClassification_Stream/in_pixel_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'getPixelClassification_Stream/out_pixel_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'getPixelClassification_Stream' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'getPixelClassification_Stream_p_color_array_stream_s' to 'getPixelClassificbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'getPixelClassification_Stream'.
+INFO: [HLS 200-111]  Elapsed time: 0.773 seconds; current allocated memory: 121.999 MB.
+INFO: [RTMG 210-279] Implementing memory 'getPixelClassificbkb_rom' using distributed ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 179.004 ; gain = 125.090
+INFO: [SYSC 207-301] Generating SystemC RTL for getPixelClassification_Stream.
+INFO: [VHDL 208-304] Generating VHDL RTL for getPixelClassification_Stream.
+INFO: [VLOG 209-307] Generating Verilog RTL for getPixelClassification_Stream.
+INFO: [HLS 200-112] Total elapsed time: 23.454 seconds; peak allocated memory: 121.999 MB.

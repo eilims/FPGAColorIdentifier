@@ -1,4 +1,3 @@
-getPixelClassification_Stream_AXILiteS_s_axi
+getPixelClassificbkb
 fxp_sqrt
-getColorDistance
 getPixelClassification_Stream

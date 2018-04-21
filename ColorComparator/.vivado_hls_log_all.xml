@@ -12,9 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Port 'getPixelClassification_Stream/StreamClk' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="ColorComparator" solutionName="solution1" date="2018-04-20T16:09:18.550-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-20T16:09:14.727-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-20T16:09:10.154-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-21T14:23:07.724-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-21T14:23:03.754-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
