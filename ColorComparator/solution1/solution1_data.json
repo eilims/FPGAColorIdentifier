@@ -208,7 +208,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "9.55"
+          "Estimate": "8.68"
         },
         "Loops": [{
             "Name": "PIXEL_COLOR_LOOP",
@@ -220,15 +220,15 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "0",
-          "FF": "2079",
-          "LUT": "12778"
+          "FF": "2080",
+          "LUT": "12967"
         }
       }
     }
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2018-04-21 15:24:34 -0700",
+    "Time": "2018-04-21 16:45:32 -0700",
     "ToolName": "vivado_hls",
     "ToolVersion": "2017.4"
   }

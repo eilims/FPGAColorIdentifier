@@ -68,29 +68,31 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel,
 	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
 		int distance = getColorDistance_Stream(in_pixel,
 				_color_array_stream[i]);
-		if (distance < minimumDistance && distance < 250) {
-			minimumDistance = distance;
-			minimumDistanceIndex = i;
+		if (distance < minimumDistance) {
+			if (distance < 250) {
+				minimumDistance = distance;
+				minimumDistanceIndex = i;
+			}
 		}
 	}
 	switch (minimumDistanceIndex) {
 	case 0:
-		*out_pixel = _color_array_stream[minimumDistanceIndex];
+		*out_pixel = _color_array_stream[0];
 		break;
 	case 1:
-		*out_pixel = _color_array_stream[minimumDistanceIndex];
+		*out_pixel = _color_array_stream[1];
 		break;
 	case 2:
-		*out_pixel = _color_array_stream[minimumDistanceIndex];
+		*out_pixel = _color_array_stream[2];
 		break;
 	case 3:
-		*out_pixel = _color_array_stream[minimumDistanceIndex];
+		*out_pixel = _color_array_stream[3];
 		break;
 	case 4:
-		*out_pixel = _color_array_stream[minimumDistanceIndex];
+		*out_pixel = _color_array_stream[4];
 		break;
 	case 5:
-		*out_pixel = _color_array_stream[minimumDistanceIndex];
+		*out_pixel = _color_array_stream[5];
 		break;
 	default:
 		*out_pixel = in_pixel;

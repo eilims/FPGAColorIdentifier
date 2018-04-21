@@ -12,10 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'phi' operation ('minimumDistance4', ColorComparator/ColorComparator.cpp:71) with incoming values : ('minimumDistance_1_2', ColorComparator/ColorComparator.cpp:71) (0 ns)&#xD;&#xA;&#x9;'icmp' operation ('tmp_1', ColorComparator/ColorComparator.cpp:71) (2.47 ns)&#xD;&#xA;&#x9;'and' operation ('or_cond_14', ColorComparator/ColorComparator.cpp:71) (0.931 ns)&#xD;&#xA;&#x9;'select' operation ('minimumDistance_1', ColorComparator/ColorComparator.cpp:71) (1.37 ns)&#xD;&#xA;&#x9;'icmp' operation ('tmp_1_1', ColorComparator/ColorComparator.cpp:71) (2.47 ns)&#xD;&#xA;&#x9;'and' operation ('or_cond_1', ColorComparator/ColorComparator.cpp:71) (0.931 ns)&#xD;&#xA;&#x9;'select' operation ('minimumDistance_1_1', ColorComparator/ColorComparator.cpp:71) (1.37 ns)" projectName="ColorComparator" solutionName="solution1" date="2018-04-21T15:24:30.371-0700" type="Warning"/>
-        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.548ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="ColorComparator" solutionName="solution1" date="2018-04-21T15:24:30.363-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-21T15:24:29.045-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-21T15:24:25.063-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-21T16:45:27.901-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-21T16:45:24.042-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

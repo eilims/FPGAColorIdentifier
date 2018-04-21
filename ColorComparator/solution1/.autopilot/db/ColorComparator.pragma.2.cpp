@@ -26166,29 +26166,31 @@ _ssdm_Unroll(1, 0, 3, "");
 
   int distance = getColorDistance_Stream(in_pixel,
     _color_array_stream[i]);
-  if (distance < minimumDistance && distance < 150) {
-   minimumDistance = distance;
-   minimumDistanceIndex = i;
+  if (distance < minimumDistance) {
+   if (distance < 250) {
+    minimumDistance = distance;
+    minimumDistanceIndex = i;
+   }
   }
  }
  switch (minimumDistanceIndex) {
  case 0:
-  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  *out_pixel = _color_array_stream[0];
   break;
  case 1:
-  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  *out_pixel = _color_array_stream[1];
   break;
  case 2:
-  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  *out_pixel = _color_array_stream[2];
   break;
  case 3:
-  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  *out_pixel = _color_array_stream[3];
   break;
  case 4:
-  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  *out_pixel = _color_array_stream[4];
   break;
  case 5:
-  *out_pixel = _color_array_stream[minimumDistanceIndex];
+  *out_pixel = _color_array_stream[5];
   break;
  default:
   *out_pixel = in_pixel;
@@ -26202,23 +26204,23 @@ _ssdm_Unroll(1, 0, 3, "");
 void parseColorsToCenterPixel(int pixelArray[3][3],
   int selectedColorArray[6]) {_ssdm_SpecArrayDimSize(selectedColorArray,6);_ssdm_SpecArrayDimSize(pixelArray,3);
 _ssdm_SpecArrayReshape( pixelArray, 1, "COMPLETE", 0, "");
-# 105 "ColorComparator/ColorComparator.cpp"
+# 107 "ColorComparator/ColorComparator.cpp"
 
  int centerColor = getPixelClassification(pixelArray[1][1]);
  int tempArray[8];
  REASSIGNMENT_LOOP: for (int i = 0; i < 8; i++) {
 _ssdm_Unroll(0,0,0, "");
-# 108 "ColorComparator/ColorComparator.cpp"
+# 110 "ColorComparator/ColorComparator.cpp"
 
   tempArray[i] = pixelArray[i / 3][i % 3];
  }
  if (selectedColorArray[centerColor] == 1) {
   ROW_LOOP: for (int i = 0; i < 8; i++) {
 _ssdm_SpecLoopFlatten(0, "");
-# 112 "ColorComparator/ColorComparator.cpp"
+# 114 "ColorComparator/ColorComparator.cpp"
 
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-# 112 "ColorComparator/ColorComparator.cpp"
+# 114 "ColorComparator/ColorComparator.cpp"
 
    int pixel = getColorDistance(tempArray[i],
      _color_array[centerColor]);

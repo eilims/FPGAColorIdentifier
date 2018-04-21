@@ -32,15 +32,15 @@ define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
   call void (...)* @_ssdm_op_SpecInterface(i24* %out_pixel_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
   br label %rewind_header
 
-; <label>:1                                       ; preds = %rewind_header, %rewind_init
+_ifconv:                                          ; preds = %rewind_header, %rewind_init
   %in_pixel_V9_phi = phi i24 [ %in_pixel_V_read, %rewind_init ], [ %in_pixel_V9_rewind, %rewind_header ]
-  %minimumDistanceIndex = zext i2 %minimumDistanceIndex_3 to i3
-  %minimumDistanceIndex_1 = zext i2 %minimumDistanceIndex_3 to i32
+  %minimumDistanceIndex = zext i2 %minimumDistanceIndex_6 to i3
+  %minimumDistanceIndex_3 = zext i2 %minimumDistanceIndex_6 to i32
   %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)
   call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str1) nounwind
   %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str1)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
-  %tmp1 = zext i2 %minimumDistanceIndex_3 to i64
+  %tmp1 = zext i2 %minimumDistanceIndex_6 to i64
   %p_color_array_stream_s = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp1
   %p_color_array_stream_1 = load i17* %p_color_array_stream_s, align 4
   %pixelRed_V = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %in_pixel_V9_phi, i32 16, i32 23)
@@ -53,8 +53,8 @@ define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
   %rhs_V_cast = select i1 %rhs_V, i9 255, i9 0
   %r_V = sub i9 %lhs_V, %rhs_V_cast
   %p_cast1 = sext i9 %r_V to i18
-  %result = mul i18 %p_cast1, %p_cast1
-  %tmp_4 = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result, i9 0)
+  %result3 = mul i18 %p_cast1, %p_cast1
+  %tmp_4 = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result3, i9 0)
   %p_Val2_cast = sext i27 %tmp_4 to i30
   %lhs_V_1 = zext i8 %pixelGreen_V to i9
   %rhs_V_1 = zext i8 %colorGreen_V to i9
@@ -69,24 +69,27 @@ define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
   %tmp_10 = sext i9 %r_V_2 to i17
   %tmp_13 = sext i9 %r_V_2 to i17
   %tmp_16 = mul i17 %tmp_13, %tmp_10
-  %p_shl_i = call i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17 %tmp_16, i10 0)
-  %p_shl_i_cast = sext i27 %p_shl_i to i28
-  %p_shl3_i = call i25 @_ssdm_op_BitConcatenate.i25.i17.i8(i17 %tmp_16, i8 0)
-  %p_shl3_i_cast = sext i25 %p_shl3_i to i28
-  %p_Val2_s = sub i28 %p_shl_i_cast, %p_shl3_i_cast
+  %p_shl_i1 = call i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17 %tmp_16, i10 0)
+  %p_shl_i1_cast = sext i27 %p_shl_i1 to i28
+  %p_shl3_i1 = call i25 @_ssdm_op_BitConcatenate.i25.i17.i8(i17 %tmp_16, i8 0)
+  %p_shl3_i1_cast = sext i25 %p_shl3_i1 to i28
+  %p_Val2_s = sub i28 %p_shl_i1_cast, %p_shl3_i1_cast
   %p_Val2_2_cast_cast = sext i28 %p_Val2_s to i29
   %tmp6 = add i29 %p_Val2_2_cast_cast, %p_Val2_1_cast
   %tmp6_cast = sext i29 %tmp6 to i30
   %powerSummation_V = add i30 %p_Val2_cast, %tmp6_cast
-  %result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V)
-  %tmp_7 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V, i32 8, i32 19)
-  %tmp_5_i = zext i12 %tmp_7 to i32
-  %tmp_1 = icmp slt i32 %tmp_5_i, %minimumDistance4
-  %tmp_2 = icmp ult i12 %tmp_7, 150
-  %or_cond_14 = and i1 %tmp_1, %tmp_2
-  %minimumDistance_1 = select i1 %or_cond_14, i32 %tmp_5_i, i32 %minimumDistance4
-  %empty_15 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str1, i32 %tmp)
+  %result_V_1 = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V)
+  %tmp_7 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V_1, i32 8, i32 19)
+  %tmp_5_i1 = zext i12 %tmp_7 to i32
+  %tmp_1 = icmp slt i32 %tmp_5_i1, %minimumDistance4
+  %tmp_2 = icmp ult i12 %tmp_7, 250
+  %i_0_minimumDistanceI = select i1 %tmp_2, i32 %minimumDistanceIndex_3, i32 %minimumDistanceIndex_1
+  %distance_0_minimumDi = select i1 %tmp_2, i32 %tmp_5_i1, i32 %minimumDistance4
+  %minimumDistanceIndex_2 = select i1 %tmp_1, i32 %i_0_minimumDistanceI, i32 %minimumDistanceIndex_1
+  %minimumDistance_2 = select i1 %tmp_1, i32 %distance_0_minimumDi, i32 %minimumDistance4
+  %empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str1, i32 %tmp)
   %i = add i3 1, %minimumDistanceIndex
+  %i_cast = zext i3 %i to i32
   %tmp_s = zext i3 %i to i64
   %p_color_array_stream_2 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_s
   %p_color_array_stream_3 = load i17* %p_color_array_stream_2, align 4
@@ -96,37 +99,40 @@ define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
   %rhs_V_3_cast = select i1 %rhs_V_3, i9 255, i9 0
   %r_V_3 = sub i9 %lhs_V, %rhs_V_3_cast
   %p_cast3 = sext i9 %r_V_3 to i18
-  %result_3 = mul i18 %p_cast3, %p_cast3
-  %tmp_5 = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result_3, i9 0)
+  %result_2 = mul i18 %p_cast3, %p_cast3
+  %tmp_5 = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result_2, i9 0)
   %p_Val2_3_cast = sext i27 %tmp_5 to i30
   %rhs_V_4 = zext i8 %colorGreen_V_1 to i9
   %r_V_4 = sub i9 %lhs_V_1, %rhs_V_4
   %p_cast4 = sext i9 %r_V_4 to i18
-  %result_6 = mul i18 %p_cast4, %p_cast4
-  %tmp_8 = call i28 @_ssdm_op_BitConcatenate.i28.i18.i10(i18 %result_6, i10 0)
+  %result_4 = mul i18 %p_cast4, %p_cast4
+  %tmp_8 = call i28 @_ssdm_op_BitConcatenate.i28.i18.i10(i18 %result_4, i10 0)
   %p_Val2_4_cast = sext i28 %tmp_8 to i29
   %rhs_V_5 = zext i8 %colorBlue_V_1 to i9
   %r_V_5 = sub i9 %lhs_V_2, %rhs_V_5
   %tmp_21 = sext i9 %r_V_5 to i17
   %tmp_22 = sext i9 %r_V_5 to i17
   %tmp_23 = mul i17 %tmp_22, %tmp_21
-  %p_shl_i1 = call i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17 %tmp_23, i10 0)
-  %p_shl_i1_cast = sext i27 %p_shl_i1 to i28
-  %p_shl3_i1 = call i25 @_ssdm_op_BitConcatenate.i25.i17.i8(i17 %tmp_23, i8 0)
-  %p_shl3_i1_cast = sext i25 %p_shl3_i1 to i28
-  %p_Val2_1 = sub i28 %p_shl_i1_cast, %p_shl3_i1_cast
+  %p_shl_i = call i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17 %tmp_23, i10 0)
+  %p_shl_i_cast = sext i27 %p_shl_i to i28
+  %p_shl3_i = call i25 @_ssdm_op_BitConcatenate.i25.i17.i8(i17 %tmp_23, i8 0)
+  %p_shl3_i_cast = sext i25 %p_shl3_i to i28
+  %p_Val2_1 = sub i28 %p_shl_i_cast, %p_shl3_i_cast
   %p_Val2_6_cast_cast = sext i28 %p_Val2_1 to i29
   %tmp10 = add i29 %p_Val2_6_cast_cast, %p_Val2_4_cast
   %tmp10_cast = sext i29 %tmp10 to i30
   %powerSummation_V_1 = add i30 %p_Val2_3_cast, %tmp10_cast
-  %result_V_1 = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V_1)
-  %tmp_9 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V_1, i32 8, i32 19)
-  %tmp_5_i1 = zext i12 %tmp_9 to i32
-  %tmp_1_1 = icmp slt i32 %tmp_5_i1, %minimumDistance_1
-  %tmp_2_1 = icmp ult i12 %tmp_9, 150
-  %or_cond_1 = and i1 %tmp_1_1, %tmp_2_1
-  %minimumDistance_1_1 = select i1 %or_cond_1, i32 %tmp_5_i1, i32 %minimumDistance_1
+  %result_V = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V_1)
+  %tmp_9 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V, i32 8, i32 19)
+  %tmp_5_i = zext i12 %tmp_9 to i32
+  %tmp_1_1 = icmp slt i32 %tmp_5_i, %minimumDistance_2
+  %tmp_2_1 = icmp ult i12 %tmp_9, 250
+  %i_0_minimumDistanceI_1 = select i1 %tmp_2_1, i32 %i_cast, i32 %minimumDistanceIndex_2
+  %distance_0_minimumDi_1 = select i1 %tmp_2_1, i32 %tmp_5_i, i32 %minimumDistance_2
+  %minimumDistanceIndex_4 = select i1 %tmp_1_1, i32 %i_0_minimumDistanceI_1, i32 %minimumDistanceIndex_2
+  %minimumDistance_2_1 = select i1 %tmp_1_1, i32 %distance_0_minimumDi_1, i32 %minimumDistance_2
   %i_1 = add i3 2, %minimumDistanceIndex
+  %i_1_cast = zext i3 %i_1 to i32
   %tmp_3 = zext i3 %i_1 to i64
   %p_color_array_stream_4 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_3
   %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
@@ -136,14 +142,14 @@ define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
   %rhs_V_6_cast = select i1 %rhs_V_6, i9 255, i9 0
   %r_V_6 = sub i9 %lhs_V, %rhs_V_6_cast
   %p_cast5 = sext i9 %r_V_6 to i18
-  %result_9 = mul i18 %p_cast5, %p_cast5
-  %tmp_11 = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result_9, i9 0)
+  %result_7 = mul i18 %p_cast5, %p_cast5
+  %tmp_11 = call i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18 %result_7, i9 0)
   %p_Val2_6_cast5 = sext i27 %tmp_11 to i30
   %rhs_V_7 = zext i8 %colorGreen_V_2 to i9
   %r_V_7 = sub i9 %lhs_V_1, %rhs_V_7
   %p_cast = sext i9 %r_V_7 to i18
-  %result_4 = mul i18 %p_cast, %p_cast
-  %tmp_12 = call i28 @_ssdm_op_BitConcatenate.i28.i18.i10(i18 %result_4, i10 0)
+  %result_3 = mul i18 %p_cast, %p_cast
+  %tmp_12 = call i28 @_ssdm_op_BitConcatenate.i28.i18.i10(i18 %result_3, i10 0)
   %p_Val2_7_cast = sext i28 %tmp_12 to i29
   %rhs_V_8 = zext i8 %colorBlue_V_2 to i9
   %r_V_8 = sub i9 %lhs_V_2, %rhs_V_8
@@ -162,59 +168,56 @@ define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
   %result_V_2 = call fastcc i20 @fxp_sqrt(i30 %powerSummation_V_2)
   %tmp_14 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V_2, i32 8, i32 19)
   %tmp_5_i2 = zext i12 %tmp_14 to i32
-  %tmp_1_2 = icmp slt i32 %tmp_5_i2, %minimumDistance_1_1
-  %tmp_2_2 = icmp ult i12 %tmp_14, 150
-  %or_cond_2 = and i1 %tmp_1_2, %tmp_2_2
-  %newSel = select i1 %or_cond_2, i3 %i_1, i3 %i
-  %newSel_cast = zext i3 %newSel to i32
-  %or_cond = or i1 %or_cond_2, %or_cond_1
-  %newSel1 = select i1 %or_cond_14, i32 %minimumDistanceIndex_1, i32 %minimumDistanceIndex_2
-  %newSel2 = select i1 %or_cond, i32 %newSel_cast, i32 %newSel1
-  %minimumDistance_1_2 = select i1 %or_cond_2, i32 %tmp_5_i2, i32 %minimumDistance_1_1
+  %tmp_1_2 = icmp slt i32 %tmp_5_i2, %minimumDistance_2_1
+  %tmp_2_2 = icmp ult i12 %tmp_14, 250
+  %i_0_minimumDistanceI_2 = select i1 %tmp_2_2, i32 %i_1_cast, i32 %minimumDistanceIndex_4
+  %distance_0_minimumDi_2 = select i1 %tmp_2_2, i32 %tmp_5_i2, i32 %minimumDistance_2_1
+  %minimumDistanceIndex_5 = select i1 %tmp_1_2, i32 %i_0_minimumDistanceI_2, i32 %minimumDistanceIndex_4
+  %minimumDistance_2_2 = select i1 %tmp_1_2, i32 %distance_0_minimumDi_2, i32 %minimumDistance_2_1
   %i_2 = add i3 3, %minimumDistanceIndex
   %tmp_29 = trunc i3 %i_2 to i2
   %exitcond = icmp eq i3 %i_2, -2
-  br i1 %exitcond, label %2, label %rewind_header
+  br i1 %exitcond, label %1, label %rewind_header
 
-; <label>:2                                       ; preds = %1
-  switch i32 %newSel2, label %9 [
-    i32 0, label %3
-    i32 1, label %4
-    i32 2, label %5
-    i32 3, label %6
-    i32 4, label %7
-    i32 5, label %8
+; <label>:1                                       ; preds = %_ifconv
+  switch i32 %minimumDistanceIndex_5, label %8 [
+    i32 0, label %2
+    i32 1, label %3
+    i32 2, label %4
+    i32 3, label %5
+    i32 4, label %6
+    i32 5, label %7
   ]
 
-; <label>:3                                       ; preds = %2
+; <label>:2                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65536)
-  br label %10
+  br label %9
 
-; <label>:4                                       ; preds = %2
+; <label>:3                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 255)
-  br label %10
+  br label %9
 
-; <label>:5                                       ; preds = %2
+; <label>:4                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65280)
-  br label %10
+  br label %9
 
-; <label>:6                                       ; preds = %2
+; <label>:5                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -256)
-  br label %10
+  br label %9
 
-; <label>:7                                       ; preds = %2
+; <label>:6                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65281)
-  br label %10
+  br label %9
 
-; <label>:8                                       ; preds = %2
+; <label>:7                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65535)
-  br label %10
+  br label %9
 
-; <label>:9                                       ; preds = %2
+; <label>:8                                       ; preds = %1
   call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V9_phi)
-  br label %10
+  br label %9
 
-; <label>:10                                      ; preds = %9, %8, %7, %6, %5, %4, %3
+; <label>:9                                       ; preds = %8, %7, %6, %5, %4, %3, %2
   call void (...)* @_ssdm_op_Return()
   br label %rewind_header
 
@@ -223,15 +226,15 @@ rewind_init:                                      ; preds = %rewind_header
   call void (...)* @_ssdm_op_SpecBitsMap(i24* %out_pixel_V), !map !147
   call void (...)* @_ssdm_op_SpecTopModule([30 x i8]* @getPixelClassificati) nounwind
   %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel_V)
-  br label %1
+  br label %_ifconv
 
-rewind_header:                                    ; preds = %10, %1, %0
-  %do_init = phi i1 [ true, %0 ], [ false, %1 ], [ true, %10 ]
-  %in_pixel_V9_rewind = phi i24 [ undef, %0 ], [ %in_pixel_V9_phi, %1 ], [ undef, %10 ]
-  %minimumDistance4 = phi i32 [ 2147483647, %0 ], [ %minimumDistance_1_2, %1 ], [ 2147483647, %10 ]
-  %minimumDistanceIndex_2 = phi i32 [ -1, %0 ], [ %newSel2, %1 ], [ -1, %10 ]
-  %minimumDistanceIndex_3 = phi i2 [ 0, %0 ], [ %tmp_29, %1 ], [ 0, %10 ]
-  br i1 %do_init, label %rewind_init, label %1
+rewind_header:                                    ; preds = %9, %_ifconv, %0
+  %do_init = phi i1 [ true, %0 ], [ false, %_ifconv ], [ true, %9 ]
+  %in_pixel_V9_rewind = phi i24 [ undef, %0 ], [ %in_pixel_V9_phi, %_ifconv ], [ undef, %9 ]
+  %minimumDistance4 = phi i32 [ 2147483647, %0 ], [ %minimumDistance_2_2, %_ifconv ], [ 2147483647, %9 ]
+  %minimumDistanceIndex_1 = phi i32 [ -1, %0 ], [ %minimumDistanceIndex_5, %_ifconv ], [ -1, %9 ]
+  %minimumDistanceIndex_6 = phi i2 [ 0, %0 ], [ %tmp_29, %_ifconv ], [ 0, %9 ]
+  br i1 %do_init, label %rewind_init, label %_ifconv
 }
 
 define internal fastcc i20 @fxp_sqrt(i30 %in_val_V_read) {
@@ -558,15 +561,15 @@ entry:
 define weak i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24, i32, i32) nounwind readnone {
 entry:
   %empty = call i24 @llvm.part.select.i24(i24 %0, i32 %1, i32 %2)
-  %empty_16 = trunc i24 %empty to i8
-  ret i8 %empty_16
+  %empty_15 = trunc i24 %empty to i8
+  ret i8 %empty_15
 }
 
 define weak i8 @_ssdm_op_PartSelect.i8.i17.i32.i32(i17, i32, i32) nounwind readnone {
 entry:
   %empty = call i17 @llvm.part.select.i17(i17 %0, i32 %1, i32 %2)
-  %empty_17 = trunc i17 %empty to i8
-  ret i8 %empty_17
+  %empty_16 = trunc i17 %empty to i8
+  ret i8 %empty_16
 }
 
 declare i22 @_ssdm_op_PartSelect.i22.i23.i32.i32(i23, i32, i32) nounwind readnone
@@ -574,15 +577,15 @@ declare i22 @_ssdm_op_PartSelect.i22.i23.i32.i32(i23, i32, i32) nounwind readnon
 define weak i21 @_ssdm_op_PartSelect.i21.i22.i32.i32(i22, i32, i32) nounwind readnone {
 entry:
   %empty = call i22 @llvm.part.select.i22(i22 %0, i32 %1, i32 %2)
-  %empty_18 = trunc i22 %empty to i21
-  ret i21 %empty_18
+  %empty_17 = trunc i22 %empty to i21
+  ret i21 %empty_17
 }
 
 define weak i20 @_ssdm_op_PartSelect.i20.i21.i32.i32(i21, i32, i32) nounwind readnone {
 entry:
   %empty = call i21 @llvm.part.select.i21(i21 %0, i32 %1, i32 %2)
-  %empty_19 = trunc i21 %empty to i20
-  ret i20 %empty_19
+  %empty_18 = trunc i21 %empty to i20
+  ret i20 %empty_18
 }
 
 declare i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3, i32, i32) nounwind readnone
@@ -590,8 +593,8 @@ declare i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3, i32, i32) nounwind readnone
 define weak i19 @_ssdm_op_PartSelect.i19.i30.i32.i32(i30, i32, i32) nounwind readnone {
 entry:
   %empty = call i30 @llvm.part.select.i30(i30 %0, i32 %1, i32 %2)
-  %empty_20 = trunc i30 %empty to i19
-  ret i19 %empty_20
+  %empty_19 = trunc i30 %empty to i19
+  ret i19 %empty_19
 }
 
 declare i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20, i32, i32) nounwind readnone
@@ -599,26 +602,26 @@ declare i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20, i32, i32) nounwind readnon
 define weak i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20, i32, i32) nounwind readnone {
 entry:
   %empty = call i20 @llvm.part.select.i20(i20 %0, i32 %1, i32 %2)
-  %empty_21 = trunc i20 %empty to i12
-  ret i12 %empty_21
+  %empty_20 = trunc i20 %empty to i12
+  ret i12 %empty_20
 }
 
 define weak i1 @_ssdm_op_BitSelect.i1.i23.i32(i23, i32) nounwind readnone {
 entry:
   %empty = trunc i32 %1 to i23
-  %empty_22 = shl i23 1, %empty
-  %empty_23 = and i23 %0, %empty_22
-  %empty_24 = icmp ne i23 %empty_23, 0
-  ret i1 %empty_24
+  %empty_21 = shl i23 1, %empty
+  %empty_22 = and i23 %0, %empty_21
+  %empty_23 = icmp ne i23 %empty_22, 0
+  ret i1 %empty_23
 }
 
 define weak i1 @_ssdm_op_BitSelect.i1.i22.i32(i22, i32) nounwind readnone {
 entry:
   %empty = trunc i32 %1 to i22
-  %empty_25 = shl i22 1, %empty
-  %empty_26 = and i22 %0, %empty_25
-  %empty_27 = icmp ne i22 %empty_26, 0
-  ret i1 %empty_27
+  %empty_24 = shl i22 1, %empty
+  %empty_25 = and i22 %0, %empty_24
+  %empty_26 = icmp ne i22 %empty_25, 0
+  ret i1 %empty_26
 }
 
 declare i1 @_ssdm_op_BitSelect.i1.i21.i32(i21, i32) nounwind readnone
@@ -626,406 +629,406 @@ declare i1 @_ssdm_op_BitSelect.i1.i21.i32(i21, i32) nounwind readnone
 define weak i1 @_ssdm_op_BitSelect.i1.i17.i32(i17, i32) nounwind readnone {
 entry:
   %empty = trunc i32 %1 to i17
-  %empty_28 = shl i17 1, %empty
-  %empty_29 = and i17 %0, %empty_28
-  %empty_30 = icmp ne i17 %empty_29, 0
-  ret i1 %empty_30
+  %empty_27 = shl i17 1, %empty
+  %empty_28 = and i17 %0, %empty_27
+  %empty_29 = icmp ne i17 %empty_28, 0
+  ret i1 %empty_29
 }
 
 define weak i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8, i1) nounwind readnone {
 entry:
   %empty = zext i8 %0 to i9
-  %empty_31 = zext i1 %1 to i9
-  %empty_32 = shl i9 %empty, 1
-  %empty_33 = or i9 %empty_32, %empty_31
-  ret i9 %empty_33
+  %empty_30 = zext i1 %1 to i9
+  %empty_31 = shl i9 %empty, 1
+  %empty_32 = or i9 %empty_31, %empty_30
+  ret i9 %empty_32
 }
 
 define weak i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7, i1) nounwind readnone {
 entry:
   %empty = zext i7 %0 to i8
-  %empty_34 = zext i1 %1 to i8
-  %empty_35 = shl i8 %empty, 1
-  %empty_36 = or i8 %empty_35, %empty_34
-  ret i8 %empty_36
+  %empty_33 = zext i1 %1 to i8
+  %empty_34 = shl i8 %empty, 1
+  %empty_35 = or i8 %empty_34, %empty_33
+  ret i8 %empty_35
 }
 
 define weak i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6, i1) nounwind readnone {
 entry:
   %empty = zext i6 %0 to i7
-  %empty_37 = zext i1 %1 to i7
-  %empty_38 = shl i7 %empty, 1
-  %empty_39 = or i7 %empty_38, %empty_37
-  ret i7 %empty_39
+  %empty_36 = zext i1 %1 to i7
+  %empty_37 = shl i7 %empty, 1
+  %empty_38 = or i7 %empty_37, %empty_36
+  ret i7 %empty_38
 }
 
 define weak i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5, i1) nounwind readnone {
 entry:
   %empty = zext i5 %0 to i6
-  %empty_40 = zext i1 %1 to i6
-  %empty_41 = shl i6 %empty, 1
-  %empty_42 = or i6 %empty_41, %empty_40
-  ret i6 %empty_42
+  %empty_39 = zext i1 %1 to i6
+  %empty_40 = shl i6 %empty, 1
+  %empty_41 = or i6 %empty_40, %empty_39
+  ret i6 %empty_41
 }
 
 define weak i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4, i1) nounwind readnone {
 entry:
   %empty = zext i4 %0 to i5
-  %empty_43 = zext i1 %1 to i5
-  %empty_44 = shl i5 %empty, 1
-  %empty_45 = or i5 %empty_44, %empty_43
-  ret i5 %empty_45
+  %empty_42 = zext i1 %1 to i5
+  %empty_43 = shl i5 %empty, 1
+  %empty_44 = or i5 %empty_43, %empty_42
+  ret i5 %empty_44
 }
 
 define weak i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3, i1) nounwind readnone {
 entry:
   %empty = zext i3 %0 to i4
-  %empty_46 = zext i1 %1 to i4
-  %empty_47 = shl i4 %empty, 1
-  %empty_48 = or i4 %empty_47, %empty_46
-  ret i4 %empty_48
+  %empty_45 = zext i1 %1 to i4
+  %empty_46 = shl i4 %empty, 1
+  %empty_47 = or i4 %empty_46, %empty_45
+  ret i4 %empty_47
 }
 
 define weak i28 @_ssdm_op_BitConcatenate.i28.i18.i10(i18, i10) nounwind readnone {
 entry:
   %empty = zext i18 %0 to i28
-  %empty_49 = zext i10 %1 to i28
-  %empty_50 = shl i28 %empty, 10
-  %empty_51 = or i28 %empty_50, %empty_49
-  ret i28 %empty_51
+  %empty_48 = zext i10 %1 to i28
+  %empty_49 = shl i28 %empty, 10
+  %empty_50 = or i28 %empty_49, %empty_48
+  ret i28 %empty_50
 }
 
 define weak i27 @_ssdm_op_BitConcatenate.i27.i18.i9(i18, i9) nounwind readnone {
 entry:
   %empty = zext i18 %0 to i27
-  %empty_52 = zext i9 %1 to i27
-  %empty_53 = shl i27 %empty, 9
-  %empty_54 = or i27 %empty_53, %empty_52
-  ret i27 %empty_54
+  %empty_51 = zext i9 %1 to i27
+  %empty_52 = shl i27 %empty, 9
+  %empty_53 = or i27 %empty_52, %empty_51
+  ret i27 %empty_53
 }
 
 define weak i27 @_ssdm_op_BitConcatenate.i27.i17.i10(i17, i10) nounwind readnone {
 entry:
   %empty = zext i17 %0 to i27
-  %empty_55 = zext i10 %1 to i27
-  %empty_56 = shl i27 %empty, 10
-  %empty_57 = or i27 %empty_56, %empty_55
-  ret i27 %empty_57
+  %empty_54 = zext i10 %1 to i27
+  %empty_55 = shl i27 %empty, 10
+  %empty_56 = or i27 %empty_55, %empty_54
+  ret i27 %empty_56
 }
 
 define weak i25 @_ssdm_op_BitConcatenate.i25.i17.i8(i17, i8) nounwind readnone {
 entry:
   %empty = zext i17 %0 to i25
-  %empty_58 = zext i8 %1 to i25
-  %empty_59 = shl i25 %empty, 8
-  %empty_60 = or i25 %empty_59, %empty_58
-  ret i25 %empty_60
+  %empty_57 = zext i8 %1 to i25
+  %empty_58 = shl i25 %empty, 8
+  %empty_59 = or i25 %empty_58, %empty_57
+  ret i25 %empty_59
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i9.i14(i9, i14) nounwind readnone {
 entry:
   %empty = zext i9 %0 to i23
-  %empty_61 = zext i14 %1 to i23
-  %empty_62 = shl i23 %empty, 14
-  %empty_63 = or i23 %empty_62, %empty_61
-  ret i23 %empty_63
+  %empty_60 = zext i14 %1 to i23
+  %empty_61 = shl i23 %empty, 14
+  %empty_62 = or i23 %empty_61, %empty_60
+  ret i23 %empty_62
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i8.i15(i8, i15) nounwind readnone {
 entry:
   %empty = zext i8 %0 to i23
-  %empty_64 = zext i15 %1 to i23
-  %empty_65 = shl i23 %empty, 15
-  %empty_66 = or i23 %empty_65, %empty_64
-  ret i23 %empty_66
+  %empty_63 = zext i15 %1 to i23
+  %empty_64 = shl i23 %empty, 15
+  %empty_65 = or i23 %empty_64, %empty_63
+  ret i23 %empty_65
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i7.i16(i7, i16) nounwind readnone {
 entry:
   %empty = zext i7 %0 to i23
-  %empty_67 = zext i16 %1 to i23
-  %empty_68 = shl i23 %empty, 16
-  %empty_69 = or i23 %empty_68, %empty_67
-  ret i23 %empty_69
+  %empty_66 = zext i16 %1 to i23
+  %empty_67 = shl i23 %empty, 16
+  %empty_68 = or i23 %empty_67, %empty_66
+  ret i23 %empty_68
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i6.i17(i6, i17) nounwind readnone {
 entry:
   %empty = zext i6 %0 to i23
-  %empty_70 = zext i17 %1 to i23
-  %empty_71 = shl i23 %empty, 17
-  %empty_72 = or i23 %empty_71, %empty_70
-  ret i23 %empty_72
+  %empty_69 = zext i17 %1 to i23
+  %empty_70 = shl i23 %empty, 17
+  %empty_71 = or i23 %empty_70, %empty_69
+  ret i23 %empty_71
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i5.i18(i5, i18) nounwind readnone {
 entry:
   %empty = zext i5 %0 to i23
-  %empty_73 = zext i18 %1 to i23
-  %empty_74 = shl i23 %empty, 18
-  %empty_75 = or i23 %empty_74, %empty_73
-  ret i23 %empty_75
+  %empty_72 = zext i18 %1 to i23
+  %empty_73 = shl i23 %empty, 18
+  %empty_74 = or i23 %empty_73, %empty_72
+  ret i23 %empty_74
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i4.i19(i4, i19) nounwind readnone {
 entry:
   %empty = zext i4 %0 to i23
-  %empty_76 = zext i19 %1 to i23
-  %empty_77 = shl i23 %empty, 19
-  %empty_78 = or i23 %empty_77, %empty_76
-  ret i23 %empty_78
+  %empty_75 = zext i19 %1 to i23
+  %empty_76 = shl i23 %empty, 19
+  %empty_77 = or i23 %empty_76, %empty_75
+  ret i23 %empty_77
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i3.i20(i3, i20) nounwind readnone {
 entry:
   %empty = zext i3 %0 to i23
-  %empty_79 = zext i20 %1 to i23
-  %empty_80 = shl i23 %empty, 20
-  %empty_81 = or i23 %empty_80, %empty_79
-  ret i23 %empty_81
+  %empty_78 = zext i20 %1 to i23
+  %empty_79 = shl i23 %empty, 20
+  %empty_80 = or i23 %empty_79, %empty_78
+  ret i23 %empty_80
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i22.i1(i22, i1) nounwind readnone {
 entry:
   %empty = zext i22 %0 to i23
-  %empty_82 = zext i1 %1 to i23
-  %empty_83 = shl i23 %empty, 1
-  %empty_84 = or i23 %empty_83, %empty_82
-  ret i23 %empty_84
+  %empty_81 = zext i1 %1 to i23
+  %empty_82 = shl i23 %empty, 1
+  %empty_83 = or i23 %empty_82, %empty_81
+  ret i23 %empty_83
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i21.i2(i21, i2) nounwind readnone {
 entry:
   %empty = zext i21 %0 to i23
-  %empty_85 = zext i2 %1 to i23
-  %empty_86 = shl i23 %empty, 2
-  %empty_87 = or i23 %empty_86, %empty_85
-  ret i23 %empty_87
+  %empty_84 = zext i2 %1 to i23
+  %empty_85 = shl i23 %empty, 2
+  %empty_86 = or i23 %empty_85, %empty_84
+  ret i23 %empty_86
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i20.i3(i20, i3) nounwind readnone {
 entry:
   %empty = zext i20 %0 to i23
-  %empty_88 = zext i3 %1 to i23
-  %empty_89 = shl i23 %empty, 3
-  %empty_90 = or i23 %empty_89, %empty_88
-  ret i23 %empty_90
+  %empty_87 = zext i3 %1 to i23
+  %empty_88 = shl i23 %empty, 3
+  %empty_89 = or i23 %empty_88, %empty_87
+  ret i23 %empty_89
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i19.i4(i19, i4) nounwind readnone {
 entry:
   %empty = zext i19 %0 to i23
-  %empty_91 = zext i4 %1 to i23
-  %empty_92 = shl i23 %empty, 4
-  %empty_93 = or i23 %empty_92, %empty_91
-  ret i23 %empty_93
+  %empty_90 = zext i4 %1 to i23
+  %empty_91 = shl i23 %empty, 4
+  %empty_92 = or i23 %empty_91, %empty_90
+  ret i23 %empty_92
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i18.i5(i18, i5) nounwind readnone {
 entry:
   %empty = zext i18 %0 to i23
-  %empty_94 = zext i5 %1 to i23
-  %empty_95 = shl i23 %empty, 5
-  %empty_96 = or i23 %empty_95, %empty_94
-  ret i23 %empty_96
+  %empty_93 = zext i5 %1 to i23
+  %empty_94 = shl i23 %empty, 5
+  %empty_95 = or i23 %empty_94, %empty_93
+  ret i23 %empty_95
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i17.i6(i17, i6) nounwind readnone {
 entry:
   %empty = zext i17 %0 to i23
-  %empty_97 = zext i6 %1 to i23
-  %empty_98 = shl i23 %empty, 6
-  %empty_99 = or i23 %empty_98, %empty_97
-  ret i23 %empty_99
+  %empty_96 = zext i6 %1 to i23
+  %empty_97 = shl i23 %empty, 6
+  %empty_98 = or i23 %empty_97, %empty_96
+  ret i23 %empty_98
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16, i7) nounwind readnone {
 entry:
   %empty = zext i16 %0 to i23
-  %empty_100 = zext i7 %1 to i23
-  %empty_101 = shl i23 %empty, 7
-  %empty_102 = or i23 %empty_101, %empty_100
-  ret i23 %empty_102
+  %empty_99 = zext i7 %1 to i23
+  %empty_100 = shl i23 %empty, 7
+  %empty_101 = or i23 %empty_100, %empty_99
+  ret i23 %empty_101
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15, i8) nounwind readnone {
 entry:
   %empty = zext i15 %0 to i23
-  %empty_103 = zext i8 %1 to i23
-  %empty_104 = shl i23 %empty, 8
-  %empty_105 = or i23 %empty_104, %empty_103
-  ret i23 %empty_105
+  %empty_102 = zext i8 %1 to i23
+  %empty_103 = shl i23 %empty, 8
+  %empty_104 = or i23 %empty_103, %empty_102
+  ret i23 %empty_104
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i14.i9(i14, i9) nounwind readnone {
 entry:
   %empty = zext i14 %0 to i23
-  %empty_106 = zext i9 %1 to i23
-  %empty_107 = shl i23 %empty, 9
-  %empty_108 = or i23 %empty_107, %empty_106
-  ret i23 %empty_108
+  %empty_105 = zext i9 %1 to i23
+  %empty_106 = shl i23 %empty, 9
+  %empty_107 = or i23 %empty_106, %empty_105
+  ret i23 %empty_107
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13, i10) nounwind readnone {
 entry:
   %empty = zext i13 %0 to i23
-  %empty_109 = zext i10 %1 to i23
-  %empty_110 = shl i23 %empty, 10
-  %empty_111 = or i23 %empty_110, %empty_109
-  ret i23 %empty_111
+  %empty_108 = zext i10 %1 to i23
+  %empty_109 = shl i23 %empty, 10
+  %empty_110 = or i23 %empty_109, %empty_108
+  ret i23 %empty_110
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i12.i11(i12, i11) nounwind readnone {
 entry:
   %empty = zext i12 %0 to i23
-  %empty_112 = zext i11 %1 to i23
-  %empty_113 = shl i23 %empty, 11
-  %empty_114 = or i23 %empty_113, %empty_112
-  ret i23 %empty_114
+  %empty_111 = zext i11 %1 to i23
+  %empty_112 = shl i23 %empty, 11
+  %empty_113 = or i23 %empty_112, %empty_111
+  ret i23 %empty_113
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i11.i12(i11, i12) nounwind readnone {
 entry:
   %empty = zext i11 %0 to i23
-  %empty_115 = zext i12 %1 to i23
-  %empty_116 = shl i23 %empty, 12
-  %empty_117 = or i23 %empty_116, %empty_115
-  ret i23 %empty_117
+  %empty_114 = zext i12 %1 to i23
+  %empty_115 = shl i23 %empty, 12
+  %empty_116 = or i23 %empty_115, %empty_114
+  ret i23 %empty_116
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i10.i13(i10, i13) nounwind readnone {
 entry:
   %empty = zext i10 %0 to i23
-  %empty_118 = zext i13 %1 to i23
-  %empty_119 = shl i23 %empty, 13
-  %empty_120 = or i23 %empty_119, %empty_118
-  ret i23 %empty_120
+  %empty_117 = zext i13 %1 to i23
+  %empty_118 = shl i23 %empty, 13
+  %empty_119 = or i23 %empty_118, %empty_117
+  ret i23 %empty_119
 }
 
 define weak i23 @_ssdm_op_BitConcatenate.i23.i1.i22(i1, i22) nounwind readnone {
 entry:
   %empty = zext i1 %0 to i23
-  %empty_121 = zext i22 %1 to i23
-  %empty_122 = shl i23 %empty, 22
-  %empty_123 = or i23 %empty_122, %empty_121
-  ret i23 %empty_123
+  %empty_120 = zext i22 %1 to i23
+  %empty_121 = shl i23 %empty, 22
+  %empty_122 = or i23 %empty_121, %empty_120
+  ret i23 %empty_122
 }
 
 define weak i22 @_ssdm_op_BitConcatenate.i22.i21.i1(i21, i1) nounwind readnone {
 entry:
   %empty = zext i21 %0 to i22
-  %empty_124 = zext i1 %1 to i22
-  %empty_125 = shl i22 %empty, 1
-  %empty_126 = or i22 %empty_125, %empty_124
-  ret i22 %empty_126
+  %empty_123 = zext i1 %1 to i22
+  %empty_124 = shl i22 %empty, 1
+  %empty_125 = or i22 %empty_124, %empty_123
+  ret i22 %empty_125
 }
 
 define weak i21 @_ssdm_op_BitConcatenate.i21.i20.i1(i20, i1) nounwind readnone {
 entry:
   %empty = zext i20 %0 to i21
-  %empty_127 = zext i1 %1 to i21
-  %empty_128 = shl i21 %empty, 1
-  %empty_129 = or i21 %empty_128, %empty_127
-  ret i21 %empty_129
+  %empty_126 = zext i1 %1 to i21
+  %empty_127 = shl i21 %empty, 1
+  %empty_128 = or i21 %empty_127, %empty_126
+  ret i21 %empty_128
 }
 
 define weak i20 @_ssdm_op_BitConcatenate.i20.i19.i1(i19, i1) nounwind readnone {
 entry:
   %empty = zext i19 %0 to i20
-  %empty_130 = zext i1 %1 to i20
-  %empty_131 = shl i20 %empty, 1
-  %empty_132 = or i20 %empty_131, %empty_130
-  ret i20 %empty_132
+  %empty_129 = zext i1 %1 to i20
+  %empty_130 = shl i20 %empty, 1
+  %empty_131 = or i20 %empty_130, %empty_129
+  ret i20 %empty_131
 }
 
 define weak i19 @_ssdm_op_BitConcatenate.i19.i18.i1(i18, i1) nounwind readnone {
 entry:
   %empty = zext i18 %0 to i19
-  %empty_133 = zext i1 %1 to i19
-  %empty_134 = shl i19 %empty, 1
-  %empty_135 = or i19 %empty_134, %empty_133
-  ret i19 %empty_135
+  %empty_132 = zext i1 %1 to i19
+  %empty_133 = shl i19 %empty, 1
+  %empty_134 = or i19 %empty_133, %empty_132
+  ret i19 %empty_134
 }
 
 define weak i18 @_ssdm_op_BitConcatenate.i18.i17.i1(i17, i1) nounwind readnone {
 entry:
   %empty = zext i17 %0 to i18
-  %empty_136 = zext i1 %1 to i18
-  %empty_137 = shl i18 %empty, 1
-  %empty_138 = or i18 %empty_137, %empty_136
-  ret i18 %empty_138
+  %empty_135 = zext i1 %1 to i18
+  %empty_136 = shl i18 %empty, 1
+  %empty_137 = or i18 %empty_136, %empty_135
+  ret i18 %empty_137
 }
 
 define weak i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16, i1) nounwind readnone {
 entry:
   %empty = zext i16 %0 to i17
-  %empty_139 = zext i1 %1 to i17
-  %empty_140 = shl i17 %empty, 1
-  %empty_141 = or i17 %empty_140, %empty_139
-  ret i17 %empty_141
+  %empty_138 = zext i1 %1 to i17
+  %empty_139 = shl i17 %empty, 1
+  %empty_140 = or i17 %empty_139, %empty_138
+  ret i17 %empty_140
 }
 
 define weak i16 @_ssdm_op_BitConcatenate.i16.i15.i1(i15, i1) nounwind readnone {
 entry:
   %empty = zext i15 %0 to i16
-  %empty_142 = zext i1 %1 to i16
-  %empty_143 = shl i16 %empty, 1
-  %empty_144 = or i16 %empty_143, %empty_142
-  ret i16 %empty_144
+  %empty_141 = zext i1 %1 to i16
+  %empty_142 = shl i16 %empty, 1
+  %empty_143 = or i16 %empty_142, %empty_141
+  ret i16 %empty_143
 }
 
 define weak i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14, i1) nounwind readnone {
 entry:
   %empty = zext i14 %0 to i15
-  %empty_145 = zext i1 %1 to i15
-  %empty_146 = shl i15 %empty, 1
-  %empty_147 = or i15 %empty_146, %empty_145
-  ret i15 %empty_147
+  %empty_144 = zext i1 %1 to i15
+  %empty_145 = shl i15 %empty, 1
+  %empty_146 = or i15 %empty_145, %empty_144
+  ret i15 %empty_146
 }
 
 define weak i14 @_ssdm_op_BitConcatenate.i14.i13.i1(i13, i1) nounwind readnone {
 entry:
   %empty = zext i13 %0 to i14
-  %empty_148 = zext i1 %1 to i14
-  %empty_149 = shl i14 %empty, 1
-  %empty_150 = or i14 %empty_149, %empty_148
-  ret i14 %empty_150
+  %empty_147 = zext i1 %1 to i14
+  %empty_148 = shl i14 %empty, 1
+  %empty_149 = or i14 %empty_148, %empty_147
+  ret i14 %empty_149
 }
 
 define weak i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12, i1) nounwind readnone {
 entry:
   %empty = zext i12 %0 to i13
-  %empty_151 = zext i1 %1 to i13
-  %empty_152 = shl i13 %empty, 1
-  %empty_153 = or i13 %empty_152, %empty_151
-  ret i13 %empty_153
+  %empty_150 = zext i1 %1 to i13
+  %empty_151 = shl i13 %empty, 1
+  %empty_152 = or i13 %empty_151, %empty_150
+  ret i13 %empty_152
 }
 
 define weak i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11, i1) nounwind readnone {
 entry:
   %empty = zext i11 %0 to i12
-  %empty_154 = zext i1 %1 to i12
-  %empty_155 = shl i12 %empty, 1
-  %empty_156 = or i12 %empty_155, %empty_154
-  ret i12 %empty_156
+  %empty_153 = zext i1 %1 to i12
+  %empty_154 = shl i12 %empty, 1
+  %empty_155 = or i12 %empty_154, %empty_153
+  ret i12 %empty_155
 }
 
 define weak i11 @_ssdm_op_BitConcatenate.i11.i10.i1(i10, i1) nounwind readnone {
 entry:
   %empty = zext i10 %0 to i11
-  %empty_157 = zext i1 %1 to i11
-  %empty_158 = shl i11 %empty, 1
-  %empty_159 = or i11 %empty_158, %empty_157
-  ret i11 %empty_159
+  %empty_156 = zext i1 %1 to i11
+  %empty_157 = shl i11 %empty, 1
+  %empty_158 = or i11 %empty_157, %empty_156
+  ret i11 %empty_158
 }
 
 define weak i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9, i1) nounwind readnone {
 entry:
   %empty = zext i9 %0 to i10
-  %empty_160 = zext i1 %1 to i10
-  %empty_161 = shl i10 %empty, 1
-  %empty_162 = or i10 %empty_161, %empty_160
-  ret i10 %empty_162
+  %empty_159 = zext i1 %1 to i10
+  %empty_160 = shl i10 %empty, 1
+  %empty_161 = or i10 %empty_160, %empty_159
+  ret i10 %empty_161
 }
 
 declare void @_ssdm_SpecLoopRewind(...) nounwind
