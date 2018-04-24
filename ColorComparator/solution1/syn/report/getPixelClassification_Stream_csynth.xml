@@ -21,18 +21,18 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>20</Best-caseLatency>
-<Average-caseLatency>20</Average-caseLatency>
-<Worst-caseLatency>21</Worst-caseLatency>
+<Best-caseLatency>22</Best-caseLatency>
+<Average-caseLatency>22</Average-caseLatency>
+<Worst-caseLatency>23</Worst-caseLatency>
 <Interval-min>2</Interval-min>
 <Interval-max>2</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <PIXEL_COLOR_LOOP>
 <TripCount>2</TripCount>
-<Latency>20</Latency>
+<Latency>22</Latency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>20</PipelineDepth>
+<PipelineDepth>22</PipelineDepth>
 </PIXEL_COLOR_LOOP>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -40,9 +40,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<DSP48E>0</DSP48E>
-<FF>2080</FF>
-<LUT>12967</LUT>
+<DSP48E>3</DSP48E>
+<FF>2690</FF>
+<LUT>13891</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>

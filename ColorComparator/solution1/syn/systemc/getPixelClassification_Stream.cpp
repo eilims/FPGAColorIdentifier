@@ -25,13 +25,13 @@ const sc_lv<2> getPixelClassification_Stream::ap_const_lv2_3 = "11";
 const sc_lv<2> getPixelClassification_Stream::ap_const_lv2_1 = "1";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_1 = "1";
 const bool getPixelClassification_Stream::ap_const_boolean_0 = false;
+const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_FFFFFFFF = "11111111111111111111111111111111";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_0 = "00000000000000000000000000000000";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_2 = "10";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_3 = "11";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_4 = "100";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_5 = "101";
 const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_7FFFFFFF = "1111111111111111111111111111111";
-const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_FFFFFFFF = "11111111111111111111111111111111";
 const sc_lv<24> getPixelClassification_Stream::ap_const_lv24_FFFF = "1111111111111111";
 const sc_lv<24> getPixelClassification_Stream::ap_const_lv24_FF00FF = "111111110000000011111111";
 const sc_lv<24> getPixelClassification_Stream::ap_const_lv24_FFFF00 = "111111111111111100000000";
@@ -39,22 +39,13 @@ const sc_lv<24> getPixelClassification_Stream::ap_const_lv24_FF00 = "11111111000
 const sc_lv<24> getPixelClassification_Stream::ap_const_lv24_FF = "11111111";
 const sc_lv<24> getPixelClassification_Stream::ap_const_lv24_FF0000 = "111111110000000000000000";
 const sc_lv<3> getPixelClassification_Stream::ap_const_lv3_1 = "1";
-const sc_lv<3> getPixelClassification_Stream::ap_const_lv3_2 = "10";
 const sc_lv<3> getPixelClassification_Stream::ap_const_lv3_3 = "11";
 const sc_lv<3> getPixelClassification_Stream::ap_const_lv3_6 = "110";
-const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_10 = "10000";
-const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_17 = "10111";
-const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_8 = "1000";
-const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_F = "1111";
-const sc_lv<9> getPixelClassification_Stream::ap_const_lv9_FF = "11111111";
-const sc_lv<9> getPixelClassification_Stream::ap_const_lv9_0 = "000000000";
-const sc_lv<10> getPixelClassification_Stream::ap_const_lv10_0 = "0000000000";
-const sc_lv<8> getPixelClassification_Stream::ap_const_lv8_0 = "00000000";
-const sc_lv<32> getPixelClassification_Stream::ap_const_lv32_13 = "10011";
-const sc_lv<12> getPixelClassification_Stream::ap_const_lv12_FA = "11111010";
+const sc_lv<3> getPixelClassification_Stream::ap_const_lv3_2 = "10";
+const sc_lv<12> getPixelClassification_Stream::ap_const_lv12_109 = "100001001";
 
 getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    p_color_array_stream_s_U = new getPixelClassificbkb("p_color_array_stream_s_U");
+    p_color_array_stream_s_U = new getPixelClassificcud("p_color_array_stream_s_U");
     p_color_array_stream_s_U->clk(ap_clk);
     p_color_array_stream_s_U->reset(ap_rst_n_inv);
     p_color_array_stream_s_U->address0(p_color_array_stream_s_address0);
@@ -66,24 +57,48 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     p_color_array_stream_s_U->address2(p_color_array_stream_s_address2);
     p_color_array_stream_s_U->ce2(p_color_array_stream_s_ce2);
     p_color_array_stream_s_U->q2(p_color_array_stream_s_q2);
-    grp_fxp_sqrt_fu_264 = new fxp_sqrt("grp_fxp_sqrt_fu_264");
-    grp_fxp_sqrt_fu_264->ap_clk(ap_clk);
-    grp_fxp_sqrt_fu_264->ap_rst(ap_rst_n_inv);
-    grp_fxp_sqrt_fu_264->in_val_V_read(grp_fxp_sqrt_fu_264_in_val_V_read);
-    grp_fxp_sqrt_fu_264->ap_return(grp_fxp_sqrt_fu_264_ap_return);
-    grp_fxp_sqrt_fu_264->ap_ce(grp_fxp_sqrt_fu_264_ap_ce);
-    grp_fxp_sqrt_fu_269 = new fxp_sqrt("grp_fxp_sqrt_fu_269");
-    grp_fxp_sqrt_fu_269->ap_clk(ap_clk);
-    grp_fxp_sqrt_fu_269->ap_rst(ap_rst_n_inv);
-    grp_fxp_sqrt_fu_269->in_val_V_read(grp_fxp_sqrt_fu_269_in_val_V_read);
-    grp_fxp_sqrt_fu_269->ap_return(grp_fxp_sqrt_fu_269_ap_return);
-    grp_fxp_sqrt_fu_269->ap_ce(grp_fxp_sqrt_fu_269_ap_ce);
-    grp_fxp_sqrt_fu_274 = new fxp_sqrt("grp_fxp_sqrt_fu_274");
-    grp_fxp_sqrt_fu_274->ap_clk(ap_clk);
-    grp_fxp_sqrt_fu_274->ap_rst(ap_rst_n_inv);
-    grp_fxp_sqrt_fu_274->in_val_V_read(powerSummation_V_2_reg_1141);
-    grp_fxp_sqrt_fu_274->ap_return(grp_fxp_sqrt_fu_274_ap_return);
-    grp_fxp_sqrt_fu_274->ap_ce(grp_fxp_sqrt_fu_274_ap_ce);
+    grp_getColorDistance_Str_fu_229 = new getColorDistance_Str("grp_getColorDistance_Str_fu_229");
+    grp_getColorDistance_Str_fu_229->ap_clk(ap_clk);
+    grp_getColorDistance_Str_fu_229->ap_rst(ap_rst_n_inv);
+    grp_getColorDistance_Str_fu_229->ap_start(grp_getColorDistance_Str_fu_229_ap_start);
+    grp_getColorDistance_Str_fu_229->ap_done(grp_getColorDistance_Str_fu_229_ap_done);
+    grp_getColorDistance_Str_fu_229->ap_idle(grp_getColorDistance_Str_fu_229_ap_idle);
+    grp_getColorDistance_Str_fu_229->ap_ready(grp_getColorDistance_Str_fu_229_ap_ready);
+    grp_getColorDistance_Str_fu_229->pixel_V_TVALID(ap_var_for_const0);
+    grp_getColorDistance_Str_fu_229->ap_ce(grp_getColorDistance_Str_fu_229_ap_ce);
+    grp_getColorDistance_Str_fu_229->pixel_V_TDATA(ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4);
+    grp_getColorDistance_Str_fu_229->pixel_V_TREADY(grp_getColorDistance_Str_fu_229_pixel_V_TREADY);
+    grp_getColorDistance_Str_fu_229->color_V(p_color_array_stream_1_reg_473);
+    grp_getColorDistance_Str_fu_229->ap_return(grp_getColorDistance_Str_fu_229_ap_return);
+    grp_getColorDistance_Str_fu_229->pixel_V_TDATA_blk_n(grp_getColorDistance_Str_fu_229_pixel_V_TDATA_blk_n);
+    grp_getColorDistance_Str_fu_236 = new getColorDistance_Str("grp_getColorDistance_Str_fu_236");
+    grp_getColorDistance_Str_fu_236->ap_clk(ap_clk);
+    grp_getColorDistance_Str_fu_236->ap_rst(ap_rst_n_inv);
+    grp_getColorDistance_Str_fu_236->ap_start(grp_getColorDistance_Str_fu_236_ap_start);
+    grp_getColorDistance_Str_fu_236->ap_done(grp_getColorDistance_Str_fu_236_ap_done);
+    grp_getColorDistance_Str_fu_236->ap_idle(grp_getColorDistance_Str_fu_236_ap_idle);
+    grp_getColorDistance_Str_fu_236->ap_ready(grp_getColorDistance_Str_fu_236_ap_ready);
+    grp_getColorDistance_Str_fu_236->pixel_V_TVALID(ap_var_for_const0);
+    grp_getColorDistance_Str_fu_236->ap_ce(grp_getColorDistance_Str_fu_236_ap_ce);
+    grp_getColorDistance_Str_fu_236->pixel_V_TDATA(ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4);
+    grp_getColorDistance_Str_fu_236->pixel_V_TREADY(grp_getColorDistance_Str_fu_236_pixel_V_TREADY);
+    grp_getColorDistance_Str_fu_236->color_V(p_color_array_stream_3_reg_478);
+    grp_getColorDistance_Str_fu_236->ap_return(grp_getColorDistance_Str_fu_236_ap_return);
+    grp_getColorDistance_Str_fu_236->pixel_V_TDATA_blk_n(grp_getColorDistance_Str_fu_236_pixel_V_TDATA_blk_n);
+    grp_getColorDistance_Str_fu_243 = new getColorDistance_Str("grp_getColorDistance_Str_fu_243");
+    grp_getColorDistance_Str_fu_243->ap_clk(ap_clk);
+    grp_getColorDistance_Str_fu_243->ap_rst(ap_rst_n_inv);
+    grp_getColorDistance_Str_fu_243->ap_start(grp_getColorDistance_Str_fu_243_ap_start);
+    grp_getColorDistance_Str_fu_243->ap_done(grp_getColorDistance_Str_fu_243_ap_done);
+    grp_getColorDistance_Str_fu_243->ap_idle(grp_getColorDistance_Str_fu_243_ap_idle);
+    grp_getColorDistance_Str_fu_243->ap_ready(grp_getColorDistance_Str_fu_243_ap_ready);
+    grp_getColorDistance_Str_fu_243->pixel_V_TVALID(ap_var_for_const0);
+    grp_getColorDistance_Str_fu_243->ap_ce(grp_getColorDistance_Str_fu_243_ap_ce);
+    grp_getColorDistance_Str_fu_243->pixel_V_TDATA(in_pixel_V5_phi_reg_188);
+    grp_getColorDistance_Str_fu_243->pixel_V_TREADY(grp_getColorDistance_Str_fu_243_pixel_V_TREADY);
+    grp_getColorDistance_Str_fu_243->color_V(p_color_array_stream_5_reg_493);
+    grp_getColorDistance_Str_fu_243->ap_return(grp_getColorDistance_Str_fu_243_ap_return);
+    grp_getColorDistance_Str_fu_243->pixel_V_TDATA_blk_n(grp_getColorDistance_Str_fu_243_pixel_V_TDATA_blk_n);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -101,28 +116,28 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sensitive << ( in_pixel_V_0_vld_out );
     sensitive << ( out_pixel_V_1_ack_in );
     sensitive << ( ap_enable_reg_pp0_iter1 );
-    sensitive << ( do_init_reg_177 );
-    sensitive << ( ap_enable_reg_pp0_iter19 );
+    sensitive << ( do_init_reg_143 );
+    sensitive << ( ap_enable_reg_pp0_iter21 );
 
     SC_METHOD(thread_ap_block_pp0_stage0_11001);
     sensitive << ( in_pixel_V_0_vld_out );
     sensitive << ( out_pixel_V_1_ack_in );
     sensitive << ( ap_enable_reg_pp0_iter1 );
-    sensitive << ( do_init_reg_177 );
-    sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_enable_reg_pp0_iter19 );
-    sensitive << ( ap_block_state20_io );
-    sensitive << ( ap_block_state21_io );
+    sensitive << ( do_init_reg_143 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_enable_reg_pp0_iter21 );
+    sensitive << ( ap_block_state22_io );
+    sensitive << ( ap_block_state23_io );
 
     SC_METHOD(thread_ap_block_pp0_stage0_subdone);
     sensitive << ( in_pixel_V_0_vld_out );
     sensitive << ( out_pixel_V_1_ack_in );
     sensitive << ( ap_enable_reg_pp0_iter1 );
-    sensitive << ( do_init_reg_177 );
-    sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_enable_reg_pp0_iter19 );
-    sensitive << ( ap_block_state20_io );
-    sensitive << ( ap_block_state21_io );
+    sensitive << ( do_init_reg_143 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_enable_reg_pp0_iter21 );
+    sensitive << ( ap_block_state22_io );
+    sensitive << ( ap_block_state23_io );
 
     SC_METHOD(thread_ap_block_state10_pp0_stage0_iter8);
 
@@ -144,36 +159,42 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
 
     SC_METHOD(thread_ap_block_state19_pp0_stage0_iter17);
 
-    SC_METHOD(thread_ap_block_state20_io);
-    sensitive << ( out_pixel_V_1_ack_in );
-    sensitive << ( ap_predicate_op219_write_state20 );
-    sensitive << ( ap_predicate_op220_write_state20 );
-    sensitive << ( ap_predicate_op221_write_state20 );
-    sensitive << ( ap_predicate_op222_write_state20 );
-    sensitive << ( ap_predicate_op223_write_state20 );
-    sensitive << ( ap_predicate_op224_write_state20 );
-    sensitive << ( ap_predicate_op225_write_state20 );
-
     SC_METHOD(thread_ap_block_state20_pp0_stage0_iter18);
 
-    SC_METHOD(thread_ap_block_state21_io);
-    sensitive << ( out_pixel_V_1_ack_in );
-    sensitive << ( ap_predicate_op231_write_state21 );
-    sensitive << ( ap_predicate_op233_write_state21 );
-    sensitive << ( ap_predicate_op235_write_state21 );
-    sensitive << ( ap_predicate_op237_write_state21 );
-    sensitive << ( ap_predicate_op239_write_state21 );
-    sensitive << ( ap_predicate_op241_write_state21 );
-    sensitive << ( ap_predicate_op243_write_state21 );
-
     SC_METHOD(thread_ap_block_state21_pp0_stage0_iter19);
+
+    SC_METHOD(thread_ap_block_state22_io);
+    sensitive << ( out_pixel_V_1_ack_in );
+    sensitive << ( ap_predicate_op131_write_state22 );
+    sensitive << ( ap_predicate_op132_write_state22 );
+    sensitive << ( ap_predicate_op133_write_state22 );
+    sensitive << ( ap_predicate_op134_write_state22 );
+    sensitive << ( ap_predicate_op135_write_state22 );
+    sensitive << ( ap_predicate_op136_write_state22 );
+    sensitive << ( ap_predicate_op137_write_state22 );
+    sensitive << ( ap_predicate_op138_write_state22 );
+
+    SC_METHOD(thread_ap_block_state22_pp0_stage0_iter20);
+
+    SC_METHOD(thread_ap_block_state23_io);
+    sensitive << ( out_pixel_V_1_ack_in );
+    sensitive << ( ap_predicate_op147_write_state23 );
+    sensitive << ( ap_predicate_op149_write_state23 );
+    sensitive << ( ap_predicate_op151_write_state23 );
+    sensitive << ( ap_predicate_op153_write_state23 );
+    sensitive << ( ap_predicate_op155_write_state23 );
+    sensitive << ( ap_predicate_op157_write_state23 );
+    sensitive << ( ap_predicate_op159_write_state23 );
+    sensitive << ( ap_predicate_op161_write_state23 );
+
+    SC_METHOD(thread_ap_block_state23_pp0_stage0_iter21);
     sensitive << ( out_pixel_V_1_ack_in );
 
     SC_METHOD(thread_ap_block_state2_pp0_stage0_iter0);
 
     SC_METHOD(thread_ap_block_state3_pp0_stage0_iter1);
     sensitive << ( in_pixel_V_0_vld_out );
-    sensitive << ( do_init_reg_177 );
+    sensitive << ( do_init_reg_143 );
 
     SC_METHOD(thread_ap_block_state4_pp0_stage0_iter2);
 
@@ -192,7 +213,7 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sensitive << ( ap_enable_reg_pp0_iter1 );
     sensitive << ( ap_block_pp0_stage0 );
 
-    SC_METHOD(thread_ap_condition_622);
+    SC_METHOD(thread_ap_condition_501);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_enable_reg_pp0_iter1 );
     sensitive << ( ap_block_pp0_stage0_11001 );
@@ -202,10 +223,10 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
 
     SC_METHOD(thread_ap_idle_pp0);
     sensitive << ( ap_enable_reg_pp0_iter1 );
-    sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_enable_reg_pp0_iter19 );
-    sensitive << ( ap_enable_reg_pp0_iter17 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_enable_reg_pp0_iter21 );
     sensitive << ( ap_enable_reg_pp0_iter2 );
+    sensitive << ( ap_enable_reg_pp0_iter19 );
     sensitive << ( ap_enable_reg_pp0_iter3 );
     sensitive << ( ap_enable_reg_pp0_iter4 );
     sensitive << ( ap_enable_reg_pp0_iter5 );
@@ -220,195 +241,154 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sensitive << ( ap_enable_reg_pp0_iter14 );
     sensitive << ( ap_enable_reg_pp0_iter15 );
     sensitive << ( ap_enable_reg_pp0_iter16 );
-
-    SC_METHOD(thread_ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4);
-    sensitive << ( in_pixel_V_0_data_out );
-    sensitive << ( do_init_reg_177 );
-    sensitive << ( ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6 );
-    sensitive << ( ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222 );
-    sensitive << ( ap_condition_165 );
-
-    SC_METHOD(thread_ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( in_pixel_V9_rewind_reg_208 );
-    sensitive << ( in_pixel_V9_phi_reg_222 );
-    sensitive << ( ap_reg_pp0_iter1_exitcond_reg_1038 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_ap_phi_mux_minimumDistance4_phi_fu_240_p6);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( minimumDistance4_reg_236 );
-    sensitive << ( ap_reg_pp0_iter16_exitcond_reg_1038 );
     sensitive << ( ap_enable_reg_pp0_iter17 );
-    sensitive << ( minimumDistance_2_2_fu_999_p3 );
-
-    SC_METHOD(thread_ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6);
-    sensitive << ( ap_block_pp0_stage0 );
     sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
-    sensitive << ( minimumDistanceIndex_1_reg_250 );
 
-    SC_METHOD(thread_ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6);
-    sensitive << ( exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_6_reg_193 );
-    sensitive << ( tmp_29_reg_1033 );
+    SC_METHOD(thread_ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4);
+    sensitive << ( ap_block_pp0_stage0 );
+    sensitive << ( ap_reg_pp0_iter1_do_init_reg_143 );
+    sensitive << ( ap_enable_reg_pp0_iter2 );
+    sensitive << ( ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6 );
+    sensitive << ( ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188 );
+
+    SC_METHOD(thread_ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6);
+    sensitive << ( ap_block_pp0_stage0 );
+    sensitive << ( in_pixel_V5_rewind_reg_174 );
+    sensitive << ( in_pixel_V5_phi_reg_188 );
+    sensitive << ( ap_reg_pp0_iter2_exitcond_reg_464 );
+    sensitive << ( ap_enable_reg_pp0_iter3 );
+
+    SC_METHOD(thread_ap_phi_mux_minimumDistance4_phi_fu_205_p6);
+    sensitive << ( ap_block_pp0_stage0 );
+    sensitive << ( minimumDistance4_reg_201 );
+    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_464 );
+    sensitive << ( ap_enable_reg_pp0_iter19 );
+    sensitive << ( minimumDistance_2_2_fu_430_p3 );
+
+    SC_METHOD(thread_ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6);
+    sensitive << ( ap_block_pp0_stage0 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
+    sensitive << ( minimumDistanceIndex_3_reg_215 );
+
+    SC_METHOD(thread_ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6);
+    sensitive << ( exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_9_reg_159 );
+    sensitive << ( tmp_4_reg_459 );
     sensitive << ( ap_condition_165 );
 
-    SC_METHOD(thread_ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222);
+    SC_METHOD(thread_ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188);
 
-    SC_METHOD(thread_ap_predicate_op219_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op131_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op220_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op132_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op221_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op133_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op222_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op134_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op223_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op135_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op224_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op136_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op225_write_state20);
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op137_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op231_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op138_write_state22);
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op233_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op147_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op235_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op149_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op237_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op151_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op239_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op153_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op241_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op155_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
-    SC_METHOD(thread_ap_predicate_op243_write_state21);
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    SC_METHOD(thread_ap_predicate_op157_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
+
+    SC_METHOD(thread_ap_predicate_op159_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
+
+    SC_METHOD(thread_ap_predicate_op161_write_state23);
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
     SC_METHOD(thread_ap_reset_idle_pp0);
 
     SC_METHOD(thread_ap_rst_n_inv);
     sensitive << ( ap_rst_n );
 
-    SC_METHOD(thread_colorBlue_V_1_fu_430_p4);
-    sensitive << ( p_color_array_stream_s_q1 );
-
-    SC_METHOD(thread_colorBlue_V_2_fu_486_p4);
-    sensitive << ( p_color_array_stream_s_q2 );
-
-    SC_METHOD(thread_colorBlue_V_fu_362_p4);
-    sensitive << ( p_color_array_stream_s_q0 );
-
-    SC_METHOD(thread_colorGreen_V_1_fu_426_p1);
-    sensitive << ( p_color_array_stream_s_q1 );
-
-    SC_METHOD(thread_colorGreen_V_2_fu_482_p1);
-    sensitive << ( p_color_array_stream_s_q2 );
-
-    SC_METHOD(thread_colorGreen_V_fu_358_p1);
-    sensitive << ( p_color_array_stream_s_q0 );
-
-    SC_METHOD(thread_distance_0_minimumDi_1_fu_899_p3);
-    sensitive << ( tmp_2_1_fu_894_p2 );
-    sensitive << ( tmp_5_i_fu_885_p1 );
-    sensitive << ( minimumDistance_2_fu_877_p3 );
-
-    SC_METHOD(thread_distance_0_minimumDi_2_fu_984_p3);
-    sensitive << ( minimumDistance_2_1_reg_1178 );
-    sensitive << ( tmp_5_i2_fu_963_p1 );
-    sensitive << ( tmp_2_2_fu_971_p2 );
-
-    SC_METHOD(thread_distance_0_minimumDi_fu_869_p3);
-    sensitive << ( tmp_2_fu_864_p2 );
-    sensitive << ( ap_phi_mux_minimumDistance4_phi_fu_240_p6 );
-    sensitive << ( tmp_5_i1_fu_855_p1 );
-
-    SC_METHOD(thread_exitcond_fu_320_p2);
+    SC_METHOD(thread_exitcond_fu_280_p2);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( i_2_fu_310_p2 );
+    sensitive << ( i_2_fu_270_p2 );
 
-    SC_METHOD(thread_grp_fxp_sqrt_fu_264_ap_ce);
+    SC_METHOD(thread_grp_getColorDistance_Str_fu_229_ap_ce);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
-    SC_METHOD(thread_grp_fxp_sqrt_fu_264_in_val_V_read);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter3 );
-    sensitive << ( p_Val2_cast_fu_678_p1 );
-    sensitive << ( tmp6_cast_fu_702_p1 );
+    SC_METHOD(thread_grp_getColorDistance_Str_fu_229_ap_start);
+    sensitive << ( ap_reg_grp_getColorDistance_Str_fu_229_ap_start );
 
-    SC_METHOD(thread_grp_fxp_sqrt_fu_269_ap_ce);
+    SC_METHOD(thread_grp_getColorDistance_Str_fu_236_ap_ce);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
-    SC_METHOD(thread_grp_fxp_sqrt_fu_269_in_val_V_read);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter3 );
-    sensitive << ( p_Val2_3_cast_fu_720_p1 );
-    sensitive << ( tmp10_cast_fu_744_p1 );
+    SC_METHOD(thread_grp_getColorDistance_Str_fu_236_ap_start);
+    sensitive << ( ap_reg_grp_getColorDistance_Str_fu_236_ap_start );
 
-    SC_METHOD(thread_grp_fxp_sqrt_fu_274_ap_ce);
+    SC_METHOD(thread_grp_getColorDistance_Str_fu_243_ap_ce);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
-    SC_METHOD(thread_i_0_minimumDistanceI_1_fu_946_p3);
-    sensitive << ( tmp_2_1_reg_1173 );
-    sensitive << ( i_cast_fu_943_p1 );
-    sensitive << ( minimumDistanceIndex_2_fu_936_p3 );
+    SC_METHOD(thread_grp_getColorDistance_Str_fu_243_ap_start);
+    sensitive << ( ap_reg_grp_getColorDistance_Str_fu_243_ap_start );
 
-    SC_METHOD(thread_i_0_minimumDistanceI_2_fu_976_p3);
-    sensitive << ( tmp_2_2_fu_971_p2 );
-    sensitive << ( i_1_cast_fu_960_p1 );
-    sensitive << ( minimumDistanceIndex_4_fu_953_p3 );
+    SC_METHOD(thread_i_1_cast_fu_391_p1);
+    sensitive << ( ap_reg_pp0_iter18_i_1_reg_483 );
 
-    SC_METHOD(thread_i_0_minimumDistanceI_fu_929_p3);
-    sensitive << ( tmp_2_reg_1163 );
-    sensitive << ( ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6 );
-    sensitive << ( minimumDistanceIndex_3_fu_925_p1 );
+    SC_METHOD(thread_i_1_fu_286_p2);
+    sensitive << ( minimumDistanceIndex_reg_439 );
 
-    SC_METHOD(thread_i_1_cast_fu_960_p1);
-    sensitive << ( ap_reg_pp0_iter16_i_1_reg_1023 );
+    SC_METHOD(thread_i_2_fu_270_p2);
+    sensitive << ( minimumDistanceIndex_fu_250_p1 );
 
-    SC_METHOD(thread_i_1_fu_299_p2);
-    sensitive << ( minimumDistanceIndex_fu_279_p1 );
+    SC_METHOD(thread_i_cast_fu_374_p1);
+    sensitive << ( ap_reg_pp0_iter18_i_reg_449 );
 
-    SC_METHOD(thread_i_2_fu_310_p2);
-    sensitive << ( minimumDistanceIndex_fu_279_p1 );
-
-    SC_METHOD(thread_i_cast_fu_943_p1);
-    sensitive << ( ap_reg_pp0_iter16_i_reg_1013 );
-
-    SC_METHOD(thread_i_fu_288_p2);
-    sensitive << ( minimumDistanceIndex_fu_279_p1 );
+    SC_METHOD(thread_i_fu_259_p2);
+    sensitive << ( minimumDistanceIndex_fu_250_p1 );
 
     SC_METHOD(thread_in_pixel_V_0_ack_in);
     sensitive << ( in_pixel_V_0_state );
@@ -416,7 +396,7 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     SC_METHOD(thread_in_pixel_V_0_ack_out);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_enable_reg_pp0_iter1 );
-    sensitive << ( do_init_reg_177 );
+    sensitive << ( do_init_reg_143 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
     SC_METHOD(thread_in_pixel_V_0_data_out);
@@ -449,55 +429,85 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_enable_reg_pp0_iter1 );
     sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( do_init_reg_177 );
+    sensitive << ( do_init_reg_143 );
 
     SC_METHOD(thread_in_pixel_V_TREADY);
     sensitive << ( in_pixel_V_0_state );
 
-    SC_METHOD(thread_lhs_V_1_fu_390_p1);
-    sensitive << ( pixelGreen_V_fu_336_p1 );
+    SC_METHOD(thread_minimumDistanceIndex_1_fu_360_p3);
+    sensitive << ( tmp_2_reg_515 );
+    sensitive << ( ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 );
+    sensitive << ( minimumDistanceIndex_4_fu_356_p1 );
 
-    SC_METHOD(thread_lhs_V_2_fu_404_p1);
-    sensitive << ( pixelBlue_V_fu_340_p4 );
+    SC_METHOD(thread_minimumDistanceIndex_2_fu_367_p3);
+    sensitive << ( tmp_1_reg_510 );
+    sensitive << ( ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 );
+    sensitive << ( minimumDistanceIndex_1_fu_360_p3 );
 
-    SC_METHOD(thread_lhs_V_fu_372_p1);
-    sensitive << ( pixelRed_V_fu_326_p4 );
+    SC_METHOD(thread_minimumDistanceIndex_4_fu_356_p1);
+    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159 );
 
-    SC_METHOD(thread_minimumDistanceIndex_2_fu_936_p3);
-    sensitive << ( tmp_1_reg_1158 );
-    sensitive << ( ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6 );
-    sensitive << ( i_0_minimumDistanceI_fu_929_p3 );
+    SC_METHOD(thread_minimumDistanceIndex_5_fu_377_p3);
+    sensitive << ( tmp_2_1_reg_525 );
+    sensitive << ( i_cast_fu_374_p1 );
+    sensitive << ( minimumDistanceIndex_2_fu_367_p3 );
 
-    SC_METHOD(thread_minimumDistanceIndex_3_fu_925_p1);
-    sensitive << ( ap_reg_pp0_iter16_minimumDistanceIndex_6_reg_193 );
+    SC_METHOD(thread_minimumDistanceIndex_6_fu_384_p3);
+    sensitive << ( tmp_1_1_reg_520 );
+    sensitive << ( minimumDistanceIndex_2_fu_367_p3 );
+    sensitive << ( minimumDistanceIndex_5_fu_377_p3 );
 
-    SC_METHOD(thread_minimumDistanceIndex_4_fu_953_p3);
-    sensitive << ( tmp_1_1_reg_1168 );
-    sensitive << ( minimumDistanceIndex_2_fu_936_p3 );
-    sensitive << ( i_0_minimumDistanceI_1_fu_946_p3 );
+    SC_METHOD(thread_minimumDistanceIndex_7_fu_407_p3);
+    sensitive << ( tmp_2_2_fu_402_p2 );
+    sensitive << ( i_1_cast_fu_391_p1 );
+    sensitive << ( minimumDistanceIndex_6_fu_384_p3 );
 
-    SC_METHOD(thread_minimumDistanceIndex_5_fu_991_p3);
-    sensitive << ( minimumDistanceIndex_4_fu_953_p3 );
-    sensitive << ( tmp_1_2_fu_966_p2 );
-    sensitive << ( i_0_minimumDistanceI_2_fu_976_p3 );
+    SC_METHOD(thread_minimumDistanceIndex_8_fu_422_p3);
+    sensitive << ( minimumDistanceIndex_6_fu_384_p3 );
+    sensitive << ( tmp_1_2_fu_397_p2 );
+    sensitive << ( minimumDistanceIndex_7_fu_407_p3 );
 
-    SC_METHOD(thread_minimumDistanceIndex_fu_279_p1);
-    sensitive << ( ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6 );
+    SC_METHOD(thread_minimumDistanceIndex_fu_250_p1);
+    sensitive << ( ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 );
 
-    SC_METHOD(thread_minimumDistance_2_1_fu_907_p3);
-    sensitive << ( tmp_1_1_fu_888_p2 );
-    sensitive << ( minimumDistance_2_fu_877_p3 );
-    sensitive << ( distance_0_minimumDi_1_fu_899_p3 );
+    SC_METHOD(thread_minimumDistance_1_1_fu_340_p3);
+    sensitive << ( tmp_2_1_fu_335_p2 );
+    sensitive << ( minimumDistance_4_1_s_fu_326_p1 );
+    sensitive << ( minimumDistance_2_fu_318_p3 );
 
-    SC_METHOD(thread_minimumDistance_2_2_fu_999_p3);
-    sensitive << ( minimumDistance_2_1_reg_1178 );
-    sensitive << ( tmp_1_2_fu_966_p2 );
-    sensitive << ( distance_0_minimumDi_2_fu_984_p3 );
+    SC_METHOD(thread_minimumDistance_1_2_fu_415_p3);
+    sensitive << ( minimumDistance_2_1_reg_530 );
+    sensitive << ( minimumDistance_4_2_s_fu_394_p1 );
+    sensitive << ( tmp_2_2_fu_402_p2 );
 
-    SC_METHOD(thread_minimumDistance_2_fu_877_p3);
-    sensitive << ( tmp_1_fu_858_p2 );
-    sensitive << ( ap_phi_mux_minimumDistance4_phi_fu_240_p6 );
-    sensitive << ( distance_0_minimumDi_fu_869_p3 );
+    SC_METHOD(thread_minimumDistance_1_fu_310_p3);
+    sensitive << ( tmp_2_fu_305_p2 );
+    sensitive << ( ap_phi_mux_minimumDistance4_phi_fu_205_p6 );
+    sensitive << ( minimumDistance_4_ex_fu_296_p1 );
+
+    SC_METHOD(thread_minimumDistance_2_1_fu_348_p3);
+    sensitive << ( tmp_1_1_fu_329_p2 );
+    sensitive << ( minimumDistance_2_fu_318_p3 );
+    sensitive << ( minimumDistance_1_1_fu_340_p3 );
+
+    SC_METHOD(thread_minimumDistance_2_2_fu_430_p3);
+    sensitive << ( minimumDistance_2_1_reg_530 );
+    sensitive << ( tmp_1_2_fu_397_p2 );
+    sensitive << ( minimumDistance_1_2_fu_415_p3 );
+
+    SC_METHOD(thread_minimumDistance_2_fu_318_p3);
+    sensitive << ( tmp_1_fu_299_p2 );
+    sensitive << ( ap_phi_mux_minimumDistance4_phi_fu_205_p6 );
+    sensitive << ( minimumDistance_1_fu_310_p3 );
+
+    SC_METHOD(thread_minimumDistance_4_1_s_fu_326_p1);
+    sensitive << ( minimumDistance_4_1_reg_504 );
+
+    SC_METHOD(thread_minimumDistance_4_2_s_fu_394_p1);
+    sensitive << ( minimumDistance_4_2_reg_537 );
+
+    SC_METHOD(thread_minimumDistance_4_ex_fu_296_p1);
+    sensitive << ( minimumDistance_4_reg_498 );
 
     SC_METHOD(thread_out_pixel_V_1_ack_in);
     sensitive << ( out_pixel_V_1_state );
@@ -506,15 +516,16 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sensitive << ( out_pixel_V_TREADY );
 
     SC_METHOD(thread_out_pixel_V_1_data_in);
-    sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_predicate_op219_write_state20 );
-    sensitive << ( ap_predicate_op220_write_state20 );
-    sensitive << ( ap_predicate_op221_write_state20 );
-    sensitive << ( ap_predicate_op222_write_state20 );
-    sensitive << ( ap_predicate_op223_write_state20 );
-    sensitive << ( ap_predicate_op224_write_state20 );
-    sensitive << ( ap_predicate_op225_write_state20 );
-    sensitive << ( ap_reg_pp0_iter17_in_pixel_V9_phi_reg_222 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_predicate_op131_write_state22 );
+    sensitive << ( ap_predicate_op132_write_state22 );
+    sensitive << ( ap_predicate_op133_write_state22 );
+    sensitive << ( ap_predicate_op134_write_state22 );
+    sensitive << ( ap_predicate_op135_write_state22 );
+    sensitive << ( ap_predicate_op136_write_state22 );
+    sensitive << ( ap_predicate_op137_write_state22 );
+    sensitive << ( ap_predicate_op138_write_state22 );
+    sensitive << ( ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188 );
     sensitive << ( ap_block_pp0_stage0_01001 );
 
     SC_METHOD(thread_out_pixel_V_1_data_out);
@@ -537,14 +548,15 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sensitive << ( out_pixel_V_1_state );
 
     SC_METHOD(thread_out_pixel_V_1_vld_in);
-    sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_predicate_op219_write_state20 );
-    sensitive << ( ap_predicate_op220_write_state20 );
-    sensitive << ( ap_predicate_op221_write_state20 );
-    sensitive << ( ap_predicate_op222_write_state20 );
-    sensitive << ( ap_predicate_op223_write_state20 );
-    sensitive << ( ap_predicate_op224_write_state20 );
-    sensitive << ( ap_predicate_op225_write_state20 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_predicate_op131_write_state22 );
+    sensitive << ( ap_predicate_op132_write_state22 );
+    sensitive << ( ap_predicate_op133_write_state22 );
+    sensitive << ( ap_predicate_op134_write_state22 );
+    sensitive << ( ap_predicate_op135_write_state22 );
+    sensitive << ( ap_predicate_op136_write_state22 );
+    sensitive << ( ap_predicate_op137_write_state22 );
+    sensitive << ( ap_predicate_op138_write_state22 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
     SC_METHOD(thread_out_pixel_V_1_vld_out);
@@ -556,87 +568,31 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     SC_METHOD(thread_out_pixel_V_TDATA_blk_n);
     sensitive << ( out_pixel_V_1_state );
     sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter18 );
-    sensitive << ( ap_reg_pp0_iter17_exitcond_reg_1038 );
-    sensitive << ( minimumDistanceIndex_5_reg_1191 );
-    sensitive << ( ap_enable_reg_pp0_iter19 );
-    sensitive << ( ap_reg_pp0_iter18_exitcond_reg_1038 );
-    sensitive << ( ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 );
+    sensitive << ( ap_enable_reg_pp0_iter20 );
+    sensitive << ( ap_reg_pp0_iter19_exitcond_reg_464 );
+    sensitive << ( minimumDistanceIndex_8_reg_543 );
+    sensitive << ( ap_enable_reg_pp0_iter21 );
+    sensitive << ( ap_reg_pp0_iter20_exitcond_reg_464 );
+    sensitive << ( ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 );
 
     SC_METHOD(thread_out_pixel_V_TVALID);
     sensitive << ( out_pixel_V_1_state );
 
-    SC_METHOD(thread_p_Val2_10_cast_cas_fu_815_p1);
-    sensitive << ( p_Val2_2_fu_809_p2 );
-
-    SC_METHOD(thread_p_Val2_1_cast_fu_689_p1);
-    sensitive << ( tmp_6_fu_682_p3 );
-
-    SC_METHOD(thread_p_Val2_1_fu_644_p2);
-    sensitive << ( p_shl_i_cast_fu_628_p1 );
-    sensitive << ( p_shl3_i_cast_fu_640_p1 );
-
-    SC_METHOD(thread_p_Val2_2_cast_cast_fu_693_p1);
-    sensitive << ( p_Val2_s_reg_1100 );
-
-    SC_METHOD(thread_p_Val2_2_fu_809_p2);
-    sensitive << ( p_shl_i2_cast_fu_794_p1 );
-    sensitive << ( p_shl3_i2_cast_fu_805_p1 );
-
-    SC_METHOD(thread_p_Val2_3_cast_fu_720_p1);
-    sensitive << ( tmp_5_fu_713_p3 );
-
-    SC_METHOD(thread_p_Val2_4_cast_fu_731_p1);
-    sensitive << ( tmp_8_fu_724_p3 );
-
-    SC_METHOD(thread_p_Val2_6_cast5_fu_772_p1);
-    sensitive << ( tmp_11_fu_764_p3 );
-
-    SC_METHOD(thread_p_Val2_6_cast_cast_fu_735_p1);
-    sensitive << ( p_Val2_1_reg_1115 );
-
-    SC_METHOD(thread_p_Val2_7_cast_fu_783_p1);
-    sensitive << ( tmp_12_fu_776_p3 );
-
-    SC_METHOD(thread_p_Val2_cast_fu_678_p1);
-    sensitive << ( tmp_4_fu_671_p3 );
-
-    SC_METHOD(thread_p_Val2_s_fu_584_p2);
-    sensitive << ( p_shl_i1_cast_fu_568_p1 );
-    sensitive << ( p_shl3_i1_cast_fu_580_p1 );
-
-    SC_METHOD(thread_p_cast1_fu_530_p1);
-    sensitive << ( r_V_reg_1042 );
-
-    SC_METHOD(thread_p_cast2_fu_539_p1);
-    sensitive << ( r_V_1_reg_1047 );
-
-    SC_METHOD(thread_p_cast3_fu_590_p1);
-    sensitive << ( r_V_3_reg_1058 );
-
-    SC_METHOD(thread_p_cast4_fu_599_p1);
-    sensitive << ( r_V_4_reg_1063 );
-
-    SC_METHOD(thread_p_cast5_fu_755_p1);
-    sensitive << ( ap_reg_pp0_iter2_r_V_6_reg_1074 );
-
-    SC_METHOD(thread_p_cast_fu_650_p1);
-    sensitive << ( r_V_7_reg_1079 );
-
     SC_METHOD(thread_p_color_array_stream_s_address0);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( tmp1_fu_283_p1 );
+    sensitive << ( tmp1_fu_254_p1 );
 
     SC_METHOD(thread_p_color_array_stream_s_address1);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
     sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( tmp_s_fu_294_p1 );
+    sensitive << ( tmp_s_fu_265_p1 );
 
     SC_METHOD(thread_p_color_array_stream_s_address2);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
+    sensitive << ( ap_enable_reg_pp0_iter1 );
     sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( tmp_3_fu_305_p1 );
+    sensitive << ( tmp_3_fu_291_p1 );
 
     SC_METHOD(thread_p_color_array_stream_s_ce0);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
@@ -648,347 +604,53 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
 
     SC_METHOD(thread_p_color_array_stream_s_ce2);
     sensitive << ( ap_CS_fsm_pp0_stage0 );
+    sensitive << ( ap_enable_reg_pp0_iter1 );
     sensitive << ( ap_block_pp0_stage0_11001 );
 
-    SC_METHOD(thread_p_shl3_i1_cast_fu_580_p1);
-    sensitive << ( p_shl3_i1_fu_572_p3 );
+    SC_METHOD(thread_tmp1_fu_254_p1);
+    sensitive << ( ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 );
 
-    SC_METHOD(thread_p_shl3_i1_fu_572_p3);
-    sensitive << ( tmp_16_fu_554_p2 );
-
-    SC_METHOD(thread_p_shl3_i2_cast_fu_805_p1);
-    sensitive << ( p_shl3_i2_fu_798_p3 );
-
-    SC_METHOD(thread_p_shl3_i2_fu_798_p3);
-    sensitive << ( tmp_28_reg_1125 );
-
-    SC_METHOD(thread_p_shl3_i_cast_fu_640_p1);
-    sensitive << ( p_shl3_i_fu_632_p3 );
-
-    SC_METHOD(thread_p_shl3_i_fu_632_p3);
-    sensitive << ( tmp_23_fu_614_p2 );
-
-    SC_METHOD(thread_p_shl_i1_cast_fu_568_p1);
-    sensitive << ( p_shl_i1_fu_560_p3 );
-
-    SC_METHOD(thread_p_shl_i1_fu_560_p3);
-    sensitive << ( tmp_16_fu_554_p2 );
-
-    SC_METHOD(thread_p_shl_i2_cast_fu_794_p1);
-    sensitive << ( p_shl_i2_fu_787_p3 );
-
-    SC_METHOD(thread_p_shl_i2_fu_787_p3);
-    sensitive << ( tmp_28_reg_1125 );
-
-    SC_METHOD(thread_p_shl_i_cast_fu_628_p1);
-    sensitive << ( p_shl_i_fu_620_p3 );
-
-    SC_METHOD(thread_p_shl_i_fu_620_p3);
-    sensitive << ( tmp_23_fu_614_p2 );
-
-    SC_METHOD(thread_pixelBlue_V_fu_340_p4);
-    sensitive << ( ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 );
-
-    SC_METHOD(thread_pixelGreen_V_fu_336_p1);
-    sensitive << ( ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 );
-
-    SC_METHOD(thread_pixelRed_V_fu_326_p4);
-    sensitive << ( ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 );
-
-    SC_METHOD(thread_powerSummation_V_2_fu_829_p2);
-    sensitive << ( p_Val2_6_cast5_fu_772_p1 );
-    sensitive << ( tmp14_cast_fu_825_p1 );
-
-    SC_METHOD(thread_r_V_1_fu_398_p2);
-    sensitive << ( lhs_V_1_fu_390_p1 );
-    sensitive << ( rhs_V_1_fu_394_p1 );
-
-    SC_METHOD(thread_r_V_2_fu_412_p2);
-    sensitive << ( lhs_V_2_fu_404_p1 );
-    sensitive << ( rhs_V_2_fu_408_p1 );
-
-    SC_METHOD(thread_r_V_3_fu_448_p2);
-    sensitive << ( lhs_V_fu_372_p1 );
-    sensitive << ( rhs_V_3_cast_fu_440_p3 );
-
-    SC_METHOD(thread_r_V_4_fu_458_p2);
-    sensitive << ( lhs_V_1_fu_390_p1 );
-    sensitive << ( rhs_V_4_fu_454_p1 );
-
-    SC_METHOD(thread_r_V_5_fu_468_p2);
-    sensitive << ( lhs_V_2_fu_404_p1 );
-    sensitive << ( rhs_V_5_fu_464_p1 );
-
-    SC_METHOD(thread_r_V_6_fu_504_p2);
-    sensitive << ( lhs_V_fu_372_p1 );
-    sensitive << ( rhs_V_6_cast_fu_496_p3 );
-
-    SC_METHOD(thread_r_V_7_fu_514_p2);
-    sensitive << ( lhs_V_1_fu_390_p1 );
-    sensitive << ( rhs_V_7_fu_510_p1 );
-
-    SC_METHOD(thread_r_V_8_fu_524_p2);
-    sensitive << ( lhs_V_2_fu_404_p1 );
-    sensitive << ( rhs_V_8_fu_520_p1 );
-
-    SC_METHOD(thread_r_V_fu_384_p2);
-    sensitive << ( lhs_V_fu_372_p1 );
-    sensitive << ( rhs_V_cast_fu_376_p3 );
-
-    SC_METHOD(thread_result3_fu_533_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast1_fu_530_p1 );
-
-    SC_METHOD(thread_result3_fu_533_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast1_fu_530_p1 );
-
-    SC_METHOD(thread_result3_fu_533_p2);
-    sensitive << ( result3_fu_533_p0 );
-    sensitive << ( result3_fu_533_p1 );
-
-    SC_METHOD(thread_result_2_fu_593_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast3_fu_590_p1 );
-
-    SC_METHOD(thread_result_2_fu_593_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast3_fu_590_p1 );
-
-    SC_METHOD(thread_result_2_fu_593_p2);
-    sensitive << ( result_2_fu_593_p0 );
-    sensitive << ( result_2_fu_593_p1 );
-
-    SC_METHOD(thread_result_3_fu_653_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast_fu_650_p1 );
-
-    SC_METHOD(thread_result_3_fu_653_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast_fu_650_p1 );
-
-    SC_METHOD(thread_result_3_fu_653_p2);
-    sensitive << ( result_3_fu_653_p0 );
-    sensitive << ( result_3_fu_653_p1 );
-
-    SC_METHOD(thread_result_4_fu_602_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast4_fu_599_p1 );
-
-    SC_METHOD(thread_result_4_fu_602_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast4_fu_599_p1 );
-
-    SC_METHOD(thread_result_4_fu_602_p2);
-    sensitive << ( result_4_fu_602_p0 );
-    sensitive << ( result_4_fu_602_p1 );
-
-    SC_METHOD(thread_result_7_fu_758_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter3 );
-    sensitive << ( p_cast5_fu_755_p1 );
-
-    SC_METHOD(thread_result_7_fu_758_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter3 );
-    sensitive << ( p_cast5_fu_755_p1 );
-
-    SC_METHOD(thread_result_7_fu_758_p2);
-    sensitive << ( result_7_fu_758_p0 );
-    sensitive << ( result_7_fu_758_p1 );
-
-    SC_METHOD(thread_result_s_fu_542_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast2_fu_539_p1 );
-
-    SC_METHOD(thread_result_s_fu_542_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-    sensitive << ( p_cast2_fu_539_p1 );
-
-    SC_METHOD(thread_result_s_fu_542_p2);
-    sensitive << ( result_s_fu_542_p0 );
-    sensitive << ( result_s_fu_542_p1 );
-
-    SC_METHOD(thread_rhs_V_1_fu_394_p1);
-    sensitive << ( colorGreen_V_fu_358_p1 );
-
-    SC_METHOD(thread_rhs_V_2_fu_408_p1);
-    sensitive << ( colorBlue_V_fu_362_p4 );
-
-    SC_METHOD(thread_rhs_V_3_cast_fu_440_p3);
-    sensitive << ( rhs_V_3_fu_418_p3 );
-
-    SC_METHOD(thread_rhs_V_3_fu_418_p3);
-    sensitive << ( p_color_array_stream_s_q1 );
-
-    SC_METHOD(thread_rhs_V_4_fu_454_p1);
-    sensitive << ( colorGreen_V_1_fu_426_p1 );
-
-    SC_METHOD(thread_rhs_V_5_fu_464_p1);
-    sensitive << ( colorBlue_V_1_fu_430_p4 );
-
-    SC_METHOD(thread_rhs_V_6_cast_fu_496_p3);
-    sensitive << ( rhs_V_6_fu_474_p3 );
-
-    SC_METHOD(thread_rhs_V_6_fu_474_p3);
-    sensitive << ( p_color_array_stream_s_q2 );
-
-    SC_METHOD(thread_rhs_V_7_fu_510_p1);
-    sensitive << ( colorGreen_V_2_fu_482_p1 );
-
-    SC_METHOD(thread_rhs_V_8_fu_520_p1);
-    sensitive << ( colorBlue_V_2_fu_486_p4 );
-
-    SC_METHOD(thread_rhs_V_cast_fu_376_p3);
-    sensitive << ( rhs_V_fu_350_p3 );
-
-    SC_METHOD(thread_rhs_V_fu_350_p3);
-    sensitive << ( p_color_array_stream_s_q0 );
-
-    SC_METHOD(thread_tmp10_cast_fu_744_p1);
-    sensitive << ( tmp10_fu_738_p2 );
-
-    SC_METHOD(thread_tmp10_fu_738_p2);
-    sensitive << ( p_Val2_6_cast_cast_fu_735_p1 );
-    sensitive << ( p_Val2_4_cast_fu_731_p1 );
-
-    SC_METHOD(thread_tmp14_cast_fu_825_p1);
-    sensitive << ( tmp14_fu_819_p2 );
-
-    SC_METHOD(thread_tmp14_fu_819_p2);
-    sensitive << ( p_Val2_10_cast_cas_fu_815_p1 );
-    sensitive << ( p_Val2_7_cast_fu_783_p1 );
-
-    SC_METHOD(thread_tmp1_fu_283_p1);
-    sensitive << ( ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6 );
-
-    SC_METHOD(thread_tmp6_cast_fu_702_p1);
-    sensitive << ( tmp6_fu_696_p2 );
-
-    SC_METHOD(thread_tmp6_fu_696_p2);
-    sensitive << ( p_Val2_2_cast_cast_fu_693_p1 );
-    sensitive << ( p_Val2_1_cast_fu_689_p1 );
-
-    SC_METHOD(thread_tmp_11_fu_764_p3);
-    sensitive << ( result_7_fu_758_p2 );
-
-    SC_METHOD(thread_tmp_12_fu_776_p3);
-    sensitive << ( result_3_reg_1120 );
-
-    SC_METHOD(thread_tmp_16_fu_554_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( r_V_2_reg_1052 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_tmp_16_fu_554_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( r_V_2_reg_1052 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_tmp_16_fu_554_p2);
-    sensitive << ( tmp_16_fu_554_p0 );
-    sensitive << ( tmp_16_fu_554_p1 );
-
-    SC_METHOD(thread_tmp_1_1_fu_888_p2);
+    SC_METHOD(thread_tmp_1_1_fu_329_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( ap_enable_reg_pp0_iter16 );
-    sensitive << ( tmp_5_i_fu_885_p1 );
-    sensitive << ( minimumDistance_2_fu_877_p3 );
+    sensitive << ( ap_enable_reg_pp0_iter18 );
+    sensitive << ( minimumDistance_4_1_s_fu_326_p1 );
+    sensitive << ( minimumDistance_2_fu_318_p3 );
 
-    SC_METHOD(thread_tmp_1_2_fu_966_p2);
+    SC_METHOD(thread_tmp_1_2_fu_397_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( minimumDistance_2_1_reg_1178 );
-    sensitive << ( ap_enable_reg_pp0_iter17 );
-    sensitive << ( tmp_5_i2_fu_963_p1 );
+    sensitive << ( minimumDistance_2_1_reg_530 );
+    sensitive << ( ap_enable_reg_pp0_iter19 );
+    sensitive << ( minimumDistance_4_2_s_fu_394_p1 );
 
-    SC_METHOD(thread_tmp_1_fu_858_p2);
+    SC_METHOD(thread_tmp_1_fu_299_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( ap_enable_reg_pp0_iter16 );
-    sensitive << ( ap_phi_mux_minimumDistance4_phi_fu_240_p6 );
-    sensitive << ( tmp_5_i1_fu_855_p1 );
+    sensitive << ( ap_enable_reg_pp0_iter18 );
+    sensitive << ( ap_phi_mux_minimumDistance4_phi_fu_205_p6 );
+    sensitive << ( minimumDistance_4_ex_fu_296_p1 );
 
-    SC_METHOD(thread_tmp_23_fu_614_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( r_V_5_reg_1068 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_tmp_23_fu_614_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( r_V_5_reg_1068 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_tmp_23_fu_614_p2);
-    sensitive << ( tmp_23_fu_614_p0 );
-    sensitive << ( tmp_23_fu_614_p1 );
-
-    SC_METHOD(thread_tmp_28_fu_665_p0);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( r_V_8_reg_1084 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_tmp_28_fu_665_p1);
-    sensitive << ( ap_block_pp0_stage0 );
-    sensitive << ( r_V_8_reg_1084 );
-    sensitive << ( ap_enable_reg_pp0_iter2 );
-
-    SC_METHOD(thread_tmp_28_fu_665_p2);
-    sensitive << ( tmp_28_fu_665_p0 );
-    sensitive << ( tmp_28_fu_665_p1 );
-
-    SC_METHOD(thread_tmp_29_fu_316_p1);
-    sensitive << ( i_2_fu_310_p2 );
-
-    SC_METHOD(thread_tmp_2_1_fu_894_p2);
+    SC_METHOD(thread_tmp_2_1_fu_335_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( tmp_9_reg_1152 );
-    sensitive << ( ap_enable_reg_pp0_iter16 );
+    sensitive << ( minimumDistance_4_1_reg_504 );
+    sensitive << ( ap_enable_reg_pp0_iter18 );
 
-    SC_METHOD(thread_tmp_2_2_fu_971_p2);
+    SC_METHOD(thread_tmp_2_2_fu_402_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( tmp_14_reg_1185 );
-    sensitive << ( ap_enable_reg_pp0_iter17 );
+    sensitive << ( minimumDistance_4_2_reg_537 );
+    sensitive << ( ap_enable_reg_pp0_iter19 );
 
-    SC_METHOD(thread_tmp_2_fu_864_p2);
+    SC_METHOD(thread_tmp_2_fu_305_p2);
     sensitive << ( ap_block_pp0_stage0_11001 );
-    sensitive << ( tmp_7_reg_1146 );
-    sensitive << ( ap_enable_reg_pp0_iter16 );
+    sensitive << ( minimumDistance_4_reg_498 );
+    sensitive << ( ap_enable_reg_pp0_iter18 );
 
-    SC_METHOD(thread_tmp_3_fu_305_p1);
-    sensitive << ( i_1_fu_299_p2 );
+    SC_METHOD(thread_tmp_3_fu_291_p1);
+    sensitive << ( i_1_fu_286_p2 );
 
-    SC_METHOD(thread_tmp_4_fu_671_p3);
-    sensitive << ( result3_reg_1090 );
+    SC_METHOD(thread_tmp_4_fu_276_p1);
+    sensitive << ( i_2_fu_270_p2 );
 
-    SC_METHOD(thread_tmp_5_fu_713_p3);
-    sensitive << ( result_2_reg_1105 );
-
-    SC_METHOD(thread_tmp_5_i1_fu_855_p1);
-    sensitive << ( tmp_7_reg_1146 );
-
-    SC_METHOD(thread_tmp_5_i2_fu_963_p1);
-    sensitive << ( tmp_14_reg_1185 );
-
-    SC_METHOD(thread_tmp_5_i_fu_885_p1);
-    sensitive << ( tmp_9_reg_1152 );
-
-    SC_METHOD(thread_tmp_6_fu_682_p3);
-    sensitive << ( result_s_reg_1095 );
-
-    SC_METHOD(thread_tmp_8_fu_724_p3);
-    sensitive << ( result_4_reg_1110 );
-
-    SC_METHOD(thread_tmp_s_fu_294_p1);
-    sensitive << ( i_fu_288_p2 );
+    SC_METHOD(thread_tmp_s_fu_265_p1);
+    sensitive << ( i_fu_259_p2 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_CS_fsm );
@@ -998,6 +660,8 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
 
+    SC_THREAD(thread_ap_var_for_const0);
+
     in_pixel_V_0_sel_rd = SC_LOGIC_0;
     in_pixel_V_0_sel_wr = SC_LOGIC_0;
     in_pixel_V_0_state = "00";
@@ -1006,10 +670,10 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     out_pixel_V_1_state = "00";
     ap_CS_fsm = "01";
     ap_enable_reg_pp0_iter1 = SC_LOGIC_0;
-    ap_enable_reg_pp0_iter18 = SC_LOGIC_0;
-    ap_enable_reg_pp0_iter19 = SC_LOGIC_0;
-    ap_enable_reg_pp0_iter17 = SC_LOGIC_0;
+    ap_enable_reg_pp0_iter20 = SC_LOGIC_0;
+    ap_enable_reg_pp0_iter21 = SC_LOGIC_0;
     ap_enable_reg_pp0_iter2 = SC_LOGIC_0;
+    ap_enable_reg_pp0_iter19 = SC_LOGIC_0;
     ap_enable_reg_pp0_iter3 = SC_LOGIC_0;
     ap_enable_reg_pp0_iter4 = SC_LOGIC_0;
     ap_enable_reg_pp0_iter5 = SC_LOGIC_0;
@@ -1024,6 +688,11 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     ap_enable_reg_pp0_iter14 = SC_LOGIC_0;
     ap_enable_reg_pp0_iter15 = SC_LOGIC_0;
     ap_enable_reg_pp0_iter16 = SC_LOGIC_0;
+    ap_enable_reg_pp0_iter17 = SC_LOGIC_0;
+    ap_enable_reg_pp0_iter18 = SC_LOGIC_0;
+    ap_reg_grp_getColorDistance_Str_fu_229_ap_start = SC_LOGIC_0;
+    ap_reg_grp_getColorDistance_Str_fu_236_ap_start = SC_LOGIC_0;
+    ap_reg_grp_getColorDistance_Str_fu_243_ap_start = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "getPixelClassification_Stream_sc_trace_" << apTFileNum ++;
@@ -1086,15 +755,16 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sc_trace(mVcdFile, ap_CS_fsm_pp0_stage0, "ap_CS_fsm_pp0_stage0");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter1, "ap_enable_reg_pp0_iter1");
     sc_trace(mVcdFile, ap_block_pp0_stage0, "ap_block_pp0_stage0");
-    sc_trace(mVcdFile, do_init_reg_177, "do_init_reg_177");
+    sc_trace(mVcdFile, do_init_reg_143, "do_init_reg_143");
     sc_trace(mVcdFile, out_pixel_V_TDATA_blk_n, "out_pixel_V_TDATA_blk_n");
-    sc_trace(mVcdFile, ap_enable_reg_pp0_iter18, "ap_enable_reg_pp0_iter18");
-    sc_trace(mVcdFile, exitcond_reg_1038, "exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter17_exitcond_reg_1038, "ap_reg_pp0_iter17_exitcond_reg_1038");
-    sc_trace(mVcdFile, minimumDistanceIndex_5_reg_1191, "minimumDistanceIndex_5_reg_1191");
-    sc_trace(mVcdFile, ap_enable_reg_pp0_iter19, "ap_enable_reg_pp0_iter19");
-    sc_trace(mVcdFile, ap_reg_pp0_iter18_exitcond_reg_1038, "ap_reg_pp0_iter18_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191, "ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191");
+    sc_trace(mVcdFile, ap_enable_reg_pp0_iter20, "ap_enable_reg_pp0_iter20");
+    sc_trace(mVcdFile, exitcond_reg_464, "exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter19_exitcond_reg_464, "ap_reg_pp0_iter19_exitcond_reg_464");
+    sc_trace(mVcdFile, minimumDistanceIndex_8_reg_543, "minimumDistanceIndex_8_reg_543");
+    sc_trace(mVcdFile, ap_enable_reg_pp0_iter21, "ap_enable_reg_pp0_iter21");
+    sc_trace(mVcdFile, ap_reg_pp0_iter20_exitcond_reg_464, "ap_reg_pp0_iter20_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543, "ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543");
+    sc_trace(mVcdFile, ap_reg_pp0_iter1_do_init_reg_143, "ap_reg_pp0_iter1_do_init_reg_143");
     sc_trace(mVcdFile, ap_block_state2_pp0_stage0_iter0, "ap_block_state2_pp0_stage0_iter0");
     sc_trace(mVcdFile, ap_block_state3_pp0_stage0_iter1, "ap_block_state3_pp0_stage0_iter1");
     sc_trace(mVcdFile, ap_block_state4_pp0_stage0_iter2, "ap_block_state4_pp0_stage0_iter2");
@@ -1114,171 +784,154 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sc_trace(mVcdFile, ap_block_state18_pp0_stage0_iter16, "ap_block_state18_pp0_stage0_iter16");
     sc_trace(mVcdFile, ap_block_state19_pp0_stage0_iter17, "ap_block_state19_pp0_stage0_iter17");
     sc_trace(mVcdFile, ap_block_state20_pp0_stage0_iter18, "ap_block_state20_pp0_stage0_iter18");
-    sc_trace(mVcdFile, ap_predicate_op219_write_state20, "ap_predicate_op219_write_state20");
-    sc_trace(mVcdFile, ap_predicate_op220_write_state20, "ap_predicate_op220_write_state20");
-    sc_trace(mVcdFile, ap_predicate_op221_write_state20, "ap_predicate_op221_write_state20");
-    sc_trace(mVcdFile, ap_predicate_op222_write_state20, "ap_predicate_op222_write_state20");
-    sc_trace(mVcdFile, ap_predicate_op223_write_state20, "ap_predicate_op223_write_state20");
-    sc_trace(mVcdFile, ap_predicate_op224_write_state20, "ap_predicate_op224_write_state20");
-    sc_trace(mVcdFile, ap_predicate_op225_write_state20, "ap_predicate_op225_write_state20");
-    sc_trace(mVcdFile, ap_block_state20_io, "ap_block_state20_io");
     sc_trace(mVcdFile, ap_block_state21_pp0_stage0_iter19, "ap_block_state21_pp0_stage0_iter19");
-    sc_trace(mVcdFile, ap_predicate_op231_write_state21, "ap_predicate_op231_write_state21");
-    sc_trace(mVcdFile, ap_predicate_op233_write_state21, "ap_predicate_op233_write_state21");
-    sc_trace(mVcdFile, ap_predicate_op235_write_state21, "ap_predicate_op235_write_state21");
-    sc_trace(mVcdFile, ap_predicate_op237_write_state21, "ap_predicate_op237_write_state21");
-    sc_trace(mVcdFile, ap_predicate_op239_write_state21, "ap_predicate_op239_write_state21");
-    sc_trace(mVcdFile, ap_predicate_op241_write_state21, "ap_predicate_op241_write_state21");
-    sc_trace(mVcdFile, ap_predicate_op243_write_state21, "ap_predicate_op243_write_state21");
-    sc_trace(mVcdFile, ap_block_state21_io, "ap_block_state21_io");
+    sc_trace(mVcdFile, ap_block_state22_pp0_stage0_iter20, "ap_block_state22_pp0_stage0_iter20");
+    sc_trace(mVcdFile, ap_predicate_op131_write_state22, "ap_predicate_op131_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op132_write_state22, "ap_predicate_op132_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op133_write_state22, "ap_predicate_op133_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op134_write_state22, "ap_predicate_op134_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op135_write_state22, "ap_predicate_op135_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op136_write_state22, "ap_predicate_op136_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op137_write_state22, "ap_predicate_op137_write_state22");
+    sc_trace(mVcdFile, ap_predicate_op138_write_state22, "ap_predicate_op138_write_state22");
+    sc_trace(mVcdFile, ap_block_state22_io, "ap_block_state22_io");
+    sc_trace(mVcdFile, ap_block_state23_pp0_stage0_iter21, "ap_block_state23_pp0_stage0_iter21");
+    sc_trace(mVcdFile, ap_predicate_op147_write_state23, "ap_predicate_op147_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op149_write_state23, "ap_predicate_op149_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op151_write_state23, "ap_predicate_op151_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op153_write_state23, "ap_predicate_op153_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op155_write_state23, "ap_predicate_op155_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op157_write_state23, "ap_predicate_op157_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op159_write_state23, "ap_predicate_op159_write_state23");
+    sc_trace(mVcdFile, ap_predicate_op161_write_state23, "ap_predicate_op161_write_state23");
+    sc_trace(mVcdFile, ap_block_state23_io, "ap_block_state23_io");
     sc_trace(mVcdFile, ap_block_pp0_stage0_11001, "ap_block_pp0_stage0_11001");
-    sc_trace(mVcdFile, minimumDistanceIndex_6_reg_193, "minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter1_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter1_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter2_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter2_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter3_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter3_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter4_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter4_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter5_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter5_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter6_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter6_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter7_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter7_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter8_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter8_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter9_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter9_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter10_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter10_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter11_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter11_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter12_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter12_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter13_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter13_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter14_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter14_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter15_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter15_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, ap_reg_pp0_iter16_minimumDistanceIndex_6_reg_193, "ap_reg_pp0_iter16_minimumDistanceIndex_6_reg_193");
-    sc_trace(mVcdFile, in_pixel_V9_rewind_reg_208, "in_pixel_V9_rewind_reg_208");
-    sc_trace(mVcdFile, in_pixel_V9_phi_reg_222, "in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter2_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter2_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter3_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter3_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter4_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter4_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter5_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter5_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter6_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter6_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter7_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter7_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter8_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter8_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter9_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter9_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter10_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter10_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter11_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter11_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter12_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter12_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter13_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter13_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter14_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter14_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter15_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter15_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter16_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter16_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_reg_pp0_iter17_in_pixel_V9_phi_reg_222, "ap_reg_pp0_iter17_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, minimumDistance4_reg_236, "minimumDistance4_reg_236");
-    sc_trace(mVcdFile, minimumDistanceIndex_1_reg_250, "minimumDistanceIndex_1_reg_250");
-    sc_trace(mVcdFile, i_fu_288_p2, "i_fu_288_p2");
-    sc_trace(mVcdFile, i_reg_1013, "i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter1_i_reg_1013, "ap_reg_pp0_iter1_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter2_i_reg_1013, "ap_reg_pp0_iter2_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter3_i_reg_1013, "ap_reg_pp0_iter3_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter4_i_reg_1013, "ap_reg_pp0_iter4_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter5_i_reg_1013, "ap_reg_pp0_iter5_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter6_i_reg_1013, "ap_reg_pp0_iter6_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter7_i_reg_1013, "ap_reg_pp0_iter7_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter8_i_reg_1013, "ap_reg_pp0_iter8_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter9_i_reg_1013, "ap_reg_pp0_iter9_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter10_i_reg_1013, "ap_reg_pp0_iter10_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter11_i_reg_1013, "ap_reg_pp0_iter11_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter12_i_reg_1013, "ap_reg_pp0_iter12_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter13_i_reg_1013, "ap_reg_pp0_iter13_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter14_i_reg_1013, "ap_reg_pp0_iter14_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter15_i_reg_1013, "ap_reg_pp0_iter15_i_reg_1013");
-    sc_trace(mVcdFile, ap_reg_pp0_iter16_i_reg_1013, "ap_reg_pp0_iter16_i_reg_1013");
-    sc_trace(mVcdFile, i_1_fu_299_p2, "i_1_fu_299_p2");
-    sc_trace(mVcdFile, i_1_reg_1023, "i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter1_i_1_reg_1023, "ap_reg_pp0_iter1_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter2_i_1_reg_1023, "ap_reg_pp0_iter2_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter3_i_1_reg_1023, "ap_reg_pp0_iter3_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter4_i_1_reg_1023, "ap_reg_pp0_iter4_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter5_i_1_reg_1023, "ap_reg_pp0_iter5_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter6_i_1_reg_1023, "ap_reg_pp0_iter6_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter7_i_1_reg_1023, "ap_reg_pp0_iter7_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter8_i_1_reg_1023, "ap_reg_pp0_iter8_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter9_i_1_reg_1023, "ap_reg_pp0_iter9_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter10_i_1_reg_1023, "ap_reg_pp0_iter10_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter11_i_1_reg_1023, "ap_reg_pp0_iter11_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter12_i_1_reg_1023, "ap_reg_pp0_iter12_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter13_i_1_reg_1023, "ap_reg_pp0_iter13_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter14_i_1_reg_1023, "ap_reg_pp0_iter14_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter15_i_1_reg_1023, "ap_reg_pp0_iter15_i_1_reg_1023");
-    sc_trace(mVcdFile, ap_reg_pp0_iter16_i_1_reg_1023, "ap_reg_pp0_iter16_i_1_reg_1023");
-    sc_trace(mVcdFile, tmp_29_fu_316_p1, "tmp_29_fu_316_p1");
-    sc_trace(mVcdFile, tmp_29_reg_1033, "tmp_29_reg_1033");
-    sc_trace(mVcdFile, exitcond_fu_320_p2, "exitcond_fu_320_p2");
-    sc_trace(mVcdFile, ap_reg_pp0_iter1_exitcond_reg_1038, "ap_reg_pp0_iter1_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter2_exitcond_reg_1038, "ap_reg_pp0_iter2_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter3_exitcond_reg_1038, "ap_reg_pp0_iter3_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter4_exitcond_reg_1038, "ap_reg_pp0_iter4_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter5_exitcond_reg_1038, "ap_reg_pp0_iter5_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter6_exitcond_reg_1038, "ap_reg_pp0_iter6_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter7_exitcond_reg_1038, "ap_reg_pp0_iter7_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter8_exitcond_reg_1038, "ap_reg_pp0_iter8_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter9_exitcond_reg_1038, "ap_reg_pp0_iter9_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter10_exitcond_reg_1038, "ap_reg_pp0_iter10_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter11_exitcond_reg_1038, "ap_reg_pp0_iter11_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter12_exitcond_reg_1038, "ap_reg_pp0_iter12_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter13_exitcond_reg_1038, "ap_reg_pp0_iter13_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter14_exitcond_reg_1038, "ap_reg_pp0_iter14_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter15_exitcond_reg_1038, "ap_reg_pp0_iter15_exitcond_reg_1038");
-    sc_trace(mVcdFile, ap_reg_pp0_iter16_exitcond_reg_1038, "ap_reg_pp0_iter16_exitcond_reg_1038");
-    sc_trace(mVcdFile, r_V_fu_384_p2, "r_V_fu_384_p2");
-    sc_trace(mVcdFile, r_V_reg_1042, "r_V_reg_1042");
-    sc_trace(mVcdFile, r_V_1_fu_398_p2, "r_V_1_fu_398_p2");
-    sc_trace(mVcdFile, r_V_1_reg_1047, "r_V_1_reg_1047");
-    sc_trace(mVcdFile, r_V_2_fu_412_p2, "r_V_2_fu_412_p2");
-    sc_trace(mVcdFile, r_V_2_reg_1052, "r_V_2_reg_1052");
-    sc_trace(mVcdFile, r_V_3_fu_448_p2, "r_V_3_fu_448_p2");
-    sc_trace(mVcdFile, r_V_3_reg_1058, "r_V_3_reg_1058");
-    sc_trace(mVcdFile, r_V_4_fu_458_p2, "r_V_4_fu_458_p2");
-    sc_trace(mVcdFile, r_V_4_reg_1063, "r_V_4_reg_1063");
-    sc_trace(mVcdFile, r_V_5_fu_468_p2, "r_V_5_fu_468_p2");
-    sc_trace(mVcdFile, r_V_5_reg_1068, "r_V_5_reg_1068");
-    sc_trace(mVcdFile, r_V_6_fu_504_p2, "r_V_6_fu_504_p2");
-    sc_trace(mVcdFile, r_V_6_reg_1074, "r_V_6_reg_1074");
-    sc_trace(mVcdFile, ap_reg_pp0_iter2_r_V_6_reg_1074, "ap_reg_pp0_iter2_r_V_6_reg_1074");
-    sc_trace(mVcdFile, r_V_7_fu_514_p2, "r_V_7_fu_514_p2");
-    sc_trace(mVcdFile, r_V_7_reg_1079, "r_V_7_reg_1079");
-    sc_trace(mVcdFile, r_V_8_fu_524_p2, "r_V_8_fu_524_p2");
-    sc_trace(mVcdFile, r_V_8_reg_1084, "r_V_8_reg_1084");
-    sc_trace(mVcdFile, result3_fu_533_p2, "result3_fu_533_p2");
-    sc_trace(mVcdFile, result3_reg_1090, "result3_reg_1090");
-    sc_trace(mVcdFile, result_s_fu_542_p2, "result_s_fu_542_p2");
-    sc_trace(mVcdFile, result_s_reg_1095, "result_s_reg_1095");
-    sc_trace(mVcdFile, p_Val2_s_fu_584_p2, "p_Val2_s_fu_584_p2");
-    sc_trace(mVcdFile, p_Val2_s_reg_1100, "p_Val2_s_reg_1100");
-    sc_trace(mVcdFile, result_2_fu_593_p2, "result_2_fu_593_p2");
-    sc_trace(mVcdFile, result_2_reg_1105, "result_2_reg_1105");
-    sc_trace(mVcdFile, result_4_fu_602_p2, "result_4_fu_602_p2");
-    sc_trace(mVcdFile, result_4_reg_1110, "result_4_reg_1110");
-    sc_trace(mVcdFile, p_Val2_1_fu_644_p2, "p_Val2_1_fu_644_p2");
-    sc_trace(mVcdFile, p_Val2_1_reg_1115, "p_Val2_1_reg_1115");
-    sc_trace(mVcdFile, result_3_fu_653_p2, "result_3_fu_653_p2");
-    sc_trace(mVcdFile, result_3_reg_1120, "result_3_reg_1120");
-    sc_trace(mVcdFile, tmp_28_fu_665_p2, "tmp_28_fu_665_p2");
-    sc_trace(mVcdFile, tmp_28_reg_1125, "tmp_28_reg_1125");
-    sc_trace(mVcdFile, powerSummation_V_2_fu_829_p2, "powerSummation_V_2_fu_829_p2");
-    sc_trace(mVcdFile, powerSummation_V_2_reg_1141, "powerSummation_V_2_reg_1141");
-    sc_trace(mVcdFile, tmp_7_reg_1146, "tmp_7_reg_1146");
-    sc_trace(mVcdFile, tmp_9_reg_1152, "tmp_9_reg_1152");
-    sc_trace(mVcdFile, tmp_1_fu_858_p2, "tmp_1_fu_858_p2");
-    sc_trace(mVcdFile, tmp_1_reg_1158, "tmp_1_reg_1158");
-    sc_trace(mVcdFile, tmp_2_fu_864_p2, "tmp_2_fu_864_p2");
-    sc_trace(mVcdFile, tmp_2_reg_1163, "tmp_2_reg_1163");
-    sc_trace(mVcdFile, tmp_1_1_fu_888_p2, "tmp_1_1_fu_888_p2");
-    sc_trace(mVcdFile, tmp_1_1_reg_1168, "tmp_1_1_reg_1168");
-    sc_trace(mVcdFile, tmp_2_1_fu_894_p2, "tmp_2_1_fu_894_p2");
-    sc_trace(mVcdFile, tmp_2_1_reg_1173, "tmp_2_1_reg_1173");
-    sc_trace(mVcdFile, minimumDistance_2_1_fu_907_p3, "minimumDistance_2_1_fu_907_p3");
-    sc_trace(mVcdFile, minimumDistance_2_1_reg_1178, "minimumDistance_2_1_reg_1178");
-    sc_trace(mVcdFile, tmp_14_reg_1185, "tmp_14_reg_1185");
-    sc_trace(mVcdFile, minimumDistanceIndex_5_fu_991_p3, "minimumDistanceIndex_5_fu_991_p3");
-    sc_trace(mVcdFile, ap_enable_reg_pp0_iter17, "ap_enable_reg_pp0_iter17");
-    sc_trace(mVcdFile, minimumDistance_2_2_fu_999_p3, "minimumDistance_2_2_fu_999_p3");
-    sc_trace(mVcdFile, ap_block_pp0_stage0_subdone, "ap_block_pp0_stage0_subdone");
+    sc_trace(mVcdFile, minimumDistanceIndex_9_reg_159, "minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159, "ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159");
+    sc_trace(mVcdFile, in_pixel_V5_rewind_reg_174, "in_pixel_V5_rewind_reg_174");
+    sc_trace(mVcdFile, in_pixel_V5_phi_reg_188, "in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188, "ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, minimumDistance4_reg_201, "minimumDistance4_reg_201");
+    sc_trace(mVcdFile, minimumDistanceIndex_3_reg_215, "minimumDistanceIndex_3_reg_215");
+    sc_trace(mVcdFile, minimumDistanceIndex_fu_250_p1, "minimumDistanceIndex_fu_250_p1");
+    sc_trace(mVcdFile, minimumDistanceIndex_reg_439, "minimumDistanceIndex_reg_439");
+    sc_trace(mVcdFile, i_fu_259_p2, "i_fu_259_p2");
+    sc_trace(mVcdFile, i_reg_449, "i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter1_i_reg_449, "ap_reg_pp0_iter1_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter2_i_reg_449, "ap_reg_pp0_iter2_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter3_i_reg_449, "ap_reg_pp0_iter3_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter4_i_reg_449, "ap_reg_pp0_iter4_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter5_i_reg_449, "ap_reg_pp0_iter5_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter6_i_reg_449, "ap_reg_pp0_iter6_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter7_i_reg_449, "ap_reg_pp0_iter7_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter8_i_reg_449, "ap_reg_pp0_iter8_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter9_i_reg_449, "ap_reg_pp0_iter9_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter10_i_reg_449, "ap_reg_pp0_iter10_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter11_i_reg_449, "ap_reg_pp0_iter11_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter12_i_reg_449, "ap_reg_pp0_iter12_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter13_i_reg_449, "ap_reg_pp0_iter13_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter14_i_reg_449, "ap_reg_pp0_iter14_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter15_i_reg_449, "ap_reg_pp0_iter15_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter16_i_reg_449, "ap_reg_pp0_iter16_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter17_i_reg_449, "ap_reg_pp0_iter17_i_reg_449");
+    sc_trace(mVcdFile, ap_reg_pp0_iter18_i_reg_449, "ap_reg_pp0_iter18_i_reg_449");
+    sc_trace(mVcdFile, tmp_4_fu_276_p1, "tmp_4_fu_276_p1");
+    sc_trace(mVcdFile, tmp_4_reg_459, "tmp_4_reg_459");
+    sc_trace(mVcdFile, exitcond_fu_280_p2, "exitcond_fu_280_p2");
+    sc_trace(mVcdFile, ap_reg_pp0_iter1_exitcond_reg_464, "ap_reg_pp0_iter1_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter2_exitcond_reg_464, "ap_reg_pp0_iter2_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter3_exitcond_reg_464, "ap_reg_pp0_iter3_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter4_exitcond_reg_464, "ap_reg_pp0_iter4_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter5_exitcond_reg_464, "ap_reg_pp0_iter5_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter6_exitcond_reg_464, "ap_reg_pp0_iter6_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter7_exitcond_reg_464, "ap_reg_pp0_iter7_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter8_exitcond_reg_464, "ap_reg_pp0_iter8_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter9_exitcond_reg_464, "ap_reg_pp0_iter9_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter10_exitcond_reg_464, "ap_reg_pp0_iter10_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter11_exitcond_reg_464, "ap_reg_pp0_iter11_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter12_exitcond_reg_464, "ap_reg_pp0_iter12_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter13_exitcond_reg_464, "ap_reg_pp0_iter13_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter14_exitcond_reg_464, "ap_reg_pp0_iter14_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter15_exitcond_reg_464, "ap_reg_pp0_iter15_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter16_exitcond_reg_464, "ap_reg_pp0_iter16_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter17_exitcond_reg_464, "ap_reg_pp0_iter17_exitcond_reg_464");
+    sc_trace(mVcdFile, ap_reg_pp0_iter18_exitcond_reg_464, "ap_reg_pp0_iter18_exitcond_reg_464");
+    sc_trace(mVcdFile, p_color_array_stream_1_reg_473, "p_color_array_stream_1_reg_473");
+    sc_trace(mVcdFile, p_color_array_stream_3_reg_478, "p_color_array_stream_3_reg_478");
+    sc_trace(mVcdFile, i_1_fu_286_p2, "i_1_fu_286_p2");
+    sc_trace(mVcdFile, i_1_reg_483, "i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter2_i_1_reg_483, "ap_reg_pp0_iter2_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter3_i_1_reg_483, "ap_reg_pp0_iter3_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter4_i_1_reg_483, "ap_reg_pp0_iter4_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter5_i_1_reg_483, "ap_reg_pp0_iter5_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter6_i_1_reg_483, "ap_reg_pp0_iter6_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter7_i_1_reg_483, "ap_reg_pp0_iter7_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter8_i_1_reg_483, "ap_reg_pp0_iter8_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter9_i_1_reg_483, "ap_reg_pp0_iter9_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter10_i_1_reg_483, "ap_reg_pp0_iter10_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter11_i_1_reg_483, "ap_reg_pp0_iter11_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter12_i_1_reg_483, "ap_reg_pp0_iter12_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter13_i_1_reg_483, "ap_reg_pp0_iter13_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter14_i_1_reg_483, "ap_reg_pp0_iter14_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter15_i_1_reg_483, "ap_reg_pp0_iter15_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter16_i_1_reg_483, "ap_reg_pp0_iter16_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter17_i_1_reg_483, "ap_reg_pp0_iter17_i_1_reg_483");
+    sc_trace(mVcdFile, ap_reg_pp0_iter18_i_1_reg_483, "ap_reg_pp0_iter18_i_1_reg_483");
+    sc_trace(mVcdFile, p_color_array_stream_5_reg_493, "p_color_array_stream_5_reg_493");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter2, "ap_enable_reg_pp0_iter2");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_ap_return, "grp_getColorDistance_Str_fu_229_ap_return");
+    sc_trace(mVcdFile, minimumDistance_4_reg_498, "minimumDistance_4_reg_498");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_ap_return, "grp_getColorDistance_Str_fu_236_ap_return");
+    sc_trace(mVcdFile, minimumDistance_4_1_reg_504, "minimumDistance_4_1_reg_504");
+    sc_trace(mVcdFile, tmp_1_fu_299_p2, "tmp_1_fu_299_p2");
+    sc_trace(mVcdFile, tmp_1_reg_510, "tmp_1_reg_510");
+    sc_trace(mVcdFile, tmp_2_fu_305_p2, "tmp_2_fu_305_p2");
+    sc_trace(mVcdFile, tmp_2_reg_515, "tmp_2_reg_515");
+    sc_trace(mVcdFile, tmp_1_1_fu_329_p2, "tmp_1_1_fu_329_p2");
+    sc_trace(mVcdFile, tmp_1_1_reg_520, "tmp_1_1_reg_520");
+    sc_trace(mVcdFile, tmp_2_1_fu_335_p2, "tmp_2_1_fu_335_p2");
+    sc_trace(mVcdFile, tmp_2_1_reg_525, "tmp_2_1_reg_525");
+    sc_trace(mVcdFile, minimumDistance_2_1_fu_348_p3, "minimumDistance_2_1_fu_348_p3");
+    sc_trace(mVcdFile, minimumDistance_2_1_reg_530, "minimumDistance_2_1_reg_530");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_ap_return, "grp_getColorDistance_Str_fu_243_ap_return");
+    sc_trace(mVcdFile, minimumDistance_4_2_reg_537, "minimumDistance_4_2_reg_537");
+    sc_trace(mVcdFile, minimumDistanceIndex_8_fu_422_p3, "minimumDistanceIndex_8_fu_422_p3");
+    sc_trace(mVcdFile, ap_enable_reg_pp0_iter19, "ap_enable_reg_pp0_iter19");
+    sc_trace(mVcdFile, minimumDistance_2_2_fu_430_p3, "minimumDistance_2_2_fu_430_p3");
+    sc_trace(mVcdFile, ap_block_pp0_stage0_subdone, "ap_block_pp0_stage0_subdone");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter3, "ap_enable_reg_pp0_iter3");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter4, "ap_enable_reg_pp0_iter4");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter5, "ap_enable_reg_pp0_iter5");
@@ -1293,135 +946,69 @@ getPixelClassification_Stream::getPixelClassification_Stream(sc_module_name name
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter14, "ap_enable_reg_pp0_iter14");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter15, "ap_enable_reg_pp0_iter15");
     sc_trace(mVcdFile, ap_enable_reg_pp0_iter16, "ap_enable_reg_pp0_iter16");
+    sc_trace(mVcdFile, ap_enable_reg_pp0_iter17, "ap_enable_reg_pp0_iter17");
+    sc_trace(mVcdFile, ap_enable_reg_pp0_iter18, "ap_enable_reg_pp0_iter18");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_264_in_val_V_read, "grp_fxp_sqrt_fu_264_in_val_V_read");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_264_ap_return, "grp_fxp_sqrt_fu_264_ap_return");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_264_ap_ce, "grp_fxp_sqrt_fu_264_ap_ce");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_269_in_val_V_read, "grp_fxp_sqrt_fu_269_in_val_V_read");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_269_ap_return, "grp_fxp_sqrt_fu_269_ap_return");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_269_ap_ce, "grp_fxp_sqrt_fu_269_ap_ce");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_274_ap_return, "grp_fxp_sqrt_fu_274_ap_return");
-    sc_trace(mVcdFile, grp_fxp_sqrt_fu_274_ap_ce, "grp_fxp_sqrt_fu_274_ap_ce");
-    sc_trace(mVcdFile, ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6, "ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6");
-    sc_trace(mVcdFile, ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6, "ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6");
-    sc_trace(mVcdFile, ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4, "ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4");
-    sc_trace(mVcdFile, ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222, "ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222");
-    sc_trace(mVcdFile, ap_phi_mux_minimumDistance4_phi_fu_240_p6, "ap_phi_mux_minimumDistance4_phi_fu_240_p6");
-    sc_trace(mVcdFile, ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6, "ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6");
-    sc_trace(mVcdFile, tmp1_fu_283_p1, "tmp1_fu_283_p1");
-    sc_trace(mVcdFile, tmp_s_fu_294_p1, "tmp_s_fu_294_p1");
-    sc_trace(mVcdFile, tmp_3_fu_305_p1, "tmp_3_fu_305_p1");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_ap_start, "grp_getColorDistance_Str_fu_229_ap_start");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_ap_done, "grp_getColorDistance_Str_fu_229_ap_done");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_ap_idle, "grp_getColorDistance_Str_fu_229_ap_idle");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_ap_ready, "grp_getColorDistance_Str_fu_229_ap_ready");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_ap_ce, "grp_getColorDistance_Str_fu_229_ap_ce");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_pixel_V_TREADY, "grp_getColorDistance_Str_fu_229_pixel_V_TREADY");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_229_pixel_V_TDATA_blk_n, "grp_getColorDistance_Str_fu_229_pixel_V_TDATA_blk_n");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_ap_start, "grp_getColorDistance_Str_fu_236_ap_start");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_ap_done, "grp_getColorDistance_Str_fu_236_ap_done");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_ap_idle, "grp_getColorDistance_Str_fu_236_ap_idle");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_ap_ready, "grp_getColorDistance_Str_fu_236_ap_ready");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_ap_ce, "grp_getColorDistance_Str_fu_236_ap_ce");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_pixel_V_TREADY, "grp_getColorDistance_Str_fu_236_pixel_V_TREADY");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_236_pixel_V_TDATA_blk_n, "grp_getColorDistance_Str_fu_236_pixel_V_TDATA_blk_n");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_ap_start, "grp_getColorDistance_Str_fu_243_ap_start");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_ap_done, "grp_getColorDistance_Str_fu_243_ap_done");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_ap_idle, "grp_getColorDistance_Str_fu_243_ap_idle");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_ap_ready, "grp_getColorDistance_Str_fu_243_ap_ready");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_ap_ce, "grp_getColorDistance_Str_fu_243_ap_ce");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_pixel_V_TREADY, "grp_getColorDistance_Str_fu_243_pixel_V_TREADY");
+    sc_trace(mVcdFile, grp_getColorDistance_Str_fu_243_pixel_V_TDATA_blk_n, "grp_getColorDistance_Str_fu_243_pixel_V_TDATA_blk_n");
+    sc_trace(mVcdFile, ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6, "ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6");
+    sc_trace(mVcdFile, ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6, "ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6");
+    sc_trace(mVcdFile, ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4, "ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4");
+    sc_trace(mVcdFile, ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188, "ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188, "ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188, "ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188");
+    sc_trace(mVcdFile, ap_phi_mux_minimumDistance4_phi_fu_205_p6, "ap_phi_mux_minimumDistance4_phi_fu_205_p6");
+    sc_trace(mVcdFile, ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6, "ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6");
+    sc_trace(mVcdFile, ap_reg_grp_getColorDistance_Str_fu_229_ap_start, "ap_reg_grp_getColorDistance_Str_fu_229_ap_start");
+    sc_trace(mVcdFile, ap_reg_grp_getColorDistance_Str_fu_236_ap_start, "ap_reg_grp_getColorDistance_Str_fu_236_ap_start");
+    sc_trace(mVcdFile, ap_reg_grp_getColorDistance_Str_fu_243_ap_start, "ap_reg_grp_getColorDistance_Str_fu_243_ap_start");
+    sc_trace(mVcdFile, tmp1_fu_254_p1, "tmp1_fu_254_p1");
+    sc_trace(mVcdFile, tmp_s_fu_265_p1, "tmp_s_fu_265_p1");
+    sc_trace(mVcdFile, tmp_3_fu_291_p1, "tmp_3_fu_291_p1");
     sc_trace(mVcdFile, ap_block_pp0_stage0_01001, "ap_block_pp0_stage0_01001");
-    sc_trace(mVcdFile, minimumDistanceIndex_fu_279_p1, "minimumDistanceIndex_fu_279_p1");
-    sc_trace(mVcdFile, i_2_fu_310_p2, "i_2_fu_310_p2");
-    sc_trace(mVcdFile, pixelRed_V_fu_326_p4, "pixelRed_V_fu_326_p4");
-    sc_trace(mVcdFile, rhs_V_fu_350_p3, "rhs_V_fu_350_p3");
-    sc_trace(mVcdFile, lhs_V_fu_372_p1, "lhs_V_fu_372_p1");
-    sc_trace(mVcdFile, rhs_V_cast_fu_376_p3, "rhs_V_cast_fu_376_p3");
-    sc_trace(mVcdFile, pixelGreen_V_fu_336_p1, "pixelGreen_V_fu_336_p1");
-    sc_trace(mVcdFile, colorGreen_V_fu_358_p1, "colorGreen_V_fu_358_p1");
-    sc_trace(mVcdFile, lhs_V_1_fu_390_p1, "lhs_V_1_fu_390_p1");
-    sc_trace(mVcdFile, rhs_V_1_fu_394_p1, "rhs_V_1_fu_394_p1");
-    sc_trace(mVcdFile, pixelBlue_V_fu_340_p4, "pixelBlue_V_fu_340_p4");
-    sc_trace(mVcdFile, colorBlue_V_fu_362_p4, "colorBlue_V_fu_362_p4");
-    sc_trace(mVcdFile, lhs_V_2_fu_404_p1, "lhs_V_2_fu_404_p1");
-    sc_trace(mVcdFile, rhs_V_2_fu_408_p1, "rhs_V_2_fu_408_p1");
-    sc_trace(mVcdFile, rhs_V_3_fu_418_p3, "rhs_V_3_fu_418_p3");
-    sc_trace(mVcdFile, rhs_V_3_cast_fu_440_p3, "rhs_V_3_cast_fu_440_p3");
-    sc_trace(mVcdFile, colorGreen_V_1_fu_426_p1, "colorGreen_V_1_fu_426_p1");
-    sc_trace(mVcdFile, rhs_V_4_fu_454_p1, "rhs_V_4_fu_454_p1");
-    sc_trace(mVcdFile, colorBlue_V_1_fu_430_p4, "colorBlue_V_1_fu_430_p4");
-    sc_trace(mVcdFile, rhs_V_5_fu_464_p1, "rhs_V_5_fu_464_p1");
-    sc_trace(mVcdFile, rhs_V_6_fu_474_p3, "rhs_V_6_fu_474_p3");
-    sc_trace(mVcdFile, rhs_V_6_cast_fu_496_p3, "rhs_V_6_cast_fu_496_p3");
-    sc_trace(mVcdFile, colorGreen_V_2_fu_482_p1, "colorGreen_V_2_fu_482_p1");
-    sc_trace(mVcdFile, rhs_V_7_fu_510_p1, "rhs_V_7_fu_510_p1");
-    sc_trace(mVcdFile, colorBlue_V_2_fu_486_p4, "colorBlue_V_2_fu_486_p4");
-    sc_trace(mVcdFile, rhs_V_8_fu_520_p1, "rhs_V_8_fu_520_p1");
-    sc_trace(mVcdFile, result3_fu_533_p0, "result3_fu_533_p0");
-    sc_trace(mVcdFile, p_cast1_fu_530_p1, "p_cast1_fu_530_p1");
-    sc_trace(mVcdFile, result3_fu_533_p1, "result3_fu_533_p1");
-    sc_trace(mVcdFile, result_s_fu_542_p0, "result_s_fu_542_p0");
-    sc_trace(mVcdFile, p_cast2_fu_539_p1, "p_cast2_fu_539_p1");
-    sc_trace(mVcdFile, result_s_fu_542_p1, "result_s_fu_542_p1");
-    sc_trace(mVcdFile, tmp_16_fu_554_p0, "tmp_16_fu_554_p0");
-    sc_trace(mVcdFile, tmp_16_fu_554_p1, "tmp_16_fu_554_p1");
-    sc_trace(mVcdFile, tmp_16_fu_554_p2, "tmp_16_fu_554_p2");
-    sc_trace(mVcdFile, p_shl_i1_fu_560_p3, "p_shl_i1_fu_560_p3");
-    sc_trace(mVcdFile, p_shl3_i1_fu_572_p3, "p_shl3_i1_fu_572_p3");
-    sc_trace(mVcdFile, p_shl_i1_cast_fu_568_p1, "p_shl_i1_cast_fu_568_p1");
-    sc_trace(mVcdFile, p_shl3_i1_cast_fu_580_p1, "p_shl3_i1_cast_fu_580_p1");
-    sc_trace(mVcdFile, result_2_fu_593_p0, "result_2_fu_593_p0");
-    sc_trace(mVcdFile, p_cast3_fu_590_p1, "p_cast3_fu_590_p1");
-    sc_trace(mVcdFile, result_2_fu_593_p1, "result_2_fu_593_p1");
-    sc_trace(mVcdFile, result_4_fu_602_p0, "result_4_fu_602_p0");
-    sc_trace(mVcdFile, p_cast4_fu_599_p1, "p_cast4_fu_599_p1");
-    sc_trace(mVcdFile, result_4_fu_602_p1, "result_4_fu_602_p1");
-    sc_trace(mVcdFile, tmp_23_fu_614_p0, "tmp_23_fu_614_p0");
-    sc_trace(mVcdFile, tmp_23_fu_614_p1, "tmp_23_fu_614_p1");
-    sc_trace(mVcdFile, tmp_23_fu_614_p2, "tmp_23_fu_614_p2");
-    sc_trace(mVcdFile, p_shl_i_fu_620_p3, "p_shl_i_fu_620_p3");
-    sc_trace(mVcdFile, p_shl3_i_fu_632_p3, "p_shl3_i_fu_632_p3");
-    sc_trace(mVcdFile, p_shl_i_cast_fu_628_p1, "p_shl_i_cast_fu_628_p1");
-    sc_trace(mVcdFile, p_shl3_i_cast_fu_640_p1, "p_shl3_i_cast_fu_640_p1");
-    sc_trace(mVcdFile, result_3_fu_653_p0, "result_3_fu_653_p0");
-    sc_trace(mVcdFile, p_cast_fu_650_p1, "p_cast_fu_650_p1");
-    sc_trace(mVcdFile, result_3_fu_653_p1, "result_3_fu_653_p1");
-    sc_trace(mVcdFile, tmp_28_fu_665_p0, "tmp_28_fu_665_p0");
-    sc_trace(mVcdFile, tmp_28_fu_665_p1, "tmp_28_fu_665_p1");
-    sc_trace(mVcdFile, tmp_4_fu_671_p3, "tmp_4_fu_671_p3");
-    sc_trace(mVcdFile, tmp_6_fu_682_p3, "tmp_6_fu_682_p3");
-    sc_trace(mVcdFile, p_Val2_2_cast_cast_fu_693_p1, "p_Val2_2_cast_cast_fu_693_p1");
-    sc_trace(mVcdFile, p_Val2_1_cast_fu_689_p1, "p_Val2_1_cast_fu_689_p1");
-    sc_trace(mVcdFile, tmp6_fu_696_p2, "tmp6_fu_696_p2");
-    sc_trace(mVcdFile, p_Val2_cast_fu_678_p1, "p_Val2_cast_fu_678_p1");
-    sc_trace(mVcdFile, tmp6_cast_fu_702_p1, "tmp6_cast_fu_702_p1");
-    sc_trace(mVcdFile, tmp_5_fu_713_p3, "tmp_5_fu_713_p3");
-    sc_trace(mVcdFile, tmp_8_fu_724_p3, "tmp_8_fu_724_p3");
-    sc_trace(mVcdFile, p_Val2_6_cast_cast_fu_735_p1, "p_Val2_6_cast_cast_fu_735_p1");
-    sc_trace(mVcdFile, p_Val2_4_cast_fu_731_p1, "p_Val2_4_cast_fu_731_p1");
-    sc_trace(mVcdFile, tmp10_fu_738_p2, "tmp10_fu_738_p2");
-    sc_trace(mVcdFile, p_Val2_3_cast_fu_720_p1, "p_Val2_3_cast_fu_720_p1");
-    sc_trace(mVcdFile, tmp10_cast_fu_744_p1, "tmp10_cast_fu_744_p1");
-    sc_trace(mVcdFile, result_7_fu_758_p0, "result_7_fu_758_p0");
-    sc_trace(mVcdFile, p_cast5_fu_755_p1, "p_cast5_fu_755_p1");
-    sc_trace(mVcdFile, result_7_fu_758_p1, "result_7_fu_758_p1");
-    sc_trace(mVcdFile, result_7_fu_758_p2, "result_7_fu_758_p2");
-    sc_trace(mVcdFile, tmp_11_fu_764_p3, "tmp_11_fu_764_p3");
-    sc_trace(mVcdFile, tmp_12_fu_776_p3, "tmp_12_fu_776_p3");
-    sc_trace(mVcdFile, p_shl_i2_fu_787_p3, "p_shl_i2_fu_787_p3");
-    sc_trace(mVcdFile, p_shl3_i2_fu_798_p3, "p_shl3_i2_fu_798_p3");
-    sc_trace(mVcdFile, p_shl_i2_cast_fu_794_p1, "p_shl_i2_cast_fu_794_p1");
-    sc_trace(mVcdFile, p_shl3_i2_cast_fu_805_p1, "p_shl3_i2_cast_fu_805_p1");
-    sc_trace(mVcdFile, p_Val2_2_fu_809_p2, "p_Val2_2_fu_809_p2");
-    sc_trace(mVcdFile, p_Val2_10_cast_cas_fu_815_p1, "p_Val2_10_cast_cas_fu_815_p1");
-    sc_trace(mVcdFile, p_Val2_7_cast_fu_783_p1, "p_Val2_7_cast_fu_783_p1");
-    sc_trace(mVcdFile, tmp14_fu_819_p2, "tmp14_fu_819_p2");
-    sc_trace(mVcdFile, p_Val2_6_cast5_fu_772_p1, "p_Val2_6_cast5_fu_772_p1");
-    sc_trace(mVcdFile, tmp14_cast_fu_825_p1, "tmp14_cast_fu_825_p1");
-    sc_trace(mVcdFile, tmp_5_i1_fu_855_p1, "tmp_5_i1_fu_855_p1");
-    sc_trace(mVcdFile, distance_0_minimumDi_fu_869_p3, "distance_0_minimumDi_fu_869_p3");
-    sc_trace(mVcdFile, tmp_5_i_fu_885_p1, "tmp_5_i_fu_885_p1");
-    sc_trace(mVcdFile, minimumDistance_2_fu_877_p3, "minimumDistance_2_fu_877_p3");
-    sc_trace(mVcdFile, distance_0_minimumDi_1_fu_899_p3, "distance_0_minimumDi_1_fu_899_p3");
-    sc_trace(mVcdFile, minimumDistanceIndex_3_fu_925_p1, "minimumDistanceIndex_3_fu_925_p1");
-    sc_trace(mVcdFile, i_0_minimumDistanceI_fu_929_p3, "i_0_minimumDistanceI_fu_929_p3");
-    sc_trace(mVcdFile, i_cast_fu_943_p1, "i_cast_fu_943_p1");
-    sc_trace(mVcdFile, minimumDistanceIndex_2_fu_936_p3, "minimumDistanceIndex_2_fu_936_p3");
-    sc_trace(mVcdFile, i_0_minimumDistanceI_1_fu_946_p3, "i_0_minimumDistanceI_1_fu_946_p3");
-    sc_trace(mVcdFile, tmp_5_i2_fu_963_p1, "tmp_5_i2_fu_963_p1");
-    sc_trace(mVcdFile, tmp_2_2_fu_971_p2, "tmp_2_2_fu_971_p2");
-    sc_trace(mVcdFile, i_1_cast_fu_960_p1, "i_1_cast_fu_960_p1");
-    sc_trace(mVcdFile, minimumDistanceIndex_4_fu_953_p3, "minimumDistanceIndex_4_fu_953_p3");
-    sc_trace(mVcdFile, tmp_1_2_fu_966_p2, "tmp_1_2_fu_966_p2");
-    sc_trace(mVcdFile, i_0_minimumDistanceI_2_fu_976_p3, "i_0_minimumDistanceI_2_fu_976_p3");
-    sc_trace(mVcdFile, distance_0_minimumDi_2_fu_984_p3, "distance_0_minimumDi_2_fu_984_p3");
+    sc_trace(mVcdFile, i_2_fu_270_p2, "i_2_fu_270_p2");
+    sc_trace(mVcdFile, minimumDistance_4_ex_fu_296_p1, "minimumDistance_4_ex_fu_296_p1");
+    sc_trace(mVcdFile, minimumDistance_1_fu_310_p3, "minimumDistance_1_fu_310_p3");
+    sc_trace(mVcdFile, minimumDistance_4_1_s_fu_326_p1, "minimumDistance_4_1_s_fu_326_p1");
+    sc_trace(mVcdFile, minimumDistance_2_fu_318_p3, "minimumDistance_2_fu_318_p3");
+    sc_trace(mVcdFile, minimumDistance_1_1_fu_340_p3, "minimumDistance_1_1_fu_340_p3");
+    sc_trace(mVcdFile, minimumDistanceIndex_4_fu_356_p1, "minimumDistanceIndex_4_fu_356_p1");
+    sc_trace(mVcdFile, minimumDistanceIndex_1_fu_360_p3, "minimumDistanceIndex_1_fu_360_p3");
+    sc_trace(mVcdFile, i_cast_fu_374_p1, "i_cast_fu_374_p1");
+    sc_trace(mVcdFile, minimumDistanceIndex_2_fu_367_p3, "minimumDistanceIndex_2_fu_367_p3");
+    sc_trace(mVcdFile, minimumDistanceIndex_5_fu_377_p3, "minimumDistanceIndex_5_fu_377_p3");
+    sc_trace(mVcdFile, minimumDistance_4_2_s_fu_394_p1, "minimumDistance_4_2_s_fu_394_p1");
+    sc_trace(mVcdFile, tmp_2_2_fu_402_p2, "tmp_2_2_fu_402_p2");
+    sc_trace(mVcdFile, i_1_cast_fu_391_p1, "i_1_cast_fu_391_p1");
+    sc_trace(mVcdFile, minimumDistanceIndex_6_fu_384_p3, "minimumDistanceIndex_6_fu_384_p3");
+    sc_trace(mVcdFile, tmp_1_2_fu_397_p2, "tmp_1_2_fu_397_p2");
+    sc_trace(mVcdFile, minimumDistanceIndex_7_fu_407_p3, "minimumDistanceIndex_7_fu_407_p3");
+    sc_trace(mVcdFile, minimumDistance_1_2_fu_415_p3, "minimumDistance_1_2_fu_415_p3");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
     sc_trace(mVcdFile, ap_reset_idle_pp0, "ap_reset_idle_pp0");
     sc_trace(mVcdFile, ap_idle_pp0, "ap_idle_pp0");
     sc_trace(mVcdFile, ap_enable_pp0, "ap_enable_pp0");
     sc_trace(mVcdFile, ap_condition_165, "ap_condition_165");
-    sc_trace(mVcdFile, ap_condition_622, "ap_condition_622");
+    sc_trace(mVcdFile, ap_condition_501, "ap_condition_501");
 #endif
 
     }
@@ -1438,9 +1025,13 @@ getPixelClassification_Stream::~getPixelClassification_Stream() {
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
     delete p_color_array_stream_s_U;
-    delete grp_fxp_sqrt_fu_264;
-    delete grp_fxp_sqrt_fu_269;
-    delete grp_fxp_sqrt_fu_274;
+    delete grp_getColorDistance_Str_fu_229;
+    delete grp_getColorDistance_Str_fu_236;
+    delete grp_getColorDistance_Str_fu_243;
+}
+
+void getPixelClassification_Stream::thread_ap_var_for_const0() {
+    ap_var_for_const0 = ap_const_logic_1;
 }
 
 void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
@@ -1524,8 +1115,6 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
     } else {
         if (esl_seteq<1,1,1>(ap_block_pp0_stage0_subdone.read(), ap_const_boolean_0)) {
             ap_enable_reg_pp0_iter19 = ap_enable_reg_pp0_iter18.read();
-        } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
-            ap_enable_reg_pp0_iter19 = ap_const_logic_0;
         }
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
@@ -1533,6 +1122,22 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
     } else {
         if (esl_seteq<1,1,1>(ap_block_pp0_stage0_subdone.read(), ap_const_boolean_0)) {
             ap_enable_reg_pp0_iter2 = ap_enable_reg_pp0_iter1.read();
+        }
+    }
+    if ( ap_rst_n_inv.read() == ap_const_logic_1) {
+        ap_enable_reg_pp0_iter20 = ap_const_logic_0;
+    } else {
+        if (esl_seteq<1,1,1>(ap_block_pp0_stage0_subdone.read(), ap_const_boolean_0)) {
+            ap_enable_reg_pp0_iter20 = ap_enable_reg_pp0_iter19.read();
+        }
+    }
+    if ( ap_rst_n_inv.read() == ap_const_logic_1) {
+        ap_enable_reg_pp0_iter21 = ap_const_logic_0;
+    } else {
+        if (esl_seteq<1,1,1>(ap_block_pp0_stage0_subdone.read(), ap_const_boolean_0)) {
+            ap_enable_reg_pp0_iter21 = ap_enable_reg_pp0_iter20.read();
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
+            ap_enable_reg_pp0_iter21 = ap_const_logic_0;
         }
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
@@ -1584,25 +1189,62 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
             ap_enable_reg_pp0_iter9 = ap_enable_reg_pp0_iter8.read();
         }
     }
+    if (esl_seteq<1,1,1>(ap_condition_501.read(), ap_const_boolean_1)) {
+        if (esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read())) {
+            ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188 = in_pixel_V_0_data_out.read();
+        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_const_boolean_1)) {
+            ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188 = ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188.read();
+        }
+    }
+    if ( ap_rst_n_inv.read() == ap_const_logic_1) {
+        ap_reg_grp_getColorDistance_Str_fu_229_ap_start = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
+             esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
+            ap_reg_grp_getColorDistance_Str_fu_229_ap_start = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_getColorDistance_Str_fu_229_ap_ready.read())) {
+            ap_reg_grp_getColorDistance_Str_fu_229_ap_start = ap_const_logic_0;
+        }
+    }
+    if ( ap_rst_n_inv.read() == ap_const_logic_1) {
+        ap_reg_grp_getColorDistance_Str_fu_236_ap_start = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
+             esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
+             esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
+            ap_reg_grp_getColorDistance_Str_fu_236_ap_start = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_getColorDistance_Str_fu_236_ap_ready.read())) {
+            ap_reg_grp_getColorDistance_Str_fu_236_ap_start = ap_const_logic_0;
+        }
+    }
+    if ( ap_rst_n_inv.read() == ap_const_logic_1) {
+        ap_reg_grp_getColorDistance_Str_fu_243_ap_start = ap_const_logic_0;
+    } else {
+        if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
+             esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter2.read()))) {
+            ap_reg_grp_getColorDistance_Str_fu_243_ap_start = ap_const_logic_1;
+        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_getColorDistance_Str_fu_243_ap_ready.read())) {
+            ap_reg_grp_getColorDistance_Str_fu_243_ap_start = ap_const_logic_0;
+        }
+    }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_reg_1038.read()))) {
-        do_init_reg_177 = ap_const_lv1_0;
+         esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_reg_464.read()))) {
+        do_init_reg_143 = ap_const_lv1_0;
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
                 (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
                  esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
                  esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-                 esl_seteq<1,1,1>(ap_const_lv1_1, exitcond_reg_1038.read())))) {
-        do_init_reg_177 = ap_const_lv1_1;
+                 esl_seteq<1,1,1>(ap_const_lv1_1, exitcond_reg_464.read())))) {
+        do_init_reg_143 = ap_const_lv1_1;
     }
-    if (esl_seteq<1,1,1>(ap_condition_622.read(), ap_const_boolean_1)) {
-        if (esl_seteq<1,1,1>(ap_const_lv1_0, do_init_reg_177.read())) {
-            in_pixel_V9_phi_reg_222 = ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6.read();
-        } else if (esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read())) {
-            in_pixel_V9_phi_reg_222 = in_pixel_V_0_data_out.read();
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter2.read()))) {
+        if (esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter1_do_init_reg_143.read())) {
+            in_pixel_V5_phi_reg_188 = ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6.read();
         } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_const_boolean_1)) {
-            in_pixel_V9_phi_reg_222 = ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222.read();
+            in_pixel_V5_phi_reg_188 = ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188.read();
         }
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
@@ -1649,36 +1291,36 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
         }
     }
     if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter17.read()) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter16_exitcond_reg_1038.read()))) {
-        minimumDistance4_reg_236 = minimumDistance_2_2_fu_999_p3.read();
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
+         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter18_exitcond_reg_464.read()))) {
+        minimumDistance4_reg_201 = minimumDistance_2_2_fu_430_p3.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
                 (esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-                 esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter17.read()) && 
-                 esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter16_exitcond_reg_1038.read())))) {
-        minimumDistance4_reg_236 = ap_const_lv32_7FFFFFFF;
+                 esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
+                 esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_464.read())))) {
+        minimumDistance4_reg_201 = ap_const_lv32_7FFFFFFF;
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter17_exitcond_reg_1038.read()))) {
-        minimumDistanceIndex_1_reg_250 = minimumDistanceIndex_5_reg_1191.read();
+         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter19_exitcond_reg_464.read()))) {
+        minimumDistanceIndex_3_reg_215 = minimumDistanceIndex_8_reg_543.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
-                (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-                 esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
+                (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                 esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
                  esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)))) {
-        minimumDistanceIndex_1_reg_250 = ap_const_lv32_FFFFFFFF;
+        minimumDistanceIndex_3_reg_215 = ap_const_lv32_FFFFFFFF;
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_reg_1038.read()))) {
-        minimumDistanceIndex_6_reg_193 = tmp_29_reg_1033.read();
+         esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_reg_464.read()))) {
+        minimumDistanceIndex_9_reg_159 = tmp_4_reg_459.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
                 (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
                  esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
                  esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-                 esl_seteq<1,1,1>(ap_const_lv1_1, exitcond_reg_1038.read())))) {
-        minimumDistanceIndex_6_reg_193 = ap_const_lv2_0;
+                 esl_seteq<1,1,1>(ap_const_lv1_1, exitcond_reg_464.read())))) {
+        minimumDistanceIndex_9_reg_159 = ap_const_lv2_0;
     }
     if ( ap_rst_n_inv.read() == ap_const_logic_1) {
         out_pixel_V_1_sel_rd = ap_const_logic_0;
@@ -1723,125 +1365,120 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
             out_pixel_V_1_state = ap_const_lv2_2;
         }
     }
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_const_logic_1))) {
+        ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188 = ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188.read();
+        tmp_4_reg_459 = tmp_4_fu_276_p1.read();
+    }
     if (esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) {
-        ap_reg_pp0_iter10_exitcond_reg_1038 = ap_reg_pp0_iter9_exitcond_reg_1038.read();
-        ap_reg_pp0_iter10_i_1_reg_1023 = ap_reg_pp0_iter9_i_1_reg_1023.read();
-        ap_reg_pp0_iter10_i_reg_1013 = ap_reg_pp0_iter9_i_reg_1013.read();
-        ap_reg_pp0_iter10_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter9_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter10_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter9_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter11_exitcond_reg_1038 = ap_reg_pp0_iter10_exitcond_reg_1038.read();
-        ap_reg_pp0_iter11_i_1_reg_1023 = ap_reg_pp0_iter10_i_1_reg_1023.read();
-        ap_reg_pp0_iter11_i_reg_1013 = ap_reg_pp0_iter10_i_reg_1013.read();
-        ap_reg_pp0_iter11_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter10_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter11_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter10_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter12_exitcond_reg_1038 = ap_reg_pp0_iter11_exitcond_reg_1038.read();
-        ap_reg_pp0_iter12_i_1_reg_1023 = ap_reg_pp0_iter11_i_1_reg_1023.read();
-        ap_reg_pp0_iter12_i_reg_1013 = ap_reg_pp0_iter11_i_reg_1013.read();
-        ap_reg_pp0_iter12_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter11_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter12_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter11_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter13_exitcond_reg_1038 = ap_reg_pp0_iter12_exitcond_reg_1038.read();
-        ap_reg_pp0_iter13_i_1_reg_1023 = ap_reg_pp0_iter12_i_1_reg_1023.read();
-        ap_reg_pp0_iter13_i_reg_1013 = ap_reg_pp0_iter12_i_reg_1013.read();
-        ap_reg_pp0_iter13_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter12_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter13_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter12_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter14_exitcond_reg_1038 = ap_reg_pp0_iter13_exitcond_reg_1038.read();
-        ap_reg_pp0_iter14_i_1_reg_1023 = ap_reg_pp0_iter13_i_1_reg_1023.read();
-        ap_reg_pp0_iter14_i_reg_1013 = ap_reg_pp0_iter13_i_reg_1013.read();
-        ap_reg_pp0_iter14_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter13_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter14_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter13_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter15_exitcond_reg_1038 = ap_reg_pp0_iter14_exitcond_reg_1038.read();
-        ap_reg_pp0_iter15_i_1_reg_1023 = ap_reg_pp0_iter14_i_1_reg_1023.read();
-        ap_reg_pp0_iter15_i_reg_1013 = ap_reg_pp0_iter14_i_reg_1013.read();
-        ap_reg_pp0_iter15_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter14_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter15_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter14_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter16_exitcond_reg_1038 = ap_reg_pp0_iter15_exitcond_reg_1038.read();
-        ap_reg_pp0_iter16_i_1_reg_1023 = ap_reg_pp0_iter15_i_1_reg_1023.read();
-        ap_reg_pp0_iter16_i_reg_1013 = ap_reg_pp0_iter15_i_reg_1013.read();
-        ap_reg_pp0_iter16_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter15_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter16_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter15_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter17_exitcond_reg_1038 = ap_reg_pp0_iter16_exitcond_reg_1038.read();
-        ap_reg_pp0_iter17_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter16_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter18_exitcond_reg_1038 = ap_reg_pp0_iter17_exitcond_reg_1038.read();
-        ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191 = minimumDistanceIndex_5_reg_1191.read();
-        ap_reg_pp0_iter2_exitcond_reg_1038 = ap_reg_pp0_iter1_exitcond_reg_1038.read();
-        ap_reg_pp0_iter2_i_1_reg_1023 = ap_reg_pp0_iter1_i_1_reg_1023.read();
-        ap_reg_pp0_iter2_i_reg_1013 = ap_reg_pp0_iter1_i_reg_1013.read();
-        ap_reg_pp0_iter2_in_pixel_V9_phi_reg_222 = in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter2_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter1_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter2_r_V_6_reg_1074 = r_V_6_reg_1074.read();
-        ap_reg_pp0_iter3_exitcond_reg_1038 = ap_reg_pp0_iter2_exitcond_reg_1038.read();
-        ap_reg_pp0_iter3_i_1_reg_1023 = ap_reg_pp0_iter2_i_1_reg_1023.read();
-        ap_reg_pp0_iter3_i_reg_1013 = ap_reg_pp0_iter2_i_reg_1013.read();
-        ap_reg_pp0_iter3_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter2_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter3_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter2_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter4_exitcond_reg_1038 = ap_reg_pp0_iter3_exitcond_reg_1038.read();
-        ap_reg_pp0_iter4_i_1_reg_1023 = ap_reg_pp0_iter3_i_1_reg_1023.read();
-        ap_reg_pp0_iter4_i_reg_1013 = ap_reg_pp0_iter3_i_reg_1013.read();
-        ap_reg_pp0_iter4_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter3_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter4_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter3_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter5_exitcond_reg_1038 = ap_reg_pp0_iter4_exitcond_reg_1038.read();
-        ap_reg_pp0_iter5_i_1_reg_1023 = ap_reg_pp0_iter4_i_1_reg_1023.read();
-        ap_reg_pp0_iter5_i_reg_1013 = ap_reg_pp0_iter4_i_reg_1013.read();
-        ap_reg_pp0_iter5_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter4_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter5_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter4_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter6_exitcond_reg_1038 = ap_reg_pp0_iter5_exitcond_reg_1038.read();
-        ap_reg_pp0_iter6_i_1_reg_1023 = ap_reg_pp0_iter5_i_1_reg_1023.read();
-        ap_reg_pp0_iter6_i_reg_1013 = ap_reg_pp0_iter5_i_reg_1013.read();
-        ap_reg_pp0_iter6_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter5_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter6_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter5_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter7_exitcond_reg_1038 = ap_reg_pp0_iter6_exitcond_reg_1038.read();
-        ap_reg_pp0_iter7_i_1_reg_1023 = ap_reg_pp0_iter6_i_1_reg_1023.read();
-        ap_reg_pp0_iter7_i_reg_1013 = ap_reg_pp0_iter6_i_reg_1013.read();
-        ap_reg_pp0_iter7_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter6_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter7_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter6_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter8_exitcond_reg_1038 = ap_reg_pp0_iter7_exitcond_reg_1038.read();
-        ap_reg_pp0_iter8_i_1_reg_1023 = ap_reg_pp0_iter7_i_1_reg_1023.read();
-        ap_reg_pp0_iter8_i_reg_1013 = ap_reg_pp0_iter7_i_reg_1013.read();
-        ap_reg_pp0_iter8_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter7_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter8_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter7_minimumDistanceIndex_6_reg_193.read();
-        ap_reg_pp0_iter9_exitcond_reg_1038 = ap_reg_pp0_iter8_exitcond_reg_1038.read();
-        ap_reg_pp0_iter9_i_1_reg_1023 = ap_reg_pp0_iter8_i_1_reg_1023.read();
-        ap_reg_pp0_iter9_i_reg_1013 = ap_reg_pp0_iter8_i_reg_1013.read();
-        ap_reg_pp0_iter9_in_pixel_V9_phi_reg_222 = ap_reg_pp0_iter8_in_pixel_V9_phi_reg_222.read();
-        ap_reg_pp0_iter9_minimumDistanceIndex_6_reg_193 = ap_reg_pp0_iter8_minimumDistanceIndex_6_reg_193.read();
-        minimumDistance_2_1_reg_1178 = minimumDistance_2_1_fu_907_p3.read();
-        p_Val2_1_reg_1115 = p_Val2_1_fu_644_p2.read();
-        p_Val2_s_reg_1100 = p_Val2_s_fu_584_p2.read();
-        powerSummation_V_2_reg_1141 = powerSummation_V_2_fu_829_p2.read();
-        result3_reg_1090 = result3_fu_533_p2.read();
-        result_2_reg_1105 = result_2_fu_593_p2.read();
-        result_3_reg_1120 = result_3_fu_653_p2.read();
-        result_4_reg_1110 = result_4_fu_602_p2.read();
-        result_s_reg_1095 = result_s_fu_542_p2.read();
-        tmp_14_reg_1185 = grp_fxp_sqrt_fu_274_ap_return.read().range(19, 8);
-        tmp_1_1_reg_1168 = tmp_1_1_fu_888_p2.read();
-        tmp_1_reg_1158 = tmp_1_fu_858_p2.read();
-        tmp_28_reg_1125 = tmp_28_fu_665_p2.read();
-        tmp_2_1_reg_1173 = tmp_2_1_fu_894_p2.read();
-        tmp_2_reg_1163 = tmp_2_fu_864_p2.read();
-        tmp_7_reg_1146 = grp_fxp_sqrt_fu_264_ap_return.read().range(19, 8);
-        tmp_9_reg_1152 = grp_fxp_sqrt_fu_269_ap_return.read().range(19, 8);
+        ap_reg_pp0_iter10_exitcond_reg_464 = ap_reg_pp0_iter9_exitcond_reg_464.read();
+        ap_reg_pp0_iter10_i_1_reg_483 = ap_reg_pp0_iter9_i_1_reg_483.read();
+        ap_reg_pp0_iter10_i_reg_449 = ap_reg_pp0_iter9_i_reg_449.read();
+        ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter11_exitcond_reg_464 = ap_reg_pp0_iter10_exitcond_reg_464.read();
+        ap_reg_pp0_iter11_i_1_reg_483 = ap_reg_pp0_iter10_i_1_reg_483.read();
+        ap_reg_pp0_iter11_i_reg_449 = ap_reg_pp0_iter10_i_reg_449.read();
+        ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter12_exitcond_reg_464 = ap_reg_pp0_iter11_exitcond_reg_464.read();
+        ap_reg_pp0_iter12_i_1_reg_483 = ap_reg_pp0_iter11_i_1_reg_483.read();
+        ap_reg_pp0_iter12_i_reg_449 = ap_reg_pp0_iter11_i_reg_449.read();
+        ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter13_exitcond_reg_464 = ap_reg_pp0_iter12_exitcond_reg_464.read();
+        ap_reg_pp0_iter13_i_1_reg_483 = ap_reg_pp0_iter12_i_1_reg_483.read();
+        ap_reg_pp0_iter13_i_reg_449 = ap_reg_pp0_iter12_i_reg_449.read();
+        ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter14_exitcond_reg_464 = ap_reg_pp0_iter13_exitcond_reg_464.read();
+        ap_reg_pp0_iter14_i_1_reg_483 = ap_reg_pp0_iter13_i_1_reg_483.read();
+        ap_reg_pp0_iter14_i_reg_449 = ap_reg_pp0_iter13_i_reg_449.read();
+        ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter15_exitcond_reg_464 = ap_reg_pp0_iter14_exitcond_reg_464.read();
+        ap_reg_pp0_iter15_i_1_reg_483 = ap_reg_pp0_iter14_i_1_reg_483.read();
+        ap_reg_pp0_iter15_i_reg_449 = ap_reg_pp0_iter14_i_reg_449.read();
+        ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter16_exitcond_reg_464 = ap_reg_pp0_iter15_exitcond_reg_464.read();
+        ap_reg_pp0_iter16_i_1_reg_483 = ap_reg_pp0_iter15_i_1_reg_483.read();
+        ap_reg_pp0_iter16_i_reg_449 = ap_reg_pp0_iter15_i_reg_449.read();
+        ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter17_exitcond_reg_464 = ap_reg_pp0_iter16_exitcond_reg_464.read();
+        ap_reg_pp0_iter17_i_1_reg_483 = ap_reg_pp0_iter16_i_1_reg_483.read();
+        ap_reg_pp0_iter17_i_reg_449 = ap_reg_pp0_iter16_i_reg_449.read();
+        ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter18_exitcond_reg_464 = ap_reg_pp0_iter17_exitcond_reg_464.read();
+        ap_reg_pp0_iter18_i_1_reg_483 = ap_reg_pp0_iter17_i_1_reg_483.read();
+        ap_reg_pp0_iter18_i_reg_449 = ap_reg_pp0_iter17_i_reg_449.read();
+        ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter19_exitcond_reg_464 = ap_reg_pp0_iter18_exitcond_reg_464.read();
+        ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter20_exitcond_reg_464 = ap_reg_pp0_iter19_exitcond_reg_464.read();
+        ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = minimumDistanceIndex_8_reg_543.read();
+        ap_reg_pp0_iter2_exitcond_reg_464 = ap_reg_pp0_iter1_exitcond_reg_464.read();
+        ap_reg_pp0_iter2_i_1_reg_483 = i_1_reg_483.read();
+        ap_reg_pp0_iter2_i_reg_449 = ap_reg_pp0_iter1_i_reg_449.read();
+        ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter3_exitcond_reg_464 = ap_reg_pp0_iter2_exitcond_reg_464.read();
+        ap_reg_pp0_iter3_i_1_reg_483 = ap_reg_pp0_iter2_i_1_reg_483.read();
+        ap_reg_pp0_iter3_i_reg_449 = ap_reg_pp0_iter2_i_reg_449.read();
+        ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188 = in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter4_exitcond_reg_464 = ap_reg_pp0_iter3_exitcond_reg_464.read();
+        ap_reg_pp0_iter4_i_1_reg_483 = ap_reg_pp0_iter3_i_1_reg_483.read();
+        ap_reg_pp0_iter4_i_reg_449 = ap_reg_pp0_iter3_i_reg_449.read();
+        ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter5_exitcond_reg_464 = ap_reg_pp0_iter4_exitcond_reg_464.read();
+        ap_reg_pp0_iter5_i_1_reg_483 = ap_reg_pp0_iter4_i_1_reg_483.read();
+        ap_reg_pp0_iter5_i_reg_449 = ap_reg_pp0_iter4_i_reg_449.read();
+        ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter6_exitcond_reg_464 = ap_reg_pp0_iter5_exitcond_reg_464.read();
+        ap_reg_pp0_iter6_i_1_reg_483 = ap_reg_pp0_iter5_i_1_reg_483.read();
+        ap_reg_pp0_iter6_i_reg_449 = ap_reg_pp0_iter5_i_reg_449.read();
+        ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter7_exitcond_reg_464 = ap_reg_pp0_iter6_exitcond_reg_464.read();
+        ap_reg_pp0_iter7_i_1_reg_483 = ap_reg_pp0_iter6_i_1_reg_483.read();
+        ap_reg_pp0_iter7_i_reg_449 = ap_reg_pp0_iter6_i_reg_449.read();
+        ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter8_exitcond_reg_464 = ap_reg_pp0_iter7_exitcond_reg_464.read();
+        ap_reg_pp0_iter8_i_1_reg_483 = ap_reg_pp0_iter7_i_1_reg_483.read();
+        ap_reg_pp0_iter8_i_reg_449 = ap_reg_pp0_iter7_i_reg_449.read();
+        ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159.read();
+        ap_reg_pp0_iter9_exitcond_reg_464 = ap_reg_pp0_iter8_exitcond_reg_464.read();
+        ap_reg_pp0_iter9_i_1_reg_483 = ap_reg_pp0_iter8_i_1_reg_483.read();
+        ap_reg_pp0_iter9_i_reg_449 = ap_reg_pp0_iter8_i_reg_449.read();
+        ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188 = ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188.read();
+        ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159 = ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159.read();
+        minimumDistance_2_1_reg_530 = minimumDistance_2_1_fu_348_p3.read();
+        minimumDistance_4_1_reg_504 = grp_getColorDistance_Str_fu_236_ap_return.read();
+        minimumDistance_4_2_reg_537 = grp_getColorDistance_Str_fu_243_ap_return.read();
+        minimumDistance_4_reg_498 = grp_getColorDistance_Str_fu_229_ap_return.read();
+        tmp_1_1_reg_520 = tmp_1_1_fu_329_p2.read();
+        tmp_1_reg_510 = tmp_1_fu_299_p2.read();
+        tmp_2_1_reg_525 = tmp_2_1_fu_335_p2.read();
+        tmp_2_reg_515 = tmp_2_fu_305_p2.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
-        ap_reg_pp0_iter1_exitcond_reg_1038 = exitcond_reg_1038.read();
-        ap_reg_pp0_iter1_i_1_reg_1023 = i_1_reg_1023.read();
-        ap_reg_pp0_iter1_i_reg_1013 = i_reg_1013.read();
-        ap_reg_pp0_iter1_minimumDistanceIndex_6_reg_193 = minimumDistanceIndex_6_reg_193.read();
-        exitcond_reg_1038 = exitcond_fu_320_p2.read();
-        i_1_reg_1023 = i_1_fu_299_p2.read();
-        i_reg_1013 = i_fu_288_p2.read();
-        r_V_1_reg_1047 = r_V_1_fu_398_p2.read();
-        r_V_2_reg_1052 = r_V_2_fu_412_p2.read();
-        r_V_3_reg_1058 = r_V_3_fu_448_p2.read();
-        r_V_4_reg_1063 = r_V_4_fu_458_p2.read();
-        r_V_5_reg_1068 = r_V_5_fu_468_p2.read();
-        r_V_6_reg_1074 = r_V_6_fu_504_p2.read();
-        r_V_7_reg_1079 = r_V_7_fu_514_p2.read();
-        r_V_8_reg_1084 = r_V_8_fu_524_p2.read();
-        r_V_reg_1042 = r_V_fu_384_p2.read();
+        ap_reg_pp0_iter1_do_init_reg_143 = do_init_reg_143.read();
+        ap_reg_pp0_iter1_exitcond_reg_464 = exitcond_reg_464.read();
+        ap_reg_pp0_iter1_i_reg_449 = i_reg_449.read();
+        ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159 = minimumDistanceIndex_9_reg_159.read();
+        exitcond_reg_464 = exitcond_fu_280_p2.read();
+        i_1_reg_483 = i_1_fu_286_p2.read();
+        i_reg_449 = i_fu_259_p2.read();
+        minimumDistanceIndex_reg_439 = minimumDistanceIndex_fu_250_p1.read();
     }
-    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter2.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter1_exitcond_reg_1038.read()))) {
-        in_pixel_V9_rewind_reg_208 = in_pixel_V9_phi_reg_222.read();
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter2_exitcond_reg_464.read()))) {
+        in_pixel_V5_rewind_reg_174 = in_pixel_V5_phi_reg_188.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, in_pixel_V_0_load_A.read())) {
         in_pixel_V_0_payload_A = in_pixel_V_TDATA.read();
@@ -1849,8 +1486,8 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, in_pixel_V_0_load_B.read())) {
         in_pixel_V_0_payload_B = in_pixel_V_TDATA.read();
     }
-    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter17.read()))) {
-        minimumDistanceIndex_5_reg_1191 = minimumDistanceIndex_5_fu_991_p3.read();
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()))) {
+        minimumDistanceIndex_8_reg_543 = minimumDistanceIndex_8_fu_422_p3.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, out_pixel_V_1_load_A.read())) {
         out_pixel_V_1_payload_A = out_pixel_V_1_data_in.read();
@@ -1858,8 +1495,12 @@ void getPixelClassification_Stream::thread_ap_clk_no_reset_() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, out_pixel_V_1_load_B.read())) {
         out_pixel_V_1_payload_B = out_pixel_V_1_data_in.read();
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_const_logic_1))) {
-        tmp_29_reg_1033 = tmp_29_fu_316_p1.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
+        p_color_array_stream_1_reg_473 = p_color_array_stream_s_q0.read();
+        p_color_array_stream_3_reg_478 = p_color_array_stream_s_q1.read();
+    }
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter2.read()))) {
+        p_color_array_stream_5_reg_493 = p_color_array_stream_s_q2.read();
     }
 }
 
@@ -1877,27 +1518,27 @@ void getPixelClassification_Stream::thread_ap_block_pp0_stage0() {
 
 void getPixelClassification_Stream::thread_ap_block_pp0_stage0_01001() {
     ap_block_pp0_stage0_01001 = ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
-  esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read()) && 
-  esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
+  esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read()) && 
+  esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
   esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read())));
 }
 
 void getPixelClassification_Stream::thread_ap_block_pp0_stage0_11001() {
     ap_block_pp0_stage0_11001 = ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
-  esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read()) && 
-  esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state20_io.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
+  esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read()) && 
+  esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state22_io.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
   (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) || 
-   esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state21_io.read()))));
+   esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state23_io.read()))));
 }
 
 void getPixelClassification_Stream::thread_ap_block_pp0_stage0_subdone() {
     ap_block_pp0_stage0_subdone = ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
-  esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read()) && 
-  esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state20_io.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
+  esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read()) && 
+  esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state22_io.read())) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
   (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) || 
-   esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state21_io.read()))));
+   esl_seteq<1,1,1>(ap_const_boolean_1, ap_block_state23_io.read()))));
 }
 
 void getPixelClassification_Stream::thread_ap_block_state10_pp0_stage0_iter8() {
@@ -1940,34 +1581,44 @@ void getPixelClassification_Stream::thread_ap_block_state19_pp0_stage0_iter17() 
     ap_block_state19_pp0_stage0_iter17 = !esl_seteq<1,1,1>(ap_const_boolean_1, ap_const_boolean_1);
 }
 
-void getPixelClassification_Stream::thread_ap_block_state20_io() {
-    ap_block_state20_io = ((esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op219_write_state20.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op220_write_state20.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op221_write_state20.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op222_write_state20.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op223_write_state20.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op224_write_state20.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op225_write_state20.read())));
-}
-
 void getPixelClassification_Stream::thread_ap_block_state20_pp0_stage0_iter18() {
     ap_block_state20_pp0_stage0_iter18 = !esl_seteq<1,1,1>(ap_const_boolean_1, ap_const_boolean_1);
 }
 
-void getPixelClassification_Stream::thread_ap_block_state21_io() {
-    ap_block_state21_io = ((esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op231_write_state21.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op233_write_state21.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op235_write_state21.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op237_write_state21.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op239_write_state21.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op241_write_state21.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
-  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op243_write_state21.read())));
+void getPixelClassification_Stream::thread_ap_block_state21_pp0_stage0_iter19() {
+    ap_block_state21_pp0_stage0_iter19 = !esl_seteq<1,1,1>(ap_const_boolean_1, ap_const_boolean_1);
 }
 
-void getPixelClassification_Stream::thread_ap_block_state21_pp0_stage0_iter19() {
-    ap_block_state21_pp0_stage0_iter19 = esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read());
+void getPixelClassification_Stream::thread_ap_block_state22_io() {
+    ap_block_state22_io = ((esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op131_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op132_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op133_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op134_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op135_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op136_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op137_write_state22.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op138_write_state22.read())));
+}
+
+void getPixelClassification_Stream::thread_ap_block_state22_pp0_stage0_iter20() {
+    ap_block_state22_pp0_stage0_iter20 = !esl_seteq<1,1,1>(ap_const_boolean_1, ap_const_boolean_1);
+}
+
+void getPixelClassification_Stream::thread_ap_block_state23_io() {
+    ap_block_state23_io = ((esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op147_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op149_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op151_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op153_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op155_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op157_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op159_write_state23.read())) || (esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read()) && 
+  esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op161_write_state23.read())));
+}
+
+void getPixelClassification_Stream::thread_ap_block_state23_pp0_stage0_iter21() {
+    ap_block_state23_pp0_stage0_iter21 = esl_seteq<1,1,1>(ap_const_logic_0, out_pixel_V_1_ack_in.read());
 }
 
 void getPixelClassification_Stream::thread_ap_block_state2_pp0_stage0_iter0() {
@@ -1975,7 +1626,7 @@ void getPixelClassification_Stream::thread_ap_block_state2_pp0_stage0_iter0() {
 }
 
 void getPixelClassification_Stream::thread_ap_block_state3_pp0_stage0_iter1() {
-    ap_block_state3_pp0_stage0_iter1 = (esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read()) && esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read()));
+    ap_block_state3_pp0_stage0_iter1 = (esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read()) && esl_seteq<1,1,1>(ap_const_logic_0, in_pixel_V_0_vld_out.read()));
 }
 
 void getPixelClassification_Stream::thread_ap_block_state4_pp0_stage0_iter2() {
@@ -2006,8 +1657,8 @@ void getPixelClassification_Stream::thread_ap_condition_165() {
     ap_condition_165 = (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0));
 }
 
-void getPixelClassification_Stream::thread_ap_condition_622() {
-    ap_condition_622 = (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0));
+void getPixelClassification_Stream::thread_ap_condition_501() {
+    ap_condition_501 = (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0));
 }
 
 void getPixelClassification_Stream::thread_ap_enable_pp0() {
@@ -2034,137 +1685,143 @@ void getPixelClassification_Stream::thread_ap_idle_pp0() {
          esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter16.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter17.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter18.read()) && 
-         esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter19.read()))) {
+         esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter19.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter20.read()) && 
+         esl_seteq<1,1,1>(ap_const_logic_0, ap_enable_reg_pp0_iter21.read()))) {
         ap_idle_pp0 = ap_const_logic_1;
     } else {
         ap_idle_pp0 = ap_const_logic_0;
     }
 }
 
-void getPixelClassification_Stream::thread_ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4() {
-    if (esl_seteq<1,1,1>(ap_condition_165.read(), ap_const_boolean_1)) {
-        if (esl_seteq<1,1,1>(ap_const_lv1_0, do_init_reg_177.read())) {
-            ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 = ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6.read();
-        } else if (esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read())) {
-            ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 = in_pixel_V_0_data_out.read();
-        } else {
-            ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 = ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222.read();
-        }
-    } else {
-        ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4 = ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222.read();
-    }
-}
-
-void getPixelClassification_Stream::thread_ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6() {
+void getPixelClassification_Stream::thread_ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4() {
     if ((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter2.read()) && 
-         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter1_exitcond_reg_1038.read()))) {
-        ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6 = in_pixel_V9_phi_reg_222.read();
+         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter1_do_init_reg_143.read()))) {
+        ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4 = ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6.read();
     } else {
-        ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6 = in_pixel_V9_rewind_reg_208.read();
+        ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4 = ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188.read();
     }
 }
 
-void getPixelClassification_Stream::thread_ap_phi_mux_minimumDistance4_phi_fu_240_p6() {
-    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter17.read()))) {
-        if (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter16_exitcond_reg_1038.read())) {
-            ap_phi_mux_minimumDistance4_phi_fu_240_p6 = ap_const_lv32_7FFFFFFF;
-        } else if (esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter16_exitcond_reg_1038.read())) {
-            ap_phi_mux_minimumDistance4_phi_fu_240_p6 = minimumDistance_2_2_fu_999_p3.read();
+void getPixelClassification_Stream::thread_ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6() {
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter3.read()) && 
+         esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter2_exitcond_reg_464.read()))) {
+        ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6 = in_pixel_V5_phi_reg_188.read();
+    } else {
+        ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6 = in_pixel_V5_rewind_reg_174.read();
+    }
+}
+
+void getPixelClassification_Stream::thread_ap_phi_mux_minimumDistance4_phi_fu_205_p6() {
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()))) {
+        if (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_464.read())) {
+            ap_phi_mux_minimumDistance4_phi_fu_205_p6 = ap_const_lv32_7FFFFFFF;
+        } else if (esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter18_exitcond_reg_464.read())) {
+            ap_phi_mux_minimumDistance4_phi_fu_205_p6 = minimumDistance_2_2_fu_430_p3.read();
         } else {
-            ap_phi_mux_minimumDistance4_phi_fu_240_p6 = minimumDistance4_reg_236.read();
+            ap_phi_mux_minimumDistance4_phi_fu_205_p6 = minimumDistance4_reg_201.read();
         }
     } else {
-        ap_phi_mux_minimumDistance4_phi_fu_240_p6 = minimumDistance4_reg_236.read();
+        ap_phi_mux_minimumDistance4_phi_fu_205_p6 = minimumDistance4_reg_201.read();
     }
 }
 
-void getPixelClassification_Stream::thread_ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6() {
-    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()))) {
-        if (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read())) {
-            ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6 = ap_const_lv32_FFFFFFFF;
-        } else if (esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter17_exitcond_reg_1038.read())) {
-            ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6 = minimumDistanceIndex_5_reg_1191.read();
+void getPixelClassification_Stream::thread_ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6() {
+    if ((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()))) {
+        if (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read())) {
+            ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 = ap_const_lv32_FFFFFFFF;
+        } else if (esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_pp0_iter19_exitcond_reg_464.read())) {
+            ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 = minimumDistanceIndex_8_reg_543.read();
         } else {
-            ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6 = minimumDistanceIndex_1_reg_250.read();
+            ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 = minimumDistanceIndex_3_reg_215.read();
         }
     } else {
-        ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6 = minimumDistanceIndex_1_reg_250.read();
+        ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 = minimumDistanceIndex_3_reg_215.read();
     }
 }
 
-void getPixelClassification_Stream::thread_ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6() {
+void getPixelClassification_Stream::thread_ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6() {
     if (esl_seteq<1,1,1>(ap_condition_165.read(), ap_const_boolean_1)) {
-        if (esl_seteq<1,1,1>(ap_const_lv1_1, exitcond_reg_1038.read())) {
-            ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6 = ap_const_lv2_0;
-        } else if (esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_reg_1038.read())) {
-            ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6 = tmp_29_reg_1033.read();
+        if (esl_seteq<1,1,1>(ap_const_lv1_1, exitcond_reg_464.read())) {
+            ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 = ap_const_lv2_0;
+        } else if (esl_seteq<1,1,1>(ap_const_lv1_0, exitcond_reg_464.read())) {
+            ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 = tmp_4_reg_459.read();
         } else {
-            ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6 = minimumDistanceIndex_6_reg_193.read();
+            ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 = minimumDistanceIndex_9_reg_159.read();
         }
     } else {
-        ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6 = minimumDistanceIndex_6_reg_193.read();
+        ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 = minimumDistanceIndex_9_reg_159.read();
     }
 }
 
-void getPixelClassification_Stream::thread_ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222() {
-    ap_phi_reg_pp0_iter1_in_pixel_V9_phi_reg_222 = "XXXXXXXXXXXXXXXXXXXXXXXX";
+void getPixelClassification_Stream::thread_ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188() {
+    ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188 = "XXXXXXXXXXXXXXXXXXXXXXXX";
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op219_write_state20() {
-    ap_predicate_op219_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5));
+void getPixelClassification_Stream::thread_ap_predicate_op131_write_state22() {
+    ap_predicate_op131_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op220_write_state20() {
-    ap_predicate_op220_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4));
+void getPixelClassification_Stream::thread_ap_predicate_op132_write_state22() {
+    ap_predicate_op132_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op221_write_state20() {
-    ap_predicate_op221_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3));
+void getPixelClassification_Stream::thread_ap_predicate_op133_write_state22() {
+    ap_predicate_op133_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op222_write_state20() {
-    ap_predicate_op222_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2));
+void getPixelClassification_Stream::thread_ap_predicate_op134_write_state22() {
+    ap_predicate_op134_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op223_write_state20() {
-    ap_predicate_op223_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_5_reg_1191.read()));
+void getPixelClassification_Stream::thread_ap_predicate_op135_write_state22() {
+    ap_predicate_op135_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_8_reg_543.read()));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op224_write_state20() {
-    ap_predicate_op224_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_0));
+void getPixelClassification_Stream::thread_ap_predicate_op136_write_state22() {
+    ap_predicate_op136_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op225_write_state20() {
-    ap_predicate_op225_write_state20 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_0) && !esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_5_reg_1191.read()) && !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2) && !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3) && !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4) && !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5));
+void getPixelClassification_Stream::thread_ap_predicate_op137_write_state22() {
+    ap_predicate_op137_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_FFFFFFFF));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op231_write_state21() {
-    ap_predicate_op231_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5));
+void getPixelClassification_Stream::thread_ap_predicate_op138_write_state22() {
+    ap_predicate_op138_write_state22 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_FFFFFFFF) && !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0) && !esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_8_reg_543.read()) && !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2) && !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3) && !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4) && !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op233_write_state21() {
-    ap_predicate_op233_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4));
+void getPixelClassification_Stream::thread_ap_predicate_op147_write_state23() {
+    ap_predicate_op147_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op235_write_state21() {
-    ap_predicate_op235_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3));
+void getPixelClassification_Stream::thread_ap_predicate_op149_write_state23() {
+    ap_predicate_op149_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op237_write_state21() {
-    ap_predicate_op237_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2));
+void getPixelClassification_Stream::thread_ap_predicate_op151_write_state23() {
+    ap_predicate_op151_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op239_write_state21() {
-    ap_predicate_op239_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read()));
+void getPixelClassification_Stream::thread_ap_predicate_op153_write_state23() {
+    ap_predicate_op153_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op241_write_state21() {
-    ap_predicate_op241_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && esl_seteq<1,32,32>(ap_const_lv32_0, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read()));
+void getPixelClassification_Stream::thread_ap_predicate_op155_write_state23() {
+    ap_predicate_op155_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read()));
 }
 
-void getPixelClassification_Stream::thread_ap_predicate_op243_write_state21() {
-    ap_predicate_op243_write_state21 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && !esl_seteq<1,32,32>(ap_const_lv32_0, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read()) && !esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read()) && !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2) && !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3) && !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4) && !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5));
+void getPixelClassification_Stream::thread_ap_predicate_op157_write_state23() {
+    ap_predicate_op157_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0));
+}
+
+void getPixelClassification_Stream::thread_ap_predicate_op159_write_state23() {
+    ap_predicate_op159_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && esl_seteq<1,32,32>(ap_const_lv32_FFFFFFFF, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read()));
+}
+
+void getPixelClassification_Stream::thread_ap_predicate_op161_write_state23() {
+    ap_predicate_op161_write_state23 = (esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && !esl_seteq<1,32,32>(ap_const_lv32_FFFFFFFF, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read()) && !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0) && !esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read()) && !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2) && !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3) && !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4) && !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5));
 }
 
 void getPixelClassification_Stream::thread_ap_reset_idle_pp0() {
@@ -2179,111 +1836,67 @@ void getPixelClassification_Stream::thread_ap_rst_n_inv() {
     ap_rst_n_inv =  (sc_logic) (~ap_rst_n.read());
 }
 
-void getPixelClassification_Stream::thread_colorBlue_V_1_fu_430_p4() {
-    colorBlue_V_1_fu_430_p4 = p_color_array_stream_s_q1.read().range(15, 8);
+void getPixelClassification_Stream::thread_exitcond_fu_280_p2() {
+    exitcond_fu_280_p2 = (!i_2_fu_270_p2.read().is_01() || !ap_const_lv3_6.is_01())? sc_lv<1>(): sc_lv<1>(i_2_fu_270_p2.read() == ap_const_lv3_6);
 }
 
-void getPixelClassification_Stream::thread_colorBlue_V_2_fu_486_p4() {
-    colorBlue_V_2_fu_486_p4 = p_color_array_stream_s_q2.read().range(15, 8);
-}
-
-void getPixelClassification_Stream::thread_colorBlue_V_fu_362_p4() {
-    colorBlue_V_fu_362_p4 = p_color_array_stream_s_q0.read().range(15, 8);
-}
-
-void getPixelClassification_Stream::thread_colorGreen_V_1_fu_426_p1() {
-    colorGreen_V_1_fu_426_p1 = p_color_array_stream_s_q1.read().range(8-1, 0);
-}
-
-void getPixelClassification_Stream::thread_colorGreen_V_2_fu_482_p1() {
-    colorGreen_V_2_fu_482_p1 = p_color_array_stream_s_q2.read().range(8-1, 0);
-}
-
-void getPixelClassification_Stream::thread_colorGreen_V_fu_358_p1() {
-    colorGreen_V_fu_358_p1 = p_color_array_stream_s_q0.read().range(8-1, 0);
-}
-
-void getPixelClassification_Stream::thread_distance_0_minimumDi_1_fu_899_p3() {
-    distance_0_minimumDi_1_fu_899_p3 = (!tmp_2_1_fu_894_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_1_fu_894_p2.read()[0].to_bool())? tmp_5_i_fu_885_p1.read(): minimumDistance_2_fu_877_p3.read());
-}
-
-void getPixelClassification_Stream::thread_distance_0_minimumDi_2_fu_984_p3() {
-    distance_0_minimumDi_2_fu_984_p3 = (!tmp_2_2_fu_971_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_2_fu_971_p2.read()[0].to_bool())? tmp_5_i2_fu_963_p1.read(): minimumDistance_2_1_reg_1178.read());
-}
-
-void getPixelClassification_Stream::thread_distance_0_minimumDi_fu_869_p3() {
-    distance_0_minimumDi_fu_869_p3 = (!tmp_2_fu_864_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_fu_864_p2.read()[0].to_bool())? tmp_5_i1_fu_855_p1.read(): ap_phi_mux_minimumDistance4_phi_fu_240_p6.read());
-}
-
-void getPixelClassification_Stream::thread_exitcond_fu_320_p2() {
-    exitcond_fu_320_p2 = (!i_2_fu_310_p2.read().is_01() || !ap_const_lv3_6.is_01())? sc_lv<1>(): sc_lv<1>(i_2_fu_310_p2.read() == ap_const_lv3_6);
-}
-
-void getPixelClassification_Stream::thread_grp_fxp_sqrt_fu_264_ap_ce() {
+void getPixelClassification_Stream::thread_grp_getColorDistance_Str_fu_229_ap_ce() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
-        grp_fxp_sqrt_fu_264_ap_ce = ap_const_logic_1;
+        grp_getColorDistance_Str_fu_229_ap_ce = ap_const_logic_1;
     } else {
-        grp_fxp_sqrt_fu_264_ap_ce = ap_const_logic_0;
+        grp_getColorDistance_Str_fu_229_ap_ce = ap_const_logic_0;
     }
 }
 
-void getPixelClassification_Stream::thread_grp_fxp_sqrt_fu_264_in_val_V_read() {
-    grp_fxp_sqrt_fu_264_in_val_V_read = (!p_Val2_cast_fu_678_p1.read().is_01() || !tmp6_cast_fu_702_p1.read().is_01())? sc_lv<30>(): (sc_bigint<30>(p_Val2_cast_fu_678_p1.read()) + sc_bigint<30>(tmp6_cast_fu_702_p1.read()));
+void getPixelClassification_Stream::thread_grp_getColorDistance_Str_fu_229_ap_start() {
+    grp_getColorDistance_Str_fu_229_ap_start = ap_reg_grp_getColorDistance_Str_fu_229_ap_start.read();
 }
 
-void getPixelClassification_Stream::thread_grp_fxp_sqrt_fu_269_ap_ce() {
+void getPixelClassification_Stream::thread_grp_getColorDistance_Str_fu_236_ap_ce() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
-        grp_fxp_sqrt_fu_269_ap_ce = ap_const_logic_1;
+        grp_getColorDistance_Str_fu_236_ap_ce = ap_const_logic_1;
     } else {
-        grp_fxp_sqrt_fu_269_ap_ce = ap_const_logic_0;
+        grp_getColorDistance_Str_fu_236_ap_ce = ap_const_logic_0;
     }
 }
 
-void getPixelClassification_Stream::thread_grp_fxp_sqrt_fu_269_in_val_V_read() {
-    grp_fxp_sqrt_fu_269_in_val_V_read = (!p_Val2_3_cast_fu_720_p1.read().is_01() || !tmp10_cast_fu_744_p1.read().is_01())? sc_lv<30>(): (sc_bigint<30>(p_Val2_3_cast_fu_720_p1.read()) + sc_bigint<30>(tmp10_cast_fu_744_p1.read()));
+void getPixelClassification_Stream::thread_grp_getColorDistance_Str_fu_236_ap_start() {
+    grp_getColorDistance_Str_fu_236_ap_start = ap_reg_grp_getColorDistance_Str_fu_236_ap_start.read();
 }
 
-void getPixelClassification_Stream::thread_grp_fxp_sqrt_fu_274_ap_ce() {
+void getPixelClassification_Stream::thread_grp_getColorDistance_Str_fu_243_ap_ce() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
-        grp_fxp_sqrt_fu_274_ap_ce = ap_const_logic_1;
+        grp_getColorDistance_Str_fu_243_ap_ce = ap_const_logic_1;
     } else {
-        grp_fxp_sqrt_fu_274_ap_ce = ap_const_logic_0;
+        grp_getColorDistance_Str_fu_243_ap_ce = ap_const_logic_0;
     }
 }
 
-void getPixelClassification_Stream::thread_i_0_minimumDistanceI_1_fu_946_p3() {
-    i_0_minimumDistanceI_1_fu_946_p3 = (!tmp_2_1_reg_1173.read()[0].is_01())? sc_lv<32>(): ((tmp_2_1_reg_1173.read()[0].to_bool())? i_cast_fu_943_p1.read(): minimumDistanceIndex_2_fu_936_p3.read());
+void getPixelClassification_Stream::thread_grp_getColorDistance_Str_fu_243_ap_start() {
+    grp_getColorDistance_Str_fu_243_ap_start = ap_reg_grp_getColorDistance_Str_fu_243_ap_start.read();
 }
 
-void getPixelClassification_Stream::thread_i_0_minimumDistanceI_2_fu_976_p3() {
-    i_0_minimumDistanceI_2_fu_976_p3 = (!tmp_2_2_fu_971_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_2_fu_971_p2.read()[0].to_bool())? i_1_cast_fu_960_p1.read(): minimumDistanceIndex_4_fu_953_p3.read());
+void getPixelClassification_Stream::thread_i_1_cast_fu_391_p1() {
+    i_1_cast_fu_391_p1 = esl_zext<32,3>(ap_reg_pp0_iter18_i_1_reg_483.read());
 }
 
-void getPixelClassification_Stream::thread_i_0_minimumDistanceI_fu_929_p3() {
-    i_0_minimumDistanceI_fu_929_p3 = (!tmp_2_reg_1163.read()[0].is_01())? sc_lv<32>(): ((tmp_2_reg_1163.read()[0].to_bool())? minimumDistanceIndex_3_fu_925_p1.read(): ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6.read());
+void getPixelClassification_Stream::thread_i_1_fu_286_p2() {
+    i_1_fu_286_p2 = (!ap_const_lv3_2.is_01() || !minimumDistanceIndex_reg_439.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_2) + sc_biguint<3>(minimumDistanceIndex_reg_439.read()));
 }
 
-void getPixelClassification_Stream::thread_i_1_cast_fu_960_p1() {
-    i_1_cast_fu_960_p1 = esl_zext<32,3>(ap_reg_pp0_iter16_i_1_reg_1023.read());
+void getPixelClassification_Stream::thread_i_2_fu_270_p2() {
+    i_2_fu_270_p2 = (!ap_const_lv3_3.is_01() || !minimumDistanceIndex_fu_250_p1.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_3) + sc_biguint<3>(minimumDistanceIndex_fu_250_p1.read()));
 }
 
-void getPixelClassification_Stream::thread_i_1_fu_299_p2() {
-    i_1_fu_299_p2 = (!ap_const_lv3_2.is_01() || !minimumDistanceIndex_fu_279_p1.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_2) + sc_biguint<3>(minimumDistanceIndex_fu_279_p1.read()));
+void getPixelClassification_Stream::thread_i_cast_fu_374_p1() {
+    i_cast_fu_374_p1 = esl_zext<32,3>(ap_reg_pp0_iter18_i_reg_449.read());
 }
 
-void getPixelClassification_Stream::thread_i_2_fu_310_p2() {
-    i_2_fu_310_p2 = (!ap_const_lv3_3.is_01() || !minimumDistanceIndex_fu_279_p1.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_3) + sc_biguint<3>(minimumDistanceIndex_fu_279_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_i_cast_fu_943_p1() {
-    i_cast_fu_943_p1 = esl_zext<32,3>(ap_reg_pp0_iter16_i_reg_1013.read());
-}
-
-void getPixelClassification_Stream::thread_i_fu_288_p2() {
-    i_fu_288_p2 = (!ap_const_lv3_1.is_01() || !minimumDistanceIndex_fu_279_p1.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_1) + sc_biguint<3>(minimumDistanceIndex_fu_279_p1.read()));
+void getPixelClassification_Stream::thread_i_fu_259_p2() {
+    i_fu_259_p2 = (!ap_const_lv3_1.is_01() || !minimumDistanceIndex_fu_250_p1.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_1) + sc_biguint<3>(minimumDistanceIndex_fu_250_p1.read()));
 }
 
 void getPixelClassification_Stream::thread_in_pixel_V_0_ack_in() {
@@ -2293,7 +1906,7 @@ void getPixelClassification_Stream::thread_in_pixel_V_0_ack_in() {
 void getPixelClassification_Stream::thread_in_pixel_V_0_ack_out() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
-         esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read()) && 
+         esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
         in_pixel_V_0_ack_out = ap_const_logic_1;
     } else {
@@ -2337,7 +1950,7 @@ void getPixelClassification_Stream::thread_in_pixel_V_TDATA_blk_n() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
          esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-         esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_177.read()))) {
+         esl_seteq<1,1,1>(ap_const_lv1_1, do_init_reg_143.read()))) {
         in_pixel_V_TDATA_blk_n = in_pixel_V_0_state.read()[0];
     } else {
         in_pixel_V_TDATA_blk_n = ap_const_logic_1;
@@ -2348,48 +1961,72 @@ void getPixelClassification_Stream::thread_in_pixel_V_TREADY() {
     in_pixel_V_TREADY = in_pixel_V_0_state.read()[1];
 }
 
-void getPixelClassification_Stream::thread_lhs_V_1_fu_390_p1() {
-    lhs_V_1_fu_390_p1 = esl_zext<9,8>(pixelGreen_V_fu_336_p1.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_1_fu_360_p3() {
+    minimumDistanceIndex_1_fu_360_p3 = (!tmp_2_reg_515.read()[0].is_01())? sc_lv<32>(): ((tmp_2_reg_515.read()[0].to_bool())? minimumDistanceIndex_4_fu_356_p1.read(): ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6.read());
 }
 
-void getPixelClassification_Stream::thread_lhs_V_2_fu_404_p1() {
-    lhs_V_2_fu_404_p1 = esl_zext<9,8>(pixelBlue_V_fu_340_p4.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_2_fu_367_p3() {
+    minimumDistanceIndex_2_fu_367_p3 = (!tmp_1_reg_510.read()[0].is_01())? sc_lv<32>(): ((tmp_1_reg_510.read()[0].to_bool())? minimumDistanceIndex_1_fu_360_p3.read(): ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6.read());
 }
 
-void getPixelClassification_Stream::thread_lhs_V_fu_372_p1() {
-    lhs_V_fu_372_p1 = esl_zext<9,8>(pixelRed_V_fu_326_p4.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_4_fu_356_p1() {
+    minimumDistanceIndex_4_fu_356_p1 = esl_zext<32,2>(ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistanceIndex_2_fu_936_p3() {
-    minimumDistanceIndex_2_fu_936_p3 = (!tmp_1_reg_1158.read()[0].is_01())? sc_lv<32>(): ((tmp_1_reg_1158.read()[0].to_bool())? i_0_minimumDistanceI_fu_929_p3.read(): ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_5_fu_377_p3() {
+    minimumDistanceIndex_5_fu_377_p3 = (!tmp_2_1_reg_525.read()[0].is_01())? sc_lv<32>(): ((tmp_2_1_reg_525.read()[0].to_bool())? i_cast_fu_374_p1.read(): minimumDistanceIndex_2_fu_367_p3.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistanceIndex_3_fu_925_p1() {
-    minimumDistanceIndex_3_fu_925_p1 = esl_zext<32,2>(ap_reg_pp0_iter16_minimumDistanceIndex_6_reg_193.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_6_fu_384_p3() {
+    minimumDistanceIndex_6_fu_384_p3 = (!tmp_1_1_reg_520.read()[0].is_01())? sc_lv<32>(): ((tmp_1_1_reg_520.read()[0].to_bool())? minimumDistanceIndex_5_fu_377_p3.read(): minimumDistanceIndex_2_fu_367_p3.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistanceIndex_4_fu_953_p3() {
-    minimumDistanceIndex_4_fu_953_p3 = (!tmp_1_1_reg_1168.read()[0].is_01())? sc_lv<32>(): ((tmp_1_1_reg_1168.read()[0].to_bool())? i_0_minimumDistanceI_1_fu_946_p3.read(): minimumDistanceIndex_2_fu_936_p3.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_7_fu_407_p3() {
+    minimumDistanceIndex_7_fu_407_p3 = (!tmp_2_2_fu_402_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_2_fu_402_p2.read()[0].to_bool())? i_1_cast_fu_391_p1.read(): minimumDistanceIndex_6_fu_384_p3.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistanceIndex_5_fu_991_p3() {
-    minimumDistanceIndex_5_fu_991_p3 = (!tmp_1_2_fu_966_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_2_fu_966_p2.read()[0].to_bool())? i_0_minimumDistanceI_2_fu_976_p3.read(): minimumDistanceIndex_4_fu_953_p3.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_8_fu_422_p3() {
+    minimumDistanceIndex_8_fu_422_p3 = (!tmp_1_2_fu_397_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_2_fu_397_p2.read()[0].to_bool())? minimumDistanceIndex_7_fu_407_p3.read(): minimumDistanceIndex_6_fu_384_p3.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistanceIndex_fu_279_p1() {
-    minimumDistanceIndex_fu_279_p1 = esl_zext<3,2>(ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6.read());
+void getPixelClassification_Stream::thread_minimumDistanceIndex_fu_250_p1() {
+    minimumDistanceIndex_fu_250_p1 = esl_zext<3,2>(ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistance_2_1_fu_907_p3() {
-    minimumDistance_2_1_fu_907_p3 = (!tmp_1_1_fu_888_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_1_fu_888_p2.read()[0].to_bool())? distance_0_minimumDi_1_fu_899_p3.read(): minimumDistance_2_fu_877_p3.read());
+void getPixelClassification_Stream::thread_minimumDistance_1_1_fu_340_p3() {
+    minimumDistance_1_1_fu_340_p3 = (!tmp_2_1_fu_335_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_1_fu_335_p2.read()[0].to_bool())? minimumDistance_4_1_s_fu_326_p1.read(): minimumDistance_2_fu_318_p3.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistance_2_2_fu_999_p3() {
-    minimumDistance_2_2_fu_999_p3 = (!tmp_1_2_fu_966_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_2_fu_966_p2.read()[0].to_bool())? distance_0_minimumDi_2_fu_984_p3.read(): minimumDistance_2_1_reg_1178.read());
+void getPixelClassification_Stream::thread_minimumDistance_1_2_fu_415_p3() {
+    minimumDistance_1_2_fu_415_p3 = (!tmp_2_2_fu_402_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_2_fu_402_p2.read()[0].to_bool())? minimumDistance_4_2_s_fu_394_p1.read(): minimumDistance_2_1_reg_530.read());
 }
 
-void getPixelClassification_Stream::thread_minimumDistance_2_fu_877_p3() {
-    minimumDistance_2_fu_877_p3 = (!tmp_1_fu_858_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_fu_858_p2.read()[0].to_bool())? distance_0_minimumDi_fu_869_p3.read(): ap_phi_mux_minimumDistance4_phi_fu_240_p6.read());
+void getPixelClassification_Stream::thread_minimumDistance_1_fu_310_p3() {
+    minimumDistance_1_fu_310_p3 = (!tmp_2_fu_305_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_2_fu_305_p2.read()[0].to_bool())? minimumDistance_4_ex_fu_296_p1.read(): ap_phi_mux_minimumDistance4_phi_fu_205_p6.read());
+}
+
+void getPixelClassification_Stream::thread_minimumDistance_2_1_fu_348_p3() {
+    minimumDistance_2_1_fu_348_p3 = (!tmp_1_1_fu_329_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_1_fu_329_p2.read()[0].to_bool())? minimumDistance_1_1_fu_340_p3.read(): minimumDistance_2_fu_318_p3.read());
+}
+
+void getPixelClassification_Stream::thread_minimumDistance_2_2_fu_430_p3() {
+    minimumDistance_2_2_fu_430_p3 = (!tmp_1_2_fu_397_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_2_fu_397_p2.read()[0].to_bool())? minimumDistance_1_2_fu_415_p3.read(): minimumDistance_2_1_reg_530.read());
+}
+
+void getPixelClassification_Stream::thread_minimumDistance_2_fu_318_p3() {
+    minimumDistance_2_fu_318_p3 = (!tmp_1_fu_299_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_1_fu_299_p2.read()[0].to_bool())? minimumDistance_1_fu_310_p3.read(): ap_phi_mux_minimumDistance4_phi_fu_205_p6.read());
+}
+
+void getPixelClassification_Stream::thread_minimumDistance_4_1_s_fu_326_p1() {
+    minimumDistance_4_1_s_fu_326_p1 = esl_zext<32,12>(minimumDistance_4_1_reg_504.read());
+}
+
+void getPixelClassification_Stream::thread_minimumDistance_4_2_s_fu_394_p1() {
+    minimumDistance_4_2_s_fu_394_p1 = esl_zext<32,12>(minimumDistance_4_2_reg_537.read());
+}
+
+void getPixelClassification_Stream::thread_minimumDistance_4_ex_fu_296_p1() {
+    minimumDistance_4_ex_fu_296_p1 = esl_zext<32,12>(minimumDistance_4_reg_498.read());
 }
 
 void getPixelClassification_Stream::thread_out_pixel_V_1_ack_in() {
@@ -2401,24 +2038,37 @@ void getPixelClassification_Stream::thread_out_pixel_V_1_ack_out() {
 }
 
 void getPixelClassification_Stream::thread_out_pixel_V_1_data_in() {
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
-        if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op225_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_reg_pp0_iter17_in_pixel_V9_phi_reg_222.read();
-        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op224_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_const_lv24_FF0000;
-        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op223_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_const_lv24_FF;
-        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op222_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_const_lv24_FF00;
-        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op221_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_const_lv24_FFFF00;
-        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op220_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_const_lv24_FF00FF;
-        } else if (esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op219_write_state20.read())) {
-            out_pixel_V_1_data_in = ap_const_lv24_FFFF;
-        } else {
-            out_pixel_V_1_data_in = "XXXXXXXXXXXXXXXXXXXXXXXX";
-        }
+    if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op137_write_state22.read()) && 
+          esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0)) || 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op138_write_state22.read()) && 
+          esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0)))) {
+        out_pixel_V_1_data_in = ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188.read();
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op136_write_state22.read()) && 
+                esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
+        out_pixel_V_1_data_in = ap_const_lv24_FF0000;
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op135_write_state22.read()) && 
+                esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
+        out_pixel_V_1_data_in = ap_const_lv24_FF;
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op134_write_state22.read()) && 
+                esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
+        out_pixel_V_1_data_in = ap_const_lv24_FF00;
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op133_write_state22.read()) && 
+                esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
+        out_pixel_V_1_data_in = ap_const_lv24_FFFF00;
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op132_write_state22.read()) && 
+                esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
+        out_pixel_V_1_data_in = ap_const_lv24_FF00FF;
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+                esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op131_write_state22.read()) && 
+                esl_seteq<1,1,1>(ap_block_pp0_stage0_01001.read(), ap_const_boolean_0))) {
+        out_pixel_V_1_data_in = ap_const_lv24_FFFF;
     } else {
         out_pixel_V_1_data_in = "XXXXXXXXXXXXXXXXXXXXXXXX";
     }
@@ -2449,26 +2099,29 @@ void getPixelClassification_Stream::thread_out_pixel_V_1_state_cmp_full() {
 }
 
 void getPixelClassification_Stream::thread_out_pixel_V_1_vld_in() {
-    if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op219_write_state20.read()) && 
+    if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op131_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
-         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op220_write_state20.read()) && 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op132_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
-         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op221_write_state20.read()) && 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op133_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
-         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op222_write_state20.read()) && 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op134_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
-         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op223_write_state20.read()) && 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op135_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
-         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op224_write_state20.read()) && 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op136_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
-         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op225_write_state20.read()) && 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op137_write_state22.read()) && 
+          esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)) || 
+         (esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_boolean_1, ap_predicate_op138_write_state22.read()) && 
           esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0)))) {
         out_pixel_V_1_vld_in = ap_const_logic_1;
     } else {
@@ -2486,71 +2139,81 @@ void getPixelClassification_Stream::thread_out_pixel_V_TDATA() {
 
 void getPixelClassification_Stream::thread_out_pixel_V_TDATA_blk_n() {
     if (((esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_0)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_FFFFFFFF)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_const_lv32_0, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read())) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_const_lv32_FFFFFFFF, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read())) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_5_reg_1191.read())) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read())) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_8_reg_543.read())) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read())) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter18.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter17_exitcond_reg_1038.read()) && 
-          !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_0) && 
-          !esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_5_reg_1191.read()) && 
-          !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2) && 
-          !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3) && 
-          !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4) && 
-          !esl_seteq<1,32,32>(minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5)) || 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5)) || 
          (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
-          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter19.read()) && 
-          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter18_exitcond_reg_1038.read()) && 
-          !esl_seteq<1,32,32>(ap_const_lv32_0, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read()) && 
-          !esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read()) && 
-          !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_2) && 
-          !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_3) && 
-          !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_4) && 
-          !esl_seteq<1,32,32>(ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191.read(), ap_const_lv32_5)))) {
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5)) || 
+         (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter20.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter19_exitcond_reg_464.read()) && 
+          !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_FFFFFFFF) && 
+          !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0) && 
+          !esl_seteq<1,32,32>(ap_const_lv32_1, minimumDistanceIndex_8_reg_543.read()) && 
+          !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2) && 
+          !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3) && 
+          !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4) && 
+          !esl_seteq<1,32,32>(minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5)) || 
+         (esl_seteq<1,1,1>(ap_block_pp0_stage0.read(), ap_const_boolean_0) && 
+          esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter21.read()) && 
+          esl_seteq<1,1,1>(ap_const_lv1_1, ap_reg_pp0_iter20_exitcond_reg_464.read()) && 
+          !esl_seteq<1,32,32>(ap_const_lv32_FFFFFFFF, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read()) && 
+          !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_0) && 
+          !esl_seteq<1,32,32>(ap_const_lv32_1, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read()) && 
+          !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_2) && 
+          !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_3) && 
+          !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_4) && 
+          !esl_seteq<1,32,32>(ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543.read(), ap_const_lv32_5)))) {
         out_pixel_V_TDATA_blk_n = out_pixel_V_1_state.read()[1];
     } else {
         out_pixel_V_TDATA_blk_n = ap_const_logic_1;
@@ -2561,88 +2224,16 @@ void getPixelClassification_Stream::thread_out_pixel_V_TVALID() {
     out_pixel_V_TVALID = out_pixel_V_1_state.read()[0];
 }
 
-void getPixelClassification_Stream::thread_p_Val2_10_cast_cas_fu_815_p1() {
-    p_Val2_10_cast_cas_fu_815_p1 = esl_sext<29,28>(p_Val2_2_fu_809_p2.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_1_cast_fu_689_p1() {
-    p_Val2_1_cast_fu_689_p1 = esl_sext<29,28>(tmp_6_fu_682_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_1_fu_644_p2() {
-    p_Val2_1_fu_644_p2 = (!p_shl_i_cast_fu_628_p1.read().is_01() || !p_shl3_i_cast_fu_640_p1.read().is_01())? sc_lv<28>(): (sc_bigint<28>(p_shl_i_cast_fu_628_p1.read()) - sc_bigint<28>(p_shl3_i_cast_fu_640_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_p_Val2_2_cast_cast_fu_693_p1() {
-    p_Val2_2_cast_cast_fu_693_p1 = esl_sext<29,28>(p_Val2_s_reg_1100.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_2_fu_809_p2() {
-    p_Val2_2_fu_809_p2 = (!p_shl_i2_cast_fu_794_p1.read().is_01() || !p_shl3_i2_cast_fu_805_p1.read().is_01())? sc_lv<28>(): (sc_bigint<28>(p_shl_i2_cast_fu_794_p1.read()) - sc_bigint<28>(p_shl3_i2_cast_fu_805_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_p_Val2_3_cast_fu_720_p1() {
-    p_Val2_3_cast_fu_720_p1 = esl_sext<30,27>(tmp_5_fu_713_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_4_cast_fu_731_p1() {
-    p_Val2_4_cast_fu_731_p1 = esl_sext<29,28>(tmp_8_fu_724_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_6_cast5_fu_772_p1() {
-    p_Val2_6_cast5_fu_772_p1 = esl_sext<30,27>(tmp_11_fu_764_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_6_cast_cast_fu_735_p1() {
-    p_Val2_6_cast_cast_fu_735_p1 = esl_sext<29,28>(p_Val2_1_reg_1115.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_7_cast_fu_783_p1() {
-    p_Val2_7_cast_fu_783_p1 = esl_sext<29,28>(tmp_12_fu_776_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_cast_fu_678_p1() {
-    p_Val2_cast_fu_678_p1 = esl_sext<30,27>(tmp_4_fu_671_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_Val2_s_fu_584_p2() {
-    p_Val2_s_fu_584_p2 = (!p_shl_i1_cast_fu_568_p1.read().is_01() || !p_shl3_i1_cast_fu_580_p1.read().is_01())? sc_lv<28>(): (sc_bigint<28>(p_shl_i1_cast_fu_568_p1.read()) - sc_bigint<28>(p_shl3_i1_cast_fu_580_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_p_cast1_fu_530_p1() {
-    p_cast1_fu_530_p1 = esl_sext<18,9>(r_V_reg_1042.read());
-}
-
-void getPixelClassification_Stream::thread_p_cast2_fu_539_p1() {
-    p_cast2_fu_539_p1 = esl_sext<18,9>(r_V_1_reg_1047.read());
-}
-
-void getPixelClassification_Stream::thread_p_cast3_fu_590_p1() {
-    p_cast3_fu_590_p1 = esl_sext<18,9>(r_V_3_reg_1058.read());
-}
-
-void getPixelClassification_Stream::thread_p_cast4_fu_599_p1() {
-    p_cast4_fu_599_p1 = esl_sext<18,9>(r_V_4_reg_1063.read());
-}
-
-void getPixelClassification_Stream::thread_p_cast5_fu_755_p1() {
-    p_cast5_fu_755_p1 = esl_sext<18,9>(ap_reg_pp0_iter2_r_V_6_reg_1074.read());
-}
-
-void getPixelClassification_Stream::thread_p_cast_fu_650_p1() {
-    p_cast_fu_650_p1 = esl_sext<18,9>(r_V_7_reg_1079.read());
-}
-
 void getPixelClassification_Stream::thread_p_color_array_stream_s_address0() {
-    p_color_array_stream_s_address0 =  (sc_lv<3>) (tmp1_fu_283_p1.read());
+    p_color_array_stream_s_address0 =  (sc_lv<3>) (tmp1_fu_254_p1.read());
 }
 
 void getPixelClassification_Stream::thread_p_color_array_stream_s_address1() {
-    p_color_array_stream_s_address1 =  (sc_lv<3>) (tmp_s_fu_294_p1.read());
+    p_color_array_stream_s_address1 =  (sc_lv<3>) (tmp_s_fu_265_p1.read());
 }
 
 void getPixelClassification_Stream::thread_p_color_array_stream_s_address2() {
-    p_color_array_stream_s_address2 =  (sc_lv<3>) (tmp_3_fu_305_p1.read());
+    p_color_array_stream_s_address2 =  (sc_lv<3>) (tmp_3_fu_291_p1.read());
 }
 
 void getPixelClassification_Stream::thread_p_color_array_stream_s_ce0() {
@@ -2667,368 +2258,52 @@ void getPixelClassification_Stream::thread_p_color_array_stream_s_ce1() {
 
 void getPixelClassification_Stream::thread_p_color_array_stream_s_ce2() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_pp0_stage0.read()) && 
-         esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && 
-         esl_seteq<1,1,1>(ap_const_logic_1, ap_const_logic_1))) {
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_enable_reg_pp0_iter1.read()) && 
+         esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0))) {
         p_color_array_stream_s_ce2 = ap_const_logic_1;
     } else {
         p_color_array_stream_s_ce2 = ap_const_logic_0;
     }
 }
 
-void getPixelClassification_Stream::thread_p_shl3_i1_cast_fu_580_p1() {
-    p_shl3_i1_cast_fu_580_p1 = esl_sext<28,25>(p_shl3_i1_fu_572_p3.read());
+void getPixelClassification_Stream::thread_tmp1_fu_254_p1() {
+    tmp1_fu_254_p1 = esl_zext<64,2>(ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6.read());
 }
 
-void getPixelClassification_Stream::thread_p_shl3_i1_fu_572_p3() {
-    p_shl3_i1_fu_572_p3 = esl_concat<17,8>(tmp_16_fu_554_p2.read(), ap_const_lv8_0);
+void getPixelClassification_Stream::thread_tmp_1_1_fu_329_p2() {
+    tmp_1_1_fu_329_p2 = (!minimumDistance_4_1_s_fu_326_p1.read().is_01() || !minimumDistance_2_fu_318_p3.read().is_01())? sc_lv<1>(): (sc_bigint<32>(minimumDistance_4_1_s_fu_326_p1.read()) < sc_bigint<32>(minimumDistance_2_fu_318_p3.read()));
 }
 
-void getPixelClassification_Stream::thread_p_shl3_i2_cast_fu_805_p1() {
-    p_shl3_i2_cast_fu_805_p1 = esl_sext<28,25>(p_shl3_i2_fu_798_p3.read());
+void getPixelClassification_Stream::thread_tmp_1_2_fu_397_p2() {
+    tmp_1_2_fu_397_p2 = (!minimumDistance_4_2_s_fu_394_p1.read().is_01() || !minimumDistance_2_1_reg_530.read().is_01())? sc_lv<1>(): (sc_bigint<32>(minimumDistance_4_2_s_fu_394_p1.read()) < sc_bigint<32>(minimumDistance_2_1_reg_530.read()));
 }
 
-void getPixelClassification_Stream::thread_p_shl3_i2_fu_798_p3() {
-    p_shl3_i2_fu_798_p3 = esl_concat<17,8>(tmp_28_reg_1125.read(), ap_const_lv8_0);
+void getPixelClassification_Stream::thread_tmp_1_fu_299_p2() {
+    tmp_1_fu_299_p2 = (!minimumDistance_4_ex_fu_296_p1.read().is_01() || !ap_phi_mux_minimumDistance4_phi_fu_205_p6.read().is_01())? sc_lv<1>(): (sc_bigint<32>(minimumDistance_4_ex_fu_296_p1.read()) < sc_bigint<32>(ap_phi_mux_minimumDistance4_phi_fu_205_p6.read()));
 }
 
-void getPixelClassification_Stream::thread_p_shl3_i_cast_fu_640_p1() {
-    p_shl3_i_cast_fu_640_p1 = esl_sext<28,25>(p_shl3_i_fu_632_p3.read());
+void getPixelClassification_Stream::thread_tmp_2_1_fu_335_p2() {
+    tmp_2_1_fu_335_p2 = (!minimumDistance_4_1_reg_504.read().is_01() || !ap_const_lv12_109.is_01())? sc_lv<1>(): (sc_biguint<12>(minimumDistance_4_1_reg_504.read()) < sc_biguint<12>(ap_const_lv12_109));
 }
 
-void getPixelClassification_Stream::thread_p_shl3_i_fu_632_p3() {
-    p_shl3_i_fu_632_p3 = esl_concat<17,8>(tmp_23_fu_614_p2.read(), ap_const_lv8_0);
+void getPixelClassification_Stream::thread_tmp_2_2_fu_402_p2() {
+    tmp_2_2_fu_402_p2 = (!minimumDistance_4_2_reg_537.read().is_01() || !ap_const_lv12_109.is_01())? sc_lv<1>(): (sc_biguint<12>(minimumDistance_4_2_reg_537.read()) < sc_biguint<12>(ap_const_lv12_109));
 }
 
-void getPixelClassification_Stream::thread_p_shl_i1_cast_fu_568_p1() {
-    p_shl_i1_cast_fu_568_p1 = esl_sext<28,27>(p_shl_i1_fu_560_p3.read());
+void getPixelClassification_Stream::thread_tmp_2_fu_305_p2() {
+    tmp_2_fu_305_p2 = (!minimumDistance_4_reg_498.read().is_01() || !ap_const_lv12_109.is_01())? sc_lv<1>(): (sc_biguint<12>(minimumDistance_4_reg_498.read()) < sc_biguint<12>(ap_const_lv12_109));
 }
 
-void getPixelClassification_Stream::thread_p_shl_i1_fu_560_p3() {
-    p_shl_i1_fu_560_p3 = esl_concat<17,10>(tmp_16_fu_554_p2.read(), ap_const_lv10_0);
+void getPixelClassification_Stream::thread_tmp_3_fu_291_p1() {
+    tmp_3_fu_291_p1 = esl_zext<64,3>(i_1_fu_286_p2.read());
 }
 
-void getPixelClassification_Stream::thread_p_shl_i2_cast_fu_794_p1() {
-    p_shl_i2_cast_fu_794_p1 = esl_sext<28,27>(p_shl_i2_fu_787_p3.read());
+void getPixelClassification_Stream::thread_tmp_4_fu_276_p1() {
+    tmp_4_fu_276_p1 = i_2_fu_270_p2.read().range(2-1, 0);
 }
 
-void getPixelClassification_Stream::thread_p_shl_i2_fu_787_p3() {
-    p_shl_i2_fu_787_p3 = esl_concat<17,10>(tmp_28_reg_1125.read(), ap_const_lv10_0);
-}
-
-void getPixelClassification_Stream::thread_p_shl_i_cast_fu_628_p1() {
-    p_shl_i_cast_fu_628_p1 = esl_sext<28,27>(p_shl_i_fu_620_p3.read());
-}
-
-void getPixelClassification_Stream::thread_p_shl_i_fu_620_p3() {
-    p_shl_i_fu_620_p3 = esl_concat<17,10>(tmp_23_fu_614_p2.read(), ap_const_lv10_0);
-}
-
-void getPixelClassification_Stream::thread_pixelBlue_V_fu_340_p4() {
-    pixelBlue_V_fu_340_p4 = ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4.read().range(15, 8);
-}
-
-void getPixelClassification_Stream::thread_pixelGreen_V_fu_336_p1() {
-    pixelGreen_V_fu_336_p1 = ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4.read().range(8-1, 0);
-}
-
-void getPixelClassification_Stream::thread_pixelRed_V_fu_326_p4() {
-    pixelRed_V_fu_326_p4 = ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4.read().range(23, 16);
-}
-
-void getPixelClassification_Stream::thread_powerSummation_V_2_fu_829_p2() {
-    powerSummation_V_2_fu_829_p2 = (!p_Val2_6_cast5_fu_772_p1.read().is_01() || !tmp14_cast_fu_825_p1.read().is_01())? sc_lv<30>(): (sc_bigint<30>(p_Val2_6_cast5_fu_772_p1.read()) + sc_bigint<30>(tmp14_cast_fu_825_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_1_fu_398_p2() {
-    r_V_1_fu_398_p2 = (!lhs_V_1_fu_390_p1.read().is_01() || !rhs_V_1_fu_394_p1.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_1_fu_390_p1.read()) - sc_biguint<9>(rhs_V_1_fu_394_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_2_fu_412_p2() {
-    r_V_2_fu_412_p2 = (!lhs_V_2_fu_404_p1.read().is_01() || !rhs_V_2_fu_408_p1.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_2_fu_404_p1.read()) - sc_biguint<9>(rhs_V_2_fu_408_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_3_fu_448_p2() {
-    r_V_3_fu_448_p2 = (!lhs_V_fu_372_p1.read().is_01() || !rhs_V_3_cast_fu_440_p3.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_fu_372_p1.read()) - sc_biguint<9>(rhs_V_3_cast_fu_440_p3.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_4_fu_458_p2() {
-    r_V_4_fu_458_p2 = (!lhs_V_1_fu_390_p1.read().is_01() || !rhs_V_4_fu_454_p1.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_1_fu_390_p1.read()) - sc_biguint<9>(rhs_V_4_fu_454_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_5_fu_468_p2() {
-    r_V_5_fu_468_p2 = (!lhs_V_2_fu_404_p1.read().is_01() || !rhs_V_5_fu_464_p1.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_2_fu_404_p1.read()) - sc_biguint<9>(rhs_V_5_fu_464_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_6_fu_504_p2() {
-    r_V_6_fu_504_p2 = (!lhs_V_fu_372_p1.read().is_01() || !rhs_V_6_cast_fu_496_p3.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_fu_372_p1.read()) - sc_biguint<9>(rhs_V_6_cast_fu_496_p3.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_7_fu_514_p2() {
-    r_V_7_fu_514_p2 = (!lhs_V_1_fu_390_p1.read().is_01() || !rhs_V_7_fu_510_p1.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_1_fu_390_p1.read()) - sc_biguint<9>(rhs_V_7_fu_510_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_8_fu_524_p2() {
-    r_V_8_fu_524_p2 = (!lhs_V_2_fu_404_p1.read().is_01() || !rhs_V_8_fu_520_p1.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_2_fu_404_p1.read()) - sc_biguint<9>(rhs_V_8_fu_520_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_r_V_fu_384_p2() {
-    r_V_fu_384_p2 = (!lhs_V_fu_372_p1.read().is_01() || !rhs_V_cast_fu_376_p3.read().is_01())? sc_lv<9>(): (sc_biguint<9>(lhs_V_fu_372_p1.read()) - sc_biguint<9>(rhs_V_cast_fu_376_p3.read()));
-}
-
-void getPixelClassification_Stream::thread_result3_fu_533_p0() {
-    result3_fu_533_p0 =  (sc_lv<9>) (p_cast1_fu_530_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result3_fu_533_p1() {
-    result3_fu_533_p1 =  (sc_lv<9>) (p_cast1_fu_530_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result3_fu_533_p2() {
-    result3_fu_533_p2 = (!result3_fu_533_p0.read().is_01() || !result3_fu_533_p1.read().is_01())? sc_lv<18>(): sc_bigint<9>(result3_fu_533_p0.read()) * sc_bigint<9>(result3_fu_533_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_2_fu_593_p0() {
-    result_2_fu_593_p0 =  (sc_lv<9>) (p_cast3_fu_590_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_2_fu_593_p1() {
-    result_2_fu_593_p1 =  (sc_lv<9>) (p_cast3_fu_590_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_2_fu_593_p2() {
-    result_2_fu_593_p2 = (!result_2_fu_593_p0.read().is_01() || !result_2_fu_593_p1.read().is_01())? sc_lv<18>(): sc_bigint<9>(result_2_fu_593_p0.read()) * sc_bigint<9>(result_2_fu_593_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_3_fu_653_p0() {
-    result_3_fu_653_p0 =  (sc_lv<9>) (p_cast_fu_650_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_3_fu_653_p1() {
-    result_3_fu_653_p1 =  (sc_lv<9>) (p_cast_fu_650_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_3_fu_653_p2() {
-    result_3_fu_653_p2 = (!result_3_fu_653_p0.read().is_01() || !result_3_fu_653_p1.read().is_01())? sc_lv<18>(): sc_bigint<9>(result_3_fu_653_p0.read()) * sc_bigint<9>(result_3_fu_653_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_4_fu_602_p0() {
-    result_4_fu_602_p0 =  (sc_lv<9>) (p_cast4_fu_599_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_4_fu_602_p1() {
-    result_4_fu_602_p1 =  (sc_lv<9>) (p_cast4_fu_599_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_4_fu_602_p2() {
-    result_4_fu_602_p2 = (!result_4_fu_602_p0.read().is_01() || !result_4_fu_602_p1.read().is_01())? sc_lv<18>(): sc_bigint<9>(result_4_fu_602_p0.read()) * sc_bigint<9>(result_4_fu_602_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_7_fu_758_p0() {
-    result_7_fu_758_p0 =  (sc_lv<9>) (p_cast5_fu_755_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_7_fu_758_p1() {
-    result_7_fu_758_p1 =  (sc_lv<9>) (p_cast5_fu_755_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_7_fu_758_p2() {
-    result_7_fu_758_p2 = (!result_7_fu_758_p0.read().is_01() || !result_7_fu_758_p1.read().is_01())? sc_lv<18>(): sc_bigint<9>(result_7_fu_758_p0.read()) * sc_bigint<9>(result_7_fu_758_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_s_fu_542_p0() {
-    result_s_fu_542_p0 =  (sc_lv<9>) (p_cast2_fu_539_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_s_fu_542_p1() {
-    result_s_fu_542_p1 =  (sc_lv<9>) (p_cast2_fu_539_p1.read());
-}
-
-void getPixelClassification_Stream::thread_result_s_fu_542_p2() {
-    result_s_fu_542_p2 = (!result_s_fu_542_p0.read().is_01() || !result_s_fu_542_p1.read().is_01())? sc_lv<18>(): sc_bigint<9>(result_s_fu_542_p0.read()) * sc_bigint<9>(result_s_fu_542_p1.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_1_fu_394_p1() {
-    rhs_V_1_fu_394_p1 = esl_zext<9,8>(colorGreen_V_fu_358_p1.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_2_fu_408_p1() {
-    rhs_V_2_fu_408_p1 = esl_zext<9,8>(colorBlue_V_fu_362_p4.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_3_cast_fu_440_p3() {
-    rhs_V_3_cast_fu_440_p3 = (!rhs_V_3_fu_418_p3.read()[0].is_01())? sc_lv<9>(): ((rhs_V_3_fu_418_p3.read()[0].to_bool())? ap_const_lv9_FF: ap_const_lv9_0);
-}
-
-void getPixelClassification_Stream::thread_rhs_V_3_fu_418_p3() {
-    rhs_V_3_fu_418_p3 = p_color_array_stream_s_q1.read().range(16, 16);
-}
-
-void getPixelClassification_Stream::thread_rhs_V_4_fu_454_p1() {
-    rhs_V_4_fu_454_p1 = esl_zext<9,8>(colorGreen_V_1_fu_426_p1.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_5_fu_464_p1() {
-    rhs_V_5_fu_464_p1 = esl_zext<9,8>(colorBlue_V_1_fu_430_p4.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_6_cast_fu_496_p3() {
-    rhs_V_6_cast_fu_496_p3 = (!rhs_V_6_fu_474_p3.read()[0].is_01())? sc_lv<9>(): ((rhs_V_6_fu_474_p3.read()[0].to_bool())? ap_const_lv9_FF: ap_const_lv9_0);
-}
-
-void getPixelClassification_Stream::thread_rhs_V_6_fu_474_p3() {
-    rhs_V_6_fu_474_p3 = p_color_array_stream_s_q2.read().range(16, 16);
-}
-
-void getPixelClassification_Stream::thread_rhs_V_7_fu_510_p1() {
-    rhs_V_7_fu_510_p1 = esl_zext<9,8>(colorGreen_V_2_fu_482_p1.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_8_fu_520_p1() {
-    rhs_V_8_fu_520_p1 = esl_zext<9,8>(colorBlue_V_2_fu_486_p4.read());
-}
-
-void getPixelClassification_Stream::thread_rhs_V_cast_fu_376_p3() {
-    rhs_V_cast_fu_376_p3 = (!rhs_V_fu_350_p3.read()[0].is_01())? sc_lv<9>(): ((rhs_V_fu_350_p3.read()[0].to_bool())? ap_const_lv9_FF: ap_const_lv9_0);
-}
-
-void getPixelClassification_Stream::thread_rhs_V_fu_350_p3() {
-    rhs_V_fu_350_p3 = p_color_array_stream_s_q0.read().range(16, 16);
-}
-
-void getPixelClassification_Stream::thread_tmp10_cast_fu_744_p1() {
-    tmp10_cast_fu_744_p1 = esl_sext<30,29>(tmp10_fu_738_p2.read());
-}
-
-void getPixelClassification_Stream::thread_tmp10_fu_738_p2() {
-    tmp10_fu_738_p2 = (!p_Val2_6_cast_cast_fu_735_p1.read().is_01() || !p_Val2_4_cast_fu_731_p1.read().is_01())? sc_lv<29>(): (sc_bigint<29>(p_Val2_6_cast_cast_fu_735_p1.read()) + sc_bigint<29>(p_Val2_4_cast_fu_731_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_tmp14_cast_fu_825_p1() {
-    tmp14_cast_fu_825_p1 = esl_sext<30,29>(tmp14_fu_819_p2.read());
-}
-
-void getPixelClassification_Stream::thread_tmp14_fu_819_p2() {
-    tmp14_fu_819_p2 = (!p_Val2_10_cast_cas_fu_815_p1.read().is_01() || !p_Val2_7_cast_fu_783_p1.read().is_01())? sc_lv<29>(): (sc_bigint<29>(p_Val2_10_cast_cas_fu_815_p1.read()) + sc_bigint<29>(p_Val2_7_cast_fu_783_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_tmp1_fu_283_p1() {
-    tmp1_fu_283_p1 = esl_zext<64,2>(ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6.read());
-}
-
-void getPixelClassification_Stream::thread_tmp6_cast_fu_702_p1() {
-    tmp6_cast_fu_702_p1 = esl_sext<30,29>(tmp6_fu_696_p2.read());
-}
-
-void getPixelClassification_Stream::thread_tmp6_fu_696_p2() {
-    tmp6_fu_696_p2 = (!p_Val2_2_cast_cast_fu_693_p1.read().is_01() || !p_Val2_1_cast_fu_689_p1.read().is_01())? sc_lv<29>(): (sc_bigint<29>(p_Val2_2_cast_cast_fu_693_p1.read()) + sc_bigint<29>(p_Val2_1_cast_fu_689_p1.read()));
-}
-
-void getPixelClassification_Stream::thread_tmp_11_fu_764_p3() {
-    tmp_11_fu_764_p3 = esl_concat<18,9>(result_7_fu_758_p2.read(), ap_const_lv9_0);
-}
-
-void getPixelClassification_Stream::thread_tmp_12_fu_776_p3() {
-    tmp_12_fu_776_p3 = esl_concat<18,10>(result_3_reg_1120.read(), ap_const_lv10_0);
-}
-
-void getPixelClassification_Stream::thread_tmp_16_fu_554_p0() {
-    tmp_16_fu_554_p0 = r_V_2_reg_1052.read();
-}
-
-void getPixelClassification_Stream::thread_tmp_16_fu_554_p1() {
-    tmp_16_fu_554_p1 = r_V_2_reg_1052.read();
-}
-
-void getPixelClassification_Stream::thread_tmp_16_fu_554_p2() {
-    tmp_16_fu_554_p2 = (!tmp_16_fu_554_p0.read().is_01() || !tmp_16_fu_554_p1.read().is_01())? sc_lv<17>(): sc_bigint<9>(tmp_16_fu_554_p0.read()) * sc_bigint<9>(tmp_16_fu_554_p1.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_1_1_fu_888_p2() {
-    tmp_1_1_fu_888_p2 = (!tmp_5_i_fu_885_p1.read().is_01() || !minimumDistance_2_fu_877_p3.read().is_01())? sc_lv<1>(): (sc_bigint<32>(tmp_5_i_fu_885_p1.read()) < sc_bigint<32>(minimumDistance_2_fu_877_p3.read()));
-}
-
-void getPixelClassification_Stream::thread_tmp_1_2_fu_966_p2() {
-    tmp_1_2_fu_966_p2 = (!tmp_5_i2_fu_963_p1.read().is_01() || !minimumDistance_2_1_reg_1178.read().is_01())? sc_lv<1>(): (sc_bigint<32>(tmp_5_i2_fu_963_p1.read()) < sc_bigint<32>(minimumDistance_2_1_reg_1178.read()));
-}
-
-void getPixelClassification_Stream::thread_tmp_1_fu_858_p2() {
-    tmp_1_fu_858_p2 = (!tmp_5_i1_fu_855_p1.read().is_01() || !ap_phi_mux_minimumDistance4_phi_fu_240_p6.read().is_01())? sc_lv<1>(): (sc_bigint<32>(tmp_5_i1_fu_855_p1.read()) < sc_bigint<32>(ap_phi_mux_minimumDistance4_phi_fu_240_p6.read()));
-}
-
-void getPixelClassification_Stream::thread_tmp_23_fu_614_p0() {
-    tmp_23_fu_614_p0 = r_V_5_reg_1068.read();
-}
-
-void getPixelClassification_Stream::thread_tmp_23_fu_614_p1() {
-    tmp_23_fu_614_p1 = r_V_5_reg_1068.read();
-}
-
-void getPixelClassification_Stream::thread_tmp_23_fu_614_p2() {
-    tmp_23_fu_614_p2 = (!tmp_23_fu_614_p0.read().is_01() || !tmp_23_fu_614_p1.read().is_01())? sc_lv<17>(): sc_bigint<9>(tmp_23_fu_614_p0.read()) * sc_bigint<9>(tmp_23_fu_614_p1.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_28_fu_665_p0() {
-    tmp_28_fu_665_p0 = r_V_8_reg_1084.read();
-}
-
-void getPixelClassification_Stream::thread_tmp_28_fu_665_p1() {
-    tmp_28_fu_665_p1 = r_V_8_reg_1084.read();
-}
-
-void getPixelClassification_Stream::thread_tmp_28_fu_665_p2() {
-    tmp_28_fu_665_p2 = (!tmp_28_fu_665_p0.read().is_01() || !tmp_28_fu_665_p1.read().is_01())? sc_lv<17>(): sc_bigint<9>(tmp_28_fu_665_p0.read()) * sc_bigint<9>(tmp_28_fu_665_p1.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_29_fu_316_p1() {
-    tmp_29_fu_316_p1 = i_2_fu_310_p2.read().range(2-1, 0);
-}
-
-void getPixelClassification_Stream::thread_tmp_2_1_fu_894_p2() {
-    tmp_2_1_fu_894_p2 = (!tmp_9_reg_1152.read().is_01() || !ap_const_lv12_FA.is_01())? sc_lv<1>(): (sc_biguint<12>(tmp_9_reg_1152.read()) < sc_biguint<12>(ap_const_lv12_FA));
-}
-
-void getPixelClassification_Stream::thread_tmp_2_2_fu_971_p2() {
-    tmp_2_2_fu_971_p2 = (!tmp_14_reg_1185.read().is_01() || !ap_const_lv12_FA.is_01())? sc_lv<1>(): (sc_biguint<12>(tmp_14_reg_1185.read()) < sc_biguint<12>(ap_const_lv12_FA));
-}
-
-void getPixelClassification_Stream::thread_tmp_2_fu_864_p2() {
-    tmp_2_fu_864_p2 = (!tmp_7_reg_1146.read().is_01() || !ap_const_lv12_FA.is_01())? sc_lv<1>(): (sc_biguint<12>(tmp_7_reg_1146.read()) < sc_biguint<12>(ap_const_lv12_FA));
-}
-
-void getPixelClassification_Stream::thread_tmp_3_fu_305_p1() {
-    tmp_3_fu_305_p1 = esl_zext<64,3>(i_1_fu_299_p2.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_4_fu_671_p3() {
-    tmp_4_fu_671_p3 = esl_concat<18,9>(result3_reg_1090.read(), ap_const_lv9_0);
-}
-
-void getPixelClassification_Stream::thread_tmp_5_fu_713_p3() {
-    tmp_5_fu_713_p3 = esl_concat<18,9>(result_2_reg_1105.read(), ap_const_lv9_0);
-}
-
-void getPixelClassification_Stream::thread_tmp_5_i1_fu_855_p1() {
-    tmp_5_i1_fu_855_p1 = esl_zext<32,12>(tmp_7_reg_1146.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_5_i2_fu_963_p1() {
-    tmp_5_i2_fu_963_p1 = esl_zext<32,12>(tmp_14_reg_1185.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_5_i_fu_885_p1() {
-    tmp_5_i_fu_885_p1 = esl_zext<32,12>(tmp_9_reg_1152.read());
-}
-
-void getPixelClassification_Stream::thread_tmp_6_fu_682_p3() {
-    tmp_6_fu_682_p3 = esl_concat<18,10>(result_s_reg_1095.read(), ap_const_lv10_0);
-}
-
-void getPixelClassification_Stream::thread_tmp_8_fu_724_p3() {
-    tmp_8_fu_724_p3 = esl_concat<18,10>(result_4_reg_1110.read(), ap_const_lv10_0);
-}
-
-void getPixelClassification_Stream::thread_tmp_s_fu_294_p1() {
-    tmp_s_fu_294_p1 = esl_zext<64,3>(i_fu_288_p2.read());
+void getPixelClassification_Stream::thread_tmp_s_fu_265_p1() {
+    tmp_s_fu_265_p1 = esl_zext<64,3>(i_fu_259_p2.read());
 }
 
 void getPixelClassification_Stream::thread_ap_NS_fsm() {

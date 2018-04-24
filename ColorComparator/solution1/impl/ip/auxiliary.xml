@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="getPixelClassification_Stream" xd:componentRef="getPixelClassification_Stream" xd:initiationInterval="24" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="in_pixel" xd:originalName="in_pixel" xd:direction="in" xd:interfaceRef="in_pixel_V" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="*(out_pixel)" xd:originalName="out_pixel" xd:direction="out" xd:interfaceRef="out_pixel_V" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:latencyEstimates xd:best-case="22" xd:worst-case="23" xd:average-case="22"/>
+  <xd:resourceEstimates xd:LUT="13891" xd:FF="2690" xd:BRAM="0" xd:DSP="3"/>
+</xd:acceleratorMap>

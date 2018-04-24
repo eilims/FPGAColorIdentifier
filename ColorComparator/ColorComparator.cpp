@@ -36,9 +36,9 @@ int getColorDistance_Stream(ap_uint<24> pixel, ap_uint<24> color) {
 	ap_uint<8> colorGreen = (color & 0x0000FF);
 	ap_uint<8> colorBlue = (color & 0x00FF00) >> 8;
 	//Multipliers are added as weighting for more powerful numbers such as red
-	in_data_t pixelRedPower = 2 * power(pixelRed - colorRed, 2);
-	in_data_t pixelGreenPower = 4 * power(pixelGreen - colorGreen, 2);
-	in_data_t pixelBluePower = 3 * power(pixelBlue - colorBlue, 2);
+	in_data_t pixelRedPower = (5 * power(pixelRed - colorRed, 2)) / 2; // 2
+	in_data_t pixelGreenPower = (11 * power(pixelGreen - colorGreen, 2)) / 4; //4
+	in_data_t pixelBluePower = (3 * power(pixelBlue - colorBlue, 2)) / 2; //3
 	in_data_t powerSummation = pixelRedPower + pixelGreenPower + pixelBluePower;
 	out_data_t result;
 	fxp_sqrt(result, powerSummation);
@@ -69,13 +69,22 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel,
 		int distance = getColorDistance_Stream(in_pixel,
 				_color_array_stream[i]);
 		if (distance < minimumDistance) {
-			if (distance < 250) {
+			if (distance < 265) { // Between 250-325 300doesntwork
 				minimumDistance = distance;
 				minimumDistanceIndex = i;
+			} else {
+				minimumDistance = minimumDistance;
+				minimumDistanceIndex = minimumDistanceIndex;
 			}
+		} else {
+			minimumDistance = minimumDistance;
 		}
 	}
+	//must define every single case for hls
 	switch (minimumDistanceIndex) {
+	case -1:
+		*out_pixel = in_pixel;
+		break;
 	case 0:
 		*out_pixel = _color_array_stream[0];
 		break;
@@ -96,6 +105,7 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel,
 		break;
 	default:
 		*out_pixel = in_pixel;
+		break;
 	}
 
 }

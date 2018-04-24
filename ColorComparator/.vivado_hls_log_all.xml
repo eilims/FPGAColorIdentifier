@@ -12,8 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-21T16:45:27.901-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-21T16:45:24.042-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-23T17:28:23.133-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'getColorDistance_Stream' to 'getColorDistance_Str' (ColorComparator/ColorComparator.cpp:3:9)" projectName="ColorComparator" solutionName="solution1" date="2018-04-23T17:28:22.453-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-23T17:28:15.873-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

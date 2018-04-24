@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'getPixelClassification_Stream'
 ================================================================
-* Date:           Sat Apr 21 16:45:31 2018
+* Date:           Mon Apr 23 17:28:31 2018
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        ColorComparator
@@ -29,26 +29,26 @@
     |  Latency  |  Interval |   Pipeline  |
     | min | max | min | max |     Type    |
     +-----+-----+-----+-----+-------------+
-    |   20|   21|    2|    2| loop rewind |
+    |   22|   23|    2|    2| loop rewind |
     +-----+-----+-----+-----+-------------+
 
     + Detail: 
         * Instance: 
-        +---------------------+----------+-----+-----+-----+-----+----------+
-        |                     |          |  Latency  |  Interval | Pipeline |
-        |       Instance      |  Module  | min | max | min | max |   Type   |
-        +---------------------+----------+-----+-----+-----+-----+----------+
-        |grp_fxp_sqrt_fu_264  |fxp_sqrt  |   11|   11|    1|    1| function |
-        |grp_fxp_sqrt_fu_269  |fxp_sqrt  |   11|   11|    1|    1| function |
-        |grp_fxp_sqrt_fu_274  |fxp_sqrt  |   11|   11|    1|    1| function |
-        +---------------------+----------+-----+-----+-----+-----+----------+
+        +---------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |                                 |                      |  Latency  |  Interval | Pipeline |
+        |             Instance            |        Module        | min | max | min | max |   Type   |
+        +---------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |grp_getColorDistance_Str_fu_229  |getColorDistance_Str  |   15|   15|    1|    1| function |
+        |grp_getColorDistance_Str_fu_236  |getColorDistance_Str  |   15|   15|    1|    1| function |
+        |grp_getColorDistance_Str_fu_243  |getColorDistance_Str  |   15|   15|    1|    1| function |
+        +---------------------------------+----------------------+-----+-----+-----+-----+----------+
 
         * Loop: 
         +--------------------+-----+-----+----------+-----------+-----------+------+----------+
         |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- PIXEL_COLOR_LOOP  |   20|   20|        20|          1|          1|     2|    yes   |
+        |- PIXEL_COLOR_LOOP  |   22|   22|        22|          1|          1|     2|    yes   |
         +--------------------+-----+-----+----------+-----------+-----------+------+----------+
 
 
@@ -61,31 +61,31 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      0|       0|   1697|
+|Expression       |        -|      -|       0|    762|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        -|      -|    1065|  10866|
+|Instance         |        -|      3|    1764|  12696|
 |Memory           |        0|      -|      51|      2|
-|Multiplexer      |        -|      -|       -|    242|
-|Register         |        0|      -|     964|    160|
+|Multiplexer      |        -|      -|       -|    239|
+|Register         |        0|      -|     875|    192|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|    2080|  12967|
+|Total            |        0|      3|    2690|  13891|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        0|      0|       1|     24|
+|Utilization (%)  |        0|      1|       2|     26|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
     * Instance: 
-    +---------------------+----------+---------+-------+-----+------+
-    |       Instance      |  Module  | BRAM_18K| DSP48E|  FF |  LUT |
-    +---------------------+----------+---------+-------+-----+------+
-    |grp_fxp_sqrt_fu_264  |fxp_sqrt  |        0|      0|  355|  3622|
-    |grp_fxp_sqrt_fu_269  |fxp_sqrt  |        0|      0|  355|  3622|
-    |grp_fxp_sqrt_fu_274  |fxp_sqrt  |        0|      0|  355|  3622|
-    +---------------------+----------+---------+-------+-----+------+
-    |Total                |          |        0|      0| 1065| 10866|
-    +---------------------+----------+---------+-------+-----+------+
+    +---------------------------------+----------------------+---------+-------+-----+------+
+    |             Instance            |        Module        | BRAM_18K| DSP48E|  FF |  LUT |
+    +---------------------------------+----------------------+---------+-------+-----+------+
+    |grp_getColorDistance_Str_fu_229  |getColorDistance_Str  |        0|      1|  588|  4232|
+    |grp_getColorDistance_Str_fu_236  |getColorDistance_Str  |        0|      1|  588|  4232|
+    |grp_getColorDistance_Str_fu_243  |getColorDistance_Str  |        0|      1|  588|  4232|
+    +---------------------------------+----------------------+---------+-------+-----+------+
+    |Total                            |                      |        0|      3| 1764| 12696|
+    +---------------------------------+----------------------+---------+-------+-----+------+
 
     * DSP48: 
     N/A
@@ -94,7 +94,7 @@
     +--------------------------+----------------------+---------+----+----+------+-----+------+-------------+
     |          Memory          |        Module        | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
     +--------------------------+----------------------+---------+----+----+------+-----+------+-------------+
-    |p_color_array_stream_s_U  |getPixelClassificbkb  |        0|  51|   2|     6|   17|     1|          102|
+    |p_color_array_stream_s_U  |getPixelClassificcud  |        0|  51|   2|     6|   17|     1|          102|
     +--------------------------+----------------------+---------+----+----+------+-----+------+-------------+
     |Total                     |                      |        0|  51|   2|     6|   17|     1|          102|
     +--------------------------+----------------------+---------+----+----+------+-----+------+-------------+
@@ -103,200 +103,166 @@
     N/A
 
     * Expression: 
-    +-----------------------------------+----------+-------+---+----+------------+------------+
-    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------------------------+----------+-------+---+----+------------+------------+
-    |result3_fu_533_p2                  |     *    |      0|  0|  51|           9|           9|
-    |result_2_fu_593_p2                 |     *    |      0|  0|  51|           9|           9|
-    |result_3_fu_653_p2                 |     *    |      0|  0|  51|           9|           9|
-    |result_4_fu_602_p2                 |     *    |      0|  0|  51|           9|           9|
-    |result_7_fu_758_p2                 |     *    |      0|  0|  51|           9|           9|
-    |result_s_fu_542_p2                 |     *    |      0|  0|  51|           9|           9|
-    |tmp_16_fu_554_p2                   |     *    |      0|  0|  51|           9|           9|
-    |tmp_23_fu_614_p2                   |     *    |      0|  0|  51|           9|           9|
-    |tmp_28_fu_665_p2                   |     *    |      0|  0|  51|           9|           9|
-    |grp_fxp_sqrt_fu_264_in_val_V_read  |     +    |      0|  0|  37|          30|          30|
-    |grp_fxp_sqrt_fu_269_in_val_V_read  |     +    |      0|  0|  37|          30|          30|
-    |i_1_fu_299_p2                      |     +    |      0|  0|  12|           2|           3|
-    |i_2_fu_310_p2                      |     +    |      0|  0|  12|           2|           3|
-    |i_fu_288_p2                        |     +    |      0|  0|  12|           1|           3|
-    |powerSummation_V_2_fu_829_p2       |     +    |      0|  0|  37|          30|          30|
-    |tmp10_fu_738_p2                    |     +    |      0|  0|  36|          29|          29|
-    |tmp14_fu_819_p2                    |     +    |      0|  0|  36|          29|          29|
-    |tmp6_fu_696_p2                     |     +    |      0|  0|  36|          29|          29|
-    |p_Val2_1_fu_644_p2                 |     -    |      0|  0|  35|          28|          28|
-    |p_Val2_2_fu_809_p2                 |     -    |      0|  0|  35|          28|          28|
-    |p_Val2_s_fu_584_p2                 |     -    |      0|  0|  35|          28|          28|
-    |r_V_1_fu_398_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_2_fu_412_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_3_fu_448_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_4_fu_458_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_5_fu_468_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_6_fu_504_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_7_fu_514_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_8_fu_524_p2                    |     -    |      0|  0|  16|           9|           9|
-    |r_V_fu_384_p2                      |     -    |      0|  0|  16|           9|           9|
-    |ap_block_state3_pp0_stage0_iter1   |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_165                   |    and   |      0|  0|   8|           1|           1|
-    |ap_condition_622                   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op219_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op220_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op221_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op222_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op223_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op224_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op225_write_state20   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op231_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op233_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op235_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op237_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op239_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op241_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |ap_predicate_op243_write_state21   |    and   |      0|  0|   8|           1|           1|
-    |in_pixel_V_0_load_A                |    and   |      0|  0|   8|           1|           1|
-    |in_pixel_V_0_load_B                |    and   |      0|  0|   8|           1|           1|
-    |out_pixel_V_1_load_A               |    and   |      0|  0|   8|           1|           1|
-    |out_pixel_V_1_load_B               |    and   |      0|  0|   8|           1|           1|
-    |exitcond_fu_320_p2                 |   icmp   |      0|  0|   9|           3|           3|
-    |in_pixel_V_0_state_cmp_full        |   icmp   |      0|  0|   8|           2|           1|
-    |out_pixel_V_1_state_cmp_full       |   icmp   |      0|  0|   8|           2|           1|
-    |tmp_1_1_fu_888_p2                  |   icmp   |      0|  0|  18|          32|          32|
-    |tmp_1_2_fu_966_p2                  |   icmp   |      0|  0|  18|          32|          32|
-    |tmp_1_fu_858_p2                    |   icmp   |      0|  0|  18|          32|          32|
-    |tmp_2_1_fu_894_p2                  |   icmp   |      0|  0|  13|          12|           8|
-    |tmp_2_2_fu_971_p2                  |   icmp   |      0|  0|  13|          12|           8|
-    |tmp_2_fu_864_p2                    |   icmp   |      0|  0|  13|          12|           8|
-    |ap_block_pp0_stage0_01001          |    or    |      0|  0|   8|           1|           1|
-    |ap_block_pp0_stage0_11001          |    or    |      0|  0|   8|           1|           1|
-    |ap_block_state20_io                |    or    |      0|  0|   8|           1|           1|
-    |ap_block_state21_io                |    or    |      0|  0|   8|           1|           1|
-    |distance_0_minimumDi_1_fu_899_p3   |  select  |      0|  0|  32|           1|          32|
-    |distance_0_minimumDi_2_fu_984_p3   |  select  |      0|  0|  32|           1|          32|
-    |distance_0_minimumDi_fu_869_p3     |  select  |      0|  0|  32|           1|          32|
-    |i_0_minimumDistanceI_1_fu_946_p3   |  select  |      0|  0|  32|           1|          32|
-    |i_0_minimumDistanceI_2_fu_976_p3   |  select  |      0|  0|  32|           1|          32|
-    |i_0_minimumDistanceI_fu_929_p3     |  select  |      0|  0|  32|           1|          32|
-    |minimumDistanceIndex_2_fu_936_p3   |  select  |      0|  0|  32|           1|          32|
-    |minimumDistanceIndex_4_fu_953_p3   |  select  |      0|  0|  32|           1|          32|
-    |minimumDistanceIndex_5_fu_991_p3   |  select  |      0|  0|  32|           1|          32|
-    |minimumDistance_2_1_fu_907_p3      |  select  |      0|  0|  32|           1|          32|
-    |minimumDistance_2_2_fu_999_p3      |  select  |      0|  0|  32|           1|          32|
-    |minimumDistance_2_fu_877_p3        |  select  |      0|  0|  32|           1|          32|
-    |rhs_V_3_cast_fu_440_p3             |  select  |      0|  0|   8|           1|           8|
-    |rhs_V_6_cast_fu_496_p3             |  select  |      0|  0|   8|           1|           8|
-    |rhs_V_cast_fu_376_p3               |  select  |      0|  0|   8|           1|           8|
-    |ap_enable_pp0                      |    xor   |      0|  0|   8|           1|           2|
-    +-----------------------------------+----------+-------+---+----+------------+------------+
-    |Total                              |          |      0|  0|1697|         608|         992|
-    +-----------------------------------+----------+-------+---+----+------------+------------+
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_286_p2                     |     +    |      0|  0|  12|           2|           3|
+    |i_2_fu_270_p2                     |     +    |      0|  0|  12|           2|           3|
+    |i_fu_259_p2                       |     +    |      0|  0|  12|           1|           3|
+    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_165                  |    and   |      0|  0|   8|           1|           1|
+    |ap_condition_501                  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op131_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op132_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op133_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op134_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op135_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op136_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op137_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op138_write_state22  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op147_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op149_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op151_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op153_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op155_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op157_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op159_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |ap_predicate_op161_write_state23  |    and   |      0|  0|   8|           1|           1|
+    |in_pixel_V_0_load_A               |    and   |      0|  0|   8|           1|           1|
+    |in_pixel_V_0_load_B               |    and   |      0|  0|   8|           1|           1|
+    |out_pixel_V_1_load_A              |    and   |      0|  0|   8|           1|           1|
+    |out_pixel_V_1_load_B              |    and   |      0|  0|   8|           1|           1|
+    |exitcond_fu_280_p2                |   icmp   |      0|  0|   9|           3|           3|
+    |in_pixel_V_0_state_cmp_full       |   icmp   |      0|  0|   8|           2|           1|
+    |out_pixel_V_1_state_cmp_full      |   icmp   |      0|  0|   8|           2|           1|
+    |tmp_1_1_fu_329_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_1_2_fu_397_p2                 |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_1_fu_299_p2                   |   icmp   |      0|  0|  18|          32|          32|
+    |tmp_2_1_fu_335_p2                 |   icmp   |      0|  0|  13|          12|           9|
+    |tmp_2_2_fu_402_p2                 |   icmp   |      0|  0|  13|          12|           9|
+    |tmp_2_fu_305_p2                   |   icmp   |      0|  0|  13|          12|           9|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state22_io               |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state23_io               |    or    |      0|  0|   8|           1|           1|
+    |minimumDistanceIndex_1_fu_360_p3  |  select  |      0|  0|  32|           1|          32|
+    |minimumDistanceIndex_2_fu_367_p3  |  select  |      0|  0|  32|           1|          32|
+    |minimumDistanceIndex_5_fu_377_p3  |  select  |      0|  0|  32|           1|          32|
+    |minimumDistanceIndex_6_fu_384_p3  |  select  |      0|  0|  32|           1|          32|
+    |minimumDistanceIndex_7_fu_407_p3  |  select  |      0|  0|  32|           1|          32|
+    |minimumDistanceIndex_8_fu_422_p3  |  select  |      0|  0|  32|           1|          32|
+    |minimumDistance_1_1_fu_340_p3     |  select  |      0|  0|  32|           1|          32|
+    |minimumDistance_1_2_fu_415_p3     |  select  |      0|  0|  32|           1|          32|
+    |minimumDistance_1_fu_310_p3       |  select  |      0|  0|  32|           1|          32|
+    |minimumDistance_2_1_fu_348_p3     |  select  |      0|  0|  32|           1|          32|
+    |minimumDistance_2_2_fu_430_p3     |  select  |      0|  0|  32|           1|          32|
+    |minimumDistance_2_fu_318_p3       |  select  |      0|  0|  32|           1|          32|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 762|         184|         550|
+    +----------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
     +-------------------------------------------------+----+-----------+-----+-----------+
     |                       Name                      | LUT| Input Size| Bits| Total Bits|
     +-------------------------------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                                        |  15|          3|    1|          3|
-    |ap_enable_reg_pp0_iter19                         |   9|          2|    1|          2|
-    |ap_phi_mux_in_pixel_V9_phi_phi_fu_227_p4         |  15|          3|   24|         72|
-    |ap_phi_mux_in_pixel_V9_rewind_phi_fu_212_p6      |   9|          2|   24|         48|
-    |ap_phi_mux_minimumDistance4_phi_fu_240_p6        |  15|          3|   32|         96|
-    |ap_phi_mux_minimumDistanceIndex_1_phi_fu_254_p6  |  15|          3|   32|         96|
-    |ap_phi_mux_minimumDistanceIndex_6_phi_fu_197_p6  |  15|          3|    2|          6|
-    |in_pixel_V9_phi_reg_222                          |  15|          3|   24|         72|
+    |ap_enable_reg_pp0_iter21                         |   9|          2|    1|          2|
+    |ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4         |   9|          2|   24|         48|
+    |ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6      |   9|          2|   24|         48|
+    |ap_phi_mux_minimumDistance4_phi_fu_205_p6        |  15|          3|   32|         96|
+    |ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6  |  15|          3|   32|         96|
+    |ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6  |  15|          3|    2|          6|
+    |ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188     |   9|          2|   24|         48|
+    |in_pixel_V5_phi_reg_188                          |   9|          2|   24|         48|
     |in_pixel_V_0_data_out                            |   9|          2|   24|         48|
     |in_pixel_V_0_state                               |  15|          3|    2|          6|
     |in_pixel_V_TDATA_blk_n                           |   9|          2|    1|          2|
-    |minimumDistance4_reg_236                         |   9|          2|   32|         64|
-    |minimumDistanceIndex_1_reg_250                   |   9|          2|   32|         64|
-    |minimumDistanceIndex_6_reg_193                   |   9|          2|    2|          4|
+    |minimumDistance4_reg_201                         |   9|          2|   32|         64|
+    |minimumDistanceIndex_3_reg_215                   |   9|          2|   32|         64|
+    |minimumDistanceIndex_9_reg_159                   |   9|          2|    2|          4|
     |out_pixel_V_1_data_in                            |  41|          8|   24|        192|
     |out_pixel_V_1_data_out                           |   9|          2|   24|         48|
     |out_pixel_V_1_state                              |  15|          3|    2|          6|
     |out_pixel_V_TDATA_blk_n                          |   9|          2|    1|          2|
     +-------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                            | 242|         50|  284|        831|
+    |Total                                            | 239|         50|  308|        831|
     +-------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------------------------------------+----+----+-----+-----------+
-    |                        Name                       | FF | LUT| Bits| Const Bits|
-    +---------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                          |   2|   0|    2|          0|
-    |ap_enable_reg_pp0_iter1                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter10                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter11                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter12                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter13                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter14                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter15                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter16                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter17                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter18                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter19                           |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter3                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter4                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter5                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter6                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter7                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter8                            |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter9                            |   1|   0|    1|          0|
-    |ap_reg_pp0_iter18_minimumDistanceIndex_5_reg_1191  |  32|   0|   32|          0|
-    |ap_reg_pp0_iter2_r_V_6_reg_1074                    |   9|   0|    9|          0|
-    |do_init_reg_177                                    |   1|   0|    1|          0|
-    |exitcond_reg_1038                                  |   1|   0|    1|          0|
-    |i_1_reg_1023                                       |   3|   0|    3|          0|
-    |i_reg_1013                                         |   3|   0|    3|          0|
-    |in_pixel_V9_phi_reg_222                            |  24|   0|   24|          0|
-    |in_pixel_V9_rewind_reg_208                         |  24|   0|   24|          0|
-    |in_pixel_V_0_payload_A                             |  24|   0|   24|          0|
-    |in_pixel_V_0_payload_B                             |  24|   0|   24|          0|
-    |in_pixel_V_0_sel_rd                                |   1|   0|    1|          0|
-    |in_pixel_V_0_sel_wr                                |   1|   0|    1|          0|
-    |in_pixel_V_0_state                                 |   2|   0|    2|          0|
-    |minimumDistance4_reg_236                           |  32|   0|   32|          0|
-    |minimumDistanceIndex_1_reg_250                     |  32|   0|   32|          0|
-    |minimumDistanceIndex_5_reg_1191                    |  32|   0|   32|          0|
-    |minimumDistanceIndex_6_reg_193                     |   2|   0|    2|          0|
-    |minimumDistance_2_1_reg_1178                       |  32|   0|   32|          0|
-    |out_pixel_V_1_payload_A                            |  24|   0|   24|          0|
-    |out_pixel_V_1_payload_B                            |  24|   0|   24|          0|
-    |out_pixel_V_1_sel_rd                               |   1|   0|    1|          0|
-    |out_pixel_V_1_sel_wr                               |   1|   0|    1|          0|
-    |out_pixel_V_1_state                                |   2|   0|    2|          0|
-    |p_Val2_1_reg_1115                                  |  20|   0|   28|          8|
-    |p_Val2_s_reg_1100                                  |  20|   0|   28|          8|
-    |powerSummation_V_2_reg_1141                        |  22|   0|   30|          8|
-    |r_V_1_reg_1047                                     |   9|   0|    9|          0|
-    |r_V_2_reg_1052                                     |   9|   0|    9|          0|
-    |r_V_3_reg_1058                                     |   9|   0|    9|          0|
-    |r_V_4_reg_1063                                     |   9|   0|    9|          0|
-    |r_V_5_reg_1068                                     |   9|   0|    9|          0|
-    |r_V_6_reg_1074                                     |   9|   0|    9|          0|
-    |r_V_7_reg_1079                                     |   9|   0|    9|          0|
-    |r_V_8_reg_1084                                     |   9|   0|    9|          0|
-    |r_V_reg_1042                                       |   9|   0|    9|          0|
-    |result3_reg_1090                                   |  18|   0|   18|          0|
-    |result_2_reg_1105                                  |  18|   0|   18|          0|
-    |result_3_reg_1120                                  |  18|   0|   18|          0|
-    |result_4_reg_1110                                  |  18|   0|   18|          0|
-    |result_s_reg_1095                                  |  18|   0|   18|          0|
-    |tmp_14_reg_1185                                    |  12|   0|   12|          0|
-    |tmp_1_1_reg_1168                                   |   1|   0|    1|          0|
-    |tmp_1_reg_1158                                     |   1|   0|    1|          0|
-    |tmp_28_reg_1125                                    |  17|   0|   17|          0|
-    |tmp_29_reg_1033                                    |   2|   0|    2|          0|
-    |tmp_2_1_reg_1173                                   |   1|   0|    1|          0|
-    |tmp_2_reg_1163                                     |   1|   0|    1|          0|
-    |tmp_7_reg_1146                                     |  12|   0|   12|          0|
-    |tmp_9_reg_1152                                     |  12|   0|   12|          0|
-    |exitcond_reg_1038                                  |  64|  32|    1|          0|
-    |i_1_reg_1023                                       |  64|  32|    3|          0|
-    |i_reg_1013                                         |  64|  32|    3|          0|
-    |in_pixel_V9_phi_reg_222                            |  64|  32|   24|          0|
-    |minimumDistanceIndex_6_reg_193                     |  64|  32|    2|          0|
-    +---------------------------------------------------+----+----+-----+-----------+
-    |Total                                              | 964| 160|  701|         24|
-    +---------------------------------------------------+----+----+-----+-----------+
+    +--------------------------------------------------+----+----+-----+-----------+
+    |                       Name                       | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                         |   2|   0|    2|          0|
+    |ap_enable_reg_pp0_iter1                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter16                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter17                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter18                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter19                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter20                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter21                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8                           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9                           |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188      |  24|   0|   24|          0|
+    |ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188      |  24|   0|   24|          0|
+    |ap_reg_grp_getColorDistance_Str_fu_229_ap_start   |   1|   0|    1|          0|
+    |ap_reg_grp_getColorDistance_Str_fu_236_ap_start   |   1|   0|    1|          0|
+    |ap_reg_grp_getColorDistance_Str_fu_243_ap_start   |   1|   0|    1|          0|
+    |ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543  |  32|   0|   32|          0|
+    |do_init_reg_143                                   |   1|   0|    1|          0|
+    |exitcond_reg_464                                  |   1|   0|    1|          0|
+    |i_1_reg_483                                       |   3|   0|    3|          0|
+    |i_reg_449                                         |   3|   0|    3|          0|
+    |in_pixel_V5_phi_reg_188                           |  24|   0|   24|          0|
+    |in_pixel_V5_rewind_reg_174                        |  24|   0|   24|          0|
+    |in_pixel_V_0_payload_A                            |  24|   0|   24|          0|
+    |in_pixel_V_0_payload_B                            |  24|   0|   24|          0|
+    |in_pixel_V_0_sel_rd                               |   1|   0|    1|          0|
+    |in_pixel_V_0_sel_wr                               |   1|   0|    1|          0|
+    |in_pixel_V_0_state                                |   2|   0|    2|          0|
+    |minimumDistance4_reg_201                          |  32|   0|   32|          0|
+    |minimumDistanceIndex_3_reg_215                    |  32|   0|   32|          0|
+    |minimumDistanceIndex_8_reg_543                    |  32|   0|   32|          0|
+    |minimumDistanceIndex_9_reg_159                    |   2|   0|    2|          0|
+    |minimumDistanceIndex_reg_439                      |   2|   0|    3|          1|
+    |minimumDistance_2_1_reg_530                       |  32|   0|   32|          0|
+    |minimumDistance_4_1_reg_504                       |  12|   0|   12|          0|
+    |minimumDistance_4_2_reg_537                       |  12|   0|   12|          0|
+    |minimumDistance_4_reg_498                         |  12|   0|   12|          0|
+    |out_pixel_V_1_payload_A                           |  24|   0|   24|          0|
+    |out_pixel_V_1_payload_B                           |  24|   0|   24|          0|
+    |out_pixel_V_1_sel_rd                              |   1|   0|    1|          0|
+    |out_pixel_V_1_sel_wr                              |   1|   0|    1|          0|
+    |out_pixel_V_1_state                               |   2|   0|    2|          0|
+    |p_color_array_stream_1_reg_473                    |  17|   0|   17|          0|
+    |p_color_array_stream_3_reg_478                    |  17|   0|   17|          0|
+    |p_color_array_stream_5_reg_493                    |  17|   0|   17|          0|
+    |tmp_1_1_reg_520                                   |   1|   0|    1|          0|
+    |tmp_1_reg_510                                     |   1|   0|    1|          0|
+    |tmp_2_1_reg_525                                   |   1|   0|    1|          0|
+    |tmp_2_reg_515                                     |   1|   0|    1|          0|
+    |tmp_4_reg_459                                     |   2|   0|    2|          0|
+    |do_init_reg_143                                   |  64|  32|    1|          0|
+    |exitcond_reg_464                                  |  64|  32|    1|          0|
+    |i_1_reg_483                                       |  64|  32|    3|          0|
+    |i_reg_449                                         |  64|  32|    3|          0|
+    |in_pixel_V5_phi_reg_188                           |  64|  32|   24|          0|
+    |minimumDistanceIndex_9_reg_159                    |  64|  32|    2|          0|
+    +--------------------------------------------------+----+----+-----+-----------+
+    |Total                                             | 875| 192|  526|          1|
+    +--------------------------------------------------+----+----+-----+-----------+
 
 
 

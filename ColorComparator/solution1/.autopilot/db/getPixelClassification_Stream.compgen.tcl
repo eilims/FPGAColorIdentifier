@@ -1,8 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 2
-set MemName getPixelClassificbkb
+set ID 6
+set MemName getPixelClassificcud
 set CoreName ap_simcore_mem
 set PortList { 1 1 1 }
 set DataWd 17
@@ -91,7 +91,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 3 \
+    id 7 \
     name in_pixel_V \
     reset_level 0 \
     sync_rst true \
@@ -110,7 +110,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 4 \
+    id 8 \
     name out_pixel_V \
     reset_level 0 \
     sync_rst true \
