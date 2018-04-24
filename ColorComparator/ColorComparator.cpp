@@ -36,9 +36,9 @@ int getColorDistance_Stream(ap_uint<24> pixel, ap_uint<24> color) {
 	ap_uint<8> colorGreen = (color & 0x0000FF);
 	ap_uint<8> colorBlue = (color & 0x00FF00) >> 8;
 	//Multipliers are added as weighting for more powerful numbers such as red
-	in_data_t pixelRedPower = (5 * power(pixelRed - colorRed, 2)) / 2; // 2
-	in_data_t pixelGreenPower = (11 * power(pixelGreen - colorGreen, 2)) / 4; //4
-	in_data_t pixelBluePower = (3 * power(pixelBlue - colorBlue, 2)) / 2; //3
+	in_data_t pixelRedPower = (7 * power(pixelRed - colorRed, 2)) / 2; // OG:2 -- LAST:2.5
+	in_data_t pixelGreenPower = (8 * power(pixelGreen - colorGreen, 2)) / 5; // OG:4 -- LAST:2.75
+	in_data_t pixelBluePower = (29 * power(pixelBlue - colorBlue, 2)) / 20; // OG:3 -- LAST:1.5
 	in_data_t powerSummation = pixelRedPower + pixelGreenPower + pixelBluePower;
 	out_data_t result;
 	fxp_sqrt(result, powerSummation);
@@ -69,7 +69,7 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel, ap_uint<24>* out_pixel,
 		int distance = getColorDistance_Stream(in_pixel,
 				_color_array_stream[i]);
 		if (distance < minimumDistance) {
-			if (distance < 265) { // Between 250-325 300doesntwork
+			if (distance < 315) { // Between 250-325 300doesntwork -- LAST:265
 				minimumDistance = distance;
 				minimumDistanceIndex = i;
 			} else {

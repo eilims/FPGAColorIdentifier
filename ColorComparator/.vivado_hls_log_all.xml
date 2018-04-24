@@ -6,17 +6,14 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="ColorComparator" solutionName="solution1" date="2018-04-23T18:31:58.870-0700"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-23T18:30:24.775-0700" type="Warning"/>
-        <logs message="WARNING: [XFORM 203-631] Renaming function 'getColorDistance_Stream' to 'getColorDistance_Str' (ColorComparator/ColorComparator.cpp:3:9)" projectName="ColorComparator" solutionName="solution1" date="2018-04-23T18:30:23.876-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-23T18:30:13.916-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'fxp_sqrt&lt;32, 24, 32, 24>' to 'fxp_sqrt' (ColorComparator/fxp_sqrt.h:162:1)" projectName="ColorComparator" solutionName="solution1" date="2018-04-24T13:02:33.344-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'UNROLL' cannot be applied: Label 'COL_LOOP' does not exist in function 'parseColorsToCenterPixel'." projectName="ColorComparator" solutionName="solution1" date="2018-04-24T13:02:25.818-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

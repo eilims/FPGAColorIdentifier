@@ -1,23 +1,19 @@
-INFO: [HLS 200-10] Running 'D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'DanielB' on host 'daniel' (Windows NT_amd64 version 6.2) on Mon Apr 23 18:34:27 -0700 2018
-INFO: [HLS 200-10] In directory 'D:/Repositories/FPGAColorIdentifier'
-INFO: [HLS 200-10] Opening project 'D:/Repositories/FPGAColorIdentifier/ColorComparator'.
-INFO: [HLS 200-10] Opening solution 'D:/Repositories/FPGAColorIdentifier/ColorComparator/solution1'.
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Jonathan' on host 'desktop-d6b50ii' (Windows NT_amd64 version 6.2) on Tue Apr 24 13:03:06 -0700 2018
+INFO: [HLS 200-10] In directory 'C:/Users/Jonathan/Desktop/FPGAColorIdentifier'
+INFO: [HLS 200-10] Opening project 'C:/Users/Jonathan/Desktop/FPGAColorIdentifier/ColorComparator'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/Jonathan/Desktop/FPGAColorIdentifier/ColorComparator/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../ColorComparator_tb.cpp in debug mode
-   Generating csim.exe
-In file included from D:/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h:143:0,
-                 from D:/Xilinx/Vivado/2017.4/include/hls_fpo.h:172,
-                 from D:/Xilinx/Vivado/2017.4/include/hls_half.h:57,
-                 from D:/Xilinx/Vivado/2017.4/include/ap_int.h:74,
-                 from ../../../dataTypes.h:4,
-                 from ../../../ColorComparator.h:7,
-                 from ../../../ColorComparator_tb.cpp:2:
-D:/Xilinx/Vivado/2017.4/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
-D:/Xilinx/Vivado/2017.4/include/floating_point_v7_0_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
-Color Classification Cyan Expected: 65535 Result: 7396863
-INFO: [SIM 211-1] CSim done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 24 13:03:37 2018...

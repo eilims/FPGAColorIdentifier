@@ -48,7 +48,7 @@ set NewPortList {[
  	{ "name": "in_switch_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "in_switch_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "5", "8"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7"],
 		"CDFG" : "getPixelClassification_Stream",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Rewind", "UnalignedPipeline" : "0", "RewindPipeline" : "1", "ProcessNetwork" : "0",
@@ -64,26 +64,9 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "out_pixel_V_TDATA_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "in_switch_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "p_color_array_stream_s", "Type" : "Memory", "Direction" : "I"}],
-		"SubInstanceBlock" : [
-			{"SubInstance" : "grp_getColorDistance_Str_fu_257", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]},
-			{"SubInstance" : "grp_getColorDistance_Str_fu_264", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]},
-			{"SubInstance" : "grp_getColorDistance_Str_fu_271", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]}]},
+			{"Name" : "p_color_array_stream_s", "Type" : "Memory", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.p_color_array_stream_s_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_257", "Parent" : "0", "Child" : ["3", "4"],
-		"CDFG" : "getColorDistance_Str",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "1",
-		"VariableLatency" : "0",
-		"Port" : [
-			{"Name" : "pixel_V", "Type" : "Axis", "Direction" : "I",
-				"BlockSignal" : [
-					{"Name" : "pixel_V_TDATA_blk_n", "Type" : "RtlPort"}]},
-			{"Name" : "color_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_257.grp_fxp_sqrt_fu_88", "Parent" : "2",
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_fxp_sqrt_fu_332", "Parent" : "0",
 		"CDFG" : "fxp_sqrt",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -93,21 +76,7 @@ set RtlHierarchyInfo {[
 		"VariableLatency" : "0",
 		"Port" : [
 			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_257.getPixelClassificbkb_U2", "Parent" : "2"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_264", "Parent" : "0", "Child" : ["6", "7"],
-		"CDFG" : "getColorDistance_Str",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "1",
-		"VariableLatency" : "0",
-		"Port" : [
-			{"Name" : "pixel_V", "Type" : "Axis", "Direction" : "I",
-				"BlockSignal" : [
-					{"Name" : "pixel_V_TDATA_blk_n", "Type" : "RtlPort"}]},
-			{"Name" : "color_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_264.grp_fxp_sqrt_fu_88", "Parent" : "5",
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_fxp_sqrt_fu_337", "Parent" : "0",
 		"CDFG" : "fxp_sqrt",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -117,21 +86,7 @@ set RtlHierarchyInfo {[
 		"VariableLatency" : "0",
 		"Port" : [
 			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_264.getPixelClassificbkb_U2", "Parent" : "5"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_271", "Parent" : "0", "Child" : ["9", "10"],
-		"CDFG" : "getColorDistance_Str",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
-		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "1",
-		"VariableLatency" : "0",
-		"Port" : [
-			{"Name" : "pixel_V", "Type" : "Axis", "Direction" : "I",
-				"BlockSignal" : [
-					{"Name" : "pixel_V_TDATA_blk_n", "Type" : "RtlPort"}]},
-			{"Name" : "color_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_271.grp_fxp_sqrt_fu_88", "Parent" : "8",
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_fxp_sqrt_fu_342", "Parent" : "0",
 		"CDFG" : "fxp_sqrt",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -141,35 +96,28 @@ set RtlHierarchyInfo {[
 		"VariableLatency" : "0",
 		"Port" : [
 			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_271.getPixelClassificbkb_U2", "Parent" : "8"}]}
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getPixelClassificcud_U2", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getPixelClassificcud_U3", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.getPixelClassificcud_U4", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	getPixelClassification_Stream {
 		in_pixel_V {Type I LastRead 1 FirstWrite -1}
-		out_pixel_V {Type O LastRead -1 FirstWrite 21}
+		out_pixel_V {Type O LastRead -1 FirstWrite 22}
 		in_switch_V {Type I LastRead 1 FirstWrite -1}
 		p_color_array_stream_s {Type I LastRead -1 FirstWrite -1}}
-	getColorDistance_Str {
-		pixel_V {Type I LastRead 0 FirstWrite -1}
-		color_V {Type I LastRead 0 FirstWrite -1}}
 	fxp_sqrt {
 		in_val_V_read {Type I LastRead 0 FirstWrite -1}}
-	getColorDistance_Str {
-		pixel_V {Type I LastRead 0 FirstWrite -1}
-		color_V {Type I LastRead 0 FirstWrite -1}}
 	fxp_sqrt {
 		in_val_V_read {Type I LastRead 0 FirstWrite -1}}
-	getColorDistance_Str {
-		pixel_V {Type I LastRead 0 FirstWrite -1}
-		color_V {Type I LastRead 0 FirstWrite -1}}
 	fxp_sqrt {
 		in_val_V_read {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "22", "Max" : "23"}
+	{"Name" : "Latency", "Min" : "23", "Max" : "24"}
 	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
 ]}
 

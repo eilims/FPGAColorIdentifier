@@ -1,5 +1,4 @@
-getPixelClassificbkb
 getPixelClassificcud
+getPixelClassificbkb
 fxp_sqrt
-getColorDistance_Str
 getPixelClassification_Stream
