@@ -25,6 +25,9 @@ entity getPixelClassificcud_rom is
           addr2      : in std_logic_vector(awidth-1 downto 0); 
           ce2       : in std_logic; 
           q2         : out std_logic_vector(dwidth-1 downto 0);
+          addr3      : in std_logic_vector(awidth-1 downto 0); 
+          ce3       : in std_logic; 
+          q3         : out std_logic_vector(dwidth-1 downto 0);
           clk       : in std_logic
     ); 
 end entity; 
@@ -35,6 +38,7 @@ architecture rtl of getPixelClassificcud_rom is
 signal addr0_tmp : std_logic_vector(awidth-1 downto 0); 
 signal addr1_tmp : std_logic_vector(awidth-1 downto 0); 
 signal addr2_tmp : std_logic_vector(awidth-1 downto 0); 
+signal addr3_tmp : std_logic_vector(awidth-1 downto 0); 
 type mem_array is array (0 to mem_size-1) of std_logic_vector (dwidth-1 downto 0); 
 signal mem0 : mem_array := (
     0 => "10000000000000000", 1 => "00000000011111111", 
@@ -91,6 +95,18 @@ begin
 --synthesis translate_on
 end process;
 
+memory_access_guard_3: process (addr3) 
+begin
+      addr3_tmp <= addr3;
+--synthesis translate_off
+      if (CONV_INTEGER(addr3) > mem_size-1) then
+           addr3_tmp <= (others => '0');
+      else 
+           addr3_tmp <= addr3;
+      end if;
+--synthesis translate_on
+end process;
+
 p_rom_access: process (clk)  
 begin 
     if (clk'event and clk = '1') then
@@ -102,6 +118,9 @@ begin
         end if;
         if (ce2 = '1') then 
             q2 <= mem1(CONV_INTEGER(addr2_tmp)); 
+        end if;
+        if (ce3 = '1') then 
+            q3 <= mem1(CONV_INTEGER(addr3_tmp)); 
         end if;
     end if;
 end process;
@@ -128,7 +147,10 @@ entity getPixelClassificcud is
         q1 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0);
         address2 : IN STD_LOGIC_VECTOR(AddressWidth - 1 DOWNTO 0);
         ce2 : IN STD_LOGIC;
-        q2 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0));
+        q2 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0);
+        address3 : IN STD_LOGIC_VECTOR(AddressWidth - 1 DOWNTO 0);
+        ce3 : IN STD_LOGIC;
+        q3 : OUT STD_LOGIC_VECTOR(DataWidth - 1 DOWNTO 0));
 end entity;
 
 architecture arch of getPixelClassificcud is
@@ -143,7 +165,10 @@ architecture arch of getPixelClassificcud is
             q1 : OUT STD_LOGIC_VECTOR;
             addr2 : IN STD_LOGIC_VECTOR;
             ce2 : IN STD_LOGIC;
-            q2 : OUT STD_LOGIC_VECTOR);
+            q2 : OUT STD_LOGIC_VECTOR;
+            addr3 : IN STD_LOGIC_VECTOR;
+            ce3 : IN STD_LOGIC;
+            q3 : OUT STD_LOGIC_VECTOR);
     end component;
 
 
@@ -160,7 +185,10 @@ begin
         q1 => q1,
         addr2 => address2,
         ce2 => ce2,
-        q2 => q2);
+        q2 => q2,
+        addr3 => address3,
+        ce3 => ce3,
+        q3 => q3);
 
 end architecture;
 

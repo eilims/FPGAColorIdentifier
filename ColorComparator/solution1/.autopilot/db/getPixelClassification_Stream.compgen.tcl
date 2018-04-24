@@ -4,7 +4,7 @@
 set ID 6
 set MemName getPixelClassificcud
 set CoreName ap_simcore_mem
-set PortList { 1 1 1 }
+set PortList { 1 1 1 1 }
 set DataWd 17
 set AddrRange 6
 set AddrWd 3
@@ -29,7 +29,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 3 \
+    port_num 4 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -63,7 +63,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 3 \
+    port_num 4 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -124,6 +124,21 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 }
 
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 9 \
+    name in_switch_V \
+    type other \
+    dir I \
+    reset_level 0 \
+    sync_rst true \
+    corename dc_in_switch_V \
+    op interface \
+    ports { in_switch_V { I 4 vector } } \
+} "
+}
 
 
 # Adapter definition:

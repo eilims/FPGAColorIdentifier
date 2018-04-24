@@ -45,7 +45,7 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     getPixelClassificbkb_U2 = new getPixelClassificbkb<1,1,14,9,23>("getPixelClassificbkb_U2");
     getPixelClassificbkb_U2->din0(tmp1_reg_508);
     getPixelClassificbkb_U2->din1(r_V_1_reg_503);
-    getPixelClassificbkb_U2->dout(tmp_3_fu_489_p2);
+    getPixelClassificbkb_U2->dout(tmp_5_fu_489_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -211,13 +211,13 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sensitive << ( tmp_12_fu_433_p3 );
 
     SC_METHOD(thread_p_neg1_fu_274_p2);
-    sensitive << ( tmp_s_fu_260_p2 );
+    sensitive << ( tmp_2_fu_260_p2 );
 
     SC_METHOD(thread_p_neg9_fu_322_p2);
     sensitive << ( tmp_13_reg_528 );
 
     SC_METHOD(thread_p_neg_fu_385_p2);
-    sensitive << ( tmp_7_fu_371_p2 );
+    sensitive << ( tmp_9_fu_371_p2 );
 
     SC_METHOD(thread_p_shl1_cast_fu_256_p1);
     sensitive << ( p_shl1_fu_249_p3 );
@@ -331,7 +331,7 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sensitive << ( tmp_15_fu_327_p4 );
 
     SC_METHOD(thread_tmp_10_fu_300_p4);
-    sensitive << ( tmp_s_fu_260_p2 );
+    sensitive << ( tmp_2_fu_260_p2 );
 
     SC_METHOD(thread_tmp_11_cast_fu_347_p1);
     sensitive << ( tmp_4_fu_341_p2 );
@@ -340,10 +340,10 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sensitive << ( tmp_14_cast_fu_401_p1 );
 
     SC_METHOD(thread_tmp_12_fu_433_p3);
-    sensitive << ( tmp_1_reg_553 );
+    sensitive << ( tmp_s_reg_553 );
 
     SC_METHOD(thread_tmp_13_fu_214_p1);
-    sensitive << ( tmp_3_fu_489_p2 );
+    sensitive << ( tmp_5_fu_489_p2 );
 
     SC_METHOD(thread_tmp_14_cast_fu_401_p1);
     sensitive << ( tmp_20_fu_391_p4 );
@@ -360,61 +360,61 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sensitive << ( tmp_21_fu_411_p4 );
 
     SC_METHOD(thread_tmp_17_fu_444_p3);
-    sensitive << ( tmp_5_reg_558 );
+    sensitive << ( tmp_6_reg_558 );
 
     SC_METHOD(thread_tmp_18_fu_242_p1);
     sensitive << ( result_1_fu_236_p2 );
 
     SC_METHOD(thread_tmp_19_fu_377_p3);
-    sensitive << ( tmp_7_fu_371_p2 );
+    sensitive << ( tmp_9_fu_371_p2 );
 
-    SC_METHOD(thread_tmp_1_fu_314_p3);
-    sensitive << ( tmp_8_fu_266_p3 );
-    sensitive << ( tmp_6_fu_294_p2 );
-    sensitive << ( tmp_8_cast_fu_310_p1 );
+    SC_METHOD(thread_tmp_1_fu_294_p2);
+    sensitive << ( tmp_cast_fu_290_p1 );
 
     SC_METHOD(thread_tmp_20_fu_391_p4);
     sensitive << ( p_neg_fu_385_p2 );
 
     SC_METHOD(thread_tmp_21_fu_411_p4);
-    sensitive << ( tmp_7_fu_371_p2 );
+    sensitive << ( tmp_9_fu_371_p2 );
 
     SC_METHOD(thread_tmp_22_fu_455_p3);
     sensitive << ( tmp_16_reg_563 );
 
-    SC_METHOD(thread_tmp_2_cast_fu_290_p1);
-    sensitive << ( tmp_9_fu_280_p4 );
+    SC_METHOD(thread_tmp_2_fu_260_p2);
+    sensitive << ( result_cast6_fu_246_p1 );
+    sensitive << ( p_shl1_cast_fu_256_p1 );
+
+    SC_METHOD(thread_tmp_4_cast_fu_310_p1);
+    sensitive << ( tmp_10_fu_300_p4 );
 
     SC_METHOD(thread_tmp_4_fu_341_p2);
     sensitive << ( tmp_10_cast_fu_337_p1 );
 
-    SC_METHOD(thread_tmp_5_fu_351_p3);
+    SC_METHOD(thread_tmp_6_fu_351_p3);
     sensitive << ( tmp_14_reg_533 );
-    sensitive << ( tmp_2_reg_538 );
+    sensitive << ( tmp_3_reg_538 );
     sensitive << ( tmp_11_cast_fu_347_p1 );
 
-    SC_METHOD(thread_tmp_6_fu_294_p2);
-    sensitive << ( tmp_2_cast_fu_290_p1 );
+    SC_METHOD(thread_tmp_7_fu_266_p3);
+    sensitive << ( tmp_2_fu_260_p2 );
 
-    SC_METHOD(thread_tmp_7_fu_371_p2);
+    SC_METHOD(thread_tmp_8_fu_280_p4);
+    sensitive << ( p_neg1_fu_274_p2 );
+
+    SC_METHOD(thread_tmp_9_fu_371_p2);
     sensitive << ( p_shl_cast_fu_367_p1 );
     sensitive << ( result_2_cast3_fu_357_p1 );
 
-    SC_METHOD(thread_tmp_8_cast_fu_310_p1);
-    sensitive << ( tmp_10_fu_300_p4 );
-
-    SC_METHOD(thread_tmp_8_fu_266_p3);
-    sensitive << ( tmp_s_fu_260_p2 );
-
-    SC_METHOD(thread_tmp_9_fu_280_p4);
-    sensitive << ( p_neg1_fu_274_p2 );
+    SC_METHOD(thread_tmp_cast_fu_290_p1);
+    sensitive << ( tmp_8_fu_280_p4 );
 
     SC_METHOD(thread_tmp_fu_204_p1);
     sensitive << ( result_fu_198_p2 );
 
-    SC_METHOD(thread_tmp_s_fu_260_p2);
-    sensitive << ( result_cast6_fu_246_p1 );
-    sensitive << ( p_shl1_cast_fu_256_p1 );
+    SC_METHOD(thread_tmp_s_fu_314_p3);
+    sensitive << ( tmp_7_fu_266_p3 );
+    sensitive << ( tmp_1_fu_294_p2 );
+    sensitive << ( tmp_4_cast_fu_310_p1 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_CS_fsm );
@@ -512,15 +512,15 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, tmp_13_fu_214_p1, "tmp_13_fu_214_p1");
     sc_trace(mVcdFile, tmp_13_reg_528, "tmp_13_reg_528");
     sc_trace(mVcdFile, tmp_14_reg_533, "tmp_14_reg_533");
-    sc_trace(mVcdFile, tmp_2_reg_538, "tmp_2_reg_538");
+    sc_trace(mVcdFile, tmp_3_reg_538, "tmp_3_reg_538");
     sc_trace(mVcdFile, result_1_fu_236_p2, "result_1_fu_236_p2");
     sc_trace(mVcdFile, result_1_reg_543, "result_1_reg_543");
     sc_trace(mVcdFile, tmp_18_fu_242_p1, "tmp_18_fu_242_p1");
     sc_trace(mVcdFile, tmp_18_reg_548, "tmp_18_reg_548");
-    sc_trace(mVcdFile, tmp_1_fu_314_p3, "tmp_1_fu_314_p3");
-    sc_trace(mVcdFile, tmp_1_reg_553, "tmp_1_reg_553");
-    sc_trace(mVcdFile, tmp_5_fu_351_p3, "tmp_5_fu_351_p3");
-    sc_trace(mVcdFile, tmp_5_reg_558, "tmp_5_reg_558");
+    sc_trace(mVcdFile, tmp_s_fu_314_p3, "tmp_s_fu_314_p3");
+    sc_trace(mVcdFile, tmp_s_reg_553, "tmp_s_reg_553");
+    sc_trace(mVcdFile, tmp_6_fu_351_p3, "tmp_6_fu_351_p3");
+    sc_trace(mVcdFile, tmp_6_reg_558, "tmp_6_reg_558");
     sc_trace(mVcdFile, tmp_16_fu_425_p3, "tmp_16_fu_425_p3");
     sc_trace(mVcdFile, tmp_16_reg_563, "tmp_16_reg_563");
     sc_trace(mVcdFile, ap_block_pp0_stage0_subdone, "ap_block_pp0_stage0_subdone");
@@ -543,21 +543,21 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, result_fu_198_p0, "result_fu_198_p0");
     sc_trace(mVcdFile, number_assign_cast_fu_195_p1, "number_assign_cast_fu_195_p1");
     sc_trace(mVcdFile, result_fu_198_p1, "result_fu_198_p1");
-    sc_trace(mVcdFile, tmp_3_fu_489_p2, "tmp_3_fu_489_p2");
+    sc_trace(mVcdFile, tmp_5_fu_489_p2, "tmp_5_fu_489_p2");
     sc_trace(mVcdFile, result_1_fu_236_p0, "result_1_fu_236_p0");
     sc_trace(mVcdFile, number_assign_2_cast_fu_233_p1, "number_assign_2_cast_fu_233_p1");
     sc_trace(mVcdFile, result_1_fu_236_p1, "result_1_fu_236_p1");
     sc_trace(mVcdFile, p_shl1_fu_249_p3, "p_shl1_fu_249_p3");
     sc_trace(mVcdFile, result_cast6_fu_246_p1, "result_cast6_fu_246_p1");
     sc_trace(mVcdFile, p_shl1_cast_fu_256_p1, "p_shl1_cast_fu_256_p1");
-    sc_trace(mVcdFile, tmp_s_fu_260_p2, "tmp_s_fu_260_p2");
+    sc_trace(mVcdFile, tmp_2_fu_260_p2, "tmp_2_fu_260_p2");
     sc_trace(mVcdFile, p_neg1_fu_274_p2, "p_neg1_fu_274_p2");
-    sc_trace(mVcdFile, tmp_9_fu_280_p4, "tmp_9_fu_280_p4");
-    sc_trace(mVcdFile, tmp_2_cast_fu_290_p1, "tmp_2_cast_fu_290_p1");
+    sc_trace(mVcdFile, tmp_8_fu_280_p4, "tmp_8_fu_280_p4");
+    sc_trace(mVcdFile, tmp_cast_fu_290_p1, "tmp_cast_fu_290_p1");
     sc_trace(mVcdFile, tmp_10_fu_300_p4, "tmp_10_fu_300_p4");
-    sc_trace(mVcdFile, tmp_8_fu_266_p3, "tmp_8_fu_266_p3");
-    sc_trace(mVcdFile, tmp_6_fu_294_p2, "tmp_6_fu_294_p2");
-    sc_trace(mVcdFile, tmp_8_cast_fu_310_p1, "tmp_8_cast_fu_310_p1");
+    sc_trace(mVcdFile, tmp_7_fu_266_p3, "tmp_7_fu_266_p3");
+    sc_trace(mVcdFile, tmp_1_fu_294_p2, "tmp_1_fu_294_p2");
+    sc_trace(mVcdFile, tmp_4_cast_fu_310_p1, "tmp_4_cast_fu_310_p1");
     sc_trace(mVcdFile, p_neg9_fu_322_p2, "p_neg9_fu_322_p2");
     sc_trace(mVcdFile, tmp_15_fu_327_p4, "tmp_15_fu_327_p4");
     sc_trace(mVcdFile, tmp_10_cast_fu_337_p1, "tmp_10_cast_fu_337_p1");
@@ -566,7 +566,7 @@ getColorDistance_Str::getColorDistance_Str(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, p_shl_fu_360_p3, "p_shl_fu_360_p3");
     sc_trace(mVcdFile, p_shl_cast_fu_367_p1, "p_shl_cast_fu_367_p1");
     sc_trace(mVcdFile, result_2_cast3_fu_357_p1, "result_2_cast3_fu_357_p1");
-    sc_trace(mVcdFile, tmp_7_fu_371_p2, "tmp_7_fu_371_p2");
+    sc_trace(mVcdFile, tmp_9_fu_371_p2, "tmp_9_fu_371_p2");
     sc_trace(mVcdFile, p_neg_fu_385_p2, "p_neg_fu_385_p2");
     sc_trace(mVcdFile, tmp_20_fu_391_p4, "tmp_20_fu_391_p4");
     sc_trace(mVcdFile, tmp_14_cast_fu_401_p1, "tmp_14_cast_fu_401_p1");
@@ -718,15 +718,15 @@ void getColorDistance_Str::thread_ap_clk_no_reset_() {
         result_reg_518 = result_fu_198_p2.read();
         tmp1_reg_508 = tmp1_fu_175_p2.read();
         tmp_13_reg_528 = tmp_13_fu_214_p1.read();
-        tmp_14_reg_533 = tmp_3_fu_489_p2.read().range(22, 22);
+        tmp_14_reg_533 = tmp_5_fu_489_p2.read().range(22, 22);
         tmp_18_reg_548 = tmp_18_fu_242_p1.read();
-        tmp_2_reg_538 = tmp_3_fu_489_p2.read().range(22, 2);
+        tmp_3_reg_538 = tmp_5_fu_489_p2.read().range(22, 2);
         tmp_reg_523 = tmp_fu_204_p1.read();
     }
     if ((esl_seteq<1,1,1>(ap_block_pp0_stage0_11001.read(), ap_const_boolean_0) && esl_seteq<1,1,1>(ap_ce.read(), ap_const_logic_1))) {
         tmp_16_reg_563 = tmp_16_fu_425_p3.read();
-        tmp_1_reg_553 = tmp_1_fu_314_p3.read();
-        tmp_5_reg_558 = tmp_5_fu_351_p3.read();
+        tmp_6_reg_558 = tmp_6_fu_351_p3.read();
+        tmp_s_reg_553 = tmp_s_fu_314_p3.read();
     }
 }
 
@@ -969,7 +969,7 @@ void getColorDistance_Str::thread_p_Val2_s_fu_440_p1() {
 }
 
 void getColorDistance_Str::thread_p_neg1_fu_274_p2() {
-    p_neg1_fu_274_p2 = (!ap_const_lv20_0.is_01() || !tmp_s_fu_260_p2.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_biguint<20>(tmp_s_fu_260_p2.read()));
+    p_neg1_fu_274_p2 = (!ap_const_lv20_0.is_01() || !tmp_2_fu_260_p2.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_biguint<20>(tmp_2_fu_260_p2.read()));
 }
 
 void getColorDistance_Str::thread_p_neg9_fu_322_p2() {
@@ -977,7 +977,7 @@ void getColorDistance_Str::thread_p_neg9_fu_322_p2() {
 }
 
 void getColorDistance_Str::thread_p_neg_fu_385_p2() {
-    p_neg_fu_385_p2 = (!ap_const_lv20_0.is_01() || !tmp_7_fu_371_p2.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_biguint<20>(tmp_7_fu_371_p2.read()));
+    p_neg_fu_385_p2 = (!ap_const_lv20_0.is_01() || !tmp_9_fu_371_p2.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_biguint<20>(tmp_9_fu_371_p2.read()));
 }
 
 void getColorDistance_Str::thread_p_shl1_cast_fu_256_p1() {
@@ -1107,7 +1107,7 @@ void getColorDistance_Str::thread_tmp_10_cast_fu_337_p1() {
 }
 
 void getColorDistance_Str::thread_tmp_10_fu_300_p4() {
-    tmp_10_fu_300_p4 = tmp_s_fu_260_p2.read().range(19, 1);
+    tmp_10_fu_300_p4 = tmp_2_fu_260_p2.read().range(19, 1);
 }
 
 void getColorDistance_Str::thread_tmp_11_cast_fu_347_p1() {
@@ -1119,11 +1119,11 @@ void getColorDistance_Str::thread_tmp_11_fu_405_p2() {
 }
 
 void getColorDistance_Str::thread_tmp_12_fu_433_p3() {
-    tmp_12_fu_433_p3 = esl_concat<20,8>(tmp_1_reg_553.read(), ap_const_lv8_0);
+    tmp_12_fu_433_p3 = esl_concat<20,8>(tmp_s_reg_553.read(), ap_const_lv8_0);
 }
 
 void getColorDistance_Str::thread_tmp_13_fu_214_p1() {
-    tmp_13_fu_214_p1 = tmp_3_fu_489_p2.read().range(21-1, 0);
+    tmp_13_fu_214_p1 = tmp_5_fu_489_p2.read().range(21-1, 0);
 }
 
 void getColorDistance_Str::thread_tmp_14_cast_fu_401_p1() {
@@ -1143,7 +1143,7 @@ void getColorDistance_Str::thread_tmp_17_cast_fu_421_p1() {
 }
 
 void getColorDistance_Str::thread_tmp_17_fu_444_p3() {
-    tmp_17_fu_444_p3 = esl_concat<21,8>(tmp_5_reg_558.read(), ap_const_lv8_0);
+    tmp_17_fu_444_p3 = esl_concat<21,8>(tmp_6_reg_558.read(), ap_const_lv8_0);
 }
 
 void getColorDistance_Str::thread_tmp_18_fu_242_p1() {
@@ -1151,11 +1151,11 @@ void getColorDistance_Str::thread_tmp_18_fu_242_p1() {
 }
 
 void getColorDistance_Str::thread_tmp_19_fu_377_p3() {
-    tmp_19_fu_377_p3 = tmp_7_fu_371_p2.read().range(19, 19);
+    tmp_19_fu_377_p3 = tmp_9_fu_371_p2.read().range(19, 19);
 }
 
-void getColorDistance_Str::thread_tmp_1_fu_314_p3() {
-    tmp_1_fu_314_p3 = (!tmp_8_fu_266_p3.read()[0].is_01())? sc_lv<20>(): ((tmp_8_fu_266_p3.read()[0].to_bool())? tmp_6_fu_294_p2.read(): tmp_8_cast_fu_310_p1.read());
+void getColorDistance_Str::thread_tmp_1_fu_294_p2() {
+    tmp_1_fu_294_p2 = (!ap_const_lv20_0.is_01() || !tmp_cast_fu_290_p1.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_bigint<20>(tmp_cast_fu_290_p1.read()));
 }
 
 void getColorDistance_Str::thread_tmp_20_fu_391_p4() {
@@ -1163,51 +1163,51 @@ void getColorDistance_Str::thread_tmp_20_fu_391_p4() {
 }
 
 void getColorDistance_Str::thread_tmp_21_fu_411_p4() {
-    tmp_21_fu_411_p4 = tmp_7_fu_371_p2.read().range(19, 1);
+    tmp_21_fu_411_p4 = tmp_9_fu_371_p2.read().range(19, 1);
 }
 
 void getColorDistance_Str::thread_tmp_22_fu_455_p3() {
     tmp_22_fu_455_p3 = esl_concat<20,8>(tmp_16_reg_563.read(), ap_const_lv8_0);
 }
 
-void getColorDistance_Str::thread_tmp_2_cast_fu_290_p1() {
-    tmp_2_cast_fu_290_p1 = esl_sext<20,19>(tmp_9_fu_280_p4.read());
+void getColorDistance_Str::thread_tmp_2_fu_260_p2() {
+    tmp_2_fu_260_p2 = (!result_cast6_fu_246_p1.read().is_01() || !p_shl1_cast_fu_256_p1.read().is_01())? sc_lv<20>(): (sc_bigint<20>(result_cast6_fu_246_p1.read()) + sc_bigint<20>(p_shl1_cast_fu_256_p1.read()));
+}
+
+void getColorDistance_Str::thread_tmp_4_cast_fu_310_p1() {
+    tmp_4_cast_fu_310_p1 = esl_sext<20,19>(tmp_10_fu_300_p4.read());
 }
 
 void getColorDistance_Str::thread_tmp_4_fu_341_p2() {
     tmp_4_fu_341_p2 = (!ap_const_lv20_0.is_01() || !tmp_10_cast_fu_337_p1.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_bigint<20>(tmp_10_cast_fu_337_p1.read()));
 }
 
-void getColorDistance_Str::thread_tmp_5_fu_351_p3() {
-    tmp_5_fu_351_p3 = (!tmp_14_reg_533.read()[0].is_01())? sc_lv<21>(): ((tmp_14_reg_533.read()[0].to_bool())? tmp_11_cast_fu_347_p1.read(): tmp_2_reg_538.read());
+void getColorDistance_Str::thread_tmp_6_fu_351_p3() {
+    tmp_6_fu_351_p3 = (!tmp_14_reg_533.read()[0].is_01())? sc_lv<21>(): ((tmp_14_reg_533.read()[0].to_bool())? tmp_11_cast_fu_347_p1.read(): tmp_3_reg_538.read());
 }
 
-void getColorDistance_Str::thread_tmp_6_fu_294_p2() {
-    tmp_6_fu_294_p2 = (!ap_const_lv20_0.is_01() || !tmp_2_cast_fu_290_p1.read().is_01())? sc_lv<20>(): (sc_biguint<20>(ap_const_lv20_0) - sc_bigint<20>(tmp_2_cast_fu_290_p1.read()));
+void getColorDistance_Str::thread_tmp_7_fu_266_p3() {
+    tmp_7_fu_266_p3 = tmp_2_fu_260_p2.read().range(19, 19);
 }
 
-void getColorDistance_Str::thread_tmp_7_fu_371_p2() {
-    tmp_7_fu_371_p2 = (!p_shl_cast_fu_367_p1.read().is_01() || !result_2_cast3_fu_357_p1.read().is_01())? sc_lv<20>(): (sc_bigint<20>(p_shl_cast_fu_367_p1.read()) - sc_bigint<20>(result_2_cast3_fu_357_p1.read()));
+void getColorDistance_Str::thread_tmp_8_fu_280_p4() {
+    tmp_8_fu_280_p4 = p_neg1_fu_274_p2.read().range(19, 1);
 }
 
-void getColorDistance_Str::thread_tmp_8_cast_fu_310_p1() {
-    tmp_8_cast_fu_310_p1 = esl_sext<20,19>(tmp_10_fu_300_p4.read());
+void getColorDistance_Str::thread_tmp_9_fu_371_p2() {
+    tmp_9_fu_371_p2 = (!p_shl_cast_fu_367_p1.read().is_01() || !result_2_cast3_fu_357_p1.read().is_01())? sc_lv<20>(): (sc_bigint<20>(p_shl_cast_fu_367_p1.read()) - sc_bigint<20>(result_2_cast3_fu_357_p1.read()));
 }
 
-void getColorDistance_Str::thread_tmp_8_fu_266_p3() {
-    tmp_8_fu_266_p3 = tmp_s_fu_260_p2.read().range(19, 19);
-}
-
-void getColorDistance_Str::thread_tmp_9_fu_280_p4() {
-    tmp_9_fu_280_p4 = p_neg1_fu_274_p2.read().range(19, 1);
+void getColorDistance_Str::thread_tmp_cast_fu_290_p1() {
+    tmp_cast_fu_290_p1 = esl_sext<20,19>(tmp_8_fu_280_p4.read());
 }
 
 void getColorDistance_Str::thread_tmp_fu_204_p1() {
     tmp_fu_204_p1 = result_fu_198_p2.read().range(17-1, 0);
 }
 
-void getColorDistance_Str::thread_tmp_s_fu_260_p2() {
-    tmp_s_fu_260_p2 = (!result_cast6_fu_246_p1.read().is_01() || !p_shl1_cast_fu_256_p1.read().is_01())? sc_lv<20>(): (sc_bigint<20>(result_cast6_fu_246_p1.read()) + sc_bigint<20>(p_shl1_cast_fu_256_p1.read()));
+void getColorDistance_Str::thread_tmp_s_fu_314_p3() {
+    tmp_s_fu_314_p3 = (!tmp_7_fu_266_p3.read()[0].is_01())? sc_lv<20>(): ((tmp_7_fu_266_p3.read()[0].to_bool())? tmp_1_fu_294_p2.read(): tmp_4_cast_fu_310_p1.read());
 }
 
 void getColorDistance_Str::thread_ap_NS_fsm() {

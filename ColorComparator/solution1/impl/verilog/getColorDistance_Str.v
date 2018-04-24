@@ -97,15 +97,15 @@ reg   [16:0] tmp_reg_523;
 wire   [20:0] tmp_13_fu_214_p1;
 reg   [20:0] tmp_13_reg_528;
 reg   [0:0] tmp_14_reg_533;
-reg   [20:0] tmp_2_reg_538;
+reg   [20:0] tmp_3_reg_538;
 wire   [17:0] result_1_fu_236_p2;
 reg   [17:0] result_1_reg_543;
 wire   [16:0] tmp_18_fu_242_p1;
 reg   [16:0] tmp_18_reg_548;
-wire   [19:0] tmp_1_fu_314_p3;
-reg   [19:0] tmp_1_reg_553;
-wire   [20:0] tmp_5_fu_351_p3;
-reg   [20:0] tmp_5_reg_558;
+wire   [19:0] tmp_s_fu_314_p3;
+reg   [19:0] tmp_s_reg_553;
+wire   [20:0] tmp_6_fu_351_p3;
+reg   [20:0] tmp_6_reg_558;
 wire   [19:0] tmp_16_fu_425_p3;
 reg   [19:0] tmp_16_reg_563;
 reg    ap_block_pp0_stage0_subdone;
@@ -128,21 +128,21 @@ wire   [8:0] rhs_V_2_fu_185_p1;
 wire  signed [8:0] result_fu_198_p0;
 wire  signed [17:0] number_assign_cast_fu_195_p1;
 wire  signed [8:0] result_fu_198_p1;
-wire  signed [22:0] tmp_3_fu_489_p2;
+wire  signed [22:0] tmp_5_fu_489_p2;
 wire  signed [8:0] result_1_fu_236_p0;
 wire  signed [17:0] number_assign_2_cast_fu_233_p1;
 wire  signed [8:0] result_1_fu_236_p1;
 wire   [18:0] p_shl1_fu_249_p3;
 wire  signed [19:0] result_cast6_fu_246_p1;
 wire  signed [19:0] p_shl1_cast_fu_256_p1;
-wire   [19:0] tmp_s_fu_260_p2;
+wire   [19:0] tmp_2_fu_260_p2;
 wire   [19:0] p_neg1_fu_274_p2;
-wire   [18:0] tmp_9_fu_280_p4;
-wire  signed [19:0] tmp_2_cast_fu_290_p1;
+wire   [18:0] tmp_8_fu_280_p4;
+wire  signed [19:0] tmp_cast_fu_290_p1;
 wire   [18:0] tmp_10_fu_300_p4;
-wire   [0:0] tmp_8_fu_266_p3;
-wire   [19:0] tmp_6_fu_294_p2;
-wire  signed [19:0] tmp_8_cast_fu_310_p1;
+wire   [0:0] tmp_7_fu_266_p3;
+wire   [19:0] tmp_1_fu_294_p2;
+wire  signed [19:0] tmp_4_cast_fu_310_p1;
 wire   [20:0] p_neg9_fu_322_p2;
 wire   [18:0] tmp_15_fu_327_p4;
 wire  signed [19:0] tmp_10_cast_fu_337_p1;
@@ -151,7 +151,7 @@ wire  signed [20:0] tmp_11_cast_fu_347_p1;
 wire   [18:0] p_shl_fu_360_p3;
 wire  signed [19:0] p_shl_cast_fu_367_p1;
 wire  signed [19:0] result_2_cast3_fu_357_p1;
-wire   [19:0] tmp_7_fu_371_p2;
+wire   [19:0] tmp_9_fu_371_p2;
 wire   [19:0] p_neg_fu_385_p2;
 wire   [18:0] tmp_20_fu_391_p4;
 wire  signed [19:0] tmp_14_cast_fu_401_p1;
@@ -208,7 +208,7 @@ getPixelClassificbkb #(
 getPixelClassificbkb_U2(
     .din0(tmp1_reg_508),
     .din1(r_V_1_reg_503),
-    .dout(tmp_3_fu_489_p2)
+    .dout(tmp_5_fu_489_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -378,9 +378,9 @@ always @ (posedge ap_clk) begin
         result_reg_518 <= result_fu_198_p2;
         tmp1_reg_508 <= tmp1_fu_175_p2;
         tmp_13_reg_528 <= tmp_13_fu_214_p1;
-        tmp_14_reg_533 <= tmp_3_fu_489_p2[32'd22];
+        tmp_14_reg_533 <= tmp_5_fu_489_p2[32'd22];
         tmp_18_reg_548 <= tmp_18_fu_242_p1;
-        tmp_2_reg_538 <= {{tmp_3_fu_489_p2[22:2]}};
+        tmp_3_reg_538 <= {{tmp_5_fu_489_p2[22:2]}};
         tmp_reg_523 <= tmp_fu_204_p1;
     end
 end
@@ -388,8 +388,8 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce))) begin
         tmp_16_reg_563 <= tmp_16_fu_425_p3;
-        tmp_1_reg_553 <= tmp_1_fu_314_p3;
-        tmp_5_reg_558 <= tmp_5_fu_351_p3;
+        tmp_6_reg_558 <= tmp_6_fu_351_p3;
+        tmp_s_reg_553 <= tmp_s_fu_314_p3;
     end
 end
 
@@ -550,11 +550,11 @@ assign p_Val2_2_fu_462_p1 = $signed(tmp_22_fu_455_p3);
 
 assign p_Val2_s_fu_440_p1 = $signed(tmp_12_fu_433_p3);
 
-assign p_neg1_fu_274_p2 = (20'd0 - tmp_s_fu_260_p2);
+assign p_neg1_fu_274_p2 = (20'd0 - tmp_2_fu_260_p2);
 
 assign p_neg9_fu_322_p2 = (21'd0 - tmp_13_reg_528);
 
-assign p_neg_fu_385_p2 = (20'd0 - tmp_7_fu_371_p2);
+assign p_neg_fu_385_p2 = (20'd0 - tmp_9_fu_371_p2);
 
 assign p_shl1_cast_fu_256_p1 = $signed(p_shl1_fu_249_p3);
 
@@ -608,15 +608,15 @@ assign tmp2_fu_466_p2 = ($signed(p_Val2_s_fu_440_p1) + $signed(p_Val2_2_fu_462_p
 
 assign tmp_10_cast_fu_337_p1 = $signed(tmp_15_fu_327_p4);
 
-assign tmp_10_fu_300_p4 = {{tmp_s_fu_260_p2[19:1]}};
+assign tmp_10_fu_300_p4 = {{tmp_2_fu_260_p2[19:1]}};
 
 assign tmp_11_cast_fu_347_p1 = $signed(tmp_4_fu_341_p2);
 
 assign tmp_11_fu_405_p2 = ($signed(20'd0) - $signed(tmp_14_cast_fu_401_p1));
 
-assign tmp_12_fu_433_p3 = {{tmp_1_reg_553}, {8'd0}};
+assign tmp_12_fu_433_p3 = {{tmp_s_reg_553}, {8'd0}};
 
-assign tmp_13_fu_214_p1 = tmp_3_fu_489_p2[20:0];
+assign tmp_13_fu_214_p1 = tmp_5_fu_489_p2[20:0];
 
 assign tmp_14_cast_fu_401_p1 = $signed(tmp_20_fu_391_p4);
 
@@ -626,38 +626,38 @@ assign tmp_16_fu_425_p3 = ((tmp_19_fu_377_p3[0:0] === 1'b1) ? tmp_11_fu_405_p2 :
 
 assign tmp_17_cast_fu_421_p1 = $signed(tmp_21_fu_411_p4);
 
-assign tmp_17_fu_444_p3 = {{tmp_5_reg_558}, {8'd0}};
+assign tmp_17_fu_444_p3 = {{tmp_6_reg_558}, {8'd0}};
 
 assign tmp_18_fu_242_p1 = result_1_fu_236_p2[16:0];
 
-assign tmp_19_fu_377_p3 = tmp_7_fu_371_p2[32'd19];
+assign tmp_19_fu_377_p3 = tmp_9_fu_371_p2[32'd19];
 
-assign tmp_1_fu_314_p3 = ((tmp_8_fu_266_p3[0:0] === 1'b1) ? tmp_6_fu_294_p2 : tmp_8_cast_fu_310_p1);
+assign tmp_1_fu_294_p2 = ($signed(20'd0) - $signed(tmp_cast_fu_290_p1));
 
 assign tmp_20_fu_391_p4 = {{p_neg_fu_385_p2[19:1]}};
 
-assign tmp_21_fu_411_p4 = {{tmp_7_fu_371_p2[19:1]}};
+assign tmp_21_fu_411_p4 = {{tmp_9_fu_371_p2[19:1]}};
 
 assign tmp_22_fu_455_p3 = {{tmp_16_reg_563}, {8'd0}};
 
-assign tmp_2_cast_fu_290_p1 = $signed(tmp_9_fu_280_p4);
+assign tmp_2_fu_260_p2 = ($signed(result_cast6_fu_246_p1) + $signed(p_shl1_cast_fu_256_p1));
+
+assign tmp_4_cast_fu_310_p1 = $signed(tmp_10_fu_300_p4);
 
 assign tmp_4_fu_341_p2 = ($signed(20'd0) - $signed(tmp_10_cast_fu_337_p1));
 
-assign tmp_5_fu_351_p3 = ((tmp_14_reg_533[0:0] === 1'b1) ? tmp_11_cast_fu_347_p1 : tmp_2_reg_538);
+assign tmp_6_fu_351_p3 = ((tmp_14_reg_533[0:0] === 1'b1) ? tmp_11_cast_fu_347_p1 : tmp_3_reg_538);
 
-assign tmp_6_fu_294_p2 = ($signed(20'd0) - $signed(tmp_2_cast_fu_290_p1));
+assign tmp_7_fu_266_p3 = tmp_2_fu_260_p2[32'd19];
 
-assign tmp_7_fu_371_p2 = ($signed(p_shl_cast_fu_367_p1) - $signed(result_2_cast3_fu_357_p1));
+assign tmp_8_fu_280_p4 = {{p_neg1_fu_274_p2[19:1]}};
 
-assign tmp_8_cast_fu_310_p1 = $signed(tmp_10_fu_300_p4);
+assign tmp_9_fu_371_p2 = ($signed(p_shl_cast_fu_367_p1) - $signed(result_2_cast3_fu_357_p1));
 
-assign tmp_8_fu_266_p3 = tmp_s_fu_260_p2[32'd19];
-
-assign tmp_9_fu_280_p4 = {{p_neg1_fu_274_p2[19:1]}};
+assign tmp_cast_fu_290_p1 = $signed(tmp_8_fu_280_p4);
 
 assign tmp_fu_204_p1 = result_fu_198_p2[16:0];
 
-assign tmp_s_fu_260_p2 = ($signed(result_cast6_fu_246_p1) + $signed(p_shl1_cast_fu_256_p1));
+assign tmp_s_fu_314_p3 = ((tmp_7_fu_266_p3[0:0] === 1'b1) ? tmp_1_fu_294_p2 : tmp_4_cast_fu_310_p1);
 
 endmodule //getColorDistance_Str

@@ -60,10 +60,10 @@ int getPixelClassification(int in_pixel) {
 	return minimumDistanceIndex;
 }
 
-void getPixelClassification_Stream(ap_uint<24> in_pixel,
-		ap_uint<24>* out_pixel) {
+void getPixelClassification_Stream(ap_uint<24> in_pixel, ap_uint<24>* out_pixel,
+		ap_uint<4> in_switch) {
 	int i;
-	int minimumDistanceIndex = -1;
+	int minimumDistanceIndex = 7;
 	int minimumDistance = INT_MAX;
 	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
 		int distance = getColorDistance_Stream(in_pixel,
@@ -81,32 +81,57 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel,
 		}
 	}
 	//must define every single case for hls
-	switch (minimumDistanceIndex) {
-	case -1:
+	if (minimumDistanceIndex < 5) {
+		if (!(in_switch ^ (minimumDistanceIndex + 1))) {
+			*out_pixel = _color_array_stream[minimumDistanceIndex];
+		} else {
+			*out_pixel = in_pixel;
+		}
+	} else {
 		*out_pixel = in_pixel;
-		break;
-	case 0:
-		*out_pixel = _color_array_stream[0];
-		break;
-	case 1:
-		*out_pixel = _color_array_stream[1];
-		break;
-	case 2:
-		*out_pixel = _color_array_stream[2];
-		break;
-	case 3:
-		*out_pixel = _color_array_stream[3];
-		break;
-	case 4:
-		*out_pixel = _color_array_stream[4];
-		break;
-	case 5:
-		*out_pixel = _color_array_stream[5];
-		break;
-	default:
-		*out_pixel = in_pixel;
-		break;
 	}
+//	switch (minimumDistanceIndex) {
+//	case 0:
+//		if (!(in_switch ^ 0x1)) {
+//			*out_pixel = _color_array_stream[0];
+//		} else {
+//			*out_pixel = in_pixel;
+//		}
+//		break;
+//	case 1:
+//		if (!(in_switch ^ 0x2)) {
+//			*out_pixel = _color_array_stream[1];
+//		} else {
+//			*out_pixel = in_pixel;
+//		}
+//		break;
+//	case 2:
+//		if (!(in_switch ^ 0x3)) {
+//			*out_pixel = _color_array_stream[2];
+//		} else {
+//			*out_pixel = in_pixel;
+//		}
+//		break;
+//	case 3:
+//		if (!(in_switch ^ 0x4)) {
+//			*out_pixel = _color_array_stream[3];
+//		} else {
+//			*out_pixel = in_pixel;
+//		}
+//		break;
+//	case 4:
+//		*out_pixel = _color_array_stream[4];
+//		break;
+//	case 5:
+//		*out_pixel = _color_array_stream[5];
+//		break;
+//	case 7:
+//		*out_pixel = in_pixel;
+//		break;
+//	default:
+//		*out_pixel = in_pixel;
+//		break;
+//	}
 
 }
 

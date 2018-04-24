@@ -106,15 +106,15 @@ architecture behav of getColorDistance_Str is
     signal tmp_13_fu_214_p1 : STD_LOGIC_VECTOR (20 downto 0);
     signal tmp_13_reg_528 : STD_LOGIC_VECTOR (20 downto 0);
     signal tmp_14_reg_533 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_2_reg_538 : STD_LOGIC_VECTOR (20 downto 0);
+    signal tmp_3_reg_538 : STD_LOGIC_VECTOR (20 downto 0);
     signal result_1_fu_236_p2 : STD_LOGIC_VECTOR (17 downto 0);
     signal result_1_reg_543 : STD_LOGIC_VECTOR (17 downto 0);
     signal tmp_18_fu_242_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal tmp_18_reg_548 : STD_LOGIC_VECTOR (16 downto 0);
-    signal tmp_1_fu_314_p3 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_1_reg_553 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_5_fu_351_p3 : STD_LOGIC_VECTOR (20 downto 0);
-    signal tmp_5_reg_558 : STD_LOGIC_VECTOR (20 downto 0);
+    signal tmp_s_fu_314_p3 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_s_reg_553 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_6_fu_351_p3 : STD_LOGIC_VECTOR (20 downto 0);
+    signal tmp_6_reg_558 : STD_LOGIC_VECTOR (20 downto 0);
     signal tmp_16_fu_425_p3 : STD_LOGIC_VECTOR (19 downto 0);
     signal tmp_16_reg_563 : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
@@ -137,21 +137,21 @@ architecture behav of getColorDistance_Str is
     signal result_fu_198_p0 : STD_LOGIC_VECTOR (8 downto 0);
     signal number_assign_cast_fu_195_p1 : STD_LOGIC_VECTOR (17 downto 0);
     signal result_fu_198_p1 : STD_LOGIC_VECTOR (8 downto 0);
-    signal tmp_3_fu_489_p2 : STD_LOGIC_VECTOR (22 downto 0);
+    signal tmp_5_fu_489_p2 : STD_LOGIC_VECTOR (22 downto 0);
     signal result_1_fu_236_p0 : STD_LOGIC_VECTOR (8 downto 0);
     signal number_assign_2_cast_fu_233_p1 : STD_LOGIC_VECTOR (17 downto 0);
     signal result_1_fu_236_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal p_shl1_fu_249_p3 : STD_LOGIC_VECTOR (18 downto 0);
     signal result_cast6_fu_246_p1 : STD_LOGIC_VECTOR (19 downto 0);
     signal p_shl1_cast_fu_256_p1 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_s_fu_260_p2 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_2_fu_260_p2 : STD_LOGIC_VECTOR (19 downto 0);
     signal p_neg1_fu_274_p2 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_9_fu_280_p4 : STD_LOGIC_VECTOR (18 downto 0);
-    signal tmp_2_cast_fu_290_p1 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_8_fu_280_p4 : STD_LOGIC_VECTOR (18 downto 0);
+    signal tmp_cast_fu_290_p1 : STD_LOGIC_VECTOR (19 downto 0);
     signal tmp_10_fu_300_p4 : STD_LOGIC_VECTOR (18 downto 0);
-    signal tmp_8_fu_266_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_6_fu_294_p2 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_8_cast_fu_310_p1 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_7_fu_266_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_1_fu_294_p2 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_4_cast_fu_310_p1 : STD_LOGIC_VECTOR (19 downto 0);
     signal p_neg9_fu_322_p2 : STD_LOGIC_VECTOR (20 downto 0);
     signal tmp_15_fu_327_p4 : STD_LOGIC_VECTOR (18 downto 0);
     signal tmp_10_cast_fu_337_p1 : STD_LOGIC_VECTOR (19 downto 0);
@@ -160,7 +160,7 @@ architecture behav of getColorDistance_Str is
     signal p_shl_fu_360_p3 : STD_LOGIC_VECTOR (18 downto 0);
     signal p_shl_cast_fu_367_p1 : STD_LOGIC_VECTOR (19 downto 0);
     signal result_2_cast3_fu_357_p1 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_7_fu_371_p2 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_9_fu_371_p2 : STD_LOGIC_VECTOR (19 downto 0);
     signal p_neg_fu_385_p2 : STD_LOGIC_VECTOR (19 downto 0);
     signal tmp_20_fu_391_p4 : STD_LOGIC_VECTOR (18 downto 0);
     signal tmp_14_cast_fu_401_p1 : STD_LOGIC_VECTOR (19 downto 0);
@@ -224,7 +224,7 @@ begin
     port map (
         din0 => tmp1_reg_508,
         din1 => r_V_1_reg_503,
-        dout => tmp_3_fu_489_p2);
+        dout => tmp_5_fu_489_p2);
 
 
 
@@ -462,9 +462,9 @@ begin
                 result_reg_518 <= result_fu_198_p2;
                 tmp1_reg_508 <= tmp1_fu_175_p2;
                 tmp_13_reg_528 <= tmp_13_fu_214_p1;
-                tmp_14_reg_533 <= tmp_3_fu_489_p2(22 downto 22);
+                tmp_14_reg_533 <= tmp_5_fu_489_p2(22 downto 22);
                 tmp_18_reg_548 <= tmp_18_fu_242_p1;
-                tmp_2_reg_538 <= tmp_3_fu_489_p2(22 downto 2);
+                tmp_3_reg_538 <= tmp_5_fu_489_p2(22 downto 2);
                 tmp_reg_523 <= tmp_fu_204_p1;
             end if;
         end if;
@@ -474,8 +474,8 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_ce))) then
                 tmp_16_reg_563 <= tmp_16_fu_425_p3;
-                tmp_1_reg_553 <= tmp_1_fu_314_p3;
-                tmp_5_reg_558 <= tmp_5_fu_351_p3;
+                tmp_6_reg_558 <= tmp_6_fu_351_p3;
+                tmp_s_reg_553 <= tmp_s_fu_314_p3;
             end if;
         end if;
     end process;
@@ -613,9 +613,9 @@ begin
 
         p_Val2_s_fu_440_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_12_fu_433_p3),32));
 
-    p_neg1_fu_274_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_s_fu_260_p2));
+    p_neg1_fu_274_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_2_fu_260_p2));
     p_neg9_fu_322_p2 <= std_logic_vector(unsigned(ap_const_lv21_0) - unsigned(tmp_13_reg_528));
-    p_neg_fu_385_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_7_fu_371_p2));
+    p_neg_fu_385_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_9_fu_371_p2));
         p_shl1_cast_fu_256_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_shl1_fu_249_p3),20));
 
     p_shl1_fu_249_p3 <= (tmp_reg_523 & ap_const_lv2_0);
@@ -669,12 +669,12 @@ begin
     tmp2_fu_466_p2 <= std_logic_vector(signed(p_Val2_s_fu_440_p1) + signed(p_Val2_2_fu_462_p1));
         tmp_10_cast_fu_337_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_15_fu_327_p4),20));
 
-    tmp_10_fu_300_p4 <= tmp_s_fu_260_p2(19 downto 1);
+    tmp_10_fu_300_p4 <= tmp_2_fu_260_p2(19 downto 1);
         tmp_11_cast_fu_347_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_4_fu_341_p2),21));
 
     tmp_11_fu_405_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_14_cast_fu_401_p1));
-    tmp_12_fu_433_p3 <= (tmp_1_reg_553 & ap_const_lv8_0);
-    tmp_13_fu_214_p1 <= tmp_3_fu_489_p2(21 - 1 downto 0);
+    tmp_12_fu_433_p3 <= (tmp_s_reg_553 & ap_const_lv8_0);
+    tmp_13_fu_214_p1 <= tmp_5_fu_489_p2(21 - 1 downto 0);
         tmp_14_cast_fu_401_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_20_fu_391_p4),20));
 
     tmp_15_fu_327_p4 <= p_neg9_fu_322_p2(20 downto 2);
@@ -683,27 +683,27 @@ begin
         tmp_17_cast_fu_421_p1;
         tmp_17_cast_fu_421_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_21_fu_411_p4),20));
 
-    tmp_17_fu_444_p3 <= (tmp_5_reg_558 & ap_const_lv8_0);
+    tmp_17_fu_444_p3 <= (tmp_6_reg_558 & ap_const_lv8_0);
     tmp_18_fu_242_p1 <= result_1_fu_236_p2(17 - 1 downto 0);
-    tmp_19_fu_377_p3 <= tmp_7_fu_371_p2(19 downto 19);
-    tmp_1_fu_314_p3 <= 
-        tmp_6_fu_294_p2 when (tmp_8_fu_266_p3(0) = '1') else 
-        tmp_8_cast_fu_310_p1;
+    tmp_19_fu_377_p3 <= tmp_9_fu_371_p2(19 downto 19);
+    tmp_1_fu_294_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_cast_fu_290_p1));
     tmp_20_fu_391_p4 <= p_neg_fu_385_p2(19 downto 1);
-    tmp_21_fu_411_p4 <= tmp_7_fu_371_p2(19 downto 1);
+    tmp_21_fu_411_p4 <= tmp_9_fu_371_p2(19 downto 1);
     tmp_22_fu_455_p3 <= (tmp_16_reg_563 & ap_const_lv8_0);
-        tmp_2_cast_fu_290_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_9_fu_280_p4),20));
+    tmp_2_fu_260_p2 <= std_logic_vector(signed(result_cast6_fu_246_p1) + signed(p_shl1_cast_fu_256_p1));
+        tmp_4_cast_fu_310_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_10_fu_300_p4),20));
 
     tmp_4_fu_341_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_10_cast_fu_337_p1));
-    tmp_5_fu_351_p3 <= 
+    tmp_6_fu_351_p3 <= 
         tmp_11_cast_fu_347_p1 when (tmp_14_reg_533(0) = '1') else 
-        tmp_2_reg_538;
-    tmp_6_fu_294_p2 <= std_logic_vector(unsigned(ap_const_lv20_0) - unsigned(tmp_2_cast_fu_290_p1));
-    tmp_7_fu_371_p2 <= std_logic_vector(signed(p_shl_cast_fu_367_p1) - signed(result_2_cast3_fu_357_p1));
-        tmp_8_cast_fu_310_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_10_fu_300_p4),20));
+        tmp_3_reg_538;
+    tmp_7_fu_266_p3 <= tmp_2_fu_260_p2(19 downto 19);
+    tmp_8_fu_280_p4 <= p_neg1_fu_274_p2(19 downto 1);
+    tmp_9_fu_371_p2 <= std_logic_vector(signed(p_shl_cast_fu_367_p1) - signed(result_2_cast3_fu_357_p1));
+        tmp_cast_fu_290_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_8_fu_280_p4),20));
 
-    tmp_8_fu_266_p3 <= tmp_s_fu_260_p2(19 downto 19);
-    tmp_9_fu_280_p4 <= p_neg1_fu_274_p2(19 downto 1);
     tmp_fu_204_p1 <= result_fu_198_p2(17 - 1 downto 0);
-    tmp_s_fu_260_p2 <= std_logic_vector(signed(result_cast6_fu_246_p1) + signed(p_shl1_cast_fu_256_p1));
+    tmp_s_fu_314_p3 <= 
+        tmp_1_fu_294_p2 when (tmp_7_fu_266_p3(0) = '1') else 
+        tmp_4_cast_fu_310_p1;
 end behav;

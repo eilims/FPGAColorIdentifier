@@ -3,140 +3,140 @@
 
 <trans_list>
 
-<trans id="164" from="1" to="2">
-<condition id="122">
+<trans id="158" from="1" to="2">
+<condition id="98">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="260" from="2" to="3">
-<condition id="219">
+<trans id="245" from="2" to="3">
+<condition id="186">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="261" from="3" to="4">
-<condition id="220">
+<trans id="246" from="3" to="4">
+<condition id="187">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="262" from="4" to="5">
-<condition id="221">
+<trans id="247" from="4" to="5">
+<condition id="188">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="263" from="5" to="6">
-<condition id="222">
+<trans id="248" from="5" to="6">
+<condition id="189">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="264" from="6" to="7">
-<condition id="223">
+<trans id="249" from="6" to="7">
+<condition id="190">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="265" from="7" to="8">
-<condition id="224">
+<trans id="250" from="7" to="8">
+<condition id="191">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="266" from="8" to="9">
-<condition id="225">
+<trans id="251" from="8" to="9">
+<condition id="192">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="267" from="9" to="10">
-<condition id="226">
+<trans id="252" from="9" to="10">
+<condition id="193">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="268" from="10" to="11">
-<condition id="227">
+<trans id="253" from="10" to="11">
+<condition id="194">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="269" from="11" to="12">
-<condition id="228">
+<trans id="254" from="11" to="12">
+<condition id="195">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="270" from="12" to="13">
-<condition id="229">
+<trans id="255" from="12" to="13">
+<condition id="196">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="271" from="13" to="14">
-<condition id="230">
+<trans id="256" from="13" to="14">
+<condition id="197">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="272" from="14" to="15">
-<condition id="231">
+<trans id="257" from="14" to="15">
+<condition id="198">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="273" from="15" to="16">
-<condition id="232">
+<trans id="258" from="15" to="16">
+<condition id="199">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="274" from="16" to="17">
-<condition id="233">
+<trans id="259" from="16" to="17">
+<condition id="200">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="275" from="17" to="18">
-<condition id="234">
+<trans id="260" from="17" to="18">
+<condition id="201">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="276" from="18" to="19">
-<condition id="235">
+<trans id="261" from="18" to="19">
+<condition id="202">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="277" from="19" to="20">
-<condition id="236">
+<trans id="262" from="19" to="20">
+<condition id="203">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="278" from="20" to="21">
-<condition id="237">
+<trans id="263" from="20" to="21">
+<condition id="204">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="279" from="21" to="22">
-<condition id="238">
+<trans id="264" from="21" to="22">
+<condition id="205">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="280" from="22" to="23">
-<condition id="239">
+<trans id="265" from="22" to="23">
+<condition id="206">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
 
-<trans id="281" from="23" to="2">
-<condition id="240">
+<trans id="266" from="23" to="2">
+<condition id="207">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 </trans>
@@ -151,13 +151,13 @@
 <operation id="24" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="110">
+<condition id="95">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:0  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+:0  call void (...)* @_ssdm_op_SpecInterface(i4 %in_switch_V, [8 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -166,13 +166,13 @@
 <operation id="25" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="110">
+<condition id="95">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:1  call void (...)* @_ssdm_op_SpecInterface(i24 %in_pixel_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+:1  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -181,13 +181,13 @@
 <operation id="26" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="110">
+<condition id="95">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:2  call void (...)* @_ssdm_op_SpecInterface(i24* %out_pixel_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+:2  call void (...)* @_ssdm_op_SpecInterface(i24 %in_pixel_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -196,13 +196,28 @@
 <operation id="27" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="110">
+<condition id="95">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="0" op_0_bw="0">
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
 <![CDATA[
-:3  br label %rewind_header
+:3  call void (...)* @_ssdm_op_SpecInterface(i24* %out_pixel_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="28" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="95">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="0">
+<![CDATA[
+:4  br label %rewind_header
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -211,21 +226,6 @@
 
 <state id="2" st_id="2">
 
-<operation id="28" st_id="2" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="9" bw="1" op_0_bw="1" op_1_bw="0" op_2_bw="1">
-<![CDATA[
-rewind_header:0  %do_init = phi i1 [ true, %0 ], [ false, %_ifconv ], [ true, %10 ]
-
-]]></Node>
-<StgValue><ssdm name="do_init"/></StgValue>
-</operation>
-
 <operation id="29" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
@@ -233,15 +233,46 @@ rewind_header:0  %do_init = phi i1 [ true, %0 ], [ false, %_ifconv ], [ true, %1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="13" bw="2" op_0_bw="2" op_1_bw="0" op_2_bw="2">
+<Node id="11" bw="1" op_0_bw="1" op_1_bw="0" op_2_bw="1">
 <![CDATA[
-rewind_header:4  %minimumDistanceIndex_9 = phi i2 [ 0, %0 ], [ %tmp_4, %_ifconv ], [ 0, %10 ]
+rewind_header:0  %do_init = phi i1 [ true, %0 ], [ false, %_ifconv ], [ true, %_ifconv1 ]
+
+]]></Node>
+<StgValue><ssdm name="do_init"/></StgValue>
+</operation>
+
+<operation id="30" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="2" op_0_bw="2" op_1_bw="0" op_2_bw="2">
+<![CDATA[
+rewind_header:5  %minimumDistanceIndex_9 = phi i2 [ 0, %0 ], [ %tmp_5, %_ifconv ], [ 0, %_ifconv1 ]
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_9"/></StgValue>
 </operation>
 
-<operation id="30" st_id="2" stage="2" lat="2">
+<operation id="31" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp><literal name="do_init" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="23" bw="4" op_0_bw="4" op_1_bw="4">
+<![CDATA[
+rewind_init:4  %in_switch_V_read = call i4 @_ssdm_op_Read.ap_none.i4(i4 %in_switch_V)
+
+]]></Node>
+<StgValue><ssdm name="in_switch_V_read"/></StgValue>
+</operation>
+
+<operation id="32" st_id="2" stage="2" lat="2">
 <core>AXI4Stream</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="0">
@@ -249,42 +280,12 @@ rewind_header:4  %minimumDistanceIndex_9 = phi i2 [ 0, %0 ], [ %tmp_4, %_ifconv 
 </and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="24" op_0_bw="24" op_1_bw="24">
+<Node id="24" bw="24" op_0_bw="24" op_1_bw="24">
 <![CDATA[
-rewind_init:3  %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel_V)
+rewind_init:5  %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel_V)
 
 ]]></Node>
 <StgValue><ssdm name="in_pixel_V_read"/></StgValue>
-</operation>
-
-<operation id="31" st_id="2" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="23" bw="3" op_0_bw="2">
-<![CDATA[
-_ifconv:1  %minimumDistanceIndex = zext i2 %minimumDistanceIndex_9 to i3
-
-]]></Node>
-<StgValue><ssdm name="minimumDistanceIndex"/></StgValue>
-</operation>
-
-<operation id="32" st_id="2" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="29" bw="64" op_0_bw="2">
-<![CDATA[
-_ifconv:7  %tmp1 = zext i2 %minimumDistanceIndex_9 to i64
-
-]]></Node>
-<StgValue><ssdm name="tmp1"/></StgValue>
 </operation>
 
 <operation id="33" st_id="2" stage="1" lat="1">
@@ -294,132 +295,132 @@ _ifconv:7  %tmp1 = zext i2 %minimumDistanceIndex_9 to i64
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
+<Node id="29" bw="3" op_0_bw="2">
 <![CDATA[
-_ifconv:8  %p_color_array_stream_s = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp1
+_ifconv:2  %minimumDistanceIndex = zext i2 %minimumDistanceIndex_9 to i3
 
 ]]></Node>
-<StgValue><ssdm name="p_color_array_stream_s"/></StgValue>
+<StgValue><ssdm name="minimumDistanceIndex"/></StgValue>
 </operation>
 
-<operation id="34" st_id="2" stage="2" lat="2">
-<core>ROM_nP</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="31" bw="17" op_0_bw="3">
-<![CDATA[
-_ifconv:9  %p_color_array_stream_1 = load i17* %p_color_array_stream_s, align 4
-
-]]></Node>
-<StgValue><ssdm name="p_color_array_stream_1"/></StgValue>
-</operation>
-
-<operation id="35" st_id="2" stage="1" lat="1">
-<core>AddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="41" bw="3" op_0_bw="3" op_1_bw="3">
-<![CDATA[
-_ifconv:19  %i = add i3 1, %minimumDistanceIndex
-
-]]></Node>
-<StgValue><ssdm name="i"/></StgValue>
-</operation>
-
-<operation id="36" st_id="2" stage="1" lat="1">
+<operation id="34" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="43" bw="64" op_0_bw="3">
+<Node id="35" bw="64" op_0_bw="2">
 <![CDATA[
-_ifconv:21  %tmp_s = zext i3 %i to i64
+_ifconv:8  %tmp_s = zext i2 %minimumDistanceIndex_9 to i64
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
 </operation>
 
-<operation id="37" st_id="2" stage="1" lat="1">
+<operation id="35" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="44" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
+<Node id="36" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-_ifconv:22  %p_color_array_stream_2 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_s
+_ifconv:9  %p_color_array_stream_s = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_s
 
 ]]></Node>
-<StgValue><ssdm name="p_color_array_stream_2"/></StgValue>
+<StgValue><ssdm name="p_color_array_stream_s"/></StgValue>
 </operation>
 
-<operation id="38" st_id="2" stage="2" lat="2">
+<operation id="36" st_id="2" stage="2" lat="2">
 <core>ROM_nP</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="17" op_0_bw="3">
+<Node id="37" bw="17" op_0_bw="3">
 <![CDATA[
-_ifconv:23  %p_color_array_stream_3 = load i17* %p_color_array_stream_2, align 4
+_ifconv:10  %p_color_array_stream_1 = load i17* %p_color_array_stream_s, align 4
 
 ]]></Node>
-<StgValue><ssdm name="p_color_array_stream_3"/></StgValue>
+<StgValue><ssdm name="p_color_array_stream_1"/></StgValue>
 </operation>
 
-<operation id="39" st_id="2" stage="1" lat="1">
+<operation id="37" st_id="2" stage="1" lat="1">
 <core>AddSub</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="67" bw="3" op_0_bw="3" op_1_bw="3">
+<Node id="47" bw="3" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-_ifconv:45  %i_2 = add i3 3, %minimumDistanceIndex
+_ifconv:20  %i = add i3 1, %minimumDistanceIndex
 
 ]]></Node>
-<StgValue><ssdm name="i_2"/></StgValue>
+<StgValue><ssdm name="i"/></StgValue>
 </operation>
 
-<operation id="40" st_id="2" stage="1" lat="1">
+<operation id="38" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="68" bw="2" op_0_bw="3">
+<Node id="49" bw="64" op_0_bw="3">
 <![CDATA[
-_ifconv:46  %tmp_4 = trunc i3 %i_2 to i2
+_ifconv:22  %tmp_1_1 = zext i3 %i to i64
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_1_1"/></StgValue>
 </operation>
 
-<operation id="41" st_id="2" stage="1" lat="1">
-<core>Cmp</core>
+<operation id="39" st_id="2" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="1" op_0_bw="3" op_1_bw="3">
+<Node id="50" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-_ifconv:47  %exitcond = icmp eq i3 %i_2, -2
+_ifconv:23  %p_color_array_stream_2 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_1_1
 
 ]]></Node>
-<StgValue><ssdm name="exitcond"/></StgValue>
+<StgValue><ssdm name="p_color_array_stream_2"/></StgValue>
+</operation>
+
+<operation id="40" st_id="2" stage="2" lat="2">
+<core>ROM_nP</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="17" op_0_bw="3">
+<![CDATA[
+_ifconv:24  %p_color_array_stream_3 = load i17* %p_color_array_stream_2, align 4
+
+]]></Node>
+<StgValue><ssdm name="p_color_array_stream_3"/></StgValue>
+</operation>
+
+<operation id="41" st_id="2" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="73" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+_ifconv:46  %i_2 = add i3 3, %minimumDistanceIndex
+
+]]></Node>
+<StgValue><ssdm name="i_2"/></StgValue>
 </operation>
 
 <operation id="42" st_id="2" stage="1" lat="1">
@@ -429,25 +430,55 @@ _ifconv:47  %exitcond = icmp eq i3 %i_2, -2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="74" bw="2" op_0_bw="3">
 <![CDATA[
-_ifconv:48  br i1 %exitcond, label %1, label %rewind_header
+_ifconv:47  %tmp_5 = trunc i3 %i_2 to i2
+
+]]></Node>
+<StgValue><ssdm name="tmp_5"/></StgValue>
+</operation>
+
+<operation id="43" st_id="2" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="75" bw="1" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+_ifconv:48  %exitcond = icmp eq i3 %i_2, -2
+
+]]></Node>
+<StgValue><ssdm name="exitcond"/></StgValue>
+</operation>
+
+<operation id="44" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="76" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+_ifconv:49  br i1 %exitcond, label %_ifconv1, label %rewind_header
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="43" st_id="2" stage="1" lat="1">
+<operation id="45" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="111">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="99" bw="0" op_0_bw="0">
+<Node id="91" bw="0" op_0_bw="0">
 <![CDATA[
-:1  br label %rewind_header
+_ifconv1:13  br label %rewind_header
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -456,7 +487,7 @@ _ifconv:48  br i1 %exitcond, label %1, label %rewind_header
 
 <state id="3" st_id="3">
 
-<operation id="44" st_id="3" stage="1" lat="2">
+<operation id="46" st_id="3" stage="1" lat="2">
 <core>AXI4Stream</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="0">
@@ -464,15 +495,15 @@ _ifconv:48  br i1 %exitcond, label %1, label %rewind_header
 </and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="24" op_0_bw="24" op_1_bw="24">
+<Node id="24" bw="24" op_0_bw="24" op_1_bw="24">
 <![CDATA[
-rewind_init:3  %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel_V)
+rewind_init:5  %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel_V)
 
 ]]></Node>
 <StgValue><ssdm name="in_pixel_V_read"/></StgValue>
 </operation>
 
-<operation id="45" st_id="3" stage="1" lat="1">
+<operation id="47" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="0">
@@ -480,99 +511,99 @@ rewind_init:3  %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="0" op_0_bw="0">
+<Node id="25" bw="0" op_0_bw="0">
 <![CDATA[
-rewind_init:4  br label %_ifconv
+rewind_init:6  br label %_ifconv
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="46" st_id="3" stage="1" lat="2">
+<operation id="48" st_id="3" stage="1" lat="2">
 <core>ROM_nP</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="17" op_0_bw="3">
+<Node id="37" bw="17" op_0_bw="3">
 <![CDATA[
-_ifconv:9  %p_color_array_stream_1 = load i17* %p_color_array_stream_s, align 4
+_ifconv:10  %p_color_array_stream_1 = load i17* %p_color_array_stream_s, align 4
 
 ]]></Node>
 <StgValue><ssdm name="p_color_array_stream_1"/></StgValue>
 </operation>
 
-<operation id="47" st_id="3" stage="1" lat="2">
+<operation id="49" st_id="3" stage="1" lat="2">
 <core>ROM_nP</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="17" op_0_bw="3">
+<Node id="51" bw="17" op_0_bw="3">
 <![CDATA[
-_ifconv:23  %p_color_array_stream_3 = load i17* %p_color_array_stream_2, align 4
+_ifconv:24  %p_color_array_stream_3 = load i17* %p_color_array_stream_2, align 4
 
 ]]></Node>
 <StgValue><ssdm name="p_color_array_stream_3"/></StgValue>
 </operation>
 
-<operation id="48" st_id="3" stage="1" lat="1">
+<operation id="50" st_id="3" stage="1" lat="1">
 <core>AddSub</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="54" bw="3" op_0_bw="3" op_1_bw="3">
+<Node id="60" bw="3" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-_ifconv:32  %i_1 = add i3 2, %minimumDistanceIndex
+_ifconv:33  %i_1 = add i3 2, %minimumDistanceIndex
 
 ]]></Node>
 <StgValue><ssdm name="i_1"/></StgValue>
 </operation>
 
-<operation id="49" st_id="3" stage="1" lat="1">
+<operation id="51" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="56" bw="64" op_0_bw="3">
+<Node id="62" bw="64" op_0_bw="3">
 <![CDATA[
-_ifconv:34  %tmp_3 = zext i3 %i_1 to i64
+_ifconv:35  %tmp_1_2 = zext i3 %i_1 to i64
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_1_2"/></StgValue>
 </operation>
 
-<operation id="50" st_id="3" stage="1" lat="1">
+<operation id="52" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="57" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
+<Node id="63" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-_ifconv:35  %p_color_array_stream_4 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_3
+_ifconv:36  %p_color_array_stream_4 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_1_2
 
 ]]></Node>
 <StgValue><ssdm name="p_color_array_stream_4"/></StgValue>
 </operation>
 
-<operation id="51" st_id="3" stage="2" lat="2">
+<operation id="53" st_id="3" stage="2" lat="2">
 <core>ROM_nP</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="58" bw="17" op_0_bw="3">
+<Node id="64" bw="17" op_0_bw="3">
 <![CDATA[
-_ifconv:36  %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
+_ifconv:37  %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
 
 ]]></Node>
 <StgValue><ssdm name="p_color_array_stream_5"/></StgValue>
@@ -581,44 +612,59 @@ _ifconv:36  %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
 
 <state id="4" st_id="4">
 
-<operation id="52" st_id="4" stage="1" lat="1">
+<operation id="54" st_id="4" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="24" op_0_bw="24" op_1_bw="0" op_2_bw="24">
+<Node id="12" bw="24" op_0_bw="24" op_1_bw="0" op_2_bw="24">
 <![CDATA[
-rewind_header:1  %in_pixel_V5_rewind = phi i24 [ undef, %0 ], [ %in_pixel_V5_phi, %_ifconv ], [ undef, %10 ]
+rewind_header:1  %in_pixel_V5_rewind = phi i24 [ undef, %0 ], [ %in_pixel_V5_phi, %_ifconv ], [ undef, %_ifconv1 ]
 
 ]]></Node>
 <StgValue><ssdm name="in_pixel_V5_rewind"/></StgValue>
 </operation>
 
-<operation id="53" st_id="4" stage="1" lat="1">
+<operation id="55" st_id="4" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<Node id="13" bw="4" op_0_bw="4" op_1_bw="0" op_2_bw="4">
 <![CDATA[
-rewind_header:5  br i1 %do_init, label %rewind_init, label %_ifconv
+rewind_header:2  %in_switch_V6_rewind = phi i4 [ undef, %0 ], [ %in_switch_V6_phi, %_ifconv ], [ undef, %_ifconv1 ]
+
+]]></Node>
+<StgValue><ssdm name="in_switch_V6_rewind"/></StgValue>
+</operation>
+
+<operation id="56" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+rewind_header:6  br i1 %do_init, label %rewind_init, label %_ifconv
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="54" st_id="4" stage="1" lat="1">
+<operation id="57" st_id="4" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="24" op_0_bw="24" op_1_bw="0">
+<Node id="27" bw="24" op_0_bw="24" op_1_bw="0">
 <![CDATA[
 _ifconv:0  %in_pixel_V5_phi = phi i24 [ %in_pixel_V_read, %rewind_init ], [ %in_pixel_V5_rewind, %rewind_header ]
 
@@ -626,46 +672,61 @@ _ifconv:0  %in_pixel_V5_phi = phi i24 [ %in_pixel_V_read, %rewind_init ], [ %in_
 <StgValue><ssdm name="in_pixel_V5_phi"/></StgValue>
 </operation>
 
-<operation id="55" st_id="4" stage="16" lat="16">
+<operation id="58" st_id="4" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="28" bw="4" op_0_bw="4" op_1_bw="0">
+<![CDATA[
+_ifconv:1  %in_switch_V6_phi = phi i4 [ %in_switch_V_read, %rewind_init ], [ %in_switch_V6_rewind, %rewind_header ]
+
+]]></Node>
+<StgValue><ssdm name="in_switch_V6_phi"/></StgValue>
+</operation>
+
+<operation id="59" st_id="4" stage="16" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="56" st_id="4" stage="16" lat="16">
+<operation id="60" st_id="4" stage="16" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="57" st_id="4" stage="1" lat="2">
+<operation id="61" st_id="4" stage="1" lat="2">
 <core>ROM_nP</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="58" bw="17" op_0_bw="3">
+<Node id="64" bw="17" op_0_bw="3">
 <![CDATA[
-_ifconv:36  %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
+_ifconv:37  %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
 
 ]]></Node>
 <StgValue><ssdm name="p_color_array_stream_5"/></StgValue>
@@ -674,46 +735,46 @@ _ifconv:36  %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
 
 <state id="5" st_id="5">
 
-<operation id="58" st_id="5" stage="15" lat="16">
+<operation id="62" st_id="5" stage="15" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="59" st_id="5" stage="15" lat="16">
+<operation id="63" st_id="5" stage="15" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="60" st_id="5" stage="16" lat="16">
+<operation id="64" st_id="5" stage="16" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -722,46 +783,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="6" st_id="6">
 
-<operation id="61" st_id="6" stage="14" lat="16">
+<operation id="65" st_id="6" stage="14" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="62" st_id="6" stage="14" lat="16">
+<operation id="66" st_id="6" stage="14" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="63" st_id="6" stage="15" lat="16">
+<operation id="67" st_id="6" stage="15" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -770,46 +831,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="7" st_id="7">
 
-<operation id="64" st_id="7" stage="13" lat="16">
+<operation id="68" st_id="7" stage="13" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="65" st_id="7" stage="13" lat="16">
+<operation id="69" st_id="7" stage="13" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="66" st_id="7" stage="14" lat="16">
+<operation id="70" st_id="7" stage="14" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -818,46 +879,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="8" st_id="8">
 
-<operation id="67" st_id="8" stage="12" lat="16">
+<operation id="71" st_id="8" stage="12" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="68" st_id="8" stage="12" lat="16">
+<operation id="72" st_id="8" stage="12" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="69" st_id="8" stage="13" lat="16">
+<operation id="73" st_id="8" stage="13" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -866,46 +927,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="9" st_id="9">
 
-<operation id="70" st_id="9" stage="11" lat="16">
+<operation id="74" st_id="9" stage="11" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="71" st_id="9" stage="11" lat="16">
+<operation id="75" st_id="9" stage="11" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="72" st_id="9" stage="12" lat="16">
+<operation id="76" st_id="9" stage="12" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -914,46 +975,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="10" st_id="10">
 
-<operation id="73" st_id="10" stage="10" lat="16">
+<operation id="77" st_id="10" stage="10" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="74" st_id="10" stage="10" lat="16">
+<operation id="78" st_id="10" stage="10" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="75" st_id="10" stage="11" lat="16">
+<operation id="79" st_id="10" stage="11" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -962,46 +1023,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="11" st_id="11">
 
-<operation id="76" st_id="11" stage="9" lat="16">
+<operation id="80" st_id="11" stage="9" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="77" st_id="11" stage="9" lat="16">
+<operation id="81" st_id="11" stage="9" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="78" st_id="11" stage="10" lat="16">
+<operation id="82" st_id="11" stage="10" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1010,46 +1071,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="12" st_id="12">
 
-<operation id="79" st_id="12" stage="8" lat="16">
+<operation id="83" st_id="12" stage="8" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="80" st_id="12" stage="8" lat="16">
+<operation id="84" st_id="12" stage="8" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="81" st_id="12" stage="9" lat="16">
+<operation id="85" st_id="12" stage="9" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1058,46 +1119,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="13" st_id="13">
 
-<operation id="82" st_id="13" stage="7" lat="16">
+<operation id="86" st_id="13" stage="7" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="83" st_id="13" stage="7" lat="16">
+<operation id="87" st_id="13" stage="7" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="84" st_id="13" stage="8" lat="16">
+<operation id="88" st_id="13" stage="8" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1106,46 +1167,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="14" st_id="14">
 
-<operation id="85" st_id="14" stage="6" lat="16">
+<operation id="89" st_id="14" stage="6" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="86" st_id="14" stage="6" lat="16">
+<operation id="90" st_id="14" stage="6" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="87" st_id="14" stage="7" lat="16">
+<operation id="91" st_id="14" stage="7" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1154,46 +1215,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="15" st_id="15">
 
-<operation id="88" st_id="15" stage="5" lat="16">
+<operation id="92" st_id="15" stage="5" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="89" st_id="15" stage="5" lat="16">
+<operation id="93" st_id="15" stage="5" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="90" st_id="15" stage="6" lat="16">
+<operation id="94" st_id="15" stage="6" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1202,46 +1263,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="16" st_id="16">
 
-<operation id="91" st_id="16" stage="4" lat="16">
+<operation id="95" st_id="16" stage="4" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="92" st_id="16" stage="4" lat="16">
+<operation id="96" st_id="16" stage="4" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="93" st_id="16" stage="5" lat="16">
+<operation id="97" st_id="16" stage="5" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1250,46 +1311,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="17" st_id="17">
 
-<operation id="94" st_id="17" stage="3" lat="16">
+<operation id="98" st_id="17" stage="3" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="95" st_id="17" stage="3" lat="16">
+<operation id="99" st_id="17" stage="3" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="96" st_id="17" stage="4" lat="16">
+<operation id="100" st_id="17" stage="4" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1298,46 +1359,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="18" st_id="18">
 
-<operation id="97" st_id="18" stage="2" lat="16">
+<operation id="101" st_id="18" stage="2" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="98" st_id="18" stage="2" lat="16">
+<operation id="102" st_id="18" stage="2" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="99" st_id="18" stage="3" lat="16">
+<operation id="103" st_id="18" stage="3" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1346,46 +1407,46 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="19" st_id="19">
 
-<operation id="100" st_id="19" stage="1" lat="16">
+<operation id="104" st_id="19" stage="1" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="38" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:10  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
+_ifconv:11  %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4"/></StgValue>
 </operation>
 
-<operation id="101" st_id="19" stage="1" lat="16">
+<operation id="105" st_id="19" stage="1" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="52" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:24  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
+_ifconv:25  %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_1"/></StgValue>
 </operation>
 
-<operation id="102" st_id="19" stage="2" lat="16">
+<operation id="106" st_id="19" stage="2" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1394,109 +1455,49 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="20" st_id="20">
 
-<operation id="103" st_id="20" stage="1" lat="1">
+<operation id="107" st_id="20" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
+<Node id="14" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-rewind_header:2  %minimumDistance4 = phi i32 [ 2147483647, %0 ], [ %minimumDistance_2_2, %_ifconv ], [ 2147483647, %10 ]
+rewind_header:3  %minimumDistance4 = phi i32 [ 2147483647, %0 ], [ %minimumDistance_2_2, %_ifconv ], [ 2147483647, %_ifconv1 ]
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance4"/></StgValue>
 </operation>
 
-<operation id="104" st_id="20" stage="1" lat="1">
+<operation id="108" st_id="20" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="32" op_0_bw="12">
+<Node id="39" bw="32" op_0_bw="12">
 <![CDATA[
-_ifconv:11  %minimumDistance_4_ex = zext i12 %minimumDistance_4 to i32
+_ifconv:12  %minimumDistance_4_ex = zext i12 %minimumDistance_4 to i32
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_ex"/></StgValue>
 </operation>
 
-<operation id="105" st_id="20" stage="1" lat="1">
+<operation id="109" st_id="20" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="1" op_0_bw="32" op_1_bw="32">
+<Node id="40" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-_ifconv:12  %tmp_1 = icmp slt i32 %minimumDistance_4_ex, %minimumDistance4
-
-]]></Node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
-</operation>
-
-<operation id="106" st_id="20" stage="1" lat="1">
-<core>Cmp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="35" bw="1" op_0_bw="12" op_1_bw="12">
-<![CDATA[
-_ifconv:13  %tmp_2 = icmp ult i12 %minimumDistance_4, 265
+_ifconv:13  %tmp_2 = icmp slt i32 %minimumDistance_4_ex, %minimumDistance4
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
-</operation>
-
-<operation id="107" st_id="20" stage="1" lat="1">
-<core>Sel</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="37" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
-<![CDATA[
-_ifconv:15  %minimumDistance_1 = select i1 %tmp_2, i32 %minimumDistance_4_ex, i32 %minimumDistance4
-
-]]></Node>
-<StgValue><ssdm name="minimumDistance_1"/></StgValue>
-</operation>
-
-<operation id="108" st_id="20" stage="1" lat="1">
-<core>Sel</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="39" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
-<![CDATA[
-_ifconv:17  %minimumDistance_2 = select i1 %tmp_1, i32 %minimumDistance_1, i32 %minimumDistance4
-
-]]></Node>
-<StgValue><ssdm name="minimumDistance_2"/></StgValue>
-</operation>
-
-<operation id="109" st_id="20" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="47" bw="32" op_0_bw="12">
-<![CDATA[
-_ifconv:25  %minimumDistance_4_1_s = zext i12 %minimumDistance_4_1 to i32
-
-]]></Node>
-<StgValue><ssdm name="minimumDistance_4_1_s"/></StgValue>
 </operation>
 
 <operation id="110" st_id="20" stage="1" lat="1">
@@ -1506,27 +1507,27 @@ _ifconv:25  %minimumDistance_4_1_s = zext i12 %minimumDistance_4_1 to i32
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="1" op_0_bw="32" op_1_bw="32">
+<Node id="41" bw="1" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-_ifconv:26  %tmp_1_1 = icmp slt i32 %minimumDistance_4_1_s, %minimumDistance_2
+_ifconv:14  %tmp_4 = icmp ult i12 %minimumDistance_4, 265
 
 ]]></Node>
-<StgValue><ssdm name="tmp_1_1"/></StgValue>
+<StgValue><ssdm name="tmp_4"/></StgValue>
 </operation>
 
 <operation id="111" st_id="20" stage="1" lat="1">
-<core>Cmp</core>
+<core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="49" bw="1" op_0_bw="12" op_1_bw="12">
+<Node id="43" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:27  %tmp_2_1 = icmp ult i12 %minimumDistance_4_1, 265
+_ifconv:16  %minimumDistance_1 = select i1 %tmp_4, i32 %minimumDistance_4_ex, i32 %minimumDistance4
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2_1"/></StgValue>
+<StgValue><ssdm name="minimumDistance_1"/></StgValue>
 </operation>
 
 <operation id="112" st_id="20" stage="1" lat="1">
@@ -1536,39 +1537,99 @@ _ifconv:27  %tmp_2_1 = icmp ult i12 %minimumDistance_4_1, 265
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="51" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="45" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:29  %minimumDistance_1_1 = select i1 %tmp_2_1, i32 %minimumDistance_4_1_s, i32 %minimumDistance_2
+_ifconv:18  %minimumDistance_2 = select i1 %tmp_2, i32 %minimumDistance_1, i32 %minimumDistance4
 
 ]]></Node>
-<StgValue><ssdm name="minimumDistance_1_1"/></StgValue>
+<StgValue><ssdm name="minimumDistance_2"/></StgValue>
 </operation>
 
 <operation id="113" st_id="20" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="32" op_0_bw="12">
+<![CDATA[
+_ifconv:26  %minimumDistance_4_1_s = zext i12 %minimumDistance_4_1 to i32
+
+]]></Node>
+<StgValue><ssdm name="minimumDistance_4_1_s"/></StgValue>
+</operation>
+
+<operation id="114" st_id="20" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="1" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv:27  %tmp_2_1 = icmp slt i32 %minimumDistance_4_1_s, %minimumDistance_2
+
+]]></Node>
+<StgValue><ssdm name="tmp_2_1"/></StgValue>
+</operation>
+
+<operation id="115" st_id="20" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="1" op_0_bw="12" op_1_bw="12">
+<![CDATA[
+_ifconv:28  %tmp_4_1 = icmp ult i12 %minimumDistance_4_1, 265
+
+]]></Node>
+<StgValue><ssdm name="tmp_4_1"/></StgValue>
+</operation>
+
+<operation id="116" st_id="20" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="53" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="57" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:31  %minimumDistance_2_1 = select i1 %tmp_1_1, i32 %minimumDistance_1_1, i32 %minimumDistance_2
+_ifconv:30  %minimumDistance_1_1 = select i1 %tmp_4_1, i32 %minimumDistance_4_1_s, i32 %minimumDistance_2
+
+]]></Node>
+<StgValue><ssdm name="minimumDistance_1_1"/></StgValue>
+</operation>
+
+<operation id="117" st_id="20" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="59" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+_ifconv:32  %minimumDistance_2_1 = select i1 %tmp_2_1, i32 %minimumDistance_1_1, i32 %minimumDistance_2
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_2_1"/></StgValue>
 </operation>
 
-<operation id="114" st_id="20" stage="1" lat="16">
+<operation id="118" st_id="20" stage="1" lat="16">
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="59" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
+<Node id="65" bw="12" op_0_bw="12" op_1_bw="24" op_2_bw="17">
 <![CDATA[
-_ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
+_ifconv:38  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2"/></StgValue>
@@ -1577,401 +1638,443 @@ _ifconv:37  %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in
 
 <state id="21" st_id="21">
 
-<operation id="115" st_id="21" stage="1" lat="1">
+<operation id="119" st_id="21" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="12" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
+<Node id="15" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-rewind_header:3  %minimumDistanceIndex_3 = phi i32 [ -1, %0 ], [ %minimumDistanceIndex_8, %_ifconv ], [ -1, %10 ]
+rewind_header:4  %minimumDistanceIndex_3 = phi i32 [ 7, %0 ], [ %minimumDistanceIndex_8, %_ifconv ], [ 7, %_ifconv1 ]
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_3"/></StgValue>
 </operation>
 
-<operation id="116" st_id="21" stage="1" lat="1">
+<operation id="120" st_id="21" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="243">
-<or_exp><and_exp><literal name="tmp_2" val="1"/>
-<literal name="tmp_1" val="1"/>
+<condition id="210">
+<or_exp><and_exp><literal name="tmp_4" val="1"/>
+<literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="32" op_0_bw="2">
+<Node id="30" bw="32" op_0_bw="2">
 <![CDATA[
-_ifconv:2  %minimumDistanceIndex_4 = zext i2 %minimumDistanceIndex_9 to i32
+_ifconv:3  %minimumDistanceIndex_4 = zext i2 %minimumDistanceIndex_9 to i32
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_4"/></StgValue>
 </operation>
 
-<operation id="117" st_id="21" stage="1" lat="1">
+<operation id="121" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="242">
-<or_exp><and_exp><literal name="tmp_1" val="1"/>
+<condition id="209">
+<or_exp><and_exp><literal name="tmp_2" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="42" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:14  %minimumDistanceIndex_1 = select i1 %tmp_2, i32 %minimumDistanceIndex_4, i32 %minimumDistanceIndex_3
+_ifconv:15  %minimumDistanceIndex_1 = select i1 %tmp_4, i32 %minimumDistanceIndex_4, i32 %minimumDistanceIndex_3
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_1"/></StgValue>
 </operation>
 
-<operation id="118" st_id="21" stage="1" lat="1">
+<operation id="122" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="38" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="44" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:16  %minimumDistanceIndex_2 = select i1 %tmp_1, i32 %minimumDistanceIndex_1, i32 %minimumDistanceIndex_3
+_ifconv:17  %minimumDistanceIndex_2 = select i1 %tmp_2, i32 %minimumDistanceIndex_1, i32 %minimumDistanceIndex_3
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_2"/></StgValue>
 </operation>
 
-<operation id="119" st_id="21" stage="1" lat="1">
+<operation id="123" st_id="21" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="246">
-<or_exp><and_exp><literal name="tmp_2_1" val="1"/>
-<literal name="tmp_1_1" val="1"/>
+<condition id="213">
+<or_exp><and_exp><literal name="tmp_4_1" val="1"/>
+<literal name="tmp_2_1" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="32" op_0_bw="3">
+<Node id="48" bw="32" op_0_bw="3">
 <![CDATA[
-_ifconv:20  %i_cast = zext i3 %i to i32
+_ifconv:21  %i_cast = zext i3 %i to i32
 
 ]]></Node>
 <StgValue><ssdm name="i_cast"/></StgValue>
 </operation>
 
-<operation id="120" st_id="21" stage="1" lat="1">
+<operation id="124" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="245">
-<or_exp><and_exp><literal name="tmp_1_1" val="1"/>
+<condition id="212">
+<or_exp><and_exp><literal name="tmp_2_1" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="50" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="56" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:28  %minimumDistanceIndex_5 = select i1 %tmp_2_1, i32 %i_cast, i32 %minimumDistanceIndex_2
+_ifconv:29  %minimumDistanceIndex_5 = select i1 %tmp_4_1, i32 %i_cast, i32 %minimumDistanceIndex_2
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_5"/></StgValue>
 </operation>
 
-<operation id="121" st_id="21" stage="1" lat="1">
+<operation id="125" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="52" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="58" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:30  %minimumDistanceIndex_6 = select i1 %tmp_1_1, i32 %minimumDistanceIndex_5, i32 %minimumDistanceIndex_2
+_ifconv:31  %minimumDistanceIndex_6 = select i1 %tmp_2_1, i32 %minimumDistanceIndex_5, i32 %minimumDistanceIndex_2
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_6"/></StgValue>
 </operation>
 
-<operation id="122" st_id="21" stage="1" lat="1">
+<operation id="126" st_id="21" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="55" bw="32" op_0_bw="3">
+<Node id="61" bw="32" op_0_bw="3">
 <![CDATA[
-_ifconv:33  %i_1_cast = zext i3 %i_1 to i32
+_ifconv:34  %i_1_cast = zext i3 %i_1 to i32
 
 ]]></Node>
 <StgValue><ssdm name="i_1_cast"/></StgValue>
 </operation>
 
-<operation id="123" st_id="21" stage="1" lat="1">
+<operation id="127" st_id="21" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="60" bw="32" op_0_bw="12">
+<Node id="66" bw="32" op_0_bw="12">
 <![CDATA[
-_ifconv:38  %minimumDistance_4_2_s = zext i12 %minimumDistance_4_2 to i32
+_ifconv:39  %minimumDistance_4_2_s = zext i12 %minimumDistance_4_2 to i32
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_4_2_s"/></StgValue>
 </operation>
 
-<operation id="124" st_id="21" stage="1" lat="1">
+<operation id="128" st_id="21" stage="1" lat="1">
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="61" bw="1" op_0_bw="32" op_1_bw="32">
+<Node id="67" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-_ifconv:39  %tmp_1_2 = icmp slt i32 %minimumDistance_4_2_s, %minimumDistance_2_1
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_2"/></StgValue>
-</operation>
-
-<operation id="125" st_id="21" stage="1" lat="1">
-<core>Cmp</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="62" bw="1" op_0_bw="12" op_1_bw="12">
-<![CDATA[
-_ifconv:40  %tmp_2_2 = icmp ult i12 %minimumDistance_4_2, 265
+_ifconv:40  %tmp_2_2 = icmp slt i32 %minimumDistance_4_2_s, %minimumDistance_2_1
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2_2"/></StgValue>
 </operation>
 
-<operation id="126" st_id="21" stage="1" lat="1">
+<operation id="129" st_id="21" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="68" bw="1" op_0_bw="12" op_1_bw="12">
+<![CDATA[
+_ifconv:41  %tmp_4_2 = icmp ult i12 %minimumDistance_4_2, 265
+
+]]></Node>
+<StgValue><ssdm name="tmp_4_2"/></StgValue>
+</operation>
+
+<operation id="130" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="69" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:41  %minimumDistanceIndex_7 = select i1 %tmp_2_2, i32 %i_1_cast, i32 %minimumDistanceIndex_6
+_ifconv:42  %minimumDistanceIndex_7 = select i1 %tmp_4_2, i32 %i_1_cast, i32 %minimumDistanceIndex_6
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_7"/></StgValue>
 </operation>
 
-<operation id="127" st_id="21" stage="1" lat="1">
+<operation id="131" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="64" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="70" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:42  %minimumDistance_1_2 = select i1 %tmp_2_2, i32 %minimumDistance_4_2_s, i32 %minimumDistance_2_1
+_ifconv:43  %minimumDistance_1_2 = select i1 %tmp_4_2, i32 %minimumDistance_4_2_s, i32 %minimumDistance_2_1
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_1_2"/></StgValue>
 </operation>
 
-<operation id="128" st_id="21" stage="1" lat="1">
+<operation id="132" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="71" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:43  %minimumDistanceIndex_8 = select i1 %tmp_1_2, i32 %minimumDistanceIndex_7, i32 %minimumDistanceIndex_6
+_ifconv:44  %minimumDistanceIndex_8 = select i1 %tmp_2_2, i32 %minimumDistanceIndex_7, i32 %minimumDistanceIndex_6
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistanceIndex_8"/></StgValue>
 </operation>
 
-<operation id="129" st_id="21" stage="1" lat="1">
+<operation id="133" st_id="21" stage="1" lat="1">
 <core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="3">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="66" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
+<Node id="72" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-_ifconv:44  %minimumDistance_2_2 = select i1 %tmp_1_2, i32 %minimumDistance_1_2, i32 %minimumDistance_2_1
+_ifconv:45  %minimumDistance_2_2 = select i1 %tmp_2_2, i32 %minimumDistance_1_2, i32 %minimumDistance_2_1
 
 ]]></Node>
 <StgValue><ssdm name="minimumDistance_2_2"/></StgValue>
+</operation>
+
+<operation id="134" st_id="21" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="96">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="82" bw="64" op_0_bw="32">
+<![CDATA[
+_ifconv1:4  %tmp_6 = sext i32 %minimumDistanceIndex_8 to i64
+
+]]></Node>
+<StgValue><ssdm name="tmp_6"/></StgValue>
+</operation>
+
+<operation id="135" st_id="21" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="96">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="83" bw="3" op_0_bw="17" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+_ifconv1:5  %p_color_array_stream_6 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_6
+
+]]></Node>
+<StgValue><ssdm name="p_color_array_stream_6"/></StgValue>
+</operation>
+
+<operation id="136" st_id="21" stage="2" lat="2">
+<core>ROM_nP</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="96">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="84" bw="17" op_0_bw="3">
+<![CDATA[
+_ifconv1:6  %p_color_array_stream_7 = load i17* %p_color_array_stream_6, align 4
+
+]]></Node>
+<StgValue><ssdm name="p_color_array_stream_7"/></StgValue>
 </operation>
 </state>
 
 <state id="22" st_id="22">
 
-<operation id="130" st_id="22" stage="1" lat="1">
+<operation id="137" st_id="22" stage="1" lat="1">
+<core>Cmp</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="96">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="78" bw="1" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv1:0  %tmp = icmp slt i32 %minimumDistanceIndex_8, 5
+
+]]></Node>
+<StgValue><ssdm name="tmp"/></StgValue>
+</operation>
+
+<operation id="138" st_id="22" stage="1" lat="1">
+<core>AddSub</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="96">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="79" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+_ifconv1:1  %rhs_V = add nsw i32 %minimumDistanceIndex_8, 1
+
+]]></Node>
+<StgValue><ssdm name="rhs_V"/></StgValue>
+</operation>
+
+<operation id="139" st_id="22" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="112">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="0" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="0" op_8_bw="32" op_9_bw="0" op_10_bw="32" op_11_bw="0" op_12_bw="32" op_13_bw="0" op_14_bw="32" op_15_bw="0">
+<Node id="80" bw="32" op_0_bw="4">
 <![CDATA[
-:0  switch i32 %minimumDistanceIndex_8, label %9 [
-    i32 -1, label %2
-    i32 0, label %3
-    i32 1, label %4
-    i32 2, label %5
-    i32 3, label %6
-    i32 4, label %7
-    i32 5, label %8
-  ]
+_ifconv1:2  %lhs_V = zext i4 %in_switch_V6_phi to i32
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="lhs_V"/></StgValue>
 </operation>
 
-<operation id="131" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
+<operation id="140" st_id="22" stage="1" lat="1">
+<core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="113">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="5"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="74" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="81" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65535)
+_ifconv1:3  %tmp_3 = icmp eq i32 %lhs_V, %rhs_V
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
-<operation id="132" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
+<operation id="141" st_id="22" stage="1" lat="2">
+<core>ROM_nP</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="114">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="4"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="77" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="84" bw="17" op_0_bw="3">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65281)
+_ifconv1:6  %p_color_array_stream_7 = load i17* %p_color_array_stream_6, align 4
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_color_array_stream_7"/></StgValue>
 </operation>
 
-<operation id="133" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
+<operation id="142" st_id="22" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="115">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="3"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="80" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="85" bw="24" op_0_bw="17">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -256)
+_ifconv1:7  %p_color_array_stream_8 = sext i17 %p_color_array_stream_7 to i24
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="p_color_array_stream_8"/></StgValue>
 </operation>
 
-<operation id="134" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
+<operation id="143" st_id="22" stage="1" lat="1">
+<core>LogicGate</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="116">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="2"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="83" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="86" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65280)
+_ifconv1:8  %sel_tmp = and i1 %tmp, %tmp_3
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="sel_tmp"/></StgValue>
 </operation>
 
-<operation id="135" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
+<operation id="144" st_id="22" stage="1" lat="1">
+<core>Sel</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="117">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="86" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="87" bw="24" op_0_bw="1" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 255)
+_ifconv1:9  %sel_tmp2 = select i1 %sel_tmp, i24 %p_color_array_stream_8, i24 %in_pixel_V5_phi
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="sel_tmp2"/></StgValue>
 </operation>
 
-<operation id="136" st_id="22" stage="2" lat="2">
+<operation id="145" st_id="22" stage="1" lat="1">
+<core>Sel</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="96">
+<or_exp><and_exp><literal name="exitcond" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="88" bw="24" op_0_bw="1" op_1_bw="24" op_2_bw="24">
+<![CDATA[
+_ifconv1:10  %storemerge1 = select i1 %tmp, i24 %sel_tmp2, i24 %in_pixel_V5_phi
+
+]]></Node>
+<StgValue><ssdm name="storemerge1"/></StgValue>
+</operation>
+
+<operation id="146" st_id="22" stage="2" lat="2">
 <core>AXI4Stream</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="118">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="89" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65536)
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="137" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="119">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="-1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="92" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
-<![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V5_phi)
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="138" st_id="22" stage="2" lat="2">
-<core>AXI4Stream</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="120">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="!-1"/>
-<literal name="minimumDistanceIndex_8" val="!0"/>
-<literal name="minimumDistanceIndex_8" val="!1"/>
-<literal name="minimumDistanceIndex_8" val="!2"/>
-<literal name="minimumDistanceIndex_8" val="!3"/>
-<literal name="minimumDistanceIndex_8" val="!4"/>
-<literal name="minimumDistanceIndex_8" val="!5"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="95" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
-<![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V5_phi)
+_ifconv1:11  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %storemerge1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1980,7 +2083,7 @@ _ifconv:44  %minimumDistance_2_2 = select i1 %tmp_1_2, i32 %minimumDistance_1_2,
 
 <state id="23" st_id="23">
 
-<operation id="139" st_id="23" stage="1" lat="1">
+<operation id="147" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="0">
@@ -1988,133 +2091,9 @@ _ifconv:44  %minimumDistance_2_2 = select i1 %tmp_1_2, i32 %minimumDistance_1_2,
 </and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="0" op_0_bw="0" op_1_bw="24">
+<Node id="19" bw="0" op_0_bw="0" op_1_bw="24">
 <![CDATA[
-rewind_init:0  call void (...)* @_ssdm_op_SpecBitsMap(i24 %in_pixel_V), !map !141
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="140" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="0">
-<or_exp><and_exp><literal name="do_init" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="17" bw="0" op_0_bw="0" op_1_bw="24">
-<![CDATA[
-rewind_init:1  call void (...)* @_ssdm_op_SpecBitsMap(i24* %out_pixel_V), !map !147
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="141" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="0">
-<or_exp><and_exp><literal name="do_init" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
-<![CDATA[
-rewind_init:2  call void (...)* @_ssdm_op_SpecTopModule([30 x i8]* @getPixelClassificati) nounwind
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="142" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="25" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
-<![CDATA[
-_ifconv:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)
-
-]]></Node>
-<StgValue><ssdm name="empty"/></StgValue>
-</operation>
-
-<operation id="143" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="26" bw="0" op_0_bw="0" op_1_bw="0">
-<![CDATA[
-_ifconv:4  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str) nounwind
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="144" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="27" bw="32" op_0_bw="32" op_1_bw="0">
-<![CDATA[
-_ifconv:5  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str)
-
-]]></Node>
-<StgValue><ssdm name="tmp"/></StgValue>
-</operation>
-
-<operation id="145" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="28" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
-<![CDATA[
-_ifconv:6  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="146" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="3">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
-<![CDATA[
-_ifconv:18  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str, i32 %tmp)
-
-]]></Node>
-<StgValue><ssdm name="empty_16"/></StgValue>
-</operation>
-
-<operation id="147" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="113">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="5"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="74" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
-<![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65535)
+rewind_init:0  call void (...)* @_ssdm_op_SpecBitsMap(i24 %in_pixel_V), !map !147
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2123,32 +2102,30 @@ _ifconv:18  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_st
 <operation id="148" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="113">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="5"/>
+<condition id="0">
+<or_exp><and_exp><literal name="do_init" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="75" bw="0" op_0_bw="0">
+<Node id="20" bw="0" op_0_bw="0" op_1_bw="24">
 <![CDATA[
-:1  br label %10
+rewind_init:1  call void (...)* @_ssdm_op_SpecBitsMap(i24* %out_pixel_V), !map !153
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="149" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
+<operation id="149" st_id="23" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="114">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="4"/>
+<condition id="0">
+<or_exp><and_exp><literal name="do_init" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="77" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="21" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65281)
+rewind_init:2  call void (...)* @_ssdm_op_SpecBitsMap(i4 %in_switch_V), !map !157
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2157,247 +2134,121 @@ _ifconv:18  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_st
 <operation id="150" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="114">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="4"/>
+<condition id="0">
+<or_exp><and_exp><literal name="do_init" val="1"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="78" bw="0" op_0_bw="0">
+<Node id="22" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:1  br label %10
+rewind_init:3  call void (...)* @_ssdm_op_SpecTopModule([30 x i8]* @getPixelClassificati) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="151" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
+<operation id="151" st_id="23" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="115">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="3"/>
-</and_exp></or_exp>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="80" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="31" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -256)
+_ifconv:4  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </operation>
 
 <operation id="152" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="115">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="3"/>
-</and_exp></or_exp>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="81" bw="0" op_0_bw="0">
+<Node id="32" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:1  br label %10
+_ifconv:5  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str1) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="153" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
+<operation id="153" st_id="23" stage="1" lat="1">
+<core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="116">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="2"/>
-</and_exp></or_exp>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="83" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
+<Node id="33" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65280)
+_ifconv:6  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str1)
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="tmp_1"/></StgValue>
 </operation>
 
 <operation id="154" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="116">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="2"/>
-</and_exp></or_exp>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="84" bw="0" op_0_bw="0">
+<Node id="34" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-:1  br label %10
+_ifconv:7  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="155" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="117">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="86" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
-<![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 255)
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="156" st_id="23" stage="1" lat="1">
+<operation id="155" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="117">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="1"/>
-</and_exp></or_exp>
+<condition id="3">
+<or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="87" bw="0" op_0_bw="0">
+<Node id="46" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-:1  br label %10
+_ifconv:19  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str1, i32 %tmp_1)
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="empty_16"/></StgValue>
 </operation>
 
-<operation id="157" st_id="23" stage="1" lat="2">
+<operation id="156" st_id="23" stage="1" lat="2">
 <core>AXI4Stream</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="118">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="89" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
 <![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65536)
+_ifconv1:11  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %storemerge1)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
 </operation>
 
-<operation id="158" st_id="23" stage="1" lat="1">
+<operation id="157" st_id="23" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
-<condition id="118">
+<condition id="96">
 <or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="90" bw="0" op_0_bw="0">
 <![CDATA[
-:1  br label %10
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="159" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="119">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="-1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="92" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
-<![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V5_phi)
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="160" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="119">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="-1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="93" bw="0" op_0_bw="0">
-<![CDATA[
-:1  br label %10
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="161" st_id="23" stage="1" lat="2">
-<core>AXI4Stream</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="120">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="!-1"/>
-<literal name="minimumDistanceIndex_8" val="!0"/>
-<literal name="minimumDistanceIndex_8" val="!1"/>
-<literal name="minimumDistanceIndex_8" val="!2"/>
-<literal name="minimumDistanceIndex_8" val="!3"/>
-<literal name="minimumDistanceIndex_8" val="!4"/>
-<literal name="minimumDistanceIndex_8" val="!5"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="95" bw="0" op_0_bw="0" op_1_bw="24" op_2_bw="24">
-<![CDATA[
-:0  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V5_phi)
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="162" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="120">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-<literal name="minimumDistanceIndex_8" val="!-1"/>
-<literal name="minimumDistanceIndex_8" val="!0"/>
-<literal name="minimumDistanceIndex_8" val="!1"/>
-<literal name="minimumDistanceIndex_8" val="!2"/>
-<literal name="minimumDistanceIndex_8" val="!3"/>
-<literal name="minimumDistanceIndex_8" val="!4"/>
-<literal name="minimumDistanceIndex_8" val="!5"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="96" bw="0" op_0_bw="0">
-<![CDATA[
-:1  br label %10
-
-]]></Node>
-<StgValue><ssdm name=""/></StgValue>
-</operation>
-
-<operation id="163" st_id="23" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="111">
-<or_exp><and_exp><literal name="exitcond" val="1"/>
-</and_exp></or_exp>
-</condition>
-
-<Node id="98" bw="0" op_0_bw="0">
-<![CDATA[
-:0  call void (...)* @_ssdm_op_Return()
+_ifconv1:12  call void (...)* @_ssdm_op_Return()
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

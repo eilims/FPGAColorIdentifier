@@ -28,47 +28,57 @@ int main(int argc, char** argv){
 		cout << "0x00A8D3FF v Magenta Expected: 439 Result: " << getColorDistance(0x00A8D3FF, _color_array_test[3]) << "\n";
 	}
 
-	getPixelClassification_Stream(_color_array_stream[0], &result);
+	getPixelClassification_Stream(_color_array_stream[0], &result, 0x1);
 	if(result != _color_array_stream[0]){
 		cout << "Color Classification Red Expected: " << _color_array_stream[0] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(_color_array_stream[1], &result);
+	getPixelClassification_Stream(_color_array_stream[1], &result, 0x2);
 	if(result != _color_array_stream[1]){
 			cout << "Color Classification Green Expected: " << _color_array_stream[1] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(_color_array_stream[2], &result);
+	getPixelClassification_Stream(_color_array_stream[2], &result, 0x3);
 	if(result != _color_array_stream[2]){
 			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(0x008000, &result);
+	getPixelClassification_Stream(0x008000, &result, 0x3);
 	if(result != _color_array_stream[2]){
 			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(0x008000, &result);
+	getPixelClassification_Stream(0x008000, &result, 0x3);
 	if(result != _color_array_stream[2]){
 			cout << "Color Classification Blue Expected: " << _color_array_stream[2] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(0x70DDFF, &result);
+	getPixelClassification_Stream(0x70DDFF, &result, 0x6);
 	if(result != _color_array_stream[5]){
 			cout << "Color Classification Cyan Expected: " << _color_array_stream[5] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(0x98FF64, &result);
+	getPixelClassification_Stream(0x98FF64, &result, 0x4);
 	if(result != _color_array_stream[3]){
 			cout << "Color Classification Magenta Expected: " << _color_array_stream[3] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(0xFF5DB4, &result);
+	getPixelClassification_Stream(0x98FF64, &result, 0x6);
+	if(result != 0x98FF64){
+			cout << "Color Classification 0x98FF64 Expected: " << 0x98FF64 << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0x98FF64, &result, 0x0);
+	if(result != 0x98FF64){
+			cout << "Color Classification 0x98FF64 Expected: " << 0x98FF64 << " Result: " << result << "\n";
+	}
+
+	getPixelClassification_Stream(0xFF5DB4, &result, 0x5);
 	if(result != _color_array_stream[4]){
 			cout << "Color Classification Yellow Expected: " << _color_array_stream[4] << " Result: " << result << "\n";
 	}
 
-	getPixelClassification_Stream(0xFFACC6, &result);
+	getPixelClassification_Stream(0xFFACC6, &result, 0x3);
 	if(result != 0xFFACC6){
 			cout << "Color Classification Yellow Expected: " << 0xFFACC6 << " Result: " << result << "\n";
 	}

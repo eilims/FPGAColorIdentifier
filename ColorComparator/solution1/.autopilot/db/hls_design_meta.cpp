@@ -8,5 +8,6 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("out_pixel_V_TDATA", 24, hls_out, 1, "axis", "out_data", 1),
 	Port_Property("out_pixel_V_TVALID", 1, hls_out, 1, "axis", "out_vld", 1),
 	Port_Property("out_pixel_V_TREADY", 1, hls_in, 1, "axis", "out_acc", 1),
+	Port_Property("in_switch_V", 4, hls_in, 2, "ap_none", "in_data", 1),
 };
 const char* HLS_Design_Meta::dut_name = "getPixelClassification_Stream";

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'fxp_sqrt'
 ================================================================
-* Date:           Mon Apr 23 17:28:24 2018
+* Date:           Mon Apr 23 18:30:26 2018
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        ColorComparator
@@ -398,15 +398,17 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'add' operation ('p_0353_1_1', ColorComparator/fxp_sqrt.h:167) [12]  (2.28 ns)
 	'shl' operation ('tmp_25', ColorComparator/fxp_sqrt.h:163) [15]  (0 ns)
-	'sub' operation ('s_V_1_2', ColorComparator/fxp_sqrt.h:163) [19]  (4.11 ns)
+	'add' operation ('tmp1', ColorComparator/fxp_sqrt.h:167) [20]  (0 ns)
+	'add' operation ('s_V_2_2', ColorComparator/fxp_sqrt.h:167) [21]  (4.11 ns)
 	'select' operation ('p_0353_1_2', ColorComparator/fxp_sqrt.h:162) [23]  (1.37 ns)
 
  <State 3>: 8.68ns
 The critical path consists of the following:
 	'select' operation ('p_s', ColorComparator/fxp_sqrt.h:162) [11]  (0 ns)
 	'select' operation ('p_0305_1_in_in_2', ColorComparator/fxp_sqrt.h:162) [22]  (1.37 ns)
-	'or' operation ('tmp_28_3', ColorComparator/fxp_sqrt.h:167) [31]  (0 ns)
-	'add' operation ('s_V_2_3', ColorComparator/fxp_sqrt.h:167) [32]  (2.28 ns)
+	'or' operation ('q_V_1_2', ColorComparator/fxp_sqrt.h:165) [24]  (0 ns)
+	'or' operation ('tmp_25_3', ColorComparator/fxp_sqrt.h:163) [28]  (0 ns)
+	'sub' operation ('s_V_1_3', ColorComparator/fxp_sqrt.h:163) [29]  (2.28 ns)
 	'select' operation ('p_0353_1_3', ColorComparator/fxp_sqrt.h:162) [33]  (1.37 ns)
 	'shl' operation ('tmp_31', ColorComparator/fxp_sqrt.h:163) [38]  (0 ns)
 	'add' operation ('s_V_2_4', ColorComparator/fxp_sqrt.h:167) [44]  (2.28 ns)
@@ -419,7 +421,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_5', ColorComparator/fxp_sqrt.h:163) [53]  (2.28 ns)
 	'select' operation ('p_0353_1_5', ColorComparator/fxp_sqrt.h:162) [57]  (1.37 ns)
 	'shl' operation ('tmp_39', ColorComparator/fxp_sqrt.h:163) [62]  (0 ns)
-	'add' operation ('s_V_2_6', ColorComparator/fxp_sqrt.h:167) [68]  (2.28 ns)
+	'sub' operation ('s_V_1_6', ColorComparator/fxp_sqrt.h:163) [65]  (2.28 ns)
 	'select' operation ('p_0353_1_6', ColorComparator/fxp_sqrt.h:162) [69]  (1.37 ns)
 
  <State 5>: 7.31ns
@@ -429,7 +431,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_7', ColorComparator/fxp_sqrt.h:163) [77]  (2.28 ns)
 	'select' operation ('p_0353_1_7', ColorComparator/fxp_sqrt.h:162) [81]  (1.37 ns)
 	'shl' operation ('tmp_47', ColorComparator/fxp_sqrt.h:163) [86]  (0 ns)
-	'sub' operation ('s_V_1_8', ColorComparator/fxp_sqrt.h:163) [89]  (2.28 ns)
+	'add' operation ('s_V_2_8', ColorComparator/fxp_sqrt.h:167) [92]  (2.28 ns)
 	'select' operation ('p_0353_1_8', ColorComparator/fxp_sqrt.h:162) [93]  (1.37 ns)
 
  <State 6>: 7.31ns
@@ -439,7 +441,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_9', ColorComparator/fxp_sqrt.h:163) [101]  (2.28 ns)
 	'select' operation ('p_0353_1_9', ColorComparator/fxp_sqrt.h:162) [105]  (1.37 ns)
 	'shl' operation ('tmp_55', ColorComparator/fxp_sqrt.h:163) [110]  (0 ns)
-	'add' operation ('s_V_2_s', ColorComparator/fxp_sqrt.h:167) [116]  (2.28 ns)
+	'sub' operation ('s_V_1_s', ColorComparator/fxp_sqrt.h:163) [113]  (2.28 ns)
 	'select' operation ('p_0353_1_s', ColorComparator/fxp_sqrt.h:162) [117]  (1.37 ns)
 
  <State 7>: 7.31ns
@@ -449,7 +451,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_1', ColorComparator/fxp_sqrt.h:163) [125]  (2.28 ns)
 	'select' operation ('p_0353_1_10', ColorComparator/fxp_sqrt.h:162) [129]  (1.37 ns)
 	'shl' operation ('tmp_63', ColorComparator/fxp_sqrt.h:163) [134]  (0 ns)
-	'add' operation ('s_V_2_10', ColorComparator/fxp_sqrt.h:167) [140]  (2.28 ns)
+	'sub' operation ('s_V_1_10', ColorComparator/fxp_sqrt.h:163) [137]  (2.28 ns)
 	'select' operation ('p_0353_1_11', ColorComparator/fxp_sqrt.h:162) [141]  (1.37 ns)
 
  <State 8>: 7.31ns
@@ -469,7 +471,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_13', ColorComparator/fxp_sqrt.h:163) [173]  (2.28 ns)
 	'select' operation ('p_0353_1_14', ColorComparator/fxp_sqrt.h:162) [177]  (1.37 ns)
 	'shl' operation ('tmp_75', ColorComparator/fxp_sqrt.h:163) [182]  (0 ns)
-	'add' operation ('s_V_2_14', ColorComparator/fxp_sqrt.h:167) [188]  (2.28 ns)
+	'sub' operation ('s_V_1_14', ColorComparator/fxp_sqrt.h:163) [185]  (2.28 ns)
 	'select' operation ('p_0353_1_15', ColorComparator/fxp_sqrt.h:162) [189]  (1.37 ns)
 
  <State 10>: 7.31ns
@@ -489,7 +491,7 @@ The critical path consists of the following:
 	'sub' operation ('s_V_1_17', ColorComparator/fxp_sqrt.h:163) [221]  (2.28 ns)
 	'select' operation ('p_0353_1_18', ColorComparator/fxp_sqrt.h:162) [225]  (1.37 ns)
 	'shl' operation ('tmp_83', ColorComparator/fxp_sqrt.h:163) [230]  (0 ns)
-	'sub' operation ('s_V_1_18', ColorComparator/fxp_sqrt.h:163) [233]  (2.28 ns)
+	'add' operation ('s_V_2_18', ColorComparator/fxp_sqrt.h:167) [236]  (2.28 ns)
 	'select' operation ('p_0353_1_19', ColorComparator/fxp_sqrt.h:162) [237]  (1.37 ns)
 
  <State 12>: 6.1ns

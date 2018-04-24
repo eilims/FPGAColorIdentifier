@@ -1,4 +1,4 @@
-; ModuleID = 'C:/Users/Jonathan/Desktop/FPGAColorIdentifier/ColorComparator/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = 'D:/Repositories/FPGAColorIdentifier/ColorComparator/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-w64-mingw32"
 
@@ -6,11 +6,12 @@ target triple = "x86_64-w64-mingw32"
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535]
 @getPixelClassificati = internal unnamed_addr constant [30 x i8] c"getPixelClassification_Stream\00"
 @p_color_array_stream_s = internal unnamed_addr constant [6 x i17] [i17 -65536, i17 255, i17 65280, i17 -256, i17 -65281, i17 65535]
-@p_str6 = private unnamed_addr constant [5 x i8] c"both\00", align 1
-@p_str5 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
-@p_str3 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
+@p_str7 = private unnamed_addr constant [5 x i8] c"both\00", align 1
+@p_str6 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
+@p_str4 = private unnamed_addr constant [13 x i8] c"ap_ctrl_none\00", align 1
+@p_str3 = private unnamed_addr constant [8 x i8] c"ap_none\00", align 1
 @p_str2 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
-@p_str = private unnamed_addr constant [17 x i8] c"PIXEL_COLOR_LOOP\00", align 1
+@p_str1 = private unnamed_addr constant [17 x i8] c"PIXEL_COLOR_LOOP\00", align 1
 
 declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
 
@@ -28,129 +29,103 @@ declare i17 @llvm.part.select.i17(i17, i32, i32) nounwind readnone
 
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
-define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V) {
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i24 %in_pixel_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i24* %out_pixel_V, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+define void @getPixelClassification_Stream(i24 %in_pixel_V, i24* %out_pixel_V, i4 %in_switch_V) {
+  call void (...)* @_ssdm_op_SpecInterface(i4 %in_switch_V, [8 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i24 %in_pixel_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i24* %out_pixel_V, [5 x i8]* @p_str6, i32 1, i32 1, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind
   br label %rewind_header
 
 _ifconv:                                          ; preds = %rewind_header, %rewind_init
   %in_pixel_V5_phi = phi i24 [ %in_pixel_V_read, %rewind_init ], [ %in_pixel_V5_rewind, %rewind_header ]
+  %in_switch_V6_phi = phi i4 [ %in_switch_V_read, %rewind_init ], [ %in_switch_V6_rewind, %rewind_header ]
   %minimumDistanceIndex = zext i2 %minimumDistanceIndex_9 to i3
   %minimumDistanceIndex_4 = zext i2 %minimumDistanceIndex_9 to i32
   %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)
-  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str) nounwind
-  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str)
+  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @p_str1) nounwind
+  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([17 x i8]* @p_str1)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
-  %tmp1 = zext i2 %minimumDistanceIndex_9 to i64
-  %p_color_array_stream_s = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp1
+  %tmp_s = zext i2 %minimumDistanceIndex_9 to i64
+  %p_color_array_stream_s = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_s
   %p_color_array_stream_1 = load i17* %p_color_array_stream_s, align 4
   %minimumDistance_4 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_1)
   %minimumDistance_4_ex = zext i12 %minimumDistance_4 to i32
-  %tmp_1 = icmp slt i32 %minimumDistance_4_ex, %minimumDistance4
-  %tmp_2 = icmp ult i12 %minimumDistance_4, 265
-  %minimumDistanceIndex_1 = select i1 %tmp_2, i32 %minimumDistanceIndex_4, i32 %minimumDistanceIndex_3
-  %minimumDistance_1 = select i1 %tmp_2, i32 %minimumDistance_4_ex, i32 %minimumDistance4
-  %minimumDistanceIndex_2 = select i1 %tmp_1, i32 %minimumDistanceIndex_1, i32 %minimumDistanceIndex_3
-  %minimumDistance_2 = select i1 %tmp_1, i32 %minimumDistance_1, i32 %minimumDistance4
-  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str, i32 %tmp)
+  %tmp_2 = icmp slt i32 %minimumDistance_4_ex, %minimumDistance4
+  %tmp_4 = icmp ult i12 %minimumDistance_4, 265
+  %minimumDistanceIndex_1 = select i1 %tmp_4, i32 %minimumDistanceIndex_4, i32 %minimumDistanceIndex_3
+  %minimumDistance_1 = select i1 %tmp_4, i32 %minimumDistance_4_ex, i32 %minimumDistance4
+  %minimumDistanceIndex_2 = select i1 %tmp_2, i32 %minimumDistanceIndex_1, i32 %minimumDistanceIndex_3
+  %minimumDistance_2 = select i1 %tmp_2, i32 %minimumDistance_1, i32 %minimumDistance4
+  %empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([17 x i8]* @p_str1, i32 %tmp_1)
   %i = add i3 1, %minimumDistanceIndex
   %i_cast = zext i3 %i to i32
-  %tmp_s = zext i3 %i to i64
-  %p_color_array_stream_2 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_s
+  %tmp_1_1 = zext i3 %i to i64
+  %p_color_array_stream_2 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_1_1
   %p_color_array_stream_3 = load i17* %p_color_array_stream_2, align 4
   %minimumDistance_4_1 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_3)
   %minimumDistance_4_1_s = zext i12 %minimumDistance_4_1 to i32
-  %tmp_1_1 = icmp slt i32 %minimumDistance_4_1_s, %minimumDistance_2
-  %tmp_2_1 = icmp ult i12 %minimumDistance_4_1, 265
-  %minimumDistanceIndex_5 = select i1 %tmp_2_1, i32 %i_cast, i32 %minimumDistanceIndex_2
-  %minimumDistance_1_1 = select i1 %tmp_2_1, i32 %minimumDistance_4_1_s, i32 %minimumDistance_2
-  %minimumDistanceIndex_6 = select i1 %tmp_1_1, i32 %minimumDistanceIndex_5, i32 %minimumDistanceIndex_2
-  %minimumDistance_2_1 = select i1 %tmp_1_1, i32 %minimumDistance_1_1, i32 %minimumDistance_2
+  %tmp_2_1 = icmp slt i32 %minimumDistance_4_1_s, %minimumDistance_2
+  %tmp_4_1 = icmp ult i12 %minimumDistance_4_1, 265
+  %minimumDistanceIndex_5 = select i1 %tmp_4_1, i32 %i_cast, i32 %minimumDistanceIndex_2
+  %minimumDistance_1_1 = select i1 %tmp_4_1, i32 %minimumDistance_4_1_s, i32 %minimumDistance_2
+  %minimumDistanceIndex_6 = select i1 %tmp_2_1, i32 %minimumDistanceIndex_5, i32 %minimumDistanceIndex_2
+  %minimumDistance_2_1 = select i1 %tmp_2_1, i32 %minimumDistance_1_1, i32 %minimumDistance_2
   %i_1 = add i3 2, %minimumDistanceIndex
   %i_1_cast = zext i3 %i_1 to i32
-  %tmp_3 = zext i3 %i_1 to i64
-  %p_color_array_stream_4 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_3
+  %tmp_1_2 = zext i3 %i_1 to i64
+  %p_color_array_stream_4 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_1_2
   %p_color_array_stream_5 = load i17* %p_color_array_stream_4, align 4
   %minimumDistance_4_2 = call fastcc i12 @getColorDistance_Str(i24 %in_pixel_V5_phi, i17 %p_color_array_stream_5)
   %minimumDistance_4_2_s = zext i12 %minimumDistance_4_2 to i32
-  %tmp_1_2 = icmp slt i32 %minimumDistance_4_2_s, %minimumDistance_2_1
-  %tmp_2_2 = icmp ult i12 %minimumDistance_4_2, 265
-  %minimumDistanceIndex_7 = select i1 %tmp_2_2, i32 %i_1_cast, i32 %minimumDistanceIndex_6
-  %minimumDistance_1_2 = select i1 %tmp_2_2, i32 %minimumDistance_4_2_s, i32 %minimumDistance_2_1
-  %minimumDistanceIndex_8 = select i1 %tmp_1_2, i32 %minimumDistanceIndex_7, i32 %minimumDistanceIndex_6
-  %minimumDistance_2_2 = select i1 %tmp_1_2, i32 %minimumDistance_1_2, i32 %minimumDistance_2_1
+  %tmp_2_2 = icmp slt i32 %minimumDistance_4_2_s, %minimumDistance_2_1
+  %tmp_4_2 = icmp ult i12 %minimumDistance_4_2, 265
+  %minimumDistanceIndex_7 = select i1 %tmp_4_2, i32 %i_1_cast, i32 %minimumDistanceIndex_6
+  %minimumDistance_1_2 = select i1 %tmp_4_2, i32 %minimumDistance_4_2_s, i32 %minimumDistance_2_1
+  %minimumDistanceIndex_8 = select i1 %tmp_2_2, i32 %minimumDistanceIndex_7, i32 %minimumDistanceIndex_6
+  %minimumDistance_2_2 = select i1 %tmp_2_2, i32 %minimumDistance_1_2, i32 %minimumDistance_2_1
   %i_2 = add i3 3, %minimumDistanceIndex
-  %tmp_4 = trunc i3 %i_2 to i2
+  %tmp_5 = trunc i3 %i_2 to i2
   %exitcond = icmp eq i3 %i_2, -2
-  br i1 %exitcond, label %1, label %rewind_header
+  br i1 %exitcond, label %_ifconv1, label %rewind_header
 
-; <label>:1                                       ; preds = %_ifconv
-  switch i32 %minimumDistanceIndex_8, label %9 [
-    i32 -1, label %2
-    i32 0, label %3
-    i32 1, label %4
-    i32 2, label %5
-    i32 3, label %6
-    i32 4, label %7
-    i32 5, label %8
-  ]
-
-; <label>:2                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V5_phi)
-  br label %10
-
-; <label>:3                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65536)
-  br label %10
-
-; <label>:4                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 255)
-  br label %10
-
-; <label>:5                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65280)
-  br label %10
-
-; <label>:6                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -256)
-  br label %10
-
-; <label>:7                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 -65281)
-  br label %10
-
-; <label>:8                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 65535)
-  br label %10
-
-; <label>:9                                       ; preds = %1
-  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %in_pixel_V5_phi)
-  br label %10
-
-; <label>:10                                      ; preds = %9, %8, %7, %6, %5, %4, %3, %2
+_ifconv1:                                         ; preds = %_ifconv
+  %tmp = icmp slt i32 %minimumDistanceIndex_8, 5
+  %rhs_V = add nsw i32 %minimumDistanceIndex_8, 1
+  %lhs_V = zext i4 %in_switch_V6_phi to i32
+  %tmp_3 = icmp eq i32 %lhs_V, %rhs_V
+  %tmp_6 = sext i32 %minimumDistanceIndex_8 to i64
+  %p_color_array_stream_6 = getelementptr [6 x i17]* @p_color_array_stream_s, i64 0, i64 %tmp_6
+  %p_color_array_stream_7 = load i17* %p_color_array_stream_6, align 4
+  %p_color_array_stream_8 = sext i17 %p_color_array_stream_7 to i24
+  %sel_tmp = and i1 %tmp, %tmp_3
+  %sel_tmp2 = select i1 %sel_tmp, i24 %p_color_array_stream_8, i24 %in_pixel_V5_phi
+  %storemerge1 = select i1 %tmp, i24 %sel_tmp2, i24 %in_pixel_V5_phi
+  call void @_ssdm_op_Write.axis.i24P(i24* %out_pixel_V, i24 %storemerge1)
   call void (...)* @_ssdm_op_Return()
   br label %rewind_header
 
 rewind_init:                                      ; preds = %rewind_header
-  call void (...)* @_ssdm_op_SpecBitsMap(i24 %in_pixel_V), !map !141
-  call void (...)* @_ssdm_op_SpecBitsMap(i24* %out_pixel_V), !map !147
+  call void (...)* @_ssdm_op_SpecBitsMap(i24 %in_pixel_V), !map !147
+  call void (...)* @_ssdm_op_SpecBitsMap(i24* %out_pixel_V), !map !153
+  call void (...)* @_ssdm_op_SpecBitsMap(i4 %in_switch_V), !map !157
   call void (...)* @_ssdm_op_SpecTopModule([30 x i8]* @getPixelClassificati) nounwind
+  %in_switch_V_read = call i4 @_ssdm_op_Read.ap_none.i4(i4 %in_switch_V)
   %in_pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %in_pixel_V)
   br label %_ifconv
 
-rewind_header:                                    ; preds = %10, %_ifconv, %0
-  %do_init = phi i1 [ true, %0 ], [ false, %_ifconv ], [ true, %10 ]
-  %in_pixel_V5_rewind = phi i24 [ undef, %0 ], [ %in_pixel_V5_phi, %_ifconv ], [ undef, %10 ]
-  %minimumDistance4 = phi i32 [ 2147483647, %0 ], [ %minimumDistance_2_2, %_ifconv ], [ 2147483647, %10 ]
-  %minimumDistanceIndex_3 = phi i32 [ -1, %0 ], [ %minimumDistanceIndex_8, %_ifconv ], [ -1, %10 ]
-  %minimumDistanceIndex_9 = phi i2 [ 0, %0 ], [ %tmp_4, %_ifconv ], [ 0, %10 ]
+rewind_header:                                    ; preds = %_ifconv1, %_ifconv, %0
+  %do_init = phi i1 [ true, %0 ], [ false, %_ifconv ], [ true, %_ifconv1 ]
+  %in_pixel_V5_rewind = phi i24 [ undef, %0 ], [ %in_pixel_V5_phi, %_ifconv ], [ undef, %_ifconv1 ]
+  %in_switch_V6_rewind = phi i4 [ undef, %0 ], [ %in_switch_V6_phi, %_ifconv ], [ undef, %_ifconv1 ]
+  %minimumDistance4 = phi i32 [ 2147483647, %0 ], [ %minimumDistance_2_2, %_ifconv ], [ 2147483647, %_ifconv1 ]
+  %minimumDistanceIndex_3 = phi i32 [ 7, %0 ], [ %minimumDistanceIndex_8, %_ifconv ], [ 7, %_ifconv1 ]
+  %minimumDistanceIndex_9 = phi i2 [ 0, %0 ], [ %tmp_5, %_ifconv ], [ 0, %_ifconv1 ]
   br i1 %do_init, label %rewind_init, label %_ifconv
 }
 
 define internal fastcc i12 @getColorDistance_Str(i24 %pixel_V, i17 %color_V) {
 _ZrsILi32ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:
-  call void (...)* @_ssdm_op_SpecInterface(i24 %pixel_V, [5 x i8]* @p_str5, i32 0, i32 0, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)
+  call void (...)* @_ssdm_op_SpecInterface(i24 %pixel_V, [5 x i8]* @p_str6, i32 0, i32 0, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)
   %color_V_read = call i17 @_ssdm_op_Read.ap_auto.i17(i17 %color_V)
   %pixel_V_read = call i24 @_ssdm_op_Read.axis.i24(i24 %pixel_V)
   %pixelRed_V = call i8 @_ssdm_op_PartSelect.i8.i24.i32.i32(i24 %pixel_V_read, i32 16, i32 23)
@@ -168,16 +143,16 @@ _ZrsILi32ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:
   %tmp = trunc i18 %result to i17
   %p_shl1 = call i19 @_ssdm_op_BitConcatenate.i19.i17.i2(i17 %tmp, i2 0)
   %p_shl1_cast = sext i19 %p_shl1 to i20
-  %tmp_s = add i20 %result_cast6, %p_shl1_cast
-  %tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_s, i32 19)
-  %p_neg1 = sub i20 0, %tmp_s
-  %tmp_9 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %p_neg1, i32 1, i32 19)
-  %tmp_2_cast = sext i19 %tmp_9 to i20
-  %tmp_6 = sub i20 0, %tmp_2_cast
-  %tmp_10 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_s, i32 1, i32 19)
-  %tmp_8_cast = sext i19 %tmp_10 to i20
-  %tmp_1 = select i1 %tmp_8, i20 %tmp_6, i20 %tmp_8_cast
-  %tmp_12 = call i28 @_ssdm_op_BitConcatenate.i28.i20.i8(i20 %tmp_1, i8 0)
+  %tmp_2 = add i20 %result_cast6, %p_shl1_cast
+  %tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_2, i32 19)
+  %p_neg1 = sub i20 0, %tmp_2
+  %tmp_8 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %p_neg1, i32 1, i32 19)
+  %tmp_cast = sext i19 %tmp_8 to i20
+  %tmp_1 = sub i20 0, %tmp_cast
+  %tmp_10 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_2, i32 1, i32 19)
+  %tmp_4_cast = sext i19 %tmp_10 to i20
+  %tmp_s = select i1 %tmp_7, i20 %tmp_1, i20 %tmp_4_cast
+  %tmp_12 = call i28 @_ssdm_op_BitConcatenate.i28.i20.i8(i20 %tmp_s, i8 0)
   %p_Val2_s = sext i28 %tmp_12 to i32
   %lhs_V_1 = zext i8 %pixelGreen_V to i9
   %rhs_V_1 = zext i8 %colorGreen_V to i9
@@ -186,17 +161,17 @@ _ZrsILi32ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:
   %number_assign_1_cast = sext i9 %r_V_1 to i23
   %tmp1 = mul i14 11, %number_assign_1_cast_1
   %tmp1_cast = sext i14 %tmp1 to i23
-  %tmp_3 = mul i23 %tmp1_cast, %number_assign_1_cast
-  %tmp_13 = trunc i23 %tmp_3 to i21
-  %tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %tmp_3, i32 22)
+  %tmp_5 = mul i23 %tmp1_cast, %number_assign_1_cast
+  %tmp_13 = trunc i23 %tmp_5 to i21
+  %tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %tmp_5, i32 22)
   %p_neg9 = sub i21 0, %tmp_13
   %tmp_15 = call i19 @_ssdm_op_PartSelect.i19.i21.i32.i32(i21 %p_neg9, i32 2, i32 20)
   %tmp_10_cast = sext i19 %tmp_15 to i20
-  %tmp_2 = call i21 @_ssdm_op_PartSelect.i21.i23.i32.i32(i23 %tmp_3, i32 2, i32 22)
+  %tmp_3 = call i21 @_ssdm_op_PartSelect.i21.i23.i32.i32(i23 %tmp_5, i32 2, i32 22)
   %tmp_4 = sub i20 0, %tmp_10_cast
   %tmp_11_cast = sext i20 %tmp_4 to i21
-  %tmp_5 = select i1 %tmp_14, i21 %tmp_11_cast, i21 %tmp_2
-  %tmp_17 = call i29 @_ssdm_op_BitConcatenate.i29.i21.i8(i21 %tmp_5, i8 0)
+  %tmp_6 = select i1 %tmp_14, i21 %tmp_11_cast, i21 %tmp_3
+  %tmp_17 = call i29 @_ssdm_op_BitConcatenate.i29.i21.i8(i21 %tmp_6, i8 0)
   %p_Val2_1 = sext i29 %tmp_17 to i32
   %lhs_V_2 = zext i8 %pixelBlue_V to i9
   %rhs_V_2 = zext i8 %colorBlue_V to i9
@@ -207,13 +182,13 @@ _ZrsILi32ELb1EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit:
   %tmp_18 = trunc i18 %result_1 to i17
   %p_shl = call i19 @_ssdm_op_BitConcatenate.i19.i17.i2(i17 %tmp_18, i2 0)
   %p_shl_cast = sext i19 %p_shl to i20
-  %tmp_7 = sub i20 %p_shl_cast, %result_2_cast3
-  %tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_7, i32 19)
-  %p_neg = sub i20 0, %tmp_7
+  %tmp_9 = sub i20 %p_shl_cast, %result_2_cast3
+  %tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_9, i32 19)
+  %p_neg = sub i20 0, %tmp_9
   %tmp_20 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %p_neg, i32 1, i32 19)
   %tmp_14_cast = sext i19 %tmp_20 to i20
   %tmp_11 = sub i20 0, %tmp_14_cast
-  %tmp_21 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_7, i32 1, i32 19)
+  %tmp_21 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_9, i32 1, i32 19)
   %tmp_17_cast = sext i19 %tmp_21 to i20
   %tmp_16 = select i1 %tmp_19, i20 %tmp_11, i20 %tmp_17_cast
   %tmp_22 = call i28 @_ssdm_op_BitConcatenate.i28.i20.i8(i20 %tmp_16, i8 0)
@@ -538,6 +513,11 @@ declare void @_ssdm_op_Return(...)
 define weak i24 @_ssdm_op_Read.axis.i24(i24) {
 entry:
   ret i24 %0
+}
+
+define weak i4 @_ssdm_op_Read.ap_none.i4(i4) {
+entry:
+  ret i4 %0
 }
 
 define weak i32 @_ssdm_op_Read.ap_auto.i32(i32) {
@@ -1048,158 +1028,168 @@ declare void @_ssdm_SpecLoopRewind(...) nounwind
 
 declare void @_GLOBAL__I_a() nounwind
 
-!opencl.kernels = !{!0, !7, !9, !15, !19, !23, !26, !32, !26, !26, !26, !35, !35, !38, !38, !26, !26, !40, !26, !26, !26, !42, !45, !45, !46, !48, !48, !26, !26, !50, !45, !45, !26, !53, !56, !26, !26, !26, !58, !58, !26, !26, !60, !63, !64, !26, !26, !26, !38, !38, !58, !58, !66, !66, !68, !70, !71, !70, !73, !26, !73, !26, !45, !45, !26, !74, !76, !76, !78, !38, !38, !79, !26, !81, !81, !85, !26, !26, !26, !38, !38, !87, !87, !63, !64, !58, !58, !38, !38, !56, !58, !58, !89, !91, !91, !26, !26, !68, !26, !92, !93, !95, !95, !40, !97, !100, !26, !26, !26, !95, !95, !38, !38, !85, !102, !102, !68, !70, !26, !26, !26, !104, !106, !106, !112, !112, !114, !26, !26, !116, !116, !26, !26, !26, !117, !117, !117, !119, !121, !121, !26, !122, !122, !26, !26, !119, !121, !121, !26, !26, !26, !124, !124, !126, !128, !128, !130, !130, !121, !116, !116, !26, !26, !26, !132}
+!opencl.kernels = !{!0, !7, !9, !11, !17, !23, !27, !30, !36, !39, !39, !30, !41, !30, !30, !44, !44, !30, !46, !30, !30, !30, !48, !48, !50, !50, !30, !30, !52, !54, !56, !58, !58, !30, !30, !60, !39, !39, !30, !63, !66, !30, !30, !30, !68, !68, !30, !30, !70, !73, !74, !30, !30, !30, !50, !50, !68, !68, !76, !76, !78, !80, !81, !80, !83, !30, !83, !30, !39, !39, !30, !84, !86, !86, !88, !50, !50, !89, !30, !91, !91, !95, !30, !30, !30, !50, !50, !97, !97, !73, !74, !68, !68, !50, !50, !66, !68, !68, !99, !101, !101, !30, !30, !78, !30, !102, !103, !105, !105, !52, !107, !110, !30, !30, !30, !105, !105, !50, !50, !95, !112, !112, !78, !80, !30, !30, !30, !114, !116, !116, !120, !120, !122, !30, !30, !124, !124, !30, !30, !30, !125, !125, !125, !127, !129, !129, !30, !130, !130, !30, !30, !127, !129, !129, !30, !30, !30, !132, !132, !134, !136, !136, !138, !138, !129, !124, !124, !30, !30, !30}
 !hls.encrypted.func = !{}
-!llvm.map.gv = !{!134}
+!llvm.map.gv = !{!140}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0}
 !2 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none"}
 !3 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"int"}
 !4 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !""}
-!5 = metadata !{metadata !"kernel_arg_name", metadata !"pixel", metadata !"color"}
+!5 = metadata !{metadata !"kernel_arg_name", metadata !"number", metadata !"exponent"}
 !6 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}
-!7 = metadata !{null, metadata !1, metadata !2, metadata !8, metadata !4, metadata !5, metadata !6}
-!8 = metadata !{metadata !"kernel_arg_type", metadata !"ap_uint<24>", metadata !"ap_uint<24>"}
-!9 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !14, metadata !6}
-!10 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
-!11 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
-!12 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
-!13 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
-!14 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel"}
-!15 = metadata !{null, metadata !16, metadata !2, metadata !17, metadata !4, metadata !18, metadata !6}
-!16 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 1}
-!17 = metadata !{metadata !"kernel_arg_type", metadata !"ap_uint<24>", metadata !"ap_uint<24>*"}
-!18 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel", metadata !"out_pixel"}
-!19 = metadata !{null, metadata !20, metadata !2, metadata !21, metadata !4, metadata !22, metadata !6}
-!20 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1}
-!21 = metadata !{metadata !"kernel_arg_type", metadata !"int [3]*", metadata !"int*"}
-!22 = metadata !{metadata !"kernel_arg_name", metadata !"pixelArray", metadata !"selectedColorArray"}
-!23 = metadata !{null, metadata !10, metadata !11, metadata !24, metadata !13, metadata !25, metadata !6}
-!24 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<24> &"}
-!25 = metadata !{metadata !"kernel_arg_name", metadata !"op2"}
-!26 = metadata !{null, metadata !27, metadata !28, metadata !29, metadata !30, metadata !31, metadata !6}
-!27 = metadata !{metadata !"kernel_arg_addr_space"}
-!28 = metadata !{metadata !"kernel_arg_access_qual"}
-!29 = metadata !{metadata !"kernel_arg_type"}
-!30 = metadata !{metadata !"kernel_arg_type_qual"}
-!31 = metadata !{metadata !"kernel_arg_name"}
-!32 = metadata !{null, metadata !1, metadata !2, metadata !33, metadata !4, metadata !34, metadata !6}
-!33 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &", metadata !"const ap_int_base<8, false> &"}
-!34 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"op2"}
-!35 = metadata !{null, metadata !10, metadata !11, metadata !36, metadata !13, metadata !37, metadata !6}
-!36 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &"}
-!37 = metadata !{metadata !"kernel_arg_name", metadata !"op"}
-!38 = metadata !{null, metadata !10, metadata !11, metadata !39, metadata !13, metadata !37, metadata !6}
-!39 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &"}
-!40 = metadata !{null, metadata !1, metadata !2, metadata !41, metadata !4, metadata !34, metadata !6}
-!41 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"int"}
-!42 = metadata !{null, metadata !1, metadata !2, metadata !43, metadata !4, metadata !44, metadata !6}
-!43 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<24, false> &", metadata !"int"}
-!44 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
-!45 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !37, metadata !6}
-!46 = metadata !{null, metadata !1, metadata !2, metadata !47, metadata !4, metadata !34, metadata !6}
-!47 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<24, false> &", metadata !"const ap_int_base<32, true> &"}
-!48 = metadata !{null, metadata !10, metadata !11, metadata !49, metadata !13, metadata !37, metadata !6}
-!49 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<24, false> &"}
-!50 = metadata !{null, metadata !10, metadata !11, metadata !51, metadata !13, metadata !52, metadata !6}
-!51 = metadata !{metadata !"kernel_arg_type", metadata !"_Bool"}
-!52 = metadata !{metadata !"kernel_arg_name", metadata !"Cnative"}
-!53 = metadata !{null, metadata !1, metadata !2, metadata !54, metadata !4, metadata !55, metadata !6}
-!54 = metadata !{metadata !"kernel_arg_type", metadata !"ap_ufixed<32, 24> &", metadata !"ap_ufixed<32, 24> &"}
-!55 = metadata !{metadata !"kernel_arg_name", metadata !"result", metadata !"in_val"}
-!56 = metadata !{null, metadata !1, metadata !2, metadata !57, metadata !4, metadata !34, metadata !6}
-!57 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &", metadata !"int"}
-!58 = metadata !{null, metadata !10, metadata !11, metadata !59, metadata !13, metadata !37, metadata !6}
-!59 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &"}
-!60 = metadata !{null, metadata !10, metadata !11, metadata !61, metadata !13, metadata !62, metadata !6}
-!61 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, false> &"}
-!62 = metadata !{metadata !"kernel_arg_name", metadata !"val"}
-!63 = metadata !{null, metadata !1, metadata !2, metadata !57, metadata !4, metadata !44, metadata !6}
-!64 = metadata !{null, metadata !1, metadata !2, metadata !65, metadata !4, metadata !34, metadata !6}
-!65 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &", metadata !"const ap_int_base<32, true> &"}
-!66 = metadata !{null, metadata !10, metadata !11, metadata !67, metadata !13, metadata !37, metadata !6}
-!67 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
-!68 = metadata !{null, metadata !1, metadata !2, metadata !69, metadata !4, metadata !34, metadata !6}
-!69 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &", metadata !"int"}
-!70 = metadata !{null, metadata !10, metadata !11, metadata !39, metadata !13, metadata !25, metadata !6}
-!71 = metadata !{null, metadata !1, metadata !2, metadata !72, metadata !4, metadata !34, metadata !6}
-!72 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<21, false> &", metadata !"int"}
-!73 = metadata !{null, metadata !10, metadata !11, metadata !61, metadata !13, metadata !25, metadata !6}
-!74 = metadata !{null, metadata !1, metadata !2, metadata !75, metadata !4, metadata !34, metadata !6}
-!75 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &", metadata !"const ap_int_base<32, true> &"}
-!76 = metadata !{null, metadata !10, metadata !11, metadata !77, metadata !13, metadata !37, metadata !6}
-!77 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &"}
-!78 = metadata !{null, metadata !10, metadata !11, metadata !67, metadata !13, metadata !25, metadata !6}
-!79 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !80, metadata !6}
-!80 = metadata !{metadata !"kernel_arg_name", metadata !"index"}
-!81 = metadata !{null, metadata !82, metadata !2, metadata !83, metadata !4, metadata !84, metadata !6}
-!82 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0}
-!83 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int"}
-!84 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"index"}
-!85 = metadata !{null, metadata !1, metadata !2, metadata !86, metadata !4, metadata !34, metadata !6}
-!86 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &", metadata !"const ap_int_base<32, true> &"}
-!87 = metadata !{null, metadata !10, metadata !11, metadata !88, metadata !13, metadata !37, metadata !6}
-!88 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &"}
-!89 = metadata !{null, metadata !10, metadata !11, metadata !90, metadata !13, metadata !25, metadata !6}
-!90 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<21> &"}
-!91 = metadata !{null, metadata !10, metadata !11, metadata !90, metadata !13, metadata !37, metadata !6}
-!92 = metadata !{null, metadata !1, metadata !2, metadata !69, metadata !4, metadata !44, metadata !6}
-!93 = metadata !{null, metadata !1, metadata !2, metadata !94, metadata !4, metadata !34, metadata !6}
-!94 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &", metadata !"const ap_int_base<32, true> &"}
-!95 = metadata !{null, metadata !10, metadata !11, metadata !96, metadata !13, metadata !37, metadata !6}
-!96 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &"}
-!97 = metadata !{null, metadata !1, metadata !2, metadata !98, metadata !4, metadata !99, metadata !6}
-!98 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"const ap_int_base<23, true> &"}
-!99 = metadata !{metadata !"kernel_arg_name", metadata !"i_op", metadata !"op"}
-!100 = metadata !{null, metadata !1, metadata !2, metadata !101, metadata !4, metadata !34, metadata !6}
-!101 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"const ap_int_base<23, true> &"}
-!102 = metadata !{null, metadata !10, metadata !11, metadata !103, metadata !13, metadata !37, metadata !6}
-!103 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<56, true> &"}
-!104 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !105, metadata !6}
-!105 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
-!106 = metadata !{null, metadata !107, metadata !108, metadata !109, metadata !110, metadata !111, metadata !6}
-!107 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
-!108 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
-!109 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
-!110 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
-!111 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
-!112 = metadata !{null, metadata !10, metadata !11, metadata !113, metadata !13, metadata !62, metadata !6}
-!113 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
-!114 = metadata !{null, metadata !10, metadata !11, metadata !115, metadata !13, metadata !25, metadata !6}
-!115 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<23> &"}
-!116 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !62, metadata !6}
-!117 = metadata !{null, metadata !10, metadata !11, metadata !118, metadata !13, metadata !37, metadata !6}
-!118 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<34, 26, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!119 = metadata !{null, metadata !10, metadata !11, metadata !120, metadata !13, metadata !25, metadata !6}
-!120 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!121 = metadata !{null, metadata !10, metadata !11, metadata !120, metadata !13, metadata !37, metadata !6}
-!122 = metadata !{null, metadata !10, metadata !11, metadata !123, metadata !13, metadata !37, metadata !6}
-!123 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<33, 25, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!124 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !125, metadata !6}
-!125 = metadata !{metadata !"kernel_arg_name", metadata !"v"}
-!126 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !127, metadata !6}
-!127 = metadata !{metadata !"kernel_arg_name", metadata !"b"}
-!128 = metadata !{null, metadata !10, metadata !11, metadata !12, metadata !13, metadata !129, metadata !6}
-!129 = metadata !{metadata !"kernel_arg_name", metadata !"i_op"}
-!130 = metadata !{null, metadata !10, metadata !11, metadata !131, metadata !13, metadata !37, metadata !6}
-!131 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
-!132 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !133, metadata !6}
-!133 = metadata !{metadata !"kernel_arg_name", metadata !"number", metadata !"exponent"}
-!134 = metadata !{metadata !135, [1 x i32]* @llvm_global_ctors_0}
-!135 = metadata !{metadata !136}
-!136 = metadata !{i32 0, i32 31, metadata !137}
-!137 = metadata !{metadata !138}
-!138 = metadata !{metadata !"llvm.global_ctors.0", metadata !139, metadata !"", i32 0, i32 31}
-!139 = metadata !{metadata !140}
-!140 = metadata !{i32 0, i32 0, i32 1}
+!7 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !8, metadata !6}
+!8 = metadata !{metadata !"kernel_arg_name", metadata !"pixel", metadata !"color"}
+!9 = metadata !{null, metadata !1, metadata !2, metadata !10, metadata !4, metadata !8, metadata !6}
+!10 = metadata !{metadata !"kernel_arg_type", metadata !"ap_uint<24>", metadata !"ap_uint<24>"}
+!11 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !16, metadata !6}
+!12 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
+!13 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
+!14 = metadata !{metadata !"kernel_arg_type", metadata !"int"}
+!15 = metadata !{metadata !"kernel_arg_type_qual", metadata !""}
+!16 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel"}
+!17 = metadata !{null, metadata !18, metadata !19, metadata !20, metadata !21, metadata !22, metadata !6}
+!18 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 1, i32 0}
+!19 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none"}
+!20 = metadata !{metadata !"kernel_arg_type", metadata !"ap_uint<24>", metadata !"ap_uint<24>*", metadata !"ap_uint<4>"}
+!21 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !""}
+!22 = metadata !{metadata !"kernel_arg_name", metadata !"in_pixel", metadata !"out_pixel", metadata !"in_switch"}
+!23 = metadata !{null, metadata !24, metadata !2, metadata !25, metadata !4, metadata !26, metadata !6}
+!24 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1}
+!25 = metadata !{metadata !"kernel_arg_type", metadata !"int [3]*", metadata !"int*"}
+!26 = metadata !{metadata !"kernel_arg_name", metadata !"pixelArray", metadata !"selectedColorArray"}
+!27 = metadata !{null, metadata !12, metadata !13, metadata !28, metadata !15, metadata !29, metadata !6}
+!28 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<24> &"}
+!29 = metadata !{metadata !"kernel_arg_name", metadata !"op2"}
+!30 = metadata !{null, metadata !31, metadata !32, metadata !33, metadata !34, metadata !35, metadata !6}
+!31 = metadata !{metadata !"kernel_arg_addr_space"}
+!32 = metadata !{metadata !"kernel_arg_access_qual"}
+!33 = metadata !{metadata !"kernel_arg_type"}
+!34 = metadata !{metadata !"kernel_arg_type_qual"}
+!35 = metadata !{metadata !"kernel_arg_name"}
+!36 = metadata !{null, metadata !1, metadata !2, metadata !37, metadata !4, metadata !38, metadata !6}
+!37 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &", metadata !"int"}
+!38 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"i_op"}
+!39 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !40, metadata !6}
+!40 = metadata !{metadata !"kernel_arg_name", metadata !"op"}
+!41 = metadata !{null, metadata !1, metadata !2, metadata !42, metadata !4, metadata !43, metadata !6}
+!42 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &", metadata !"const ap_int_base<32, true> &"}
+!43 = metadata !{metadata !"kernel_arg_name", metadata !"op", metadata !"op2"}
+!44 = metadata !{null, metadata !12, metadata !13, metadata !45, metadata !15, metadata !40, metadata !6}
+!45 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<4, false> &"}
+!46 = metadata !{null, metadata !1, metadata !2, metadata !47, metadata !4, metadata !43, metadata !6}
+!47 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &", metadata !"const ap_int_base<8, false> &"}
+!48 = metadata !{null, metadata !12, metadata !13, metadata !49, metadata !15, metadata !40, metadata !6}
+!49 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<8, false> &"}
+!50 = metadata !{null, metadata !12, metadata !13, metadata !51, metadata !15, metadata !40, metadata !6}
+!51 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &"}
+!52 = metadata !{null, metadata !1, metadata !2, metadata !53, metadata !4, metadata !43, metadata !6}
+!53 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"int"}
+!54 = metadata !{null, metadata !1, metadata !2, metadata !55, metadata !4, metadata !38, metadata !6}
+!55 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<24, false> &", metadata !"int"}
+!56 = metadata !{null, metadata !1, metadata !2, metadata !57, metadata !4, metadata !43, metadata !6}
+!57 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<24, false> &", metadata !"const ap_int_base<32, true> &"}
+!58 = metadata !{null, metadata !12, metadata !13, metadata !59, metadata !15, metadata !40, metadata !6}
+!59 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<24, false> &"}
+!60 = metadata !{null, metadata !12, metadata !13, metadata !61, metadata !15, metadata !62, metadata !6}
+!61 = metadata !{metadata !"kernel_arg_type", metadata !"_Bool"}
+!62 = metadata !{metadata !"kernel_arg_name", metadata !"Cnative"}
+!63 = metadata !{null, metadata !1, metadata !2, metadata !64, metadata !4, metadata !65, metadata !6}
+!64 = metadata !{metadata !"kernel_arg_type", metadata !"ap_ufixed<32, 24> &", metadata !"ap_ufixed<32, 24> &"}
+!65 = metadata !{metadata !"kernel_arg_name", metadata !"result", metadata !"in_val"}
+!66 = metadata !{null, metadata !1, metadata !2, metadata !67, metadata !4, metadata !43, metadata !6}
+!67 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &", metadata !"int"}
+!68 = metadata !{null, metadata !12, metadata !13, metadata !69, metadata !15, metadata !40, metadata !6}
+!69 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &"}
+!70 = metadata !{null, metadata !12, metadata !13, metadata !71, metadata !15, metadata !72, metadata !6}
+!71 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, false> &"}
+!72 = metadata !{metadata !"kernel_arg_name", metadata !"val"}
+!73 = metadata !{null, metadata !1, metadata !2, metadata !67, metadata !4, metadata !38, metadata !6}
+!74 = metadata !{null, metadata !1, metadata !2, metadata !75, metadata !4, metadata !43, metadata !6}
+!75 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<21, false> &", metadata !"const ap_int_base<32, true> &"}
+!76 = metadata !{null, metadata !12, metadata !13, metadata !77, metadata !15, metadata !40, metadata !6}
+!77 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<33, true> &"}
+!78 = metadata !{null, metadata !1, metadata !2, metadata !79, metadata !4, metadata !43, metadata !6}
+!79 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &", metadata !"int"}
+!80 = metadata !{null, metadata !12, metadata !13, metadata !51, metadata !15, metadata !29, metadata !6}
+!81 = metadata !{null, metadata !1, metadata !2, metadata !82, metadata !4, metadata !43, metadata !6}
+!82 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<21, false> &", metadata !"int"}
+!83 = metadata !{null, metadata !12, metadata !13, metadata !71, metadata !15, metadata !29, metadata !6}
+!84 = metadata !{null, metadata !1, metadata !2, metadata !85, metadata !4, metadata !43, metadata !6}
+!85 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &", metadata !"const ap_int_base<32, true> &"}
+!86 = metadata !{null, metadata !12, metadata !13, metadata !87, metadata !15, metadata !40, metadata !6}
+!87 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<1, false> &"}
+!88 = metadata !{null, metadata !12, metadata !13, metadata !77, metadata !15, metadata !29, metadata !6}
+!89 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !90, metadata !6}
+!90 = metadata !{metadata !"kernel_arg_name", metadata !"index"}
+!91 = metadata !{null, metadata !92, metadata !2, metadata !93, metadata !4, metadata !94, metadata !6}
+!92 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0}
+!93 = metadata !{metadata !"kernel_arg_type", metadata !"ap_int_base<32, true>*", metadata !"int"}
+!94 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"index"}
+!95 = metadata !{null, metadata !1, metadata !2, metadata !96, metadata !4, metadata !43, metadata !6}
+!96 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &", metadata !"const ap_int_base<32, true> &"}
+!97 = metadata !{null, metadata !12, metadata !13, metadata !98, metadata !15, metadata !40, metadata !6}
+!98 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<55, true> &"}
+!99 = metadata !{null, metadata !12, metadata !13, metadata !100, metadata !15, metadata !29, metadata !6}
+!100 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_uint<21> &"}
+!101 = metadata !{null, metadata !12, metadata !13, metadata !100, metadata !15, metadata !40, metadata !6}
+!102 = metadata !{null, metadata !1, metadata !2, metadata !79, metadata !4, metadata !38, metadata !6}
+!103 = metadata !{null, metadata !1, metadata !2, metadata !104, metadata !4, metadata !43, metadata !6}
+!104 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &", metadata !"const ap_int_base<32, true> &"}
+!105 = metadata !{null, metadata !12, metadata !13, metadata !106, metadata !15, metadata !40, metadata !6}
+!106 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<23, true> &"}
+!107 = metadata !{null, metadata !1, metadata !2, metadata !108, metadata !4, metadata !109, metadata !6}
+!108 = metadata !{metadata !"kernel_arg_type", metadata !"int", metadata !"const ap_int_base<23, true> &"}
+!109 = metadata !{metadata !"kernel_arg_name", metadata !"i_op", metadata !"op"}
+!110 = metadata !{null, metadata !1, metadata !2, metadata !111, metadata !4, metadata !43, metadata !6}
+!111 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<32, true> &", metadata !"const ap_int_base<23, true> &"}
+!112 = metadata !{null, metadata !12, metadata !13, metadata !113, metadata !15, metadata !40, metadata !6}
+!113 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int_base<56, true> &"}
+!114 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !115, metadata !6}
+!115 = metadata !{metadata !"kernel_arg_name", metadata !"Hi", metadata !"Lo"}
+!116 = metadata !{null, metadata !117, metadata !19, metadata !118, metadata !21, metadata !119, metadata !6}
+!117 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0}
+!118 = metadata !{metadata !"kernel_arg_type", metadata !"ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0>*", metadata !"int", metadata !"int"}
+!119 = metadata !{metadata !"kernel_arg_name", metadata !"bv", metadata !"h", metadata !"l"}
+!120 = metadata !{null, metadata !12, metadata !13, metadata !121, metadata !15, metadata !72, metadata !6}
+!121 = metadata !{metadata !"kernel_arg_type", metadata !"ulong long"}
+!122 = metadata !{null, metadata !12, metadata !13, metadata !123, metadata !15, metadata !29, metadata !6}
+!123 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_int<23> &"}
+!124 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !72, metadata !6}
+!125 = metadata !{null, metadata !12, metadata !13, metadata !126, metadata !15, metadata !40, metadata !6}
+!126 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<34, 26, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!127 = metadata !{null, metadata !12, metadata !13, metadata !128, metadata !15, metadata !29, metadata !6}
+!128 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 24, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!129 = metadata !{null, metadata !12, metadata !13, metadata !128, metadata !15, metadata !40, metadata !6}
+!130 = metadata !{null, metadata !12, metadata !13, metadata !131, metadata !15, metadata !40, metadata !6}
+!131 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<33, 25, false, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!132 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !133, metadata !6}
+!133 = metadata !{metadata !"kernel_arg_name", metadata !"v"}
+!134 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !135, metadata !6}
+!135 = metadata !{metadata !"kernel_arg_name", metadata !"b"}
+!136 = metadata !{null, metadata !12, metadata !13, metadata !14, metadata !15, metadata !137, metadata !6}
+!137 = metadata !{metadata !"kernel_arg_name", metadata !"i_op"}
+!138 = metadata !{null, metadata !12, metadata !13, metadata !139, metadata !15, metadata !40, metadata !6}
+!139 = metadata !{metadata !"kernel_arg_type", metadata !"const ap_fixed_base<32, 32, true, (enum ap_q_mode)5, (enum ap_o_mode)3, 0> &"}
+!140 = metadata !{metadata !141, [1 x i32]* @llvm_global_ctors_0}
 !141 = metadata !{metadata !142}
-!142 = metadata !{i32 0, i32 23, metadata !143}
+!142 = metadata !{i32 0, i32 31, metadata !143}
 !143 = metadata !{metadata !144}
-!144 = metadata !{metadata !"in_pixel.V", metadata !145, metadata !"uint24", i32 0, i32 23}
+!144 = metadata !{metadata !"llvm.global_ctors.0", metadata !145, metadata !"", i32 0, i32 31}
 !145 = metadata !{metadata !146}
-!146 = metadata !{i32 0, i32 0, i32 0}
+!146 = metadata !{i32 0, i32 0, i32 1}
 !147 = metadata !{metadata !148}
 !148 = metadata !{i32 0, i32 23, metadata !149}
 !149 = metadata !{metadata !150}
-!150 = metadata !{metadata !"out_pixel.V", metadata !139, metadata !"uint24", i32 0, i32 23}
+!150 = metadata !{metadata !"in_pixel.V", metadata !151, metadata !"uint24", i32 0, i32 23}
+!151 = metadata !{metadata !152}
+!152 = metadata !{i32 0, i32 0, i32 0}
+!153 = metadata !{metadata !154}
+!154 = metadata !{i32 0, i32 23, metadata !155}
+!155 = metadata !{metadata !156}
+!156 = metadata !{metadata !"out_pixel.V", metadata !145, metadata !"uint24", i32 0, i32 23}
+!157 = metadata !{metadata !158}
+!158 = metadata !{i32 0, i32 3, metadata !159}
+!159 = metadata !{metadata !160}
+!160 = metadata !{metadata !"in_switch.V", metadata !151, metadata !"uint4", i32 0, i32 3}

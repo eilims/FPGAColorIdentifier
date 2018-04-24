@@ -1,6 +1,7 @@
 set C_TypeInfoList {{ 
-"getPixelClassification_Stream" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"in_pixel": [[],"0"] }, {"out_pixel": [[],{ "pointer": "0"}] }],[],""], 
-"0": [ "ap_uint<24>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 24}}]],""]}}]
+"getPixelClassification_Stream" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"in_pixel": [[],"0"] }, {"out_pixel": [[],{ "pointer": "0"}] }, {"in_switch": [[],"1"] }],[],""], 
+"0": [ "ap_uint<24>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 24}}]],""]}}], 
+"1": [ "ap_uint<4>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 4}}]],""]}}]
 }}
 set moduleName getPixelClassification_Stream
 set isCombinational 0
@@ -16,12 +17,14 @@ set C_modelType { void 0 }
 set C_modelArgList {
 	{ in_pixel_V int 24 regular {axi_s 0 ""  { in_pixel_V Data } }  }
 	{ out_pixel_V int 24 regular {axi_s 1 ""  { out_pixel_V Data } }  }
+	{ in_switch_V int 4 regular  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "in_pixel_V", "interface" : "axis", "bitwidth" : 24, "direction" : "READONLY", "bitSlice":[{"low":0,"up":23,"cElement": [{"cName": "in_pixel.V","cData": "uint24","bit_use": { "low": 0,"up": 23},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
- 	{ "Name" : "out_pixel_V", "interface" : "axis", "bitwidth" : 24, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":23,"cElement": [{"cName": "out_pixel.V","cData": "uint24","bit_use": { "low": 0,"up": 23},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} ]}
+ 	{ "Name" : "out_pixel_V", "interface" : "axis", "bitwidth" : 24, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":23,"cElement": [{"cName": "out_pixel.V","cData": "uint24","bit_use": { "low": 0,"up": 23},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
+ 	{ "Name" : "in_switch_V", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY", "bitSlice":[{"low":0,"up":3,"cElement": [{"cName": "in_switch.V","cData": "uint4","bit_use": { "low": 0,"up": 3},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 8
+set portNum 9
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
@@ -31,6 +34,7 @@ set portList {
 	{ out_pixel_V_TDATA sc_out sc_lv 24 signal 1 } 
 	{ out_pixel_V_TVALID sc_out sc_logic 1 outvld 1 } 
 	{ out_pixel_V_TREADY sc_in sc_logic 1 outacc 1 } 
+	{ in_switch_V sc_in sc_lv 4 signal 2 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -40,7 +44,8 @@ set NewPortList {[
  	{ "name": "in_pixel_V_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "in_pixel_V", "role": "TREADY" }} , 
  	{ "name": "out_pixel_V_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "out_pixel_V", "role": "TDATA" }} , 
  	{ "name": "out_pixel_V_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "out_pixel_V", "role": "TVALID" }} , 
- 	{ "name": "out_pixel_V_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_pixel_V", "role": "TREADY" }}  ]}
+ 	{ "name": "out_pixel_V_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "out_pixel_V", "role": "TREADY" }} , 
+ 	{ "name": "in_switch_V", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "in_switch_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "5", "8"],
@@ -58,13 +63,14 @@ set RtlHierarchyInfo {[
 			{"Name" : "out_pixel_V", "Type" : "Axis", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "out_pixel_V_TDATA_blk_n", "Type" : "RtlSignal"}]},
+			{"Name" : "in_switch_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_color_array_stream_s", "Type" : "Memory", "Direction" : "I"}],
 		"SubInstanceBlock" : [
-			{"SubInstance" : "grp_getColorDistance_Str_fu_229", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]},
-			{"SubInstance" : "grp_getColorDistance_Str_fu_236", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]},
-			{"SubInstance" : "grp_getColorDistance_Str_fu_243", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]}]},
+			{"SubInstance" : "grp_getColorDistance_Str_fu_257", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]},
+			{"SubInstance" : "grp_getColorDistance_Str_fu_264", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]},
+			{"SubInstance" : "grp_getColorDistance_Str_fu_271", "SubBlockPort" : ["pixel_V_TDATA_blk_n"]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.p_color_array_stream_s_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_229", "Parent" : "0", "Child" : ["3", "4"],
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_257", "Parent" : "0", "Child" : ["3", "4"],
 		"CDFG" : "getColorDistance_Str",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -77,7 +83,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "pixel_V_TDATA_blk_n", "Type" : "RtlPort"}]},
 			{"Name" : "color_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_229.grp_fxp_sqrt_fu_88", "Parent" : "2",
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_257.grp_fxp_sqrt_fu_88", "Parent" : "2",
 		"CDFG" : "fxp_sqrt",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -87,8 +93,8 @@ set RtlHierarchyInfo {[
 		"VariableLatency" : "0",
 		"Port" : [
 			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_229.getPixelClassificbkb_U2", "Parent" : "2"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_236", "Parent" : "0", "Child" : ["6", "7"],
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_257.getPixelClassificbkb_U2", "Parent" : "2"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_264", "Parent" : "0", "Child" : ["6", "7"],
 		"CDFG" : "getColorDistance_Str",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -101,7 +107,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "pixel_V_TDATA_blk_n", "Type" : "RtlPort"}]},
 			{"Name" : "color_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_236.grp_fxp_sqrt_fu_88", "Parent" : "5",
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_264.grp_fxp_sqrt_fu_88", "Parent" : "5",
 		"CDFG" : "fxp_sqrt",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -111,8 +117,8 @@ set RtlHierarchyInfo {[
 		"VariableLatency" : "0",
 		"Port" : [
 			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_236.getPixelClassificbkb_U2", "Parent" : "5"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_243", "Parent" : "0", "Child" : ["9", "10"],
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_264.getPixelClassificbkb_U2", "Parent" : "5"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_271", "Parent" : "0", "Child" : ["9", "10"],
 		"CDFG" : "getColorDistance_Str",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -125,7 +131,7 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "pixel_V_TDATA_blk_n", "Type" : "RtlPort"}]},
 			{"Name" : "color_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_243.grp_fxp_sqrt_fu_88", "Parent" : "8",
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_271.grp_fxp_sqrt_fu_88", "Parent" : "8",
 		"CDFG" : "fxp_sqrt",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
 		"FunctionPipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -135,13 +141,14 @@ set RtlHierarchyInfo {[
 		"VariableLatency" : "0",
 		"Port" : [
 			{"Name" : "in_val_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_243.getPixelClassificbkb_U2", "Parent" : "8"}]}
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_getColorDistance_Str_fu_271.getPixelClassificbkb_U2", "Parent" : "8"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	getPixelClassification_Stream {
 		in_pixel_V {Type I LastRead 1 FirstWrite -1}
 		out_pixel_V {Type O LastRead -1 FirstWrite 21}
+		in_switch_V {Type I LastRead 1 FirstWrite -1}
 		p_color_array_stream_s {Type I LastRead -1 FirstWrite -1}}
 	getColorDistance_Str {
 		pixel_V {Type I LastRead 0 FirstWrite -1}
@@ -173,6 +180,7 @@ set PipelineEnableSignalInfo {[
 set Spec2ImplPortList { 
 	in_pixel_V { axis {  { in_pixel_V_TDATA in_data 0 24 }  { in_pixel_V_TVALID in_vld 0 1 }  { in_pixel_V_TREADY in_acc 1 1 } } }
 	out_pixel_V { axis {  { out_pixel_V_TDATA out_data 1 24 }  { out_pixel_V_TVALID out_vld 1 1 }  { out_pixel_V_TREADY out_acc 0 1 } } }
+	in_switch_V { ap_none {  { in_switch_V in_data 0 4 } } }
 }
 
 set busDeadlockParameterList { 

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'getColorDistance_Str'
 ================================================================
-* Date:           Mon Apr 23 17:28:25 2018
+* Date:           Mon Apr 23 18:30:27 2018
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        ColorComparator
@@ -135,10 +135,10 @@ ST_2 : Operation 37 [1/1] (4.35ns)   --->   "%result = mul i18 %number_assign_ca
 ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%tmp = trunc i18 %result to i17" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:39]
 ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%number_assign_1_cast = sext i9 %r_V_1 to i23" [ColorComparator/powerFunction.cpp:3->ColorComparator/ColorComparator.cpp:40]
 ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp1_cast = sext i14 %tmp1 to i23" [ColorComparator/ColorComparator.cpp:40]
-ST_2 : Operation 41 [1/1] (6.38ns)   --->   "%tmp_3 = mul i23 %tmp1_cast, %number_assign_1_cast" [ColorComparator/ColorComparator.cpp:40]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_13 = trunc i23 %tmp_3 to i21" [ColorComparator/ColorComparator.cpp:40]
-ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %tmp_3, i32 22)" [ColorComparator/ColorComparator.cpp:40]
-ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_2 = call i21 @_ssdm_op_PartSelect.i21.i23.i32.i32(i23 %tmp_3, i32 2, i32 22)" [ColorComparator/ColorComparator.cpp:40]
+ST_2 : Operation 41 [1/1] (6.38ns)   --->   "%tmp_5 = mul i23 %tmp1_cast, %number_assign_1_cast" [ColorComparator/ColorComparator.cpp:40]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_13 = trunc i23 %tmp_5 to i21" [ColorComparator/ColorComparator.cpp:40]
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %tmp_5, i32 22)" [ColorComparator/ColorComparator.cpp:40]
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_3 = call i21 @_ssdm_op_PartSelect.i21.i23.i32.i32(i23 %tmp_5, i32 2, i32 22)" [ColorComparator/ColorComparator.cpp:40]
 ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%number_assign_2_cast = sext i9 %r_V_2 to i18" [ColorComparator/powerFunction.cpp:3->ColorComparator/ColorComparator.cpp:41]
 ST_2 : Operation 46 [1/1] (4.35ns)   --->   "%result_1 = mul i18 %number_assign_2_cast, %number_assign_2_cast" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:41]   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_18 = trunc i18 %result_1 to i17" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:41]
@@ -147,38 +147,38 @@ ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_18 = trunc i18 %result_1 to i1
 ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%result_cast6 = sext i18 %result to i20" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:39]
 ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%p_shl1 = call i19 @_ssdm_op_BitConcatenate.i19.i17.i2(i17 %tmp, i2 0)" [ColorComparator/ColorComparator.cpp:39]
 ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%p_shl1_cast = sext i19 %p_shl1 to i20" [ColorComparator/ColorComparator.cpp:39]
-ST_3 : Operation 51 [1/1] (2.16ns)   --->   "%tmp_s = add i20 %result_cast6, %p_shl1_cast" [ColorComparator/ColorComparator.cpp:39]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_s, i32 19)" [ColorComparator/ColorComparator.cpp:39]
-ST_3 : Operation 53 [1/1] (2.19ns)   --->   "%p_neg1 = sub i20 0, %tmp_s" [ColorComparator/ColorComparator.cpp:39]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_9 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %p_neg1, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:39]
-ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_2_cast = sext i19 %tmp_9 to i20" [ColorComparator/ColorComparator.cpp:39]
-ST_3 : Operation 56 [1/1] (2.16ns)   --->   "%tmp_6 = sub i20 0, %tmp_2_cast" [ColorComparator/ColorComparator.cpp:39]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_10 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_s, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:39]
-ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_8_cast = sext i19 %tmp_10 to i20" [ColorComparator/ColorComparator.cpp:39]
-ST_3 : Operation 59 [1/1] (1.37ns)   --->   "%tmp_1 = select i1 %tmp_8, i20 %tmp_6, i20 %tmp_8_cast" [ColorComparator/ColorComparator.cpp:39]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (2.16ns)   --->   "%tmp_2 = add i20 %result_cast6, %p_shl1_cast" [ColorComparator/ColorComparator.cpp:39]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_2, i32 19)" [ColorComparator/ColorComparator.cpp:39]
+ST_3 : Operation 53 [1/1] (2.19ns)   --->   "%p_neg1 = sub i20 0, %tmp_2" [ColorComparator/ColorComparator.cpp:39]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_8 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %p_neg1, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:39]
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_cast = sext i19 %tmp_8 to i20" [ColorComparator/ColorComparator.cpp:39]
+ST_3 : Operation 56 [1/1] (2.16ns)   --->   "%tmp_1 = sub i20 0, %tmp_cast" [ColorComparator/ColorComparator.cpp:39]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_10 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_2, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:39]
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_4_cast = sext i19 %tmp_10 to i20" [ColorComparator/ColorComparator.cpp:39]
+ST_3 : Operation 59 [1/1] (1.37ns)   --->   "%tmp_s = select i1 %tmp_7, i20 %tmp_1, i20 %tmp_4_cast" [ColorComparator/ColorComparator.cpp:39]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 60 [1/1] (2.22ns)   --->   "%p_neg9 = sub i21 0, %tmp_13" [ColorComparator/ColorComparator.cpp:40]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_15 = call i19 @_ssdm_op_PartSelect.i19.i21.i32.i32(i21 %p_neg9, i32 2, i32 20)" [ColorComparator/ColorComparator.cpp:40]
 ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_10_cast = sext i19 %tmp_15 to i20" [ColorComparator/ColorComparator.cpp:40]
 ST_3 : Operation 63 [1/1] (2.16ns)   --->   "%tmp_4 = sub i20 0, %tmp_10_cast" [ColorComparator/ColorComparator.cpp:40]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_11_cast = sext i20 %tmp_4 to i21" [ColorComparator/ColorComparator.cpp:40]
-ST_3 : Operation 65 [1/1] (1.37ns)   --->   "%tmp_5 = select i1 %tmp_14, i21 %tmp_11_cast, i21 %tmp_2" [ColorComparator/ColorComparator.cpp:40]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (1.37ns)   --->   "%tmp_6 = select i1 %tmp_14, i21 %tmp_11_cast, i21 %tmp_3" [ColorComparator/ColorComparator.cpp:40]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%result_2_cast3 = sext i18 %result_1 to i20" [ColorComparator/powerFunction.cpp:7->ColorComparator/ColorComparator.cpp:41]
 ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%p_shl = call i19 @_ssdm_op_BitConcatenate.i19.i17.i2(i17 %tmp_18, i2 0)" [ColorComparator/ColorComparator.cpp:41]
 ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%p_shl_cast = sext i19 %p_shl to i20" [ColorComparator/ColorComparator.cpp:41]
-ST_3 : Operation 69 [1/1] (2.16ns)   --->   "%tmp_7 = sub i20 %p_shl_cast, %result_2_cast3" [ColorComparator/ColorComparator.cpp:41]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_7, i32 19)" [ColorComparator/ColorComparator.cpp:41]
-ST_3 : Operation 71 [1/1] (2.19ns)   --->   "%p_neg = sub i20 0, %tmp_7" [ColorComparator/ColorComparator.cpp:41]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (2.16ns)   --->   "%tmp_9 = sub i20 %p_shl_cast, %result_2_cast3" [ColorComparator/ColorComparator.cpp:41]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_9, i32 19)" [ColorComparator/ColorComparator.cpp:41]
+ST_3 : Operation 71 [1/1] (2.19ns)   --->   "%p_neg = sub i20 0, %tmp_9" [ColorComparator/ColorComparator.cpp:41]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_20 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %p_neg, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:41]
 ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_14_cast = sext i19 %tmp_20 to i20" [ColorComparator/ColorComparator.cpp:41]
 ST_3 : Operation 74 [1/1] (2.16ns)   --->   "%tmp_11 = sub i20 0, %tmp_14_cast" [ColorComparator/ColorComparator.cpp:41]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.16> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_21 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_7, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:41]
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_21 = call i19 @_ssdm_op_PartSelect.i19.i20.i32.i32(i20 %tmp_9, i32 1, i32 19)" [ColorComparator/ColorComparator.cpp:41]
 ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_17_cast = sext i19 %tmp_21 to i20" [ColorComparator/ColorComparator.cpp:41]
 ST_3 : Operation 77 [1/1] (1.37ns)   --->   "%tmp_16 = select i1 %tmp_19, i20 %tmp_11, i20 %tmp_17_cast" [ColorComparator/ColorComparator.cpp:41]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
  <State 4> : 7.51ns
-ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_12 = call i28 @_ssdm_op_BitConcatenate.i28.i20.i8(i20 %tmp_1, i8 0)" [ColorComparator/ColorComparator.cpp:39]
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_12 = call i28 @_ssdm_op_BitConcatenate.i28.i20.i8(i20 %tmp_s, i8 0)" [ColorComparator/ColorComparator.cpp:39]
 ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%p_Val2_s = sext i28 %tmp_12 to i32" [ColorComparator/ColorComparator.cpp:39]
-ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_17 = call i29 @_ssdm_op_BitConcatenate.i29.i21.i8(i21 %tmp_5, i8 0)" [ColorComparator/ColorComparator.cpp:40]
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_17 = call i29 @_ssdm_op_BitConcatenate.i29.i21.i8(i21 %tmp_6, i8 0)" [ColorComparator/ColorComparator.cpp:40]
 ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%p_Val2_1 = sext i29 %tmp_17 to i32" [ColorComparator/ColorComparator.cpp:40]
 ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_22 = call i28 @_ssdm_op_BitConcatenate.i28.i20.i8(i20 %tmp_16, i8 0)" [ColorComparator/ColorComparator.cpp:41]
 ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%p_Val2_2 = sext i28 %tmp_22 to i32" [ColorComparator/ColorComparator.cpp:41]
@@ -220,7 +220,7 @@ ST_14 : Operation 96 [3/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_
 ST_15 : Operation 97 [2/13] (8.67ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %powerSummation_V)" [ColorComparator/ColorComparator.cpp:44]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
  <State 16> : 6.10ns
-ST_16 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24 %pixel_V, [5 x i8]* @p_str5, i32 0, i32 0, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"
+ST_16 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24 %pixel_V, [5 x i8]* @p_str6, i32 0, i32 0, [5 x i8]* @p_str7, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2)"
 ST_16 : Operation 99 [1/13] (6.10ns)   --->   "%result_V = call fastcc i20 @fxp_sqrt(i32 %powerSummation_V)" [ColorComparator/ColorComparator.cpp:44]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_16 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_23 = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %result_V, i32 8, i32 19)" [ColorComparator/ColorComparator.cpp:45]
 ST_16 : Operation 101 [1/1] (0.00ns)   --->   "ret i12 %tmp_23" [ColorComparator/ColorComparator.cpp:45]
@@ -239,14 +239,14 @@ The critical path consists of the following:
 
  <State 2>: 6.38ns
 The critical path consists of the following:
-	'mul' operation ('tmp_3', ColorComparator/ColorComparator.cpp:40) [39]  (6.38 ns)
+	'mul' operation ('tmp_5', ColorComparator/ColorComparator.cpp:40) [39]  (6.38 ns)
 
  <State 3>: 7.9ns
 The critical path consists of the following:
-	'add' operation ('tmp_s', ColorComparator/ColorComparator.cpp:39) [21]  (2.17 ns)
+	'add' operation ('tmp_2', ColorComparator/ColorComparator.cpp:39) [21]  (2.17 ns)
 	'sub' operation ('p_neg1', ColorComparator/ColorComparator.cpp:39) [23]  (2.2 ns)
-	'sub' operation ('tmp_6', ColorComparator/ColorComparator.cpp:39) [26]  (2.17 ns)
-	'select' operation ('tmp_1', ColorComparator/ColorComparator.cpp:39) [29]  (1.37 ns)
+	'sub' operation ('tmp_1', ColorComparator/ColorComparator.cpp:39) [26]  (2.17 ns)
+	'select' operation ('tmp_s', ColorComparator/ColorComparator.cpp:39) [29]  (1.37 ns)
 
  <State 4>: 7.51ns
 The critical path consists of the following:

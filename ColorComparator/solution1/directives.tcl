@@ -16,3 +16,4 @@ set_directive_interface -mode axis -register -register_mode both "getPixelClassi
 set_directive_interface -mode axis -register -register_mode both "getPixelClassification_Stream" in_pixel
 set_directive_array_partition -type complete -dim 1 "getPixelClassification_Stream" _color_array
 set_directive_interface -mode ap_ctrl_none "getPixelClassification_Stream"
+set_directive_interface -mode ap_none "getPixelClassification_Stream" in_switch

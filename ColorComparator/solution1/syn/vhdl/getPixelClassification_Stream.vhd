@@ -18,14 +18,15 @@ port (
     in_pixel_V_TREADY : OUT STD_LOGIC;
     out_pixel_V_TDATA : OUT STD_LOGIC_VECTOR (23 downto 0);
     out_pixel_V_TVALID : OUT STD_LOGIC;
-    out_pixel_V_TREADY : IN STD_LOGIC );
+    out_pixel_V_TREADY : IN STD_LOGIC;
+    in_switch_V : IN STD_LOGIC_VECTOR (3 downto 0) );
 end;
 
 
 architecture behav of getPixelClassification_Stream is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "getPixelClassification_Stream,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.679625,HLS_SYN_LAT=22,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=2690,HLS_SYN_LUT=13891}";
+    "getPixelClassification_Stream,hls_ip_2017_4,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.679625,HLS_SYN_LAT=22,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=3,HLS_SYN_FF=2759,HLS_SYN_LUT=13927}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
@@ -39,24 +40,15 @@ architecture behav of getPixelClassification_Stream is
     constant ap_const_lv2_1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_boolean_0 : BOOLEAN := false;
-    constant ap_const_lv32_FFFFFFFF : STD_LOGIC_VECTOR (31 downto 0) := "11111111111111111111111111111111";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
-    constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
-    constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
     constant ap_const_lv32_7FFFFFFF : STD_LOGIC_VECTOR (31 downto 0) := "01111111111111111111111111111111";
-    constant ap_const_lv24_FFFF : STD_LOGIC_VECTOR (23 downto 0) := "000000001111111111111111";
-    constant ap_const_lv24_FF00FF : STD_LOGIC_VECTOR (23 downto 0) := "111111110000000011111111";
-    constant ap_const_lv24_FFFF00 : STD_LOGIC_VECTOR (23 downto 0) := "111111111111111100000000";
-    constant ap_const_lv24_FF00 : STD_LOGIC_VECTOR (23 downto 0) := "000000001111111100000000";
-    constant ap_const_lv24_FF : STD_LOGIC_VECTOR (23 downto 0) := "000000000000000011111111";
-    constant ap_const_lv24_FF0000 : STD_LOGIC_VECTOR (23 downto 0) := "111111110000000000000000";
+    constant ap_const_lv32_7 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000111";
     constant ap_const_lv3_1 : STD_LOGIC_VECTOR (2 downto 0) := "001";
     constant ap_const_lv3_3 : STD_LOGIC_VECTOR (2 downto 0) := "011";
     constant ap_const_lv3_6 : STD_LOGIC_VECTOR (2 downto 0) := "110";
     constant ap_const_lv3_2 : STD_LOGIC_VECTOR (2 downto 0) := "010";
     constant ap_const_lv12_109 : STD_LOGIC_VECTOR (11 downto 0) := "000100001001";
+    constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
 
     signal ap_rst_n_inv : STD_LOGIC;
     signal in_pixel_V_0_data_out : STD_LOGIC_VECTOR (23 downto 0);
@@ -73,7 +65,6 @@ architecture behav of getPixelClassification_Stream is
     signal in_pixel_V_0_load_B : STD_LOGIC;
     signal in_pixel_V_0_state : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal in_pixel_V_0_state_cmp_full : STD_LOGIC;
-    signal out_pixel_V_1_data_in : STD_LOGIC_VECTOR (23 downto 0);
     signal out_pixel_V_1_data_out : STD_LOGIC_VECTOR (23 downto 0);
     signal out_pixel_V_1_vld_in : STD_LOGIC;
     signal out_pixel_V_1_vld_out : STD_LOGIC;
@@ -97,6 +88,9 @@ architecture behav of getPixelClassification_Stream is
     signal p_color_array_stream_s_address2 : STD_LOGIC_VECTOR (2 downto 0);
     signal p_color_array_stream_s_ce2 : STD_LOGIC;
     signal p_color_array_stream_s_q2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal p_color_array_stream_s_address3 : STD_LOGIC_VECTOR (2 downto 0);
+    signal p_color_array_stream_s_ce3 : STD_LOGIC;
+    signal p_color_array_stream_s_q3 : STD_LOGIC_VECTOR (16 downto 0);
     signal in_pixel_V_TDATA_blk_n : STD_LOGIC;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0) := "01";
     attribute fsm_encoding : string;
@@ -105,16 +99,14 @@ architecture behav of getPixelClassification_Stream is
     attribute fsm_encoding of ap_CS_fsm_pp0_stage0 : signal is "none";
     signal ap_enable_reg_pp0_iter1 : STD_LOGIC := '0';
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal do_init_reg_143 : STD_LOGIC_VECTOR (0 downto 0);
+    signal do_init_reg_146 : STD_LOGIC_VECTOR (0 downto 0);
     signal out_pixel_V_TDATA_blk_n : STD_LOGIC;
     signal ap_enable_reg_pp0_iter20 : STD_LOGIC := '0';
-    signal exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter19_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal minimumDistanceIndex_8_reg_543 : STD_LOGIC_VECTOR (31 downto 0);
+    signal exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter19_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_enable_reg_pp0_iter21 : STD_LOGIC := '0';
-    signal ap_reg_pp0_iter20_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_reg_pp0_iter1_do_init_reg_143 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter20_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter1_do_init_reg_146 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_block_state2_pp0_stage0_iter0 : BOOLEAN;
     signal ap_block_state3_pp0_stage0_iter1 : BOOLEAN;
     signal ap_block_state4_pp0_stage0_iter2 : BOOLEAN;
@@ -136,151 +128,158 @@ architecture behav of getPixelClassification_Stream is
     signal ap_block_state20_pp0_stage0_iter18 : BOOLEAN;
     signal ap_block_state21_pp0_stage0_iter19 : BOOLEAN;
     signal ap_block_state22_pp0_stage0_iter20 : BOOLEAN;
-    signal ap_predicate_op131_write_state22 : BOOLEAN;
-    signal ap_predicate_op132_write_state22 : BOOLEAN;
-    signal ap_predicate_op133_write_state22 : BOOLEAN;
-    signal ap_predicate_op134_write_state22 : BOOLEAN;
-    signal ap_predicate_op135_write_state22 : BOOLEAN;
-    signal ap_predicate_op136_write_state22 : BOOLEAN;
-    signal ap_predicate_op137_write_state22 : BOOLEAN;
-    signal ap_predicate_op138_write_state22 : BOOLEAN;
     signal ap_block_state22_io : BOOLEAN;
     signal ap_block_state23_pp0_stage0_iter21 : BOOLEAN;
-    signal ap_predicate_op147_write_state23 : BOOLEAN;
-    signal ap_predicate_op149_write_state23 : BOOLEAN;
-    signal ap_predicate_op151_write_state23 : BOOLEAN;
-    signal ap_predicate_op153_write_state23 : BOOLEAN;
-    signal ap_predicate_op155_write_state23 : BOOLEAN;
-    signal ap_predicate_op157_write_state23 : BOOLEAN;
-    signal ap_predicate_op159_write_state23 : BOOLEAN;
-    signal ap_predicate_op161_write_state23 : BOOLEAN;
     signal ap_block_state23_io : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159 : STD_LOGIC_VECTOR (1 downto 0);
-    signal in_pixel_V5_rewind_reg_174 : STD_LOGIC_VECTOR (23 downto 0);
-    signal in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal minimumDistance4_reg_201 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_3_reg_215 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_fu_250_p1 : STD_LOGIC_VECTOR (2 downto 0);
-    signal minimumDistanceIndex_reg_439 : STD_LOGIC_VECTOR (2 downto 0);
-    signal i_fu_259_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter1_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter2_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter3_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter4_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter5_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter6_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter7_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter8_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter9_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter10_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter11_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter12_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter13_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter14_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter15_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter16_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter17_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter18_i_reg_449 : STD_LOGIC_VECTOR (2 downto 0);
-    signal tmp_4_fu_276_p1 : STD_LOGIC_VECTOR (1 downto 0);
-    signal tmp_4_reg_459 : STD_LOGIC_VECTOR (1 downto 0);
-    signal exitcond_fu_280_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter1_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter2_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter3_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter4_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter5_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter6_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter7_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter8_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter9_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter10_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter11_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter12_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter13_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter14_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter15_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter16_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter17_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal ap_reg_pp0_iter18_exitcond_reg_464 : STD_LOGIC_VECTOR (0 downto 0);
-    signal p_color_array_stream_1_reg_473 : STD_LOGIC_VECTOR (16 downto 0);
-    signal p_color_array_stream_3_reg_478 : STD_LOGIC_VECTOR (16 downto 0);
-    signal i_1_fu_286_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter2_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter3_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter4_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter5_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter6_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter7_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter8_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter9_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter10_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter11_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter12_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter13_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter14_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter15_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter16_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter17_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal ap_reg_pp0_iter18_i_1_reg_483 : STD_LOGIC_VECTOR (2 downto 0);
-    signal p_color_array_stream_5_reg_493 : STD_LOGIC_VECTOR (16 downto 0);
+    signal minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_162 : STD_LOGIC_VECTOR (1 downto 0);
+    signal in_pixel_V5_rewind_reg_177 : STD_LOGIC_VECTOR (23 downto 0);
+    signal in_switch_V6_rewind_reg_191 : STD_LOGIC_VECTOR (3 downto 0);
+    signal in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter3_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter4_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter5_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter6_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter7_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter8_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter9_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter10_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter11_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter12_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter13_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter14_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter15_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter16_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter17_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter18_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_reg_pp0_iter19_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter3_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter4_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter5_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter6_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter7_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter8_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter9_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter10_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter11_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter12_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter13_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter14_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter15_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter16_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter17_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter18_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_reg_pp0_iter19_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal minimumDistance4_reg_229 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_3_reg_243 : STD_LOGIC_VECTOR (31 downto 0);
+    signal in_switch_V_read_reg_519 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_phi_mux_do_init_phi_fu_150_p6 : STD_LOGIC_VECTOR (0 downto 0);
+    signal minimumDistanceIndex_fu_278_p1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal minimumDistanceIndex_reg_524 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_fu_287_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter1_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter2_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter3_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter4_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter5_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter6_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter7_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter8_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter9_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter10_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter11_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter12_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter13_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter14_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter15_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter16_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter17_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter18_i_reg_534 : STD_LOGIC_VECTOR (2 downto 0);
+    signal tmp_5_fu_304_p1 : STD_LOGIC_VECTOR (1 downto 0);
+    signal tmp_5_reg_544 : STD_LOGIC_VECTOR (1 downto 0);
+    signal exitcond_fu_308_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter1_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter2_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter3_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter4_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter5_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter6_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter7_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter8_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter9_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter10_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter11_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter12_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter13_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter14_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter15_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter16_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter17_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal ap_reg_pp0_iter18_exitcond_reg_549 : STD_LOGIC_VECTOR (0 downto 0);
+    signal p_color_array_stream_1_reg_558 : STD_LOGIC_VECTOR (16 downto 0);
+    signal p_color_array_stream_3_reg_563 : STD_LOGIC_VECTOR (16 downto 0);
+    signal i_1_fu_314_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter2_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter3_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter4_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter5_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter6_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter7_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter8_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter9_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter10_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter11_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter12_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter13_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter14_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter15_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter16_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter17_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal ap_reg_pp0_iter18_i_1_reg_568 : STD_LOGIC_VECTOR (2 downto 0);
+    signal p_color_array_stream_5_reg_578 : STD_LOGIC_VECTOR (16 downto 0);
     signal ap_enable_reg_pp0_iter2 : STD_LOGIC := '0';
-    signal grp_getColorDistance_Str_fu_229_ap_return : STD_LOGIC_VECTOR (11 downto 0);
-    signal minimumDistance_4_reg_498 : STD_LOGIC_VECTOR (11 downto 0);
-    signal grp_getColorDistance_Str_fu_236_ap_return : STD_LOGIC_VECTOR (11 downto 0);
-    signal minimumDistance_4_1_reg_504 : STD_LOGIC_VECTOR (11 downto 0);
-    signal tmp_1_fu_299_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_1_reg_510 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_2_fu_305_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_2_reg_515 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_1_1_fu_329_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_1_1_reg_520 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_2_1_fu_335_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_2_1_reg_525 : STD_LOGIC_VECTOR (0 downto 0);
-    signal minimumDistance_2_1_fu_348_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_2_1_reg_530 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_getColorDistance_Str_fu_243_ap_return : STD_LOGIC_VECTOR (11 downto 0);
-    signal minimumDistance_4_2_reg_537 : STD_LOGIC_VECTOR (11 downto 0);
-    signal minimumDistanceIndex_8_fu_422_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_getColorDistance_Str_fu_257_ap_return : STD_LOGIC_VECTOR (11 downto 0);
+    signal minimumDistance_4_reg_583 : STD_LOGIC_VECTOR (11 downto 0);
+    signal grp_getColorDistance_Str_fu_264_ap_return : STD_LOGIC_VECTOR (11 downto 0);
+    signal minimumDistance_4_1_reg_589 : STD_LOGIC_VECTOR (11 downto 0);
+    signal tmp_2_fu_327_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_2_reg_595 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_4_fu_333_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_4_reg_600 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_2_1_fu_357_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_2_1_reg_605 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_4_1_fu_363_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_4_1_reg_610 : STD_LOGIC_VECTOR (0 downto 0);
+    signal minimumDistance_2_1_fu_376_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_2_1_reg_615 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_getColorDistance_Str_fu_271_ap_return : STD_LOGIC_VECTOR (11 downto 0);
+    signal minimumDistance_4_2_reg_622 : STD_LOGIC_VECTOR (11 downto 0);
+    signal minimumDistanceIndex_8_fu_450_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_8_reg_628 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_enable_reg_pp0_iter19 : STD_LOGIC := '0';
-    signal minimumDistance_2_2_fu_430_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_2_2_fu_458_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal storemerge1_fu_508_p3 : STD_LOGIC_VECTOR (23 downto 0);
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
     signal ap_enable_reg_pp0_iter3 : STD_LOGIC := '0';
     signal ap_enable_reg_pp0_iter4 : STD_LOGIC := '0';
@@ -300,66 +299,78 @@ architecture behav of getPixelClassification_Stream is
     signal ap_enable_reg_pp0_iter18 : STD_LOGIC := '0';
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal grp_getColorDistance_Str_fu_229_ap_start : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_229_ap_done : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_229_ap_idle : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_229_ap_ready : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_229_ap_ce : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_229_pixel_V_TREADY : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_229_pixel_V_TDATA_blk_n : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_ap_start : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_ap_done : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_ap_idle : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_ap_ready : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_ap_ce : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_pixel_V_TREADY : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_236_pixel_V_TDATA_blk_n : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_ap_start : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_ap_done : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_ap_idle : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_ap_ready : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_ap_ce : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_pixel_V_TREADY : STD_LOGIC;
-    signal grp_getColorDistance_Str_fu_243_pixel_V_TDATA_blk_n : STD_LOGIC;
-    signal ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 : STD_LOGIC_VECTOR (1 downto 0);
-    signal ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188 : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_phi_mux_minimumDistance4_phi_fu_205_p6 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_reg_grp_getColorDistance_Str_fu_229_ap_start : STD_LOGIC := '0';
-    signal ap_reg_grp_getColorDistance_Str_fu_236_ap_start : STD_LOGIC := '0';
-    signal ap_reg_grp_getColorDistance_Str_fu_243_ap_start : STD_LOGIC := '0';
-    signal tmp1_fu_254_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_s_fu_265_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_3_fu_291_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_getColorDistance_Str_fu_257_ap_start : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_257_ap_done : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_257_ap_idle : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_257_ap_ready : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_257_ap_ce : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_257_pixel_V_TREADY : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_257_pixel_V_TDATA_blk_n : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_ap_start : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_ap_done : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_ap_idle : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_ap_ready : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_ap_ce : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_pixel_V_TREADY : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_264_pixel_V_TDATA_blk_n : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_ap_start : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_ap_done : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_ap_idle : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_ap_ready : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_ap_ce : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_pixel_V_TREADY : STD_LOGIC;
+    signal grp_getColorDistance_Str_fu_271_pixel_V_TDATA_blk_n : STD_LOGIC;
+    signal ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_phi_mux_in_switch_V6_rewind_phi_fu_195_p6 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_phi_mux_in_pixel_V5_phi_phi_fu_209_p4 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205 : STD_LOGIC_VECTOR (23 downto 0);
+    signal ap_phi_reg_pp0_iter0_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_phi_reg_pp0_iter1_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_phi_reg_pp0_iter2_in_switch_V6_phi_reg_217 : STD_LOGIC_VECTOR (3 downto 0);
+    signal ap_phi_mux_minimumDistance4_phi_fu_233_p6 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_reg_grp_getColorDistance_Str_fu_257_ap_start : STD_LOGIC := '0';
+    signal ap_reg_grp_getColorDistance_Str_fu_264_ap_start : STD_LOGIC := '0';
+    signal ap_reg_grp_getColorDistance_Str_fu_271_ap_start : STD_LOGIC := '0';
+    signal tmp_s_fu_282_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_1_1_fu_293_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_1_2_fu_319_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_6_fu_465_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
-    signal i_2_fu_270_p2 : STD_LOGIC_VECTOR (2 downto 0);
-    signal minimumDistance_4_ex_fu_296_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_1_fu_310_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_4_1_s_fu_326_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_2_fu_318_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_1_1_fu_340_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_4_fu_356_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_1_fu_360_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal i_cast_fu_374_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_2_fu_367_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_5_fu_377_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_4_2_s_fu_394_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_2_2_fu_402_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i_1_cast_fu_391_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistanceIndex_6_fu_384_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_1_2_fu_397_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal minimumDistanceIndex_7_fu_407_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal minimumDistance_1_2_fu_415_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal i_2_fu_298_p2 : STD_LOGIC_VECTOR (2 downto 0);
+    signal minimumDistance_4_ex_fu_324_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_1_fu_338_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_4_1_s_fu_354_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_2_fu_346_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_1_1_fu_368_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_4_fu_384_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_1_fu_388_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal i_cast_fu_402_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_2_fu_395_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_5_fu_405_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_4_2_s_fu_422_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_4_2_fu_430_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal i_1_cast_fu_419_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistanceIndex_6_fu_412_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_2_2_fu_425_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal minimumDistanceIndex_7_fu_435_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal minimumDistance_1_2_fu_443_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lhs_V_fu_480_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal rhs_V_fu_475_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_fu_470_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_3_fu_484_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal sel_tmp_fu_494_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal p_color_array_stream_8_fu_490_p1 : STD_LOGIC_VECTOR (23 downto 0);
+    signal sel_tmp2_fu_500_p3 : STD_LOGIC_VECTOR (23 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
     signal ap_reset_idle_pp0 : STD_LOGIC;
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
-    signal ap_condition_165 : BOOLEAN;
-    signal ap_condition_501 : BOOLEAN;
+    signal ap_condition_170 : BOOLEAN;
+    signal ap_condition_379 : BOOLEAN;
 
     component getColorDistance_Str IS
     port (
@@ -395,7 +406,10 @@ architecture behav of getPixelClassification_Stream is
         q1 : OUT STD_LOGIC_VECTOR (16 downto 0);
         address2 : IN STD_LOGIC_VECTOR (2 downto 0);
         ce2 : IN STD_LOGIC;
-        q2 : OUT STD_LOGIC_VECTOR (16 downto 0) );
+        q2 : OUT STD_LOGIC_VECTOR (16 downto 0);
+        address3 : IN STD_LOGIC_VECTOR (2 downto 0);
+        ce3 : IN STD_LOGIC;
+        q3 : OUT STD_LOGIC_VECTOR (16 downto 0) );
     end component;
 
 
@@ -417,55 +431,58 @@ begin
         q1 => p_color_array_stream_s_q1,
         address2 => p_color_array_stream_s_address2,
         ce2 => p_color_array_stream_s_ce2,
-        q2 => p_color_array_stream_s_q2);
+        q2 => p_color_array_stream_s_q2,
+        address3 => p_color_array_stream_s_address3,
+        ce3 => p_color_array_stream_s_ce3,
+        q3 => p_color_array_stream_s_q3);
 
-    grp_getColorDistance_Str_fu_229 : component getColorDistance_Str
+    grp_getColorDistance_Str_fu_257 : component getColorDistance_Str
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_getColorDistance_Str_fu_229_ap_start,
-        ap_done => grp_getColorDistance_Str_fu_229_ap_done,
-        ap_idle => grp_getColorDistance_Str_fu_229_ap_idle,
-        ap_ready => grp_getColorDistance_Str_fu_229_ap_ready,
+        ap_start => grp_getColorDistance_Str_fu_257_ap_start,
+        ap_done => grp_getColorDistance_Str_fu_257_ap_done,
+        ap_idle => grp_getColorDistance_Str_fu_257_ap_idle,
+        ap_ready => grp_getColorDistance_Str_fu_257_ap_ready,
         pixel_V_TVALID => ap_const_logic_1,
-        ap_ce => grp_getColorDistance_Str_fu_229_ap_ce,
-        pixel_V_TDATA => ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4,
-        pixel_V_TREADY => grp_getColorDistance_Str_fu_229_pixel_V_TREADY,
-        color_V => p_color_array_stream_1_reg_473,
-        ap_return => grp_getColorDistance_Str_fu_229_ap_return,
-        pixel_V_TDATA_blk_n => grp_getColorDistance_Str_fu_229_pixel_V_TDATA_blk_n);
+        ap_ce => grp_getColorDistance_Str_fu_257_ap_ce,
+        pixel_V_TDATA => ap_phi_mux_in_pixel_V5_phi_phi_fu_209_p4,
+        pixel_V_TREADY => grp_getColorDistance_Str_fu_257_pixel_V_TREADY,
+        color_V => p_color_array_stream_1_reg_558,
+        ap_return => grp_getColorDistance_Str_fu_257_ap_return,
+        pixel_V_TDATA_blk_n => grp_getColorDistance_Str_fu_257_pixel_V_TDATA_blk_n);
 
-    grp_getColorDistance_Str_fu_236 : component getColorDistance_Str
+    grp_getColorDistance_Str_fu_264 : component getColorDistance_Str
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_getColorDistance_Str_fu_236_ap_start,
-        ap_done => grp_getColorDistance_Str_fu_236_ap_done,
-        ap_idle => grp_getColorDistance_Str_fu_236_ap_idle,
-        ap_ready => grp_getColorDistance_Str_fu_236_ap_ready,
+        ap_start => grp_getColorDistance_Str_fu_264_ap_start,
+        ap_done => grp_getColorDistance_Str_fu_264_ap_done,
+        ap_idle => grp_getColorDistance_Str_fu_264_ap_idle,
+        ap_ready => grp_getColorDistance_Str_fu_264_ap_ready,
         pixel_V_TVALID => ap_const_logic_1,
-        ap_ce => grp_getColorDistance_Str_fu_236_ap_ce,
-        pixel_V_TDATA => ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4,
-        pixel_V_TREADY => grp_getColorDistance_Str_fu_236_pixel_V_TREADY,
-        color_V => p_color_array_stream_3_reg_478,
-        ap_return => grp_getColorDistance_Str_fu_236_ap_return,
-        pixel_V_TDATA_blk_n => grp_getColorDistance_Str_fu_236_pixel_V_TDATA_blk_n);
+        ap_ce => grp_getColorDistance_Str_fu_264_ap_ce,
+        pixel_V_TDATA => ap_phi_mux_in_pixel_V5_phi_phi_fu_209_p4,
+        pixel_V_TREADY => grp_getColorDistance_Str_fu_264_pixel_V_TREADY,
+        color_V => p_color_array_stream_3_reg_563,
+        ap_return => grp_getColorDistance_Str_fu_264_ap_return,
+        pixel_V_TDATA_blk_n => grp_getColorDistance_Str_fu_264_pixel_V_TDATA_blk_n);
 
-    grp_getColorDistance_Str_fu_243 : component getColorDistance_Str
+    grp_getColorDistance_Str_fu_271 : component getColorDistance_Str
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_getColorDistance_Str_fu_243_ap_start,
-        ap_done => grp_getColorDistance_Str_fu_243_ap_done,
-        ap_idle => grp_getColorDistance_Str_fu_243_ap_idle,
-        ap_ready => grp_getColorDistance_Str_fu_243_ap_ready,
+        ap_start => grp_getColorDistance_Str_fu_271_ap_start,
+        ap_done => grp_getColorDistance_Str_fu_271_ap_done,
+        ap_idle => grp_getColorDistance_Str_fu_271_ap_idle,
+        ap_ready => grp_getColorDistance_Str_fu_271_ap_ready,
         pixel_V_TVALID => ap_const_logic_1,
-        ap_ce => grp_getColorDistance_Str_fu_243_ap_ce,
-        pixel_V_TDATA => in_pixel_V5_phi_reg_188,
-        pixel_V_TREADY => grp_getColorDistance_Str_fu_243_pixel_V_TREADY,
-        color_V => p_color_array_stream_5_reg_493,
-        ap_return => grp_getColorDistance_Str_fu_243_ap_return,
-        pixel_V_TDATA_blk_n => grp_getColorDistance_Str_fu_243_pixel_V_TDATA_blk_n);
+        ap_ce => grp_getColorDistance_Str_fu_271_ap_ce,
+        pixel_V_TDATA => in_pixel_V5_phi_reg_205,
+        pixel_V_TREADY => grp_getColorDistance_Str_fu_271_pixel_V_TREADY,
+        color_V => p_color_array_stream_5_reg_578,
+        ap_return => grp_getColorDistance_Str_fu_271_ap_return,
+        pixel_V_TDATA_blk_n => grp_getColorDistance_Str_fu_271_pixel_V_TDATA_blk_n);
 
 
 
@@ -779,48 +796,48 @@ begin
     end process;
 
 
-    ap_reg_grp_getColorDistance_Str_fu_229_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_getColorDistance_Str_fu_257_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_grp_getColorDistance_Str_fu_229_ap_start <= ap_const_logic_0;
+                ap_reg_grp_getColorDistance_Str_fu_257_ap_start <= ap_const_logic_0;
             else
                 if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    ap_reg_grp_getColorDistance_Str_fu_229_ap_start <= ap_const_logic_1;
-                elsif ((grp_getColorDistance_Str_fu_229_ap_ready = ap_const_logic_1)) then 
-                    ap_reg_grp_getColorDistance_Str_fu_229_ap_start <= ap_const_logic_0;
+                    ap_reg_grp_getColorDistance_Str_fu_257_ap_start <= ap_const_logic_1;
+                elsif ((grp_getColorDistance_Str_fu_257_ap_ready = ap_const_logic_1)) then 
+                    ap_reg_grp_getColorDistance_Str_fu_257_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_reg_grp_getColorDistance_Str_fu_236_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_getColorDistance_Str_fu_264_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_grp_getColorDistance_Str_fu_236_ap_start <= ap_const_logic_0;
+                ap_reg_grp_getColorDistance_Str_fu_264_ap_start <= ap_const_logic_0;
             else
                 if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                    ap_reg_grp_getColorDistance_Str_fu_236_ap_start <= ap_const_logic_1;
-                elsif ((grp_getColorDistance_Str_fu_236_ap_ready = ap_const_logic_1)) then 
-                    ap_reg_grp_getColorDistance_Str_fu_236_ap_start <= ap_const_logic_0;
+                    ap_reg_grp_getColorDistance_Str_fu_264_ap_start <= ap_const_logic_1;
+                elsif ((grp_getColorDistance_Str_fu_264_ap_ready = ap_const_logic_1)) then 
+                    ap_reg_grp_getColorDistance_Str_fu_264_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_reg_grp_getColorDistance_Str_fu_243_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_getColorDistance_Str_fu_271_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                ap_reg_grp_getColorDistance_Str_fu_243_ap_start <= ap_const_logic_0;
+                ap_reg_grp_getColorDistance_Str_fu_271_ap_start <= ap_const_logic_0;
             else
                 if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then 
-                    ap_reg_grp_getColorDistance_Str_fu_243_ap_start <= ap_const_logic_1;
-                elsif ((grp_getColorDistance_Str_fu_243_ap_ready = ap_const_logic_1)) then 
-                    ap_reg_grp_getColorDistance_Str_fu_243_ap_start <= ap_const_logic_0;
+                    ap_reg_grp_getColorDistance_Str_fu_271_ap_start <= ap_const_logic_1;
+                elsif ((grp_getColorDistance_Str_fu_271_ap_ready = ap_const_logic_1)) then 
+                    ap_reg_grp_getColorDistance_Str_fu_271_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -923,72 +940,98 @@ begin
     end process;
 
 
-    ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188_assign_proc : process (ap_clk)
+    ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((ap_const_boolean_1 = ap_condition_501)) then
-                if ((do_init_reg_143 = ap_const_lv1_1)) then 
-                    ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188 <= in_pixel_V_0_data_out;
+            if ((ap_const_boolean_1 = ap_condition_379)) then
+                if ((do_init_reg_146 = ap_const_lv1_1)) then 
+                    ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205 <= in_pixel_V_0_data_out;
                 elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188 <= ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188;
+                    ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205 <= ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_205;
                 end if;
             end if; 
         end if;
     end process;
 
-    do_init_reg_143_assign_proc : process (ap_clk)
+    ap_phi_reg_pp0_iter2_in_switch_V6_phi_reg_217_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (exitcond_reg_464 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                do_init_reg_143 <= ap_const_lv1_0;
-            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
-                do_init_reg_143 <= ap_const_lv1_1;
+            if ((ap_const_boolean_1 = ap_condition_379)) then
+                if ((do_init_reg_146 = ap_const_lv1_1)) then 
+                    ap_phi_reg_pp0_iter2_in_switch_V6_phi_reg_217 <= in_switch_V_read_reg_519;
+                elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
+                    ap_phi_reg_pp0_iter2_in_switch_V6_phi_reg_217 <= ap_phi_reg_pp0_iter1_in_switch_V6_phi_reg_217;
+                end if;
             end if; 
         end if;
     end process;
 
-    in_pixel_V5_phi_reg_188_assign_proc : process (ap_clk)
+    do_init_reg_146_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((exitcond_reg_549 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+                do_init_reg_146 <= ap_const_lv1_0;
+            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((exitcond_reg_549 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
+                do_init_reg_146 <= ap_const_lv1_1;
+            end if; 
+        end if;
+    end process;
+
+    in_pixel_V5_phi_reg_205_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then
-                if ((ap_reg_pp0_iter1_do_init_reg_143 = ap_const_lv1_0)) then 
-                    in_pixel_V5_phi_reg_188 <= ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6;
+                if ((ap_reg_pp0_iter1_do_init_reg_146 = ap_const_lv1_0)) then 
+                    in_pixel_V5_phi_reg_205 <= ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6;
                 elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    in_pixel_V5_phi_reg_188 <= ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188;
+                    in_pixel_V5_phi_reg_205 <= ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205;
                 end if;
             end if; 
         end if;
     end process;
 
-    minimumDistance4_reg_201_assign_proc : process (ap_clk)
+    in_switch_V6_phi_reg_217_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_reg_pp0_iter18_exitcond_reg_464 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter19 = ap_const_logic_1))) then 
-                minimumDistance4_reg_201 <= minimumDistance_2_2_fu_430_p3;
-            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_reg_pp0_iter18_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter19 = ap_const_logic_1)))) then 
-                minimumDistance4_reg_201 <= ap_const_lv32_7FFFFFFF;
+            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then
+                if ((ap_reg_pp0_iter1_do_init_reg_146 = ap_const_lv1_0)) then 
+                    in_switch_V6_phi_reg_217 <= ap_phi_mux_in_switch_V6_rewind_phi_fu_195_p6;
+                elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
+                    in_switch_V6_phi_reg_217 <= ap_phi_reg_pp0_iter2_in_switch_V6_phi_reg_217;
+                end if;
             end if; 
         end if;
     end process;
 
-    minimumDistanceIndex_3_reg_215_assign_proc : process (ap_clk)
+    minimumDistance4_reg_229_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-                minimumDistanceIndex_3_reg_215 <= minimumDistanceIndex_8_reg_543;
-            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)))) then 
-                minimumDistanceIndex_3_reg_215 <= ap_const_lv32_FFFFFFFF;
+            if (((ap_reg_pp0_iter18_exitcond_reg_549 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter19 = ap_const_logic_1))) then 
+                minimumDistance4_reg_229 <= minimumDistance_2_2_fu_458_p3;
+            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((ap_reg_pp0_iter18_exitcond_reg_549 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter19 = ap_const_logic_1)))) then 
+                minimumDistance4_reg_229 <= ap_const_lv32_7FFFFFFF;
             end if; 
         end if;
     end process;
 
-    minimumDistanceIndex_9_reg_159_assign_proc : process (ap_clk)
+    minimumDistanceIndex_3_reg_243_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (exitcond_reg_464 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-                minimumDistanceIndex_9_reg_159 <= tmp_4_reg_459;
-            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
-                minimumDistanceIndex_9_reg_159 <= ap_const_lv2_0;
+            if (((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
+                minimumDistanceIndex_3_reg_243 <= minimumDistanceIndex_8_reg_628;
+            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)))) then 
+                minimumDistanceIndex_3_reg_243 <= ap_const_lv32_7;
+            end if; 
+        end if;
+    end process;
+
+    minimumDistanceIndex_9_reg_162_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((exitcond_reg_549 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+                minimumDistanceIndex_9_reg_162 <= tmp_5_reg_544;
+            elsif (((ap_const_logic_1 = ap_CS_fsm_state1) or ((exitcond_reg_549 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0)))) then 
+                minimumDistanceIndex_9_reg_162 <= ap_const_lv2_0;
             end if; 
         end if;
     end process;
@@ -996,8 +1039,9 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_188 <= ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188;
-                tmp_4_reg_459 <= tmp_4_fu_276_p1;
+                ap_phi_reg_pp0_iter1_in_pixel_V5_phi_reg_205 <= ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_205;
+                ap_phi_reg_pp0_iter1_in_switch_V6_phi_reg_217 <= ap_phi_reg_pp0_iter0_in_switch_V6_phi_reg_217;
+                tmp_5_reg_544 <= tmp_5_fu_304_p1;
             end if;
         end if;
     end process;
@@ -1005,102 +1049,118 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_boolean_0 = ap_block_pp0_stage0_11001)) then
-                ap_reg_pp0_iter10_exitcond_reg_464 <= ap_reg_pp0_iter9_exitcond_reg_464;
-                ap_reg_pp0_iter10_i_1_reg_483 <= ap_reg_pp0_iter9_i_1_reg_483;
-                ap_reg_pp0_iter10_i_reg_449 <= ap_reg_pp0_iter9_i_reg_449;
-                ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter11_exitcond_reg_464 <= ap_reg_pp0_iter10_exitcond_reg_464;
-                ap_reg_pp0_iter11_i_1_reg_483 <= ap_reg_pp0_iter10_i_1_reg_483;
-                ap_reg_pp0_iter11_i_reg_449 <= ap_reg_pp0_iter10_i_reg_449;
-                ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter10_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter12_exitcond_reg_464 <= ap_reg_pp0_iter11_exitcond_reg_464;
-                ap_reg_pp0_iter12_i_1_reg_483 <= ap_reg_pp0_iter11_i_1_reg_483;
-                ap_reg_pp0_iter12_i_reg_449 <= ap_reg_pp0_iter11_i_reg_449;
-                ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter11_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter13_exitcond_reg_464 <= ap_reg_pp0_iter12_exitcond_reg_464;
-                ap_reg_pp0_iter13_i_1_reg_483 <= ap_reg_pp0_iter12_i_1_reg_483;
-                ap_reg_pp0_iter13_i_reg_449 <= ap_reg_pp0_iter12_i_reg_449;
-                ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter12_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter14_exitcond_reg_464 <= ap_reg_pp0_iter13_exitcond_reg_464;
-                ap_reg_pp0_iter14_i_1_reg_483 <= ap_reg_pp0_iter13_i_1_reg_483;
-                ap_reg_pp0_iter14_i_reg_449 <= ap_reg_pp0_iter13_i_reg_449;
-                ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter13_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter15_exitcond_reg_464 <= ap_reg_pp0_iter14_exitcond_reg_464;
-                ap_reg_pp0_iter15_i_1_reg_483 <= ap_reg_pp0_iter14_i_1_reg_483;
-                ap_reg_pp0_iter15_i_reg_449 <= ap_reg_pp0_iter14_i_reg_449;
-                ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter14_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter16_exitcond_reg_464 <= ap_reg_pp0_iter15_exitcond_reg_464;
-                ap_reg_pp0_iter16_i_1_reg_483 <= ap_reg_pp0_iter15_i_1_reg_483;
-                ap_reg_pp0_iter16_i_reg_449 <= ap_reg_pp0_iter15_i_reg_449;
-                ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter15_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter17_exitcond_reg_464 <= ap_reg_pp0_iter16_exitcond_reg_464;
-                ap_reg_pp0_iter17_i_1_reg_483 <= ap_reg_pp0_iter16_i_1_reg_483;
-                ap_reg_pp0_iter17_i_reg_449 <= ap_reg_pp0_iter16_i_reg_449;
-                ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter16_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter18_exitcond_reg_464 <= ap_reg_pp0_iter17_exitcond_reg_464;
-                ap_reg_pp0_iter18_i_1_reg_483 <= ap_reg_pp0_iter17_i_1_reg_483;
-                ap_reg_pp0_iter18_i_reg_449 <= ap_reg_pp0_iter17_i_reg_449;
-                ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter17_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter19_exitcond_reg_464 <= ap_reg_pp0_iter18_exitcond_reg_464;
-                ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter18_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter20_exitcond_reg_464 <= ap_reg_pp0_iter19_exitcond_reg_464;
-                ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 <= minimumDistanceIndex_8_reg_543;
-                ap_reg_pp0_iter2_exitcond_reg_464 <= ap_reg_pp0_iter1_exitcond_reg_464;
-                ap_reg_pp0_iter2_i_1_reg_483 <= i_1_reg_483;
-                ap_reg_pp0_iter2_i_reg_449 <= ap_reg_pp0_iter1_i_reg_449;
-                ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter3_exitcond_reg_464 <= ap_reg_pp0_iter2_exitcond_reg_464;
-                ap_reg_pp0_iter3_i_1_reg_483 <= ap_reg_pp0_iter2_i_1_reg_483;
-                ap_reg_pp0_iter3_i_reg_449 <= ap_reg_pp0_iter2_i_reg_449;
-                ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188 <= in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter4_exitcond_reg_464 <= ap_reg_pp0_iter3_exitcond_reg_464;
-                ap_reg_pp0_iter4_i_1_reg_483 <= ap_reg_pp0_iter3_i_1_reg_483;
-                ap_reg_pp0_iter4_i_reg_449 <= ap_reg_pp0_iter3_i_reg_449;
-                ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter3_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter5_exitcond_reg_464 <= ap_reg_pp0_iter4_exitcond_reg_464;
-                ap_reg_pp0_iter5_i_1_reg_483 <= ap_reg_pp0_iter4_i_1_reg_483;
-                ap_reg_pp0_iter5_i_reg_449 <= ap_reg_pp0_iter4_i_reg_449;
-                ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter4_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter6_exitcond_reg_464 <= ap_reg_pp0_iter5_exitcond_reg_464;
-                ap_reg_pp0_iter6_i_1_reg_483 <= ap_reg_pp0_iter5_i_1_reg_483;
-                ap_reg_pp0_iter6_i_reg_449 <= ap_reg_pp0_iter5_i_reg_449;
-                ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter5_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter7_exitcond_reg_464 <= ap_reg_pp0_iter6_exitcond_reg_464;
-                ap_reg_pp0_iter7_i_1_reg_483 <= ap_reg_pp0_iter6_i_1_reg_483;
-                ap_reg_pp0_iter7_i_reg_449 <= ap_reg_pp0_iter6_i_reg_449;
-                ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter6_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter8_exitcond_reg_464 <= ap_reg_pp0_iter7_exitcond_reg_464;
-                ap_reg_pp0_iter8_i_1_reg_483 <= ap_reg_pp0_iter7_i_1_reg_483;
-                ap_reg_pp0_iter8_i_reg_449 <= ap_reg_pp0_iter7_i_reg_449;
-                ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter7_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_159;
-                ap_reg_pp0_iter9_exitcond_reg_464 <= ap_reg_pp0_iter8_exitcond_reg_464;
-                ap_reg_pp0_iter9_i_1_reg_483 <= ap_reg_pp0_iter8_i_1_reg_483;
-                ap_reg_pp0_iter9_i_reg_449 <= ap_reg_pp0_iter8_i_reg_449;
-                ap_reg_pp0_iter9_in_pixel_V5_phi_reg_188 <= ap_reg_pp0_iter8_in_pixel_V5_phi_reg_188;
-                ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_159 <= ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_159;
-                minimumDistance_2_1_reg_530 <= minimumDistance_2_1_fu_348_p3;
-                minimumDistance_4_1_reg_504 <= grp_getColorDistance_Str_fu_236_ap_return;
-                minimumDistance_4_2_reg_537 <= grp_getColorDistance_Str_fu_243_ap_return;
-                minimumDistance_4_reg_498 <= grp_getColorDistance_Str_fu_229_ap_return;
-                tmp_1_1_reg_520 <= tmp_1_1_fu_329_p2;
-                tmp_1_reg_510 <= tmp_1_fu_299_p2;
-                tmp_2_1_reg_525 <= tmp_2_1_fu_335_p2;
-                tmp_2_reg_515 <= tmp_2_fu_305_p2;
+                ap_reg_pp0_iter10_exitcond_reg_549 <= ap_reg_pp0_iter9_exitcond_reg_549;
+                ap_reg_pp0_iter10_i_1_reg_568 <= ap_reg_pp0_iter9_i_1_reg_568;
+                ap_reg_pp0_iter10_i_reg_534 <= ap_reg_pp0_iter9_i_reg_534;
+                ap_reg_pp0_iter10_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter9_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter10_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter9_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter11_exitcond_reg_549 <= ap_reg_pp0_iter10_exitcond_reg_549;
+                ap_reg_pp0_iter11_i_1_reg_568 <= ap_reg_pp0_iter10_i_1_reg_568;
+                ap_reg_pp0_iter11_i_reg_534 <= ap_reg_pp0_iter10_i_reg_534;
+                ap_reg_pp0_iter11_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter10_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter11_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter10_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter10_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter12_exitcond_reg_549 <= ap_reg_pp0_iter11_exitcond_reg_549;
+                ap_reg_pp0_iter12_i_1_reg_568 <= ap_reg_pp0_iter11_i_1_reg_568;
+                ap_reg_pp0_iter12_i_reg_534 <= ap_reg_pp0_iter11_i_reg_534;
+                ap_reg_pp0_iter12_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter11_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter12_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter11_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter11_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter13_exitcond_reg_549 <= ap_reg_pp0_iter12_exitcond_reg_549;
+                ap_reg_pp0_iter13_i_1_reg_568 <= ap_reg_pp0_iter12_i_1_reg_568;
+                ap_reg_pp0_iter13_i_reg_534 <= ap_reg_pp0_iter12_i_reg_534;
+                ap_reg_pp0_iter13_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter12_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter13_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter12_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter12_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter14_exitcond_reg_549 <= ap_reg_pp0_iter13_exitcond_reg_549;
+                ap_reg_pp0_iter14_i_1_reg_568 <= ap_reg_pp0_iter13_i_1_reg_568;
+                ap_reg_pp0_iter14_i_reg_534 <= ap_reg_pp0_iter13_i_reg_534;
+                ap_reg_pp0_iter14_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter13_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter14_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter13_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter13_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter15_exitcond_reg_549 <= ap_reg_pp0_iter14_exitcond_reg_549;
+                ap_reg_pp0_iter15_i_1_reg_568 <= ap_reg_pp0_iter14_i_1_reg_568;
+                ap_reg_pp0_iter15_i_reg_534 <= ap_reg_pp0_iter14_i_reg_534;
+                ap_reg_pp0_iter15_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter14_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter15_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter14_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter14_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter16_exitcond_reg_549 <= ap_reg_pp0_iter15_exitcond_reg_549;
+                ap_reg_pp0_iter16_i_1_reg_568 <= ap_reg_pp0_iter15_i_1_reg_568;
+                ap_reg_pp0_iter16_i_reg_534 <= ap_reg_pp0_iter15_i_reg_534;
+                ap_reg_pp0_iter16_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter15_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter16_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter15_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter15_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter17_exitcond_reg_549 <= ap_reg_pp0_iter16_exitcond_reg_549;
+                ap_reg_pp0_iter17_i_1_reg_568 <= ap_reg_pp0_iter16_i_1_reg_568;
+                ap_reg_pp0_iter17_i_reg_534 <= ap_reg_pp0_iter16_i_reg_534;
+                ap_reg_pp0_iter17_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter16_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter17_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter16_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter16_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter18_exitcond_reg_549 <= ap_reg_pp0_iter17_exitcond_reg_549;
+                ap_reg_pp0_iter18_i_1_reg_568 <= ap_reg_pp0_iter17_i_1_reg_568;
+                ap_reg_pp0_iter18_i_reg_534 <= ap_reg_pp0_iter17_i_reg_534;
+                ap_reg_pp0_iter18_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter17_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter18_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter17_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter17_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter19_exitcond_reg_549 <= ap_reg_pp0_iter18_exitcond_reg_549;
+                ap_reg_pp0_iter19_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter18_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter19_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter18_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter20_exitcond_reg_549 <= ap_reg_pp0_iter19_exitcond_reg_549;
+                ap_reg_pp0_iter2_exitcond_reg_549 <= ap_reg_pp0_iter1_exitcond_reg_549;
+                ap_reg_pp0_iter2_i_1_reg_568 <= i_1_reg_568;
+                ap_reg_pp0_iter2_i_reg_534 <= ap_reg_pp0_iter1_i_reg_534;
+                ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter3_exitcond_reg_549 <= ap_reg_pp0_iter2_exitcond_reg_549;
+                ap_reg_pp0_iter3_i_1_reg_568 <= ap_reg_pp0_iter2_i_1_reg_568;
+                ap_reg_pp0_iter3_i_reg_534 <= ap_reg_pp0_iter2_i_reg_534;
+                ap_reg_pp0_iter3_in_pixel_V5_phi_reg_205 <= in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter3_in_switch_V6_phi_reg_217 <= in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter2_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter4_exitcond_reg_549 <= ap_reg_pp0_iter3_exitcond_reg_549;
+                ap_reg_pp0_iter4_i_1_reg_568 <= ap_reg_pp0_iter3_i_1_reg_568;
+                ap_reg_pp0_iter4_i_reg_534 <= ap_reg_pp0_iter3_i_reg_534;
+                ap_reg_pp0_iter4_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter3_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter4_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter3_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter3_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter5_exitcond_reg_549 <= ap_reg_pp0_iter4_exitcond_reg_549;
+                ap_reg_pp0_iter5_i_1_reg_568 <= ap_reg_pp0_iter4_i_1_reg_568;
+                ap_reg_pp0_iter5_i_reg_534 <= ap_reg_pp0_iter4_i_reg_534;
+                ap_reg_pp0_iter5_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter4_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter5_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter4_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter4_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter6_exitcond_reg_549 <= ap_reg_pp0_iter5_exitcond_reg_549;
+                ap_reg_pp0_iter6_i_1_reg_568 <= ap_reg_pp0_iter5_i_1_reg_568;
+                ap_reg_pp0_iter6_i_reg_534 <= ap_reg_pp0_iter5_i_reg_534;
+                ap_reg_pp0_iter6_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter5_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter6_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter5_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter5_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter7_exitcond_reg_549 <= ap_reg_pp0_iter6_exitcond_reg_549;
+                ap_reg_pp0_iter7_i_1_reg_568 <= ap_reg_pp0_iter6_i_1_reg_568;
+                ap_reg_pp0_iter7_i_reg_534 <= ap_reg_pp0_iter6_i_reg_534;
+                ap_reg_pp0_iter7_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter6_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter7_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter6_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter6_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter8_exitcond_reg_549 <= ap_reg_pp0_iter7_exitcond_reg_549;
+                ap_reg_pp0_iter8_i_1_reg_568 <= ap_reg_pp0_iter7_i_1_reg_568;
+                ap_reg_pp0_iter8_i_reg_534 <= ap_reg_pp0_iter7_i_reg_534;
+                ap_reg_pp0_iter8_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter7_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter8_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter7_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter7_minimumDistanceIndex_9_reg_162;
+                ap_reg_pp0_iter9_exitcond_reg_549 <= ap_reg_pp0_iter8_exitcond_reg_549;
+                ap_reg_pp0_iter9_i_1_reg_568 <= ap_reg_pp0_iter8_i_1_reg_568;
+                ap_reg_pp0_iter9_i_reg_534 <= ap_reg_pp0_iter8_i_reg_534;
+                ap_reg_pp0_iter9_in_pixel_V5_phi_reg_205 <= ap_reg_pp0_iter8_in_pixel_V5_phi_reg_205;
+                ap_reg_pp0_iter9_in_switch_V6_phi_reg_217 <= ap_reg_pp0_iter8_in_switch_V6_phi_reg_217;
+                ap_reg_pp0_iter9_minimumDistanceIndex_9_reg_162 <= ap_reg_pp0_iter8_minimumDistanceIndex_9_reg_162;
+                minimumDistance_2_1_reg_615 <= minimumDistance_2_1_fu_376_p3;
+                minimumDistance_4_1_reg_589 <= grp_getColorDistance_Str_fu_264_ap_return;
+                minimumDistance_4_2_reg_622 <= grp_getColorDistance_Str_fu_271_ap_return;
+                minimumDistance_4_reg_583 <= grp_getColorDistance_Str_fu_257_ap_return;
+                tmp_2_1_reg_605 <= tmp_2_1_fu_357_p2;
+                tmp_2_reg_595 <= tmp_2_fu_327_p2;
+                tmp_4_1_reg_610 <= tmp_4_1_fu_363_p2;
+                tmp_4_reg_600 <= tmp_4_fu_333_p2;
             end if;
         end if;
     end process;
@@ -1108,22 +1168,23 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                ap_reg_pp0_iter1_do_init_reg_143 <= do_init_reg_143;
-                ap_reg_pp0_iter1_exitcond_reg_464 <= exitcond_reg_464;
-                ap_reg_pp0_iter1_i_reg_449 <= i_reg_449;
-                ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_159 <= minimumDistanceIndex_9_reg_159;
-                exitcond_reg_464 <= exitcond_fu_280_p2;
-                i_1_reg_483 <= i_1_fu_286_p2;
-                i_reg_449 <= i_fu_259_p2;
-                    minimumDistanceIndex_reg_439(1 downto 0) <= minimumDistanceIndex_fu_250_p1(1 downto 0);
+                ap_reg_pp0_iter1_do_init_reg_146 <= do_init_reg_146;
+                ap_reg_pp0_iter1_exitcond_reg_549 <= exitcond_reg_549;
+                ap_reg_pp0_iter1_i_reg_534 <= i_reg_534;
+                ap_reg_pp0_iter1_minimumDistanceIndex_9_reg_162 <= minimumDistanceIndex_9_reg_162;
+                exitcond_reg_549 <= exitcond_fu_308_p2;
+                i_1_reg_568 <= i_1_fu_314_p2;
+                i_reg_534 <= i_fu_287_p2;
+                    minimumDistanceIndex_reg_524(1 downto 0) <= minimumDistanceIndex_fu_278_p1(1 downto 0);
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_reg_pp0_iter2_exitcond_reg_464 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1))) then
-                in_pixel_V5_rewind_reg_174 <= in_pixel_V5_phi_reg_188;
+            if (((ap_reg_pp0_iter2_exitcond_reg_549 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1))) then
+                in_pixel_V5_rewind_reg_177 <= in_pixel_V5_phi_reg_205;
+                in_switch_V6_rewind_reg_191 <= in_switch_V6_phi_reg_217;
             end if;
         end if;
     end process;
@@ -1146,8 +1207,16 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
+            if (((ap_phi_mux_do_init_phi_fu_150_p6 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
+                in_switch_V_read_reg_519 <= in_switch_V;
+            end if;
+        end if;
+    end process;
+    process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter19 = ap_const_logic_1))) then
-                minimumDistanceIndex_8_reg_543 <= minimumDistanceIndex_8_fu_422_p3;
+                minimumDistanceIndex_8_reg_628 <= minimumDistanceIndex_8_fu_450_p3;
             end if;
         end if;
     end process;
@@ -1155,7 +1224,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((out_pixel_V_1_load_A = ap_const_logic_1)) then
-                out_pixel_V_1_payload_A <= out_pixel_V_1_data_in;
+                out_pixel_V_1_payload_A <= storemerge1_fu_508_p3;
             end if;
         end if;
     end process;
@@ -1163,7 +1232,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((out_pixel_V_1_load_B = ap_const_logic_1)) then
-                out_pixel_V_1_payload_B <= out_pixel_V_1_data_in;
+                out_pixel_V_1_payload_B <= storemerge1_fu_508_p3;
             end if;
         end if;
     end process;
@@ -1171,8 +1240,8 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                p_color_array_stream_1_reg_473 <= p_color_array_stream_s_q0;
-                p_color_array_stream_3_reg_478 <= p_color_array_stream_s_q1;
+                p_color_array_stream_1_reg_558 <= p_color_array_stream_s_q0;
+                p_color_array_stream_3_reg_563 <= p_color_array_stream_s_q1;
             end if;
         end if;
     end process;
@@ -1180,11 +1249,11 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then
-                p_color_array_stream_5_reg_493 <= p_color_array_stream_s_q2;
+                p_color_array_stream_5_reg_578 <= p_color_array_stream_s_q2;
             end if;
         end if;
     end process;
-    minimumDistanceIndex_reg_439(2) <= '0';
+    minimumDistanceIndex_reg_524(2) <= '0';
 
     ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_block_pp0_stage0_subdone, ap_reset_idle_pp0)
     begin
@@ -1207,21 +1276,21 @@ begin
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_01001_assign_proc : process(in_pixel_V_0_vld_out, out_pixel_V_1_ack_in, ap_enable_reg_pp0_iter1, do_init_reg_143, ap_enable_reg_pp0_iter21)
+    ap_block_pp0_stage0_01001_assign_proc : process(in_pixel_V_0_vld_out, out_pixel_V_1_ack_in, ap_enable_reg_pp0_iter1, do_init_reg_146, ap_enable_reg_pp0_iter21)
     begin
-                ap_block_pp0_stage0_01001 <= (((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1)) or ((do_init_reg_143 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_01001 <= (((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1)) or ((do_init_reg_146 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_11001_assign_proc : process(in_pixel_V_0_vld_out, out_pixel_V_1_ack_in, ap_enable_reg_pp0_iter1, do_init_reg_143, ap_enable_reg_pp0_iter20, ap_enable_reg_pp0_iter21, ap_block_state22_io, ap_block_state23_io)
+    ap_block_pp0_stage0_11001_assign_proc : process(in_pixel_V_0_vld_out, out_pixel_V_1_ack_in, ap_enable_reg_pp0_iter1, do_init_reg_146, ap_enable_reg_pp0_iter20, ap_enable_reg_pp0_iter21, ap_block_state22_io, ap_block_state23_io)
     begin
-                ap_block_pp0_stage0_11001 <= (((ap_enable_reg_pp0_iter21 = ap_const_logic_1) and ((out_pixel_V_1_ack_in = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state23_io))) or ((ap_const_boolean_1 = ap_block_state22_io) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((do_init_reg_143 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_11001 <= (((ap_enable_reg_pp0_iter21 = ap_const_logic_1) and ((out_pixel_V_1_ack_in = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state23_io))) or ((ap_const_boolean_1 = ap_block_state22_io) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((do_init_reg_146 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(in_pixel_V_0_vld_out, out_pixel_V_1_ack_in, ap_enable_reg_pp0_iter1, do_init_reg_143, ap_enable_reg_pp0_iter20, ap_enable_reg_pp0_iter21, ap_block_state22_io, ap_block_state23_io)
+    ap_block_pp0_stage0_subdone_assign_proc : process(in_pixel_V_0_vld_out, out_pixel_V_1_ack_in, ap_enable_reg_pp0_iter1, do_init_reg_146, ap_enable_reg_pp0_iter20, ap_enable_reg_pp0_iter21, ap_block_state22_io, ap_block_state23_io)
     begin
-                ap_block_pp0_stage0_subdone <= (((ap_enable_reg_pp0_iter21 = ap_const_logic_1) and ((out_pixel_V_1_ack_in = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state23_io))) or ((ap_const_boolean_1 = ap_block_state22_io) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((do_init_reg_143 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
+                ap_block_pp0_stage0_subdone <= (((ap_enable_reg_pp0_iter21 = ap_const_logic_1) and ((out_pixel_V_1_ack_in = ap_const_logic_0) or (ap_const_boolean_1 = ap_block_state23_io))) or ((ap_const_boolean_1 = ap_block_state22_io) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((do_init_reg_146 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1)));
     end process;
 
         ap_block_state10_pp0_stage0_iter8 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -1237,16 +1306,16 @@ begin
         ap_block_state20_pp0_stage0_iter18 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state21_pp0_stage0_iter19 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state22_io_assign_proc : process(out_pixel_V_1_ack_in, ap_predicate_op131_write_state22, ap_predicate_op132_write_state22, ap_predicate_op133_write_state22, ap_predicate_op134_write_state22, ap_predicate_op135_write_state22, ap_predicate_op136_write_state22, ap_predicate_op137_write_state22, ap_predicate_op138_write_state22)
+    ap_block_state22_io_assign_proc : process(out_pixel_V_1_ack_in, ap_reg_pp0_iter19_exitcond_reg_549)
     begin
-                ap_block_state22_io <= (((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op138_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op137_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op136_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op135_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op134_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op133_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op132_write_state22 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op131_write_state22 = ap_const_boolean_1)));
+                ap_block_state22_io <= ((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_1) and (out_pixel_V_1_ack_in = ap_const_logic_0));
     end process;
 
         ap_block_state22_pp0_stage0_iter20 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state23_io_assign_proc : process(out_pixel_V_1_ack_in, ap_predicate_op147_write_state23, ap_predicate_op149_write_state23, ap_predicate_op151_write_state23, ap_predicate_op153_write_state23, ap_predicate_op155_write_state23, ap_predicate_op157_write_state23, ap_predicate_op159_write_state23, ap_predicate_op161_write_state23)
+    ap_block_state23_io_assign_proc : process(out_pixel_V_1_ack_in, ap_reg_pp0_iter20_exitcond_reg_549)
     begin
-                ap_block_state23_io <= (((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op161_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op159_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op157_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op155_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op153_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op151_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op149_write_state23 = ap_const_boolean_1)) or ((out_pixel_V_1_ack_in = ap_const_logic_0) and (ap_predicate_op147_write_state23 = ap_const_boolean_1)));
+                ap_block_state23_io <= ((ap_reg_pp0_iter20_exitcond_reg_549 = ap_const_lv1_1) and (out_pixel_V_1_ack_in = ap_const_logic_0));
     end process;
 
 
@@ -1257,9 +1326,9 @@ begin
 
         ap_block_state2_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state3_pp0_stage0_iter1_assign_proc : process(in_pixel_V_0_vld_out, do_init_reg_143)
+    ap_block_state3_pp0_stage0_iter1_assign_proc : process(in_pixel_V_0_vld_out, do_init_reg_146)
     begin
-                ap_block_state3_pp0_stage0_iter1 <= ((do_init_reg_143 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0));
+                ap_block_state3_pp0_stage0_iter1 <= ((do_init_reg_146 = ap_const_lv1_1) and (in_pixel_V_0_vld_out = ap_const_logic_0));
     end process;
 
         ap_block_state4_pp0_stage0_iter2 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -1269,15 +1338,15 @@ begin
         ap_block_state8_pp0_stage0_iter6 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state9_pp0_stage0_iter7 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_condition_165_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0)
+    ap_condition_170_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0)
     begin
-                ap_condition_165 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0));
+                ap_condition_170 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0));
     end process;
 
 
-    ap_condition_501_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
+    ap_condition_379_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
-                ap_condition_501 <= ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0));
+                ap_condition_379 <= ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0));
     end process;
 
     ap_enable_pp0 <= (ap_idle_pp0 xor ap_const_logic_1);
@@ -1292,170 +1361,101 @@ begin
     end process;
 
 
-    ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4_assign_proc : process(ap_block_pp0_stage0, ap_reg_pp0_iter1_do_init_reg_143, ap_enable_reg_pp0_iter2, ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6, ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188)
+    ap_phi_mux_do_init_phi_fu_150_p6_assign_proc : process(do_init_reg_146, exitcond_reg_549, ap_condition_170)
     begin
-        if (((ap_reg_pp0_iter1_do_init_reg_143 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
-            ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4 <= ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6;
+        if ((ap_const_boolean_1 = ap_condition_170)) then
+            if ((exitcond_reg_549 = ap_const_lv1_1)) then 
+                ap_phi_mux_do_init_phi_fu_150_p6 <= ap_const_lv1_1;
+            elsif ((exitcond_reg_549 = ap_const_lv1_0)) then 
+                ap_phi_mux_do_init_phi_fu_150_p6 <= ap_const_lv1_0;
+            else 
+                ap_phi_mux_do_init_phi_fu_150_p6 <= do_init_reg_146;
+            end if;
         else 
-            ap_phi_mux_in_pixel_V5_phi_phi_fu_193_p4 <= ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_188;
+            ap_phi_mux_do_init_phi_fu_150_p6 <= do_init_reg_146;
         end if; 
     end process;
 
 
-    ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6_assign_proc : process(ap_block_pp0_stage0, in_pixel_V5_rewind_reg_174, in_pixel_V5_phi_reg_188, ap_reg_pp0_iter2_exitcond_reg_464, ap_enable_reg_pp0_iter3)
+    ap_phi_mux_in_pixel_V5_phi_phi_fu_209_p4_assign_proc : process(ap_block_pp0_stage0, ap_reg_pp0_iter1_do_init_reg_146, ap_enable_reg_pp0_iter2, ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6, ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205)
     begin
-        if (((ap_reg_pp0_iter2_exitcond_reg_464 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
-            ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6 <= in_pixel_V5_phi_reg_188;
+        if (((ap_reg_pp0_iter1_do_init_reg_146 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
+            ap_phi_mux_in_pixel_V5_phi_phi_fu_209_p4 <= ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6;
         else 
-            ap_phi_mux_in_pixel_V5_rewind_phi_fu_178_p6 <= in_pixel_V5_rewind_reg_174;
+            ap_phi_mux_in_pixel_V5_phi_phi_fu_209_p4 <= ap_phi_reg_pp0_iter2_in_pixel_V5_phi_reg_205;
         end if; 
     end process;
 
 
-    ap_phi_mux_minimumDistance4_phi_fu_205_p6_assign_proc : process(ap_block_pp0_stage0, minimumDistance4_reg_201, ap_reg_pp0_iter18_exitcond_reg_464, ap_enable_reg_pp0_iter19, minimumDistance_2_2_fu_430_p3)
+    ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6_assign_proc : process(ap_block_pp0_stage0, in_pixel_V5_rewind_reg_177, in_pixel_V5_phi_reg_205, ap_reg_pp0_iter2_exitcond_reg_549, ap_enable_reg_pp0_iter3)
+    begin
+        if (((ap_reg_pp0_iter2_exitcond_reg_549 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
+            ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6 <= in_pixel_V5_phi_reg_205;
+        else 
+            ap_phi_mux_in_pixel_V5_rewind_phi_fu_181_p6 <= in_pixel_V5_rewind_reg_177;
+        end if; 
+    end process;
+
+
+    ap_phi_mux_in_switch_V6_rewind_phi_fu_195_p6_assign_proc : process(ap_block_pp0_stage0, in_switch_V6_rewind_reg_191, in_switch_V6_phi_reg_217, ap_reg_pp0_iter2_exitcond_reg_549, ap_enable_reg_pp0_iter3)
+    begin
+        if (((ap_reg_pp0_iter2_exitcond_reg_549 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
+            ap_phi_mux_in_switch_V6_rewind_phi_fu_195_p6 <= in_switch_V6_phi_reg_217;
+        else 
+            ap_phi_mux_in_switch_V6_rewind_phi_fu_195_p6 <= in_switch_V6_rewind_reg_191;
+        end if; 
+    end process;
+
+
+    ap_phi_mux_minimumDistance4_phi_fu_233_p6_assign_proc : process(ap_block_pp0_stage0, minimumDistance4_reg_229, ap_reg_pp0_iter18_exitcond_reg_549, ap_enable_reg_pp0_iter19, minimumDistance_2_2_fu_458_p3)
     begin
         if (((ap_enable_reg_pp0_iter19 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then
-            if ((ap_reg_pp0_iter18_exitcond_reg_464 = ap_const_lv1_1)) then 
-                ap_phi_mux_minimumDistance4_phi_fu_205_p6 <= ap_const_lv32_7FFFFFFF;
-            elsif ((ap_reg_pp0_iter18_exitcond_reg_464 = ap_const_lv1_0)) then 
-                ap_phi_mux_minimumDistance4_phi_fu_205_p6 <= minimumDistance_2_2_fu_430_p3;
+            if ((ap_reg_pp0_iter18_exitcond_reg_549 = ap_const_lv1_1)) then 
+                ap_phi_mux_minimumDistance4_phi_fu_233_p6 <= ap_const_lv32_7FFFFFFF;
+            elsif ((ap_reg_pp0_iter18_exitcond_reg_549 = ap_const_lv1_0)) then 
+                ap_phi_mux_minimumDistance4_phi_fu_233_p6 <= minimumDistance_2_2_fu_458_p3;
             else 
-                ap_phi_mux_minimumDistance4_phi_fu_205_p6 <= minimumDistance4_reg_201;
+                ap_phi_mux_minimumDistance4_phi_fu_233_p6 <= minimumDistance4_reg_229;
             end if;
         else 
-            ap_phi_mux_minimumDistance4_phi_fu_205_p6 <= minimumDistance4_reg_201;
+            ap_phi_mux_minimumDistance4_phi_fu_233_p6 <= minimumDistance4_reg_229;
         end if; 
     end process;
 
 
-    ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6_assign_proc : process(ap_block_pp0_stage0, ap_enable_reg_pp0_iter20, ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543, minimumDistanceIndex_3_reg_215)
+    ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6_assign_proc : process(ap_block_pp0_stage0, ap_enable_reg_pp0_iter20, ap_reg_pp0_iter19_exitcond_reg_549, minimumDistanceIndex_3_reg_243, minimumDistanceIndex_8_reg_628)
     begin
         if (((ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then
-            if ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1)) then 
-                ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 <= ap_const_lv32_FFFFFFFF;
-            elsif ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_0)) then 
-                ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 <= minimumDistanceIndex_8_reg_543;
+            if ((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_1)) then 
+                ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6 <= ap_const_lv32_7;
+            elsif ((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_0)) then 
+                ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6 <= minimumDistanceIndex_8_reg_628;
             else 
-                ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 <= minimumDistanceIndex_3_reg_215;
+                ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6 <= minimumDistanceIndex_3_reg_243;
             end if;
         else 
-            ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6 <= minimumDistanceIndex_3_reg_215;
+            ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6 <= minimumDistanceIndex_3_reg_243;
         end if; 
     end process;
 
 
-    ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6_assign_proc : process(exitcond_reg_464, minimumDistanceIndex_9_reg_159, tmp_4_reg_459, ap_condition_165)
+    ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6_assign_proc : process(exitcond_reg_549, minimumDistanceIndex_9_reg_162, tmp_5_reg_544, ap_condition_170)
     begin
-        if ((ap_const_boolean_1 = ap_condition_165)) then
-            if ((exitcond_reg_464 = ap_const_lv1_1)) then 
-                ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 <= ap_const_lv2_0;
-            elsif ((exitcond_reg_464 = ap_const_lv1_0)) then 
-                ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 <= tmp_4_reg_459;
+        if ((ap_const_boolean_1 = ap_condition_170)) then
+            if ((exitcond_reg_549 = ap_const_lv1_1)) then 
+                ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6 <= ap_const_lv2_0;
+            elsif ((exitcond_reg_549 = ap_const_lv1_0)) then 
+                ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6 <= tmp_5_reg_544;
             else 
-                ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 <= minimumDistanceIndex_9_reg_159;
+                ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6 <= minimumDistanceIndex_9_reg_162;
             end if;
         else 
-            ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6 <= minimumDistanceIndex_9_reg_159;
+            ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6 <= minimumDistanceIndex_9_reg_162;
         end if; 
     end process;
 
-    ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_188 <= "XXXXXXXXXXXXXXXXXXXXXXXX";
-
-    ap_predicate_op131_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op131_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_5));
-    end process;
-
-
-    ap_predicate_op132_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op132_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_4));
-    end process;
-
-
-    ap_predicate_op133_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op133_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_3));
-    end process;
-
-
-    ap_predicate_op134_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op134_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_2));
-    end process;
-
-
-    ap_predicate_op135_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op135_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_1));
-    end process;
-
-
-    ap_predicate_op136_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op136_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_0));
-    end process;
-
-
-    ap_predicate_op137_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op137_write_state22 <= ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF));
-    end process;
-
-
-    ap_predicate_op138_write_state22_assign_proc : process(ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op138_write_state22 <= (not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_5)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_4)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_3)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_2)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_1)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_0)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF)) and (ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1));
-    end process;
-
-
-    ap_predicate_op147_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op147_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_5));
-    end process;
-
-
-    ap_predicate_op149_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op149_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_4));
-    end process;
-
-
-    ap_predicate_op151_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op151_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_3));
-    end process;
-
-
-    ap_predicate_op153_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op153_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_2));
-    end process;
-
-
-    ap_predicate_op155_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op155_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_1));
-    end process;
-
-
-    ap_predicate_op157_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op157_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_0));
-    end process;
-
-
-    ap_predicate_op159_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op159_write_state23 <= ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF));
-    end process;
-
-
-    ap_predicate_op161_write_state23_assign_proc : process(ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
-    begin
-                ap_predicate_op161_write_state23 <= (not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_5)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_4)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_3)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_2)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_1)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_0)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF)) and (ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1));
-    end process;
-
+    ap_phi_reg_pp0_iter0_in_pixel_V5_phi_reg_205 <= "XXXXXXXXXXXXXXXXXXXXXXXX";
+    ap_phi_reg_pp0_iter0_in_switch_V6_phi_reg_217 <= "XXXX";
     ap_reset_idle_pp0 <= ap_const_logic_0;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
@@ -1463,50 +1463,50 @@ begin
                 ap_rst_n_inv <= not(ap_rst_n);
     end process;
 
-    exitcond_fu_280_p2 <= "1" when (i_2_fu_270_p2 = ap_const_lv3_6) else "0";
+    exitcond_fu_308_p2 <= "1" when (i_2_fu_298_p2 = ap_const_lv3_6) else "0";
 
-    grp_getColorDistance_Str_fu_229_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
+    grp_getColorDistance_Str_fu_257_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            grp_getColorDistance_Str_fu_229_ap_ce <= ap_const_logic_1;
+            grp_getColorDistance_Str_fu_257_ap_ce <= ap_const_logic_1;
         else 
-            grp_getColorDistance_Str_fu_229_ap_ce <= ap_const_logic_0;
+            grp_getColorDistance_Str_fu_257_ap_ce <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_getColorDistance_Str_fu_229_ap_start <= ap_reg_grp_getColorDistance_Str_fu_229_ap_start;
+    grp_getColorDistance_Str_fu_257_ap_start <= ap_reg_grp_getColorDistance_Str_fu_257_ap_start;
 
-    grp_getColorDistance_Str_fu_236_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
+    grp_getColorDistance_Str_fu_264_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            grp_getColorDistance_Str_fu_236_ap_ce <= ap_const_logic_1;
+            grp_getColorDistance_Str_fu_264_ap_ce <= ap_const_logic_1;
         else 
-            grp_getColorDistance_Str_fu_236_ap_ce <= ap_const_logic_0;
+            grp_getColorDistance_Str_fu_264_ap_ce <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_getColorDistance_Str_fu_236_ap_start <= ap_reg_grp_getColorDistance_Str_fu_236_ap_start;
+    grp_getColorDistance_Str_fu_264_ap_start <= ap_reg_grp_getColorDistance_Str_fu_264_ap_start;
 
-    grp_getColorDistance_Str_fu_243_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
+    grp_getColorDistance_Str_fu_271_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            grp_getColorDistance_Str_fu_243_ap_ce <= ap_const_logic_1;
+            grp_getColorDistance_Str_fu_271_ap_ce <= ap_const_logic_1;
         else 
-            grp_getColorDistance_Str_fu_243_ap_ce <= ap_const_logic_0;
+            grp_getColorDistance_Str_fu_271_ap_ce <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_getColorDistance_Str_fu_243_ap_start <= ap_reg_grp_getColorDistance_Str_fu_243_ap_start;
-    i_1_cast_fu_391_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter18_i_1_reg_483),32));
-    i_1_fu_286_p2 <= std_logic_vector(unsigned(ap_const_lv3_2) + unsigned(minimumDistanceIndex_reg_439));
-    i_2_fu_270_p2 <= std_logic_vector(unsigned(ap_const_lv3_3) + unsigned(minimumDistanceIndex_fu_250_p1));
-    i_cast_fu_374_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter18_i_reg_449),32));
-    i_fu_259_p2 <= std_logic_vector(unsigned(ap_const_lv3_1) + unsigned(minimumDistanceIndex_fu_250_p1));
+    grp_getColorDistance_Str_fu_271_ap_start <= ap_reg_grp_getColorDistance_Str_fu_271_ap_start;
+    i_1_cast_fu_419_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter18_i_1_reg_568),32));
+    i_1_fu_314_p2 <= std_logic_vector(unsigned(ap_const_lv3_2) + unsigned(minimumDistanceIndex_reg_524));
+    i_2_fu_298_p2 <= std_logic_vector(unsigned(ap_const_lv3_3) + unsigned(minimumDistanceIndex_fu_278_p1));
+    i_cast_fu_402_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter18_i_reg_534),32));
+    i_fu_287_p2 <= std_logic_vector(unsigned(ap_const_lv3_1) + unsigned(minimumDistanceIndex_fu_278_p1));
     in_pixel_V_0_ack_in <= in_pixel_V_0_state(1);
 
-    in_pixel_V_0_ack_out_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, do_init_reg_143, ap_block_pp0_stage0_11001)
+    in_pixel_V_0_ack_out_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, do_init_reg_146, ap_block_pp0_stage0_11001)
     begin
-        if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (do_init_reg_143 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
+        if (((do_init_reg_146 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
             in_pixel_V_0_ack_out <= ap_const_logic_1;
         else 
             in_pixel_V_0_ack_out <= ap_const_logic_0;
@@ -1530,9 +1530,9 @@ begin
     in_pixel_V_0_vld_in <= in_pixel_V_TVALID;
     in_pixel_V_0_vld_out <= in_pixel_V_0_state(0);
 
-    in_pixel_V_TDATA_blk_n_assign_proc : process(in_pixel_V_0_state, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, do_init_reg_143)
+    in_pixel_V_TDATA_blk_n_assign_proc : process(in_pixel_V_0_state, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, do_init_reg_146)
     begin
-        if (((do_init_reg_143 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
+        if (((do_init_reg_146 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0))) then 
             in_pixel_V_TDATA_blk_n <= in_pixel_V_0_state(0);
         else 
             in_pixel_V_TDATA_blk_n <= ap_const_logic_1;
@@ -1540,71 +1540,50 @@ begin
     end process;
 
     in_pixel_V_TREADY <= in_pixel_V_0_state(1);
-    minimumDistanceIndex_1_fu_360_p3 <= 
-        minimumDistanceIndex_4_fu_356_p1 when (tmp_2_reg_515(0) = '1') else 
-        ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6;
-    minimumDistanceIndex_2_fu_367_p3 <= 
-        minimumDistanceIndex_1_fu_360_p3 when (tmp_1_reg_510(0) = '1') else 
-        ap_phi_mux_minimumDistanceIndex_3_phi_fu_219_p6;
-    minimumDistanceIndex_4_fu_356_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_159),32));
-    minimumDistanceIndex_5_fu_377_p3 <= 
-        i_cast_fu_374_p1 when (tmp_2_1_reg_525(0) = '1') else 
-        minimumDistanceIndex_2_fu_367_p3;
-    minimumDistanceIndex_6_fu_384_p3 <= 
-        minimumDistanceIndex_5_fu_377_p3 when (tmp_1_1_reg_520(0) = '1') else 
-        minimumDistanceIndex_2_fu_367_p3;
-    minimumDistanceIndex_7_fu_407_p3 <= 
-        i_1_cast_fu_391_p1 when (tmp_2_2_fu_402_p2(0) = '1') else 
-        minimumDistanceIndex_6_fu_384_p3;
-    minimumDistanceIndex_8_fu_422_p3 <= 
-        minimumDistanceIndex_7_fu_407_p3 when (tmp_1_2_fu_397_p2(0) = '1') else 
-        minimumDistanceIndex_6_fu_384_p3;
-    minimumDistanceIndex_fu_250_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6),3));
-    minimumDistance_1_1_fu_340_p3 <= 
-        minimumDistance_4_1_s_fu_326_p1 when (tmp_2_1_fu_335_p2(0) = '1') else 
-        minimumDistance_2_fu_318_p3;
-    minimumDistance_1_2_fu_415_p3 <= 
-        minimumDistance_4_2_s_fu_394_p1 when (tmp_2_2_fu_402_p2(0) = '1') else 
-        minimumDistance_2_1_reg_530;
-    minimumDistance_1_fu_310_p3 <= 
-        minimumDistance_4_ex_fu_296_p1 when (tmp_2_fu_305_p2(0) = '1') else 
-        ap_phi_mux_minimumDistance4_phi_fu_205_p6;
-    minimumDistance_2_1_fu_348_p3 <= 
-        minimumDistance_1_1_fu_340_p3 when (tmp_1_1_fu_329_p2(0) = '1') else 
-        minimumDistance_2_fu_318_p3;
-    minimumDistance_2_2_fu_430_p3 <= 
-        minimumDistance_1_2_fu_415_p3 when (tmp_1_2_fu_397_p2(0) = '1') else 
-        minimumDistance_2_1_reg_530;
-    minimumDistance_2_fu_318_p3 <= 
-        minimumDistance_1_fu_310_p3 when (tmp_1_fu_299_p2(0) = '1') else 
-        ap_phi_mux_minimumDistance4_phi_fu_205_p6;
-    minimumDistance_4_1_s_fu_326_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(minimumDistance_4_1_reg_504),32));
-    minimumDistance_4_2_s_fu_394_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(minimumDistance_4_2_reg_537),32));
-    minimumDistance_4_ex_fu_296_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(minimumDistance_4_reg_498),32));
+    lhs_V_fu_480_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter19_in_switch_V6_phi_reg_217),32));
+    minimumDistanceIndex_1_fu_388_p3 <= 
+        minimumDistanceIndex_4_fu_384_p1 when (tmp_4_reg_600(0) = '1') else 
+        ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6;
+    minimumDistanceIndex_2_fu_395_p3 <= 
+        minimumDistanceIndex_1_fu_388_p3 when (tmp_2_reg_595(0) = '1') else 
+        ap_phi_mux_minimumDistanceIndex_3_phi_fu_247_p6;
+    minimumDistanceIndex_4_fu_384_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_reg_pp0_iter18_minimumDistanceIndex_9_reg_162),32));
+    minimumDistanceIndex_5_fu_405_p3 <= 
+        i_cast_fu_402_p1 when (tmp_4_1_reg_610(0) = '1') else 
+        minimumDistanceIndex_2_fu_395_p3;
+    minimumDistanceIndex_6_fu_412_p3 <= 
+        minimumDistanceIndex_5_fu_405_p3 when (tmp_2_1_reg_605(0) = '1') else 
+        minimumDistanceIndex_2_fu_395_p3;
+    minimumDistanceIndex_7_fu_435_p3 <= 
+        i_1_cast_fu_419_p1 when (tmp_4_2_fu_430_p2(0) = '1') else 
+        minimumDistanceIndex_6_fu_412_p3;
+    minimumDistanceIndex_8_fu_450_p3 <= 
+        minimumDistanceIndex_7_fu_435_p3 when (tmp_2_2_fu_425_p2(0) = '1') else 
+        minimumDistanceIndex_6_fu_412_p3;
+    minimumDistanceIndex_fu_278_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6),3));
+    minimumDistance_1_1_fu_368_p3 <= 
+        minimumDistance_4_1_s_fu_354_p1 when (tmp_4_1_fu_363_p2(0) = '1') else 
+        minimumDistance_2_fu_346_p3;
+    minimumDistance_1_2_fu_443_p3 <= 
+        minimumDistance_4_2_s_fu_422_p1 when (tmp_4_2_fu_430_p2(0) = '1') else 
+        minimumDistance_2_1_reg_615;
+    minimumDistance_1_fu_338_p3 <= 
+        minimumDistance_4_ex_fu_324_p1 when (tmp_4_fu_333_p2(0) = '1') else 
+        ap_phi_mux_minimumDistance4_phi_fu_233_p6;
+    minimumDistance_2_1_fu_376_p3 <= 
+        minimumDistance_1_1_fu_368_p3 when (tmp_2_1_fu_357_p2(0) = '1') else 
+        minimumDistance_2_fu_346_p3;
+    minimumDistance_2_2_fu_458_p3 <= 
+        minimumDistance_1_2_fu_443_p3 when (tmp_2_2_fu_425_p2(0) = '1') else 
+        minimumDistance_2_1_reg_615;
+    minimumDistance_2_fu_346_p3 <= 
+        minimumDistance_1_fu_338_p3 when (tmp_2_fu_327_p2(0) = '1') else 
+        ap_phi_mux_minimumDistance4_phi_fu_233_p6;
+    minimumDistance_4_1_s_fu_354_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(minimumDistance_4_1_reg_589),32));
+    minimumDistance_4_2_s_fu_422_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(minimumDistance_4_2_reg_622),32));
+    minimumDistance_4_ex_fu_324_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(minimumDistance_4_reg_583),32));
     out_pixel_V_1_ack_in <= out_pixel_V_1_state(1);
     out_pixel_V_1_ack_out <= out_pixel_V_TREADY;
-
-    out_pixel_V_1_data_in_assign_proc : process(ap_enable_reg_pp0_iter20, ap_predicate_op131_write_state22, ap_predicate_op132_write_state22, ap_predicate_op133_write_state22, ap_predicate_op134_write_state22, ap_predicate_op135_write_state22, ap_predicate_op136_write_state22, ap_predicate_op137_write_state22, ap_predicate_op138_write_state22, ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188, ap_block_pp0_stage0_01001)
-    begin
-        if ((((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op138_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op137_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)))) then 
-            out_pixel_V_1_data_in <= ap_reg_pp0_iter19_in_pixel_V5_phi_reg_188;
-        elsif (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op136_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-            out_pixel_V_1_data_in <= ap_const_lv24_FF0000;
-        elsif (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op135_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-            out_pixel_V_1_data_in <= ap_const_lv24_FF;
-        elsif (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op134_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-            out_pixel_V_1_data_in <= ap_const_lv24_FF00;
-        elsif (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op133_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-            out_pixel_V_1_data_in <= ap_const_lv24_FFFF00;
-        elsif (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op132_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-            out_pixel_V_1_data_in <= ap_const_lv24_FF00FF;
-        elsif (((ap_const_boolean_0 = ap_block_pp0_stage0_01001) and (ap_predicate_op131_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
-            out_pixel_V_1_data_in <= ap_const_lv24_FFFF;
-        else 
-            out_pixel_V_1_data_in <= "XXXXXXXXXXXXXXXXXXXXXXXX";
-        end if; 
-    end process;
-
 
     out_pixel_V_1_data_out_assign_proc : process(out_pixel_V_1_payload_A, out_pixel_V_1_payload_B, out_pixel_V_1_sel)
     begin
@@ -1620,9 +1599,9 @@ begin
     out_pixel_V_1_sel <= out_pixel_V_1_sel_rd;
     out_pixel_V_1_state_cmp_full <= '0' when (out_pixel_V_1_state = ap_const_lv2_1) else '1';
 
-    out_pixel_V_1_vld_in_assign_proc : process(ap_enable_reg_pp0_iter20, ap_predicate_op131_write_state22, ap_predicate_op132_write_state22, ap_predicate_op133_write_state22, ap_predicate_op134_write_state22, ap_predicate_op135_write_state22, ap_predicate_op136_write_state22, ap_predicate_op137_write_state22, ap_predicate_op138_write_state22, ap_block_pp0_stage0_11001)
+    out_pixel_V_1_vld_in_assign_proc : process(ap_enable_reg_pp0_iter20, ap_reg_pp0_iter19_exitcond_reg_549, ap_block_pp0_stage0_11001)
     begin
-        if ((((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op138_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op137_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op136_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op135_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op134_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op133_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op132_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)) or ((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_predicate_op131_write_state22 = ap_const_boolean_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1)))) then 
+        if (((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1))) then 
             out_pixel_V_1_vld_in <= ap_const_logic_1;
         else 
             out_pixel_V_1_vld_in <= ap_const_logic_0;
@@ -1632,9 +1611,9 @@ begin
     out_pixel_V_1_vld_out <= out_pixel_V_1_state(0);
     out_pixel_V_TDATA <= out_pixel_V_1_data_out;
 
-    out_pixel_V_TDATA_blk_n_assign_proc : process(out_pixel_V_1_state, ap_block_pp0_stage0, ap_enable_reg_pp0_iter20, ap_reg_pp0_iter19_exitcond_reg_464, minimumDistanceIndex_8_reg_543, ap_enable_reg_pp0_iter21, ap_reg_pp0_iter20_exitcond_reg_464, ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543)
+    out_pixel_V_TDATA_blk_n_assign_proc : process(out_pixel_V_1_state, ap_block_pp0_stage0, ap_enable_reg_pp0_iter20, ap_reg_pp0_iter19_exitcond_reg_549, ap_enable_reg_pp0_iter21, ap_reg_pp0_iter20_exitcond_reg_549)
     begin
-        if (((not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_5)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_4)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_3)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_2)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_1)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_0)) and not((ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF)) and (ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_5) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_4) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_3) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_2) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_1)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_0) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter20_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_reg_pp0_iter20_minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or (not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_5)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_4)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_3)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_2)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_1)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_0)) and not((minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF)) and (ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_5) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_4) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_3) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_2) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_1)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_0) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_464 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (minimumDistanceIndex_8_reg_543 = ap_const_lv32_FFFFFFFF) and (ap_const_boolean_0 = ap_block_pp0_stage0)))) then 
+        if ((((ap_reg_pp0_iter20_exitcond_reg_549 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter21 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0)) or ((ap_reg_pp0_iter19_exitcond_reg_549 = ap_const_lv1_1) and (ap_enable_reg_pp0_iter20 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0)))) then 
             out_pixel_V_TDATA_blk_n <= out_pixel_V_1_state(1);
         else 
             out_pixel_V_TDATA_blk_n <= ap_const_logic_1;
@@ -1642,9 +1621,12 @@ begin
     end process;
 
     out_pixel_V_TVALID <= out_pixel_V_1_state(0);
-    p_color_array_stream_s_address0 <= tmp1_fu_254_p1(3 - 1 downto 0);
-    p_color_array_stream_s_address1 <= tmp_s_fu_265_p1(3 - 1 downto 0);
-    p_color_array_stream_s_address2 <= tmp_3_fu_291_p1(3 - 1 downto 0);
+        p_color_array_stream_8_fu_490_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(p_color_array_stream_s_q3),24));
+
+    p_color_array_stream_s_address0 <= tmp_s_fu_282_p1(3 - 1 downto 0);
+    p_color_array_stream_s_address1 <= tmp_1_1_fu_293_p1(3 - 1 downto 0);
+    p_color_array_stream_s_address2 <= tmp_1_2_fu_319_p1(3 - 1 downto 0);
+    p_color_array_stream_s_address3 <= tmp_6_fu_465_p1(3 - 1 downto 0);
 
     p_color_array_stream_s_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001)
     begin
@@ -1675,14 +1657,36 @@ begin
         end if; 
     end process;
 
-    tmp1_fu_254_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_phi_mux_minimumDistanceIndex_9_phi_fu_163_p6),64));
-    tmp_1_1_fu_329_p2 <= "1" when (signed(minimumDistance_4_1_s_fu_326_p1) < signed(minimumDistance_2_fu_318_p3)) else "0";
-    tmp_1_2_fu_397_p2 <= "1" when (signed(minimumDistance_4_2_s_fu_394_p1) < signed(minimumDistance_2_1_reg_530)) else "0";
-    tmp_1_fu_299_p2 <= "1" when (signed(minimumDistance_4_ex_fu_296_p1) < signed(ap_phi_mux_minimumDistance4_phi_fu_205_p6)) else "0";
-    tmp_2_1_fu_335_p2 <= "1" when (unsigned(minimumDistance_4_1_reg_504) < unsigned(ap_const_lv12_109)) else "0";
-    tmp_2_2_fu_402_p2 <= "1" when (unsigned(minimumDistance_4_2_reg_537) < unsigned(ap_const_lv12_109)) else "0";
-    tmp_2_fu_305_p2 <= "1" when (unsigned(minimumDistance_4_reg_498) < unsigned(ap_const_lv12_109)) else "0";
-    tmp_3_fu_291_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(i_1_fu_286_p2),64));
-    tmp_4_fu_276_p1 <= i_2_fu_270_p2(2 - 1 downto 0);
-    tmp_s_fu_265_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(i_fu_259_p2),64));
+
+    p_color_array_stream_s_ce3_assign_proc : process(ap_block_pp0_stage0_11001, ap_enable_reg_pp0_iter19)
+    begin
+        if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter19 = ap_const_logic_1))) then 
+            p_color_array_stream_s_ce3 <= ap_const_logic_1;
+        else 
+            p_color_array_stream_s_ce3 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    rhs_V_fu_475_p2 <= std_logic_vector(unsigned(minimumDistanceIndex_8_reg_628) + unsigned(ap_const_lv32_1));
+    sel_tmp2_fu_500_p3 <= 
+        p_color_array_stream_8_fu_490_p1 when (sel_tmp_fu_494_p2(0) = '1') else 
+        ap_reg_pp0_iter19_in_pixel_V5_phi_reg_205;
+    sel_tmp_fu_494_p2 <= (tmp_fu_470_p2 and tmp_3_fu_484_p2);
+    storemerge1_fu_508_p3 <= 
+        sel_tmp2_fu_500_p3 when (tmp_fu_470_p2(0) = '1') else 
+        ap_reg_pp0_iter19_in_pixel_V5_phi_reg_205;
+    tmp_1_1_fu_293_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(i_fu_287_p2),64));
+    tmp_1_2_fu_319_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(i_1_fu_314_p2),64));
+    tmp_2_1_fu_357_p2 <= "1" when (signed(minimumDistance_4_1_s_fu_354_p1) < signed(minimumDistance_2_fu_346_p3)) else "0";
+    tmp_2_2_fu_425_p2 <= "1" when (signed(minimumDistance_4_2_s_fu_422_p1) < signed(minimumDistance_2_1_reg_615)) else "0";
+    tmp_2_fu_327_p2 <= "1" when (signed(minimumDistance_4_ex_fu_324_p1) < signed(ap_phi_mux_minimumDistance4_phi_fu_233_p6)) else "0";
+    tmp_3_fu_484_p2 <= "1" when (lhs_V_fu_480_p1 = rhs_V_fu_475_p2) else "0";
+    tmp_4_1_fu_363_p2 <= "1" when (unsigned(minimumDistance_4_1_reg_589) < unsigned(ap_const_lv12_109)) else "0";
+    tmp_4_2_fu_430_p2 <= "1" when (unsigned(minimumDistance_4_2_reg_622) < unsigned(ap_const_lv12_109)) else "0";
+    tmp_4_fu_333_p2 <= "1" when (unsigned(minimumDistance_4_reg_583) < unsigned(ap_const_lv12_109)) else "0";
+    tmp_5_fu_304_p1 <= i_2_fu_298_p2(2 - 1 downto 0);
+        tmp_6_fu_465_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(minimumDistanceIndex_8_fu_450_p3),64));
+
+    tmp_fu_470_p2 <= "1" when (signed(minimumDistanceIndex_8_reg_628) < signed(ap_const_lv32_5)) else "0";
+    tmp_s_fu_282_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_phi_mux_minimumDistanceIndex_9_phi_fu_166_p6),64));
 end behav;

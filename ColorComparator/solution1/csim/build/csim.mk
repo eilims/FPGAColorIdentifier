@@ -21,18 +21,18 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../ColorComparator_tb.cpp ../../../powerFunction.cpp ../../../ColorComparator.cpp
+HLS_SOURCES = ../../../ColorComparator_tb.cpp ../../../ColorComparator.cpp ../../../powerFunction.cpp
 
 TARGET := csim.exe
 
-AUTOPILOT_ROOT := C:/Xilinx/Vivado/2017.4
+AUTOPILOT_ROOT := D:/Xilinx/Vivado/2017.4
 AUTOPILOT_MACH := win64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := C:/Xilinx/Vivado/2017.4/msys/bin
+  AP_GCC_PATH := D:/Xilinx/Vivado/2017.4/msys/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
 AP_CLANG_PATH := ${AUTOPILOT_ROOT}/msys32/mingw32/bin
@@ -78,14 +78,14 @@ $(ObjDir)/ColorComparator_tb.o: ../../../ColorComparator_tb.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/ColorComparator_tb.d
 
-$(ObjDir)/powerFunction.o: ../../../powerFunction.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../powerFunction.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/powerFunction.d
-
 $(ObjDir)/ColorComparator.o: ../../../ColorComparator.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../ColorComparator.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/ColorComparator.d
+
+$(ObjDir)/powerFunction.o: ../../../powerFunction.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../powerFunction.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/powerFunction.d
