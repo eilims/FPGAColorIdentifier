@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'fxp_sqrt'
 ================================================================
-* Date:           Tue Apr 24 13:14:30 2018
+* Date:           Tue Apr 24 14:40:37 2018
 
 * Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
 * Project:        ColorComparator
@@ -49,14 +49,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|   3613|
+|Expression       |        -|      -|       0|   3637|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      -|       -|      -|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|      9|
 |Register         |        -|      -|     357|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      0|     357|   3622|
+|Total            |        0|      0|     357|   3646|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -93,7 +93,7 @@
     |s_V_2_18_fu_1872_p2         |     +    |      0|  0|  30|          23|          23|
     |s_V_2_19_fu_1953_p2         |     +    |      0|  0|  30|          23|          23|
     |s_V_2_1_fu_1138_p2          |     +    |      0|  0|  30|          23|          23|
-    |s_V_2_2_fu_398_p2           |     +    |      0|  0|  23|          23|          23|
+    |s_V_2_2_fu_398_p2           |     +    |      0|  0|  29|          23|          23|
     |s_V_2_3_fu_486_p2           |     +    |      0|  0|  30|          23|          23|
     |s_V_2_4_fu_568_p2           |     +    |      0|  0|  30|          23|          23|
     |s_V_2_5_fu_649_p2           |     +    |      0|  0|  30|          23|          23|
@@ -102,9 +102,9 @@
     |s_V_2_8_fu_894_p2           |     +    |      0|  0|  30|          23|          23|
     |s_V_2_9_fu_975_p2           |     +    |      0|  0|  30|          23|          23|
     |s_V_2_s_fu_1057_p2          |     +    |      0|  0|  30|          23|          23|
-    |tmp1_fu_392_p2              |     +    |      0|  0|  23|          23|          23|
-    |tmp_1_fu_300_p2             |     +    |      0|  0|  29|          22|           1|
-    |tmp_4_fu_380_p2             |     +    |      0|  0|  23|          23|          22|
+    |tmp1_fu_392_p2              |     +    |      0|  0|  29|          23|          23|
+    |tmp_20_fu_300_p2            |     +    |      0|  0|  29|          22|           1|
+    |tmp_22_fu_380_p2            |     +    |      0|  0|  29|          23|          22|
     |s_V_1_10_fu_1200_p2         |     -    |      0|  0|  30|          23|          23|
     |s_V_1_11_fu_1282_p2         |     -    |      0|  0|  30|          23|          23|
     |s_V_1_12_fu_1363_p2         |     -    |      0|  0|  30|          23|          23|
@@ -116,7 +116,7 @@
     |s_V_1_18_fu_1852_p2         |     -    |      0|  0|  30|          23|          23|
     |s_V_1_19_fu_1934_p2         |     -    |      0|  0|  30|          23|          23|
     |s_V_1_1_fu_1119_p2          |     -    |      0|  0|  30|          23|          23|
-    |s_V_1_2_fu_386_p2           |     -    |      0|  0|  23|          23|          23|
+    |s_V_1_2_fu_386_p2           |     -    |      0|  0|  29|          23|          23|
     |s_V_1_3_fu_466_p2           |     -    |      0|  0|  30|          23|          23|
     |s_V_1_4_fu_548_p2           |     -    |      0|  0|  30|          23|          23|
     |s_V_1_5_fu_630_p2           |     -    |      0|  0|  30|          23|          23|
@@ -125,7 +125,7 @@
     |s_V_1_8_fu_874_p2           |     -    |      0|  0|  30|          23|          23|
     |s_V_1_9_fu_956_p2           |     -    |      0|  0|  30|          23|          23|
     |s_V_1_s_fu_1037_p2          |     -    |      0|  0|  30|          23|          23|
-    |tmp_7_fu_1996_p2            |   icmp   |      0|  0|  18|          23|           1|
+    |tmp_16_fu_1996_p2           |   icmp   |      0|  0|  18|          23|           1|
     |q_V_1_10_fu_1166_p2         |    or    |      0|  0|  19|          12|           1|
     |q_V_1_11_fu_1257_p2         |    or    |      0|  0|  20|          13|           1|
     |q_V_1_12_fu_1329_p2         |    or    |      0|  0|  21|          14|           1|
@@ -207,29 +207,29 @@
     |p_0353_1_s_fu_1063_p3       |  select  |      0|  0|  23|           1|          23|
     |p_s_fu_420_p3               |  select  |      0|  0|   4|           1|           4|
     |q_V_1_1_fu_427_p3           |  select  |      0|  0|   3|           1|           3|
-    |tmp_60_fu_499_p3            |  select  |      0|  0|   3|           1|           3|
-    |tmp_61_fu_582_p3            |  select  |      0|  0|   4|           1|           4|
-    |tmp_62_fu_662_p3            |  select  |      0|  0|   5|           1|           5|
-    |tmp_63_fu_745_p3            |  select  |      0|  0|   6|           1|           6|
-    |tmp_64_fu_825_p3            |  select  |      0|  0|   7|           1|           7|
-    |tmp_65_fu_908_p3            |  select  |      0|  0|   8|           1|           8|
-    |tmp_66_fu_988_p3            |  select  |      0|  0|   9|           1|           9|
-    |tmp_67_fu_1071_p3           |  select  |      0|  0|  10|           1|          10|
-    |tmp_68_fu_1151_p3           |  select  |      0|  0|  11|           1|          11|
-    |tmp_69_fu_1234_p3           |  select  |      0|  0|  12|           1|          12|
-    |tmp_70_fu_1314_p3           |  select  |      0|  0|  13|           1|          13|
-    |tmp_71_fu_1397_p3           |  select  |      0|  0|  14|           1|          14|
-    |tmp_72_fu_1477_p3           |  select  |      0|  0|  15|           1|          15|
-    |tmp_73_fu_1560_p3           |  select  |      0|  0|  16|           1|          16|
-    |tmp_74_fu_1640_p3           |  select  |      0|  0|  17|           1|          17|
-    |tmp_75_fu_1723_p3           |  select  |      0|  0|  18|           1|          18|
-    |tmp_76_fu_1803_p3           |  select  |      0|  0|  19|           1|          19|
-    |tmp_77_fu_1886_p3           |  select  |      0|  0|  20|           1|          20|
-    |tmp_78_fu_1975_p3           |  select  |      0|  0|  20|           1|          20|
-    |tmp_80_fu_2018_p3           |  select  |      0|  0|  20|           1|          20|
+    |tmp_29_fu_499_p3            |  select  |      0|  0|   3|           1|           3|
+    |tmp_32_fu_582_p3            |  select  |      0|  0|   4|           1|           4|
+    |tmp_34_fu_662_p3            |  select  |      0|  0|   5|           1|           5|
+    |tmp_36_fu_745_p3            |  select  |      0|  0|   6|           1|           6|
+    |tmp_38_fu_825_p3            |  select  |      0|  0|   7|           1|           7|
+    |tmp_40_fu_908_p3            |  select  |      0|  0|   8|           1|           8|
+    |tmp_42_fu_988_p3            |  select  |      0|  0|   9|           1|           9|
+    |tmp_44_fu_1071_p3           |  select  |      0|  0|  10|           1|          10|
+    |tmp_46_fu_1151_p3           |  select  |      0|  0|  11|           1|          11|
+    |tmp_48_fu_1234_p3           |  select  |      0|  0|  12|           1|          12|
+    |tmp_50_fu_1314_p3           |  select  |      0|  0|  13|           1|          13|
+    |tmp_52_fu_1397_p3           |  select  |      0|  0|  14|           1|          14|
+    |tmp_54_fu_1477_p3           |  select  |      0|  0|  15|           1|          15|
+    |tmp_56_fu_1560_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_58_fu_1640_p3           |  select  |      0|  0|  17|           1|          17|
+    |tmp_60_fu_1723_p3           |  select  |      0|  0|  18|           1|          18|
+    |tmp_62_fu_1803_p3           |  select  |      0|  0|  19|           1|          19|
+    |tmp_64_fu_1886_p3           |  select  |      0|  0|  20|           1|          20|
+    |tmp_69_fu_1975_p3           |  select  |      0|  0|  20|           1|          20|
+    |tmp_71_fu_2018_p3           |  select  |      0|  0|  20|           1|          20|
     |p_0353_1_fu_324_p2          |    xor   |      0|  0|  30|          22|          23|
     +----------------------------+----------+-------+---+----+------------+------------+
-    |Total                       |          |      0|  0|3613|        2243|        2149|
+    |Total                       |          |      0|  0|3637|        2243|        2149|
     +----------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -246,7 +246,7 @@
     |               Name               | FF | LUT| Bits| Const Bits|
     +----------------------------------+----+----+-----+-----------+
     |ap_ce_reg                         |   1|   0|    1|          0|
-    |ap_reg_pp0_iter1_tmp_92_reg_2031  |   1|   0|    1|          0|
+    |ap_reg_pp0_iter1_tmp_23_reg_2031  |   1|   0|    1|          0|
     |ap_return_int_reg                 |  20|   0|   20|          0|
     |in_val_V_read_int_reg             |  32|   0|   32|          0|
     |p_0353_1_11_reg_2126              |  11|   0|   23|         12|
@@ -260,28 +260,28 @@
     |p_0353_1_8_reg_2092               |  15|   0|   23|          8|
     |p_0353_1_reg_2026                 |  22|   0|   22|          0|
     |p_0353_1_s_reg_2109               |  13|   0|   23|         10|
-    |tmp_100_reg_2052                  |   1|   0|    1|          0|
-    |tmp_105_reg_2069                  |   1|   0|    1|          0|
-    |tmp_112_reg_2086                  |   1|   0|    1|          0|
-    |tmp_116_reg_2103                  |   1|   0|    1|          0|
-    |tmp_120_reg_2120                  |   1|   0|    1|          0|
-    |tmp_124_reg_2137                  |   1|   0|    1|          0|
-    |tmp_128_reg_2154                  |   1|   0|    1|          0|
-    |tmp_132_reg_2171                  |   1|   0|    1|          0|
-    |tmp_136_reg_2188                  |   1|   0|    1|          0|
-    |tmp_140_reg_2206                  |   1|   0|    1|          0|
-    |tmp_61_reg_2063                   |   4|   0|    4|          0|
-    |tmp_63_reg_2080                   |   6|   0|    6|          0|
-    |tmp_65_reg_2097                   |   8|   0|    8|          0|
-    |tmp_67_reg_2114                   |  10|   0|   10|          0|
-    |tmp_69_reg_2131                   |  12|   0|   12|          0|
-    |tmp_71_reg_2148                   |  14|   0|   14|          0|
-    |tmp_73_reg_2165                   |  16|   0|   16|          0|
-    |tmp_75_reg_2182                   |  18|   0|   18|          0|
-    |tmp_77_reg_2199                   |  20|   0|   20|          0|
-    |tmp_92_reg_2031                   |   1|   0|    1|          0|
-    |tmp_94_reg_2042                   |   1|   0|    1|          0|
-    |tmp_98_reg_2037                   |   1|   0|    1|          0|
+    |tmp_23_reg_2031                   |   1|   0|    1|          0|
+    |tmp_24_reg_2042                   |   1|   0|    1|          0|
+    |tmp_26_reg_2037                   |   1|   0|    1|          0|
+    |tmp_27_reg_2052                   |   1|   0|    1|          0|
+    |tmp_32_reg_2063                   |   4|   0|    4|          0|
+    |tmp_33_reg_2069                   |   1|   0|    1|          0|
+    |tmp_36_reg_2080                   |   6|   0|    6|          0|
+    |tmp_40_reg_2097                   |   8|   0|    8|          0|
+    |tmp_41_reg_2086                   |   1|   0|    1|          0|
+    |tmp_44_reg_2114                   |  10|   0|   10|          0|
+    |tmp_48_reg_2131                   |  12|   0|   12|          0|
+    |tmp_49_reg_2103                   |   1|   0|    1|          0|
+    |tmp_52_reg_2148                   |  14|   0|   14|          0|
+    |tmp_56_reg_2165                   |  16|   0|   16|          0|
+    |tmp_57_reg_2120                   |   1|   0|    1|          0|
+    |tmp_60_reg_2182                   |  18|   0|   18|          0|
+    |tmp_64_reg_2199                   |  20|   0|   20|          0|
+    |tmp_65_reg_2137                   |   1|   0|    1|          0|
+    |tmp_72_reg_2154                   |   1|   0|    1|          0|
+    |tmp_76_reg_2171                   |   1|   0|    1|          0|
+    |tmp_80_reg_2188                   |   1|   0|    1|          0|
+    |tmp_84_reg_2206                   |   1|   0|    1|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             | 357|   0|  427|         70|
     +----------------------------------+----+----+-----+-----------+
@@ -367,283 +367,283 @@ IsGatedGlobalClock: 0
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%in_val_V_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %in_val_V_read)"
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = call i21 @_ssdm_op_PartSelect.i21.i32.i32.i32(i32 %in_val_V_read_1, i32 11, i32 31)" [ColorComparator/fxp_sqrt.h:163]
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_cast = zext i21 %tmp to i22" [ColorComparator/fxp_sqrt.h:163]
-ST_1 : Operation 16 [1/1] (2.22ns)   --->   "%tmp_1 = add i22 %tmp_cast, 1" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_s = call i21 @_ssdm_op_PartSelect.i21.i22.i32.i32(i22 %tmp_1, i32 1, i32 21)" [ColorComparator/fxp_sqrt.h:163]
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_2 = call i22 @_ssdm_op_BitConcatenate.i22.i21.i1(i21 %tmp_s, i1 false)" [ColorComparator/fxp_sqrt.h:163]
-ST_1 : Operation 19 [1/1] (1.00ns)   --->   "%p_0353_1 = xor i22 %tmp_2, -2097152" [ColorComparator/fxp_sqrt.h:167]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_92 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %tmp_1, i32 21)" [ColorComparator/fxp_sqrt.h:162]
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_98 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %p_0353_1, i32 21)" [ColorComparator/fxp_sqrt.h:167]
+ST_1 : Operation 16 [1/1] (2.22ns)   --->   "%tmp_20 = add i22 %tmp_cast, 1" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_s = call i21 @_ssdm_op_PartSelect.i21.i22.i32.i32(i22 %tmp_20, i32 1, i32 21)" [ColorComparator/fxp_sqrt.h:163]
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_19 = call i22 @_ssdm_op_BitConcatenate.i22.i21.i1(i21 %tmp_s, i1 false)" [ColorComparator/fxp_sqrt.h:163]
+ST_1 : Operation 19 [1/1] (1.00ns)   --->   "%p_0353_1 = xor i22 %tmp_19, -2097152" [ColorComparator/fxp_sqrt.h:167]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %tmp_20, i32 21)" [ColorComparator/fxp_sqrt.h:162]
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i22.i32(i22 %p_0353_1, i32 21)" [ColorComparator/fxp_sqrt.h:167]
 
  <State 2> : 7.76ns
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_19_1 = call i23 @_ssdm_op_BitConcatenate.i23.i22.i1(i22 %p_0353_1, i1 false)" [ColorComparator/fxp_sqrt.h:163]
 ST_2 : Operation 23 [1/1] (2.28ns)   --->   "%p_0353_1_1 = add i23 %tmp_19_1, 3145728" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_94 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_1, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_96 = shl i23 %p_0353_1_1, 1" [ColorComparator/fxp_sqrt.h:163]
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_3 = call i23 @_ssdm_op_BitConcatenate.i23.i1.i22(i1 %tmp_98, i22 0)" [ColorComparator/fxp_sqrt.h:167]
-ST_2 : Operation 27 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_4 = add i23 %tmp_3, -1572864" [ColorComparator/fxp_sqrt.h:167]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 28 [1/1] (4.10ns) (root node of TernaryAdder)   --->   "%s_V_1_2 = sub i23 %tmp_96, %tmp_4" [ColorComparator/fxp_sqrt.h:163]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 29 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i23 %tmp_96, -2621440" [ColorComparator/fxp_sqrt.h:167]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 30 [1/1] (4.10ns) (root node of TernaryAdder)   --->   "%s_V_2_2 = add i23 %tmp_3, %tmp1" [ColorComparator/fxp_sqrt.h:167]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.05> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_2 : Operation 31 [1/1] (1.37ns)   --->   "%p_0353_1_2 = select i1 %tmp_94, i23 %s_V_2_2, i23 %s_V_1_2" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_100 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_2, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_1, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_25 = shl i23 %p_0353_1_1, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_21 = call i23 @_ssdm_op_BitConcatenate.i23.i1.i22(i1 %tmp_26, i22 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_2 : Operation 27 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_22 = add i23 %tmp_21, -1572864" [ColorComparator/fxp_sqrt.h:167]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.14> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 28 [1/1] (4.10ns) (root node of TernaryAdder)   --->   "%s_V_1_2 = sub i23 %tmp_25, %tmp_22" [ColorComparator/fxp_sqrt.h:163]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.14> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i23 %tmp_25, -2621440" [ColorComparator/fxp_sqrt.h:167]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.14> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 30 [1/1] (4.10ns) (root node of TernaryAdder)   --->   "%s_V_2_2 = add i23 %tmp_21, %tmp1" [ColorComparator/fxp_sqrt.h:167]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.14> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 31 [1/1] (1.37ns)   --->   "%p_0353_1_2 = select i1 %tmp_24, i23 %s_V_2_2, i23 %s_V_1_2" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_2, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 3> : 8.68ns
-ST_3 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_0305_1_in_in_2)   --->   "%p_s = select i1 %tmp_92, i3 -4, i3 0" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_0305_1_in_in_2)   --->   "%q_V_1_1 = select i1 %tmp_92, i3 -2, i3 2" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 35 [1/1] (1.37ns) (out node of the LUT)   --->   "%p_0305_1_in_in_2 = select i1 %tmp_94, i3 %p_s, i3 %q_V_1_1" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_0305_1_in_in_2)   --->   "%p_s = select i1 %tmp_23, i3 -4, i3 0" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_0305_1_in_in_2)   --->   "%q_V_1_1 = select i1 %tmp_23, i3 -2, i3 2" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (1.37ns) (out node of the LUT)   --->   "%p_0305_1_in_in_2 = select i1 %tmp_24, i3 %p_s, i3 %q_V_1_1" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%q_V_1_2 = or i3 %p_0305_1_in_in_2, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_102 = shl i23 %p_0353_1_2, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_28 = shl i23 %p_0353_1_2, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_3 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_3)   --->   "%r_V_4_3 = call i23 @_ssdm_op_BitConcatenate.i23.i3.i20(i3 %q_V_1_2, i20 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_3 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_3)   --->   "%tmp_25_3 = or i23 %r_V_4_3, 262144" [ColorComparator/fxp_sqrt.h:163]
-ST_3 : Operation 40 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_3 = sub i23 %tmp_102, %tmp_25_3" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_3 = sub i23 %tmp_28, %tmp_25_3" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_3)   --->   "%r_V_6_3 = call i23 @_ssdm_op_BitConcatenate.i23.i3.i20(i3 %p_0305_1_in_in_2, i20 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_3 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_3)   --->   "%tmp_28_3 = or i23 %r_V_6_3, 786432" [ColorComparator/fxp_sqrt.h:167]
-ST_3 : Operation 43 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_3 = add i23 %tmp_102, %tmp_28_3" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 44 [1/1] (1.37ns)   --->   "%p_0353_1_3 = select i1 %tmp_100, i23 %s_V_2_3, i23 %s_V_1_3" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 45 [1/1] (1.37ns)   --->   "%tmp_60 = select i1 %tmp_100, i3 %p_0305_1_in_in_2, i3 %q_V_1_2" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%q_star_V_3 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %tmp_60, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_3 : Operation 43 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_3 = add i23 %tmp_28, %tmp_28_3" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (1.37ns)   --->   "%p_0353_1_3 = select i1 %tmp_27, i23 %s_V_2_3, i23 %s_V_1_3" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (1.37ns)   --->   "%tmp_29 = select i1 %tmp_27, i3 %p_0305_1_in_in_2, i3 %q_V_1_2" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%q_star_V_3 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %tmp_29, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%q_V_1_3 = or i4 %q_star_V_3, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_103 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_3, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_104 = shl i23 %p_0353_1_3, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_3, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_31 = shl i23 %p_0353_1_3, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_3 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_4)   --->   "%r_V_4_4 = call i23 @_ssdm_op_BitConcatenate.i23.i4.i19(i4 %q_V_1_3, i19 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_3 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_4)   --->   "%tmp_25_4 = or i23 %r_V_4_4, 131072" [ColorComparator/fxp_sqrt.h:163]
-ST_3 : Operation 52 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_4 = sub i23 %tmp_104, %tmp_25_4" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_4)   --->   "%r_V_6_4 = call i23 @_ssdm_op_BitConcatenate.i23.i3.i20(i3 %tmp_60, i20 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_3 : Operation 52 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_4 = sub i23 %tmp_31, %tmp_25_4" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_4)   --->   "%r_V_6_4 = call i23 @_ssdm_op_BitConcatenate.i23.i3.i20(i3 %tmp_29, i20 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_3 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_4)   --->   "%tmp_28_4 = or i23 %r_V_6_4, 393216" [ColorComparator/fxp_sqrt.h:167]
-ST_3 : Operation 55 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_4 = add i23 %tmp_104, %tmp_28_4" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 56 [1/1] (1.37ns)   --->   "%p_0353_1_4 = select i1 %tmp_103, i23 %s_V_2_4, i23 %s_V_1_4" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 57 [1/1] (1.37ns)   --->   "%tmp_61 = select i1 %tmp_103, i4 %q_star_V_3, i4 %q_V_1_3" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_105 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_4, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_3 : Operation 55 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_4 = add i23 %tmp_31, %tmp_28_4" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (1.37ns)   --->   "%p_0353_1_4 = select i1 %tmp_30, i23 %s_V_2_4, i23 %s_V_1_4" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (1.37ns)   --->   "%tmp_32 = select i1 %tmp_30, i4 %q_star_V_3, i4 %q_V_1_3" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_33 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_4, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 4> : 7.31ns
-ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%q_star_V_4 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_61, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%q_star_V_4 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_32, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%q_V_1_4 = or i5 %q_star_V_4, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_109 = shl i23 %p_0353_1_4, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_35 = shl i23 %p_0353_1_4, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_4 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_5)   --->   "%r_V_4_5 = call i23 @_ssdm_op_BitConcatenate.i23.i5.i18(i5 %q_V_1_4, i18 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_4 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_5)   --->   "%tmp_25_5 = or i23 %r_V_4_5, 65536" [ColorComparator/fxp_sqrt.h:163]
-ST_4 : Operation 64 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_5 = sub i23 %tmp_109, %tmp_25_5" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_5)   --->   "%r_V_6_5 = call i23 @_ssdm_op_BitConcatenate.i23.i4.i19(i4 %tmp_61, i19 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_4 : Operation 64 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_5 = sub i23 %tmp_35, %tmp_25_5" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_5)   --->   "%r_V_6_5 = call i23 @_ssdm_op_BitConcatenate.i23.i4.i19(i4 %tmp_32, i19 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_4 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_5)   --->   "%tmp_28_5 = or i23 %r_V_6_5, 196608" [ColorComparator/fxp_sqrt.h:167]
-ST_4 : Operation 67 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_5 = add i23 %tmp_109, %tmp_28_5" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 68 [1/1] (1.37ns)   --->   "%p_0353_1_5 = select i1 %tmp_105, i23 %s_V_2_5, i23 %s_V_1_5" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_4 : Operation 69 [1/1] (1.37ns)   --->   "%tmp_62 = select i1 %tmp_105, i5 %q_star_V_4, i5 %q_V_1_4" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%q_star_V_5 = call i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5 %tmp_62, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_4 : Operation 67 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_5 = add i23 %tmp_35, %tmp_28_5" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 68 [1/1] (1.37ns)   --->   "%p_0353_1_5 = select i1 %tmp_33, i23 %s_V_2_5, i23 %s_V_1_5" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 69 [1/1] (1.37ns)   --->   "%tmp_34 = select i1 %tmp_33, i5 %q_star_V_4, i5 %q_V_1_4" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%q_star_V_5 = call i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5 %tmp_34, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%q_V_1_5 = or i6 %q_star_V_5, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_110 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_5, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_111 = shl i23 %p_0353_1_5, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_5, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_39 = shl i23 %p_0353_1_5, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_4 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_6)   --->   "%r_V_4_6 = call i23 @_ssdm_op_BitConcatenate.i23.i6.i17(i6 %q_V_1_5, i17 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_4 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_6)   --->   "%tmp_25_6 = or i23 %r_V_4_6, 32768" [ColorComparator/fxp_sqrt.h:163]
-ST_4 : Operation 76 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_6 = sub i23 %tmp_111, %tmp_25_6" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_6)   --->   "%r_V_6_6 = call i23 @_ssdm_op_BitConcatenate.i23.i5.i18(i5 %tmp_62, i18 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_4 : Operation 76 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_6 = sub i23 %tmp_39, %tmp_25_6" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_6)   --->   "%r_V_6_6 = call i23 @_ssdm_op_BitConcatenate.i23.i5.i18(i5 %tmp_34, i18 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_4 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_6)   --->   "%tmp_28_6 = or i23 %r_V_6_6, 98304" [ColorComparator/fxp_sqrt.h:167]
-ST_4 : Operation 79 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_6 = add i23 %tmp_111, %tmp_28_6" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 80 [1/1] (1.37ns)   --->   "%p_0353_1_6 = select i1 %tmp_110, i23 %s_V_2_6, i23 %s_V_1_6" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_4 : Operation 81 [1/1] (1.37ns)   --->   "%tmp_63 = select i1 %tmp_110, i6 %q_star_V_5, i6 %q_V_1_5" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_112 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_6, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_4 : Operation 79 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_6 = add i23 %tmp_39, %tmp_28_6" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [1/1] (1.37ns)   --->   "%p_0353_1_6 = select i1 %tmp_37, i23 %s_V_2_6, i23 %s_V_1_6" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (1.37ns)   --->   "%tmp_36 = select i1 %tmp_37, i6 %q_star_V_5, i6 %q_V_1_5" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_41 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_6, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 5> : 7.31ns
-ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%q_star_V_6 = call i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6 %tmp_63, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%q_star_V_6 = call i7 @_ssdm_op_BitConcatenate.i7.i6.i1(i6 %tmp_36, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%q_V_1_6 = or i7 %q_star_V_6, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_113 = shl i23 %p_0353_1_6, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_43 = shl i23 %p_0353_1_6, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_5 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_7)   --->   "%r_V_4_7 = call i23 @_ssdm_op_BitConcatenate.i23.i7.i16(i7 %q_V_1_6, i16 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_5 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_7)   --->   "%tmp_25_7 = or i23 %r_V_4_7, 16384" [ColorComparator/fxp_sqrt.h:163]
-ST_5 : Operation 88 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_7 = sub i23 %tmp_113, %tmp_25_7" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_7)   --->   "%r_V_6_7 = call i23 @_ssdm_op_BitConcatenate.i23.i6.i17(i6 %tmp_63, i17 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_5 : Operation 88 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_7 = sub i23 %tmp_43, %tmp_25_7" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_7)   --->   "%r_V_6_7 = call i23 @_ssdm_op_BitConcatenate.i23.i6.i17(i6 %tmp_36, i17 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_5 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_7)   --->   "%tmp_28_7 = or i23 %r_V_6_7, 49152" [ColorComparator/fxp_sqrt.h:167]
-ST_5 : Operation 91 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_7 = add i23 %tmp_113, %tmp_28_7" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 92 [1/1] (1.37ns)   --->   "%p_0353_1_7 = select i1 %tmp_112, i23 %s_V_2_7, i23 %s_V_1_7" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 93 [1/1] (1.37ns)   --->   "%tmp_64 = select i1 %tmp_112, i7 %q_star_V_6, i7 %q_V_1_6" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%q_star_V_7 = call i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7 %tmp_64, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_5 : Operation 91 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_7 = add i23 %tmp_43, %tmp_28_7" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 92 [1/1] (1.37ns)   --->   "%p_0353_1_7 = select i1 %tmp_41, i23 %s_V_2_7, i23 %s_V_1_7" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 93 [1/1] (1.37ns)   --->   "%tmp_38 = select i1 %tmp_41, i7 %q_star_V_6, i7 %q_V_1_6" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%q_star_V_7 = call i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7 %tmp_38, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%q_V_1_7 = or i8 %q_star_V_7, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_114 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_7, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_115 = shl i23 %p_0353_1_7, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_45 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_7, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_47 = shl i23 %p_0353_1_7, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_5 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_8)   --->   "%r_V_4_8 = call i23 @_ssdm_op_BitConcatenate.i23.i8.i15(i8 %q_V_1_7, i15 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_5 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_8)   --->   "%tmp_25_8 = or i23 %r_V_4_8, 8192" [ColorComparator/fxp_sqrt.h:163]
-ST_5 : Operation 100 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_8 = sub i23 %tmp_115, %tmp_25_8" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_8)   --->   "%r_V_6_8 = call i23 @_ssdm_op_BitConcatenate.i23.i7.i16(i7 %tmp_64, i16 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_5 : Operation 100 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_8 = sub i23 %tmp_47, %tmp_25_8" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_8)   --->   "%r_V_6_8 = call i23 @_ssdm_op_BitConcatenate.i23.i7.i16(i7 %tmp_38, i16 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_5 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_8)   --->   "%tmp_28_8 = or i23 %r_V_6_8, 24576" [ColorComparator/fxp_sqrt.h:167]
-ST_5 : Operation 103 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_8 = add i23 %tmp_115, %tmp_28_8" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 104 [1/1] (1.37ns)   --->   "%p_0353_1_8 = select i1 %tmp_114, i23 %s_V_2_8, i23 %s_V_1_8" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 105 [1/1] (1.37ns)   --->   "%tmp_65 = select i1 %tmp_114, i8 %q_star_V_7, i8 %q_V_1_7" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_116 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_8, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_5 : Operation 103 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_8 = add i23 %tmp_47, %tmp_28_8" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [1/1] (1.37ns)   --->   "%p_0353_1_8 = select i1 %tmp_45, i23 %s_V_2_8, i23 %s_V_1_8" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 105 [1/1] (1.37ns)   --->   "%tmp_40 = select i1 %tmp_45, i8 %q_star_V_7, i8 %q_V_1_7" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_49 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_8, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 6> : 7.31ns
-ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%q_star_V_8 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %tmp_65, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%q_star_V_8 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %tmp_40, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%q_V_1_8 = or i9 %q_star_V_8, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_117 = shl i23 %p_0353_1_8, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_51 = shl i23 %p_0353_1_8, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_6 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_9)   --->   "%r_V_4_9 = call i23 @_ssdm_op_BitConcatenate.i23.i9.i14(i9 %q_V_1_8, i14 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_6 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_9)   --->   "%tmp_25_9 = or i23 %r_V_4_9, 4096" [ColorComparator/fxp_sqrt.h:163]
-ST_6 : Operation 112 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_9 = sub i23 %tmp_117, %tmp_25_9" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_9)   --->   "%r_V_6_9 = call i23 @_ssdm_op_BitConcatenate.i23.i8.i15(i8 %tmp_65, i15 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_6 : Operation 112 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_9 = sub i23 %tmp_51, %tmp_25_9" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_9)   --->   "%r_V_6_9 = call i23 @_ssdm_op_BitConcatenate.i23.i8.i15(i8 %tmp_40, i15 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_6 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_9)   --->   "%tmp_28_9 = or i23 %r_V_6_9, 12288" [ColorComparator/fxp_sqrt.h:167]
-ST_6 : Operation 115 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_9 = add i23 %tmp_117, %tmp_28_9" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 116 [1/1] (1.37ns)   --->   "%p_0353_1_9 = select i1 %tmp_116, i23 %s_V_2_9, i23 %s_V_1_9" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_6 : Operation 117 [1/1] (1.37ns)   --->   "%tmp_66 = select i1 %tmp_116, i9 %q_star_V_8, i9 %q_V_1_8" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_6 : Operation 118 [1/1] (0.00ns)   --->   "%q_star_V_9 = call i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9 %tmp_66, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_6 : Operation 115 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_9 = add i23 %tmp_51, %tmp_28_9" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 116 [1/1] (1.37ns)   --->   "%p_0353_1_9 = select i1 %tmp_49, i23 %s_V_2_9, i23 %s_V_1_9" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 117 [1/1] (1.37ns)   --->   "%tmp_42 = select i1 %tmp_49, i9 %q_star_V_8, i9 %q_V_1_8" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 118 [1/1] (0.00ns)   --->   "%q_star_V_9 = call i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9 %tmp_42, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_6 : Operation 119 [1/1] (0.00ns)   --->   "%q_V_1_9 = or i10 %q_star_V_9, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_6 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_118 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_9, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_6 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_119 = shl i23 %p_0353_1_9, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_6 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_53 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_9, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_6 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_55 = shl i23 %p_0353_1_9, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_6 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_s)   --->   "%r_V_4_s = call i23 @_ssdm_op_BitConcatenate.i23.i10.i13(i10 %q_V_1_9, i13 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_6 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_s)   --->   "%tmp_25_s = or i23 %r_V_4_s, 2048" [ColorComparator/fxp_sqrt.h:163]
-ST_6 : Operation 124 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_s = sub i23 %tmp_119, %tmp_25_s" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_s)   --->   "%r_V_6_s = call i23 @_ssdm_op_BitConcatenate.i23.i9.i14(i9 %tmp_66, i14 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_6 : Operation 124 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_s = sub i23 %tmp_55, %tmp_25_s" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_s)   --->   "%r_V_6_s = call i23 @_ssdm_op_BitConcatenate.i23.i9.i14(i9 %tmp_42, i14 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_6 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_s)   --->   "%tmp_28_s = or i23 %r_V_6_s, 6144" [ColorComparator/fxp_sqrt.h:167]
-ST_6 : Operation 127 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_s = add i23 %tmp_119, %tmp_28_s" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 128 [1/1] (1.37ns)   --->   "%p_0353_1_s = select i1 %tmp_118, i23 %s_V_2_s, i23 %s_V_1_s" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_6 : Operation 129 [1/1] (1.37ns)   --->   "%tmp_67 = select i1 %tmp_118, i10 %q_star_V_9, i10 %q_V_1_9" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_120 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_s, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_6 : Operation 127 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_s = add i23 %tmp_55, %tmp_28_s" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 128 [1/1] (1.37ns)   --->   "%p_0353_1_s = select i1 %tmp_53, i23 %s_V_2_s, i23 %s_V_1_s" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 129 [1/1] (1.37ns)   --->   "%tmp_44 = select i1 %tmp_53, i10 %q_star_V_9, i10 %q_V_1_9" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_57 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_s, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 7> : 7.31ns
-ST_7 : Operation 131 [1/1] (0.00ns)   --->   "%q_star_V_s = call i11 @_ssdm_op_BitConcatenate.i11.i10.i1(i10 %tmp_67, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_7 : Operation 131 [1/1] (0.00ns)   --->   "%q_star_V_s = call i11 @_ssdm_op_BitConcatenate.i11.i10.i1(i10 %tmp_44, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_7 : Operation 132 [1/1] (0.00ns)   --->   "%q_V_1_s = or i11 %q_star_V_s, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_7 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_121 = shl i23 %p_0353_1_s, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_7 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_59 = shl i23 %p_0353_1_s, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_7 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_1)   --->   "%r_V_4_1 = call i23 @_ssdm_op_BitConcatenate.i23.i11.i12(i11 %q_V_1_s, i12 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_7 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_1)   --->   "%tmp_25_1 = or i23 %r_V_4_1, 1024" [ColorComparator/fxp_sqrt.h:163]
-ST_7 : Operation 136 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_1 = sub i23 %tmp_121, %tmp_25_1" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_1)   --->   "%r_V_6_1 = call i23 @_ssdm_op_BitConcatenate.i23.i10.i13(i10 %tmp_67, i13 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_7 : Operation 136 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_1 = sub i23 %tmp_59, %tmp_25_1" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_1)   --->   "%r_V_6_1 = call i23 @_ssdm_op_BitConcatenate.i23.i10.i13(i10 %tmp_44, i13 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_7 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_1)   --->   "%tmp_28_1 = or i23 %r_V_6_1, 3072" [ColorComparator/fxp_sqrt.h:167]
-ST_7 : Operation 139 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_1 = add i23 %tmp_121, %tmp_28_1" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 140 [1/1] (1.37ns)   --->   "%p_0353_1_10 = select i1 %tmp_120, i23 %s_V_2_1, i23 %s_V_1_1" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 141 [1/1] (1.37ns)   --->   "%tmp_68 = select i1 %tmp_120, i11 %q_star_V_s, i11 %q_V_1_s" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 142 [1/1] (0.00ns)   --->   "%q_star_V_1 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %tmp_68, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_7 : Operation 139 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_1 = add i23 %tmp_59, %tmp_28_1" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 140 [1/1] (1.37ns)   --->   "%p_0353_1_10 = select i1 %tmp_57, i23 %s_V_2_1, i23 %s_V_1_1" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 141 [1/1] (1.37ns)   --->   "%tmp_46 = select i1 %tmp_57, i11 %q_star_V_s, i11 %q_V_1_s" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 142 [1/1] (0.00ns)   --->   "%q_star_V_1 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %tmp_46, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_7 : Operation 143 [1/1] (0.00ns)   --->   "%q_V_1_10 = or i12 %q_star_V_1, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_7 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_122 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_10, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_7 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_123 = shl i23 %p_0353_1_10, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_7 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_61 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_10, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_7 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_63 = shl i23 %p_0353_1_10, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_7 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_10)   --->   "%r_V_4_2 = call i23 @_ssdm_op_BitConcatenate.i23.i12.i11(i12 %q_V_1_10, i11 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_7 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_10)   --->   "%tmp_25_2 = or i23 %r_V_4_2, 512" [ColorComparator/fxp_sqrt.h:163]
-ST_7 : Operation 148 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_10 = sub i23 %tmp_123, %tmp_25_2" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_10)   --->   "%r_V_6_2 = call i23 @_ssdm_op_BitConcatenate.i23.i11.i12(i11 %tmp_68, i12 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_7 : Operation 148 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_10 = sub i23 %tmp_63, %tmp_25_2" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_10)   --->   "%r_V_6_2 = call i23 @_ssdm_op_BitConcatenate.i23.i11.i12(i11 %tmp_46, i12 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_7 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_10)   --->   "%tmp_28_2 = or i23 %r_V_6_2, 1536" [ColorComparator/fxp_sqrt.h:167]
-ST_7 : Operation 151 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_10 = add i23 %tmp_123, %tmp_28_2" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 152 [1/1] (1.37ns)   --->   "%p_0353_1_11 = select i1 %tmp_122, i23 %s_V_2_10, i23 %s_V_1_10" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 153 [1/1] (1.37ns)   --->   "%tmp_69 = select i1 %tmp_122, i12 %q_star_V_1, i12 %q_V_1_10" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%tmp_124 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_11, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_7 : Operation 151 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_10 = add i23 %tmp_63, %tmp_28_2" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 152 [1/1] (1.37ns)   --->   "%p_0353_1_11 = select i1 %tmp_61, i23 %s_V_2_10, i23 %s_V_1_10" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 153 [1/1] (1.37ns)   --->   "%tmp_48 = select i1 %tmp_61, i12 %q_star_V_1, i12 %q_V_1_10" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%tmp_65 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_11, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 8> : 7.31ns
-ST_8 : Operation 155 [1/1] (0.00ns)   --->   "%q_star_V_2 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_69, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_8 : Operation 155 [1/1] (0.00ns)   --->   "%q_star_V_2 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_48, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_8 : Operation 156 [1/1] (0.00ns)   --->   "%q_V_1_11 = or i13 %q_star_V_2, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_8 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_125 = shl i23 %p_0353_1_11, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_8 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_66 = shl i23 %p_0353_1_11, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_8 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_11)   --->   "%r_V_3_s = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %q_V_1_11, i10 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_8 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_11)   --->   "%tmp_25_10 = or i23 %r_V_3_s, 256" [ColorComparator/fxp_sqrt.h:163]
-ST_8 : Operation 160 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_11 = sub i23 %tmp_125, %tmp_25_10" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_11)   --->   "%r_V_5_s = call i23 @_ssdm_op_BitConcatenate.i23.i12.i11(i12 %tmp_69, i11 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_8 : Operation 160 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_11 = sub i23 %tmp_66, %tmp_25_10" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_11)   --->   "%r_V_5_s = call i23 @_ssdm_op_BitConcatenate.i23.i12.i11(i12 %tmp_48, i11 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_8 : Operation 162 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_11)   --->   "%tmp_28_10 = or i23 %r_V_5_s, 768" [ColorComparator/fxp_sqrt.h:167]
-ST_8 : Operation 163 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_11 = add i23 %tmp_125, %tmp_28_10" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 164 [1/1] (1.37ns)   --->   "%p_0353_1_12 = select i1 %tmp_124, i23 %s_V_2_11, i23 %s_V_1_11" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 165 [1/1] (1.37ns)   --->   "%tmp_70 = select i1 %tmp_124, i13 %q_star_V_2, i13 %q_V_1_11" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 166 [1/1] (0.00ns)   --->   "%q_star_V_10 = call i14 @_ssdm_op_BitConcatenate.i14.i13.i1(i13 %tmp_70, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_8 : Operation 163 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_11 = add i23 %tmp_66, %tmp_28_10" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 164 [1/1] (1.37ns)   --->   "%p_0353_1_12 = select i1 %tmp_65, i23 %s_V_2_11, i23 %s_V_1_11" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 165 [1/1] (1.37ns)   --->   "%tmp_50 = select i1 %tmp_65, i13 %q_star_V_2, i13 %q_V_1_11" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 166 [1/1] (0.00ns)   --->   "%q_star_V_10 = call i14 @_ssdm_op_BitConcatenate.i14.i13.i1(i13 %tmp_50, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_8 : Operation 167 [1/1] (0.00ns)   --->   "%q_V_1_12 = or i14 %q_star_V_10, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_8 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_126 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_12, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_8 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_127 = shl i23 %p_0353_1_12, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_8 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_67 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_12, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_8 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_68 = shl i23 %p_0353_1_12, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_8 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_12)   --->   "%r_V_3_1 = call i23 @_ssdm_op_BitConcatenate.i23.i14.i9(i14 %q_V_1_12, i9 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_8 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_12)   --->   "%tmp_25_11 = or i23 %r_V_3_1, 128" [ColorComparator/fxp_sqrt.h:163]
-ST_8 : Operation 172 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_12 = sub i23 %tmp_127, %tmp_25_11" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_12)   --->   "%r_V_5_1 = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %tmp_70, i10 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_8 : Operation 172 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_12 = sub i23 %tmp_68, %tmp_25_11" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_12)   --->   "%r_V_5_1 = call i23 @_ssdm_op_BitConcatenate.i23.i13.i10(i13 %tmp_50, i10 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_8 : Operation 174 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_12)   --->   "%tmp_28_11 = or i23 %r_V_5_1, 384" [ColorComparator/fxp_sqrt.h:167]
-ST_8 : Operation 175 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_12 = add i23 %tmp_127, %tmp_28_11" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 176 [1/1] (1.37ns)   --->   "%p_0353_1_13 = select i1 %tmp_126, i23 %s_V_2_12, i23 %s_V_1_12" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 177 [1/1] (1.37ns)   --->   "%tmp_71 = select i1 %tmp_126, i14 %q_star_V_10, i14 %q_V_1_12" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_128 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_13, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_8 : Operation 175 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_12 = add i23 %tmp_68, %tmp_28_11" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 176 [1/1] (1.37ns)   --->   "%p_0353_1_13 = select i1 %tmp_67, i23 %s_V_2_12, i23 %s_V_1_12" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 177 [1/1] (1.37ns)   --->   "%tmp_52 = select i1 %tmp_67, i14 %q_star_V_10, i14 %q_V_1_12" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_72 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_13, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 9> : 7.31ns
-ST_9 : Operation 179 [1/1] (0.00ns)   --->   "%q_star_V_11 = call i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14 %tmp_71, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_9 : Operation 179 [1/1] (0.00ns)   --->   "%q_star_V_11 = call i15 @_ssdm_op_BitConcatenate.i15.i14.i1(i14 %tmp_52, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_9 : Operation 180 [1/1] (0.00ns)   --->   "%q_V_1_13 = or i15 %q_star_V_11, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_9 : Operation 181 [1/1] (0.00ns)   --->   "%tmp_129 = shl i23 %p_0353_1_13, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_9 : Operation 181 [1/1] (0.00ns)   --->   "%tmp_73 = shl i23 %p_0353_1_13, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_9 : Operation 182 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_13)   --->   "%r_V_3_2 = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %q_V_1_13, i8 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_9 : Operation 183 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_13)   --->   "%tmp_25_12 = or i23 %r_V_3_2, 64" [ColorComparator/fxp_sqrt.h:163]
-ST_9 : Operation 184 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_13 = sub i23 %tmp_129, %tmp_25_12" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_13)   --->   "%r_V_5_2 = call i23 @_ssdm_op_BitConcatenate.i23.i14.i9(i14 %tmp_71, i9 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_9 : Operation 184 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_13 = sub i23 %tmp_73, %tmp_25_12" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_13)   --->   "%r_V_5_2 = call i23 @_ssdm_op_BitConcatenate.i23.i14.i9(i14 %tmp_52, i9 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_9 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_13)   --->   "%tmp_28_12 = or i23 %r_V_5_2, 192" [ColorComparator/fxp_sqrt.h:167]
-ST_9 : Operation 187 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_13 = add i23 %tmp_129, %tmp_28_12" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 188 [1/1] (1.37ns)   --->   "%p_0353_1_14 = select i1 %tmp_128, i23 %s_V_2_13, i23 %s_V_1_13" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 189 [1/1] (1.37ns)   --->   "%tmp_72 = select i1 %tmp_128, i15 %q_star_V_11, i15 %q_V_1_13" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 190 [1/1] (0.00ns)   --->   "%q_star_V_12 = call i16 @_ssdm_op_BitConcatenate.i16.i15.i1(i15 %tmp_72, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_9 : Operation 187 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_13 = add i23 %tmp_73, %tmp_28_12" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 188 [1/1] (1.37ns)   --->   "%p_0353_1_14 = select i1 %tmp_72, i23 %s_V_2_13, i23 %s_V_1_13" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 189 [1/1] (1.37ns)   --->   "%tmp_54 = select i1 %tmp_72, i15 %q_star_V_11, i15 %q_V_1_13" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 190 [1/1] (0.00ns)   --->   "%q_star_V_12 = call i16 @_ssdm_op_BitConcatenate.i16.i15.i1(i15 %tmp_54, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_9 : Operation 191 [1/1] (0.00ns)   --->   "%q_V_1_14 = or i16 %q_star_V_12, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_9 : Operation 192 [1/1] (0.00ns)   --->   "%tmp_130 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_14, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_9 : Operation 193 [1/1] (0.00ns)   --->   "%tmp_131 = shl i23 %p_0353_1_14, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_9 : Operation 192 [1/1] (0.00ns)   --->   "%tmp_74 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_14, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_9 : Operation 193 [1/1] (0.00ns)   --->   "%tmp_75 = shl i23 %p_0353_1_14, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_9 : Operation 194 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_14)   --->   "%r_V_3_3 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %q_V_1_14, i7 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_9 : Operation 195 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_14)   --->   "%tmp_25_13 = or i23 %r_V_3_3, 32" [ColorComparator/fxp_sqrt.h:163]
-ST_9 : Operation 196 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_14 = sub i23 %tmp_131, %tmp_25_13" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 197 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_14)   --->   "%r_V_5_3 = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %tmp_72, i8 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_9 : Operation 196 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_14 = sub i23 %tmp_75, %tmp_25_13" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 197 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_14)   --->   "%r_V_5_3 = call i23 @_ssdm_op_BitConcatenate.i23.i15.i8(i15 %tmp_54, i8 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_9 : Operation 198 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_14)   --->   "%tmp_28_13 = or i23 %r_V_5_3, 96" [ColorComparator/fxp_sqrt.h:167]
-ST_9 : Operation 199 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_14 = add i23 %tmp_131, %tmp_28_13" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 200 [1/1] (1.37ns)   --->   "%p_0353_1_15 = select i1 %tmp_130, i23 %s_V_2_14, i23 %s_V_1_14" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 201 [1/1] (1.37ns)   --->   "%tmp_73 = select i1 %tmp_130, i16 %q_star_V_12, i16 %q_V_1_14" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_132 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_15, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_9 : Operation 199 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_14 = add i23 %tmp_75, %tmp_28_13" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 200 [1/1] (1.37ns)   --->   "%p_0353_1_15 = select i1 %tmp_74, i23 %s_V_2_14, i23 %s_V_1_14" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 201 [1/1] (1.37ns)   --->   "%tmp_56 = select i1 %tmp_74, i16 %q_star_V_12, i16 %q_V_1_14" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_76 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_15, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 10> : 7.31ns
-ST_10 : Operation 203 [1/1] (0.00ns)   --->   "%q_star_V_13 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %tmp_73, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_10 : Operation 203 [1/1] (0.00ns)   --->   "%q_star_V_13 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %tmp_56, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_10 : Operation 204 [1/1] (0.00ns)   --->   "%q_V_1_15 = or i17 %q_star_V_13, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_10 : Operation 205 [1/1] (0.00ns)   --->   "%tmp_133 = shl i23 %p_0353_1_15, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_10 : Operation 205 [1/1] (0.00ns)   --->   "%tmp_77 = shl i23 %p_0353_1_15, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_10 : Operation 206 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_15)   --->   "%r_V_3_4 = call i23 @_ssdm_op_BitConcatenate.i23.i17.i6(i17 %q_V_1_15, i6 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_10 : Operation 207 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_15)   --->   "%tmp_25_14 = or i23 %r_V_3_4, 16" [ColorComparator/fxp_sqrt.h:163]
-ST_10 : Operation 208 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_15 = sub i23 %tmp_133, %tmp_25_14" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 209 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_15)   --->   "%r_V_5_4 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %tmp_73, i7 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_10 : Operation 208 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_15 = sub i23 %tmp_77, %tmp_25_14" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 209 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_15)   --->   "%r_V_5_4 = call i23 @_ssdm_op_BitConcatenate.i23.i16.i7(i16 %tmp_56, i7 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_10 : Operation 210 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_15)   --->   "%tmp_28_14 = or i23 %r_V_5_4, 48" [ColorComparator/fxp_sqrt.h:167]
-ST_10 : Operation 211 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_15 = add i23 %tmp_133, %tmp_28_14" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 212 [1/1] (1.37ns)   --->   "%p_0353_1_16 = select i1 %tmp_132, i23 %s_V_2_15, i23 %s_V_1_15" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_10 : Operation 213 [1/1] (1.37ns)   --->   "%tmp_74 = select i1 %tmp_132, i17 %q_star_V_13, i17 %q_V_1_15" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_10 : Operation 214 [1/1] (0.00ns)   --->   "%q_star_V_14 = call i18 @_ssdm_op_BitConcatenate.i18.i17.i1(i17 %tmp_74, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_10 : Operation 211 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_15 = add i23 %tmp_77, %tmp_28_14" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 212 [1/1] (1.37ns)   --->   "%p_0353_1_16 = select i1 %tmp_76, i23 %s_V_2_15, i23 %s_V_1_15" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 213 [1/1] (1.37ns)   --->   "%tmp_58 = select i1 %tmp_76, i17 %q_star_V_13, i17 %q_V_1_15" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 214 [1/1] (0.00ns)   --->   "%q_star_V_14 = call i18 @_ssdm_op_BitConcatenate.i18.i17.i1(i17 %tmp_58, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_10 : Operation 215 [1/1] (0.00ns)   --->   "%q_V_1_16 = or i18 %q_star_V_14, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_10 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_134 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_16, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_10 : Operation 217 [1/1] (0.00ns)   --->   "%tmp_135 = shl i23 %p_0353_1_16, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_10 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_78 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_16, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_10 : Operation 217 [1/1] (0.00ns)   --->   "%tmp_79 = shl i23 %p_0353_1_16, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_10 : Operation 218 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_16)   --->   "%r_V_3_5 = call i23 @_ssdm_op_BitConcatenate.i23.i18.i5(i18 %q_V_1_16, i5 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_10 : Operation 219 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_16)   --->   "%tmp_25_15 = or i23 %r_V_3_5, 8" [ColorComparator/fxp_sqrt.h:163]
-ST_10 : Operation 220 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_16 = sub i23 %tmp_135, %tmp_25_15" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 221 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_16)   --->   "%r_V_5_5 = call i23 @_ssdm_op_BitConcatenate.i23.i17.i6(i17 %tmp_74, i6 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_10 : Operation 220 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_16 = sub i23 %tmp_79, %tmp_25_15" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 221 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_16)   --->   "%r_V_5_5 = call i23 @_ssdm_op_BitConcatenate.i23.i17.i6(i17 %tmp_58, i6 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_10 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_16)   --->   "%tmp_28_15 = or i23 %r_V_5_5, 24" [ColorComparator/fxp_sqrt.h:167]
-ST_10 : Operation 223 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_16 = add i23 %tmp_135, %tmp_28_15" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 224 [1/1] (1.37ns)   --->   "%p_0353_1_17 = select i1 %tmp_134, i23 %s_V_2_16, i23 %s_V_1_16" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_10 : Operation 225 [1/1] (1.37ns)   --->   "%tmp_75 = select i1 %tmp_134, i18 %q_star_V_14, i18 %q_V_1_16" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_10 : Operation 226 [1/1] (0.00ns)   --->   "%tmp_136 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_17, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_10 : Operation 223 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_16 = add i23 %tmp_79, %tmp_28_15" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 224 [1/1] (1.37ns)   --->   "%p_0353_1_17 = select i1 %tmp_78, i23 %s_V_2_16, i23 %s_V_1_16" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 225 [1/1] (1.37ns)   --->   "%tmp_60 = select i1 %tmp_78, i18 %q_star_V_14, i18 %q_V_1_16" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 226 [1/1] (0.00ns)   --->   "%tmp_80 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_17, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 11> : 7.31ns
-ST_11 : Operation 227 [1/1] (0.00ns)   --->   "%q_star_V_15 = call i19 @_ssdm_op_BitConcatenate.i19.i18.i1(i18 %tmp_75, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_11 : Operation 227 [1/1] (0.00ns)   --->   "%q_star_V_15 = call i19 @_ssdm_op_BitConcatenate.i19.i18.i1(i18 %tmp_60, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_11 : Operation 228 [1/1] (0.00ns)   --->   "%q_V_1_17 = or i19 %q_star_V_15, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_11 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_137 = shl i23 %p_0353_1_17, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_11 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_81 = shl i23 %p_0353_1_17, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_11 : Operation 230 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_17)   --->   "%r_V_3_6 = call i23 @_ssdm_op_BitConcatenate.i23.i19.i4(i19 %q_V_1_17, i4 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_11 : Operation 231 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_17)   --->   "%tmp_25_16 = or i23 %r_V_3_6, 4" [ColorComparator/fxp_sqrt.h:163]
-ST_11 : Operation 232 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_17 = sub i23 %tmp_137, %tmp_25_16" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_17)   --->   "%r_V_5_6 = call i23 @_ssdm_op_BitConcatenate.i23.i18.i5(i18 %tmp_75, i5 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_11 : Operation 232 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_17 = sub i23 %tmp_81, %tmp_25_16" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_17)   --->   "%r_V_5_6 = call i23 @_ssdm_op_BitConcatenate.i23.i18.i5(i18 %tmp_60, i5 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_11 : Operation 234 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_17)   --->   "%tmp_28_16 = or i23 %r_V_5_6, 12" [ColorComparator/fxp_sqrt.h:167]
-ST_11 : Operation 235 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_17 = add i23 %tmp_137, %tmp_28_16" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 236 [1/1] (1.37ns)   --->   "%p_0353_1_18 = select i1 %tmp_136, i23 %s_V_2_17, i23 %s_V_1_17" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 237 [1/1] (1.37ns)   --->   "%tmp_76 = select i1 %tmp_136, i19 %q_star_V_15, i19 %q_V_1_17" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 238 [1/1] (0.00ns)   --->   "%q_star_V_16 = call i20 @_ssdm_op_BitConcatenate.i20.i19.i1(i19 %tmp_76, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_11 : Operation 235 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_17 = add i23 %tmp_81, %tmp_28_16" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 236 [1/1] (1.37ns)   --->   "%p_0353_1_18 = select i1 %tmp_80, i23 %s_V_2_17, i23 %s_V_1_17" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 237 [1/1] (1.37ns)   --->   "%tmp_62 = select i1 %tmp_80, i19 %q_star_V_15, i19 %q_V_1_17" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 238 [1/1] (0.00ns)   --->   "%q_star_V_16 = call i20 @_ssdm_op_BitConcatenate.i20.i19.i1(i19 %tmp_62, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_11 : Operation 239 [1/1] (0.00ns)   --->   "%q_V_1_18 = or i20 %q_star_V_16, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_11 : Operation 240 [1/1] (0.00ns)   --->   "%tmp_138 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_18, i32 22)" [ColorComparator/fxp_sqrt.h:162]
-ST_11 : Operation 241 [1/1] (0.00ns)   --->   "%tmp_139 = shl i23 %p_0353_1_18, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_11 : Operation 240 [1/1] (0.00ns)   --->   "%tmp_82 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_18, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_11 : Operation 241 [1/1] (0.00ns)   --->   "%tmp_83 = shl i23 %p_0353_1_18, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_11 : Operation 242 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_18)   --->   "%r_V_3_7 = call i23 @_ssdm_op_BitConcatenate.i23.i20.i3(i20 %q_V_1_18, i3 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_11 : Operation 243 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_18)   --->   "%tmp_25_17 = or i23 %r_V_3_7, 2" [ColorComparator/fxp_sqrt.h:163]
-ST_11 : Operation 244 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_18 = sub i23 %tmp_139, %tmp_25_17" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 245 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_18)   --->   "%r_V_5_7 = call i23 @_ssdm_op_BitConcatenate.i23.i19.i4(i19 %tmp_76, i4 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_11 : Operation 244 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_18 = sub i23 %tmp_83, %tmp_25_17" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 245 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_18)   --->   "%r_V_5_7 = call i23 @_ssdm_op_BitConcatenate.i23.i19.i4(i19 %tmp_62, i4 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_11 : Operation 246 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_18)   --->   "%tmp_28_17 = or i23 %r_V_5_7, 6" [ColorComparator/fxp_sqrt.h:167]
-ST_11 : Operation 247 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_18 = add i23 %tmp_139, %tmp_28_17" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 248 [1/1] (1.37ns)   --->   "%p_0353_1_19 = select i1 %tmp_138, i23 %s_V_2_18, i23 %s_V_1_18" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 249 [1/1] (1.37ns)   --->   "%tmp_77 = select i1 %tmp_138, i20 %q_star_V_16, i20 %q_V_1_18" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 250 [1/1] (0.00ns)   --->   "%tmp_140 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_19, i32 22)" [ColorComparator/fxp_sqrt.h:162]
+ST_11 : Operation 247 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_18 = add i23 %tmp_83, %tmp_28_17" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 248 [1/1] (1.37ns)   --->   "%p_0353_1_19 = select i1 %tmp_82, i23 %s_V_2_18, i23 %s_V_1_18" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 249 [1/1] (1.37ns)   --->   "%tmp_64 = select i1 %tmp_82, i20 %q_star_V_16, i20 %q_V_1_18" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 250 [1/1] (0.00ns)   --->   "%tmp_84 = call i1 @_ssdm_op_BitSelect.i1.i23.i32(i23 %p_0353_1_19, i32 22)" [ColorComparator/fxp_sqrt.h:162]
 
  <State 12> : 6.10ns
-ST_12 : Operation 251 [1/1] (0.00ns)   --->   "%q_star_V_17 = call i21 @_ssdm_op_BitConcatenate.i21.i20.i1(i20 %tmp_77, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_12 : Operation 251 [1/1] (0.00ns)   --->   "%q_star_V_17 = call i21 @_ssdm_op_BitConcatenate.i21.i20.i1(i20 %tmp_64, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_12 : Operation 252 [1/1] (0.00ns)   --->   "%q_V_1_19 = or i21 %q_star_V_17, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_12 : Operation 253 [1/1] (0.00ns)   --->   "%tmp_141 = shl i23 %p_0353_1_19, 1" [ColorComparator/fxp_sqrt.h:163]
+ST_12 : Operation 253 [1/1] (0.00ns)   --->   "%tmp_85 = shl i23 %p_0353_1_19, 1" [ColorComparator/fxp_sqrt.h:163]
 ST_12 : Operation 254 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_19)   --->   "%r_V_3_8 = call i23 @_ssdm_op_BitConcatenate.i23.i21.i2(i21 %q_V_1_19, i2 0)" [ColorComparator/fxp_sqrt.h:163]
 ST_12 : Operation 255 [1/1] (0.00ns) (grouped into LUT with out node s_V_1_19)   --->   "%r_V_4_10 = or i23 %r_V_3_8, 1" [ColorComparator/fxp_sqrt.h:163]
-ST_12 : Operation 256 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_19 = sub i23 %tmp_141, %r_V_4_10" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 257 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_19)   --->   "%r_V_5_8 = call i23 @_ssdm_op_BitConcatenate.i23.i20.i3(i20 %tmp_77, i3 0)" [ColorComparator/fxp_sqrt.h:167]
+ST_12 : Operation 256 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_1_19 = sub i23 %tmp_85, %r_V_4_10" [ColorComparator/fxp_sqrt.h:163]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 257 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_19)   --->   "%r_V_5_8 = call i23 @_ssdm_op_BitConcatenate.i23.i20.i3(i20 %tmp_64, i3 0)" [ColorComparator/fxp_sqrt.h:167]
 ST_12 : Operation 258 [1/1] (0.00ns) (grouped into LUT with out node s_V_2_19)   --->   "%r_V_6_10 = or i23 %r_V_5_8, 3" [ColorComparator/fxp_sqrt.h:167]
-ST_12 : Operation 259 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_19 = add i23 %tmp_141, %r_V_6_10" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 260 [1/1] (0.00ns) (grouped into LUT with out node tmp_7)   --->   "%p_0353_1_20 = select i1 %tmp_140, i23 %s_V_2_19, i23 %s_V_1_19" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 261 [1/1] (0.00ns) (grouped into LUT with out node tmp_78)   --->   "%tmp_142 = trunc i21 %q_V_1_19 to i20" [ColorComparator/fxp_sqrt.h:165]
-ST_12 : Operation 262 [1/1] (0.00ns) (grouped into LUT with out node tmp_78)   --->   "%tmp_143 = shl i20 %tmp_77, 1" [ColorComparator/fxp_sqrt.h:162]
-ST_12 : Operation 263 [1/1] (1.37ns) (out node of the LUT)   --->   "%tmp_78 = select i1 %tmp_140, i20 %tmp_143, i20 %tmp_142" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 264 [1/1] (0.00ns) (grouped into LUT with out node q_V)   --->   "%q_star_V_18 = call i21 @_ssdm_op_BitConcatenate.i21.i20.i1(i20 %tmp_78, i1 false)" [ColorComparator/fxp_sqrt.h:164]
+ST_12 : Operation 259 [1/1] (2.28ns) (out node of the LUT)   --->   "%s_V_2_19 = add i23 %tmp_85, %r_V_6_10" [ColorComparator/fxp_sqrt.h:167]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 260 [1/1] (0.00ns) (grouped into LUT with out node tmp_16)   --->   "%p_0353_1_20 = select i1 %tmp_84, i23 %s_V_2_19, i23 %s_V_1_19" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 261 [1/1] (0.00ns) (grouped into LUT with out node tmp_69)   --->   "%tmp_86 = trunc i21 %q_V_1_19 to i20" [ColorComparator/fxp_sqrt.h:165]
+ST_12 : Operation 262 [1/1] (0.00ns) (grouped into LUT with out node tmp_69)   --->   "%tmp_87 = shl i20 %tmp_64, 1" [ColorComparator/fxp_sqrt.h:162]
+ST_12 : Operation 263 [1/1] (1.37ns) (out node of the LUT)   --->   "%tmp_69 = select i1 %tmp_84, i20 %tmp_87, i20 %tmp_86" [ColorComparator/fxp_sqrt.h:162]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 264 [1/1] (0.00ns) (grouped into LUT with out node q_V)   --->   "%q_star_V_18 = call i21 @_ssdm_op_BitConcatenate.i21.i20.i1(i20 %tmp_69, i1 false)" [ColorComparator/fxp_sqrt.h:164]
 ST_12 : Operation 265 [1/1] (0.00ns) (grouped into LUT with out node q_V)   --->   "%q_V_1_20 = or i21 %q_star_V_18, 1" [ColorComparator/fxp_sqrt.h:165]
-ST_12 : Operation 266 [1/1] (2.44ns) (out node of the LUT)   --->   "%tmp_7 = icmp sgt i23 %p_0353_1_20, 0" [ColorComparator/fxp_sqrt.h:173]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 266 [1/1] (2.44ns) (out node of the LUT)   --->   "%tmp_16 = icmp sgt i23 %p_0353_1_20, 0" [ColorComparator/fxp_sqrt.h:173]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_12 : Operation 267 [1/1] (2.22ns) (out node of the LUT)   --->   "%q_V = add i21 %q_V_1_20, 1" [ColorComparator/fxp_sqrt.h:174]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 268 [1/1] (0.00ns)   --->   "%tmp_79 = call i20 @_ssdm_op_PartSelect.i20.i21.i32.i32(i21 %q_V, i32 1, i32 20)" [ColorComparator/fxp_sqrt.h:177]
-ST_12 : Operation 269 [1/1] (1.37ns)   --->   "%tmp_80 = select i1 %tmp_7, i20 %tmp_79, i20 %tmp_78" [ColorComparator/fxp_sqrt.h:173]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 270 [1/1] (0.00ns)   --->   "ret i20 %tmp_80" [ColorComparator/fxp_sqrt.h:177]
+ST_12 : Operation 268 [1/1] (0.00ns)   --->   "%tmp_70 = call i20 @_ssdm_op_PartSelect.i20.i21.i32.i32(i21 %q_V, i32 1, i32 20)" [ColorComparator/fxp_sqrt.h:177]
+ST_12 : Operation 269 [1/1] (1.37ns)   --->   "%tmp_71 = select i1 %tmp_16, i20 %tmp_70, i20 %tmp_69" [ColorComparator/fxp_sqrt.h:173]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 270 [1/1] (0.00ns)   --->   "ret i20 %tmp_71" [ColorComparator/fxp_sqrt.h:177]
 
 
 ============================================================
@@ -667,28 +667,28 @@ Port [ in_val_V_read]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static
 in_val_V_read_1  (read          ) [ 0000000000000]
 tmp              (partselect    ) [ 0000000000000]
 tmp_cast         (zext          ) [ 0000000000000]
-tmp_1            (add           ) [ 0000000000000]
+tmp_20           (add           ) [ 0000000000000]
 tmp_s            (partselect    ) [ 0000000000000]
-tmp_2            (bitconcatenate) [ 0000000000000]
+tmp_19           (bitconcatenate) [ 0000000000000]
 p_0353_1         (xor           ) [ 0110000000000]
-tmp_92           (bitselect     ) [ 0111000000000]
-tmp_98           (bitselect     ) [ 0110000000000]
+tmp_23           (bitselect     ) [ 0111000000000]
+tmp_26           (bitselect     ) [ 0110000000000]
 tmp_19_1         (bitconcatenate) [ 0000000000000]
 p_0353_1_1       (add           ) [ 0000000000000]
-tmp_94           (bitselect     ) [ 0101000000000]
-tmp_96           (shl           ) [ 0000000000000]
-tmp_3            (bitconcatenate) [ 0000000000000]
-tmp_4            (add           ) [ 0000000000000]
+tmp_24           (bitselect     ) [ 0101000000000]
+tmp_25           (shl           ) [ 0000000000000]
+tmp_21           (bitconcatenate) [ 0000000000000]
+tmp_22           (add           ) [ 0000000000000]
 s_V_1_2          (sub           ) [ 0000000000000]
 tmp1             (add           ) [ 0000000000000]
 s_V_2_2          (add           ) [ 0000000000000]
 p_0353_1_2       (select        ) [ 0101000000000]
-tmp_100          (bitselect     ) [ 0101000000000]
+tmp_27           (bitselect     ) [ 0101000000000]
 p_s              (select        ) [ 0000000000000]
 q_V_1_1          (select        ) [ 0000000000000]
 p_0305_1_in_in_2 (select        ) [ 0000000000000]
 q_V_1_2          (or            ) [ 0000000000000]
-tmp_102          (shl           ) [ 0000000000000]
+tmp_28           (shl           ) [ 0000000000000]
 r_V_4_3          (bitconcatenate) [ 0000000000000]
 tmp_25_3         (or            ) [ 0000000000000]
 s_V_1_3          (sub           ) [ 0000000000000]
@@ -696,11 +696,11 @@ r_V_6_3          (bitconcatenate) [ 0000000000000]
 tmp_28_3         (or            ) [ 0000000000000]
 s_V_2_3          (add           ) [ 0000000000000]
 p_0353_1_3       (select        ) [ 0000000000000]
-tmp_60           (select        ) [ 0000000000000]
+tmp_29           (select        ) [ 0000000000000]
 q_star_V_3       (bitconcatenate) [ 0000000000000]
 q_V_1_3          (or            ) [ 0000000000000]
-tmp_103          (bitselect     ) [ 0000000000000]
-tmp_104          (shl           ) [ 0000000000000]
+tmp_30           (bitselect     ) [ 0000000000000]
+tmp_31           (shl           ) [ 0000000000000]
 r_V_4_4          (bitconcatenate) [ 0000000000000]
 tmp_25_4         (or            ) [ 0000000000000]
 s_V_1_4          (sub           ) [ 0000000000000]
@@ -708,11 +708,11 @@ r_V_6_4          (bitconcatenate) [ 0000000000000]
 tmp_28_4         (or            ) [ 0000000000000]
 s_V_2_4          (add           ) [ 0000000000000]
 p_0353_1_4       (select        ) [ 0100100000000]
-tmp_61           (select        ) [ 0100100000000]
-tmp_105          (bitselect     ) [ 0100100000000]
+tmp_32           (select        ) [ 0100100000000]
+tmp_33           (bitselect     ) [ 0100100000000]
 q_star_V_4       (bitconcatenate) [ 0000000000000]
 q_V_1_4          (or            ) [ 0000000000000]
-tmp_109          (shl           ) [ 0000000000000]
+tmp_35           (shl           ) [ 0000000000000]
 r_V_4_5          (bitconcatenate) [ 0000000000000]
 tmp_25_5         (or            ) [ 0000000000000]
 s_V_1_5          (sub           ) [ 0000000000000]
@@ -720,11 +720,11 @@ r_V_6_5          (bitconcatenate) [ 0000000000000]
 tmp_28_5         (or            ) [ 0000000000000]
 s_V_2_5          (add           ) [ 0000000000000]
 p_0353_1_5       (select        ) [ 0000000000000]
-tmp_62           (select        ) [ 0000000000000]
+tmp_34           (select        ) [ 0000000000000]
 q_star_V_5       (bitconcatenate) [ 0000000000000]
 q_V_1_5          (or            ) [ 0000000000000]
-tmp_110          (bitselect     ) [ 0000000000000]
-tmp_111          (shl           ) [ 0000000000000]
+tmp_37           (bitselect     ) [ 0000000000000]
+tmp_39           (shl           ) [ 0000000000000]
 r_V_4_6          (bitconcatenate) [ 0000000000000]
 tmp_25_6         (or            ) [ 0000000000000]
 s_V_1_6          (sub           ) [ 0000000000000]
@@ -732,11 +732,11 @@ r_V_6_6          (bitconcatenate) [ 0000000000000]
 tmp_28_6         (or            ) [ 0000000000000]
 s_V_2_6          (add           ) [ 0000000000000]
 p_0353_1_6       (select        ) [ 0100010000000]
-tmp_63           (select        ) [ 0100010000000]
-tmp_112          (bitselect     ) [ 0100010000000]
+tmp_36           (select        ) [ 0100010000000]
+tmp_41           (bitselect     ) [ 0100010000000]
 q_star_V_6       (bitconcatenate) [ 0000000000000]
 q_V_1_6          (or            ) [ 0000000000000]
-tmp_113          (shl           ) [ 0000000000000]
+tmp_43           (shl           ) [ 0000000000000]
 r_V_4_7          (bitconcatenate) [ 0000000000000]
 tmp_25_7         (or            ) [ 0000000000000]
 s_V_1_7          (sub           ) [ 0000000000000]
@@ -744,11 +744,11 @@ r_V_6_7          (bitconcatenate) [ 0000000000000]
 tmp_28_7         (or            ) [ 0000000000000]
 s_V_2_7          (add           ) [ 0000000000000]
 p_0353_1_7       (select        ) [ 0000000000000]
-tmp_64           (select        ) [ 0000000000000]
+tmp_38           (select        ) [ 0000000000000]
 q_star_V_7       (bitconcatenate) [ 0000000000000]
 q_V_1_7          (or            ) [ 0000000000000]
-tmp_114          (bitselect     ) [ 0000000000000]
-tmp_115          (shl           ) [ 0000000000000]
+tmp_45           (bitselect     ) [ 0000000000000]
+tmp_47           (shl           ) [ 0000000000000]
 r_V_4_8          (bitconcatenate) [ 0000000000000]
 tmp_25_8         (or            ) [ 0000000000000]
 s_V_1_8          (sub           ) [ 0000000000000]
@@ -756,11 +756,11 @@ r_V_6_8          (bitconcatenate) [ 0000000000000]
 tmp_28_8         (or            ) [ 0000000000000]
 s_V_2_8          (add           ) [ 0000000000000]
 p_0353_1_8       (select        ) [ 0100001000000]
-tmp_65           (select        ) [ 0100001000000]
-tmp_116          (bitselect     ) [ 0100001000000]
+tmp_40           (select        ) [ 0100001000000]
+tmp_49           (bitselect     ) [ 0100001000000]
 q_star_V_8       (bitconcatenate) [ 0000000000000]
 q_V_1_8          (or            ) [ 0000000000000]
-tmp_117          (shl           ) [ 0000000000000]
+tmp_51           (shl           ) [ 0000000000000]
 r_V_4_9          (bitconcatenate) [ 0000000000000]
 tmp_25_9         (or            ) [ 0000000000000]
 s_V_1_9          (sub           ) [ 0000000000000]
@@ -768,11 +768,11 @@ r_V_6_9          (bitconcatenate) [ 0000000000000]
 tmp_28_9         (or            ) [ 0000000000000]
 s_V_2_9          (add           ) [ 0000000000000]
 p_0353_1_9       (select        ) [ 0000000000000]
-tmp_66           (select        ) [ 0000000000000]
+tmp_42           (select        ) [ 0000000000000]
 q_star_V_9       (bitconcatenate) [ 0000000000000]
 q_V_1_9          (or            ) [ 0000000000000]
-tmp_118          (bitselect     ) [ 0000000000000]
-tmp_119          (shl           ) [ 0000000000000]
+tmp_53           (bitselect     ) [ 0000000000000]
+tmp_55           (shl           ) [ 0000000000000]
 r_V_4_s          (bitconcatenate) [ 0000000000000]
 tmp_25_s         (or            ) [ 0000000000000]
 s_V_1_s          (sub           ) [ 0000000000000]
@@ -780,11 +780,11 @@ r_V_6_s          (bitconcatenate) [ 0000000000000]
 tmp_28_s         (or            ) [ 0000000000000]
 s_V_2_s          (add           ) [ 0000000000000]
 p_0353_1_s       (select        ) [ 0100000100000]
-tmp_67           (select        ) [ 0100000100000]
-tmp_120          (bitselect     ) [ 0100000100000]
+tmp_44           (select        ) [ 0100000100000]
+tmp_57           (bitselect     ) [ 0100000100000]
 q_star_V_s       (bitconcatenate) [ 0000000000000]
 q_V_1_s          (or            ) [ 0000000000000]
-tmp_121          (shl           ) [ 0000000000000]
+tmp_59           (shl           ) [ 0000000000000]
 r_V_4_1          (bitconcatenate) [ 0000000000000]
 tmp_25_1         (or            ) [ 0000000000000]
 s_V_1_1          (sub           ) [ 0000000000000]
@@ -792,11 +792,11 @@ r_V_6_1          (bitconcatenate) [ 0000000000000]
 tmp_28_1         (or            ) [ 0000000000000]
 s_V_2_1          (add           ) [ 0000000000000]
 p_0353_1_10      (select        ) [ 0000000000000]
-tmp_68           (select        ) [ 0000000000000]
+tmp_46           (select        ) [ 0000000000000]
 q_star_V_1       (bitconcatenate) [ 0000000000000]
 q_V_1_10         (or            ) [ 0000000000000]
-tmp_122          (bitselect     ) [ 0000000000000]
-tmp_123          (shl           ) [ 0000000000000]
+tmp_61           (bitselect     ) [ 0000000000000]
+tmp_63           (shl           ) [ 0000000000000]
 r_V_4_2          (bitconcatenate) [ 0000000000000]
 tmp_25_2         (or            ) [ 0000000000000]
 s_V_1_10         (sub           ) [ 0000000000000]
@@ -804,11 +804,11 @@ r_V_6_2          (bitconcatenate) [ 0000000000000]
 tmp_28_2         (or            ) [ 0000000000000]
 s_V_2_10         (add           ) [ 0000000000000]
 p_0353_1_11      (select        ) [ 0100000010000]
-tmp_69           (select        ) [ 0100000010000]
-tmp_124          (bitselect     ) [ 0100000010000]
+tmp_48           (select        ) [ 0100000010000]
+tmp_65           (bitselect     ) [ 0100000010000]
 q_star_V_2       (bitconcatenate) [ 0000000000000]
 q_V_1_11         (or            ) [ 0000000000000]
-tmp_125          (shl           ) [ 0000000000000]
+tmp_66           (shl           ) [ 0000000000000]
 r_V_3_s          (bitconcatenate) [ 0000000000000]
 tmp_25_10        (or            ) [ 0000000000000]
 s_V_1_11         (sub           ) [ 0000000000000]
@@ -816,11 +816,11 @@ r_V_5_s          (bitconcatenate) [ 0000000000000]
 tmp_28_10        (or            ) [ 0000000000000]
 s_V_2_11         (add           ) [ 0000000000000]
 p_0353_1_12      (select        ) [ 0000000000000]
-tmp_70           (select        ) [ 0000000000000]
+tmp_50           (select        ) [ 0000000000000]
 q_star_V_10      (bitconcatenate) [ 0000000000000]
 q_V_1_12         (or            ) [ 0000000000000]
-tmp_126          (bitselect     ) [ 0000000000000]
-tmp_127          (shl           ) [ 0000000000000]
+tmp_67           (bitselect     ) [ 0000000000000]
+tmp_68           (shl           ) [ 0000000000000]
 r_V_3_1          (bitconcatenate) [ 0000000000000]
 tmp_25_11        (or            ) [ 0000000000000]
 s_V_1_12         (sub           ) [ 0000000000000]
@@ -828,11 +828,11 @@ r_V_5_1          (bitconcatenate) [ 0000000000000]
 tmp_28_11        (or            ) [ 0000000000000]
 s_V_2_12         (add           ) [ 0000000000000]
 p_0353_1_13      (select        ) [ 0100000001000]
-tmp_71           (select        ) [ 0100000001000]
-tmp_128          (bitselect     ) [ 0100000001000]
+tmp_52           (select        ) [ 0100000001000]
+tmp_72           (bitselect     ) [ 0100000001000]
 q_star_V_11      (bitconcatenate) [ 0000000000000]
 q_V_1_13         (or            ) [ 0000000000000]
-tmp_129          (shl           ) [ 0000000000000]
+tmp_73           (shl           ) [ 0000000000000]
 r_V_3_2          (bitconcatenate) [ 0000000000000]
 tmp_25_12        (or            ) [ 0000000000000]
 s_V_1_13         (sub           ) [ 0000000000000]
@@ -840,11 +840,11 @@ r_V_5_2          (bitconcatenate) [ 0000000000000]
 tmp_28_12        (or            ) [ 0000000000000]
 s_V_2_13         (add           ) [ 0000000000000]
 p_0353_1_14      (select        ) [ 0000000000000]
-tmp_72           (select        ) [ 0000000000000]
+tmp_54           (select        ) [ 0000000000000]
 q_star_V_12      (bitconcatenate) [ 0000000000000]
 q_V_1_14         (or            ) [ 0000000000000]
-tmp_130          (bitselect     ) [ 0000000000000]
-tmp_131          (shl           ) [ 0000000000000]
+tmp_74           (bitselect     ) [ 0000000000000]
+tmp_75           (shl           ) [ 0000000000000]
 r_V_3_3          (bitconcatenate) [ 0000000000000]
 tmp_25_13        (or            ) [ 0000000000000]
 s_V_1_14         (sub           ) [ 0000000000000]
@@ -852,11 +852,11 @@ r_V_5_3          (bitconcatenate) [ 0000000000000]
 tmp_28_13        (or            ) [ 0000000000000]
 s_V_2_14         (add           ) [ 0000000000000]
 p_0353_1_15      (select        ) [ 0100000000100]
-tmp_73           (select        ) [ 0100000000100]
-tmp_132          (bitselect     ) [ 0100000000100]
+tmp_56           (select        ) [ 0100000000100]
+tmp_76           (bitselect     ) [ 0100000000100]
 q_star_V_13      (bitconcatenate) [ 0000000000000]
 q_V_1_15         (or            ) [ 0000000000000]
-tmp_133          (shl           ) [ 0000000000000]
+tmp_77           (shl           ) [ 0000000000000]
 r_V_3_4          (bitconcatenate) [ 0000000000000]
 tmp_25_14        (or            ) [ 0000000000000]
 s_V_1_15         (sub           ) [ 0000000000000]
@@ -864,11 +864,11 @@ r_V_5_4          (bitconcatenate) [ 0000000000000]
 tmp_28_14        (or            ) [ 0000000000000]
 s_V_2_15         (add           ) [ 0000000000000]
 p_0353_1_16      (select        ) [ 0000000000000]
-tmp_74           (select        ) [ 0000000000000]
+tmp_58           (select        ) [ 0000000000000]
 q_star_V_14      (bitconcatenate) [ 0000000000000]
 q_V_1_16         (or            ) [ 0000000000000]
-tmp_134          (bitselect     ) [ 0000000000000]
-tmp_135          (shl           ) [ 0000000000000]
+tmp_78           (bitselect     ) [ 0000000000000]
+tmp_79           (shl           ) [ 0000000000000]
 r_V_3_5          (bitconcatenate) [ 0000000000000]
 tmp_25_15        (or            ) [ 0000000000000]
 s_V_1_16         (sub           ) [ 0000000000000]
@@ -876,11 +876,11 @@ r_V_5_5          (bitconcatenate) [ 0000000000000]
 tmp_28_15        (or            ) [ 0000000000000]
 s_V_2_16         (add           ) [ 0000000000000]
 p_0353_1_17      (select        ) [ 0100000000010]
-tmp_75           (select        ) [ 0100000000010]
-tmp_136          (bitselect     ) [ 0100000000010]
+tmp_60           (select        ) [ 0100000000010]
+tmp_80           (bitselect     ) [ 0100000000010]
 q_star_V_15      (bitconcatenate) [ 0000000000000]
 q_V_1_17         (or            ) [ 0000000000000]
-tmp_137          (shl           ) [ 0000000000000]
+tmp_81           (shl           ) [ 0000000000000]
 r_V_3_6          (bitconcatenate) [ 0000000000000]
 tmp_25_16        (or            ) [ 0000000000000]
 s_V_1_17         (sub           ) [ 0000000000000]
@@ -888,11 +888,11 @@ r_V_5_6          (bitconcatenate) [ 0000000000000]
 tmp_28_16        (or            ) [ 0000000000000]
 s_V_2_17         (add           ) [ 0000000000000]
 p_0353_1_18      (select        ) [ 0000000000000]
-tmp_76           (select        ) [ 0000000000000]
+tmp_62           (select        ) [ 0000000000000]
 q_star_V_16      (bitconcatenate) [ 0000000000000]
 q_V_1_18         (or            ) [ 0000000000000]
-tmp_138          (bitselect     ) [ 0000000000000]
-tmp_139          (shl           ) [ 0000000000000]
+tmp_82           (bitselect     ) [ 0000000000000]
+tmp_83           (shl           ) [ 0000000000000]
 r_V_3_7          (bitconcatenate) [ 0000000000000]
 tmp_25_17        (or            ) [ 0000000000000]
 s_V_1_18         (sub           ) [ 0000000000000]
@@ -900,11 +900,11 @@ r_V_5_7          (bitconcatenate) [ 0000000000000]
 tmp_28_17        (or            ) [ 0000000000000]
 s_V_2_18         (add           ) [ 0000000000000]
 p_0353_1_19      (select        ) [ 0100000000001]
-tmp_77           (select        ) [ 0100000000001]
-tmp_140          (bitselect     ) [ 0100000000001]
+tmp_64           (select        ) [ 0100000000001]
+tmp_84           (bitselect     ) [ 0100000000001]
 q_star_V_17      (bitconcatenate) [ 0000000000000]
 q_V_1_19         (or            ) [ 0000000000000]
-tmp_141          (shl           ) [ 0000000000000]
+tmp_85           (shl           ) [ 0000000000000]
 r_V_3_8          (bitconcatenate) [ 0000000000000]
 r_V_4_10         (or            ) [ 0000000000000]
 s_V_1_19         (sub           ) [ 0000000000000]
@@ -912,15 +912,15 @@ r_V_5_8          (bitconcatenate) [ 0000000000000]
 r_V_6_10         (or            ) [ 0000000000000]
 s_V_2_19         (add           ) [ 0000000000000]
 p_0353_1_20      (select        ) [ 0000000000000]
-tmp_142          (trunc         ) [ 0000000000000]
-tmp_143          (shl           ) [ 0000000000000]
-tmp_78           (select        ) [ 0000000000000]
+tmp_86           (trunc         ) [ 0000000000000]
+tmp_87           (shl           ) [ 0000000000000]
+tmp_69           (select        ) [ 0000000000000]
 q_star_V_18      (bitconcatenate) [ 0000000000000]
 q_V_1_20         (or            ) [ 0000000000000]
-tmp_7            (icmp          ) [ 0000000000000]
+tmp_16           (icmp          ) [ 0000000000000]
 q_V              (add           ) [ 0000000000000]
-tmp_79           (partselect    ) [ 0000000000000]
-tmp_80           (select        ) [ 0000000000000]
+tmp_70           (partselect    ) [ 0000000000000]
+tmp_71           (select        ) [ 0000000000000]
 StgValue_270     (ret           ) [ 0000000000000]
 </LifeTime>
 
@@ -2224,7 +2224,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="300" class="1004" name="tmp_1_fu_300">
+<comp id="300" class="1004" name="tmp_20_fu_300">
 <pin_list>
 <pin id="301" dir="0" index="0" bw="21" slack="0"/>
 <pin id="302" dir="0" index="1" bw="1" slack="0"/>
@@ -2232,7 +2232,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_1/1 "/>
+<opset="tmp_20/1 "/>
 </bind>
 </comp>
 
@@ -2250,7 +2250,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="316" class="1004" name="tmp_2_fu_316">
+<comp id="316" class="1004" name="tmp_19_fu_316">
 <pin_list>
 <pin id="317" dir="0" index="0" bw="22" slack="0"/>
 <pin id="318" dir="0" index="1" bw="21" slack="0"/>
@@ -2259,7 +2259,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_2/1 "/>
+<opset="tmp_19/1 "/>
 </bind>
 </comp>
 
@@ -2275,7 +2275,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="330" class="1004" name="tmp_92_fu_330">
+<comp id="330" class="1004" name="tmp_23_fu_330">
 <pin_list>
 <pin id="331" dir="0" index="0" bw="1" slack="0"/>
 <pin id="332" dir="0" index="1" bw="22" slack="0"/>
@@ -2284,11 +2284,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_92/1 "/>
+<opset="tmp_23/1 "/>
 </bind>
 </comp>
 
-<comp id="338" class="1004" name="tmp_98_fu_338">
+<comp id="338" class="1004" name="tmp_26_fu_338">
 <pin_list>
 <pin id="339" dir="0" index="0" bw="1" slack="0"/>
 <pin id="340" dir="0" index="1" bw="22" slack="0"/>
@@ -2297,7 +2297,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_98/1 "/>
+<opset="tmp_26/1 "/>
 </bind>
 </comp>
 
@@ -2326,7 +2326,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="359" class="1004" name="tmp_94_fu_359">
+<comp id="359" class="1004" name="tmp_24_fu_359">
 <pin_list>
 <pin id="360" dir="0" index="0" bw="1" slack="0"/>
 <pin id="361" dir="0" index="1" bw="23" slack="0"/>
@@ -2335,11 +2335,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_94/2 "/>
+<opset="tmp_24/2 "/>
 </bind>
 </comp>
 
-<comp id="367" class="1004" name="tmp_96_fu_367">
+<comp id="367" class="1004" name="tmp_25_fu_367">
 <pin_list>
 <pin id="368" dir="0" index="0" bw="23" slack="0"/>
 <pin id="369" dir="0" index="1" bw="1" slack="0"/>
@@ -2347,11 +2347,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_96/2 "/>
+<opset="tmp_25/2 "/>
 </bind>
 </comp>
 
-<comp id="373" class="1004" name="tmp_3_fu_373">
+<comp id="373" class="1004" name="tmp_21_fu_373">
 <pin_list>
 <pin id="374" dir="0" index="0" bw="23" slack="0"/>
 <pin id="375" dir="0" index="1" bw="1" slack="1"/>
@@ -2360,11 +2360,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_3/2 "/>
+<opset="tmp_21/2 "/>
 </bind>
 </comp>
 
-<comp id="380" class="1004" name="tmp_4_fu_380">
+<comp id="380" class="1004" name="tmp_22_fu_380">
 <pin_list>
 <pin id="381" dir="0" index="0" bw="23" slack="0"/>
 <pin id="382" dir="0" index="1" bw="22" slack="0"/>
@@ -2372,7 +2372,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="tmp_4/2 "/>
+<opset="tmp_22/2 "/>
 </bind>
 </comp>
 
@@ -2425,7 +2425,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="412" class="1004" name="tmp_100_fu_412">
+<comp id="412" class="1004" name="tmp_27_fu_412">
 <pin_list>
 <pin id="413" dir="0" index="0" bw="1" slack="0"/>
 <pin id="414" dir="0" index="1" bw="23" slack="0"/>
@@ -2434,7 +2434,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_100/2 "/>
+<opset="tmp_27/2 "/>
 </bind>
 </comp>
 
@@ -2489,7 +2489,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="447" class="1004" name="tmp_102_fu_447">
+<comp id="447" class="1004" name="tmp_28_fu_447">
 <pin_list>
 <pin id="448" dir="0" index="0" bw="23" slack="1"/>
 <pin id="449" dir="0" index="1" bw="1" slack="0"/>
@@ -2497,7 +2497,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_102/3 "/>
+<opset="tmp_28/3 "/>
 </bind>
 </comp>
 
@@ -2588,7 +2588,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="499" class="1004" name="tmp_60_fu_499">
+<comp id="499" class="1004" name="tmp_29_fu_499">
 <pin_list>
 <pin id="500" dir="0" index="0" bw="1" slack="1"/>
 <pin id="501" dir="0" index="1" bw="3" slack="0"/>
@@ -2597,7 +2597,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_60/3 "/>
+<opset="tmp_29/3 "/>
 </bind>
 </comp>
 
@@ -2626,7 +2626,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="520" class="1004" name="tmp_103_fu_520">
+<comp id="520" class="1004" name="tmp_30_fu_520">
 <pin_list>
 <pin id="521" dir="0" index="0" bw="1" slack="0"/>
 <pin id="522" dir="0" index="1" bw="23" slack="0"/>
@@ -2635,11 +2635,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_103/3 "/>
+<opset="tmp_30/3 "/>
 </bind>
 </comp>
 
-<comp id="528" class="1004" name="tmp_104_fu_528">
+<comp id="528" class="1004" name="tmp_31_fu_528">
 <pin_list>
 <pin id="529" dir="0" index="0" bw="23" slack="0"/>
 <pin id="530" dir="0" index="1" bw="1" slack="0"/>
@@ -2647,7 +2647,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_104/3 "/>
+<opset="tmp_31/3 "/>
 </bind>
 </comp>
 
@@ -2738,7 +2738,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="582" class="1004" name="tmp_61_fu_582">
+<comp id="582" class="1004" name="tmp_32_fu_582">
 <pin_list>
 <pin id="583" dir="0" index="0" bw="1" slack="0"/>
 <pin id="584" dir="0" index="1" bw="4" slack="0"/>
@@ -2747,11 +2747,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_61/3 "/>
+<opset="tmp_32/3 "/>
 </bind>
 </comp>
 
-<comp id="590" class="1004" name="tmp_105_fu_590">
+<comp id="590" class="1004" name="tmp_33_fu_590">
 <pin_list>
 <pin id="591" dir="0" index="0" bw="1" slack="0"/>
 <pin id="592" dir="0" index="1" bw="23" slack="0"/>
@@ -2760,7 +2760,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_105/3 "/>
+<opset="tmp_33/3 "/>
 </bind>
 </comp>
 
@@ -2789,7 +2789,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="611" class="1004" name="tmp_109_fu_611">
+<comp id="611" class="1004" name="tmp_35_fu_611">
 <pin_list>
 <pin id="612" dir="0" index="0" bw="23" slack="1"/>
 <pin id="613" dir="0" index="1" bw="1" slack="0"/>
@@ -2797,7 +2797,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_109/4 "/>
+<opset="tmp_35/4 "/>
 </bind>
 </comp>
 
@@ -2888,7 +2888,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="662" class="1004" name="tmp_62_fu_662">
+<comp id="662" class="1004" name="tmp_34_fu_662">
 <pin_list>
 <pin id="663" dir="0" index="0" bw="1" slack="1"/>
 <pin id="664" dir="0" index="1" bw="5" slack="0"/>
@@ -2897,7 +2897,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_62/4 "/>
+<opset="tmp_34/4 "/>
 </bind>
 </comp>
 
@@ -2926,7 +2926,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="683" class="1004" name="tmp_110_fu_683">
+<comp id="683" class="1004" name="tmp_37_fu_683">
 <pin_list>
 <pin id="684" dir="0" index="0" bw="1" slack="0"/>
 <pin id="685" dir="0" index="1" bw="23" slack="0"/>
@@ -2935,11 +2935,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_110/4 "/>
+<opset="tmp_37/4 "/>
 </bind>
 </comp>
 
-<comp id="691" class="1004" name="tmp_111_fu_691">
+<comp id="691" class="1004" name="tmp_39_fu_691">
 <pin_list>
 <pin id="692" dir="0" index="0" bw="23" slack="0"/>
 <pin id="693" dir="0" index="1" bw="1" slack="0"/>
@@ -2947,7 +2947,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_111/4 "/>
+<opset="tmp_39/4 "/>
 </bind>
 </comp>
 
@@ -3038,7 +3038,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="745" class="1004" name="tmp_63_fu_745">
+<comp id="745" class="1004" name="tmp_36_fu_745">
 <pin_list>
 <pin id="746" dir="0" index="0" bw="1" slack="0"/>
 <pin id="747" dir="0" index="1" bw="6" slack="0"/>
@@ -3047,11 +3047,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_63/4 "/>
+<opset="tmp_36/4 "/>
 </bind>
 </comp>
 
-<comp id="753" class="1004" name="tmp_112_fu_753">
+<comp id="753" class="1004" name="tmp_41_fu_753">
 <pin_list>
 <pin id="754" dir="0" index="0" bw="1" slack="0"/>
 <pin id="755" dir="0" index="1" bw="23" slack="0"/>
@@ -3060,7 +3060,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_112/4 "/>
+<opset="tmp_41/4 "/>
 </bind>
 </comp>
 
@@ -3089,7 +3089,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="774" class="1004" name="tmp_113_fu_774">
+<comp id="774" class="1004" name="tmp_43_fu_774">
 <pin_list>
 <pin id="775" dir="0" index="0" bw="23" slack="1"/>
 <pin id="776" dir="0" index="1" bw="1" slack="0"/>
@@ -3097,7 +3097,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_113/5 "/>
+<opset="tmp_43/5 "/>
 </bind>
 </comp>
 
@@ -3188,7 +3188,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="825" class="1004" name="tmp_64_fu_825">
+<comp id="825" class="1004" name="tmp_38_fu_825">
 <pin_list>
 <pin id="826" dir="0" index="0" bw="1" slack="1"/>
 <pin id="827" dir="0" index="1" bw="7" slack="0"/>
@@ -3197,7 +3197,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_64/5 "/>
+<opset="tmp_38/5 "/>
 </bind>
 </comp>
 
@@ -3226,7 +3226,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="846" class="1004" name="tmp_114_fu_846">
+<comp id="846" class="1004" name="tmp_45_fu_846">
 <pin_list>
 <pin id="847" dir="0" index="0" bw="1" slack="0"/>
 <pin id="848" dir="0" index="1" bw="23" slack="0"/>
@@ -3235,11 +3235,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_114/5 "/>
+<opset="tmp_45/5 "/>
 </bind>
 </comp>
 
-<comp id="854" class="1004" name="tmp_115_fu_854">
+<comp id="854" class="1004" name="tmp_47_fu_854">
 <pin_list>
 <pin id="855" dir="0" index="0" bw="23" slack="0"/>
 <pin id="856" dir="0" index="1" bw="1" slack="0"/>
@@ -3247,7 +3247,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_115/5 "/>
+<opset="tmp_47/5 "/>
 </bind>
 </comp>
 
@@ -3338,7 +3338,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="908" class="1004" name="tmp_65_fu_908">
+<comp id="908" class="1004" name="tmp_40_fu_908">
 <pin_list>
 <pin id="909" dir="0" index="0" bw="1" slack="0"/>
 <pin id="910" dir="0" index="1" bw="8" slack="0"/>
@@ -3347,11 +3347,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_65/5 "/>
+<opset="tmp_40/5 "/>
 </bind>
 </comp>
 
-<comp id="916" class="1004" name="tmp_116_fu_916">
+<comp id="916" class="1004" name="tmp_49_fu_916">
 <pin_list>
 <pin id="917" dir="0" index="0" bw="1" slack="0"/>
 <pin id="918" dir="0" index="1" bw="23" slack="0"/>
@@ -3360,7 +3360,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_116/5 "/>
+<opset="tmp_49/5 "/>
 </bind>
 </comp>
 
@@ -3389,7 +3389,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="937" class="1004" name="tmp_117_fu_937">
+<comp id="937" class="1004" name="tmp_51_fu_937">
 <pin_list>
 <pin id="938" dir="0" index="0" bw="23" slack="1"/>
 <pin id="939" dir="0" index="1" bw="1" slack="0"/>
@@ -3397,7 +3397,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_117/6 "/>
+<opset="tmp_51/6 "/>
 </bind>
 </comp>
 
@@ -3488,7 +3488,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="988" class="1004" name="tmp_66_fu_988">
+<comp id="988" class="1004" name="tmp_42_fu_988">
 <pin_list>
 <pin id="989" dir="0" index="0" bw="1" slack="1"/>
 <pin id="990" dir="0" index="1" bw="9" slack="0"/>
@@ -3497,7 +3497,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_66/6 "/>
+<opset="tmp_42/6 "/>
 </bind>
 </comp>
 
@@ -3526,7 +3526,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1009" class="1004" name="tmp_118_fu_1009">
+<comp id="1009" class="1004" name="tmp_53_fu_1009">
 <pin_list>
 <pin id="1010" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1011" dir="0" index="1" bw="23" slack="0"/>
@@ -3535,11 +3535,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_118/6 "/>
+<opset="tmp_53/6 "/>
 </bind>
 </comp>
 
-<comp id="1017" class="1004" name="tmp_119_fu_1017">
+<comp id="1017" class="1004" name="tmp_55_fu_1017">
 <pin_list>
 <pin id="1018" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1019" dir="0" index="1" bw="1" slack="0"/>
@@ -3547,7 +3547,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_119/6 "/>
+<opset="tmp_55/6 "/>
 </bind>
 </comp>
 
@@ -3638,7 +3638,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1071" class="1004" name="tmp_67_fu_1071">
+<comp id="1071" class="1004" name="tmp_44_fu_1071">
 <pin_list>
 <pin id="1072" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1073" dir="0" index="1" bw="10" slack="0"/>
@@ -3647,11 +3647,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_67/6 "/>
+<opset="tmp_44/6 "/>
 </bind>
 </comp>
 
-<comp id="1079" class="1004" name="tmp_120_fu_1079">
+<comp id="1079" class="1004" name="tmp_57_fu_1079">
 <pin_list>
 <pin id="1080" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1081" dir="0" index="1" bw="23" slack="0"/>
@@ -3660,7 +3660,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_120/6 "/>
+<opset="tmp_57/6 "/>
 </bind>
 </comp>
 
@@ -3689,7 +3689,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1100" class="1004" name="tmp_121_fu_1100">
+<comp id="1100" class="1004" name="tmp_59_fu_1100">
 <pin_list>
 <pin id="1101" dir="0" index="0" bw="23" slack="1"/>
 <pin id="1102" dir="0" index="1" bw="1" slack="0"/>
@@ -3697,7 +3697,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_121/7 "/>
+<opset="tmp_59/7 "/>
 </bind>
 </comp>
 
@@ -3788,7 +3788,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1151" class="1004" name="tmp_68_fu_1151">
+<comp id="1151" class="1004" name="tmp_46_fu_1151">
 <pin_list>
 <pin id="1152" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1153" dir="0" index="1" bw="11" slack="0"/>
@@ -3797,7 +3797,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_68/7 "/>
+<opset="tmp_46/7 "/>
 </bind>
 </comp>
 
@@ -3826,7 +3826,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1172" class="1004" name="tmp_122_fu_1172">
+<comp id="1172" class="1004" name="tmp_61_fu_1172">
 <pin_list>
 <pin id="1173" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1174" dir="0" index="1" bw="23" slack="0"/>
@@ -3835,11 +3835,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_122/7 "/>
+<opset="tmp_61/7 "/>
 </bind>
 </comp>
 
-<comp id="1180" class="1004" name="tmp_123_fu_1180">
+<comp id="1180" class="1004" name="tmp_63_fu_1180">
 <pin_list>
 <pin id="1181" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1182" dir="0" index="1" bw="1" slack="0"/>
@@ -3847,7 +3847,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_123/7 "/>
+<opset="tmp_63/7 "/>
 </bind>
 </comp>
 
@@ -3938,7 +3938,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1234" class="1004" name="tmp_69_fu_1234">
+<comp id="1234" class="1004" name="tmp_48_fu_1234">
 <pin_list>
 <pin id="1235" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1236" dir="0" index="1" bw="12" slack="0"/>
@@ -3947,11 +3947,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_69/7 "/>
+<opset="tmp_48/7 "/>
 </bind>
 </comp>
 
-<comp id="1242" class="1004" name="tmp_124_fu_1242">
+<comp id="1242" class="1004" name="tmp_65_fu_1242">
 <pin_list>
 <pin id="1243" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1244" dir="0" index="1" bw="23" slack="0"/>
@@ -3960,7 +3960,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_124/7 "/>
+<opset="tmp_65/7 "/>
 </bind>
 </comp>
 
@@ -3989,7 +3989,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1263" class="1004" name="tmp_125_fu_1263">
+<comp id="1263" class="1004" name="tmp_66_fu_1263">
 <pin_list>
 <pin id="1264" dir="0" index="0" bw="23" slack="1"/>
 <pin id="1265" dir="0" index="1" bw="1" slack="0"/>
@@ -3997,7 +3997,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_125/8 "/>
+<opset="tmp_66/8 "/>
 </bind>
 </comp>
 
@@ -4088,7 +4088,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1314" class="1004" name="tmp_70_fu_1314">
+<comp id="1314" class="1004" name="tmp_50_fu_1314">
 <pin_list>
 <pin id="1315" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1316" dir="0" index="1" bw="13" slack="0"/>
@@ -4097,7 +4097,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_70/8 "/>
+<opset="tmp_50/8 "/>
 </bind>
 </comp>
 
@@ -4126,7 +4126,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1335" class="1004" name="tmp_126_fu_1335">
+<comp id="1335" class="1004" name="tmp_67_fu_1335">
 <pin_list>
 <pin id="1336" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1337" dir="0" index="1" bw="23" slack="0"/>
@@ -4135,11 +4135,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_126/8 "/>
+<opset="tmp_67/8 "/>
 </bind>
 </comp>
 
-<comp id="1343" class="1004" name="tmp_127_fu_1343">
+<comp id="1343" class="1004" name="tmp_68_fu_1343">
 <pin_list>
 <pin id="1344" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1345" dir="0" index="1" bw="1" slack="0"/>
@@ -4147,7 +4147,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_127/8 "/>
+<opset="tmp_68/8 "/>
 </bind>
 </comp>
 
@@ -4238,7 +4238,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1397" class="1004" name="tmp_71_fu_1397">
+<comp id="1397" class="1004" name="tmp_52_fu_1397">
 <pin_list>
 <pin id="1398" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1399" dir="0" index="1" bw="14" slack="0"/>
@@ -4247,11 +4247,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_71/8 "/>
+<opset="tmp_52/8 "/>
 </bind>
 </comp>
 
-<comp id="1405" class="1004" name="tmp_128_fu_1405">
+<comp id="1405" class="1004" name="tmp_72_fu_1405">
 <pin_list>
 <pin id="1406" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1407" dir="0" index="1" bw="23" slack="0"/>
@@ -4260,7 +4260,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_128/8 "/>
+<opset="tmp_72/8 "/>
 </bind>
 </comp>
 
@@ -4289,7 +4289,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1426" class="1004" name="tmp_129_fu_1426">
+<comp id="1426" class="1004" name="tmp_73_fu_1426">
 <pin_list>
 <pin id="1427" dir="0" index="0" bw="23" slack="1"/>
 <pin id="1428" dir="0" index="1" bw="1" slack="0"/>
@@ -4297,7 +4297,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_129/9 "/>
+<opset="tmp_73/9 "/>
 </bind>
 </comp>
 
@@ -4388,7 +4388,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1477" class="1004" name="tmp_72_fu_1477">
+<comp id="1477" class="1004" name="tmp_54_fu_1477">
 <pin_list>
 <pin id="1478" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1479" dir="0" index="1" bw="15" slack="0"/>
@@ -4397,7 +4397,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_72/9 "/>
+<opset="tmp_54/9 "/>
 </bind>
 </comp>
 
@@ -4426,7 +4426,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1498" class="1004" name="tmp_130_fu_1498">
+<comp id="1498" class="1004" name="tmp_74_fu_1498">
 <pin_list>
 <pin id="1499" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1500" dir="0" index="1" bw="23" slack="0"/>
@@ -4435,11 +4435,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_130/9 "/>
+<opset="tmp_74/9 "/>
 </bind>
 </comp>
 
-<comp id="1506" class="1004" name="tmp_131_fu_1506">
+<comp id="1506" class="1004" name="tmp_75_fu_1506">
 <pin_list>
 <pin id="1507" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1508" dir="0" index="1" bw="1" slack="0"/>
@@ -4447,7 +4447,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_131/9 "/>
+<opset="tmp_75/9 "/>
 </bind>
 </comp>
 
@@ -4538,7 +4538,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1560" class="1004" name="tmp_73_fu_1560">
+<comp id="1560" class="1004" name="tmp_56_fu_1560">
 <pin_list>
 <pin id="1561" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1562" dir="0" index="1" bw="16" slack="0"/>
@@ -4547,11 +4547,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_73/9 "/>
+<opset="tmp_56/9 "/>
 </bind>
 </comp>
 
-<comp id="1568" class="1004" name="tmp_132_fu_1568">
+<comp id="1568" class="1004" name="tmp_76_fu_1568">
 <pin_list>
 <pin id="1569" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1570" dir="0" index="1" bw="23" slack="0"/>
@@ -4560,7 +4560,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_132/9 "/>
+<opset="tmp_76/9 "/>
 </bind>
 </comp>
 
@@ -4589,7 +4589,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1589" class="1004" name="tmp_133_fu_1589">
+<comp id="1589" class="1004" name="tmp_77_fu_1589">
 <pin_list>
 <pin id="1590" dir="0" index="0" bw="23" slack="1"/>
 <pin id="1591" dir="0" index="1" bw="1" slack="0"/>
@@ -4597,7 +4597,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_133/10 "/>
+<opset="tmp_77/10 "/>
 </bind>
 </comp>
 
@@ -4688,7 +4688,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1640" class="1004" name="tmp_74_fu_1640">
+<comp id="1640" class="1004" name="tmp_58_fu_1640">
 <pin_list>
 <pin id="1641" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1642" dir="0" index="1" bw="17" slack="0"/>
@@ -4697,7 +4697,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_74/10 "/>
+<opset="tmp_58/10 "/>
 </bind>
 </comp>
 
@@ -4726,7 +4726,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1661" class="1004" name="tmp_134_fu_1661">
+<comp id="1661" class="1004" name="tmp_78_fu_1661">
 <pin_list>
 <pin id="1662" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1663" dir="0" index="1" bw="23" slack="0"/>
@@ -4735,11 +4735,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_134/10 "/>
+<opset="tmp_78/10 "/>
 </bind>
 </comp>
 
-<comp id="1669" class="1004" name="tmp_135_fu_1669">
+<comp id="1669" class="1004" name="tmp_79_fu_1669">
 <pin_list>
 <pin id="1670" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1671" dir="0" index="1" bw="1" slack="0"/>
@@ -4747,7 +4747,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_135/10 "/>
+<opset="tmp_79/10 "/>
 </bind>
 </comp>
 
@@ -4838,7 +4838,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1723" class="1004" name="tmp_75_fu_1723">
+<comp id="1723" class="1004" name="tmp_60_fu_1723">
 <pin_list>
 <pin id="1724" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1725" dir="0" index="1" bw="18" slack="0"/>
@@ -4847,11 +4847,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_75/10 "/>
+<opset="tmp_60/10 "/>
 </bind>
 </comp>
 
-<comp id="1731" class="1004" name="tmp_136_fu_1731">
+<comp id="1731" class="1004" name="tmp_80_fu_1731">
 <pin_list>
 <pin id="1732" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1733" dir="0" index="1" bw="23" slack="0"/>
@@ -4860,7 +4860,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_136/10 "/>
+<opset="tmp_80/10 "/>
 </bind>
 </comp>
 
@@ -4889,7 +4889,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1752" class="1004" name="tmp_137_fu_1752">
+<comp id="1752" class="1004" name="tmp_81_fu_1752">
 <pin_list>
 <pin id="1753" dir="0" index="0" bw="23" slack="1"/>
 <pin id="1754" dir="0" index="1" bw="1" slack="0"/>
@@ -4897,7 +4897,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_137/11 "/>
+<opset="tmp_81/11 "/>
 </bind>
 </comp>
 
@@ -4988,7 +4988,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1803" class="1004" name="tmp_76_fu_1803">
+<comp id="1803" class="1004" name="tmp_62_fu_1803">
 <pin_list>
 <pin id="1804" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1805" dir="0" index="1" bw="19" slack="0"/>
@@ -4997,7 +4997,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_76/11 "/>
+<opset="tmp_62/11 "/>
 </bind>
 </comp>
 
@@ -5026,7 +5026,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1824" class="1004" name="tmp_138_fu_1824">
+<comp id="1824" class="1004" name="tmp_82_fu_1824">
 <pin_list>
 <pin id="1825" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1826" dir="0" index="1" bw="23" slack="0"/>
@@ -5035,11 +5035,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_138/11 "/>
+<opset="tmp_82/11 "/>
 </bind>
 </comp>
 
-<comp id="1832" class="1004" name="tmp_139_fu_1832">
+<comp id="1832" class="1004" name="tmp_83_fu_1832">
 <pin_list>
 <pin id="1833" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1834" dir="0" index="1" bw="1" slack="0"/>
@@ -5047,7 +5047,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_139/11 "/>
+<opset="tmp_83/11 "/>
 </bind>
 </comp>
 
@@ -5138,7 +5138,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1886" class="1004" name="tmp_77_fu_1886">
+<comp id="1886" class="1004" name="tmp_64_fu_1886">
 <pin_list>
 <pin id="1887" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1888" dir="0" index="1" bw="20" slack="0"/>
@@ -5147,11 +5147,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_77/11 "/>
+<opset="tmp_64/11 "/>
 </bind>
 </comp>
 
-<comp id="1894" class="1004" name="tmp_140_fu_1894">
+<comp id="1894" class="1004" name="tmp_84_fu_1894">
 <pin_list>
 <pin id="1895" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1896" dir="0" index="1" bw="23" slack="0"/>
@@ -5160,7 +5160,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_140/11 "/>
+<opset="tmp_84/11 "/>
 </bind>
 </comp>
 
@@ -5189,7 +5189,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1915" class="1004" name="tmp_141_fu_1915">
+<comp id="1915" class="1004" name="tmp_85_fu_1915">
 <pin_list>
 <pin id="1916" dir="0" index="0" bw="23" slack="1"/>
 <pin id="1917" dir="0" index="1" bw="1" slack="0"/>
@@ -5197,7 +5197,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_141/12 "/>
+<opset="tmp_85/12 "/>
 </bind>
 </comp>
 
@@ -5288,18 +5288,18 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1966" class="1004" name="tmp_142_fu_1966">
+<comp id="1966" class="1004" name="tmp_86_fu_1966">
 <pin_list>
 <pin id="1967" dir="0" index="0" bw="21" slack="0"/>
 <pin id="1968" dir="1" index="1" bw="20" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_142/12 "/>
+<opset="tmp_86/12 "/>
 </bind>
 </comp>
 
-<comp id="1970" class="1004" name="tmp_143_fu_1970">
+<comp id="1970" class="1004" name="tmp_87_fu_1970">
 <pin_list>
 <pin id="1971" dir="0" index="0" bw="20" slack="1"/>
 <pin id="1972" dir="0" index="1" bw="1" slack="0"/>
@@ -5307,11 +5307,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_143/12 "/>
+<opset="tmp_87/12 "/>
 </bind>
 </comp>
 
-<comp id="1975" class="1004" name="tmp_78_fu_1975">
+<comp id="1975" class="1004" name="tmp_69_fu_1975">
 <pin_list>
 <pin id="1976" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1977" dir="0" index="1" bw="20" slack="0"/>
@@ -5320,7 +5320,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_78/12 "/>
+<opset="tmp_69/12 "/>
 </bind>
 </comp>
 
@@ -5349,7 +5349,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1996" class="1004" name="tmp_7_fu_1996">
+<comp id="1996" class="1004" name="tmp_16_fu_1996">
 <pin_list>
 <pin id="1997" dir="0" index="0" bw="23" slack="0"/>
 <pin id="1998" dir="0" index="1" bw="23" slack="0"/>
@@ -5357,7 +5357,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="tmp_7/12 "/>
+<opset="tmp_16/12 "/>
 </bind>
 </comp>
 
@@ -5373,7 +5373,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2008" class="1004" name="tmp_79_fu_2008">
+<comp id="2008" class="1004" name="tmp_70_fu_2008">
 <pin_list>
 <pin id="2009" dir="0" index="0" bw="20" slack="0"/>
 <pin id="2010" dir="0" index="1" bw="21" slack="0"/>
@@ -5383,11 +5383,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_79/12 "/>
+<opset="tmp_70/12 "/>
 </bind>
 </comp>
 
-<comp id="2018" class="1004" name="tmp_80_fu_2018">
+<comp id="2018" class="1004" name="tmp_71_fu_2018">
 <pin_list>
 <pin id="2019" dir="0" index="0" bw="1" slack="0"/>
 <pin id="2020" dir="0" index="1" bw="20" slack="0"/>
@@ -5396,7 +5396,7 @@ StgValue_270     (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_80/12 "/>
+<opset="tmp_71/12 "/>
 </bind>
 </comp>
 
@@ -5410,33 +5410,33 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2031" class="1005" name="tmp_92_reg_2031">
+<comp id="2031" class="1005" name="tmp_23_reg_2031">
 <pin_list>
 <pin id="2032" dir="0" index="0" bw="1" slack="2"/>
 <pin id="2033" dir="1" index="1" bw="1" slack="2"/>
 </pin_list>
 <bind>
-<opset="tmp_92 "/>
+<opset="tmp_23 "/>
 </bind>
 </comp>
 
-<comp id="2037" class="1005" name="tmp_98_reg_2037">
+<comp id="2037" class="1005" name="tmp_26_reg_2037">
 <pin_list>
 <pin id="2038" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2039" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_98 "/>
+<opset="tmp_26 "/>
 </bind>
 </comp>
 
-<comp id="2042" class="1005" name="tmp_94_reg_2042">
+<comp id="2042" class="1005" name="tmp_24_reg_2042">
 <pin_list>
 <pin id="2043" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2044" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_94 "/>
+<opset="tmp_24 "/>
 </bind>
 </comp>
 
@@ -5450,13 +5450,13 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2052" class="1005" name="tmp_100_reg_2052">
+<comp id="2052" class="1005" name="tmp_27_reg_2052">
 <pin_list>
 <pin id="2053" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2054" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_100 "/>
+<opset="tmp_27 "/>
 </bind>
 </comp>
 
@@ -5470,23 +5470,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2063" class="1005" name="tmp_61_reg_2063">
+<comp id="2063" class="1005" name="tmp_32_reg_2063">
 <pin_list>
 <pin id="2064" dir="0" index="0" bw="4" slack="1"/>
 <pin id="2065" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_61 "/>
+<opset="tmp_32 "/>
 </bind>
 </comp>
 
-<comp id="2069" class="1005" name="tmp_105_reg_2069">
+<comp id="2069" class="1005" name="tmp_33_reg_2069">
 <pin_list>
 <pin id="2070" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2071" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_105 "/>
+<opset="tmp_33 "/>
 </bind>
 </comp>
 
@@ -5500,23 +5500,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2080" class="1005" name="tmp_63_reg_2080">
+<comp id="2080" class="1005" name="tmp_36_reg_2080">
 <pin_list>
 <pin id="2081" dir="0" index="0" bw="6" slack="1"/>
 <pin id="2082" dir="1" index="1" bw="6" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_63 "/>
+<opset="tmp_36 "/>
 </bind>
 </comp>
 
-<comp id="2086" class="1005" name="tmp_112_reg_2086">
+<comp id="2086" class="1005" name="tmp_41_reg_2086">
 <pin_list>
 <pin id="2087" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2088" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_112 "/>
+<opset="tmp_41 "/>
 </bind>
 </comp>
 
@@ -5530,23 +5530,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2097" class="1005" name="tmp_65_reg_2097">
+<comp id="2097" class="1005" name="tmp_40_reg_2097">
 <pin_list>
 <pin id="2098" dir="0" index="0" bw="8" slack="1"/>
 <pin id="2099" dir="1" index="1" bw="8" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_65 "/>
+<opset="tmp_40 "/>
 </bind>
 </comp>
 
-<comp id="2103" class="1005" name="tmp_116_reg_2103">
+<comp id="2103" class="1005" name="tmp_49_reg_2103">
 <pin_list>
 <pin id="2104" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2105" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_116 "/>
+<opset="tmp_49 "/>
 </bind>
 </comp>
 
@@ -5560,23 +5560,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2114" class="1005" name="tmp_67_reg_2114">
+<comp id="2114" class="1005" name="tmp_44_reg_2114">
 <pin_list>
 <pin id="2115" dir="0" index="0" bw="10" slack="1"/>
 <pin id="2116" dir="1" index="1" bw="10" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_67 "/>
+<opset="tmp_44 "/>
 </bind>
 </comp>
 
-<comp id="2120" class="1005" name="tmp_120_reg_2120">
+<comp id="2120" class="1005" name="tmp_57_reg_2120">
 <pin_list>
 <pin id="2121" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2122" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_120 "/>
+<opset="tmp_57 "/>
 </bind>
 </comp>
 
@@ -5590,23 +5590,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2131" class="1005" name="tmp_69_reg_2131">
+<comp id="2131" class="1005" name="tmp_48_reg_2131">
 <pin_list>
 <pin id="2132" dir="0" index="0" bw="12" slack="1"/>
 <pin id="2133" dir="1" index="1" bw="12" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_69 "/>
+<opset="tmp_48 "/>
 </bind>
 </comp>
 
-<comp id="2137" class="1005" name="tmp_124_reg_2137">
+<comp id="2137" class="1005" name="tmp_65_reg_2137">
 <pin_list>
 <pin id="2138" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2139" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_124 "/>
+<opset="tmp_65 "/>
 </bind>
 </comp>
 
@@ -5620,23 +5620,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2148" class="1005" name="tmp_71_reg_2148">
+<comp id="2148" class="1005" name="tmp_52_reg_2148">
 <pin_list>
 <pin id="2149" dir="0" index="0" bw="14" slack="1"/>
 <pin id="2150" dir="1" index="1" bw="14" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_71 "/>
+<opset="tmp_52 "/>
 </bind>
 </comp>
 
-<comp id="2154" class="1005" name="tmp_128_reg_2154">
+<comp id="2154" class="1005" name="tmp_72_reg_2154">
 <pin_list>
 <pin id="2155" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2156" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_128 "/>
+<opset="tmp_72 "/>
 </bind>
 </comp>
 
@@ -5650,23 +5650,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2165" class="1005" name="tmp_73_reg_2165">
+<comp id="2165" class="1005" name="tmp_56_reg_2165">
 <pin_list>
 <pin id="2166" dir="0" index="0" bw="16" slack="1"/>
 <pin id="2167" dir="1" index="1" bw="16" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_73 "/>
+<opset="tmp_56 "/>
 </bind>
 </comp>
 
-<comp id="2171" class="1005" name="tmp_132_reg_2171">
+<comp id="2171" class="1005" name="tmp_76_reg_2171">
 <pin_list>
 <pin id="2172" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2173" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_132 "/>
+<opset="tmp_76 "/>
 </bind>
 </comp>
 
@@ -5680,23 +5680,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2182" class="1005" name="tmp_75_reg_2182">
+<comp id="2182" class="1005" name="tmp_60_reg_2182">
 <pin_list>
 <pin id="2183" dir="0" index="0" bw="18" slack="1"/>
 <pin id="2184" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_75 "/>
+<opset="tmp_60 "/>
 </bind>
 </comp>
 
-<comp id="2188" class="1005" name="tmp_136_reg_2188">
+<comp id="2188" class="1005" name="tmp_80_reg_2188">
 <pin_list>
 <pin id="2189" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2190" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_136 "/>
+<opset="tmp_80 "/>
 </bind>
 </comp>
 
@@ -5710,23 +5710,23 @@ StgValue_270     (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="2199" class="1005" name="tmp_77_reg_2199">
+<comp id="2199" class="1005" name="tmp_64_reg_2199">
 <pin_list>
 <pin id="2200" dir="0" index="0" bw="20" slack="1"/>
 <pin id="2201" dir="1" index="1" bw="20" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_77 "/>
+<opset="tmp_64 "/>
 </bind>
 </comp>
 
-<comp id="2206" class="1005" name="tmp_140_reg_2206">
+<comp id="2206" class="1005" name="tmp_84_reg_2206">
 <pin_list>
 <pin id="2207" dir="0" index="0" bw="1" slack="1"/>
 <pin id="2208" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_140 "/>
+<opset="tmp_84 "/>
 </bind>
 </comp>
 
@@ -7098,22 +7098,22 @@ StgValue_270     (ret           ) [ 0000000000000]
   - Chain level:
 	State 1
 		tmp_cast : 1
-		tmp_1 : 2
+		tmp_20 : 2
 		tmp_s : 3
-		tmp_2 : 4
+		tmp_19 : 4
 		p_0353_1 : 5
-		tmp_92 : 3
-		tmp_98 : 5
+		tmp_23 : 3
+		tmp_26 : 5
 	State 2
 		p_0353_1_1 : 1
-		tmp_94 : 2
-		tmp_96 : 2
-		tmp_4 : 1
+		tmp_24 : 2
+		tmp_25 : 2
+		tmp_22 : 1
 		s_V_1_2 : 2
 		tmp1 : 2
 		s_V_2_2 : 3
 		p_0353_1_2 : 4
-		tmp_100 : 5
+		tmp_27 : 5
 	State 3
 		p_0305_1_in_in_2 : 1
 		q_V_1_2 : 2
@@ -7124,11 +7124,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_3 : 3
 		s_V_2_3 : 3
 		p_0353_1_3 : 4
-		tmp_60 : 2
+		tmp_29 : 2
 		q_star_V_3 : 3
 		q_V_1_3 : 4
-		tmp_103 : 5
-		tmp_104 : 5
+		tmp_30 : 5
+		tmp_31 : 5
 		r_V_4_4 : 4
 		tmp_25_4 : 5
 		s_V_1_4 : 5
@@ -7136,8 +7136,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_4 : 4
 		s_V_2_4 : 5
 		p_0353_1_4 : 6
-		tmp_61 : 6
-		tmp_105 : 7
+		tmp_32 : 6
+		tmp_33 : 7
 	State 4
 		q_V_1_4 : 1
 		r_V_4_5 : 1
@@ -7146,11 +7146,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_5 : 1
 		s_V_2_5 : 1
 		p_0353_1_5 : 3
-		tmp_62 : 1
+		tmp_34 : 1
 		q_star_V_5 : 2
 		q_V_1_5 : 3
-		tmp_110 : 4
-		tmp_111 : 4
+		tmp_37 : 4
+		tmp_39 : 4
 		r_V_4_6 : 3
 		tmp_25_6 : 4
 		s_V_1_6 : 4
@@ -7158,8 +7158,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_6 : 3
 		s_V_2_6 : 4
 		p_0353_1_6 : 5
-		tmp_63 : 5
-		tmp_112 : 6
+		tmp_36 : 5
+		tmp_41 : 6
 	State 5
 		q_V_1_6 : 1
 		r_V_4_7 : 1
@@ -7168,11 +7168,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_7 : 1
 		s_V_2_7 : 1
 		p_0353_1_7 : 3
-		tmp_64 : 1
+		tmp_38 : 1
 		q_star_V_7 : 2
 		q_V_1_7 : 3
-		tmp_114 : 4
-		tmp_115 : 4
+		tmp_45 : 4
+		tmp_47 : 4
 		r_V_4_8 : 3
 		tmp_25_8 : 4
 		s_V_1_8 : 4
@@ -7180,8 +7180,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_8 : 3
 		s_V_2_8 : 4
 		p_0353_1_8 : 5
-		tmp_65 : 5
-		tmp_116 : 6
+		tmp_40 : 5
+		tmp_49 : 6
 	State 6
 		q_V_1_8 : 1
 		r_V_4_9 : 1
@@ -7190,11 +7190,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_9 : 1
 		s_V_2_9 : 1
 		p_0353_1_9 : 3
-		tmp_66 : 1
+		tmp_42 : 1
 		q_star_V_9 : 2
 		q_V_1_9 : 3
-		tmp_118 : 4
-		tmp_119 : 4
+		tmp_53 : 4
+		tmp_55 : 4
 		r_V_4_s : 3
 		tmp_25_s : 4
 		s_V_1_s : 4
@@ -7202,8 +7202,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_s : 3
 		s_V_2_s : 4
 		p_0353_1_s : 5
-		tmp_67 : 5
-		tmp_120 : 6
+		tmp_44 : 5
+		tmp_57 : 6
 	State 7
 		q_V_1_s : 1
 		r_V_4_1 : 1
@@ -7212,11 +7212,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_1 : 1
 		s_V_2_1 : 1
 		p_0353_1_10 : 3
-		tmp_68 : 1
+		tmp_46 : 1
 		q_star_V_1 : 2
 		q_V_1_10 : 3
-		tmp_122 : 4
-		tmp_123 : 4
+		tmp_61 : 4
+		tmp_63 : 4
 		r_V_4_2 : 3
 		tmp_25_2 : 4
 		s_V_1_10 : 4
@@ -7224,8 +7224,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_2 : 3
 		s_V_2_10 : 4
 		p_0353_1_11 : 5
-		tmp_69 : 5
-		tmp_124 : 6
+		tmp_48 : 5
+		tmp_65 : 6
 	State 8
 		q_V_1_11 : 1
 		r_V_3_s : 1
@@ -7234,11 +7234,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_10 : 1
 		s_V_2_11 : 1
 		p_0353_1_12 : 3
-		tmp_70 : 1
+		tmp_50 : 1
 		q_star_V_10 : 2
 		q_V_1_12 : 3
-		tmp_126 : 4
-		tmp_127 : 4
+		tmp_67 : 4
+		tmp_68 : 4
 		r_V_3_1 : 3
 		tmp_25_11 : 4
 		s_V_1_12 : 4
@@ -7246,8 +7246,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_11 : 3
 		s_V_2_12 : 4
 		p_0353_1_13 : 5
-		tmp_71 : 5
-		tmp_128 : 6
+		tmp_52 : 5
+		tmp_72 : 6
 	State 9
 		q_V_1_13 : 1
 		r_V_3_2 : 1
@@ -7256,11 +7256,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_12 : 1
 		s_V_2_13 : 1
 		p_0353_1_14 : 3
-		tmp_72 : 1
+		tmp_54 : 1
 		q_star_V_12 : 2
 		q_V_1_14 : 3
-		tmp_130 : 4
-		tmp_131 : 4
+		tmp_74 : 4
+		tmp_75 : 4
 		r_V_3_3 : 3
 		tmp_25_13 : 4
 		s_V_1_14 : 4
@@ -7268,8 +7268,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_13 : 3
 		s_V_2_14 : 4
 		p_0353_1_15 : 5
-		tmp_73 : 5
-		tmp_132 : 6
+		tmp_56 : 5
+		tmp_76 : 6
 	State 10
 		q_V_1_15 : 1
 		r_V_3_4 : 1
@@ -7278,11 +7278,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_14 : 1
 		s_V_2_15 : 1
 		p_0353_1_16 : 3
-		tmp_74 : 1
+		tmp_58 : 1
 		q_star_V_14 : 2
 		q_V_1_16 : 3
-		tmp_134 : 4
-		tmp_135 : 4
+		tmp_78 : 4
+		tmp_79 : 4
 		r_V_3_5 : 3
 		tmp_25_15 : 4
 		s_V_1_16 : 4
@@ -7290,8 +7290,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_15 : 3
 		s_V_2_16 : 4
 		p_0353_1_17 : 5
-		tmp_75 : 5
-		tmp_136 : 6
+		tmp_60 : 5
+		tmp_80 : 6
 	State 11
 		q_V_1_17 : 1
 		r_V_3_6 : 1
@@ -7300,11 +7300,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_16 : 1
 		s_V_2_17 : 1
 		p_0353_1_18 : 3
-		tmp_76 : 1
+		tmp_62 : 1
 		q_star_V_16 : 2
 		q_V_1_18 : 3
-		tmp_138 : 4
-		tmp_139 : 4
+		tmp_82 : 4
+		tmp_83 : 4
 		r_V_3_7 : 3
 		tmp_25_17 : 4
 		s_V_1_18 : 4
@@ -7312,8 +7312,8 @@ StgValue_270     (ret           ) [ 0000000000000]
 		tmp_28_17 : 3
 		s_V_2_18 : 4
 		p_0353_1_19 : 5
-		tmp_77 : 5
-		tmp_140 : 6
+		tmp_64 : 5
+		tmp_84 : 6
 	State 12
 		q_V_1_19 : 1
 		r_V_3_8 : 1
@@ -7322,14 +7322,14 @@ StgValue_270     (ret           ) [ 0000000000000]
 		r_V_6_10 : 1
 		s_V_2_19 : 1
 		p_0353_1_20 : 3
-		tmp_142 : 1
-		tmp_78 : 2
+		tmp_86 : 1
+		tmp_69 : 2
 		q_star_V_18 : 3
 		q_V_1_20 : 4
-		tmp_7 : 4
+		tmp_16 : 4
 		q_V : 4
-		tmp_79 : 5
-		tmp_80 : 6
+		tmp_70 : 5
+		tmp_71 : 6
 		StgValue_270 : 7
 
 
@@ -7341,11 +7341,11 @@ StgValue_270     (ret           ) [ 0000000000000]
 |----------|-----------------------------|---------|---------|
 | Operation|       Functional Unit       |    FF   |   LUT   |
 |----------|-----------------------------|---------|---------|
-|          |         tmp_1_fu_300        |    0    |    28   |
+|          |        tmp_20_fu_300        |    0    |    28   |
 |          |      p_0353_1_1_fu_353      |    0    |    30   |
-|          |         tmp_4_fu_380        |    0    |    23   |
-|          |         tmp1_fu_392         |    0    |    23   |
-|          |        s_V_2_2_fu_398       |    0    |    23   |
+|          |        tmp_22_fu_380        |    0    |    29   |
+|          |         tmp1_fu_392         |    0    |    29   |
+|          |        s_V_2_2_fu_398       |    0    |    29   |
 |          |        s_V_2_3_fu_486       |    0    |    30   |
 |          |        s_V_2_4_fu_568       |    0    |    30   |
 |          |        s_V_2_5_fu_649       |    0    |    30   |
@@ -7372,46 +7372,46 @@ StgValue_270     (ret           ) [ 0000000000000]
 |          |        q_V_1_1_fu_427       |    0    |    3    |
 |          |   p_0305_1_in_in_2_fu_434   |    0    |    3    |
 |          |      p_0353_1_3_fu_492      |    0    |    23   |
-|          |        tmp_60_fu_499        |    0    |    3    |
+|          |        tmp_29_fu_499        |    0    |    3    |
 |          |      p_0353_1_4_fu_574      |    0    |    23   |
-|          |        tmp_61_fu_582        |    0    |    4    |
+|          |        tmp_32_fu_582        |    0    |    4    |
 |          |      p_0353_1_5_fu_655      |    0    |    23   |
-|          |        tmp_62_fu_662        |    0    |    5    |
+|          |        tmp_34_fu_662        |    0    |    5    |
 |          |      p_0353_1_6_fu_737      |    0    |    23   |
-|          |        tmp_63_fu_745        |    0    |    6    |
+|          |        tmp_36_fu_745        |    0    |    6    |
 |          |      p_0353_1_7_fu_818      |    0    |    23   |
-|          |        tmp_64_fu_825        |    0    |    7    |
+|          |        tmp_38_fu_825        |    0    |    7    |
 |          |      p_0353_1_8_fu_900      |    0    |    23   |
-|          |        tmp_65_fu_908        |    0    |    8    |
+|          |        tmp_40_fu_908        |    0    |    8    |
 |          |      p_0353_1_9_fu_981      |    0    |    23   |
-|          |        tmp_66_fu_988        |    0    |    9    |
+|          |        tmp_42_fu_988        |    0    |    9    |
 |          |      p_0353_1_s_fu_1063     |    0    |    23   |
-|          |        tmp_67_fu_1071       |    0    |    10   |
+|          |        tmp_44_fu_1071       |    0    |    10   |
 |          |     p_0353_1_10_fu_1144     |    0    |    23   |
-|  select  |        tmp_68_fu_1151       |    0    |    11   |
+|  select  |        tmp_46_fu_1151       |    0    |    11   |
 |          |     p_0353_1_11_fu_1226     |    0    |    23   |
-|          |        tmp_69_fu_1234       |    0    |    12   |
+|          |        tmp_48_fu_1234       |    0    |    12   |
 |          |     p_0353_1_12_fu_1307     |    0    |    23   |
-|          |        tmp_70_fu_1314       |    0    |    13   |
+|          |        tmp_50_fu_1314       |    0    |    13   |
 |          |     p_0353_1_13_fu_1389     |    0    |    23   |
-|          |        tmp_71_fu_1397       |    0    |    14   |
+|          |        tmp_52_fu_1397       |    0    |    14   |
 |          |     p_0353_1_14_fu_1470     |    0    |    23   |
-|          |        tmp_72_fu_1477       |    0    |    15   |
+|          |        tmp_54_fu_1477       |    0    |    15   |
 |          |     p_0353_1_15_fu_1552     |    0    |    23   |
-|          |        tmp_73_fu_1560       |    0    |    16   |
+|          |        tmp_56_fu_1560       |    0    |    16   |
 |          |     p_0353_1_16_fu_1633     |    0    |    23   |
-|          |        tmp_74_fu_1640       |    0    |    17   |
+|          |        tmp_58_fu_1640       |    0    |    17   |
 |          |     p_0353_1_17_fu_1715     |    0    |    23   |
-|          |        tmp_75_fu_1723       |    0    |    18   |
+|          |        tmp_60_fu_1723       |    0    |    18   |
 |          |     p_0353_1_18_fu_1796     |    0    |    23   |
-|          |        tmp_76_fu_1803       |    0    |    19   |
+|          |        tmp_62_fu_1803       |    0    |    19   |
 |          |     p_0353_1_19_fu_1878     |    0    |    23   |
-|          |        tmp_77_fu_1886       |    0    |    20   |
+|          |        tmp_64_fu_1886       |    0    |    20   |
 |          |     p_0353_1_20_fu_1959     |    0    |    23   |
-|          |        tmp_78_fu_1975       |    0    |    20   |
-|          |        tmp_80_fu_2018       |    0    |    20   |
+|          |        tmp_69_fu_1975       |    0    |    20   |
+|          |        tmp_71_fu_2018       |    0    |    20   |
 |----------|-----------------------------|---------|---------|
-|          |        s_V_1_2_fu_386       |    0    |    23   |
+|          |        s_V_1_2_fu_386       |    0    |    29   |
 |          |        s_V_1_3_fu_466       |    0    |    30   |
 |          |        s_V_1_4_fu_548       |    0    |    30   |
 |          |        s_V_1_5_fu_630       |    0    |    30   |
@@ -7434,19 +7434,19 @@ StgValue_270     (ret           ) [ 0000000000000]
 |----------|-----------------------------|---------|---------|
 |    xor   |       p_0353_1_fu_324       |    0    |    29   |
 |----------|-----------------------------|---------|---------|
-|   icmp   |        tmp_7_fu_1996        |    0    |    18   |
+|   icmp   |        tmp_16_fu_1996       |    0    |    18   |
 |----------|-----------------------------|---------|---------|
 |   read   | in_val_V_read_1_read_fu_280 |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |          |          tmp_fu_286         |    0    |    0    |
 |partselect|         tmp_s_fu_306        |    0    |    0    |
-|          |        tmp_79_fu_2008       |    0    |    0    |
+|          |        tmp_70_fu_2008       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |   zext   |       tmp_cast_fu_296       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
-|          |         tmp_2_fu_316        |    0    |    0    |
+|          |        tmp_19_fu_316        |    0    |    0    |
 |          |       tmp_19_1_fu_346       |    0    |    0    |
-|          |         tmp_3_fu_373        |    0    |    0    |
+|          |        tmp_21_fu_373        |    0    |    0    |
 |          |        r_V_4_3_fu_452       |    0    |    0    |
 |          |        r_V_6_3_fu_472       |    0    |    0    |
 |          |      q_star_V_3_fu_506      |    0    |    0    |
@@ -7505,50 +7505,50 @@ StgValue_270     (ret           ) [ 0000000000000]
 |          |       r_V_5_8_fu_1940       |    0    |    0    |
 |          |     q_star_V_18_fu_1982     |    0    |    0    |
 |----------|-----------------------------|---------|---------|
-|          |        tmp_92_fu_330        |    0    |    0    |
-|          |        tmp_98_fu_338        |    0    |    0    |
-|          |        tmp_94_fu_359        |    0    |    0    |
-|          |        tmp_100_fu_412       |    0    |    0    |
-|          |        tmp_103_fu_520       |    0    |    0    |
-|          |        tmp_105_fu_590       |    0    |    0    |
-|          |        tmp_110_fu_683       |    0    |    0    |
-|          |        tmp_112_fu_753       |    0    |    0    |
-|          |        tmp_114_fu_846       |    0    |    0    |
-|          |        tmp_116_fu_916       |    0    |    0    |
-| bitselect|       tmp_118_fu_1009       |    0    |    0    |
-|          |       tmp_120_fu_1079       |    0    |    0    |
-|          |       tmp_122_fu_1172       |    0    |    0    |
-|          |       tmp_124_fu_1242       |    0    |    0    |
-|          |       tmp_126_fu_1335       |    0    |    0    |
-|          |       tmp_128_fu_1405       |    0    |    0    |
-|          |       tmp_130_fu_1498       |    0    |    0    |
-|          |       tmp_132_fu_1568       |    0    |    0    |
-|          |       tmp_134_fu_1661       |    0    |    0    |
-|          |       tmp_136_fu_1731       |    0    |    0    |
-|          |       tmp_138_fu_1824       |    0    |    0    |
-|          |       tmp_140_fu_1894       |    0    |    0    |
+|          |        tmp_23_fu_330        |    0    |    0    |
+|          |        tmp_26_fu_338        |    0    |    0    |
+|          |        tmp_24_fu_359        |    0    |    0    |
+|          |        tmp_27_fu_412        |    0    |    0    |
+|          |        tmp_30_fu_520        |    0    |    0    |
+|          |        tmp_33_fu_590        |    0    |    0    |
+|          |        tmp_37_fu_683        |    0    |    0    |
+|          |        tmp_41_fu_753        |    0    |    0    |
+|          |        tmp_45_fu_846        |    0    |    0    |
+|          |        tmp_49_fu_916        |    0    |    0    |
+| bitselect|        tmp_53_fu_1009       |    0    |    0    |
+|          |        tmp_57_fu_1079       |    0    |    0    |
+|          |        tmp_61_fu_1172       |    0    |    0    |
+|          |        tmp_65_fu_1242       |    0    |    0    |
+|          |        tmp_67_fu_1335       |    0    |    0    |
+|          |        tmp_72_fu_1405       |    0    |    0    |
+|          |        tmp_74_fu_1498       |    0    |    0    |
+|          |        tmp_76_fu_1568       |    0    |    0    |
+|          |        tmp_78_fu_1661       |    0    |    0    |
+|          |        tmp_80_fu_1731       |    0    |    0    |
+|          |        tmp_82_fu_1824       |    0    |    0    |
+|          |        tmp_84_fu_1894       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
-|          |        tmp_96_fu_367        |    0    |    0    |
-|          |        tmp_102_fu_447       |    0    |    0    |
-|          |        tmp_104_fu_528       |    0    |    0    |
-|          |        tmp_109_fu_611       |    0    |    0    |
-|          |        tmp_111_fu_691       |    0    |    0    |
-|          |        tmp_113_fu_774       |    0    |    0    |
-|          |        tmp_115_fu_854       |    0    |    0    |
-|          |        tmp_117_fu_937       |    0    |    0    |
-|          |       tmp_119_fu_1017       |    0    |    0    |
-|          |       tmp_121_fu_1100       |    0    |    0    |
-|    shl   |       tmp_123_fu_1180       |    0    |    0    |
-|          |       tmp_125_fu_1263       |    0    |    0    |
-|          |       tmp_127_fu_1343       |    0    |    0    |
-|          |       tmp_129_fu_1426       |    0    |    0    |
-|          |       tmp_131_fu_1506       |    0    |    0    |
-|          |       tmp_133_fu_1589       |    0    |    0    |
-|          |       tmp_135_fu_1669       |    0    |    0    |
-|          |       tmp_137_fu_1752       |    0    |    0    |
-|          |       tmp_139_fu_1832       |    0    |    0    |
-|          |       tmp_141_fu_1915       |    0    |    0    |
-|          |       tmp_143_fu_1970       |    0    |    0    |
+|          |        tmp_25_fu_367        |    0    |    0    |
+|          |        tmp_28_fu_447        |    0    |    0    |
+|          |        tmp_31_fu_528        |    0    |    0    |
+|          |        tmp_35_fu_611        |    0    |    0    |
+|          |        tmp_39_fu_691        |    0    |    0    |
+|          |        tmp_43_fu_774        |    0    |    0    |
+|          |        tmp_47_fu_854        |    0    |    0    |
+|          |        tmp_51_fu_937        |    0    |    0    |
+|          |        tmp_55_fu_1017       |    0    |    0    |
+|          |        tmp_59_fu_1100       |    0    |    0    |
+|    shl   |        tmp_63_fu_1180       |    0    |    0    |
+|          |        tmp_66_fu_1263       |    0    |    0    |
+|          |        tmp_68_fu_1343       |    0    |    0    |
+|          |        tmp_73_fu_1426       |    0    |    0    |
+|          |        tmp_75_fu_1506       |    0    |    0    |
+|          |        tmp_77_fu_1589       |    0    |    0    |
+|          |        tmp_79_fu_1669       |    0    |    0    |
+|          |        tmp_81_fu_1752       |    0    |    0    |
+|          |        tmp_83_fu_1832       |    0    |    0    |
+|          |        tmp_85_fu_1915       |    0    |    0    |
+|          |        tmp_87_fu_1970       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |          |        q_V_1_2_fu_441       |    0    |    0    |
 |          |       tmp_25_3_fu_460       |    0    |    0    |
@@ -7609,9 +7609,9 @@ StgValue_270     (ret           ) [ 0000000000000]
 |          |       r_V_6_10_fu_1947      |    0    |    0    |
 |          |       q_V_1_20_fu_1990      |    0    |    0    |
 |----------|-----------------------------|---------|---------|
-|   trunc  |       tmp_142_fu_1966       |    0    |    0    |
+|   trunc  |        tmp_86_fu_1966       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
-|   Total  |                             |    0    |   2081  |
+|   Total  |                             |    0    |   2105  |
 |----------|-----------------------------|---------|---------|
 
 Memories:
@@ -7632,28 +7632,28 @@ N/A
 | p_0353_1_8_reg_2092|   23   |
 |  p_0353_1_reg_2026 |   22   |
 | p_0353_1_s_reg_2109|   23   |
-|  tmp_100_reg_2052  |    1   |
-|  tmp_105_reg_2069  |    1   |
-|  tmp_112_reg_2086  |    1   |
-|  tmp_116_reg_2103  |    1   |
-|  tmp_120_reg_2120  |    1   |
-|  tmp_124_reg_2137  |    1   |
-|  tmp_128_reg_2154  |    1   |
-|  tmp_132_reg_2171  |    1   |
-|  tmp_136_reg_2188  |    1   |
-|  tmp_140_reg_2206  |    1   |
-|   tmp_61_reg_2063  |    4   |
-|   tmp_63_reg_2080  |    6   |
-|   tmp_65_reg_2097  |    8   |
-|   tmp_67_reg_2114  |   10   |
-|   tmp_69_reg_2131  |   12   |
-|   tmp_71_reg_2148  |   14   |
-|   tmp_73_reg_2165  |   16   |
-|   tmp_75_reg_2182  |   18   |
-|   tmp_77_reg_2199  |   20   |
-|   tmp_92_reg_2031  |    1   |
-|   tmp_94_reg_2042  |    1   |
-|   tmp_98_reg_2037  |    1   |
+|   tmp_23_reg_2031  |    1   |
+|   tmp_24_reg_2042  |    1   |
+|   tmp_26_reg_2037  |    1   |
+|   tmp_27_reg_2052  |    1   |
+|   tmp_32_reg_2063  |    4   |
+|   tmp_33_reg_2069  |    1   |
+|   tmp_36_reg_2080  |    6   |
+|   tmp_40_reg_2097  |    8   |
+|   tmp_41_reg_2086  |    1   |
+|   tmp_44_reg_2114  |   10   |
+|   tmp_48_reg_2131  |   12   |
+|   tmp_49_reg_2103  |    1   |
+|   tmp_52_reg_2148  |   14   |
+|   tmp_56_reg_2165  |   16   |
+|   tmp_57_reg_2120  |    1   |
+|   tmp_60_reg_2182  |   18   |
+|   tmp_64_reg_2199  |   20   |
+|   tmp_65_reg_2137  |    1   |
+|   tmp_72_reg_2154  |    1   |
+|   tmp_76_reg_2171  |    1   |
+|   tmp_80_reg_2188  |    1   |
+|   tmp_84_reg_2206  |    1   |
 +--------------------+--------+
 |        Total       |   373  |
 +--------------------+--------+
@@ -7671,10 +7671,10 @@ N/A
 +-----------+--------+--------+
 |           |   FF   |   LUT  |
 +-----------+--------+--------+
-|  Function |    0   |  2081  |
+|  Function |    0   |  2105  |
 |   Memory  |    -   |    -   |
 |Multiplexer|    -   |    -   |
 |  Register |   373  |    -   |
 +-----------+--------+--------+
-|   Total   |   373  |  2081  |
+|   Total   |   373  |  2105  |
 +-----------+--------+--------+

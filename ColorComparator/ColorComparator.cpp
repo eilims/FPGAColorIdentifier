@@ -36,9 +36,9 @@ int getColorDistance_Stream(ap_uint<24> pixel, ap_uint<24> color) {
 	ap_uint<8> colorGreen = (color & 0x0000FF);
 	ap_uint<8> colorBlue = (color & 0x00FF00) >> 8;
 	//Multipliers are added as weighting for more powerful numbers such as red
-	in_data_t pixelRedPower = (7 * power(pixelRed - colorRed, 2)) / 2; // OG:2 -- LAST:2.5
-	in_data_t pixelGreenPower = (8 * power(pixelGreen - colorGreen, 2)) / 5; // OG:4 -- LAST:2.75
-	in_data_t pixelBluePower = (29 * power(pixelBlue - colorBlue, 2)) / 20; // OG:3 -- LAST:1.5
+	in_data_t pixelRedPower = (5 * power(pixelRed - colorRed, 2)) / 2; // OG:2 -- LAST:2.5
+	in_data_t pixelGreenPower = (11 * power(pixelGreen - colorGreen, 2)) / 4; // OG:4 -- LAST:2.75
+	in_data_t pixelBluePower = (3 * power(pixelBlue - colorBlue, 2)) / 2; // OG:3 -- LAST:1.5
 	in_data_t powerSummation = pixelRedPower + pixelGreenPower + pixelBluePower;
 	out_data_t result;
 	fxp_sqrt(result, powerSummation);
@@ -60,16 +60,16 @@ int getPixelClassification(int in_pixel) {
 	return minimumDistanceIndex;
 }
 
-void getPixelClassification_Stream(struct Video* in_pixel, struct Video* out_pixel,
+void getPixelClassification_Stream(ap_uint<24> in_pixel, ap_uint<24>* out_pixel,
 		ap_uint<4> in_switch) {
 	int i;
 	int minimumDistanceIndex = 7;
 	int minimumDistance = INT_MAX;
 	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
-		int distance = getColorDistance_Stream(in_pixel->data,
+		int distance = getColorDistance_Stream(in_pixel,
 				_color_array_stream[i]);
 		if (distance < minimumDistance) {
-			if (distance < 315) { // Between 250-325 300doesntwork -- LAST:265
+			if (distance < 265) { // Between 250-325 300doesntwork -- LAST:265
 				minimumDistance = distance;
 				minimumDistanceIndex = i;
 			} else {
@@ -81,17 +81,15 @@ void getPixelClassification_Stream(struct Video* in_pixel, struct Video* out_pix
 		}
 	}
 	//must define every single case for hls
-	if (minimumDistanceIndex < 5) {
+	if (minimumDistanceIndex < 6) {
 		if (!(in_switch ^ (minimumDistanceIndex + 1))) {
-			out_pixel->data = _color_array_stream[minimumDistanceIndex];
+			*out_pixel = _color_array_stream[minimumDistanceIndex];
 		} else {
-			out_pixel->data = in_pixel->data;
+			*out_pixel = in_pixel;
 		}
 	} else {
-		out_pixel->data = in_pixel->data;
+		*out_pixel = in_pixel;
 	}
-	out_pixel->user = in_pixel->user;
-	out_pixel->last = in_pixel->last;
 //	switch (minimumDistanceIndex) {
 //	case 0:
 //		if (!(in_switch ^ 0x1)) {

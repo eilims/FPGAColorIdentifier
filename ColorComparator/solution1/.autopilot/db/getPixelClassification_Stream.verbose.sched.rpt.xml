@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'getPixelClassification_Stream'" level="0">
-<item name = "Date">Tue Apr 24 13:14:29 2018
+<item name = "Date">Tue Apr 24 14:40:34 2018
 </item>
 <item name = "Version">2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)</item>
 <item name = "Project">ColorComparator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">49, 50, 48, 48, loop rewind</column>
+<column name="">22, 23, 2, 2, loop rewind</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- PIXEL_COLOR_LOOP">49, 49, 26, 24, 1, 2, yes</column>
+<column name="- PIXEL_COLOR_LOOP">22, 22, 22, 1, 1, 2, yes</column>
 </table>
 </item>
 </section>

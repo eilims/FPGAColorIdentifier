@@ -13,12 +13,6 @@
 #define COLOR_ARRAY_SIZE 6
 #define ARRAY_SIZE 3
 
-struct Video {
-	ap_uint<1> user;
-	ap_uint<1> last;
-	ap_uint<24> data;
-};
-
 int getColorDistance(int pixel, int color);
 int getColorDistance_Stream(struct Video* pixel, struct Video* color);
 int getPixelClassification(int pixel);
