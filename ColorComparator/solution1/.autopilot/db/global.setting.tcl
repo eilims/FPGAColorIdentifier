@@ -41,9 +41,9 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg400:-1"
-set SourceFiles {sc {} c {../ColorComparator.cpp ../powerFunction.cpp}}
+set SourceFiles {sc {} c {../powerFunction.cpp ../ColorComparator.cpp}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {C:/Users/Jonathan/Desktop/FPGAColorIdentifier/ColorComparator/solution1/solution1.directive}
+set DirectiveFile {D:/Repositories/FPGAColorIdentifier/ColorComparator/solution1/solution1.directive}
 set TBFiles {verilog ../ColorComparator_tb.cpp bc ../ColorComparator_tb.cpp vhdl ../ColorComparator_tb.cpp sc ../ColorComparator_tb.cpp cas ../ColorComparator_tb.cpp c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

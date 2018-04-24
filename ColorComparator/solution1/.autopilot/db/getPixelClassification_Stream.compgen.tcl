@@ -80,7 +80,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 set ID 6
 set MemName getPixelClassificbkb
 set CoreName ap_simcore_mem
-set PortList { 1 1 1 1 }
+set PortList { 1 }
 set DataWd 17
 set AddrRange 6
 set AddrWd 3
@@ -105,7 +105,7 @@ if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 4 \
+    port_num 1 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -139,7 +139,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
     sync_rst true \
     stage_num ${NumOfStage}  \
     registered_input ${RegisteredInput} \
-    port_num 4 \
+    port_num 1 \
     port_list \{${PortList}\} \
     data_wd ${DataWd} \
     addr_wd ${AddrWd} \
@@ -168,16 +168,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 7 \
-    name in_pixel_V \
+    name in_pixel_user_V \
     reset_level 0 \
     sync_rst true \
-    corename {} \
+    corename {in_pixel} \
     metadata {  } \
     op interface \
-    ports { in_pixel_V_TDATA { I 24 vector } in_pixel_V_TVALID { I 1 bit } in_pixel_V_TREADY { O 1 bit } } \
+    ports { in_pixel_TUSER { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_pixel_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_pixel_user_V'"
 }
 }
 
@@ -187,16 +187,92 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     id 8 \
-    name out_pixel_V \
+    name in_pixel_last_V \
     reset_level 0 \
     sync_rst true \
-    corename {} \
+    corename {in_pixel} \
     metadata {  } \
     op interface \
-    ports { out_pixel_V_TDATA { O 24 vector } out_pixel_V_TVALID { O 1 bit } out_pixel_V_TREADY { I 1 bit } } \
+    ports { in_pixel_TLAST { I 1 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_pixel_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_pixel_last_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 9 \
+    name in_pixel_data_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {in_pixel} \
+    metadata {  } \
+    op interface \
+    ports { in_pixel_TVALID { I 1 bit } in_pixel_TREADY { O 1 bit } in_pixel_TDATA { I 24 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_pixel_data_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 10 \
+    name out_pixel_user_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {out_pixel} \
+    metadata {  } \
+    op interface \
+    ports { out_pixel_TUSER { O 1 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_pixel_user_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 11 \
+    name out_pixel_last_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {out_pixel} \
+    metadata {  } \
+    op interface \
+    ports { out_pixel_TLAST { O 1 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_pixel_last_V'"
+}
+}
+
+
+# Native AXIS:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
+eval "::AESL_LIB_XILADAPTER::native_axis_add { \
+    id 12 \
+    name out_pixel_data_V \
+    reset_level 0 \
+    sync_rst true \
+    corename {out_pixel} \
+    metadata {  } \
+    op interface \
+    ports { out_pixel_TVALID { O 1 bit } out_pixel_TREADY { I 1 bit } out_pixel_TDATA { O 24 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_pixel_data_V'"
 }
 }
 
@@ -204,7 +280,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 13 \
     name in_switch_V \
     type other \
     dir I \

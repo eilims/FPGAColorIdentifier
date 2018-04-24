@@ -60,13 +60,13 @@ int getPixelClassification(int in_pixel) {
 	return minimumDistanceIndex;
 }
 
-void getPixelClassification_Stream(ap_uint<24> in_pixel, ap_uint<24>* out_pixel,
+void getPixelClassification_Stream(struct Video* in_pixel, struct Video* out_pixel,
 		ap_uint<4> in_switch) {
 	int i;
 	int minimumDistanceIndex = 7;
 	int minimumDistance = INT_MAX;
 	PIXEL_COLOR_LOOP: for (i = 0; i < COLOR_ARRAY_SIZE; i++) {
-		int distance = getColorDistance_Stream(in_pixel,
+		int distance = getColorDistance_Stream(in_pixel->data,
 				_color_array_stream[i]);
 		if (distance < minimumDistance) {
 			if (distance < 315) { // Between 250-325 300doesntwork -- LAST:265
@@ -83,13 +83,15 @@ void getPixelClassification_Stream(ap_uint<24> in_pixel, ap_uint<24>* out_pixel,
 	//must define every single case for hls
 	if (minimumDistanceIndex < 5) {
 		if (!(in_switch ^ (minimumDistanceIndex + 1))) {
-			*out_pixel = _color_array_stream[minimumDistanceIndex];
+			out_pixel->data = _color_array_stream[minimumDistanceIndex];
 		} else {
-			*out_pixel = in_pixel;
+			out_pixel->data = in_pixel->data;
 		}
 	} else {
-		*out_pixel = in_pixel;
+		out_pixel->data = in_pixel->data;
 	}
+	out_pixel->user = in_pixel->user;
+	out_pixel->last = in_pixel->last;
 //	switch (minimumDistanceIndex) {
 //	case 0:
 //		if (!(in_switch ^ 0x1)) {

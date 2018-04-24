@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;ColorComparator/ColorComparator.cpp&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;ColorComparator/powerFunction.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;ColorComparator/ColorComparator.cpp&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
 	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1852" content="Directive &apos;UNROLL&apos; cannot be applied: Label &apos;COL_LOOP&apos; does not exist in function &apos;parseColorsToCenterPixel&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:58 . Memory (MB): peak = 101.523 ; gain = 46.176" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:01:01 . Memory (MB): peak = 101.578 ; gain = 46.230" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 100.352 ; gain = 46.383" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 100.387 ; gain = 46.418" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:01:03 . Memory (MB): peak = 118.293 ; gain = 62.945" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 116.887 ; gain = 62.918" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;power&apos; into &apos;getColorDistance_Stream&apos; (ColorComparator/ColorComparator.cpp:39) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;getColorDistance_Stream&apos; into &apos;getPixelClassification_Stream&apos; (ColorComparator/ColorComparator.cpp:69) automatically." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:01:03 . Memory (MB): peak = 125.422 ; gain = 70.074" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 124.164 ; gain = 70.195" tag=""/>
+	<Message prefix="[XFORM 203-1103]" severity="WARNING" keynum="910" content="Ignored data pack directive on non-struct variable &apos;out_pixel.data.V&apos; (ColorComparator/ColorComparator.cpp:63)." tag=""/>
+	<Message prefix="[XFORM 203-1103]" severity="WARNING" keynum="910" content="Ignored data pack directive on non-struct variable &apos;in_pixel.data.V&apos; (ColorComparator/ColorComparator.cpp:63)." tag=""/>
 	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;fxp_sqrt&lt;32, 24, 32, 24&gt;&apos; (ColorComparator/fxp_sqrt.h:145)." tag=""/>
 	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="876" content="Unrolling loop &apos;PIXEL_COLOR_LOOP&apos; (ColorComparator/ColorComparator.cpp:68) in function &apos;getPixelClassification_Stream&apos; partially with a factor of 3." tag=""/>
 	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (ColorComparator/fxp_sqrt.h:161) in function &apos;fxp_sqrt&lt;32, 24, 32, 24&gt;&apos; completely." tag=""/>
@@ -19,12 +21,11 @@
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;power&apos; into &apos;getColorDistance_Stream&apos; (ColorComparator/ColorComparator.cpp:39) automatically." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;getColorDistance_Stream&apos; into &apos;getPixelClassification_Stream&apos; (ColorComparator/ColorComparator.cpp:69) automatically." tag=""/>
 	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (ColorComparator/ColorComparator.cpp:68:45) to (ColorComparator/ColorComparator.cpp:68:39) in function &apos;getPixelClassification_Stream&apos;... converting 7 basic blocks." tag=""/>
-	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (ColorComparator/ColorComparator.cpp:84:2) to (ColorComparator/ColorComparator.cpp:136:1) in function &apos;getPixelClassification_Stream&apos;... converting 4 basic blocks." tag=""/>
 	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (ColorComparator/fxp_sqrt.h:145:61) to (ColorComparator/fxp_sqrt.h:177:1) in function &apos;fxp_sqrt&lt;32, 24, 32, 24&gt;&apos;... converting 61 basic blocks." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:01:05 . Memory (MB): peak = 155.164 ; gain = 99.816" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 153.738 ; gain = 99.770" tag=""/>
 	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;fxp_sqrt&lt;32, 24, 32, 24&gt;&apos; to &apos;fxp_sqrt&apos; (ColorComparator/fxp_sqrt.h:162:1)" tag=""/>
 	<Message prefix="[XFORM 203-531]" severity="INFO" keynum="864" content="Rewinding loop &apos;PIXEL_COLOR_LOOP&apos; (ColorComparator/ColorComparator.cpp:68) in function &apos;getPixelClassification_Stream&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:07 . Memory (MB): peak = 161.648 ; gain = 106.301" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 160.422 ; gain = 106.453" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;getPixelClassification_Stream&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
@@ -34,48 +35,61 @@
 	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;fxp_sqrt&apos;." tag=""/>
 	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 12." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 67.318 seconds; current allocated memory: 117.770 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 19.474 seconds; current allocated memory: 118.236 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.554 seconds; current allocated memory: 118.694 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.24 seconds; current allocated memory: 119.144 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;getPixelClassification_Stream&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;PIXEL_COLOR_LOOP&apos;." tag=""/>
-	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 23." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between axis read on port &apos;in_pixel_user_V&apos; and axis read on port &apos;in_pixel_user_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between axis read on port &apos;in_pixel_user_V&apos; and axis read on port &apos;in_pixel_user_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between axis read on port &apos;in_pixel_user_V&apos; and axis read on port &apos;in_pixel_user_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-68]" severity="WARNING" keynum="98" content="Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between axis read on port &apos;in_pixel_user_V&apos; and axis read on port &apos;in_pixel_user_V&apos;." tag=""/>
+	<Message prefix="[SCHED 204-69]" severity="WARNING" keynum="104" content="Unable to schedule &apos;load&apos; operation (&apos;p_color_array_stream_1&apos;, ColorComparator/ColorComparator.cpp:69) on array &apos;p_color_array_stream_s&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;p_color_array_stream_s&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 24, Depth = 26." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.941 seconds; current allocated memory: 120.069 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.61 seconds; current allocated memory: 120.729 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.737 seconds; current allocated memory: 121.172 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.367 seconds; current allocated memory: 121.807 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;fxp_sqrt&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;fxp_sqrt&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.854 seconds; current allocated memory: 123.215 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.66 seconds; current allocated memory: 123.728 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;getPixelClassification_Stream&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/in_pixel_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
-	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/out_pixel_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/in_pixel_user_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/in_pixel_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/in_pixel_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/out_pixel_user_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/out_pixel_last_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/out_pixel_data_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;getPixelClassification_Stream/in_switch_V&apos; to &apos;ap_none&apos;." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;getPixelClassification_Stream&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;getPixelClassification_Stream_p_color_array_stream_s&apos; to &apos;getPixelClassificbkb&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;getPixelClassification_Stream_mul_mul_15s_9s_22_1_1&apos; to &apos;getPixelClassificcud&apos; due to the length limit 20" tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;getPixelClassificcud&apos;: 3 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;getPixelClassification_Stream&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 2.435 seconds; current allocated memory: 126.034 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.904 seconds; current allocated memory: 126.852 MB." tag=""/>
 	<Message prefix="[RTMG 210-279]" severity="INFO" keynum="RTMG_279_1793" content="Implementing memory &apos;getPixelClassificbkb_rom&apos; using distributed ROMs." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:01:22 . Memory (MB): peak = 187.137 ; gain = 131.789" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 186.980 ; gain = 133.012" tag=""/>
 	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for getPixelClassification_Stream." tag=""/>
 	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for getPixelClassification_Stream." tag=""/>
 	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for getPixelClassification_Stream." tag=""/>
-	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 82.696 seconds; peak allocated memory: 126.034 MB." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 24.638 seconds; peak allocated memory: 126.852 MB." tag=""/>
 </Messages>
